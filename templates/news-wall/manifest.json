@@ -1,0 +1,154 @@
+{
+  "id": "news-wall",
+  "name": "News wall",
+  "version": "1.0.0",
+  "kind": "html",
+  "description": "A magazine-style news wall for any RSS or Atom feed: a large featured story that rotates every few seconds, the next four stories as cards, the feed's title and relative dates. Typographic by design (no remote images), so it works offline. Or type your own headlines.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/news-wall",
+  "license": "MIT",
+  "tags": [
+    "news",
+    "rss",
+    "atom",
+    "feed",
+    "headlines",
+    "internal-comms",
+    "data-source"
+  ],
+  "orientation": [
+    "landscape",
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.png",
+  "network": [],
+  "params": [
+    {
+      "name": "feed",
+      "type": "data_source",
+      "label": "News feed (RSS / Atom data source, optional)",
+      "help": "An RSS feed data source. Leave empty to show the stories typed below."
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "max": 48,
+      "default": "",
+      "help": "Leave empty to use the feed's own title."
+    },
+    {
+      "name": "stories",
+      "type": "textarea",
+      "label": "Stories (used without a feed)",
+      "max": 2000,
+      "help": "One per line: Headline | Short summary. The summary is optional.",
+      "default": "Fernhill Works opens its new design studio in the old mill | Three floors of workshop and meeting space, with the ground floor open to the public on Saturdays.\nQuarterly results: the strongest spring in the company's history | Orders are up 18% on last year, led by the new modular shelving range.\nVolunteer day raises 4,200 for the riverside trail | Forty-six colleagues spent Friday clearing, planting and building two new footbridges.\nMeet the apprentices joining the workshop this autumn | Six new starters begin a two-year programme in joinery, finishing and CAD.\nNew canteen menu launches Monday, with more plant-based dishes | The kitchen team tested over thirty recipes with volunteers from every floor.\nReminder: the building closes early on Friday for maintenance | Doors close at 15:00. Remote access and the helpdesk run as normal."
+    },
+    {
+      "name": "max_items",
+      "type": "number",
+      "label": "Stories in rotation",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "name": "rotate_seconds",
+      "type": "number",
+      "label": "Seconds per featured story",
+      "min": 4,
+      "max": 60,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "name": "date_style",
+      "type": "select",
+      "label": "Story dates",
+      "default": "relative",
+      "options": [
+        {
+          "value": "relative",
+          "label": "Relative (2 hours ago)"
+        },
+        {
+          "value": "absolute",
+          "label": "Date and time"
+        },
+        {
+          "value": "off",
+          "label": "Hide"
+        }
+      ]
+    },
+    {
+      "name": "feature_label",
+      "type": "text",
+      "label": "Label on the featured story",
+      "max": 24,
+      "default": "Top story"
+    },
+    {
+      "name": "next_label",
+      "type": "text",
+      "label": "Heading above the cards",
+      "max": 24,
+      "default": "Up next"
+    },
+    {
+      "name": "show_summaries",
+      "type": "checkbox",
+      "label": "Show the featured story's summary",
+      "default": true
+    },
+    {
+      "name": "show_clock",
+      "type": "checkbox",
+      "label": "Show the clock",
+      "default": true
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "default": "#FF6B3D"
+    },
+    {
+      "name": "accent2",
+      "type": "color",
+      "label": "Second accent colour",
+      "help": "The featured card blends the two accents.",
+      "default": "#7A5CFF"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#0D0F14"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#F6F4EF"
+    },
+    {
+      "name": "timezone",
+      "type": "timezone",
+      "label": "Timezone (clock and dates)",
+      "help": "Leave empty to use the screen's own clock.",
+      "default": ""
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language (clock and dates)",
+      "help": "For example en-GB or fr-FR. Leave empty for the screen's language.",
+      "default": ""
+    }
+  ]
+}

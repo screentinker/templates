@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guest Wi-Fi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="glow"></div><div class="waves"></div></div>
+
+<div class="stage">
+  <section class="intro">
+    <img id="logo" class="logo" alt="">
+    <div id="eyebrow" class="eyebrow"></div>
+    <h1 id="headline" class="headline"></h1>
+  </section>
+
+  <section class="creds">
+    <div class="row">
+      <div class="label" id="ssid-label"></div>
+      <div id="ssid" class="value ssid"></div>
+    </div>
+    <div class="row" id="pw-row">
+      <div class="label" id="pw-label"></div>
+      <div id="password" class="value password"></div>
+    </div>
+  </section>
+
+  <section class="scan">
+    <div class="card"><div id="qr" class="qr"></div></div>
+    <div class="hint"><span class="phone" aria-hidden="true"></span><span id="hint"></span></div>
+  </section>
+
+  <footer id="footer" class="footer"></footer>
+</div>
+
+<script src="qr.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

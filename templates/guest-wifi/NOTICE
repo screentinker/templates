@@ -1,0 +1,23 @@
+Guest Wi-Fi — third-party material bundled in this template
+
+fonts/inter.woff2, fonts/inter-ext.woff2
+  Inter (latin and latin-ext subsets), Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+  SIL Open Font License 1.1 — full text in fonts/OFL-inter.txt
+
+fonts/jetbrains-mono.woff2, fonts/jetbrains-mono-ext.woff2
+  JetBrains Mono (latin and latin-ext subsets), Copyright 2020 The JetBrains Mono Project Authors
+  (https://github.com/JetBrains/JetBrainsMono)
+  SIL Open Font License 1.1 — full text in fonts/OFL-jetbrains-mono.txt
+
+The font files are the same subsets ScreenTinker ships in server/fonts, unmodified.
+
+logo.svg
+  Placeholder logo for the fictional "Harbour House", drawn for this template. Original work,
+  MIT like the rest of this folder. Replace it with your own logo in the settings.
+
+qr.js
+  QR Code encoder written for this template (original work, MIT). It implements the public
+  QR Code specification (ISO/IEC 18004); no third-party code is included. "QR Code" is a
+  registered trademark of DENSO WAVE INCORPORATED.
+
+Everything else in this folder is original work under the MIT licence in LICENSE.

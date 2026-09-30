@@ -1,0 +1,166 @@
+/* News wall — ScreenTinker community template. MIT. Fonts: Archivo and Inter, SIL OFL 1.1 (see NOTICE).
+   Typographic by design: the template declares no network hosts, so remote feed images could not load. */
+@font-face { font-family: 'Archivo'; font-weight: 100 900; font-style: normal; src: url(fonts/archivo.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 100 900; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+
+:root {
+  --bg: #0D0F14;
+  --text: #F6F4EF;
+  --accent: #FF6B3D;
+  --accent2: #7A5CFF;
+  --rotate: 10s;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; cursor: none;
+}
+[hidden] { display: none !important; }
+.bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(80vmax 60vmax at 110% -10%, rgba(122, 92, 255, .16), transparent 60%);
+}
+@supports (background: color-mix(in srgb, red 50%, transparent)) {
+  .bg { background: radial-gradient(80vmax 60vmax at 110% -10%, color-mix(in srgb, var(--accent2) 18%, transparent), transparent 60%); }
+}
+
+/* ---------- header ---------- */
+.top { position: absolute; display: flex; align-items: center; justify-content: space-between; gap: 3vmin; }
+.brand { display: flex; align-items: center; gap: .55em; min-width: 0; }
+.live {
+  flex: none; width: .5em; height: .5em; border-radius: 50%; background: var(--accent);
+  animation: live 2s ease-in-out infinite;
+}
+@keyframes live { 50% { opacity: .35; } }
+.title {
+  margin: 0; font: inherit; font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.clock { flex: none; font-weight: 600; font-variant-numeric: tabular-nums; opacity: .7; }
+
+/* ---------- featured story ---------- */
+.wall { position: absolute; display: grid; }
+.feature {
+  position: relative; overflow: hidden; min-width: 0; min-height: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  color: #fff;
+}
+.feature::before {
+  /* depth: darken toward the bottom where the text sits */
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(255,255,255,.18), transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.42) 100%);
+}
+.glyph {
+  position: absolute; right: .12em; top: .02em; pointer-events: none;
+  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 900; line-height: 1;
+  color: rgba(255,255,255,.1); text-transform: uppercase;
+}
+.feature-body, .feature-foot { position: relative; }
+.feature-body.swap { animation: swap .8s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes swap { from { opacity: 0; transform: translateY(3vmin); } to { opacity: 1; transform: none; } }
+.kicker { display: flex; align-items: center; gap: .9em; flex-wrap: wrap; }
+.tag {
+  font-weight: 800; text-transform: uppercase; letter-spacing: .12em;
+  padding: .4em .8em; border-radius: 99em; background: rgba(0,0,0,.28);
+}
+.fdate { font-weight: 600; opacity: .9; }
+.f-title {
+  margin: 0; font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800; line-height: 1.04; letter-spacing: -.015em;
+  overflow: hidden;
+}
+.f-summary { margin: 0; line-height: 1.38; font-weight: 450; opacity: .92; overflow: hidden; }
+body.clamp .f-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
+body.clamp .f-summary { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.feature-foot { display: flex; align-items: center; gap: 2.2vmin; }
+.bar { flex: 1 1 auto; height: .6vmin; min-height: 3px; border-radius: 99em; background: rgba(255,255,255,.25); overflow: hidden; }
+.bar-fill { height: 100%; width: 100%; background: #fff; transform-origin: 0 50%; transform: scaleX(0); }
+.bar-fill.run { animation: fill var(--rotate) linear both; }
+@keyframes fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.count { flex: none; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .06em; opacity: .9; }
+.count b { font-weight: 800; opacity: 1; }
+
+/* ---------- the rail of upcoming cards ---------- */
+.rail { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.rail-label { font-weight: 700; text-transform: uppercase; letter-spacing: .14em; opacity: .55; }
+.cards { list-style: none; margin: 0; padding: 0; flex: 1 1 auto; display: flex; flex-direction: column; min-height: 0; }
+.card {
+  flex: 1 1 0; min-height: 0; display: flex; align-items: center; overflow: hidden;
+  background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.07);
+  animation: swap .7s cubic-bezier(.2,.8,.2,1) both;
+}
+.badge {
+  flex: none; display: flex; align-items: center; justify-content: center;
+  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 900; color: #fff; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+}
+.card:nth-child(2) .badge { background: linear-gradient(135deg, var(--accent2), var(--accent)); }
+.card:nth-child(3) .badge { background: linear-gradient(200deg, var(--accent), var(--accent2)); }
+.card:nth-child(4) .badge { background: linear-gradient(20deg, var(--accent2), var(--accent)); }
+.card-text { min-width: 0; }
+.card-title { font-weight: 700; line-height: 1.2; overflow: hidden; }
+body.clamp .card-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.card-date { font-weight: 500; opacity: .55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.empty {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 10vmin; font-size: 3.2vmin; line-height: 1.4; opacity: .7;
+}
+
+/* ================= landscape (e.g. 1920x1080) ================= */
+body.landscape .top { left: 4vw; right: 4vw; top: 4.5vh; height: 6vh; font-size: 2.8vh; }
+body.landscape .clock { font-size: 3.2vh; }
+body.landscape .wall { left: 4vw; right: 4vw; top: 14vh; bottom: 5vh; grid-template-columns: 61% 1fr; column-gap: 2.4vw; }
+body.landscape .feature { border-radius: 2.2vh; padding: 6vh 3.4vw 4.5vh; }
+body.landscape .glyph { font-size: 50vh; }
+body.landscape .kicker { font-size: 2.1vh; margin-bottom: 2.6vh; }
+body.landscape .f-title { font-size: 7.4vh; }
+body.landscape .f-summary { font-size: 3vh; margin-top: 2.6vh; }
+body.landscape .feature-foot { margin-top: 4.5vh; }
+body.landscape .count { font-size: 2.1vh; }
+body.landscape .rail-label { font-size: 2vh; margin-bottom: 1.8vh; }
+body.landscape .cards { gap: 1.6vh; }
+body.landscape .card { border-radius: 1.6vh; padding: 0 1.4vw; gap: 1.3vw; }
+body.landscape .badge { width: 8.6vh; height: 8.6vh; border-radius: 1.4vh; font-size: 4.6vh; }
+body.landscape .card-title { font-size: 2.85vh; }
+body.landscape.clamp .card-title { -webkit-line-clamp: 3; }
+body.landscape .card-date { font-size: 2vh; margin-top: .8vh; }
+
+/* ================= portrait (e.g. 1080x1920) ================= */
+body.portrait .top { left: 6vw; right: 6vw; top: 4.5vw; height: 8vw; font-size: 3.3vw; }
+body.portrait .clock { font-size: 3.8vw; }
+body.portrait .wall { left: 6vw; right: 6vw; top: 15vw; bottom: 6vw; grid-template-rows: 54% 1fr; row-gap: 5vw; }
+body.portrait .feature { border-radius: 3vw; padding: 7vw 6vw 5vw; }
+body.portrait .glyph { font-size: 72vw; }
+body.portrait .kicker { font-size: 2.6vw; margin-bottom: 3.4vw; }
+body.portrait .f-title { font-size: 8vw; }
+body.portrait .f-summary { font-size: 3.7vw; margin-top: 3vw; }
+body.portrait .feature-foot { margin-top: 5.5vw; }
+body.portrait .count { font-size: 2.6vw; }
+body.portrait .rail-label { font-size: 2.5vw; margin-bottom: 2.4vw; }
+body.portrait .cards { gap: 2.2vw; }
+body.portrait .card { border-radius: 2.4vw; padding: 0 3.4vw; gap: 3.2vw; }
+body.portrait .badge { width: 11vw; height: 11vw; border-radius: 2vw; font-size: 5.6vw; }
+body.portrait .card-title { font-size: 3.3vw; }
+body.portrait .card-date { font-size: 2.5vw; margin-top: .9vw; }
+
+/* ================= strip (wider than about 3:1): one rotating line ================= */
+body.strip .top { left: 2.4vw; top: 0; bottom: 0; width: 20vw; font-size: 9vh; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2vh; }
+body.strip .clock { font-size: 8vh; }
+body.strip .wall { left: 24vw; right: 0; top: 0; bottom: 0; grid-template-columns: 1fr; }
+body.strip .feature { padding: 0 3vw; justify-content: center; }
+body.strip .glyph { font-size: 110vh; top: -.08em; }
+body.strip .kicker { font-size: 6.5vh; margin-bottom: 3vh; }
+body.strip .f-title { font-size: 15vh; line-height: 1.1; }
+body.strip.clamp .f-title { -webkit-line-clamp: 2; }
+body.strip .f-summary { display: none !important; }
+body.strip .feature-foot { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; }
+body.strip .bar { border-radius: 0; height: 1.6vh; }
+body.strip .count { display: none; }
+body.strip .rail { display: none; }
+
+/* One story only: the featured card takes the whole wall. */
+body.solo .wall { grid-template-columns: 1fr; grid-template-rows: 1fr; }

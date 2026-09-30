@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>News wall</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="landscape">
+<div class="bg" aria-hidden="true"></div>
+<header class="top">
+  <div class="brand">
+    <span class="live" aria-hidden="true"></span>
+    <h1 id="title" class="title"></h1>
+  </div>
+  <div id="clock" class="clock"></div>
+</header>
+<main class="wall">
+  <article id="feature" class="feature">
+    <div id="glyph" class="glyph" aria-hidden="true"></div>
+    <div class="feature-body">
+      <div class="kicker"><span id="f-kicker" class="tag"></span><span id="f-date" class="fdate"></span></div>
+      <h2 id="f-title" class="f-title"></h2>
+      <p id="f-summary" class="f-summary"></p>
+    </div>
+    <footer class="feature-foot">
+      <div class="bar"><div id="bar" class="bar-fill"></div></div>
+      <div id="count" class="count"></div>
+    </footer>
+  </article>
+  <aside class="rail">
+    <div id="rail-label" class="rail-label"></div>
+    <ol id="cards" class="cards"></ol>
+  </aside>
+</main>
+<div id="empty" class="empty" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
