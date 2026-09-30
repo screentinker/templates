@@ -1,11 +1,147 @@
 {
   "schema": 1,
   "catalog": "official",
-  "serial": 1790788737,
-  "generated": "2026-09-30T17:18:57.138Z",
-  "expires": "2026-11-14T17:18:57.138Z",
+  "serial": 1790791193,
+  "generated": "2026-09-30T17:59:53.915Z",
+  "expires": "2026-11-14T17:59:53.915Z",
   "revoked": [],
   "templates": [
+    {
+      "id": "event-countdown",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.2.0",
+          "sha256": "94dd250d1870cfc6600886fcf8a9cc72cf31c9d9319ee6cf6af5f5b3eb355435",
+          "size": 42495,
+          "url": "packages/event-countdown-1.0.0.sttemplate",
+          "network": [],
+          "params": 15,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "Event countdown",
+      "description": "A launch-screen countdown for a conference, opening or product launch: the event name, a tagline and the date and venue, a big live countdown that switches to your own message when the moment arrives, and an optional ticket or RSVP QR code.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "countdown",
+        "event",
+        "launch",
+        "conference",
+        "qr",
+        "tickets"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/event-countdown",
+      "thumbnail": "thumbs/event-countdown-1.0.0.png"
+    },
+    {
+      "id": "guest-wifi",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.2.0",
+          "sha256": "f1bde45bb8b8db01314cd11381d2827740f013e4d2c42d5cacfc1ef780fee9f1",
+          "size": 351282,
+          "url": "packages/guest-wifi-1.0.0.sttemplate",
+          "network": [],
+          "params": 17,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "Guest Wi-Fi",
+      "description": "Your guest network name and password, large and legible, next to a QR code that joins the network in one scan — with the special characters in names and passwords escaped correctly, so the code actually connects. Made for hotels, cafés, clinics and offices; works as a full screen, a portrait poster or a thin strip. Nothing is fetched: the code is drawn on the screen.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "wifi",
+        "qr",
+        "guests",
+        "hospitality",
+        "hotel",
+        "cafe"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/guest-wifi",
+      "thumbnail": "thumbs/guest-wifi-1.0.0.png"
+    },
+    {
+      "id": "kpi-dashboard",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "39cbdf515f88e8bf5ac144e9e83bab64f1a53f4faa1e370845afe9dca0d1b77b",
+          "size": 248984,
+          "url": "packages/kpi-dashboard-1.0.0.sttemplate",
+          "network": [],
+          "params": 13,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "KPI dashboard",
+      "description": "Big, glanceable metric tiles with progress to target and a coloured change indicator. Feed it a Google Sheet, CSV, REST API or manual table (columns Metric, Value, Target, Unit, Change), or type the metrics in. Fits 1 to 12 tiles in any screen shape.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "kpi",
+        "dashboard",
+        "metrics",
+        "sales",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/kpi-dashboard",
+      "thumbnail": "thumbs/kpi-dashboard-1.0.0.png"
+    },
+    {
+      "id": "leaderboard",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "c6d5942bc9601e00ca6df9bd97f166ac812f292b8c4785f511873b3caa06dc1f",
+          "size": 338154,
+          "url": "packages/leaderboard-1.0.0.sttemplate",
+          "network": [],
+          "params": 17,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "Leaderboard",
+      "description": "A ranked leaderboard for sales teams, fundraisers, step challenges or game nights: a gold, silver and bronze podium for the top three and animated bars for everyone else. Type the scores in or connect a Google Sheet and let the board keep itself up to date.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "leaderboard",
+        "ranking",
+        "sales",
+        "competition",
+        "scores",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/leaderboard",
+      "thumbnail": "thumbs/leaderboard-1.0.0.png"
+    },
     {
       "id": "lobby-welcome",
       "versions": [
@@ -39,6 +175,76 @@
       "thumbnail": "thumbs/lobby-welcome-1.0.0.png"
     },
     {
+      "id": "meeting-room",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "931679e34d6aad1efbb98f754d4e8ace5b640312796eaf6de8aa1df5ba4cec35",
+          "size": 241321,
+          "url": "packages/meeting-room-1.0.0.sttemplate",
+          "network": [],
+          "params": 19,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "Meeting room sign",
+      "description": "A door sign for a meeting room: a huge green AVAILABLE or red BUSY band, the current and next meeting, and today's agenda, from any Calendar (iCal) data source. Privacy mode shows \"Reserved\" instead of titles. Made for a portrait panel beside the door, and works landscape or as a strip too.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "meeting-room",
+        "room-booking",
+        "calendar",
+        "ical",
+        "office",
+        "data-source",
+        "door-sign"
+      ],
+      "orientation": [
+        "portrait",
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/meeting-room",
+      "thumbnail": "thumbs/meeting-room-1.0.0.png"
+    },
+    {
+      "id": "menu-board",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "46ba5e68b8012852bc64b07173ca7c30149896bb6fd0177dcc679dccd983a699",
+          "size": 366802,
+          "url": "packages/menu-board-1.0.0.sttemplate",
+          "network": [],
+          "params": 20,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "Menu board",
+      "description": "A café, restaurant or bar menu that lays itself out: items grouped by category, prices aligned, tags like V or New, sold-out items greyed. Type the menu in, or connect a Google Sheet or a Manual table and edit prices without touching the screen.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "menu",
+        "restaurant",
+        "cafe",
+        "bar",
+        "prices",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/menu-board",
+      "thumbnail": "thumbs/menu-board-1.0.0.png"
+    },
+    {
       "id": "news-ticker",
       "versions": [
         {
@@ -68,6 +274,41 @@
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/news-ticker",
       "thumbnail": "thumbs/news-ticker-1.0.0.png"
+    },
+    {
+      "id": "news-wall",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "581e2bd615b74b9a603f11d2abcc018bd84454d4beff60977cde94b329f3b223",
+          "size": 267817,
+          "url": "packages/news-wall-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "News wall",
+      "description": "A magazine-style news wall for any RSS or Atom feed: a large featured story that rotates every few seconds, the next four stories as cards, the feed's title and relative dates. Typographic by design (no remote images), so it works offline. Or type your own headlines.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "news",
+        "rss",
+        "atom",
+        "feed",
+        "headlines",
+        "internal-comms",
+        "data-source"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/news-wall",
+      "thumbnail": "thumbs/news-wall-1.0.0.png"
     },
     {
       "id": "uptime-3036",
@@ -162,6 +403,40 @@
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/weather-html",
       "thumbnail": "thumbs/weather-html-1.0.0.png"
+    },
+    {
+      "id": "world-clocks",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.2.0",
+          "sha256": "281dae18d7fca027c8997ef051088a47dd96df88b907edfec46dad7f96cd683d",
+          "size": 366254,
+          "url": "packages/world-clocks-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "World clocks",
+      "description": "Two to eight live clocks for the cities you work with — analog, digital or both, with the date, a day/night cue and the hour difference from this screen. Lays itself out as a grid, a portrait list or a thin strip. Nothing is fetched: the times come from the screen's own clock.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "clock",
+        "world",
+        "timezones",
+        "office",
+        "reception",
+        "travel"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/world-clocks",
+      "thumbnail": "thumbs/world-clocks-1.0.0.png"
     }
   ]
 }
