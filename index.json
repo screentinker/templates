@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "catalog": "official",
+  "serial": 1790788737,
+  "generated": "2026-09-30T17:18:57.138Z",
+  "expires": "2026-11-14T17:18:57.138Z",
+  "revoked": [],
+  "templates": [
+    {
+      "id": "lobby-welcome",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.2.0",
+          "sha256": "a3b608a1b35471b52c27d3a1be37d27889629703c068dca4b0a23e39abb0a4f3",
+          "size": 53913,
+          "url": "packages/lobby-welcome-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "Lobby welcome",
+      "description": "A calm welcome screen for a reception or lobby: your logo, a headline and a line of detail, with a live clock and date in the building's own timezone and language.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "welcome",
+        "lobby",
+        "reception",
+        "clock",
+        "corporate"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/lobby-welcome",
+      "thumbnail": "thumbs/lobby-welcome-1.0.0.png"
+    },
+    {
+      "id": "news-ticker",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.2.0",
+          "sha256": "4d9c3d53156cc6dd684882ef5861b17315a810b79472d61f5086f896a9027aaa",
+          "size": 195365,
+          "url": "packages/news-ticker-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "News ticker",
+      "description": "Your own headlines as a rotating feature plus a smooth scrolling ticker. Full screen it shows both; placed in a thin strip zone it becomes a ticker bar on its own. Works fully offline — the headlines are typed in, nothing is fetched.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "news",
+        "ticker",
+        "announcements",
+        "text"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/news-ticker",
+      "thumbnail": "thumbs/news-ticker-1.0.0.png"
+    },
+    {
+      "id": "uptime-3036",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "min_server": "2.2.0",
+          "sha256": "08a54e29677813bab55c679a09b4aa440b3060e2455074da9e9e1a99d3335aa1",
+          "size": 261753,
+          "url": "packages/uptime-3036-1.0.1.sttemplate",
+          "network": [],
+          "params": 9,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "UPTIME 3036",
+      "description": "An original first-person arcade shooter about the worst on-call shift of the year 3036: every server is down and the datacenter is crawling with bugs. Nobody playing? It plays itself in autopilot demo mode. Click or press a key to take over; walk away and the demo takes back over.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "game",
+        "interactive",
+        "arcade",
+        "it",
+        "retro"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/uptime-3036",
+      "thumbnail": "thumbs/uptime-3036-1.0.1.png"
+    },
+    {
+      "id": "weather-forecast",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.2.0",
+          "sha256": "b73989c8b8f10d61f7e30a847fb2bfa308d9a7e5b34e9151848bfb9320bf3186",
+          "size": 51502,
+          "url": "packages/weather-forecast-1.0.0.sttemplate",
+          "network": [],
+          "params": 9,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "Weather forecast",
+      "description": "Current conditions and a five-day forecast from one of your Weather data sources. Your server fetches the weather itself; the template only lays it out.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "weather",
+        "forecast",
+        "data-source",
+        "clock"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/weather-forecast",
+      "thumbnail": "thumbs/weather-forecast-1.0.0.png"
+    },
+    {
+      "id": "weather-html",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.2.0",
+          "sha256": "c3f538e98674d37a79f7955f4878d0c2d27d2aa2b83b6b361052336936ca011f",
+          "size": 253534,
+          "url": "packages/weather-html-1.0.0.sttemplate",
+          "network": [],
+          "params": 9,
+          "published": "2026-09-30"
+        }
+      ],
+      "name": "Weather — animated",
+      "description": "A full-screen animated weather scene: the sky, rain, snow or sun follow the current conditions, with a five-day forecast and temperature ranges. Reads one of your Weather data sources; your server fetches the weather, so this template needs no network access at all.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "weather",
+        "forecast",
+        "data-source",
+        "animated"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/weather-html",
+      "thumbnail": "thumbs/weather-html-1.0.0.png"
+    }
+  ]
+}
