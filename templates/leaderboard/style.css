@@ -1,0 +1,181 @@
+/* Leaderboard — ScreenTinker community template. MIT. Fonts: Inter, Archivo, Oswald — SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Inter'; font-weight: 400 800; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+@font-face { font-family: 'Archivo'; font-weight: 400 800; font-style: normal; src: url(fonts/archivo.woff2) format('woff2'); }
+@font-face { font-family: 'Oswald'; font-weight: 300 700; font-style: normal; src: url(fonts/oswald.woff2) format('woff2'); }
+
+:root {
+  --bg: #0B1020;
+  --accent: #6C8CFF;
+  --text: #F2F4FA;
+  --display: 'Archivo', 'Inter', sans-serif;
+  --gold: #F4C54B;
+  --silver: #C3CCD8;
+  --bronze: #D9895A;
+  /* 1% of the height, but no more than 0.9% of the width (portrait). */
+  --u: min(1vh, 0.9vw);
+}
+body[data-font="oswald"] { --display: 'Oswald', 'Inter', sans-serif; }
+body[data-font="inter"]  { --display: 'Inter', system-ui, sans-serif; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+
+.bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(70vmax 50vmax at 22% 85%, color-mix(in srgb, var(--gold) 13%, transparent), transparent 65%),
+    radial-gradient(90vmax 60vmax at 100% 0%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.3));
+}
+@supports not (background: color-mix(in srgb, red 50%, transparent)) {
+  .bg { background: radial-gradient(70vmax 50vmax at 22% 85%, rgba(244,197,75,.12), transparent 65%), linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.3)); }
+}
+
+.frame {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  padding: calc(var(--u) * 5) calc(var(--u) * 6);
+}
+
+/* ---------- header ---------- */
+.head { flex: none; display: flex; align-items: center; gap: calc(var(--u) * 2.4); min-width: 0; }
+.logo { height: calc(var(--u) * 8); max-width: calc(var(--u) * 22); object-fit: contain; flex: none; }
+.title {
+  margin: 0; min-width: 0; font-family: var(--display); font-weight: 800;
+  font-size: calc(var(--u) * 6.4); line-height: 1.05; letter-spacing: -.015em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.period {
+  flex: none; margin-left: auto;
+  padding: .45em 1.1em; border-radius: 2em;
+  font-size: calc(var(--u) * 2.1); font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.period:empty { display: none; }
+
+/* ---------- board ---------- */
+.board {
+  flex: 1; min-height: 0; margin-top: calc(var(--u) * 4);
+  display: flex; gap: calc(var(--u) * 6);
+}
+.podium { flex: 0 0 47%; min-width: 0; display: flex; align-items: flex-end; justify-content: center; gap: calc(var(--u) * 1.6); }
+.list { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+.board.solo .podium { flex-basis: 100%; }
+.board.solo .list { display: none; }
+
+/* ---------- podium ---------- */
+.place {
+  flex: 1 1 0; min-width: 0; height: 100%;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: stretch;
+  --m: var(--silver);
+  animation: rise 1s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d, 0s);
+}
+.place.p1 { order: 2; --m: var(--gold); flex-grow: 1.18; }
+.place.p2 { order: 1; }
+.place.p3 { order: 3; --m: var(--bronze); }
+
+.who { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 .4em 1.1em; min-width: 0; }
+.avatar {
+  position: relative; flex: none;
+  width: 2.9em; height: 2.9em; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 800; font-size: 1.25em; letter-spacing: .02em;
+  color: var(--bg); background: var(--m);
+  box-shadow: 0 0 0 .14em var(--bg), 0 0 0 .26em var(--m), 0 .6em 2em rgba(0,0,0,.45);
+}
+.p1 .avatar { font-size: 1.55em; box-shadow: 0 0 0 .14em var(--bg), 0 0 0 .26em var(--m), 0 0 2.2em color-mix(in srgb, var(--gold) 55%, transparent); }
+.crown { position: absolute; left: 50%; bottom: 100%; width: 1.35em; height: 1em; margin: 0 0 .25em -.675em; fill: var(--gold); }
+.pname {
+  margin-top: .75em; max-width: 100%;
+  font-weight: 700; font-size: 1em; line-height: 1.15;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.psub { margin-top: .2em; max-width: 100%; font-size: .66em; opacity: .6; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.psub:empty { display: none; }
+.pscore {
+  margin-top: .35em; font-family: var(--display); font-weight: 800; font-size: 1.45em;
+  color: var(--m); font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.p1 .pscore { font-size: 1.8em; }
+
+.plinth {
+  flex: none; position: relative; overflow: hidden;
+  border-radius: .5em .5em 0 0;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--m) 34%, transparent), color-mix(in srgb, var(--m) 6%, transparent));
+  border-top: .16em solid var(--m);
+  display: flex; justify-content: center; align-items: flex-start;
+  transform-origin: 50% 100%;
+  animation: grow 1s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d, 0s);
+}
+@supports not (background: color-mix(in srgb, red 50%, transparent)) {
+  .plinth { background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.03)); }
+  .period { background: transparent; }
+}
+.plinth span {
+  margin-top: .12em; font-family: var(--display); font-weight: 800; font-size: 2.6em; line-height: 1;
+  color: var(--m); opacity: .9;
+}
+.p1 .plinth { height: 34%; }
+.p2 .plinth { height: 24%; }
+.p3 .plinth { height: 17%; }
+
+/* ---------- rows ---------- */
+.row {
+  flex: none; display: flex; align-items: center; gap: .9em;
+  padding: 0 .9em; border-radius: .45em;
+  animation: slide .8s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d, 0s);
+}
+.row:nth-child(odd) { background: rgba(255,255,255,.035); }
+.rank {
+  flex: none; width: 1.9em; text-align: right;
+  font-family: var(--display); font-weight: 800; font-size: 1.05em; opacity: .5;
+  font-variant-numeric: tabular-nums;
+}
+.info { flex: 1; min-width: 0; }
+.line { display: flex; align-items: baseline; gap: .7em; min-width: 0; }
+.rname { font-weight: 650; font-size: 1em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 0 1 auto; }
+.rsub { font-size: .7em; opacity: .55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 0 1000 auto; }
+.rsub:empty { display: none; }
+.bar { margin-top: .38em; height: .3em; border-radius: .3em; background: rgba(255,255,255,.07); overflow: hidden; }
+.bar i {
+  display: block; height: 100%; border-radius: inherit;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 55%, transparent), var(--accent));
+  transform-origin: 0 50%; transform: scaleX(var(--w, 0));
+  animation: fill 1.3s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d, 0s);
+}
+@supports not (background: color-mix(in srgb, red 50%, transparent)) { .bar i { background: var(--accent); } }
+.rscore {
+  flex: none; font-family: var(--display); font-weight: 800; font-size: 1.1em;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+
+.empty-note { margin: auto; font-size: calc(var(--u) * 3.2); opacity: .55; }
+
+@keyframes rise  { from { opacity: 0; transform: translateY(8%); } }
+@keyframes grow  { from { transform: scaleY(0); } }
+@keyframes slide { from { opacity: 0; transform: translateX(-3%); } }
+@keyframes fill  { from { transform: scaleX(0); } }
+
+/* ---------- portrait: podium on top, list below ---------- */
+body.portrait .board { flex-direction: column; gap: calc(var(--u) * 3); }
+body.portrait .podium { flex: 0 0 44%; width: 100%; }
+body.portrait .list { justify-content: flex-start; }
+
+/* ---------- a wide strip: no plinths, just the three winners and the rest ---------- */
+body.strip .frame { flex-direction: row; align-items: center; padding: calc(var(--u) * 4) calc(var(--u) * 3); gap: calc(var(--u) * 4); }
+body.strip .head { flex-direction: column; align-items: flex-start; width: 18%; gap: calc(var(--u) * 2); }
+body.strip .title { font-size: calc(var(--u) * 9); white-space: normal; }
+body.strip .period { margin-left: 0; font-size: calc(var(--u) * 3.6); }
+body.strip .logo { height: calc(var(--u) * 14); }
+body.strip .board { margin: 0; height: 100%; align-self: stretch; }
+body.strip .plinth { display: none; }
+body.strip .podium { align-items: center; flex-basis: 44%; }
+body.strip .place { height: auto; }
+body.strip .who { padding-bottom: 0; }

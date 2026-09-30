@@ -1,0 +1,171 @@
+/* Guest Wi-Fi — ScreenTinker community template. MIT. Fonts: Inter and JetBrains Mono, SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Inter'; font-weight: 400 800; font-style: normal; src: url(fonts/inter.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-weight: 400 800; font-style: normal; src: url(fonts/inter-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400 700; font-style: normal; src: url(fonts/jetbrains-mono.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400 700; font-style: normal; src: url(fonts/jetbrains-mono-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/*
+ * Sizing: --k is one hundredth of the layout's short design side, in vw/vh, so a 1080p panel, a 4K
+ * panel and a portrait kiosk all get the same composition. app.js only picks the layout class.
+ */
+:root {
+  --bg: #10222A;
+  --accent: #5CC8B5;
+  --text: #F3EDE3;
+  --ink: #0F1419;
+  --k: min(1vh, .5625vw);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+.bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; }
+.glow {
+  position: absolute; width: 140vmax; height: 140vmax; left: -70vmax; bottom: -80vmax; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255,255,255,.08), transparent);
+}
+.waves {
+  position: absolute; width: 120vmax; height: 120vmax; right: -72vmax; top: -74vmax; border-radius: 50%;
+  border: calc(var(--k) * .25) solid var(--accent); opacity: .16;
+  box-shadow: 0 0 0 calc(var(--k) * 6) rgba(255,255,255,.012), 0 0 0 calc(var(--k) * 12) rgba(255,255,255,.01);
+}
+
+.stage {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  display: grid;
+  padding: calc(var(--k) * 8) calc(var(--k) * 9);
+}
+
+/* ---------- words ---------- */
+.intro { grid-area: intro; min-width: 0; animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+.logo { display: block; height: calc(var(--k) * 10); max-width: calc(var(--k) * 40); object-fit: contain; object-position: left center; margin-bottom: calc(var(--k) * 5); }
+body.no-logo .logo { display: none; }
+.eyebrow {
+  font-size: calc(var(--k) * 2.2); font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: calc(var(--k) * 1.6);
+}
+.headline {
+  margin: 0; font-size: calc(var(--k) * 6.4); line-height: 1.08; font-weight: 800; letter-spacing: -.02em;
+  max-width: 17em;
+}
+
+.creds {
+  grid-area: creds; align-self: end; min-width: 0;
+  border-left: calc(var(--k) * .5) solid var(--accent);
+  padding-left: calc(var(--k) * 4);
+  animation: rise .9s .25s cubic-bezier(.2,.7,.2,1) both;
+}
+.row + .row { margin-top: calc(var(--k) * 3.4); }
+.label {
+  font-size: calc(var(--k) * 1.8); font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  opacity: .6; margin-bottom: calc(var(--k) * .8);
+}
+.value {
+  font-size: calc(var(--k) * 5.4); font-weight: 700; line-height: 1.15; letter-spacing: -.01em;
+  overflow-wrap: anywhere;
+}
+.password { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 600; letter-spacing: 0; }
+.value.muted { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; opacity: .8; font-size: calc(var(--k) * 3.6); }
+
+/* ---------- the code ---------- */
+.scan {
+  grid-area: scan; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  animation: pop 1s .15s cubic-bezier(.2,.8,.2,1) both;
+}
+.card {
+  width: calc(var(--k) * 56); height: calc(var(--k) * 56);
+  background: #FFFFFF; border-radius: calc(var(--k) * 3.2);
+  padding: calc(var(--k) * 1);
+  box-shadow: 0 calc(var(--k) * 2) calc(var(--k) * 7) rgba(0,0,0,.35), 0 0 0 calc(var(--k) * .6) rgba(255,255,255,.08);
+}
+.qr, .qr svg { display: block; width: 100%; height: 100%; }
+.qr.empty {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  color: #5A6470; font-size: calc(var(--k) * 2.4); font-weight: 600; line-height: 1.35; padding: 12%;
+  border: calc(var(--k) * .3) dashed #C9CED4; border-radius: calc(var(--k) * 2);
+}
+.hint {
+  display: flex; align-items: center; margin-top: calc(var(--k) * 3.4);
+  font-size: calc(var(--k) * 2.6); font-weight: 700; letter-spacing: .02em;
+}
+.phone {
+  width: calc(var(--k) * 2.1); height: calc(var(--k) * 3.4); margin-right: calc(var(--k) * 1.4);
+  border: calc(var(--k) * .35) solid var(--accent); border-radius: calc(var(--k) * .6); position: relative; flex: none;
+}
+.phone::after {
+  content: ''; position: absolute; left: 50%; bottom: calc(var(--k) * .35); width: calc(var(--k) * .5); height: calc(var(--k) * .5);
+  margin-left: calc(var(--k) * -.25); border-radius: 50%; background: var(--accent);
+}
+body.no-hint .hint { display: none; }
+
+.footer {
+  grid-area: footer; align-self: end; font-size: calc(var(--k) * 1.9); opacity: .55;
+  margin-top: calc(var(--k) * 4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  animation: rise .9s .4s cubic-bezier(.2,.7,.2,1) both;
+}
+
+/* ---------- landscape: words left, code right ---------- */
+.m-land .stage {
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "intro scan" "creds scan" "footer scan";
+  grid-column-gap: calc(var(--k) * 10);
+}
+
+/* ---------- portrait: a poster, code in the middle ---------- */
+.m-port { --k: min(1vw, .5625vh); }
+.m-port .stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-areas: "intro" "scan" "creds" "footer";
+  padding: calc(var(--k) * 11) calc(var(--k) * 9);
+}
+.m-port .headline { font-size: calc(var(--k) * 8); }
+.m-port .card { width: calc(var(--k) * 66); height: calc(var(--k) * 66); }
+.m-port .creds { margin-top: calc(var(--k) * 4); }
+.m-port .value { font-size: calc(var(--k) * 6.4); }
+.m-port .scan { margin: calc(var(--k) * 6) 0; }
+
+/* ---------- strip: code, then the two values side by side ---------- */
+.m-strip { --k: min(1vh, .2vw); }
+.m-strip .stage {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "scan creds";
+  grid-column-gap: calc(var(--k) * 10);
+  padding: calc(var(--k) * 9) calc(var(--k) * 12);
+  align-items: center;
+}
+.m-strip .intro, .m-strip .footer { display: none; }
+.m-strip .scan { flex-direction: row; }
+.m-strip .card { width: calc(var(--k) * 82); height: calc(var(--k) * 82); padding: calc(var(--k) * 1.5); border-radius: calc(var(--k) * 4); }
+.m-strip .hint { margin: 0 0 0 calc(var(--k) * 6); font-size: calc(var(--k) * 6); flex-direction: column; align-items: flex-start; max-width: calc(var(--k) * 60); }
+.m-strip .phone { width: calc(var(--k) * 5); height: calc(var(--k) * 8); margin: 0 0 calc(var(--k) * 3); border-width: calc(var(--k) * .8); border-radius: calc(var(--k) * 1.4); }
+.m-strip .creds {
+  align-self: center; display: flex; flex-wrap: wrap; align-items: flex-end;
+  column-gap: calc(var(--k) * 14); row-gap: calc(var(--k) * 3);
+  padding-left: calc(var(--k) * 8); border-left-width: calc(var(--k) * 1);
+}
+.m-strip .row + .row { margin: 0; }
+.m-strip .label { font-size: calc(var(--k) * 5); }
+.m-strip .value { font-size: calc(var(--k) * 15); }
+.m-strip .value.muted { font-size: calc(var(--k) * 9); }
+.m-strip.long-creds .value { font-size: calc(var(--k) * 10); }
+.m-strip.long-creds .label { font-size: calc(var(--k) * 4); }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(calc(var(--k) * 3)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(.94); }
+  to { opacity: 1; transform: none; }
+}

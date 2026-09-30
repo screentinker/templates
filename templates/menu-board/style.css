@@ -1,0 +1,139 @@
+/* Menu board — ScreenTinker community template. MIT. Fonts: Inter, Bitter, Archivo, Oswald — SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Inter'; font-weight: 400 800; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+@font-face { font-family: 'Bitter'; font-weight: 400 800; font-style: normal; src: url(fonts/bitter.woff2) format('woff2'); }
+@font-face { font-family: 'Archivo'; font-weight: 400 800; font-style: normal; src: url(fonts/archivo.woff2) format('woff2'); }
+@font-face { font-family: 'Oswald'; font-weight: 300 700; font-style: normal; src: url(fonts/oswald.woff2) format('woff2'); }
+
+:root {
+  --bg: #17120F;
+  --accent: #D9A441;
+  --text: #F4EDE4;
+  --display: 'Bitter', Georgia, serif;
+  /* One unit that works in every shape: 1% of the height, but no more than 0.9% of the width (portrait). */
+  --u: min(1vh, 0.9vw);
+}
+body[data-font="archivo"] { --display: 'Archivo', 'Inter', sans-serif; }
+body[data-font="oswald"]  { --display: 'Oswald', 'Inter', sans-serif; }
+body[data-font="inter"]   { --display: 'Inter', system-ui, sans-serif; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+
+.bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(110vmax 70vmax at 0% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 62%),
+    radial-gradient(90vmax 60vmax at 100% 100%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.025), rgba(0,0,0,.28));
+}
+@supports not (background: color-mix(in srgb, red 50%, transparent)) {
+  .bg { background: radial-gradient(110vmax 70vmax at 0% 0%, rgba(255,255,255,.06), transparent 62%), linear-gradient(180deg, rgba(255,255,255,.025), rgba(0,0,0,.28)); }
+}
+
+.frame {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  padding: calc(var(--u) * 5.5) calc(var(--u) * 6.5) calc(var(--u) * 3.6);
+}
+
+/* ---------- header ---------- */
+.head { display: flex; align-items: center; gap: calc(var(--u) * 3); flex: none; }
+.logo { height: calc(var(--u) * 10); max-width: calc(var(--u) * 24); object-fit: contain; flex: none; }
+.titles { min-width: 0; }
+.title {
+  margin: 0; font-family: var(--display); font-weight: 700;
+  font-size: calc(var(--u) * 7.2); line-height: 1.02; letter-spacing: -.01em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.subtitle {
+  margin-top: calc(var(--u) * 1.1);
+  font-size: calc(var(--u) * 2.3); letter-spacing: .02em; opacity: .66;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.subtitle:empty { display: none; }
+.head::after {
+  content: ''; flex: 1; align-self: flex-end; height: 1px; margin-bottom: calc(var(--u) * 1.6);
+  background: linear-gradient(90deg, var(--accent), transparent); opacity: .55;
+}
+
+/* ---------- the menu ---------- */
+.stage { position: relative; flex: 1; min-height: 0; margin-top: calc(var(--u) * 3.4); }
+.menu {
+  position: absolute; inset: 0;
+  column-fill: auto;
+  column-gap: 3.2em;
+  column-rule: 1px solid rgba(255,255,255,.07);
+  overflow: hidden;
+  transition: opacity .7s ease;
+}
+.menu.hide { opacity: 0; }
+/* A short menu that reached the largest size: share it evenly between the columns. */
+.menu.even { column-fill: balance; }
+
+.cat {
+  display: flex; align-items: center; gap: .7em;
+  margin: 1.35em 0 .35em; padding-top: .05em;
+  font-family: var(--display); font-weight: 700;
+  font-size: .82em; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent);
+}
+.cat::after { content: ''; flex: 1; height: 1px; background: currentColor; opacity: .35; }
+.cat .cont { font-weight: 500; letter-spacing: .08em; opacity: .7; text-transform: none; font-style: italic; }
+.keep > .cat:first-child, .menu > .keep:first-child > .cat { margin-top: 0; }
+.keep, .grp { break-inside: avoid; -webkit-column-break-inside: avoid; }
+.grp > .cat:first-child { margin-top: 0; }
+.grp + .grp { margin-top: 1.1em; }
+
+.it { break-inside: avoid; -webkit-column-break-inside: avoid; padding: .42em 0 .5em; }
+.row { display: flex; align-items: baseline; }
+.name { flex: 0 1 auto; font-weight: 650; font-size: 1em; line-height: 1.2; min-width: 0; overflow-wrap: anywhere; }
+.pill {
+  display: inline-block; white-space: nowrap; margin-left: .15em; padding: .12em .5em .1em;
+  font-size: .52em; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  border-radius: 1em; border: 1px solid var(--accent); color: var(--accent);
+  position: relative; top: -.18em;
+}
+.lead { flex: 1 1 1.5em; min-width: 1.5em; margin: 0 .55em; border-bottom: .09em dotted rgba(255,255,255,.28); position: relative; top: -.22em; }
+.price {
+  flex: none; font-family: var(--display); font-weight: 700; font-size: 1.02em;
+  color: var(--accent); font-variant-numeric: tabular-nums; letter-spacing: .01em;
+}
+.desc { margin-top: .22em; font-size: .64em; line-height: 1.35; opacity: .62; }
+.desc:empty { display: none; }
+
+.it.soldout .name, .it.soldout .desc { opacity: .42; }
+.it.soldout .price { color: var(--text); opacity: .38; text-decoration: line-through; text-decoration-thickness: .08em; }
+.it.soldout .pill { border-color: rgba(255,255,255,.45); color: var(--text); opacity: .7; }
+.it.soldout .lead { opacity: .4; }
+
+/* ---------- footer ---------- */
+.foot {
+  flex: none; display: flex; align-items: center; justify-content: space-between; gap: 2em;
+  margin-top: calc(var(--u) * 2.2); min-height: calc(var(--u) * 2.4);
+}
+.footer-text { font-size: calc(var(--u) * 1.9); letter-spacing: .03em; opacity: .5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pager { display: flex; gap: calc(var(--u) * 1); flex: none; }
+.pager span {
+  width: calc(var(--u) * 1.1); height: calc(var(--u) * 1.1); border-radius: 50%;
+  background: var(--text); opacity: .22; transition: opacity .5s, transform .5s;
+}
+.pager span.on { opacity: .9; background: var(--accent); transform: scale(1.25); }
+
+/* ---------- a very wide strip: header and menu side by side ---------- */
+body.strip .frame { flex-direction: row; align-items: stretch; padding: calc(var(--u) * 4) calc(var(--u) * 3); }
+body.strip .head { flex-direction: column; align-items: flex-start; justify-content: center; width: 22%; padding-right: 2.5%; border-right: 1px solid rgba(255,255,255,.1); }
+body.strip .head::after { display: none; }
+body.strip .title { font-size: calc(var(--u) * 10); white-space: normal; }
+body.strip .subtitle { font-size: calc(var(--u) * 4.2); white-space: normal; }
+body.strip .logo { height: calc(var(--u) * 16); }
+body.strip .stage { margin: 0 0 0 2.5%; }
+body.strip .foot { display: none; }
+
+/* ---------- empty ---------- */
+.empty-note { font-size: calc(var(--u) * 3); opacity: .6; }

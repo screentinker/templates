@@ -1,0 +1,12 @@
+World clocks — third-party material bundled in this template
+
+fonts/inter.woff2, fonts/inter-ext.woff2
+  Inter (latin and latin-ext subsets), Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+  SIL Open Font License 1.1 — full text in fonts/OFL-inter.txt
+
+fonts/oswald.woff2, fonts/oswald-ext.woff2
+  Oswald (latin and latin-ext subsets), Copyright 2016 The Oswald Project Authors (https://github.com/googlefonts/OswaldFont)
+  SIL Open Font License 1.1 — full text in fonts/OFL-oswald.txt
+
+The font files are the same subsets ScreenTinker ships in server/fonts, unmodified.
+Everything else in this folder is original work under the MIT licence in LICENSE.

@@ -1,0 +1,19 @@
+Menu board — third-party material bundled in this template
+
+fonts/archivo.woff2
+  Archivo (latin subset), Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)
+  SIL Open Font License 1.1 — full text in fonts/OFL-archivo.txt
+
+fonts/bitter.woff2
+  Bitter (latin subset), Copyright 2011 The Bitter Project Authors (https://github.com/solmatas/BitterPro)
+  SIL Open Font License 1.1 — full text in fonts/OFL-bitter.txt
+
+fonts/inter.woff2
+  Inter (latin subset), Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+  SIL Open Font License 1.1 — full text in fonts/OFL-inter.txt
+
+fonts/oswald.woff2
+  Oswald (latin subset), Copyright 2016 The Oswald Project Authors (https://github.com/googlefonts/OswaldFont)
+  SIL Open Font License 1.1 — full text in fonts/OFL-oswald.txt
+
+Everything else in this folder is original work under the MIT licence in LICENSE.

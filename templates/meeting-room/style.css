@@ -1,0 +1,181 @@
+/* Meeting room sign — ScreenTinker community template. MIT. Fonts: Archivo and Inter, SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Archivo'; font-weight: 100 900; font-style: normal; src: url(fonts/archivo.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 100 900; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+
+:root {
+  --bg: #0B0F14;
+  --text: #F5F7FA;
+  --state: #E5484D;       /* set by app.js: the available or busy colour */
+  --state-deep: #9E2A2E;  /* fallback for browsers without color-mix */
+  --on-state: #FFFFFF;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased; cursor: none;
+}
+[hidden] { display: none !important; }
+.app { position: absolute; inset: 0; display: grid; }
+
+/* ---------- the status band ---------- */
+.band {
+  position: relative; overflow: hidden; color: var(--on-state);
+  background: linear-gradient(155deg, var(--state) 0%, var(--state-deep) 100%);
+  display: flex; flex-direction: column; min-width: 0; min-height: 0;
+  transition: background .6s ease;
+}
+@supports (background: color-mix(in srgb, red 50%, black)) {
+  .band { background: linear-gradient(155deg, color-mix(in srgb, var(--state) 92%, white) 0%, var(--state) 45%, color-mix(in srgb, var(--state) 62%, black) 100%); }
+}
+.band-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 45% at 85% 0%, rgba(255,255,255,.22), transparent 70%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 2px, transparent 2px 22px);
+}
+.band > * { position: relative; }
+.band-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 3vmin; }
+.room {
+  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800; letter-spacing: -.01em; line-height: 1.05;
+  min-width: 0; flex: 1 1 auto; overflow: hidden; overflow-wrap: break-word;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+}
+.clockbox { flex: none; text-align: right; }
+.clock { font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -.01em; }
+.date { font-weight: 500; opacity: .82; margin-top: .45em; white-space: nowrap; }
+
+.state { margin: auto 0; padding: 2vmin 0; }
+.word-row { display: flex; align-items: center; gap: .1em; min-width: 0; }
+.word {
+  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 900; text-transform: uppercase;
+  letter-spacing: -.02em; line-height: .9; white-space: nowrap;
+}
+.dot {
+  flex: none; width: .16em; height: .16em; border-radius: 50%; background: var(--on-state);
+  box-shadow: 0 0 0 0 rgba(255,255,255,.6); animation: pulse 2.4s ease-out infinite;
+  align-self: center; margin-right: .06em;
+}
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.55); } 70%, 100% { box-shadow: 0 0 0 .22em rgba(255,255,255,0); } }
+.detail { font-weight: 600; opacity: .95; margin-top: .5em; }
+
+.now {
+  border-top: 2px solid rgba(255,255,255,.28);
+}
+.kicker {
+  font-weight: 700; text-transform: uppercase; letter-spacing: .14em; opacity: .75;
+}
+.now-title, .card-title {
+  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 700; line-height: 1.12; letter-spacing: -.01em;
+  overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+}
+.meta { font-weight: 500; opacity: .82; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+.meta .sep { opacity: .5; margin: 0 .5em; }
+
+/* ---------- the side: next meeting and agenda ---------- */
+.side { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; }
+.card {
+  border-radius: 1.6vmin; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.09);
+}
+.card .kicker { color: var(--state); opacity: 1; }
+@supports (color: color-mix(in srgb, red 50%, white)) {
+  .card .kicker { color: color-mix(in srgb, var(--state) 70%, white); }
+}
+.agenda { display: flex; flex-direction: column; min-height: 0; }
+.agenda .kicker { opacity: .6; }
+.list { list-style: none; margin: 0; padding: 0; }
+.item {
+  display: flex; align-items: baseline;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.item:last-child { border-bottom: 0; }
+.item .when { overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-variant-numeric: tabular-nums; opacity: .7; white-space: nowrap; }
+.item .when { flex: none; box-sizing: border-box; }
+.item .what { min-width: 0; flex: 1 1 auto; }
+.item .title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item .who { opacity: .6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item.current .when { opacity: 1; color: var(--state); }
+.item.current .title::after {
+  content: attr(data-now); display: inline-block; vertical-align: middle; margin-left: .6em;
+  font-size: .6em; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  padding: .25em .6em; border-radius: 99em; background: var(--state); color: var(--on-state);
+}
+.empty-line { opacity: .55; font-weight: 500; }
+
+.sample {
+  position: absolute; right: 2vmin; bottom: 2vmin; font-size: 1.5vmin; font-weight: 600; letter-spacing: .04em;
+  padding: .45em 1em; border-radius: 99em; background: rgba(255,255,255,.08); opacity: .7;
+}
+
+/* ================= portrait door sign (e.g. 1080x1920) ================= */
+body.portrait .app { grid-template-rows: 55% 45%; }
+/* Nothing booked: the band takes most of the sign. */
+body.portrait.quiet .app { grid-template-rows: 74% 26%; }
+body.landscape.quiet .app { grid-template-columns: 64% 36%; }
+body.portrait .band { padding: 6vw 6.5vw 5.5vw; }
+body.portrait .room { font-size: 6.4vw; }
+body.portrait .clock { font-size: 6vw; }
+body.portrait .date { font-size: 2.6vw; }
+body.portrait .word-row { font-size: 25vw; }
+body.portrait .detail { font-size: 4.6vw; }
+body.portrait .now { padding-top: 3.6vw; }
+body.portrait .now .kicker { font-size: 2.5vw; margin-bottom: 1.4vw; }
+body.portrait .now-title { font-size: 5.6vw; }
+body.portrait .now .meta { font-size: 3.4vw; margin-top: 1.3vw; }
+body.portrait .side { padding: 5vw 6.5vw 6vw; gap: 4.5vw; }
+body.portrait .card { padding: 4vw 4.5vw; }
+body.portrait .card .kicker { font-size: 2.5vw; margin-bottom: 1.4vw; }
+body.portrait .card-title { font-size: 4.8vw; }
+body.portrait .card .meta { font-size: 3.2vw; margin-top: 1.2vw; }
+body.portrait .agenda .kicker { font-size: 2.5vw; margin-bottom: 1vw; }
+body.portrait .item { column-gap: 4vw; padding: 2.4vw 0; }
+body.portrait .item .when { font-size: 3.1vw; }
+body.portrait .item .title { font-size: 3.6vw; }
+body.portrait .item .who { font-size: 2.6vw; margin-top: .4vw; }
+body.portrait .empty-line { font-size: 3.4vw; padding: 2.4vw 0; }
+body.portrait .sample { font-size: 2vw; }
+
+/* ================= landscape (e.g. 1920x1080) ================= */
+body.landscape .app { grid-template-columns: 52% 48%; }
+body.landscape .band { padding: 6vh 4.5vw 5.5vh; }
+body.landscape .room { font-size: 5.6vh; }
+body.landscape .clock { font-size: 5.6vh; }
+body.landscape .date { font-size: 2.3vh; }
+body.landscape .word-row { font-size: min(22vh, 12vw); }
+body.landscape .detail { font-size: 4.2vh; }
+body.landscape .now { padding-top: 3.4vh; }
+body.landscape .now .kicker { font-size: 2.1vh; margin-bottom: 1.2vh; }
+body.landscape .now-title { font-size: 4.8vh; }
+body.landscape .now .meta { font-size: 2.8vh; margin-top: 1.1vh; }
+body.landscape .side { padding: 6vh 4vw 5.5vh; gap: 4.5vh; }
+body.landscape .card { padding: 3.6vh 2.4vw; }
+body.landscape .card .kicker { font-size: 2.1vh; margin-bottom: 1.2vh; }
+body.landscape .card-title { font-size: 4.4vh; }
+body.landscape .card .meta { font-size: 2.7vh; margin-top: 1vh; }
+body.landscape .agenda .kicker { font-size: 2.1vh; margin-bottom: .8vh; }
+body.landscape .item { column-gap: 2vw; padding: 2vh 0; }
+body.landscape .item .when { font-size: 2.6vh; }
+body.landscape .item .title { font-size: 3vh; }
+body.landscape .item .who { font-size: 2.2vh; margin-top: .4vh; }
+body.landscape .empty-line { font-size: 2.8vh; padding: 2vh 0; }
+
+/* ================= strip (wider than about 3:1) ================= */
+body.strip .app { grid-template-columns: 62% 38%; }
+body.strip .band { padding: 0 3vw; flex-direction: row; align-items: center; gap: 3vw; }
+body.strip .band-top { flex-direction: column; justify-content: center; gap: 1vh; flex: none; max-width: 22vw; }
+body.strip .room { font-size: 9vh; -webkit-line-clamp: 1; }
+body.strip .clockbox { text-align: left; display: flex; align-items: baseline; gap: 1.2vw; }
+body.strip .clock { font-size: 7vh; }
+body.strip .date { font-size: 5vh; margin-top: 0; }
+body.strip .state { margin: 0; flex: 1 1 auto; min-width: 0; }
+body.strip .word-row { font-size: min(34vh, 6vw); }
+body.strip .detail { font-size: 7.5vh; margin-top: .3em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.strip .now { display: none !important; }
+body.strip .side { padding: 0 2.5vw; justify-content: center; }
+body.strip .card { background: none; border: 0; padding: 0; }
+body.strip .card .kicker { font-size: 5.5vh; margin-bottom: 1.5vh; }
+body.strip .card-title { font-size: 11vh; -webkit-line-clamp: 1; }
+body.strip .card .meta { font-size: 7vh; margin-top: 1.2vh; }
+body.strip .agenda { display: none; }
+body.strip .sample { font-size: 4vh; bottom: 3vh; }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meeting room sign</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="portrait">
+<main class="app">
+  <section id="band" class="band">
+    <div class="band-glow" aria-hidden="true"></div>
+    <header class="band-top">
+      <div id="room" class="room"></div>
+      <div class="clockbox">
+        <div id="clock" class="clock"></div>
+        <div id="date" class="date"></div>
+      </div>
+    </header>
+    <div class="state">
+      <div class="word-row"><span class="dot" aria-hidden="true"></span><span id="word" class="word"></span></div>
+      <div id="detail" class="detail"></div>
+    </div>
+    <div id="now" class="now" hidden>
+      <div id="now-label" class="kicker"></div>
+      <div id="now-title" class="now-title"></div>
+      <div id="now-meta" class="meta"></div>
+    </div>
+  </section>
+  <section class="side">
+    <div id="next" class="card next">
+      <div id="next-label" class="kicker"></div>
+      <div id="next-title" class="card-title"></div>
+      <div id="next-meta" class="meta"></div>
+    </div>
+    <div class="agenda">
+      <div id="agenda-label" class="kicker"></div>
+      <ol id="agenda" class="list"></ol>
+    </div>
+  </section>
+  <div id="sample" class="sample" hidden>Sample schedule — connect a calendar</div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

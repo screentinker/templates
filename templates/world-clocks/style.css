@@ -1,0 +1,194 @@
+/* World clocks — ScreenTinker community template. MIT. Fonts: Inter and Oswald, SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Inter'; font-weight: 400 800; font-style: normal; src: url(fonts/inter.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-weight: 400 800; font-style: normal; src: url(fonts/inter-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Oswald'; font-weight: 300 700; font-style: normal; src: url(fonts/oswald.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Oswald'; font-weight: 300 700; font-style: normal; src: url(fonts/oswald-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/*
+ * Sizing: the page frame is in vw/vh. Each clock card is sized from its grid cell, which is itself
+ * vw/vh arithmetic — --cw x --ch — and everything inside a card is in --u, the largest unit that
+ * lets the card's design box (--wd x --hd units, set per layout by app.js) fit that cell.
+ */
+:root {
+  --bg: #0D1117;
+  --accent: #F2B13C;
+  --text: #F3F1EC;
+  --ink: #12161D;
+  --cols: 3;
+  --rows: 2;
+  --wd: 100;
+  --hd: 125;
+  --padx: 4vw;
+  --pady: 4.5vh;
+  --gap: 1.6vmin;
+  --headh: 11vh;
+  --noteh: 0vh;
+  --cw: calc((100vw - 2 * var(--padx) - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  --ch: calc((100vh - 2 * var(--pady) - var(--headh) - var(--noteh) - (var(--rows) - 1) * var(--gap)) / var(--rows));
+  --u: min(calc(var(--cw) / var(--wd)), calc(var(--ch) / var(--hd)));
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+.bg {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(90vw 70vh at 50% -20%, rgba(255,255,255,.07), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.3));
+}
+
+/* ---------- title bar ---------- */
+.head {
+  position: absolute; left: var(--padx); right: var(--padx); top: var(--pady);
+  height: var(--headh);
+  display: flex; align-items: flex-start; justify-content: space-between;
+  animation: rise .9s cubic-bezier(.2,.7,.2,1) both;
+}
+.brand { display: flex; align-items: center; min-width: 0; }
+.dot {
+  width: 1.3vh; height: 1.3vh; border-radius: 50%; background: var(--accent);
+  margin-right: 1.5vh; flex: none;
+  box-shadow: 0 0 2vh var(--accent);
+}
+.title {
+  font-weight: 800; font-size: min(3.7vh, 4.6vw); letter-spacing: -.01em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.home {
+  font-size: min(1.9vh, 2.2vw); font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  opacity: .55; white-space: nowrap; padding-top: 1vh; margin-left: 3vw;
+}
+body.no-head .head { display: none; }
+
+/* ---------- the grid of cards ---------- */
+.grid {
+  position: absolute; left: var(--padx); right: var(--padx);
+  top: calc(var(--pady) + var(--headh));
+  bottom: calc(var(--pady) + var(--noteh));
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  grid-gap: var(--gap);
+}
+
+.card {
+  position: relative; min-width: 0; min-height: 0; overflow: hidden;
+  border-radius: calc(var(--u) * 4);
+  background: rgba(255,255,255,.035);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+  display: grid; align-content: center; justify-content: center;
+  padding: calc(var(--u) * 6);
+  animation: rise .9s cubic-bezier(.2,.7,.2,1) both;
+}
+.card.day { background: rgba(255,255,255,.075); }
+.card.here { box-shadow: inset 0 0 0 calc(var(--u) * .7) var(--accent); }
+
+.top {
+  grid-area: top;
+  display: flex; align-items: center; justify-content: center;
+  min-width: 0; white-space: nowrap;
+}
+.city {
+  font-weight: 700; font-size: calc(var(--u) * 7); letter-spacing: -.01em;
+  overflow: hidden; text-overflow: ellipsis;
+}
+.chip {
+  display: inline-flex; align-items: center; flex: none;
+  font-size: calc(var(--u) * 3.6); font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  margin-left: calc(var(--u) * 3);
+  padding: calc(var(--u) * 1) calc(var(--u) * 2);
+  border-radius: calc(var(--u) * 5);
+  background: rgba(255,255,255,.08);
+}
+.chip.here-chip { background: var(--accent); color: var(--ink); }
+body.no-daynight .dn-chip { display: none; }
+.icon { width: 1.15em; height: 1.15em; border-radius: 50%; margin-right: .55em; flex: none; }
+.sun { background: var(--accent); box-shadow: 0 0 .6em var(--accent); }
+.moon { box-shadow: inset -.32em -.08em 0 0 var(--text); transform: rotate(-25deg); }
+
+.face { grid-area: face; display: block; width: calc(var(--u) * 60); height: calc(var(--u) * 60); justify-self: center; }
+.dial { fill: rgba(255,255,255,.04); stroke: rgba(255,255,255,.22); stroke-width: 1.2; }
+.tick { stroke: var(--text); stroke-opacity: .35; stroke-width: 1.4; stroke-linecap: round; }
+.tick.major { stroke-opacity: .9; stroke-width: 2.6; }
+.hand { stroke: var(--text); stroke-linecap: round; }
+.hand.h { stroke-width: 4.6; }
+.hand.m { stroke-width: 3; }
+.hand.s { stroke: var(--accent); stroke-width: 1.3; }
+.hub { fill: var(--accent); }
+.card.day .dial { fill: #F7F5F0; stroke: none; }
+.card.day .tick { stroke: var(--ink); }
+.card.day .hand.h, .card.day .hand.m { stroke: var(--ink); }
+body.no-seconds .hand.s { display: none; }
+
+.time {
+  grid-area: time;
+  font-family: 'Oswald', 'Inter', sans-serif; font-weight: 500;
+  font-size: calc(var(--u) * 20); line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap; text-align: center;
+}
+.time .sec, .time .ap { font-size: .5em; font-weight: 400; opacity: .6; margin-left: .12em; }
+.time .ap { opacity: .75; letter-spacing: .04em; }
+.meta {
+  grid-area: meta;
+  font-size: calc(var(--u) * 4.6); font-weight: 500; opacity: .66;
+  white-space: nowrap; text-align: center;
+}
+.meta .off { font-weight: 700; color: var(--accent); }
+.meta .sep { opacity: .5; padding: 0 .5em; }
+body.no-date .meta .date, body.no-date .meta .sep { display: none; }
+
+/* stack: city, face, time, date — one above the other (tall cells, strips) */
+.a-stack .card { grid-template-areas: "top" "face" "time" "meta"; justify-items: center; }
+.a-stack .face { margin: calc(var(--u) * 5) 0 calc(var(--u) * 4); }
+
+/* side: face on the left, time and date to its right (wide cells) */
+.a-side .card { grid-template-areas: "top top" "face time" "face meta"; grid-template-columns: auto auto; align-items: center; }
+.a-side .top { justify-content: flex-start; margin-bottom: calc(var(--u) * 4); }
+.a-side .face { width: calc(var(--u) * 62); height: calc(var(--u) * 62); grid-row: 2 / span 2; }
+.a-side .time { font-size: calc(var(--u) * 23); text-align: left; margin-left: calc(var(--u) * 7); align-self: end; }
+.a-side .meta { text-align: left; margin-left: calc(var(--u) * 7); align-self: start; margin-top: calc(var(--u) * 1.5); }
+
+/* list: portrait rows — face, city over date, time on the right */
+.a-list .card {
+  grid-template-areas: "face top time" "face meta time";
+  grid-template-columns: auto 1fr auto; justify-content: stretch; align-content: center;
+  padding: calc(var(--u) * 4) calc(var(--u) * 7);
+}
+.a-list .face { width: calc(var(--u) * 58); height: calc(var(--u) * 58); grid-row: 1 / span 2; margin-right: calc(var(--u) * 8); }
+.a-list .top { justify-content: flex-start; align-self: end; }
+.a-list .city { font-size: calc(var(--u) * 9); }
+.a-list .meta { text-align: left; align-self: start; margin-top: calc(var(--u) * 1.5); font-size: calc(var(--u) * 5.2); }
+.a-list .time { grid-row: 1 / span 2; align-self: center; font-size: calc(var(--u) * 27); margin-left: calc(var(--u) * 5); }
+
+/* analog only / digital only */
+.f-digital .face { display: none; }
+.f-digital.a-stack .time { font-size: calc(var(--u) * 26); margin: calc(var(--u) * 4) 0 calc(var(--u) * 2); }
+.f-analog .time { display: none; }
+.f-analog.a-stack .face { width: calc(var(--u) * 74); height: calc(var(--u) * 74); }
+.f-analog.a-list .face { width: calc(var(--u) * 64); height: calc(var(--u) * 64); }
+
+/* strip: no title bar, compact cards */
+.m-strip .card { padding: calc(var(--u) * 4); border-radius: calc(var(--u) * 5); }
+
+/* ---------- notes (skipped lines) and the empty state ---------- */
+.note {
+  position: absolute; left: var(--padx); right: var(--padx); bottom: var(--pady);
+  height: var(--noteh); display: flex; align-items: flex-end;
+  font-size: min(1.7vh, 1.9vw); opacity: .6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.empty-msg { align-self: center; justify-self: center; font-size: 3vh; opacity: .7; text-align: center; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(2.5vh); }
+  to { opacity: 1; transform: none; }
+}

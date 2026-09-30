@@ -1,0 +1,138 @@
+/* KPI dashboard — ScreenTinker community template. MIT. Fonts: Archivo and Inter, SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Archivo'; font-weight: 100 900; font-style: normal; src: url(fonts/archivo.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 100 900; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+
+:root {
+  --bg: #0E1020;
+  --accent: #7C6CFF;
+  --good: #2FD08B;
+  --bad: #FF6363;
+  --text: #F4F5FB;
+  --pad: 4vmin;
+  --gap: 2.2vmin;
+  /* Set per layout by app.js from the tile size, in px. */
+  --tile-h: 200px;
+  --tile-w: 300px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+.bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(90vmax 60vmax at 100% 0%, rgba(124, 108, 255, .18), transparent 60%),
+    radial-gradient(70vmax 50vmax at 0% 100%, rgba(47, 208, 139, .08), transparent 60%);
+}
+@supports (background: color-mix(in srgb, red 50%, transparent)) {
+  .bg {
+    background:
+      radial-gradient(90vmax 60vmax at 100% 0%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 60%),
+      radial-gradient(70vmax 50vmax at 0% 100%, color-mix(in srgb, var(--good) 8%, transparent), transparent 60%);
+  }
+}
+
+/* ---------- header ---------- */
+.top {
+  position: absolute; left: var(--pad); right: var(--pad); top: var(--pad);
+  height: 7vmin;
+  display: flex; align-items: center; justify-content: space-between; gap: 3vmin;
+}
+.heading { display: flex; align-items: center; gap: 1.8vmin; min-width: 0; }
+.mark {
+  flex: none; width: 1.2vmin; height: 5vmin; border-radius: 1vmin;
+  background: linear-gradient(180deg, var(--accent), var(--good));
+}
+.title {
+  margin: 0; font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800;
+  font-size: 4.6vmin; letter-spacing: -.01em; line-height: 1;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.updated {
+  flex: none; font-size: 2.1vmin; font-weight: 500; opacity: .62; letter-spacing: .02em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- grid ---------- */
+.grid {
+  position: absolute; left: var(--pad); right: var(--pad); bottom: var(--pad);
+  top: calc(var(--pad) + 7vmin + 3vmin);
+  display: grid; gap: var(--gap);
+}
+body.strip .top { display: none; }
+body.strip .grid { top: var(--pad); }
+
+.tile {
+  position: relative; overflow: hidden; min-width: 0; min-height: 0;
+  border-radius: calc(var(--tile-h) * .08);
+  background: linear-gradient(160deg, rgba(255,255,255,.075), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.08);
+  padding: calc(var(--tile-h) * .11) calc(var(--tile-w) * .07);
+  display: flex; flex-direction: column; justify-content: space-between;
+  animation: rise .7s cubic-bezier(.2,.8,.2,1) both;
+}
+.tile::after {
+  content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+}
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes rise { from { opacity: 0; transform: translateY(2vmin); } to { opacity: 1; transform: none; } }
+
+.head { display: flex; align-items: flex-start; justify-content: space-between; gap: calc(var(--tile-w) * .03); min-width: 0; }
+.label {
+  min-width: 0; font-size: min(calc(var(--tile-h) * .075), calc(var(--tile-w) * .05));
+  font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .72; line-height: 1.25;
+  padding-top: .35em; min-height: 2.85em;
+  overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+}
+.value-row { display: flex; align-items: baseline; min-width: 0; overflow: hidden; }
+.value {
+  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800; letter-spacing: -.02em; line-height: 1;
+  font-size: min(calc(var(--tile-h) * .36), calc(var(--tile-w) * .23));
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.value .affix { font-weight: 600; opacity: .7; font-size: .55em; margin: 0 .04em; }
+.change {
+  display: inline-flex; align-items: center; gap: .3em; flex: none;
+  font-size: min(calc(var(--tile-h) * .09), calc(var(--tile-w) * .06)); font-weight: 700;
+  padding: .3em .7em; font-variant-numeric: tabular-nums; border-radius: 99em; white-space: nowrap;
+  background: rgba(255,255,255,.08);
+}
+.change.good { color: var(--good); background: rgba(47, 208, 139, .13); }
+.change.bad { color: var(--bad); background: rgba(255, 99, 99, .13); }
+@supports (background: color-mix(in srgb, red 50%, transparent)) {
+  .change.good { background: color-mix(in srgb, var(--good) 15%, transparent); }
+  .change.bad { background: color-mix(in srgb, var(--bad) 15%, transparent); }
+}
+.progress { display: flex; flex-direction: column; gap: calc(var(--tile-h) * .045); }
+.track {
+  height: calc(var(--tile-h) * .045); border-radius: 99em; overflow: hidden;
+  background: rgba(255,255,255,.1);
+}
+.fill {
+  height: 100%; border-radius: 99em; transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent), var(--accent));
+  animation: grow 1.2s cubic-bezier(.2,.8,.2,1) both;
+}
+.fill.hit { background: linear-gradient(90deg, var(--accent), var(--good)); }
+.target {
+  font-size: min(calc(var(--tile-h) * .07), calc(var(--tile-w) * .048)); font-weight: 500; opacity: .66;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums;
+}
+.target b { font-weight: 700; opacity: 1; color: var(--text); }
+.target.hit b { color: var(--good); }
+.change .arrow { font-size: .8em; }
+.progress.placeholder { visibility: hidden; }
+
+/* Short, wide tiles (a strip zone): value and change side by side, no progress text. */
+.tile.compact .target { display: none; }
+
+.empty {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  padding: 10vmin; text-align: center; font-size: 3.2vmin; line-height: 1.4; opacity: .7;
+}
+.empty[hidden] { display: none; }
