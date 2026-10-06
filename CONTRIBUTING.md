@@ -263,6 +263,29 @@ You can also import a single template into your own test server: zip the folder 
 `manifest.json`) and use *Templates → Import*. It arrives **unverified**; html templates additionally
 need *Allow unsigned code templates* switched on — do that only on a test server.
 
+## How your template appears on screentinker.com/templates
+
+Once a template is in the signed catalog, it gets a card on the public gallery at
+[screentinker.com/templates](https://screentinker.com/templates). Every ScreenTinker server with its
+homepage on serves the same page at `/templates`. The gallery is built from the catalog index, so
+your template shows up there without a ScreenTinker release.
+
+- **The card** shows your `name`, `description`, `thumbnail`, whether it is a slide or code
+  template, "Live data" (when `tags` include `data-source`) and "No internet needed" (when the
+  version declares no `network` hosts). Write the description for someone deciding whether to use
+  the template, not for a reviewer.
+- **The filters** (Corporate, Retail & Hospitality, Data & Dashboards, Utilities, Interactive) come
+  from your `tags`. For example, `menu`, `restaurant`, `cafe`, `hospitality` or `retail` go to Retail
+  & Hospitality; `lobby`, `reception`, `office` or `meeting-room` to Corporate; `data-source`, `kpi`,
+  `dashboard`, `rss`, `google-sheets` or `ical` to Data & Dashboards; `game` or `interactive` to
+  Interactive. With no match it goes to Utilities.
+- **"Interactive web preview"** runs your template live in the visitor's browser with **only its
+  defaults**. Nobody fills in the form, and no data source is connected, except that a `data_source`
+  parameter whose name, label or help mentions weather gets demo weather. So **your defaults are
+  your demo**: ship real-looking sample content (a menu, a schedule, metrics, headlines) for when no
+  data source is bound, the way the templates in this repo do. A template that shows a blank screen
+  without its data looks broken in the gallery.
+
 ## Rules for acceptance
 
 A pull request is merged only if **all** of these hold.
