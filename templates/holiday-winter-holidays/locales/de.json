@@ -1,0 +1,46 @@
+{
+  "name": "Winterfeiertage",
+  "description": "Ein Festtagsgruß für jede Winterfeier: eine Lichterkette, fallender Schnee und verschneite Hügel unter nachtblauem Himmel, mit zentriertem Gruß, Ihrer Nachricht und einer Datumszeile – ideal für Öffnungszeiten über die Feiertage.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Die kurze Zeile über der Schlagzeile. Leer lassen, um sie auszublenden.",
+      "default": "FROHE FESTTAGE"
+    },
+    "headline": {
+      "label": "Schlagzeile",
+      "help": "Zwei Zeilen sind dafür reserviert: etwa 24 Zeichen passen. Längere Schlagzeilen brechen in eine dritte Zeile um und laufen in die Nachricht.",
+      "default": "Herzliche Grüße an alle"
+    },
+    "message": {
+      "label": "Nachricht",
+      "help": "Ein, zwei Sätze unter der Schlagzeile; bis zu 200 Zeichen passen. Ein Zeilenumbruch beginnt eine neue Zeile.",
+      "default": "Wir wünschen Wärme, Ruhe und gute Gesellschaft. Unsere Büros schließen am 24.12. und öffnen am 04.01.; die Hotline ist durchgehend von 8 bis 20 Uhr erreichbar."
+    },
+    "date_line": {
+      "label": "Datumszeile",
+      "help": "Freier Text, genau so getippt, wie er erscheinen soll: ein Datum, Uhrzeit und Ort oder ein Gruß.",
+      "default": "VON UNS ALLEN BEI NORTHWIND"
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Ausschalten, wenn Sie kein Logo haben."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Ein breites PNG oder SVG mit transparentem Hintergrund (etwa 3,4 : 1 füllt die Fläche; andere Formate werden eingepasst). Ersetzen Sie den Northwind-Platzhalter."
+    },
+    "accent": {
+      "label": "Warme Lichtfarbe"
+    },
+    "accent2": {
+      "label": "Kühle Lichtfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "name": "Quadro de horários",
+  "description": "O que acontece agora, quanto falta e o que vem depois: contagem regressiva para o sinal da escola, aulas na academia, turnos e intervalos ou cultos, com a programação de hoje ao lado. Digite os horários (vários com nome, um ativo) ou conecte uma planilha Google. Fora do horário, mostra quando recomeça.",
+  "params": {
+    "preset": {
+      "label": "Predefinição",
+      "help": "Define os textos e o horário de exemplo exibido até você digitar ou conectar o seu, ambos no idioma da tela.",
+      "options": {
+        "school": "Sinal / horário escolar",
+        "gym": "Aulas de academia ou estúdio",
+        "factory": "Turnos e intervalos",
+        "worship": "Horários de culto"
+      }
+    },
+    "schedule": {
+      "label": "Horário",
+      "help": "Um bloco por linha: Dias | Início-Fim | Título | Sala | Responsável, ex. Mon-Fri | 08:00-08:50 | 1º horário | Sala 12 | Prof.ª Patel. [Provas] inicia outro horário. Vazio = exemplo."
+    },
+    "schedule_source": {
+      "label": "Fonte de dados do horário (opcional)",
+      "help": "Uma planilha Google, CSV ou tabela manual com as colunas Days, Start, End, Title, Room, Host (e opcionalmente Schedule). Substitui o horário digitado."
+    },
+    "active_schedule": {
+      "label": "Horário ativo",
+      "help": "Qual horário com nome mostrar, contado na ordem em que aparecem. Troque para a semana de provas, dia reduzido ou feriados.",
+      "options": {
+        "1": "Horário 1",
+        "2": "Horário 2",
+        "3": "Horário 3",
+        "4": "Horário 4",
+        "5": "Horário 5",
+        "6": "Horário 6",
+        "7": "Horário 7",
+        "8": "Horário 8"
+      }
+    },
+    "view": {
+      "label": "Visualização",
+      "options": {
+        "split": "Agora + horário de hoje",
+        "focus": "Só agora (contagem grande)",
+        "list": "Só o horário de hoje"
+      }
+    },
+    "title": {
+      "label": "Título",
+      "help": "Vazio = o título da predefinição no idioma da tela (ou o nome do exemplo enquanto ele aparece)."
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Uma linha abaixo do título. O nome do horário ativo é acrescentado depois."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Exibido ao lado do título."
+    },
+    "show_badge": {
+      "label": "Mostrar iniciais quando não houver logotipo"
+    },
+    "show_where": {
+      "label": "Mostrar sala e responsável"
+    },
+    "warn_minutes": {
+      "label": "Avisar nos últimos … minutos",
+      "help": "A contagem muda para a cor de aviso esta quantidade de minutos antes do fim de um bloco. 0 = nunca."
+    },
+    "now_label": {
+      "label": "Título: bloco atual",
+      "help": "Vazio = o texto da predefinição no idioma da tela (\"Agora\", \"Acontecendo agora\"…)."
+    },
+    "next_label": {
+      "label": "Título: próximo bloco",
+      "help": "Vazio = o texto da predefinição no idioma da tela (\"A seguir\", \"Próxima aula\"…)."
+    },
+    "then_label": {
+      "label": "Título: o bloco seguinte",
+      "help": "Vazio = \"Depois\" no idioma da tela."
+    },
+    "ends_label": {
+      "label": "Texto da contagem durante um bloco",
+      "help": "Vazio = \"Termina em\" no idioma da tela."
+    },
+    "starts_label": {
+      "label": "Texto da contagem antes de um bloco",
+      "help": "Vazio = \"Começa em\" no idioma da tela."
+    },
+    "offhours_today": {
+      "label": "Mensagem antes do primeiro bloco de hoje",
+      "help": "Use {time} e {title}. Vazio = a da predefinição no idioma da tela, ex. \"As aulas começam às {time}\"."
+    },
+    "offhours_later": {
+      "label": "Mensagem quando o próximo bloco é em outro dia",
+      "help": "Use {day}, {time} e {title}. Vazio = a da predefinição no idioma da tela, ex. \"Próximas aulas: {day}, {time}\"."
+    },
+    "empty_text": {
+      "label": "Mensagem quando não há nada nesta semana",
+      "help": "Vazio = a da predefinição no idioma da tela."
+    },
+    "font": {
+      "label": "Fonte dos títulos",
+      "options": {
+        "archivo": "Archivo (destaque)",
+        "oswald": "Oswald (condensada)",
+        "inter": "Inter (limpa)",
+        "bitter": "Bitter (serifada)"
+      }
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "warn_color": {
+      "label": "Cor de aviso"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "clock_format": {
+      "label": "Formato da hora",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas",
+        "auto": "Conforme o idioma",
+        "off": "Ocultar o relógio (horas conforme o idioma)"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário",
+      "help": "Os horários estão neste fuso. Vazio = o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "As palavras, horas e datas na tela, por exemplo pt ou pt-PT. Vazio = o idioma da tela."
+    }
+  }
+}

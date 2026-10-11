@@ -1,0 +1,53 @@
+{
+  "name": "Dashboard KPI",
+  "description": "Grandi riquadri di indicatori leggibili a colpo d’occhio, con avanzamento verso l’obiettivo e variazione colorata. Da un foglio Google, CSV, API REST o tabella manuale (colonne Metric, Value, Target, Unit, Change), oppure scritti a mano. Da 1 a 12 riquadri, per ogni forma di schermo.",
+  "params": {
+    "data": {
+      "label": "Fonte dati degli indicatori (facoltativa)",
+      "help": "Una fonte a tabella (Google Sheets, CSV, API REST o tabella manuale) con colonne Metric, Value e, se vuoi, Target, Unit, Change. Lascia vuoto per gli indicatori scritti sotto."
+    },
+    "metrics": {
+      "label": "Indicatori (senza fonte dati)",
+      "help": "Uno per riga: Indicatore | Valore | Obiettivo | Unità | Variazione. Servono solo Indicatore e Valore.",
+      "default": "Fatturato del mese | 184250 | 200000 | € | +6.4%\nNuovi clienti | 312 | 300 | | +18\nNet Promoter Score | 64 | 60 | | +3\nTicket di assistenza aperti | 27 | | | -9\nTempo medio di risposta | 1.8 | 2 | h | -0.4\nDisponibilità | 99.97 | 99.9 | % | +0.02"
+    },
+    "title": {
+      "label": "Titolo",
+      "default": "Risultati del mese"
+    },
+    "max_tiles": {
+      "label": "Mostra al massimo",
+      "help": "Le righe oltre questo numero non vengono mostrate."
+    },
+    "show_targets": {
+      "label": "Mostra l’avanzamento verso l’obiettivo"
+    },
+    "up_is_good": {
+      "label": "Un aumento è positivo",
+      "help": "Colora una variazione positiva come buona. Se il nome contiene aperti, risposta, abbandono, costo, errore o attesa (anche in inglese), vale il contrario."
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "good_color": {
+      "label": "Colore positivo"
+    },
+    "bad_color": {
+      "label": "Colore negativo"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Numeri, ora e testi integrati, ad esempio it o en-US. Lascia vuoto per la lingua dello schermo."
+    },
+    "timezone": {
+      "label": "Fuso orario di «Aggiornato»",
+      "help": "Lascia vuoto per usare l’orologio dello schermo."
+    }
+  }
+}

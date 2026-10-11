@@ -1,0 +1,80 @@
+{
+  "name": "Gastenwifi",
+  "description": "De naam en het wachtwoord van je gastennetwerk, groot en goed leesbaar, naast een QR-code die in één scan verbindt, met speciale tekens correct geëscapet zodat de code echt werkt. Voor hotels, cafés, praktijken en kantoren; als volledig scherm, staande poster of smalle strook. Er wordt niets opgehaald: de code wordt op het scherm getekend.",
+  "params": {
+    "ssid": {
+      "label": "Netwerknaam (SSID)",
+      "help": "Precies zoals je apparaten hem tonen, inclusief hoofdletters en spaties."
+    },
+    "password": {
+      "label": "Wachtwoord",
+      "help": "Staat bewust op het scherm: dit is een gastennetwerk. Typ het zoals het is; tekens als ; : , \" en \\ worden in de QR-code voor je geëscapet."
+    },
+    "security": {
+      "label": "Beveiliging",
+      "options": {
+        "WPA": "WPA / WPA2 / WPA3 (de meeste netwerken)",
+        "WEP": "WEP (oude routers)",
+        "nopass": "Open, zonder wachtwoord"
+      }
+    },
+    "hidden": {
+      "label": "Het netwerk is verborgen",
+      "help": "Zet dit alleen aan als het netwerk zijn naam niet uitzendt."
+    },
+    "show_password": {
+      "label": "Wachtwoord als tekst tonen",
+      "help": "Uit: alleen de QR-code wordt getoond; de code bevat het wachtwoord nog steeds."
+    },
+    "eyebrow": {
+      "label": "Kleine kop",
+      "default": "Gratis wifi"
+    },
+    "headline": {
+      "label": "Kop",
+      "default": "Blijf verbonden zolang je bij ons bent"
+    },
+    "hint": {
+      "label": "Tip onder de code",
+      "help": "Laat leeg om te verbergen.",
+      "default": "Richt je camera op de code"
+    },
+    "ssid_label": {
+      "label": "Label voor de netwerknaam",
+      "help": "Laat leeg voor het woord ‘Netwerk’ in de taal van het scherm."
+    },
+    "password_label": {
+      "label": "Label voor het wachtwoord",
+      "help": "Laat leeg voor het woord ‘Wachtwoord’ in de taal van het scherm."
+    },
+    "open_text": {
+      "label": "Tekst voor een open netwerk",
+      "help": "Laat leeg voor ‘Geen wachtwoord nodig’ in de taal van het scherm."
+    },
+    "hidden_text": {
+      "label": "Tekst als het wachtwoord niet getoond wordt",
+      "help": "Laat leeg voor ‘Scan de code om te verbinden’ in de taal van het scherm."
+    },
+    "footer": {
+      "label": "Voettekst",
+      "default": "Hulp nodig? Vraag het gerust bij de receptie, we helpen je graag."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond. Laat leeg voor geen logo."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De taal van de woorden die het scherm zelf schrijft (labels, meldingen). Laat leeg voor de taal van het scherm."
+    }
+  }
+}

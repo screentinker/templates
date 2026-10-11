@@ -1,0 +1,72 @@
+{
+  "name": "Aviso — impactante (vertical)",
+  "description": "Um aviso forte e direto: um título enorme sobre uma cor intensa, um parágrafo curto, um rodapé e um QR code opcional com os detalhes. Para fechamentos, prazos e tudo o que ninguém pode perder. Layout vertical 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona melhor um PNG ou SVG com fundo transparente. Fica no canto superior esquerdo."
+    },
+    "eyebrow": {
+      "label": "Chamada",
+      "help": "Um rótulo curto acima do título, por ex. LEMBRETE ou NOVO. Em maiúsculas fica melhor.",
+      "default": "AVISO IMPORTANTE"
+    },
+    "headline": {
+      "label": "Título",
+      "help": "O aviso em poucas palavras. Até 40 caracteres; ocupa duas ou três linhas na tela.",
+      "default": "Escritório fechado sexta, 23 de outubro"
+    },
+    "body": {
+      "label": "Detalhes",
+      "help": "Uma ou duas frases. Pressione Enter para uma nova linha.",
+      "default": "O prédio fica fechado o dia todo para manutenção elétrica programada. Trabalhe de casa; o suporte de TI continua atendendo no ramal 4400."
+    },
+    "footer": {
+      "label": "Rodapé",
+      "help": "Quem envia, uma data, uma sala ou um contato.",
+      "default": "Equipe de infraestrutura  ·  Dúvidas? facilities@northwind.example"
+    },
+    "show_qr": {
+      "label": "Mostrar um QR code",
+      "help": "Desative se não tiver link: o código e a legenda somem."
+    },
+    "qr_url": {
+      "label": "Link do QR code",
+      "help": "O endereço que o QR code abre. Links mais curtos geram um código que pode ser lido de mais longe."
+    },
+    "qr_caption": {
+      "label": "Legenda do QR",
+      "default": "Detalhes e dúvidas"
+    },
+    "show_date": {
+      "label": "Mostrar a data de hoje",
+      "help": "A data atual da tela, no idioma e no fuso horário abaixo."
+    },
+    "date_format": {
+      "label": "Formato da data",
+      "options": {
+        "weekday": "Dia da semana, dia e mês",
+        "long": "Data completa com ano",
+        "short": "Data curta",
+        "numeric": "Só números"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário da data",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma da data, por ex. en-GB, de-DE ou fr-CA. Deixe vazio para usar o idioma da tela."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

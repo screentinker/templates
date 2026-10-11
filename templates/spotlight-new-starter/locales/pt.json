@@ -1,0 +1,96 @@
+{
+  "name": "Boas-vindas a novos colegas",
+  "description": "Dê as boas-vindas a alguém no primeiro dia: nome e cargo, uma frase nas próprias palavras, assuntos para puxar conversa e um selo com a data de início. Mostra um círculo com as iniciais até você adicionar uma foto.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona melhor um PNG ou SVG com fundo transparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Uma foto de rosto e ombros, recortada para caber no quadro. Ative \"Mostrar a foto\" depois de escolher uma."
+    },
+    "show_photo": {
+      "label": "Mostrar a foto",
+      "help": "Desativado mostra um círculo com as iniciais, para quem prefere não exibir a foto."
+    },
+    "initials": {
+      "label": "Iniciais",
+      "help": "Aparecem no círculo quando a foto está desativada. Uma ou duas letras."
+    },
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "Acima do nome. Fica melhor em maiúsculas.",
+      "default": "BOAS-VINDAS A"
+    },
+    "name": {
+      "label": "Nome",
+      "help": "Uma linha, até 26 caracteres. Digite normalmente; TUDO EM MAIÚSCULAS é mais largo e pode não caber."
+    },
+    "role": {
+      "label": "Cargo",
+      "help": "Cargo, equipe, turma ou unidade. Textos longos quebram para uma segunda linha.",
+      "default": "Designer de produto júnior, Brand Studio"
+    },
+    "show_quote": {
+      "label": "Mostrar a frase",
+      "help": "Desativado oculta a frase e as aspas."
+    },
+    "quote": {
+      "label": "Frase",
+      "help": "Uma ou duas frases nas próprias palavras. Sem aspas.",
+      "default": "Acabei de me mudar de Gotemburgo e quero muito conhecer todo mundo. Venha dizer hej!"
+    },
+    "quote_mark": {
+      "label": "Aspas",
+      "help": "O grande sinal decorativo ao lado da frase. Use o do seu idioma, por ex. “ ou «.",
+      "default": "“"
+    },
+    "show_fact": {
+      "label": "Mostrar a curiosidade",
+      "help": "Desativado oculta o rótulo e o texto da curiosidade."
+    },
+    "fact_label": {
+      "label": "Rótulo da curiosidade",
+      "help": "Um rótulo curto, por ex. CURIOSIDADE ou ME PERGUNTE SOBRE.",
+      "default": "PUXE ASSUNTO SOBRE"
+    },
+    "fun_fact": {
+      "label": "Curiosidade",
+      "help": "Uma ou duas frases curtas.",
+      "default": "Jogos de tabuleiro, boulder e o grande debate do rolinho de canela. Sam fica na mesa 4B, 3º andar."
+    },
+    "show_badge": {
+      "label": "Mostrar o selo"
+    },
+    "badge": {
+      "label": "Texto do selo",
+      "help": "Um mês, uma data de início, uma equipe ou um marco. Fica melhor em maiúsculas.",
+      "default": "COMEÇA SEG, 12 OUT"
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "O cartão grande atrás da foto, o título pequeno e os rótulos."
+    },
+    "highlight": {
+      "label": "Cor de realce",
+      "help": "O selo, a linha curta e os confetes."
+    },
+    "badge_text_color": {
+      "label": "Cor do texto do selo"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "card_color": {
+      "label": "Cor do cartão e do círculo das iniciais",
+      "help": "O cartão da curiosidade e o círculo atrás das iniciais."
+    },
+    "initials_color": {
+      "label": "Cor das iniciais"
+    }
+  }
+}

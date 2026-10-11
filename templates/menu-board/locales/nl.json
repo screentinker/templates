@@ -1,0 +1,104 @@
+{
+  "name": "Menubord",
+  "description": "Een menu voor café, restaurant of bar dat zichzelf opmaakt: gerechten per categorie, prijzen netjes uitgelijnd, labels als V of Nieuw, uitverkochte items grijs. Typ het menu in, of koppel een Google Sheet of handmatige tabel en wijzig prijzen zonder het scherm aan te raken.",
+  "params": {
+    "title": {
+      "label": "Titel"
+    },
+    "subtitle": {
+      "label": "Ondertitel",
+      "help": "Eén regel onder de titel. Laat leeg om te verbergen.",
+      "default": "Zelf gebrand · Havermelk zonder meerprijs"
+    },
+    "footer": {
+      "label": "Voetregel",
+      "help": "Kleine letters onderaan. Laat leeg om te verbergen.",
+      "default": "Vraag ons naar allergenen · Prijzen incl. btw"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Staat naast de titel."
+    },
+    "items": {
+      "label": "Menu-items",
+      "help": "Eén item per regel: Product | Prijs | Omschrijving | Categorie | Label. Gebruikt als er geen gegevensbron gekoppeld is.",
+      "default": "Espresso | 2.80 | Dubbel, tonen van chocolade en kers | Koffie |\nFlat White | 3.60 | Zachte melk, dubbele ristretto | Koffie | Populair\nCold Brew | 4.20 | 18 uur koud getrokken | Koffie | Nieuw\nEarl Grey | 3.00 | Bergamot, losse blad | Thee | V\nKaneelknoop | 3.40 | Kardemomsuiker, bruine boter | Gebak | Populair\nAmandel-financier | 3.10 | Glutenvrij | Gebak | Uitverkocht"
+    },
+    "menu": {
+      "label": "Gegevensbron voor het menu (optioneel)",
+      "help": "Een Google Sheet, CSV, REST-lijst of handmatige tabel. Heeft die een kolom Product, dan vervangt die de items hierboven."
+    },
+    "item_col": {
+      "label": "Kolom product",
+      "help": "De kolomkoppen in je bron. Wordt een kop niet gevonden, dan wordt de Engelse geprobeerd (Item, Price, Description, Category, Tag).",
+      "default": "Product"
+    },
+    "price_col": {
+      "label": "Kolom prijs",
+      "default": "Prijs"
+    },
+    "desc_col": {
+      "label": "Kolom omschrijving",
+      "default": "Omschrijving"
+    },
+    "category_col": {
+      "label": "Kolom categorie",
+      "default": "Categorie"
+    },
+    "tag_col": {
+      "label": "Kolom label",
+      "help": "Een kort label als pil. Het label ‘Uitverkocht’ maakt het item grijs en streept de prijs door.",
+      "default": "Label"
+    },
+    "currency": {
+      "label": "Valutasymbool",
+      "default": "€"
+    },
+    "currency_position": {
+      "label": "Plaats van de valuta",
+      "options": {
+        "auto": "Zoals gebruikelijk in de taal van het scherm",
+        "before": "Voor de prijs ($3.50)",
+        "after": "Na de prijs (3,50 €)"
+      }
+    },
+    "decimals": {
+      "label": "Decimalen",
+      "options": {
+        "2": "Altijd twee (3,50)",
+        "auto": "Alleen als nodig (3,5, 4)",
+        "0": "Geen (4)"
+      }
+    },
+    "decimal_comma": {
+      "label": "Altijd een decimale komma gebruiken (3,50)",
+      "help": "Uit: het decimaalteken volgt de taal van het scherm (3.50 in het Engels, 3,50 in het Nederlands)."
+    },
+    "font": {
+      "label": "Lettertype voor koppen",
+      "options": {
+        "bitter": "Bitter (schreef)",
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (smal)",
+        "inter": "Inter (strak)"
+      }
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "page_seconds": {
+      "label": "Seconden per pagina",
+      "help": "Alleen gebruikt als het menu te lang is om leesbaar op één scherm te passen."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De taal voor de prijsnotatie en de paar woorden die het bord zelf schrijft. Laat leeg voor de taal van het scherm."
+    }
+  }
+}

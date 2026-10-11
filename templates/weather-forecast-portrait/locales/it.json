@@ -1,0 +1,68 @@
+{
+  "name": "Previsioni meteo (verticale)",
+  "description": "Condizioni attuali e previsioni a cinque giorni da una delle tue origini dati Meteo. Il server scarica il meteo da solo; il modello si limita a impaginarlo. Layout verticale 9:16.",
+  "params": {
+    "weather": {
+      "label": "Origine dati meteo",
+      "help": "Un'origine dati di tipo Meteo (Origini dati → Nuova → Meteo). Luogo, unità e lingua si impostano lì."
+    },
+    "location": {
+      "label": "Nome della località",
+      "default": "Meteo locale",
+      "help": "Il titolo. Di solito la città o il nome della sede."
+    },
+    "units_label": {
+      "label": "Suffisso della temperatura",
+      "help": "Mostrato dopo ogni temperatura: solo ° oppure °C / °F come nell'origine dati."
+    },
+    "feels_like_label": {
+      "label": "Etichetta «Percepita»",
+      "help": "Mostrata prima della temperatura percepita.",
+      "default": "Percepita"
+    },
+    "humidity_label": {
+      "label": "Etichetta «Umidità»",
+      "help": "Mostrata prima dell'umidità.",
+      "default": "Umidità"
+    },
+    "today_label": {
+      "label": "Etichetta «Oggi»",
+      "help": "Mostrata prima della massima e della minima di oggi.",
+      "default": "Oggi"
+    },
+    "precip_label": {
+      "label": "Etichetta «Pioggia»",
+      "help": "Mostrata prima della probabilità di precipitazioni di oggi.",
+      "default": "Probabilità di pioggia"
+    },
+    "updated_label": {
+      "label": "Etichetta «Aggiornato»",
+      "help": "Mostrata prima dell'ora dell'ultima rilevazione.",
+      "default": "Aggiornato"
+    },
+    "accent": {
+      "label": "Colore d'accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "timezone": {
+      "label": "Fuso orario dell'orologio",
+      "help": "Lascia vuoto per usare l'orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua della data, ad es. it o it-CH. Lascia vuoto per la lingua dello schermo. I giorni delle previsioni e la descrizione del tempo arrivano dall'origine dati."
+    },
+    "clock_format": {
+      "label": "Formato dell'ora",
+      "options": {
+        "24": "24 ore",
+        "12": "12 ore"
+      }
+    }
+  }
+}

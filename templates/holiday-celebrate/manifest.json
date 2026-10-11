@@ -1,0 +1,113 @@
+{
+  "id": "holiday-celebrate",
+  "name": "Celebrate",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A confetti celebration for any occasion — a company anniversary, a birthday, a record month, a grand opening or a team win: a giant number, a headline, a message and a date line, in colours you choose.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-celebrate",
+  "license": "MIT",
+  "tags": [
+    "holiday",
+    "seasonal",
+    "celebration",
+    "anniversary",
+    "birthday",
+    "milestone",
+    "office"
+  ],
+  "orientation": [
+    "landscape"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "The short line above the headline. Leave empty to hide it.",
+      "default": "CELEBRATING A DECADE"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline",
+      "max": 28,
+      "help": "Two lines are kept for it: about 24 characters fit. Longer headlines wrap to a third line and run into the message.",
+      "default": "Ten years of Northwind"
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "label": "Message",
+      "max": 200,
+      "help": "A sentence or two under the headline; up to 200 characters fit. A line break starts a new line.",
+      "default": "From two people in a garage to 140 colleagues in four cities. Thank you to every customer and teammate who got us here — cake in the kitchen at 15:00!"
+    },
+    {
+      "name": "date_line",
+      "type": "text",
+      "label": "Date line",
+      "max": 70,
+      "help": "Plain text, typed the way you want it to read: a date, a time and place, or a sign-off.",
+      "default": "2016 — 2026"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A wide PNG or SVG with a transparent background (about 3.4 : 1 fills the box; other shapes are fitted inside it). Replace the Northwind placeholder.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Number colour",
+      "default": "#FFD23F"
+    },
+    {
+      "name": "accent2",
+      "type": "color",
+      "label": "Second accent colour",
+      "default": "#EE4266"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#1B1035"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "name": "big_text",
+      "type": "text",
+      "label": "Big number",
+      "max": 4,
+      "help": "The giant figure: years, a birthday, a percentage, a rank. Up to four characters; clear it for none.",
+      "default": "10"
+    },
+    {
+      "name": "big_label",
+      "type": "text",
+      "label": "Under the number",
+      "max": 16,
+      "help": "A word under the big number, such as YEARS or DAYS.",
+      "default": "YEARS"
+    }
+  ]
+}

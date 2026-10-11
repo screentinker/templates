@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="none">
+  <!-- Calm gradient background, drawn for this template. Original work, MIT. -->
+  <defs>
+    <linearGradient id="wash" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#190D14"/>
+      <stop offset="0.55" stop-color="#521C2A"/>
+      <stop offset="1" stop-color="#A94B38"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="0.88" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#F1B468" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F1B468" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0.08" cy="0.95" r="0.75">
+      <stop offset="0" stop-color="#8A2E57" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#8A2E57" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.35"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#wash)"/>
+  <rect width="1920" height="1080" fill="url(#g1)"/>
+  <rect width="1920" height="1080" fill="url(#g2)"/>
+  <rect width="1920" height="1080" fill="url(#vig)"/>
+</svg>

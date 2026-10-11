@@ -1,0 +1,116 @@
+{
+  "id": "holding-logo-clock-portrait",
+  "name": "Holding screen — logo and clock (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A standby screen for when nothing is scheduled: your logo, a big live clock and today's date on a calm background with a soft halo, in your own timezone and language. Keeps a screen looking cared for between campaigns. Portrait 9:16 layout.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-logo-clock-portrait",
+  "license": "MIT",
+  "tags": [
+    "holding",
+    "standby",
+    "clock",
+    "lobby",
+    "reception",
+    "office",
+    "corporate",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A PNG or SVG with a transparent background, light on dark. Shown centred at the top.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "footer",
+      "type": "text",
+      "label": "Footer line",
+      "max": 80,
+      "help": "A short line along the bottom: a place, a floor, a contact. Leave empty for none.",
+      "default": "Northwind Studio  ·  Reception, Level 3"
+    },
+    {
+      "name": "clock_format",
+      "type": "select",
+      "label": "Clock format",
+      "default": "24",
+      "options": [
+        {
+          "value": "24",
+          "label": "24-hour"
+        },
+        {
+          "value": "12",
+          "label": "12-hour"
+        }
+      ]
+    },
+    {
+      "name": "date_format",
+      "type": "select",
+      "label": "Date style",
+      "default": "weekday",
+      "options": [
+        {
+          "value": "weekday",
+          "label": "Weekday, day and month"
+        },
+        {
+          "value": "long",
+          "label": "Full date with year"
+        },
+        {
+          "value": "short",
+          "label": "Short date"
+        },
+        {
+          "value": "numeric",
+          "label": "Numbers only"
+        }
+      ]
+    },
+    {
+      "name": "timezone",
+      "type": "timezone",
+      "label": "Timezone",
+      "help": "Where the clock and date are for. Leave empty to use the screen's own clock.",
+      "default": ""
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "help": "How the time and date are written, e.g. en-GB, de-DE or fr-CA. Leave empty for the screen's language.",
+      "default": ""
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "default": "#E0B25C",
+      "help": "The halo behind the clock and the small rule."
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#10141A"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#F3F0E8"
+    }
+  ]
+}

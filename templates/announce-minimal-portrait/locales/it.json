@@ -1,0 +1,72 @@
+{
+  "name": "Annuncio — minimal (verticale)",
+  "description": "Un avviso sobrio e tipografico: un titolo con grazie, un breve paragrafo e una firma su uno sfondo calmo, con molto spazio. Per ringraziamenti, lettere della direzione e note sulle regole. Piccolo codice QR facoltativo. Layout verticale 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ideale un PNG o SVG con sfondo trasparente. Compare in alto a sinistra."
+    },
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "Una breve etichetta sopra il titolo, ad es. PROMEMORIA o NOVITÀ. In maiuscolo si legge meglio.",
+      "default": "UN MESSAGGIO DALLA PRESIDE"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "L'annuncio in poche parole. Fino a 40 caratteri; occupa due o tre righe sullo schermo.",
+      "default": "Grazie per uno splendido open day"
+    },
+    "body": {
+      "label": "Dettagli",
+      "help": "Una o due frasi. Premi Invio per andare a capo.",
+      "default": "Sabato ci hanno visitato più di 400 famiglie. Grazie a ogni studente e a tutto il personale che ha guidato una visita, gestito uno stand o risposto a una domanda."
+    },
+    "footer": {
+      "label": "Piè di pagina",
+      "help": "Chi lo invia, una data, una sala o un contatto.",
+      "default": "Dott.ssa Helen Okafor, Preside  ·  Northwind Academy"
+    },
+    "show_qr": {
+      "label": "Mostra un codice QR",
+      "help": "Disattiva se non hai un link: il codice e la sua didascalia spariscono."
+    },
+    "qr_url": {
+      "label": "Link del codice QR",
+      "help": "L'indirizzo aperto dal codice QR. Un link più corto crea un codice leggibile da più lontano."
+    },
+    "qr_caption": {
+      "label": "Didascalia del QR",
+      "default": "Le foto della giornata"
+    },
+    "show_date": {
+      "label": "Mostra la data di oggi",
+      "help": "La data attuale dello schermo, nella lingua e nel fuso orario qui sotto."
+    },
+    "date_format": {
+      "label": "Formato data",
+      "options": {
+        "weekday": "Giorno della settimana, giorno e mese",
+        "long": "Data completa con anno",
+        "short": "Data breve",
+        "numeric": "Solo numeri"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario della data",
+      "help": "Lascia vuoto per usare l'orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua della data, ad es. en-GB, de-DE o fr-CA. Lascia vuoto per la lingua dello schermo."
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

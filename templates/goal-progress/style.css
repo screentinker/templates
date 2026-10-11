@@ -1,0 +1,324 @@
+/* Goal progress — ScreenTinker community template. MIT. Fonts: Inter, Archivo, Bitter, Oswald — SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Inter'; font-weight: 400 800; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+@font-face { font-family: 'Archivo'; font-weight: 400 800; font-style: normal; src: url(fonts/archivo.woff2) format('woff2'); }
+@font-face { font-family: 'Bitter'; font-weight: 400 800; font-style: normal; src: url(fonts/bitter.woff2) format('woff2'); }
+@font-face { font-family: 'Oswald'; font-weight: 300 700; font-style: normal; src: url(fonts/oswald.woff2) format('woff2'); }
+
+:root {
+  --bg: #10192B;
+  --accent: #FFC145;
+  --accent2: #FF6B5A;
+  --text: #F6F1E9;
+  --display: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  /* One unit for every shape: 1% of the height, but no more than 0.9% of the width (portrait). */
+  --u: min(1vh, 0.9vw);
+  --line: rgba(255, 255, 255, .12);
+  --track: rgba(255, 255, 255, .07);
+}
+body[data-font="bitter"] { --display: 'Bitter', Georgia, "Noto Serif", "Noto Serif CJK JP", serif; }
+body[data-font="oswald"] { --display: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; }
+body[data-font="inter"]  { --display: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+[hidden] { display: none !important; }
+/* Long German or Dutch words break with a hyphen (the page's lang is set from the locale setting). */
+.headline, .goal-line, .next, .thanks, .badge, .mlabel .mn, .mlist .ln { overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
+/* Letter-spacing and capitals are a Latin habit: CJK and Devanagari captions are set without tracking. */
+html:lang(ja) body .kicker, html:lang(ja) body .sl, html:lang(ja) body .rlab, html:lang(ja) body .headline,
+html:lang(zh) body .kicker, html:lang(zh) body .sl, html:lang(zh) body .rlab, html:lang(zh) body .headline,
+html:lang(hi) body .kicker, html:lang(hi) body .sl, html:lang(hi) body .rlab, html:lang(hi) body .headline { letter-spacing: 0; }
+html:lang(hi) body .headline { line-height: 1.3; }
+/* Japanese breaks between phrases where the engine can (Chromium 119+), not inside a word. */
+html:lang(ja) body .headline, html:lang(ja) body .thanks { word-break: auto-phrase; }
+
+.bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(90vmax 70vmax at 100% 0%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 60%),
+    radial-gradient(80vmax 60vmax at 0% 100%, color-mix(in srgb, var(--accent2) 11%, transparent), transparent 62%),
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.3));
+}
+@supports not (background: color-mix(in srgb, red 50%, transparent)) {
+  .bg { background: radial-gradient(90vmax 70vmax at 100% 0%, rgba(255,255,255,.06), transparent 60%), linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.3)); }
+}
+
+/* ---------- the grid: every block is placed by area, per shape ---------- */
+.frame {
+  position: absolute; inset: 0;
+  display: grid;
+  padding: calc(var(--u) * 6) calc(var(--u) * 7) calc(var(--u) * 4.5);
+  column-gap: calc(var(--u) * 6);
+}
+.head   { grid-area: head; min-width: 0; }
+.amount { grid-area: amount; min-width: 0; }
+.gauge  { grid-area: gauge; min-width: 0; min-height: 0; position: relative; }
+.stats  { grid-area: stats; min-width: 0; }
+.next   { grid-area: next; min-width: 0; }
+.thanks { grid-area: thanks; min-width: 0; }
+
+/* Landscape, thermometer or ring: the story on the left, the gauge on the right. */
+body.landscape.k-thermometer .frame, body.landscape.k-ring .frame {
+  grid-template-columns: minmax(0, 1fr) var(--gw);
+  grid-template-rows: 1fr auto auto auto auto 1fr auto;
+  grid-template-areas: ". gauge" "head gauge" "amount gauge" "stats gauge" "next gauge" ". gauge" "thanks gauge";
+}
+body.landscape.k-thermometer { --gw: calc(var(--u) * 50); }
+body.landscape.k-ring { --gw: min(44vw, calc(100vh - var(--u) * 10.5)); }
+
+/* Landscape bar, and portrait bar: one column, the bar under the amount. */
+body.landscape.k-bar .frame {
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: 1fr auto auto auto auto 1fr auto;
+  grid-template-areas: ". ." "head head" "amount amount" "gauge gauge" "stats next" ". ." "thanks thanks";
+}
+body.landscape.k-bar .next { align-self: end; justify-self: end; text-align: right; margin-bottom: calc(var(--u) * 1.2); max-width: 100%; }
+body.portrait.k-bar .frame {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 1fr auto auto auto auto auto 1fr auto;
+  grid-template-areas: "." "head" "amount" "gauge" "stats" "next" "." "thanks";
+}
+body.portrait.k-bar.with-list .frame {
+  grid-template-rows: auto auto auto auto auto 1fr auto;
+  grid-template-areas: "head" "amount" "gauge" "stats" "next" "list" "thanks";
+}
+body.with-list .blabels { display: none; }
+body.with-list .bar { margin-top: calc(var(--u) * 6); }
+body.with-list .track { height: calc(var(--u) * 7); }
+body.with-list .stats { margin-top: calc(var(--u) * 6); }
+/* Portrait ring: the ring takes the middle. */
+body.portrait.k-ring .frame {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr) auto auto auto;
+  grid-template-areas: "head" "amount" "gauge" "stats" "next" "thanks";
+}
+/* Portrait thermometer: a tall thermometer beside the stacked numbers. */
+body.portrait.k-thermometer .frame {
+  grid-template-columns: var(--gw) minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr auto auto 1fr auto;
+  grid-template-areas: "head head" "amount amount" "gauge ." "gauge stats" "gauge next" "gauge ." "thanks thanks";
+  column-gap: calc(var(--u) * 4);
+}
+body.portrait.k-thermometer { --gw: 52%; }
+
+/* ---------- header ---------- */
+.logo { display: block; height: calc(var(--u) * 8); max-width: calc(var(--u) * 30); object-fit: contain; margin-bottom: calc(var(--u) * 2.4); }
+.badge {
+  display: inline-block; margin-bottom: calc(var(--u) * 2);
+  padding: .32em .9em .3em; border-radius: 2em;
+  background: var(--accent); color: var(--bg);
+  font-family: var(--display); font-weight: 800; font-size: calc(var(--u) * 2.6); letter-spacing: .02em;
+  box-shadow: 0 0 calc(var(--u) * 4) color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.kicker {
+  font-size: calc(var(--u) * 2.1); font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--accent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  margin-bottom: calc(var(--u) * 1.4);
+}
+.headline {
+  margin: 0; font-family: var(--display); font-weight: 800;
+  font-size: calc(var(--u) * 6.4); line-height: 1.06; letter-spacing: -.012em;
+  overflow-wrap: break-word; overflow: hidden; text-wrap: balance;
+}
+
+/* ---------- the amount ---------- */
+.amount { margin-top: calc(var(--u) * 4.2); }
+.raised {
+  font-family: var(--display); font-weight: 800; color: var(--accent);
+  font-size: calc(var(--u) * 17); line-height: 1; letter-spacing: -.025em;
+  font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden;
+}
+.raised .cur { font-size: .56em; font-weight: 700; vertical-align: .52em; margin: 0 .04em; letter-spacing: 0; }
+.amount-row { display: flex; align-items: baseline; gap: calc(var(--u) * 4); }
+.amount-row .raised { flex: 0 1 auto; min-width: 0; }
+.bigpct {
+  margin-left: auto; flex: none; font-family: var(--display); font-weight: 800; font-size: calc(var(--u) * 11); line-height: 1;
+  letter-spacing: -.02em; font-variant-numeric: tabular-nums;
+}
+body.done .bigpct { color: var(--accent); }
+.raised .unit { font-size: .42em; font-weight: 700; letter-spacing: 0; }
+
+/* ---------- the milestone checklist (portrait bar) ---------- */
+.mlist { grid-area: list; list-style: none; margin: calc(var(--u) * 5) 0 0; padding: 0; align-self: center; min-height: 0; overflow: hidden; }
+.mlist li { display: flex; align-items: baseline; gap: calc(var(--u) * 2.8); padding: calc(var(--u) * 2.8) 0; border-top: 1px solid var(--line); }
+.mlist li:first-child { border-top: 0; }
+.mlist .dot {
+  flex: none; width: calc(var(--u) * 2.2); height: calc(var(--u) * 2.2); border-radius: 50%;
+  border: calc(var(--u) * .4) solid var(--text); opacity: .4; position: relative; top: calc(var(--u) * .2);
+}
+.mlist .la { flex: none; font-family: var(--display); font-weight: 800; font-size: calc(var(--u) * 5); font-variant-numeric: tabular-nums; opacity: .55; min-width: 5.2em; }
+.mlist .ln { min-width: 0; font-size: calc(var(--u) * 3.6); font-weight: 600; opacity: .6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mlist li.hit .dot { background: var(--accent); border-color: var(--accent); opacity: 1; }
+.mlist li.hit .la { color: var(--accent); opacity: 1; }
+.mlist li.hit .ln { opacity: .9; }
+
+.goal-line { margin-top: calc(var(--u) * 1.2); font-size: calc(var(--u) * 2.9); line-height: 1.25; opacity: .78; overflow: hidden; }
+
+/* ---------- stats ---------- */
+.stats { display: flex; margin-top: calc(var(--u) * 4.5); }
+.stat { min-width: 0; padding: 0 calc(var(--u) * 3.6); border-left: 1px solid var(--line); }
+.stat:first-child, .stat[hidden] + .stat { padding-left: 0; border-left: 0; }
+.stats .stat:not([hidden]) ~ .stat:not([hidden]) { padding-left: calc(var(--u) * 3.6); border-left: 1px solid var(--line); }
+.sv {
+  font-family: var(--display); font-weight: 800; font-size: calc(var(--u) * 6); line-height: 1.05;
+  font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden;
+}
+.sl { margin-top: calc(var(--u) * .7); font-size: calc(var(--u) * 1.9); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; opacity: .6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sl:empty { display: none; }
+.stat.ended .sv { opacity: .7; }
+
+.next {
+  margin-top: calc(var(--u) * 3.6); font-size: calc(var(--u) * 2.5); font-weight: 600; line-height: 1.3;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  padding-left: calc(var(--u) * 2.2); position: relative;
+}
+.next::before {
+  content: ''; position: absolute; left: 0; top: 50%; width: calc(var(--u) * 1.1); height: calc(var(--u) * 1.1);
+  margin-top: calc(var(--u) * -.55); border-radius: 50%; border: calc(var(--u) * .3) solid var(--accent);
+}
+
+.thanks {
+  align-self: end; margin-top: calc(var(--u) * 3); padding-top: calc(var(--u) * 2.4);
+  border-top: 1px solid var(--line);
+  font-size: calc(var(--u) * 2.3); line-height: 1.35; opacity: .72; overflow: hidden;
+}
+
+/* ---------- thermometer ---------- */
+.thermo {
+  --tw: calc(var(--u) * 7);
+  position: absolute; top: calc(var(--u) * 1); bottom: 0; left: 0; right: 0;
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding-left: calc(50% - var(--u) * 15);
+}
+body.portrait .thermo { --tw: calc(var(--u) * 8.5); padding-left: calc(var(--u) * 2); }
+.tube {
+  position: relative; flex: 1; width: var(--tw); margin-left: calc(var(--tw) * .5);
+  border-radius: var(--tw); background: var(--track);
+  box-shadow: inset 0 0 0 calc(var(--u) * .35) var(--line);
+}
+.tube-clip { position: absolute; inset: calc(var(--u) * .9); border-radius: var(--tw); overflow: hidden; }
+.tube .fill {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, var(--accent2), var(--accent));
+  border-radius: 0 0 var(--tw) var(--tw);
+  transition: height 1.9s cubic-bezier(.2, .7, .2, 1);
+}
+.tube .fill::after { content: ''; position: absolute; left: 0; right: 0; top: 0; height: calc(var(--u) * .5); background: rgba(255,255,255,.45); }
+.bulb {
+  position: relative; z-index: 1; flex: none;
+  width: calc(var(--tw) * 2); height: calc(var(--tw) * 2); margin-top: calc(var(--tw) * -.9);
+  border-radius: 50%; background: radial-gradient(circle at 38% 35%, color-mix(in srgb, var(--accent2) 60%, #fff), var(--accent2) 55%);
+  box-shadow: 0 0 0 calc(var(--u) * .9) var(--bg), 0 0 0 calc(var(--u) * 1.25) var(--line);
+}
+@supports not (background: color-mix(in srgb, red 50%, transparent)) { .bulb { background: var(--accent2); } }
+/* The marks run from just above the bulb (0) to the round top of the tube (the goal). */
+.scale { position: absolute; left: 0; right: 0; bottom: calc(var(--tw) * .9); top: calc(var(--tw) * .5); }
+.mark { position: absolute; left: 0; right: 0; height: 0; }
+.mline { position: absolute; left: calc(var(--tw) * -.28); right: calc(var(--tw) * -.28); top: 0; height: calc(var(--u) * .35); margin-top: calc(var(--u) * -.17); background: var(--text); opacity: .3; border-radius: 1px; }
+.mark.hit .mline { background: var(--bg); opacity: .55; left: calc(var(--u) * .9); right: calc(var(--u) * .9); }
+.thermo .mlabel { position: absolute; left: calc(100% + var(--tw) * .8); top: 0; transform: translateY(-50%); white-space: nowrap; }
+.mlabel .ma { font-family: var(--display); font-weight: 800; font-size: calc(var(--u) * 3); line-height: 1.1; font-variant-numeric: tabular-nums; opacity: .55; }
+.mlabel .mn { font-size: calc(var(--u) * 1.95); font-weight: 600; line-height: 1.25; opacity: .5; }
+.mark.hit .ma, .mlabel.hit .ma { color: var(--accent); opacity: 1; }
+.mark.hit .mn, .mlabel.hit .mn { opacity: .85; }
+.mark.goal .ma, .mlabel.goal .ma { opacity: .95; }
+.mlabel.crowd { visibility: hidden; }
+body.done .tube { box-shadow: inset 0 0 0 calc(var(--u) * .35) var(--line), 0 0 calc(var(--u) * 5) color-mix(in srgb, var(--accent) 40%, transparent); }
+
+/* ---------- bar ---------- */
+.bar { margin-top: calc(var(--u) * 4.5); }
+.track {
+  position: relative; height: calc(var(--u) * 5); border-radius: calc(var(--u) * 5);
+  background: var(--track); box-shadow: inset 0 0 0 calc(var(--u) * .3) var(--line);
+}
+.track .fill {
+  position: absolute; left: 0; top: 0; bottom: 0; border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  transition: width 1.9s cubic-bezier(.2, .7, .2, 1);
+}
+.bmark { position: absolute; top: 18%; bottom: 18%; width: calc(var(--u) * .35); margin-left: calc(var(--u) * -.17); background: var(--text); opacity: .35; border-radius: 1px; }
+.bmark.hit { background: var(--bg); opacity: .5; }
+.bmark.goal { display: none; }
+.blabels { position: relative; height: calc(var(--u) * 7.5); margin-top: calc(var(--u) * 1.6); }
+.blabels .mlabel { position: absolute; top: 0; transform: translateX(-50%); text-align: center; white-space: nowrap; }
+.blabels .mlabel.goal { text-align: right; }
+body.done .track { box-shadow: inset 0 0 0 calc(var(--u) * .3) var(--line), 0 0 calc(var(--u) * 4) color-mix(in srgb, var(--accent) 45%, transparent); }
+body.k-bar .stats { margin-top: calc(var(--u) * 3); }
+
+/* ---------- ring ---------- */
+.ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.rtrack { fill: none; stroke: var(--track); stroke-width: 15; }
+.rfill { fill: none; stroke: url(#gp-grad); stroke-width: 15; stroke-linecap: round; transition: stroke-dashoffset 1.9s cubic-bezier(.2, .7, .2, 1); }
+.stop1 { stop-color: var(--accent); }
+.stop2 { stop-color: var(--accent2); }
+.rmark { fill: var(--bg); stroke: var(--text); stroke-width: 2; opacity: .55; }
+.rmark.hit { fill: var(--text); stroke: var(--bg); opacity: .95; }
+.rpct { fill: var(--text); font-family: var(--display); font-weight: 800; font-size: 46px; letter-spacing: -1px; }
+.rlab { fill: var(--text); opacity: .6; font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 600; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; }
+body.done .rpct { fill: var(--accent); }
+
+/* ---------- portrait tweaks ---------- */
+body.portrait .frame { padding: calc(var(--u) * 7) calc(var(--u) * 7) calc(var(--u) * 5); }
+body.portrait .headline { font-size: calc(var(--u) * 7.4); }
+body.portrait .raised { font-size: calc(var(--u) * 17); }
+body.portrait.k-ring .gauge { margin: calc(var(--u) * 5) 0 calc(var(--u) * 1); }
+body.portrait.k-thermometer .gauge { margin-top: calc(var(--u) * 5); }
+body.portrait.k-thermometer .stats { flex-direction: column; justify-content: center; margin-top: calc(var(--u) * 5); }
+body.portrait.k-thermometer .next { margin-top: calc(var(--u) * 3); }
+body.portrait.k-thermometer .stat, body.portrait.k-thermometer .stats .stat:not([hidden]) ~ .stat:not([hidden]) {
+  padding: calc(var(--u) * 3.2) 0; border-left: 0; border-top: 1px solid var(--line);
+}
+body.portrait.k-thermometer .stat:first-child { border-top: 0; }
+body.portrait.k-thermometer .sv { font-size: calc(var(--u) * 7); }
+body.portrait.k-thermometer .next { white-space: normal; margin-bottom: calc(var(--u) * 2); }
+body.portrait .stats { justify-content: space-between; }
+body.portrait.k-bar .stats .stat { flex: 1; }
+body.portrait.k-ring .stats .stat { flex: 1; text-align: center; }
+
+/* ---------- a wide strip: one row ---------- */
+body.strip .frame {
+  grid-template-columns: minmax(0, 24%) auto minmax(0, 1fr) auto;
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-areas: "head amount gauge stats";
+  align-items: center; column-gap: 3.2vw;
+  padding: 9vh 2.6vw;
+}
+body.strip .logo, body.strip .next, body.strip .thanks { display: none !important; }
+body.strip .badge { font-size: 13vh; margin-bottom: 5vh; padding: .25em .7em; }
+body.strip .kicker { font-size: 10vh; margin-bottom: 4vh; letter-spacing: .12em; }
+body.strip .headline { font-size: 20vh; line-height: 1.08; max-height: 46vh; }
+body.strip .amount { margin: 0; }
+body.strip .raised { font-size: 44vh; }
+body.strip .goal-line { font-size: 11vh; margin-top: 3vh; white-space: nowrap; }
+body.strip .bar { margin: 0; padding-top: 6vh; }
+body.strip .track { height: 18vh; border-radius: 18vh; }
+body.strip .blabels { height: 24vh; margin-top: 5vh; }
+body.strip .mlabel .ma { font-size: 11vh; }
+body.strip .mlabel .mn { display: none; }
+body.strip .stats { margin: 0; }
+body.strip .stat, body.strip .stats .stat:not([hidden]) ~ .stat:not([hidden]) { padding: 0 0 0 2.2vw; }
+body.strip .stat:first-child { padding-left: 0; }
+body.strip .sv { font-size: 22vh; }
+body.strip .sl { font-size: 9vh; margin-top: 2vh; }
+
+/* ---------- confetti, only when the goal is reached ---------- */
+.confetti { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 5; }
+.confetti span {
+  position: absolute; top: -4vmin; width: 1.3vmin; height: 2.2vmin; border-radius: .2vmin; opacity: 0;
+}
+.confetti span.round { width: 1.4vmin; height: 1.4vmin; border-radius: 50%; }
+.confetti.go span { animation-name: fall; animation-timing-function: cubic-bezier(.3, .2, .6, 1); animation-iteration-count: 1; animation-fill-mode: both; }
+@keyframes fall {
+  0%   { opacity: 0; transform: translate3d(0, 0, 0) rotate(0); }
+  8%   { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(var(--drift), 108vh, 0) rotate(var(--spin)); }
+}
+body.still .confetti { display: none; }
+body.still .tube .fill, body.still .track .fill, body.still .rfill { transition: none; }

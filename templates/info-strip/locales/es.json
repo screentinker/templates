@@ -1,0 +1,96 @@
+{
+  "name": "Barra informativa",
+  "description": "Una barra compacta para el borde de la pantalla: tu logotipo, la hora y la fecha, el tiempo actual y una línea rotativa de avisos breves. Pensada para barras en L, franjas inferiores y laterales; se reorganiza sola para una franja fina, una columna alta o la pantalla completa. No descarga nada: el tiempo viene de tu propio origen de datos meteorológicos.",
+  "params": {
+    "messages": {
+      "label": "Mensajes",
+      "help": "Un mensaje breve por línea; se van turnando. Empieza una línea con una etiqueta y | para mostrarla como distintivo, por ejemplo: Hoy | Reunión general a las 15:30. Vacío = solo reloj y tiempo.",
+      "default": "Bienvenida | Visitantes, regístrense en recepción y recojan su pase\nHoy | Reunión general en el atrio a las 15:30, con café\nSeguridad | Prueba de alarma el jueves a las 11:00, no hay que salir\nCafé | Sopa del día: calabaza asada y pan de masa madre, 4,50\nWi-Fi | Red para invitados: Northwind-Guest, clave en recepción\nFelicidades | ¡Diez años en el equipo, Priya Raman!"
+    },
+    "message_seconds": {
+      "label": "Segundos por mensaje"
+    },
+    "weather": {
+      "label": "Origen de datos del tiempo (opcional)",
+      "help": "Un origen de datos de tipo Tiempo (Data Sources → New → Weather). Déjalo vacío para ocultar el tiempo."
+    },
+    "location": {
+      "label": "Nombre del lugar",
+      "help": "Bajo la temperatura, donde hay sitio. Vacío = el nombre del lugar del origen de datos."
+    },
+    "show_forecast": {
+      "label": "Mostrar los próximos tres días",
+      "help": "Solo en la barra lateral y en pantalla completa, donde cabe."
+    },
+    "name": {
+      "label": "Nombre de la organización",
+      "help": "Junto al logotipo. Déjalo vacío para mostrar solo el logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona mejor un logotipo cuadrado o ancho con fondo transparente. Quítalo para ocultarlo."
+    },
+    "clock_format": {
+      "label": "Formato del reloj",
+      "options": {
+        "24": "24 horas (14:30)",
+        "12": "12 horas (2:30 p. m.)",
+        "auto": "El habitual del idioma"
+      }
+    },
+    "show_seconds": {
+      "label": "Mostrar segundos"
+    },
+    "date_format": {
+      "label": "Fecha",
+      "options": {
+        "long": "martes, 6 de octubre",
+        "short": "mar, 6 oct",
+        "numeric": "06/10/2026 (en el orden del idioma)",
+        "none": "Ocultar la fecha"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria",
+      "help": "Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palabras del tiempo y formato de fecha y números, por ejemplo en-GB, de-DE o fr-CA. Vacío = el idioma de la pantalla."
+    },
+    "layout": {
+      "label": "Diseño",
+      "options": {
+        "auto": "Automático, según la forma de la zona",
+        "row": "Siempre una franja horizontal",
+        "column": "Siempre una barra lateral vertical",
+        "full": "Siempre el diseño de pantalla completa"
+      }
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "edge": {
+      "label": "Línea de acento",
+      "help": "Una línea fina del color de acento en el lado que toca el contenido principal.",
+      "options": {
+        "auto": "Automática (arriba en una franja, a la izquierda en una barra lateral)",
+        "top": "Arriba",
+        "bottom": "Abajo",
+        "left": "Izquierda",
+        "right": "Derecha",
+        "none": "Ninguna"
+      }
+    },
+    "animate": {
+      "label": "Animar",
+      "help": "Los mensajes entran deslizándose y una barra fina indica cuándo llega el siguiente. Desactívalo en reproductores muy poco potentes."
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "name": "Speisekarte",
+  "description": "Eine Karte für Café, Restaurant oder Bar, die sich selbst setzt: nach Kategorien gruppiert, Preise bündig, Hinweise wie V oder Neu, ausverkaufte Artikel ausgegraut. Tippen Sie die Karte ein oder verbinden Sie ein Google Sheet oder eine manuelle Tabelle und ändern Sie Preise, ohne den Bildschirm anzufassen.",
+  "params": {
+    "title": {
+      "label": "Titel"
+    },
+    "subtitle": {
+      "label": "Untertitel",
+      "help": "Eine Zeile unter dem Titel. Leer lassen, um sie auszublenden.",
+      "default": "Im Haus geröstet · Hafermilch ohne Aufpreis"
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Kleingedrucktes am unteren Rand. Leer lassen, um es auszublenden.",
+      "default": "Fragen Sie uns nach Allergenen · Preise inkl. MwSt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Wird neben dem Titel angezeigt."
+    },
+    "items": {
+      "label": "Menüpunkte",
+      "help": "Ein Artikel pro Zeile: Artikel | Preis | Beschreibung | Kategorie | Hinweis. Wird verwendet, wenn keine Datenquelle verbunden ist.",
+      "default": "Espresso | 2.80 | Doppelt, Schokolade und Kirsche | Kaffee |\nFlat White | 3.60 | Samtmilch, doppelter Ristretto | Kaffee | Beliebt\nCold Brew | 4.20 | 18 Stunden kalt extrahiert | Kaffee | Neu\nEarl Grey | 3.00 | Bergamotte, lose Blätter | Tee | V\nZimtknoten | 3.40 | Kardamomzucker, braune Butter | Gebäck | Beliebt\nMandel-Financier | 3.10 | Glutenfrei | Gebäck | Ausverkauft"
+    },
+    "menu": {
+      "label": "Datenquelle für die Karte (optional)",
+      "help": "Ein Google Sheet, CSV, eine REST-Liste oder manuelle Tabelle. Hat sie eine Artikel-Spalte, ersetzt sie die oben eingetippten Artikel."
+    },
+    "item_col": {
+      "label": "Spalte Artikel",
+      "help": "Die Spaltenüberschriften Ihrer Datenquelle. Wird eine nicht gefunden, wird die englische probiert (Item, Price, Description, Category, Tag).",
+      "default": "Artikel"
+    },
+    "price_col": {
+      "label": "Spalte Preis",
+      "default": "Preis"
+    },
+    "desc_col": {
+      "label": "Spalte Beschreibung",
+      "default": "Beschreibung"
+    },
+    "category_col": {
+      "label": "Spalte Kategorie",
+      "default": "Kategorie"
+    },
+    "tag_col": {
+      "label": "Spalte Hinweis",
+      "help": "Ein kurzes Etikett als Pille. Der Hinweis „Ausverkauft“ graut den Artikel aus und streicht den Preis durch.",
+      "default": "Hinweis"
+    },
+    "currency": {
+      "label": "Währungssymbol",
+      "default": "€"
+    },
+    "currency_position": {
+      "label": "Position der Währung",
+      "options": {
+        "auto": "Wie in der Sprache des Bildschirms üblich",
+        "before": "Vor dem Preis ($3.50)",
+        "after": "Nach dem Preis (3,50 €)"
+      }
+    },
+    "decimals": {
+      "label": "Nachkommastellen",
+      "options": {
+        "2": "Immer zwei (3,50)",
+        "auto": "Nur wenn nötig (3,5, 4)",
+        "0": "Keine (4)"
+      }
+    },
+    "decimal_comma": {
+      "label": "Immer ein Dezimalkomma verwenden (3,50)",
+      "help": "Aus: Das Dezimalzeichen folgt der Sprache des Bildschirms (3.50 auf Englisch, 3,50 auf Deutsch)."
+    },
+    "font": {
+      "label": "Schrift für Überschriften",
+      "options": {
+        "bitter": "Bitter (Serifen)",
+        "archivo": "Archivo (Display)",
+        "oswald": "Oswald (schmal)",
+        "inter": "Inter (schlicht)"
+      }
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "page_seconds": {
+      "label": "Sekunden pro Seite",
+      "help": "Nur wenn die Karte zu lang ist, um in lesbarer Größe auf einen Bildschirm zu passen."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Die Sprache für Preisformate und die wenigen Wörter, die die Karte selbst schreibt. Leer lassen für die Sprache des Bildschirms."
+    }
+  }
+}

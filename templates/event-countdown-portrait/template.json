@@ -1,0 +1,309 @@
+{
+  "template": {
+    "aspect": "9:16",
+    "background": "{{param:background}}",
+    "background_content_id": "{{param:background_image}}",
+    "background_dim": "{{param:background_dim}}",
+    "elements": [
+      {
+        "slot": "glow",
+        "kind": "box",
+        "box": {
+          "x": 0,
+          "y": 68,
+          "w": 100,
+          "h": 32
+        },
+        "style": {
+          "color": "{{param:accent}}",
+          "opacity": 0.08
+        },
+        "motion": {
+          "animation": "fade",
+          "delay": 0,
+          "duration": 1.2,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "glow_edge",
+        "kind": "rule",
+        "box": {
+          "x": 0,
+          "y": 68,
+          "w": 100,
+          "h": 0.1
+        },
+        "style": {
+          "color": "{{param:accent}}",
+          "opacity": 0.35
+        },
+        "motion": {
+          "animation": "wipe",
+          "delay": 0,
+          "duration": 1.2,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "top_bar",
+        "kind": "rule",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 0.45
+        },
+        "style": {
+          "color": "{{param:accent}}"
+        },
+        "motion": {
+          "animation": "wipe",
+          "delay": 0.1,
+          "duration": 1.1,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "logo",
+        "kind": "image",
+        "box": {
+          "x": 8,
+          "y": 5,
+          "w": 15,
+          "h": 8.44
+        },
+        "fit": "contain",
+        "content_id": "{{param:logo}}",
+        "motion": {
+          "animation": "zoom",
+          "delay": 0.05,
+          "duration": 0.8,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "when_where",
+        "kind": "body",
+        "box": {
+          "x": 8,
+          "y": 17.5,
+          "w": 84
+        },
+        "style": {
+          "color": "{{param:accent}}",
+          "size_cqw": 2.9,
+          "weight": 700,
+          "font": "archivo"
+        },
+        "motion": {
+          "animation": "fade",
+          "delay": 0.2,
+          "duration": 0.7,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "event_name",
+        "kind": "head",
+        "box": {
+          "x": 8,
+          "y": 20.5,
+          "w": 84
+        },
+        "style": {
+          "color": "{{param:text_color}}",
+          "size_cqw": 11.5,
+          "weight": 800,
+          "font": "archivo"
+        },
+        "motion": {
+          "animation": "slideU",
+          "delay": 0.3,
+          "duration": 0.9,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "tagline",
+        "kind": "body",
+        "box": {
+          "x": 8,
+          "y": 36.5,
+          "w": 80
+        },
+        "style": {
+          "color": "{{param:text_color}}",
+          "size_cqw": 3.9,
+          "weight": 400,
+          "font": "inter",
+          "opacity": 0.78
+        },
+        "motion": {
+          "animation": "fade",
+          "delay": 0.6,
+          "duration": 0.9,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "rule",
+        "kind": "rule",
+        "box": {
+          "x": 8,
+          "y": 47.5,
+          "w": 10,
+          "h": 0.28
+        },
+        "style": {
+          "color": "{{param:accent}}"
+        },
+        "motion": {
+          "animation": "wipe",
+          "delay": 0.85,
+          "duration": 0.6,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "countdown_label",
+        "kind": "body",
+        "box": {
+          "x": 8,
+          "y": 50,
+          "w": 84
+        },
+        "style": {
+          "color": "{{param:text_color}}",
+          "size_cqw": 2.9,
+          "weight": 700,
+          "font": "archivo",
+          "opacity": 0.6
+        },
+        "motion": {
+          "animation": "fade",
+          "delay": 0.95,
+          "duration": 0.6,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "countdown",
+        "kind": "countdown",
+        "box": {
+          "x": 7.4,
+          "y": 52.5,
+          "w": 90
+        },
+        "target": "{{param:target}}",
+        "locale": "{{param:locale}}",
+        "style": {
+          "color": "{{param:text_color}}",
+          "size_cqw": 8.6,
+          "weight": 500,
+          "font": "oswald"
+        },
+        "motion": {
+          "animation": "slideU",
+          "delay": 1.05,
+          "duration": 1.0,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "qr_card",
+        "kind": "box",
+        "box": {
+          "x": 8,
+          "y": 74.4,
+          "w": 34,
+          "h": 19.125
+        },
+        "style": {
+          "color": "#FFFFFF",
+          "radius_cqw": 2.2,
+          "opacity": "{{param:show_qr}}"
+        },
+        "motion": {
+          "animation": "zoom",
+          "delay": 0.7,
+          "duration": 0.8,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "qr",
+        "kind": "qr",
+        "box": {
+          "x": 10,
+          "y": 75.525,
+          "w": 30,
+          "h": 16.875
+        },
+        "qr_ec": "M",
+        "qr_fg": "#0B0C14",
+        "qr_bg": "#FFFFFF",
+        "style": {
+          "opacity": "{{param:show_qr}}"
+        },
+        "motion": {
+          "animation": "zoom",
+          "delay": 0.8,
+          "duration": 0.8,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "qr_rule",
+        "kind": "rule",
+        "box": {
+          "x": 48,
+          "y": 81.1,
+          "w": 8,
+          "h": 0.25
+        },
+        "style": {
+          "color": "{{param:accent}}",
+          "opacity": "{{param:show_qr}}"
+        },
+        "motion": {
+          "animation": "wipe",
+          "delay": 1.2,
+          "duration": 0.6,
+          "easing": "soft"
+        }
+      },
+      {
+        "slot": "qr_caption",
+        "kind": "body",
+        "box": {
+          "x": 48,
+          "y": 82.5,
+          "w": 44
+        },
+        "style": {
+          "color": "{{param:text_color}}",
+          "size_cqw": 5.2,
+          "weight": 700,
+          "font": "archivo",
+          "opacity": "{{param:show_qr}}"
+        },
+        "motion": {
+          "animation": "fade",
+          "delay": 1.1,
+          "duration": 0.7,
+          "easing": "soft"
+        }
+      }
+    ]
+  },
+  "fields": {
+    "when_where": "{{param:when_where}}",
+    "event_name": "{{param:event_name}}",
+    "tagline": "{{param:tagline}}",
+    "countdown_label": "{{param:countdown_label}}",
+    "countdown": "{{param:done_text}}",
+    "qr": "{{param:qr_url}}",
+    "qr_caption": "{{param:qr_caption}}"
+  }
+}

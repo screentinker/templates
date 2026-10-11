@@ -1,0 +1,43 @@
+{
+  "name": "Weer — geanimeerd",
+  "description": "Een geanimeerde weerscène op het volledige scherm: lucht, regen, sneeuw of zon volgen het actuele weer, met een vijfdaagse verwachting en temperatuurbereik. Leest een van je Weer-gegevensbronnen; je server haalt het weer op, dus deze sjabloon heeft geen enkele netwerktoegang nodig.",
+  "params": {
+    "weather": {
+      "label": "Weer-gegevensbron",
+      "help": "Een gegevensbron van het type Weer (Gegevensbronnen → Nieuw → Weer). Locatie en eenheden stel je daar in."
+    },
+    "location": {
+      "label": "Plaatsnaam",
+      "help": "Laat leeg om de plaatsnaam van de gegevensbron te gebruiken."
+    },
+    "theme": {
+      "label": "Achtergrond",
+      "options": {
+        "sky": "Volgt het weer",
+        "solid": "Effen kleur"
+      }
+    },
+    "background": {
+      "label": "Effen achtergrondkleur",
+      "help": "Gebruikt als Achtergrond op Effen kleur staat."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "animate": {
+      "label": "Scène animeren",
+      "help": "Zet uit op erg trage spelers."
+    },
+    "show_clock": {
+      "label": "Klok tonen"
+    },
+    "timezone": {
+      "label": "Tijdzone van de klok",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De taal van alle woorden, datums en getallen op het scherm, bijvoorbeeld nl of ja. Laat leeg voor de taal van het scherm."
+    }
+  }
+}

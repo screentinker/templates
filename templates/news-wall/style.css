@@ -14,7 +14,7 @@
 html, body { margin: 0; height: 100%; overflow: hidden; }
 body {
   background: var(--bg); color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; cursor: none;
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; -webkit-font-smoothing: antialiased; cursor: none;
 }
 [hidden] { display: none !important; }
 .bg {
@@ -34,7 +34,7 @@ body {
 }
 @keyframes live { 50% { opacity: .35; } }
 .title {
-  margin: 0; font: inherit; font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800;
+  margin: 0; font: inherit; font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 800;
   text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .clock { flex: none; font-weight: 600; font-variant-numeric: tabular-nums; opacity: .7; }
@@ -56,7 +56,7 @@ body {
 }
 .glyph {
   position: absolute; right: .12em; top: .02em; pointer-events: none;
-  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 900; line-height: 1;
+  font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 900; line-height: 1;
   color: rgba(255,255,255,.1); text-transform: uppercase;
 }
 .feature-body, .feature-foot { position: relative; }
@@ -69,10 +69,11 @@ body {
 }
 .fdate { font-weight: 600; opacity: .9; }
 .f-title {
-  margin: 0; font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800; line-height: 1.04; letter-spacing: -.015em;
+  overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto;
+  margin: 0; font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 800; line-height: 1.04; letter-spacing: -.015em;
   overflow: hidden;
 }
-.f-summary { margin: 0; line-height: 1.38; font-weight: 450; opacity: .92; overflow: hidden; }
+.f-summary { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; margin: 0; line-height: 1.38; font-weight: 450; opacity: .92; overflow: hidden; }
 body.clamp .f-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
 body.clamp .f-summary { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
 .feature-foot { display: flex; align-items: center; gap: 2.2vmin; }
@@ -94,14 +95,14 @@ body.clamp .f-summary { display: -webkit-box; -webkit-box-orient: vertical; -web
 }
 .badge {
   flex: none; display: flex; align-items: center; justify-content: center;
-  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 900; color: #fff; text-transform: uppercase;
+  font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 900; color: #fff; text-transform: uppercase;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
 }
 .card:nth-child(2) .badge { background: linear-gradient(135deg, var(--accent2), var(--accent)); }
 .card:nth-child(3) .badge { background: linear-gradient(200deg, var(--accent), var(--accent2)); }
 .card:nth-child(4) .badge { background: linear-gradient(20deg, var(--accent2), var(--accent)); }
 .card-text { min-width: 0; }
-.card-title { font-weight: 700; line-height: 1.2; overflow: hidden; }
+.card-title { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; font-weight: 700; line-height: 1.2; overflow: hidden; }
 body.clamp .card-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .card-date { font-weight: 500; opacity: .55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -164,3 +165,8 @@ body.strip .rail { display: none; }
 
 /* One story only: the featured card takes the whole wall. */
 body.solo .wall { grid-template-columns: 1fr; grid-template-rows: 1fr; }
+
+/* Devanagari joins its letters along a head line: extra letter spacing would break it apart. */
+html:lang(hi) body * { letter-spacing: normal !important; }
+/* Japanese: break between phrases rather than after any character, where the engine can. */
+html:lang(ja) .f-title, html:lang(ja) .f-summary, html:lang(ja) .card-title { word-break: auto-phrase; }

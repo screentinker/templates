@@ -1,0 +1,250 @@
+{
+ "template": {
+  "aspect": "16:9",
+  "background": "{{param:background}}",
+  "elements": [
+   {
+    "slot": "panel",
+    "kind": "box",
+    "box": {
+     "x": 0,
+     "y": 0,
+     "w": 34,
+     "h": 100
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "slideR",
+     "delay": 0,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "icon",
+    "kind": "image",
+    "fit": "contain",
+    "content_id": "{{param:icon}}",
+    "box": {
+     "x": 8,
+     "y": 15,
+     "w": 18,
+     "h": 32
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.3,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "panel_title",
+    "kind": "head",
+    "box": {
+     "x": 2,
+     "y": 54,
+     "w": 30
+    },
+    "style": {
+     "color": "{{param:background}}",
+     "size_cqw": 3.5,
+     "weight": 800,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.45,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "tip_number",
+    "kind": "body",
+    "box": {
+     "x": 2,
+     "y": 65,
+     "w": 30
+    },
+    "style": {
+     "color": "{{param:background}}",
+     "size_cqw": 1.5,
+     "weight": 700,
+     "font": "oswald",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.55,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "panel_rule",
+    "kind": "rule",
+    "box": {
+     "x": 13,
+     "y": 62,
+     "w": 8,
+     "h": 0.5
+    },
+    "style": {
+     "color": "{{param:background}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.6,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "eyebrow",
+    "kind": "body",
+    "box": {
+     "x": 40,
+     "y": 15,
+     "w": 54
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 1.3,
+     "weight": 700,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.4,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "headline",
+    "kind": "head",
+    "box": {
+     "x": 40,
+     "y": 20,
+     "w": 54
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 4.3,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.5,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "rule",
+    "kind": "rule",
+    "box": {
+     "x": 40,
+     "y": 41.5,
+     "w": 5,
+     "h": 0.55
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.8,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "steps",
+    "kind": "body",
+    "box": {
+     "x": 40,
+     "y": 46,
+     "w": 54
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 2.1,
+     "weight": 500,
+     "font": "inter",
+     "opacity": 0.9
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.9,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "divider",
+    "kind": "rule",
+    "box": {
+     "x": 40,
+     "y": 80,
+     "w": 54,
+     "h": 0.18
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "opacity": 0.2
+    }
+   },
+   {
+    "slot": "footer",
+    "kind": "body",
+    "box": {
+     "x": 40,
+     "y": 83.5,
+     "w": 36
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 1.25,
+     "weight": 500,
+     "font": "inter",
+     "opacity": 0.65
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 1.1,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "logo",
+    "kind": "image",
+    "fit": "contain",
+    "content_id": "{{param:logo}}",
+    "box": {
+     "x": 80,
+     "y": 83,
+     "w": 14,
+     "h": 5.47
+    },
+    "style": {
+     "opacity": "{{param:show_logo}}"
+    }
+   }
+  ]
+ },
+ "fields": {
+  "panel_title": "{{param:panel_title}}",
+  "tip_number": "{{param:tip_number}}",
+  "eyebrow": "{{param:eyebrow}}",
+  "headline": "{{param:headline}}",
+  "steps": "{{param:steps}}",
+  "footer": "{{param:footer}}"
+ }
+}

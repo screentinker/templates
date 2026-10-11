@@ -1,0 +1,75 @@
+{
+  "name": "Anuncio — dividido",
+  "description": "Un aviso a dos tonos: el titular sobre un bloque de tu color de acento, los detalles al lado sobre fondo claro, con un pie y un código QR opcional. Ideal para sesiones, formaciones e inscripciones.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona mejor un PNG o SVG con fondo transparente. Aparece arriba a la izquierda."
+    },
+    "eyebrow": {
+      "label": "Antetítulo",
+      "help": "Una etiqueta corta sobre el titular, p. ej. RECORDATORIO o NUEVO. Mejor en mayúsculas.",
+      "default": "ALMUERZO FORMATIVO"
+    },
+    "headline": {
+      "label": "Titular",
+      "help": "El anuncio en pocas palabras. Hasta 40 caracteres; ocupa dos o tres líneas en pantalla.",
+      "default": "Privacidad de datos en lenguaje claro"
+    },
+    "body": {
+      "label": "Detalles",
+      "help": "Una o dos frases. Pulsa Intro para empezar una línea nueva.",
+      "default": "Priya Raman, de Legal, explica qué podemos y qué no podemos hacer con los datos de clientes, con ejemplos reales de nuestros tickets de soporte. 45 minutos, almuerzo incluido: inscríbete para que pidamos comida suficiente."
+    },
+    "footer": {
+      "label": "Pie",
+      "help": "Quién lo envía, una fecha, una sala o un contacto.",
+      "default": "Miércoles 4 de noviembre  ·  12:30  ·  Orchard Room, planta 3"
+    },
+    "show_qr": {
+      "label": "Mostrar un código QR",
+      "help": "Desactívalo si no tienes enlace: el código y su texto desaparecen."
+    },
+    "qr_url": {
+      "label": "Enlace del código QR",
+      "help": "La dirección que abre el código QR. Con un enlace más corto, el código se escanea desde más lejos."
+    },
+    "qr_caption": {
+      "label": "Texto del QR",
+      "default": "Escanea para inscribirte"
+    },
+    "show_date": {
+      "label": "Mostrar la fecha de hoy",
+      "help": "La fecha actual de la pantalla, en el idioma y la zona horaria de abajo."
+    },
+    "date_format": {
+      "label": "Formato de fecha",
+      "options": {
+        "weekday": "Día de la semana, día y mes",
+        "long": "Fecha completa con año",
+        "short": "Fecha corta",
+        "numeric": "Solo números"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria de la fecha",
+      "help": "Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "El idioma en que se escribe la fecha, p. ej. en-GB, de-DE o fr-CA. Déjalo vacío para usar el idioma de la pantalla."
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "panel_text": {
+      "label": "Color del texto sobre el panel de acento"
+    }
+  }
+}

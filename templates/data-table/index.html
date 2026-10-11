@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data table</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="midnight">
+<div id="bg" class="bg" aria-hidden="true"></div>
+
+<div class="frame">
+  <header id="head" class="head">
+    <img id="logo" class="logo" alt="" hidden>
+    <div class="titles">
+      <h1 id="title" class="title" dir="auto"></h1>
+      <div id="subtitle" class="subtitle" dir="auto"></div>
+      <div id="spage" class="spage"></div>
+    </div>
+  </header>
+
+  <main id="stage" class="stage">
+    <table id="table" class="dt">
+      <colgroup id="cols"></colgroup>
+      <thead><tr id="headrow"></tr></thead>
+      <tbody id="body"></tbody>
+    </table>
+    <div id="note" class="note" hidden></div>
+  </main>
+
+  <div id="disclosure" class="disclosure" dir="auto"></div>
+
+  <footer class="foot">
+    <div id="footer" class="footer-text" dir="auto"></div>
+    <div class="foot-right">
+      <div id="limit" class="updated limit"></div>
+      <div id="updated" class="updated"></div>
+      <div id="pager" class="pager" aria-hidden="true"></div>
+    </div>
+  </footer>
+  <div id="progress" class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+</div>
+
+<!-- Off-screen copy of the whole table, used only to measure natural column widths. -->
+<div class="measure" aria-hidden="true">
+  <table id="mtable" class="dt"><thead><tr id="mhead"></tr></thead><tbody id="mbody"></tbody></table>
+</div>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

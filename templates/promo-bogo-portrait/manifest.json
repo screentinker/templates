@@ -1,0 +1,209 @@
+{
+  "id": "promo-bogo-portrait",
+  "name": "Buy one get one promo (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A portrait (9:16) bold buy-one-get-one screen for a café, bakery or shop: the offer in three big lines, what it applies to, a round \"2 for 1\" sticker on a coloured picture panel, and an optional live countdown to the last day.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-bogo-portrait",
+  "license": "MIT",
+  "tags": [
+    "promo",
+    "cafe",
+    "restaurant",
+    "hospitality",
+    "retail",
+    "offer",
+    "countdown",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A square-ish PNG or SVG. The bundled badge is a placeholder; replace it with your own.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo (an empty logo setting would otherwise show a dashed box).",
+      "default": true
+    },
+    {
+      "name": "brand",
+      "type": "text",
+      "label": "Store name",
+      "max": 22,
+      "help": "Shown beside the logo. Leave empty if your logo already says it.",
+      "default": "NORTHWIND"
+    },
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 30,
+      "default": "THIS WEEK ONLY"
+    },
+    {
+      "name": "line1",
+      "type": "text",
+      "label": "Offer, first line",
+      "max": 10,
+      "help": "The offer is set in three big lines, one line each, e.g. \"Buy two,\" / \"get one\" / \"HALF OFF\".",
+      "default": "Buy one,"
+    },
+    {
+      "name": "line2",
+      "type": "text",
+      "label": "Offer, second line",
+      "max": 10,
+      "default": "get one"
+    },
+    {
+      "name": "line3",
+      "type": "text",
+      "label": "Offer, third line (accent)",
+      "max": 8,
+      "help": "The biggest line, so at most 8 characters: FREE, HALF OFF, 50% OFF.",
+      "default": "FREE"
+    },
+    {
+      "name": "product",
+      "type": "text",
+      "label": "What it applies to",
+      "max": 30,
+      "default": "Any latte, flat white or mocha"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail line",
+      "max": 100,
+      "default": "Bring a friend. Mix and match any size; the second drink is the one of equal or lower price."
+    },
+    {
+      "name": "sticker",
+      "type": "text",
+      "label": "Round sticker",
+      "max": 8,
+      "help": "Short — two words at most. Leave empty for a plain dot.",
+      "default": "2 FOR 1"
+    },
+    {
+      "name": "product_image",
+      "type": "image",
+      "label": "Product picture",
+      "help": "A cut-out PNG or SVG with a transparent background works best. It is fitted, never cropped.",
+      "default": "tpl:coffee.svg"
+    },
+    {
+      "name": "show_image",
+      "type": "checkbox",
+      "label": "Show the product picture",
+      "help": "Turn off to leave the panel without a picture (an empty picture setting would otherwise show a dashed box).",
+      "default": true
+    },
+    {
+      "name": "show_countdown",
+      "type": "checkbox",
+      "label": "Show the countdown",
+      "help": "Turn off for an offer with no end date: the label and timer both disappear.",
+      "default": true
+    },
+    {
+      "name": "countdown_label",
+      "type": "text",
+      "label": "Label above the countdown",
+      "max": 20,
+      "help": "It stays after the offer ends, so pick words that read well with the end message too.",
+      "default": "LIMITED TIME"
+    },
+    {
+      "name": "countdown_target",
+      "type": "text",
+      "label": "Offer ends at",
+      "max": 40,
+      "help": "ISO 8601 with a timezone offset, e.g. 2026-11-01T23:59:00+00:00 or 2026-11-01T23:59:00-05:00.",
+      "default": "2026-12-31T18:00:00+00:00"
+    },
+    {
+      "name": "countdown_done",
+      "type": "text",
+      "label": "Shown when the countdown ends",
+      "max": 18,
+      "default": "Ending soon"
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "help": "The language of the live countdown, e.g. de or fr-CA. Leave empty for the screen’s language. Your own text is shown exactly as you type it.",
+      "default": ""
+    },
+    {
+      "name": "small_print",
+      "type": "text",
+      "label": "Small print",
+      "max": 140,
+      "default": "Participating stores only. Not valid with other offers or on delivery orders."
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "help": "The picture panel and the third offer line.",
+      "default": "#E4472B"
+    },
+    {
+      "name": "highlight",
+      "type": "color",
+      "label": "Sticker colour",
+      "default": "#FFC24B"
+    },
+    {
+      "name": "panel_text",
+      "type": "color",
+      "label": "Text on the panel",
+      "help": "The store name, which sits on the accent panel.",
+      "default": "#FFF3E2"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#FFF3E2"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#2E1A12"
+    },
+    {
+      "name": "background_image",
+      "type": "image",
+      "label": "Background photo",
+      "help": "Optional. A photo behind everything, darkened by the setting below.",
+      "default": ""
+    },
+    {
+      "name": "background_dim",
+      "type": "number",
+      "label": "Darken the photo",
+      "min": 0,
+      "max": 0.9,
+      "step": 0.05,
+      "default": 0.2,
+      "help": "0 = the photo as is, 0.9 = almost black. Only used with a background photo."
+    }
+  ]
+}

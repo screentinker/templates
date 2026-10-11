@@ -1,0 +1,359 @@
+{
+ "template": {
+  "aspect": "16:9",
+  "background": "{{param:background}}",
+  "background_content_id": "{{param:background_image}}",
+  "background_dim": "{{param:background_dim}}",
+  "elements": [
+   {
+    "slot": "panel",
+    "kind": "box",
+    "box": {
+     "x": 52,
+     "y": 0,
+     "w": 48,
+     "h": 100
+    },
+    "style": {
+     "color": "{{param:panel}}"
+    },
+    "motion": {
+     "animation": "slideL",
+     "delay": 0,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "picture",
+    "kind": "image",
+    "box": {
+     "x": 55,
+     "y": 9,
+     "w": 42,
+     "h": 80
+    },
+    "fit": "contain",
+    "content_id": "{{param:product_image}}",
+    "style": {
+     "opacity": "{{param:show_image}}"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.3,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "sticker_bg",
+    "kind": "box",
+    "box": {
+     "x": 84,
+     "y": 7,
+     "w": 10,
+     "h": 17.78
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "radius_cqw": 5
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.9,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "sticker",
+    "kind": "stat",
+    "box": {
+     "x": 84,
+     "y": 14.4,
+     "w": 10
+    },
+    "style": {
+     "color": "{{param:sticker_text}}",
+     "size_cqw": 1.6,
+     "weight": 800,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.95,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "logo",
+    "kind": "image",
+    "box": {
+     "x": 6,
+     "y": 6.5,
+     "w": 4.4,
+     "h": 7.82
+    },
+    "fit": "contain",
+    "content_id": "{{param:logo}}",
+    "style": {
+     "opacity": "{{param:show_logo}}"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "brand",
+    "kind": "body",
+    "box": {
+     "x": 11.6,
+     "y": 8.7,
+     "w": 34
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 1.5,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.05,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "eyebrow",
+    "kind": "body",
+    "box": {
+     "x": 6,
+     "y": 21.5,
+     "w": 40
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 1.4,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.15,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "rule",
+    "kind": "rule",
+    "box": {
+     "x": 6,
+     "y": 25.9,
+     "w": 4,
+     "h": 0.5
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.25,
+     "duration": 0.5,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "headline",
+    "kind": "head",
+    "box": {
+     "x": 6,
+     "y": 29,
+     "w": 42
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 4.8,
+     "weight": 700,
+     "font": "bitter"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.3,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "description",
+    "kind": "body",
+    "box": {
+     "x": 6,
+     "y": 58.3,
+     "w": 40
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 1.5,
+     "weight": 400,
+     "font": "inter",
+     "opacity": 0.75
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.6,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "price",
+    "kind": "stat",
+    "box": {
+     "x": 5.8,
+     "y": 69.5,
+     "w": 26
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 5.2,
+     "weight": 500,
+     "font": "oswald"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.75,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "where",
+    "kind": "body",
+    "box": {
+     "x": 6,
+     "y": 80.5,
+     "w": 26
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 1.15,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.9,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "small_print",
+    "kind": "body",
+    "box": {
+     "x": 6,
+     "y": 88.5,
+     "w": 26
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 0.9,
+     "weight": 400,
+     "font": "inter",
+     "opacity": 0.55
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 1,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "qr_card",
+    "kind": "box",
+    "box": {
+     "x": 36.5,
+     "y": 69.5,
+     "w": 10.5,
+     "h": 18.67
+    },
+    "style": {
+     "color": "#FFFFFF",
+     "radius_cqw": 0.8,
+     "opacity": "{{param:show_qr}}"
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.9,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "qr",
+    "kind": "qr",
+    "box": {
+     "x": 37,
+     "y": 70.39,
+     "w": 9.5,
+     "h": 16.89
+    },
+    "qr_ec": "M",
+    "qr_fg": "#1F1B17",
+    "qr_bg": "#FFFFFF",
+    "style": {
+     "opacity": "{{param:show_qr}}"
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.95,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "qr_caption",
+    "kind": "body",
+    "box": {
+     "x": 33,
+     "y": 89.8,
+     "w": 17.5
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 1,
+     "weight": 700,
+     "font": "archivo",
+     "align": "center",
+     "opacity": "{{param:show_qr}}"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 1.05,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   }
+  ]
+ },
+ "fields": {
+  "brand": "{{param:brand}}",
+  "eyebrow": "{{param:eyebrow}}",
+  "sticker": "{{param:sticker}}",
+  "headline": "{{param:headline}}",
+  "description": "{{param:description}}",
+  "price": "{{param:price}}",
+  "where": "{{param:where}}",
+  "qr": "{{param:qr_url}}",
+  "qr_caption": "{{param:qr_caption}}",
+  "small_print": "{{param:small_print}}"
+ }
+}

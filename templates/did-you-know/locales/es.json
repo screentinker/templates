@@ -1,0 +1,54 @@
+{
+  "name": "¿Sabías que…?",
+  "description": "Una pantalla de dato del día llamativa: un gran carácter en un disco brillante, una frase sorprendente, una breve explicación y una línea de fuente. Para colegios, bibliotecas, museos, salas de espera y cocinas de oficina.",
+  "params": {
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "default": "¿SABÍAS QUE…?"
+    },
+    "badge": {
+      "label": "Carácter del disco",
+      "help": "De uno a tres caracteres, grandes en el disco de color: ?, !, un número."
+    },
+    "number": {
+      "label": "Número del dato",
+      "help": "Arriba a la derecha, p. ej. «N.º 27». Déjalo vacío para ocultarlo.",
+      "default": "N.º 27"
+    },
+    "fact": {
+      "label": "El dato",
+      "help": "El titular: una frase corta y sorprendente.",
+      "default": "El pulpo tiene tres corazones y sangre azul."
+    },
+    "detail": {
+      "label": "Explicación",
+      "help": "Una o dos frases que lo expliquen. Intro empieza una línea nueva.",
+      "default": "Dos corazones bombean sangre a las branquias y el tercero al resto del cuerpo. Es azul porque transporta el oxígeno con cobre en lugar de hierro."
+    },
+    "footer": {
+      "label": "Pie",
+      "help": "Una fuente, el nombre de la serie o dónde saber más.",
+      "default": "Semana de la Ciencia · Biblioteca Northwind · Lista de lecturas en recepción"
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactivado oculta el logotipo y su espacio queda vacío."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG con fondo transparente, en un color claro para el fondo oscuro predeterminado."
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "El disco, el encabezado pequeño, el número y la línea."
+    },
+    "background": {
+      "label": "Color de fondo",
+      "help": "Detrás de todo. El carácter del disco también se dibuja en este color."
+    },
+    "text_color": {
+      "label": "Color del texto",
+      "help": "El dato, la explicación y el pie."
+    }
+  }
+}

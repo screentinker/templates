@@ -1,0 +1,138 @@
+{
+  "name": "Roosterbord",
+  "description": "Wat er nu bezig is, hoe lang nog en wat daarna komt: een aftelbord voor schoolbellen, groepslessen, ploegen en pauzes of kerkdiensten, met het rooster van vandaag ernaast. Typ het rooster in (meerdere roosters met een naam, één actief) of koppel een Google Sheet. Buiten de tijden toont het wanneer het weer begint.",
+  "params": {
+    "preset": {
+      "label": "Voorinstelling",
+      "help": "Bepaalt de teksten en het voorbeeldrooster dat te zien is tot u uw eigen rooster typt of koppelt, beide in de taal van het scherm.",
+      "options": {
+        "school": "Schoolbel / lesrooster",
+        "gym": "Lessen in sportschool of studio",
+        "factory": "Ploegen en pauzes",
+        "worship": "Tijden van de diensten"
+      }
+    },
+    "schedule": {
+      "label": "Rooster",
+      "help": "Eén blok per regel: Dagen | Begin-Eind | Titel | Lokaal | Leiding, bijv. Mon-Fri | 08:00-08:50 | 1e uur | Lokaal 12 | Mevr. Patel. [Toetsweek] start een ander rooster. Leeg = voorbeeld."
+    },
+    "schedule_source": {
+      "label": "Gegevensbron voor het rooster (optioneel)",
+      "help": "Een Google Sheet, CSV of handmatige tabel met de kolommen Days, Start, End, Title, Room, Host (en eventueel Schedule). Vervangt het getypte rooster."
+    },
+    "active_schedule": {
+      "label": "Actief rooster",
+      "help": "Welk rooster met naam getoond wordt, geteld in de volgorde waarin ze staan. Wissel voor de toetsweek, een korte dag of een vakantierooster.",
+      "options": {
+        "1": "Rooster 1",
+        "2": "Rooster 2",
+        "3": "Rooster 3",
+        "4": "Rooster 4",
+        "5": "Rooster 5",
+        "6": "Rooster 6",
+        "7": "Rooster 7",
+        "8": "Rooster 8"
+      }
+    },
+    "view": {
+      "label": "Weergave",
+      "options": {
+        "split": "Nu + rooster van vandaag",
+        "focus": "Alleen nu (grote aftelklok)",
+        "list": "Alleen het rooster van vandaag"
+      }
+    },
+    "title": {
+      "label": "Titel",
+      "help": "Leeg = de kop van de voorinstelling in de taal van het scherm (of de naam van het voorbeeld zolang dat te zien is)."
+    },
+    "subtitle": {
+      "label": "Ondertitel",
+      "help": "Eén regel onder de titel. De naam van het actieve rooster komt erachter."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Naast de titel getoond."
+    },
+    "show_badge": {
+      "label": "Initialen tonen als er geen logo is"
+    },
+    "show_where": {
+      "label": "Lokaal en leiding tonen"
+    },
+    "warn_minutes": {
+      "label": "Waarschuwen in de laatste … minuten",
+      "help": "De aftelklok krijgt de waarschuwingskleur zoveel minuten voor het einde van een blok. 0 = nooit."
+    },
+    "now_label": {
+      "label": "Kop: huidig blok",
+      "help": "Leeg = de tekst van de voorinstelling in de taal van het scherm („Nu”, „Nu bezig” …)."
+    },
+    "next_label": {
+      "label": "Kop: volgend blok",
+      "help": "Leeg = de tekst van de voorinstelling in de taal van het scherm („Hierna”, „Volgende les” …)."
+    },
+    "then_label": {
+      "label": "Kop: het blok daarna",
+      "help": "Leeg = „Daarna” in de taal van het scherm."
+    },
+    "ends_label": {
+      "label": "Tekst bij de aftelklok tijdens een blok",
+      "help": "Leeg = „Eindigt over” in de taal van het scherm."
+    },
+    "starts_label": {
+      "label": "Tekst bij de aftelklok voor een blok",
+      "help": "Leeg = „Begint over” in de taal van het scherm."
+    },
+    "offhours_today": {
+      "label": "Bericht voor het eerste blok van vandaag",
+      "help": "Gebruik {time} en {title}. Leeg = dat van de voorinstelling in de taal van het scherm, bijv. „De lessen beginnen om {time}”."
+    },
+    "offhours_later": {
+      "label": "Bericht als het volgende blok op een andere dag is",
+      "help": "Gebruik {day}, {time} en {title}. Leeg = dat van de voorinstelling in de taal van het scherm, bijv. „Lessen beginnen: {day}, {time}”."
+    },
+    "empty_text": {
+      "label": "Bericht als er deze week niets gepland is",
+      "help": "Leeg = dat van de voorinstelling in de taal van het scherm."
+    },
+    "font": {
+      "label": "Lettertype van de koppen",
+      "options": {
+        "archivo": "Archivo (opvallend)",
+        "oswald": "Oswald (smal)",
+        "inter": "Inter (strak)",
+        "bitter": "Bitter (schreef)"
+      }
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "warn_color": {
+      "label": "Waarschuwingskleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "clock_format": {
+      "label": "Tijdnotatie",
+      "options": {
+        "12": "12-uurs",
+        "24": "24-uurs",
+        "auto": "Volgens de taal",
+        "off": "Klok verbergen (tijden volgens de taal)"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone",
+      "help": "De tijden van het rooster gelden in deze tijdzone. Leeg = de klok van het scherm."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De woorden, tijden en datums op het scherm, bijvoorbeeld nl of nl-BE. Leeg = de taal van het scherm."
+    }
+  }
+}

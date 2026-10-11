@@ -1,0 +1,134 @@
+{
+ "name": "Feste del team",
+ "description": "Compleanni, anniversari di lavoro e benvenuti ai nuovi per l’ufficio o la sala relax. Schede a rotazione con avatar colorati con le iniziali, medaglie a 1, 5, 10, 15 e 20+ anni e l’elenco di chi festeggia oggi, questa settimana o questo mese. Inserisci le persone a mano o tienile in un Foglio Google. Coriandoli allegri o un tema scuro elegante.",
+ "params": {
+  "title": {
+   "label": "Titolo",
+   "help": "L’intestazione. Lascia vuoto per nasconderla.",
+   "default": "Si festeggia in Northwind"
+  },
+  "logo": {
+   "label": "Logo",
+   "help": "Facoltativo. Accanto al titolo."
+  },
+  "window": {
+   "label": "Chi mostrare",
+   "options": {
+    "today": "Solo oggi",
+    "week": "Questa settimana (settimana di calendario)",
+    "next7": "I prossimi 7 giorni",
+    "month": "Questo mese",
+    "next30": "I prossimi 30 giorni"
+   }
+  },
+  "week_start": {
+   "label": "La settimana inizia di",
+   "help": "Usato solo da «Questa settimana».",
+   "options": {
+    "monday": "Lunedì",
+    "sunday": "Domenica",
+    "saturday": "Sabato"
+   }
+  },
+  "show_birthdays": {
+   "label": "Mostra i compleanni"
+  },
+  "show_anniversaries": {
+   "label": "Mostra gli anniversari di lavoro"
+  },
+  "show_new_hires": {
+   "label": "Mostra i benvenuti ai nuovi"
+  },
+  "milestones_only": {
+   "label": "Solo anniversari tondi (1, 5, 10, 15, 20, 25… anni)"
+  },
+  "welcome_days": {
+   "label": "Dai il benvenuto ai nuovi per (giorni)",
+   "help": "Un nuovo arrivo resta sullo schermo per questi giorni dopo il primo giorno, qualunque sia il periodo."
+  },
+  "theme": {
+   "label": "Tema",
+   "options": {
+    "playful": "Allegro (chiaro, coriandoli)",
+    "elegant": "Elegante (scuro, oro)"
+   }
+  },
+  "animate": {
+   "label": "Anima lo sfondo (coriandoli / riflessi d’oro)",
+   "help": "Disattiva sui player molto lenti."
+  },
+  "seconds": {
+   "label": "Secondi per persona"
+  },
+  "birthday_label": {
+   "label": "Intestazione compleanno",
+   "help": "Sopra il nome su una scheda di compleanno. Vuoto: «Buon compleanno» nella lingua dello schermo."
+  },
+  "anniversary_label": {
+   "label": "Intestazione anniversario",
+   "help": "{n} viene sostituito dal numero di anni, es. «{n} anni con noi». Vuoto: questa frase nella lingua dello schermo, con il plurale giusto."
+  },
+  "anniversary_one_label": {
+   "label": "Intestazione per un anno",
+   "help": "Per il primo anniversario, es. «1 anno con noi». Vuoto usa l’intestazione sopra o il testo integrato."
+  },
+  "new_hire_label": {
+   "label": "Intestazione per i nuovi",
+   "help": "Vuoto: «Benvenuti nel team» nella lingua dello schermo."
+  },
+  "list_title": {
+   "label": "Intestazione dell’elenco",
+   "help": "Sopra l’elenco del periodo. Vuoto: «Chi festeggia» nella lingua dello schermo. Un solo - la nasconde."
+  },
+  "empty_title": {
+   "label": "Testo quando non c’è nessuno",
+   "help": "Vuoto: «Nessuna festa al momento» nella lingua dello schermo."
+  },
+  "empty_text": {
+   "label": "Testo piccolo quando non c’è nessuno",
+   "help": "Vuoto: una frase cordiale nella lingua dello schermo. Un solo - lo nasconde."
+  },
+  "next_label": {
+   "label": "Intestazione della prossima festa (quando non c’è nessuno)",
+   "help": "Se non c’è nessuno, sotto appare la prossima persona entro un anno. Vuoto: «Prossimamente». Un solo - la nasconde."
+  },
+  "people": {
+   "label": "Origine dati delle persone (facoltativa)",
+   "help": "Un Foglio Google, un CSV o una tabella manuale con una riga per persona. Se ha la colonna del nome, sostituisce le persone di esempio."
+  },
+  "name_col": {
+   "label": "Colonna del nome"
+  },
+  "type_col": {
+   "label": "Colonna del tipo",
+   "help": "Facoltativa: Compleanno, Anniversario di lavoro o Nuovo arrivo (anche in inglese). Senza, ogni riga dà un compleanno dalla data e un anniversario o benvenuto dalla data di inizio."
+  },
+  "date_col": {
+   "label": "Colonna compleanno / data",
+   "help": "MM-GG o AAAA-MM-GG. L’anno di nascita non viene mai mostrato."
+  },
+  "start_col": {
+   "label": "Colonna data di inizio",
+   "help": "AAAA-MM-GG, il primo giorno di lavoro. Dà anniversari e benvenuti."
+  },
+  "title_col": {
+   "label": "Colonna del ruolo"
+  },
+  "team_col": {
+   "label": "Colonna del team"
+  },
+  "sample": {
+   "label": "Persone (senza origine dati collegata)",
+   "help": "Una persona per riga: Nome | Tipo | Data | Inizio | Ruolo | Team. Le date possono anche essere today, today+3 o today+3-5y (5 anni fa).",
+   "default": "Priya Raman | Compleanno | today | | Product designer senior | Design\nMarcus Okafor | Anniversario di lavoro | | today+1-10y | Responsabile logistica | Operazioni\nLena Fischer | Nuovo arrivo | | today-2 | Data engineer | Piattaforma\nGrace Mensah | Anniversario di lavoro | | today+2-1y | Office manager | Persone e spazi"
+  },
+  "timezone": {
+   "label": "Fuso orario",
+   "help": "Decide quando inizia «oggi». Vuoto usa l’orologio dello schermo."
+  },
+  "locale": {
+   "label": "Lingua",
+   "help": "La lingua delle intestazioni integrate, di Oggi/Domani e delle date, es. it-IT o it-CH. Vuoto usa la lingua dello schermo."
+  }
+ }
+}

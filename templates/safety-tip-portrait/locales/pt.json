@@ -1,0 +1,59 @@
+{
+  "name": "Dica de segurança (retrato)",
+  "description": "Uma dica de segurança bem visível para fábricas, armazéns, cozinhas e obras: um ícone de alerta num painel amarelo, a regra em letras grandes, até quatro passos e para quem ligar. Layout retrato 9:16.",
+  "params": {
+    "icon": {
+      "label": "Ícone",
+      "help": "Um PNG ou SVG quadrado com fundo transparente, escuro o bastante para ler no painel de destaque."
+    },
+    "panel_title": {
+      "label": "Título do painel",
+      "default": "SEGURANÇA"
+    },
+    "tip_number": {
+      "label": "Número da dica",
+      "help": "Abaixo do título do painel, por exemplo “DICA 14 DE 52”. Deixe vazio para ocultar.",
+      "default": "DICA 14 DE 52"
+    },
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "Para quem ou para onde é.",
+      "default": "ESTA SEMANA · ARMAZÉM E DOCA DE CARGA"
+    },
+    "headline": {
+      "label": "Dica",
+      "help": "A regra em poucas palavras.",
+      "default": "Use as pernas, não as costas"
+    },
+    "steps": {
+      "label": "Como fazer",
+      "help": "Até quatro linhas curtas; Enter começa uma nova linha. Cada uma com menos de 45 caracteres.",
+      "default": "1. Fique perto, pés na largura dos ombros\n2. Dobre os joelhos, costas retas\n3. Segure firme e levante sem girar\n4. Mais de 23 kg? Use um carrinho ou peça ajuda"
+    },
+    "footer": {
+      "label": "Rodapé",
+      "help": "Para quem ligar ou onde relatar.",
+      "default": "Relate todo quase acidente ao seu supervisor ou ligue para a segurança, ramal 2240"
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desligado oculta o logotipo e o espaço dele fica vazio."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG com fundo transparente, em cor clara para o fundo escuro padrão."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "O painel atrás do ícone, o título pequeno e a linha."
+    },
+    "background": {
+      "label": "Cor de fundo",
+      "help": "A página. O título e o número do painel também são desenhados nesta cor."
+    },
+    "text_color": {
+      "label": "Cor do texto",
+      "help": "A dica, os passos e o rodapé."
+    }
+  }
+}

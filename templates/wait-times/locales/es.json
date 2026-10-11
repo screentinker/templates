@@ -1,0 +1,146 @@
+{
+  "name": "Tablero de tiempos de espera",
+  "description": "Tiempos de espera estimados para un centro de salud, urgencias, farmacia o ventanilla: cada servicio con su espera en minutos y el estado Abierto, Ocupado o Cerrado en colores claros, la hora de actualización, un aviso tranquilizador y un recordatorio de registro. El personal actualiza una hoja de Google o una tabla manual desde el móvil, o escribe la lista.",
+  "params": {
+    "title": {
+      "label": "Título",
+      "default": "Clínica Comunitaria Northwind"
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "default": "Tiempos de espera estimados",
+      "help": "Una línea bajo el título. Déjelo vacío para ocultarla."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Junto al título. Un logotipo blanco o transparente queda bien sobre la cabecera de color."
+    },
+    "services": {
+      "label": "Servicios",
+      "help": "Uno por línea: Servicio | Espera en minutos | Estado | Nota. El estado es Abierto, Ocupado o Cerrado (vacío = según la espera). Se usa sin fuente de datos.",
+      "default": "Urgencias | 45 | Ocupado | Planta baja · Siga la línea roja\nMedicina general | 20 | | Planta baja · Salas 1–6\nFarmacia | 10 | | Recetas · Mostrador 3\nAnálisis | 15 | | Planta 1 · Sin cita\nRayos X | 55 | Ocupado | Planta 1 · Ala este\nCuras | 25 | | Planta baja · Sala 8\nVacunas | 0 | | Planta 2 · Gripe, viajes\nFisioterapia | | Cerrado | Hoy solo con cita"
+    },
+    "waits": {
+      "label": "Fuente de datos de esperas (opcional)",
+      "help": "Una hoja de Google, CSV o tabla manual con una fila por servicio. Si se elige, sustituye a los servicios escritos arriba."
+    },
+    "service_col": {
+      "label": "Columna de servicio",
+      "default": "Servicio",
+      "help": "El encabezado en su hoja. Si no existe, se lee «Service» y luego la primera columna."
+    },
+    "wait_col": {
+      "label": "Columna de espera",
+      "default": "Espera",
+      "help": "Minutos como número (25), rango (15-20) o h:mm (1:30). Otro texto se muestra tal cual. Si no existe, se lee «Wait»."
+    },
+    "status_col": {
+      "label": "Columna de estado",
+      "default": "Estado",
+      "help": "Abierto, Ocupado o Cerrado. Una celda vacía se deduce de la espera. Si no existe, se lee «Status»."
+    },
+    "note_col": {
+      "label": "Columna de nota",
+      "default": "Nota",
+      "help": "Línea pequeña opcional bajo el servicio: adónde ir o cuándo reabre. Si no existe, se lee «Note»."
+    },
+    "notice": {
+      "label": "Línea de aviso",
+      "default": "Los tiempos son aproximados. Atendemos por urgencia, no por orden de llegada: si se encuentra peor mientras espera, avise enseguida al personal.",
+      "help": "Un aviso tranquilizador en la parte inferior. Déjelo vacío para ocultarlo."
+    },
+    "checkin": {
+      "label": "Nota de registro",
+      "default": "Regístrese en recepción",
+      "help": "Recordatorio destacado en el pie. Déjelo vacío para ocultarlo."
+    },
+    "order": {
+      "label": "Orden",
+      "help": "Al ordenar, los servicios cerrados van siempre al final.",
+      "options": {
+        "listed": "Como en la lista",
+        "shortest": "Menor espera primero",
+        "longest": "Mayor espera primero"
+      }
+    },
+    "busy_minutes": {
+      "label": "Ocupado desde (minutos)",
+      "help": "Un servicio sin estado se muestra como Ocupado cuando su espera llega a este valor."
+    },
+    "open_label": {
+      "label": "Texto: abierto",
+      "help": "Vacío = la palabra integrada en el idioma de la pantalla («Abierto»)."
+    },
+    "busy_label": {
+      "label": "Texto: ocupado",
+      "help": "Vacío = la palabra integrada en el idioma de la pantalla («Ocupado»)."
+    },
+    "closed_label": {
+      "label": "Texto: cerrado",
+      "help": "Vacío = la palabra integrada en el idioma de la pantalla («Cerrado»)."
+    },
+    "nowait_label": {
+      "label": "Texto: sin espera",
+      "help": "Se muestra en lugar de la hora cuando la espera es 0. Vacío = el texto integrado en el idioma de la pantalla («Sin espera»)."
+    },
+    "updated_label": {
+      "label": "Texto: actualizado",
+      "help": "Antes de la hora; ponga {time} donde deba ir la hora. Vacío = el texto integrado en el idioma de la pantalla («Actualizado: {time}»)."
+    },
+    "empty_label": {
+      "label": "Texto cuando no hay datos",
+      "help": "Se muestra mientras la fuente de datos aún no tiene filas. Vacío = la frase integrada en el idioma de la pantalla."
+    },
+    "show_updated": {
+      "label": "Mostrar la hora de actualización"
+    },
+    "stale_minutes": {
+      "label": "Recordar si las cifras no cambian en (minutos)",
+      "help": "Con una fuente de datos, la hora de actualización se vuelve ámbar si ninguna cifra cambia en ese tiempo (aunque se sincronice), como aviso al personal. 0 = desactivado."
+    },
+    "show_meter": {
+      "label": "Mostrar una barra de espera en cada servicio"
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "light": "Claro",
+        "dark": "Oscuro"
+      }
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "La cabecera y la nota de registro."
+    },
+    "open_color": {
+      "label": "Color de abierto"
+    },
+    "busy_color": {
+      "label": "Color de ocupado"
+    },
+    "closed_color": {
+      "label": "Color de cerrado"
+    },
+    "clock_format": {
+      "label": "Reloj",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas",
+        "auto": "Según el idioma",
+        "off": "Ocultar el reloj"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria",
+      "help": "Vacío = el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Los textos, horas y números de la pantalla, p. ej. es o es-MX. Vacío = el idioma de la pantalla."
+    },
+    "page_seconds": {
+      "label": "Segundos por página",
+      "help": "Solo se usa cuando hay demasiados servicios para una pantalla legible."
+    }
+  }
+}

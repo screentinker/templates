@@ -1,0 +1,93 @@
+{
+  "name": "Promo nouveauté",
+  "description": "Un écran calme et éditorial pour un nouveau produit : un nom en caractères à empattements, une courte description, le prix et l’emplacement, le produit sur un panneau teinté avec une pastille « Nouveau » et un QR code facultatif vers sa page.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à peu près carré. Le badge fourni est provisoire ; remplacez-le par le vôtre."
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivez si vous n’avez pas de logo (sinon, un logo vide affiche un cadre en pointillés)."
+    },
+    "brand": {
+      "label": "Nom du magasin",
+      "help": "Affiché à côté du logo. Laissez vide si votre logo le contient déjà."
+    },
+    "eyebrow": {
+      "label": "Surtitre",
+      "default": "NOUVEAUTÉ"
+    },
+    "sticker": {
+      "label": "Pastille ronde",
+      "help": "Un mot court. Laissez vide pour un simple point.",
+      "default": "NEUF"
+    },
+    "headline": {
+      "label": "Nom du produit",
+      "help": "Trois lignes possibles ; 34 caractères tiennent toujours.",
+      "default": "Le cabas Harbour en toile cirée"
+    },
+    "description": {
+      "label": "Description",
+      "default": "Toile cirée, anses en cuir tanné végétal et poche intérieure zippée. En encre, olive et sable."
+    },
+    "price": {
+      "label": "Prix",
+      "help": "Tel qu’il doit apparaître, p. ex. 148 € ou 1 299,00 €. Laissez vide pour le masquer.",
+      "default": "148 €"
+    },
+    "where": {
+      "label": "Où le trouver",
+      "default": "EN MAGASIN · NIVEAU 1"
+    },
+    "product_image": {
+      "label": "Image du produit",
+      "help": "Idéalement un PNG ou SVG détouré sur fond transparent. Elle est ajustée, jamais rognée."
+    },
+    "show_image": {
+      "label": "Afficher l’image du produit",
+      "help": "Désactivez pour laisser le panneau sans image (sinon, une image vide affiche un cadre en pointillés)."
+    },
+    "show_qr": {
+      "label": "Afficher le QR code",
+      "help": "Désactivez si vous n’avez pas de lien : le code, sa carte et sa légende disparaissent."
+    },
+    "qr_url": {
+      "label": "Lien du QR code",
+      "help": "La page qu’ouvre le code. Un lien court se scanne de plus loin."
+    },
+    "qr_caption": {
+      "label": "Légende du QR code",
+      "default": "Tous les coloris"
+    },
+    "small_print": {
+      "label": "Mentions légales",
+      "default": "Dans la limite des stocks. Les couleurs peuvent différer de l’image."
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Le surtitre, la pastille et les filets."
+    },
+    "panel": {
+      "label": "Couleur du panneau de l’image"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "sticker_text": {
+      "label": "Couleur du texte de la pastille"
+    },
+    "background_image": {
+      "label": "Photo de fond",
+      "help": "Facultatif. Une photo derrière tout, assombrie par le réglage ci-dessous."
+    },
+    "background_dim": {
+      "label": "Assombrir la photo",
+      "help": "0 = la photo telle quelle, 0,9 = presque noire. Utilisé seulement avec une photo de fond."
+    }
+  }
+}

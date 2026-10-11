@@ -1,0 +1,11 @@
+Customer testimonial — bundled media
+
+logo.svg
+  Placeholder logo for the fictional "Northwind", drawn for this template. Original work,
+  MIT like the rest of this folder (see LICENSE). Replace it with your own logo in the settings.
+
+stars/*.svg
+  Star-rating rows (5, 4½, 4 and 3 stars, and an empty one for "Hide the stars"), drawn for
+  this template. Original work, MIT.
+
+The slide uses ScreenTinker's own bundled fonts (Bitter, Archivo, Inter); none are shipped here.

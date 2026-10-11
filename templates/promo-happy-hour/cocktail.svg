@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <!-- A coupe cocktail with an orange wheel, drawn for this template. Original work, MIT. -->
+  <defs>
+    <linearGradient id="drink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB547"/>
+      <stop offset="1" stop-color="#FF5E62"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="300" cy="566" rx="160" ry="14" fill="#000000" fill-opacity="0.35"/>
+  <!-- sparkles -->
+  <path d="M110 120 L118 145 L143 153 L118 161 L110 186 L102 161 L77 153 L102 145 Z" fill="#FFD27A"/>
+  <path d="M500 230 L505 246 L521 251 L505 256 L500 272 L495 256 L479 251 L495 246 Z" fill="#FFD27A" fill-opacity="0.8"/>
+  <path d="M470 90 L474 102 L486 106 L474 110 L470 122 L466 110 L454 106 L466 102 Z" fill="#FFFFFF" fill-opacity="0.7"/>
+  <!-- orange wheel -->
+  <circle cx="420" cy="205" r="72" fill="#FF9A2E"/>
+  <circle cx="420" cy="205" r="60" fill="#FFC56B"/>
+  <g stroke="#FF9A2E" stroke-width="6">
+    <path d="M420 147 L420 263"/><path d="M362 205 L478 205"/>
+    <path d="M379 164 L461 246"/><path d="M461 164 L379 246"/>
+  </g>
+  <circle cx="420" cy="205" r="9" fill="#FFF1D6"/>
+  <!-- liquid -->
+  <path d="M140 250 L460 250 C450 340 380 380 300 380 C220 380 150 340 140 250 Z" fill="url(#drink)"/>
+  <path d="M140 250 L460 250" stroke="#FFE2A6" stroke-width="8" stroke-linecap="round"/>
+  <!-- glass -->
+  <path d="M120 220 L480 220 C480 340 400 392 300 392 C200 392 120 340 120 220 Z" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M292 392 L292 520 L308 520 L308 392 Z" fill="#FFFFFF" fill-opacity="0.85"/>
+  <ellipse cx="300" cy="540" rx="110" ry="18" fill="#FFFFFF" fill-opacity="0.85"/>
+  <path d="M160 260 C168 310 196 340 230 356" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="9" stroke-linecap="round"/>
+</svg>

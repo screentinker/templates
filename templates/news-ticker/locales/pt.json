@@ -1,0 +1,55 @@
+{
+  "name": "Letreiro de notícias",
+  "description": "Manchetes em destaque que se alternam e um letreiro com rolagem suave. Digite-as ou conecte um feed RSS, uma planilha Google, um CSV ou uma tabela. Em tela cheia mostra os dois; numa faixa fina, um letreiro; numa zona alta, um letreiro vertical. A tela não baixa nada, então funciona offline.",
+  "params": {
+    "title": {
+      "label": "Título",
+      "default": "Últimas notícias"
+    },
+    "feed": {
+      "label": "Fonte de dados das manchetes (opcional)",
+      "help": "Um feed RSS/Atom, planilha Google, CSV ou tabela. Quando tiver manchetes, elas substituem a lista digitada; até lá, a lista é mostrada."
+    },
+    "column": {
+      "label": "Coluna das manchetes (planilha, CSV ou tabela)",
+      "help": "O cabeçalho da coluna com as manchetes. Se nenhuma coluna tiver esse nome, a primeira é usada. Ignorado em feeds RSS.",
+      "default": "Manchete"
+    },
+    "headlines": {
+      "label": "Manchetes (sem fonte de dados)",
+      "help": "Uma manchete por linha. Linhas em branco são ignoradas. Também aparecem enquanto a fonte de dados conectada estiver vazia.",
+      "default": "Northwind inaugura novo estúdio à beira-rio em 6 de outubro\nReunião trimestral muda para o átrio – portas às 16:30\nParabéns à equipe de suporte: 98% de satisfação\nEstacionamento leste fechado para obras até sexta\nNovo bicicletário atrás do prédio B, com recarga para e-bikes\nLunch & learn na quinta: acessibilidade no design do dia a dia"
+    },
+    "max_items": {
+      "label": "Mostrar no máximo",
+      "help": "Manchetes além deste número não são mostradas."
+    },
+    "speed": {
+      "label": "Velocidade do letreiro",
+      "help": "Pixels por segundo numa tela de 1080 pixels de altura. Acompanha o tamanho da tela."
+    },
+    "rotate_seconds": {
+      "label": "Segundos por manchete em destaque"
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "show_clock": {
+      "label": "Mostrar o relógio"
+    },
+    "timezone": {
+      "label": "Fuso horário do relógio",
+      "help": "Deixe vazio para usar o relógio da própria tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma da data e dos textos embutidos, por exemplo pt ou en-GB. Deixe vazio para usar o idioma da tela."
+    }
+  }
+}

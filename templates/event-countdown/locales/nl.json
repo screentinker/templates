@@ -1,0 +1,66 @@
+{
+  "name": "Evenementcountdown",
+  "description": "Een aftelscherm voor een congres, opening of productlancering: de naam van het evenement, een slogan, datum en locatie, een grote live countdown die op het moment zelf overschakelt naar uw eigen tekst, en een optionele QR-code voor tickets of aanmelding.",
+  "params": {
+    "event_name": {
+      "label": "Naam van het evenement"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "Twee dagen talks, workshops en demo's tot laat, door de mensen die de toekomst bouwen."
+    },
+    "when_where": {
+      "label": "Regel met datum en locatie",
+      "default": "18–19 MAART 2027  ·  RIVERSIDE HALL, DUBLIN"
+    },
+    "target": {
+      "label": "Aftellen tot",
+      "help": "ISO 8601 met tijdzoneverschil, bijv. 2027-03-18T09:00:00+01:00 of 2027-03-18T09:00:00-05:00. Zonder verschil geldt de tijdzone van de server."
+    },
+    "countdown_label": {
+      "label": "Label boven de countdown",
+      "default": "DEUREN OPEN OVER"
+    },
+    "done_text": {
+      "label": "Tekst na afloop",
+      "default": "Het is begonnen"
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de eenheden van de countdown, bijv. nl of nl-BE (leeg = taal van het scherm). Oudere ScreenTinker-servers tonen altijd d h m s."
+    },
+    "show_qr": {
+      "label": "Ticket-QR-code tonen",
+      "help": "Uitzetten als u geen link hebt: de QR-code, de kaart en het bijschrift verdwijnen."
+    },
+    "qr_url": {
+      "label": "Ticket- / aanmeldlink",
+      "help": "Het adres dat de QR-code opent. Houd het kort: een korte link geeft een code die van verder weg scant."
+    },
+    "qr_caption": {
+      "label": "QR-bijschrift",
+      "default": "Scan voor tickets"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een vrijwel vierkante PNG of SVG met transparante achtergrond. Linksboven."
+    },
+    "background_image": {
+      "label": "Achtergrondfoto",
+      "help": "Optioneel. Een sfeer- of locatiefoto achter alles; die wordt donkerder gemaakt met de instelling hieronder."
+    },
+    "background_dim": {
+      "label": "Foto donkerder maken",
+      "help": "0 = de foto zoals hij is, 0,9 = bijna zwart. Alleen met een achtergrondfoto."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "name": "活动日程",
+  "description": "适用于酒店、会议场馆、校园和社区中心的活动日程牌：按天列出接下来的活动，今天（或今晚）大字显示，之后几天较小，附时间、会场、主讲人和方向箭头。正在进行的场次会高亮，已结束的自动消失，日程较长时自动翻页。可直接输入日程，或连接日历（iCal）、Google 表格或手动表格。",
+  "params": {
+    "title": {
+      "label": "标题",
+      "help": "大标题。留空则隐藏。",
+      "default": "活动预告"
+    },
+    "subtitle": {
+      "label": "副标题",
+      "help": "标题下方的一行，例如场馆或活动名称。留空则隐藏。",
+      "default": "Harbourview 酒店及会议中心"
+    },
+    "footer": {
+      "label": "页脚",
+      "help": "底部的小字。留空则隐藏。",
+      "default": "访客 Wi-Fi：Harbourview-Guest  ·  前台和衣帽间位于 1 层"
+    },
+    "logo": {
+      "label": "标志",
+      "help": "可选。显示在标题旁边。"
+    },
+    "agenda": {
+      "label": "日程（未连接数据源时使用）",
+      "help": "每行一项活动：日期 | 开始 | 结束 | 标题 | 地点 | 主持人 | 箭头。日期写作 2026-10-12，或 +0 表示今天、+1 表示明天。时间如 09:30 或 7pm。详见 README。",
+      "default": "+0|09:30|10:30|开幕主旨演讲：为下一个十亿用户而建|大宴会厅|Maya Okafor|↑\n+0|10:45|11:45|圆桌论坛：商业街之后的零售|Harbour Suite|Tomás Lindqvist|→\n+0|13:00|14:00|交流午餐|露台餐厅||↓\n+0|19:00|23:00|Harbour Rotary Club 慈善晚宴|大宴会厅|Rotary Club|↑\n+1|08:30|09:00|早餐简报会|大堂酒廊|活动团队|←\n+1|09:00|10:00|主旨演讲：实时物流|大宴会厅|Dr Amara Nwosu|↑\n+1|18:30|22:00|峰会晚宴|大宴会厅|Northwind Group|↑\n+2|09:00|12:00|领导力工作坊|3 号工作室，2 层|Kofi Mensah|↗"
+    },
+    "events": {
+      "label": "活动数据源（可选）",
+      "help": "日历（iCal），或包含下列列的 Google 表格、CSV 或手动表格。连接后将替代上面输入的日程。"
+    },
+    "date_col": {
+      "label": "表格列：日期",
+      "default": "日期"
+    },
+    "start_col": {
+      "label": "表格列：开始时间",
+      "default": "开始"
+    },
+    "end_col": {
+      "label": "表格列：结束时间",
+      "default": "结束"
+    },
+    "title_col": {
+      "label": "表格列：标题",
+      "default": "标题"
+    },
+    "location_col": {
+      "label": "表格列：地点",
+      "default": "地点"
+    },
+    "host_col": {
+      "label": "表格列：主持人或主讲人",
+      "default": "主持人"
+    },
+    "arrow_col": {
+      "label": "表格列：方向箭头",
+      "help": "可选。箭头（← ↑ → ↓ ↖ ↗ ↘ ↙）或英文单词：left、right、ahead、up、down、up-left、up-right…",
+      "default": "箭头"
+    },
+    "days_ahead": {
+      "label": "显示天数",
+      "help": "今天及之后的几天。1 表示只显示今天。"
+    },
+    "rows_per_page": {
+      "label": "每页最多活动数",
+      "help": "每列。若无法以清晰字号放下则显示更少，其余翻页显示。"
+    },
+    "page_seconds": {
+      "label": "每页秒数",
+      "help": "仅在日程一屏放不下时使用。"
+    },
+    "show_tonight": {
+      "label": "晚间显示“今晚”",
+      "help": "关闭后全天显示“今天”。"
+    },
+    "tonight_hour": {
+      "label": "“今晚”开始时间（时）",
+      "help": "从这个钟点起，第一天的标题显示“今晚”而不是“今天”。"
+    },
+    "today_label": {
+      "label": "文字：今天",
+      "help": "留空则使用日程牌语言的内置文字。"
+    },
+    "tonight_label": {
+      "label": "文字：今晚",
+      "help": "留空则使用日程牌语言的内置文字。"
+    },
+    "tomorrow_label": {
+      "label": "文字：明天",
+      "help": "留空则使用日程牌语言的内置文字。"
+    },
+    "now_label": {
+      "label": "文字：进行中（当前场次）",
+      "help": "留空则使用日程牌语言的内置文字。"
+    },
+    "show_next": {
+      "label": "标记今天的下一场",
+      "help": "在尚未开始的下一场上显示“下一场”标签和“25 分钟后”。"
+    },
+    "next_label": {
+      "label": "文字：下一场（今天的下一场）",
+      "help": "留空则使用日程牌语言的内置文字。"
+    },
+    "all_day_label": {
+      "label": "文字：全天",
+      "help": "留空则使用日程牌语言的内置文字。"
+    },
+    "empty_label": {
+      "label": "无安排时的文字",
+      "help": "留空则使用日程牌语言的内置文字。"
+    },
+    "clock_format": {
+      "label": "时间格式",
+      "options": {
+        "auto": "按语言默认",
+        "24": "24 小时制",
+        "12": "12 小时制"
+      }
+    },
+    "show_clock": {
+      "label": "显示时钟和日期"
+    },
+    "timezone": {
+      "label": "时区",
+      "help": "场馆所在时区。留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "日程牌上的文字、星期、日期和时间，例如 zh-CN 或 en-US。留空则使用屏幕语言。日历的日期和时间也按此语言显示；日历请使用场馆所在时区。"
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "background": {
+      "label": "背景颜色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    }
+  }
+}

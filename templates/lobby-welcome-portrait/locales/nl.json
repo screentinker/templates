@@ -1,0 +1,50 @@
+{
+  "name": "Welkom in de lobby (staand)",
+  "description": "Een rustig welkomstscherm voor receptie of lobby: uw logo, een kop en een regel toelichting, met een live klok en datum in de tijdzone en taal van het gebouw. Staande 9:16-indeling.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Het best een PNG of SVG met transparante achtergrond. Bovenaan getoond."
+    },
+    "eyebrow": {
+      "label": "Kleine kop",
+      "default": "FIJN DAT U ER BENT"
+    },
+    "headline": {
+      "label": "Kop",
+      "default": "Welkom bij Northwind Studio"
+    },
+    "subline": {
+      "label": "Detailregel",
+      "default": "Meld u aan bij de receptie – uw gastheer komt zo naar u toe."
+    },
+    "footer": {
+      "label": "Voettekst",
+      "default": "Gasten-wifi: Northwind-Guest"
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "timezone": {
+      "label": "Tijdzone van de klok",
+      "help": "Leeg laten om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de datum (weekdag en maand), bijv. nl of nl-BE. Leeg laten voor de taal van het scherm."
+    },
+    "clock_format": {
+      "label": "Klokweergave",
+      "options": {
+        "24": "24-uurs",
+        "12": "12-uurs"
+      }
+    }
+  }
+}

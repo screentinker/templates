@@ -1,0 +1,81 @@
+{
+  "name": "Cartel de sala de reuniones",
+  "description": "Un cartel para la puerta de una sala de reuniones: una gran franja verde LIBRE o roja OCUPADA, la reunión actual y la siguiente, y la agenda del día, desde cualquier fuente de datos de Calendario (iCal). El modo privado muestra «Reservada» en lugar de los títulos. Pensado para una pantalla vertical junto a la puerta; también funciona en horizontal o como franja.",
+  "params": {
+    "calendar": {
+      "label": "Calendario de la sala (fuente de datos Calendario / iCal)",
+      "help": "Una fuente de datos de Calendario con el feed iCal de la sala (Google, Outlook/Exchange, cualquier URL .ics). Sin ella se muestra un horario de ejemplo."
+    },
+    "room_name": {
+      "label": "Nombre de la sala",
+      "default": "Sala de juntas"
+    },
+    "available_label": {
+      "label": "Texto de «libre»",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del cartel."
+    },
+    "busy_label": {
+      "label": "Texto de «ocupada»",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del cartel."
+    },
+    "hide_titles": {
+      "label": "Privacidad: ocultar títulos y organizadores"
+    },
+    "reserved_label": {
+      "label": "Texto en lugar de un título oculto",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del cartel."
+    },
+    "show_organizer": {
+      "label": "Mostrar organizadores"
+    },
+    "now_label": {
+      "label": "Encabezado: reunión actual",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del cartel."
+    },
+    "next_label": {
+      "label": "Encabezado: siguiente reunión",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del cartel."
+    },
+    "agenda_label": {
+      "label": "Encabezado: agenda de hoy",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del cartel."
+    },
+    "upcoming_label": {
+      "label": "Encabezado: reservas posteriores (cuando no queda nada hoy)",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del cartel."
+    },
+    "empty_label": {
+      "label": "Texto cuando no hay reservas",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del cartel."
+    },
+    "available_color": {
+      "label": "Color de «libre»"
+    },
+    "busy_color": {
+      "label": "Color de «ocupada»"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "clock_format": {
+      "label": "Reloj",
+      "options": {
+        "auto": "Según el idioma",
+        "24": "24 horas",
+        "12": "12 horas",
+        "off": "Ocultar el reloj"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria del reloj",
+      "help": "Déjelo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palabras, fechas y horas del cartel, p. ej. es-ES o es-MX. Vacío = idioma de la pantalla. Se aplica también al calendario; use en él la misma zona horaria que el reloj."
+    }
+  }
+}

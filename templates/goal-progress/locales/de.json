@@ -1,0 +1,152 @@
+{
+  "name": "Spendenziel-Fortschritt",
+  "description": "Zeigt, wie nah eine Spendenaktion oder ein Verkaufsziel ist: Thermometer, Balken oder Ring mit Betrag, Prozent, Etappen, Zahl der Unterstützer und Countdown zur Frist. Konfetti, wenn das Ziel erreicht ist. Summe eintippen oder eine Google-Tabelle, Formularantworten oder eine REST-API verbinden.",
+  "params": {
+    "headline": {
+      "label": "Überschrift",
+      "help": "Die große Zeile. Bis zu drei Zeilen auf dem Bildschirm.",
+      "default": "Füllt die Regale der Riverside-Tafel"
+    },
+    "kicker": {
+      "label": "Name der Aktion",
+      "help": "Kleine Zeile über der Überschrift. Leer lassen zum Ausblenden.",
+      "default": "Northwind Community Fund · Winterspendenaktion"
+    },
+    "thanks": {
+      "label": "Dankeszeile",
+      "help": "Am unteren Rand. Leer lassen zum Ausblenden.",
+      "default": "Jede Spende bleibt in Riverside. Danke, dass Sie Ihren Nachbarn zur Seite stehen."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Über der Überschrift."
+    },
+    "style": {
+      "label": "Anzeige",
+      "help": "Ein breiter Streifen nutzt immer den Balken.",
+      "options": {
+        "thermometer": "Thermometer",
+        "bar": "Fortschrittsbalken",
+        "ring": "Ring"
+      }
+    },
+    "raised": {
+      "label": "Bisher gesammelt",
+      "help": "Gilt ohne verbundene Datenquelle oder wenn sie keine Betragsspalte hat."
+    },
+    "target": {
+      "label": "Ziel"
+    },
+    "supporters": {
+      "label": "Zahl der Unterstützer",
+      "help": "0 blendet sie aus. Bei einem Spendenprotokoll als Datenquelle werden die Zeilen gezählt."
+    },
+    "currency": {
+      "label": "Währungscode",
+      "help": "Drei Buchstaben: EUR, CHF, USD, GBP, JPY … Leer lassen für reine Zahlen (Stunden, Bücher, Anmeldungen).",
+      "default": "EUR"
+    },
+    "unit": {
+      "label": "Einheit (ohne Währung)",
+      "help": "Steht hinter reinen Zahlen, z. B. „Bücher“ oder „km“. Wird bei gesetzter Währung ignoriert."
+    },
+    "show_cents": {
+      "label": "Cent / Nachkommastellen zeigen"
+    },
+    "milestones": {
+      "label": "Etappen",
+      "help": "Eine pro Zeile: Betrag | Bezeichnung. Bis zu 10, zwischen 0 und dem Ziel. Leer lassen für keine.",
+      "default": "10000 | Neue Regale\n25000 | Kühlzelle\n40000 | Lieferwagen"
+    },
+    "deadline": {
+      "label": "Frist",
+      "help": "Ein Datum (2026-12-24), Datum mit Uhrzeit (2026-12-24T17:00) oder month-end, quarter-end, year-end. Leer lassen, um den Countdown auszublenden."
+    },
+    "timezone": {
+      "label": "Zeitzone der Frist",
+      "help": "Leer lassen für die Uhr des Bildschirms."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wörter, Zahlen und Daten auf dem Bildschirm, zum Beispiel de-DE, de-AT oder de-CH. Leer lassen für die Sprache des Bildschirms."
+    },
+    "goal_text": {
+      "label": "Text unter dem Betrag",
+      "help": "{target} wird durch das Ziel ersetzt. Leer: eingebauter Text in der Sprache des Bildschirms. - eingeben zum Ausblenden."
+    },
+    "percent_label": {
+      "label": "Beschriftung: Prozent",
+      "help": "Leer: eingebauter Text in der Sprache des Bildschirms. - eingeben zum Ausblenden."
+    },
+    "supporters_label": {
+      "label": "Beschriftung: Unterstützer",
+      "help": "Leer: eingebauter Text in der Sprache des Bildschirms. - eingeben zum Ausblenden."
+    },
+    "countdown_label": {
+      "label": "Beschriftung: Countdown",
+      "help": "Leer: eingebauter Text in der Sprache des Bildschirms. - eingeben zum Ausblenden."
+    },
+    "ended_label": {
+      "label": "Text nach Ablauf der Frist",
+      "help": "Leer: eingebauter Text in der Sprache des Bildschirms. - eingeben zum Ausblenden."
+    },
+    "next_text": {
+      "label": "Zeile zur nächsten Etappe",
+      "help": "{milestone}, {amount} und {remaining} werden eingesetzt. Leer: eingebauter Text in der Sprache des Bildschirms. - eingeben zum Ausblenden."
+    },
+    "celebrate_text": {
+      "label": "Text bei erreichtem Ziel",
+      "help": "Leer: eingebauter Text in der Sprache des Bildschirms. - eingeben zum Ausblenden."
+    },
+    "source": {
+      "label": "Datenquelle für die Summe (optional)",
+      "help": "Eine Google-Tabelle, Formularantworten, CSV, REST-API oder manuelle Tabelle. Welche Aufbauten sie versteht, steht im README."
+    },
+    "amount_col": {
+      "label": "Spalte oder Feld für den Betrag",
+      "help": "Groß-/Kleinschreibung und Satzzeichen sind egal. Ein Spendenprotokoll kann seine Betragsspalte nutzen."
+    },
+    "amount_mode": {
+      "label": "So wird der Betrag gelesen",
+      "options": {
+        "auto": "Automatisch (eine Zeile = Summe; viele Zeilen = addieren)",
+        "sum": "Alle Zeilen addieren (Spendenprotokoll)",
+        "last": "Letzte Zeile (laufende Summe)",
+        "first": "Erste Zeile"
+      }
+    },
+    "target_col": {
+      "label": "Spalte oder Feld für das Ziel (optional)"
+    },
+    "supporters_col": {
+      "label": "Spalte oder Feld für Unterstützer (optional)"
+    },
+    "font": {
+      "label": "Schrift der Überschrift",
+      "options": {
+        "archivo": "Archivo (Display)",
+        "bitter": "Bitter (Serifen)",
+        "oswald": "Oswald (schmal)",
+        "inter": "Inter (klar)"
+      }
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Oberes Ende der Füllung, der Betrag und erreichte Etappen."
+    },
+    "accent2": {
+      "label": "Zweite Füllfarbe",
+      "help": "Die Füllung geht von dieser Farbe in die Akzentfarbe über."
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "animate": {
+      "label": "Animieren (Füllen beim Laden, Konfetti am Ziel)",
+      "help": "Auf sehr langsamen Playern ausschalten."
+    }
+  }
+}

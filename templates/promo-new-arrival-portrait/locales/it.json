@@ -1,0 +1,93 @@
+{
+  "name": "Promo novità (verticale)",
+  "description": "Verticale (9:16). Uno schermo calmo ed editoriale per un nuovo prodotto: il nome in un carattere graziato, una breve descrizione, il prezzo e dove trovarlo, il prodotto su un pannello colorato con un bollino «Nuovo» e un codice QR facoltativo alla sua pagina.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG più o meno quadrato. Il badge incluso è un segnaposto: sostituiscilo con il tuo."
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo (altrimenti un logo vuoto mostra un riquadro tratteggiato)."
+    },
+    "brand": {
+      "label": "Nome del negozio",
+      "help": "Accanto al logo. Lascia vuoto se il logo contiene già il nome."
+    },
+    "eyebrow": {
+      "label": "Occhiello",
+      "default": "NUOVO ARRIVO"
+    },
+    "sticker": {
+      "label": "Bollino rotondo",
+      "help": "Una parola breve. Lascia vuoto per un semplice pallino.",
+      "default": "NUOVO"
+    },
+    "headline": {
+      "label": "Nome del prodotto",
+      "help": "Spazio per tre righe; 34 caratteri entrano sempre.",
+      "default": "Tote Harbour in tela cerata"
+    },
+    "description": {
+      "label": "Descrizione",
+      "default": "Tela cerata, manici in cuoio conciato al vegetale e tasca interna con zip. In inchiostro, oliva e sabbia."
+    },
+    "price": {
+      "label": "Prezzo",
+      "help": "Come deve apparire, ad es. 148 € o 1.299,00 €. Lascia vuoto per nasconderlo.",
+      "default": "148 €"
+    },
+    "where": {
+      "label": "Dove trovarlo",
+      "default": "ORA IN NEGOZIO · PIANO 1"
+    },
+    "product_image": {
+      "label": "Immagine del prodotto",
+      "help": "Meglio un PNG o SVG scontornato con sfondo trasparente. Viene adattata, mai ritagliata."
+    },
+    "show_image": {
+      "label": "Mostra l’immagine del prodotto",
+      "help": "Disattiva per lasciare il pannello senza immagine (altrimenti un’immagine vuota mostra un riquadro tratteggiato)."
+    },
+    "show_qr": {
+      "label": "Mostra il codice QR",
+      "help": "Disattiva se non hai un link: scompaiono il codice, la sua scheda e la didascalia."
+    },
+    "qr_url": {
+      "label": "Link del QR",
+      "help": "La pagina che il codice apre. I link brevi si leggono da più lontano."
+    },
+    "qr_caption": {
+      "label": "Didascalia del QR",
+      "default": "Tutti i colori"
+    },
+    "small_print": {
+      "label": "Note legali",
+      "default": "Fino a esaurimento scorte. I colori possono differire dall’immagine."
+    },
+    "accent": {
+      "label": "Colore d’accento",
+      "help": "L’occhiello, il bollino e i filetti."
+    },
+    "panel": {
+      "label": "Colore del pannello immagine"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "sticker_text": {
+      "label": "Colore del testo del bollino"
+    },
+    "background_image": {
+      "label": "Foto di sfondo",
+      "help": "Facoltativa. Una foto dietro a tutto, scurita con l’impostazione qui sotto."
+    },
+    "background_dim": {
+      "label": "Scurisci la foto",
+      "help": "0 = la foto così com’è, 0,9 = quasi nera. Usato solo con una foto di sfondo."
+    }
+  }
+}

@@ -11,6 +11,102 @@
   var SVG = 'http://www.w3.org/2000/svg';
 
   /*
+   * The words the screen writes itself, in each catalog language. The "locale" param picks the
+   * table by its primary subtag (de-CH -> de); empty means the player's own language; anything
+   * unknown falls back to English. A non-empty label/text param always wins over these.
+   */
+  var STRINGS = {
+    en: {
+      network: 'Network',
+      password: 'Password',
+      open: 'No password needed',
+      hidden: 'Scan the code to join',
+      too_long: 'This network name and password are too long for a QR code.',
+      no_ssid: 'Add your network name in the template settings to show the code.'
+    },
+    de: {
+      network: 'Netzwerk',
+      password: 'Passwort',
+      open: 'Kein Passwort nötig',
+      hidden: 'Code scannen und verbinden',
+      too_long: 'Netzwerkname und Passwort sind zu lang für einen QR-Code.',
+      no_ssid: 'Tragen Sie in den Vorlageneinstellungen den Netzwerknamen ein, um den Code anzuzeigen.'
+    },
+    es: {
+      network: 'Red',
+      password: 'Contraseña',
+      open: 'Sin contraseña',
+      hidden: 'Escanea el código para conectarte',
+      too_long: 'El nombre de la red y la contraseña son demasiado largos para un código QR.',
+      no_ssid: 'Añade el nombre de la red en los ajustes de la plantilla para mostrar el código.'
+    },
+    fr: {
+      network: 'Réseau',
+      password: 'Mot de passe',
+      open: 'Aucun mot de passe requis',
+      hidden: 'Scannez le code pour vous connecter',
+      too_long: 'Le nom du réseau et le mot de passe sont trop longs pour un code QR.',
+      no_ssid: 'Ajoutez le nom du réseau dans les réglages du modèle pour afficher le code.'
+    },
+    hi: {
+      network: 'नेटवर्क',
+      password: 'पासवर्ड',
+      open: 'पासवर्ड की ज़रूरत नहीं',
+      hidden: 'जुड़ने के लिए कोड स्कैन करें',
+      too_long: 'नेटवर्क का नाम और पासवर्ड QR कोड के लिए बहुत लंबे हैं।',
+      no_ssid: 'कोड दिखाने के लिए टेम्पलेट सेटिंग में नेटवर्क का नाम जोड़ें।'
+    },
+    it: {
+      network: 'Rete',
+      password: 'Password',
+      open: 'Nessuna password richiesta',
+      hidden: 'Inquadra il codice per connetterti',
+      too_long: 'Il nome della rete e la password sono troppo lunghi per un codice QR.',
+      no_ssid: 'Aggiungi il nome della rete nelle impostazioni del modello per mostrare il codice.'
+    },
+    ja: {
+      network: 'ネットワーク',
+      password: 'パスワード',
+      open: 'パスワード不要',
+      hidden: 'コードを読み取って接続',
+      too_long: 'ネットワーク名とパスワードが長すぎるため、QR コードにできません。',
+      no_ssid: 'コードを表示するには、テンプレート設定でネットワーク名を入力してください。'
+    },
+    nl: {
+      network: 'Netwerk',
+      password: 'Wachtwoord',
+      open: 'Geen wachtwoord nodig',
+      hidden: 'Scan de code om te verbinden',
+      too_long: 'De netwerknaam en het wachtwoord zijn te lang voor een QR-code.',
+      no_ssid: 'Vul de netwerknaam in bij de sjablooninstellingen om de code te tonen.'
+    },
+    pt: {
+      network: 'Rede',
+      password: 'Senha',
+      open: 'Não precisa de senha',
+      hidden: 'Escaneie o código para entrar',
+      too_long: 'O nome da rede e a senha são longos demais para um QR code.',
+      no_ssid: 'Adicione o nome da rede nas configurações do modelo para mostrar o código.'
+    },
+    zh: {
+      network: '网络',
+      password: '密码',
+      open: '无需密码',
+      hidden: '扫码即可连接',
+      too_long: '网络名称和密码太长，无法生成二维码。',
+      no_ssid: '请在模板设置中填写网络名称以显示二维码。'
+    }
+  };
+
+  /* The template's language: the "locale" param, else the player's, as a canonical BCP-47 tag. */
+  function resolveLocale(raw) {
+    var l = String(raw == null ? '' : raw).trim();
+    if (!l && typeof navigator !== 'undefined') l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    try { l = Intl.getCanonicalLocales(l || 'en')[0] || 'en'; } catch (e) { l = 'en'; }
+    return l;
+  }
+
+  /*
    * The Wi-Fi QR format (WIFI:T:…;S:…;P:…;;) uses ; : , as separators and " \ for quoting, so those
    * five characters inside a network name or password must each be preceded by a backslash. An
    * unescaped ";" in a password silently truncates it on the guest's phone — the code still scans,
@@ -54,18 +150,27 @@
     var v = ST.values || {};
     var root = document.documentElement;
     var body = document.body;
+    var locale = resolveLocale(v.locale);
+    var T = STRINGS[locale.split('-')[0].toLowerCase()] || STRINGS.en;
+    root.lang = locale;
     // Colours are validated as #hex by the server before they get here.
     if (v.background) root.style.setProperty('--bg', v.background);
     if (v.accent) root.style.setProperty('--accent', v.accent);
     if (v.text_color) root.style.setProperty('--text', v.text_color);
 
-    function text(id, value) { document.getElementById(id).textContent = String(value == null ? '' : value).trim(); }
+    function str(x) { return String(x == null ? '' : x).trim(); }
+    // Operator text: its own direction (dir="auto"), so a right-to-left name still reads right.
+    function text(id, value) {
+      var e = document.getElementById(id);
+      e.textContent = str(value);
+      e.setAttribute('dir', 'auto');
+    }
     text('eyebrow', v.eyebrow);
     text('headline', v.headline);
     text('footer', v.footer);
     text('hint', v.hint);
-    text('ssid-label', v.ssid_label || 'Network');
-    text('pw-label', v.password_label || 'Password');
+    text('ssid-label', str(v.ssid_label) || T.network);
+    text('pw-label', str(v.password_label) || T.password);
     if (!String(v.hint || '').trim()) body.classList.add('no-hint');
 
     var logo = document.getElementById('logo');
@@ -78,16 +183,18 @@
 
     var ssidEl = document.getElementById('ssid');
     ssidEl.textContent = ssid || '—';
+    ssidEl.setAttribute('dir', 'auto');
 
     var pwEl = document.getElementById('password');
     if (open) {
-      pwEl.textContent = String(v.open_text || '').trim() || 'No password needed';
+      pwEl.textContent = str(v.open_text) || T.open;
       pwEl.classList.add('muted');
     } else if (v.show_password === false) {
-      pwEl.textContent = String(v.hidden_text || '').trim() || 'Scan the code to join';
+      pwEl.textContent = str(v.hidden_text) || T.hidden;
       pwEl.classList.add('muted');
     } else {
       pwEl.textContent = password || '—';
+      pwEl.setAttribute('dir', 'ltr');
     }
 
     // A long name and password cannot both sit on one line of a thin strip at full size.
@@ -100,7 +207,7 @@
     } else {
       // Never a broken-looking code: an honest placeholder the operator will notice.
       box.classList.add('empty');
-      box.textContent = ssid ? 'This network name and password are too long for a QR code.' : 'Add your network name in the template settings to show the code.';
+      box.textContent = ssid ? T.too_long : T.no_ssid;
     }
 
     function layout() {

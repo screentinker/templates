@@ -1,0 +1,146 @@
+{
+  "name": "Tabellone tempi di attesa",
+  "description": "Tempi di attesa stimati per ambulatorio, pronto soccorso, farmacia o sportello: ogni servizio con l’attesa in minuti e lo stato Aperto, Affollato o Chiuso in colori chiari, l’ora dell’aggiornamento, un avviso rassicurante e un promemoria per l’accettazione. Il personale aggiorna un foglio Google o una tabella manuale dal telefono, oppure scrive l’elenco.",
+  "params": {
+    "title": {
+      "label": "Titolo",
+      "default": "Poliambulatorio Northwind"
+    },
+    "subtitle": {
+      "label": "Sottotitolo",
+      "default": "Tempi di attesa stimati",
+      "help": "Una riga sotto il titolo. Lasciate vuoto per nasconderla."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Accanto al titolo. Un logo bianco o trasparente sta bene sull’intestazione colorata."
+    },
+    "services": {
+      "label": "Servizi",
+      "help": "Uno per riga: Servizio | Attesa in minuti | Stato | Nota. Lo stato è Aperto, Affollato o Chiuso (vuoto = in base all’attesa). Usato senza origine dati.",
+      "default": "Pronto soccorso | 45 | Affollato | Piano terra · Linea rossa\nMedico di base | 20 | | Piano terra · Sale 1–6\nFarmacia | 10 | | Ricette · Sportello 3\nPrelievi | 15 | | Piano 1 · Accesso libero\nRadiologia | 55 | Affollato | Piano 1 · Ala est\nMedicazioni | 25 | | Piano terra · Sala 8\nVaccini | 0 | | Piano 2 · Influenza, viaggi\nFisioterapia | | Chiuso | Oggi su appuntamento"
+    },
+    "waits": {
+      "label": "Origine dati delle attese (facoltativa)",
+      "help": "Un foglio Google, CSV o tabella manuale con una riga per servizio. Se scelta, sostituisce i servizi scritti sopra."
+    },
+    "service_col": {
+      "label": "Colonna servizio",
+      "default": "Servizio",
+      "help": "L’intestazione nel vostro foglio. Se manca, si legge «Service» e poi la prima colonna."
+    },
+    "wait_col": {
+      "label": "Colonna attesa",
+      "default": "Attesa",
+      "help": "Minuti come numero (25), intervallo (15-20) o h:mm (1:30). Altro testo appare così com’è. Se manca, si legge «Wait»."
+    },
+    "status_col": {
+      "label": "Colonna stato",
+      "default": "Stato",
+      "help": "Aperto, Affollato o Chiuso. Una cella vuota si ricava dall’attesa. Se manca, si legge «Status»."
+    },
+    "note_col": {
+      "label": "Colonna nota",
+      "default": "Nota",
+      "help": "Piccola riga facoltativa sotto il servizio: dove andare o quando riapre. Se manca, si legge «Note»."
+    },
+    "notice": {
+      "label": "Riga di avviso",
+      "default": "I tempi sono indicativi. Si viene visitati in base all’urgenza, non all’ordine di arrivo: se state peggio durante l’attesa, avvisate subito il personale.",
+      "help": "Un avviso rassicurante in basso. Lasciate vuoto per nasconderlo."
+    },
+    "checkin": {
+      "label": "Promemoria accettazione",
+      "default": "Registratevi all’accettazione",
+      "help": "Promemoria in evidenza nel piè di pagina. Lasciate vuoto per nasconderlo."
+    },
+    "order": {
+      "label": "Ordine",
+      "help": "Ordinando, i servizi chiusi vanno sempre in fondo.",
+      "options": {
+        "listed": "Come nell’elenco",
+        "shortest": "Attesa più breve prima",
+        "longest": "Attesa più lunga prima"
+      }
+    },
+    "busy_minutes": {
+      "label": "Affollato da (minuti)",
+      "help": "Un servizio senza stato appare come Affollato quando l’attesa raggiunge questo valore."
+    },
+    "open_label": {
+      "label": "Testo: aperto",
+      "help": "Vuoto = la parola integrata nella lingua dello schermo («Aperto»)."
+    },
+    "busy_label": {
+      "label": "Testo: affollato",
+      "help": "Vuoto = la parola integrata nella lingua dello schermo («Affollato»)."
+    },
+    "closed_label": {
+      "label": "Testo: chiuso",
+      "help": "Vuoto = la parola integrata nella lingua dello schermo («Chiuso»)."
+    },
+    "nowait_label": {
+      "label": "Testo: nessuna attesa",
+      "help": "Mostrato al posto del tempo quando l’attesa è 0. Vuoto = la parola integrata nella lingua dello schermo («Subito»)."
+    },
+    "updated_label": {
+      "label": "Testo: aggiornato",
+      "help": "Prima dell’ora; mettete {time} dove deve andare l’ora. Vuoto = il testo integrato nella lingua dello schermo («Aggiornato: {time}»)."
+    },
+    "empty_label": {
+      "label": "Testo quando non ci sono dati",
+      "help": "Mostrato finché l’origine dati non ha righe. Vuoto = la frase integrata nella lingua dello schermo."
+    },
+    "show_updated": {
+      "label": "Mostra l’ora dell’ultimo aggiornamento"
+    },
+    "stale_minutes": {
+      "label": "Promemoria se i dati non cambiano da (minuti)",
+      "help": "Con un’origine dati, l’ora di aggiornamento diventa ambra se nessun dato cambia per questo tempo (anche con una sincronizzazione), come promemoria per il personale. 0 = mai."
+    },
+    "show_meter": {
+      "label": "Mostra una barra di attesa su ogni servizio"
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "light": "Chiaro",
+        "dark": "Scuro"
+      }
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "L’intestazione e il promemoria di accettazione."
+    },
+    "open_color": {
+      "label": "Colore aperto"
+    },
+    "busy_color": {
+      "label": "Colore affollato"
+    },
+    "closed_color": {
+      "label": "Colore chiuso"
+    },
+    "clock_format": {
+      "label": "Orologio",
+      "options": {
+        "12": "12 ore",
+        "24": "24 ore",
+        "auto": "Secondo la lingua",
+        "off": "Nascondi l’orologio"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario",
+      "help": "Vuoto = l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Le parole, gli orari e i numeri sullo schermo, ad esempio it o it-CH. Vuoto = la lingua dello schermo."
+    },
+    "page_seconds": {
+      "label": "Secondi per pagina",
+      "help": "Usato solo quando i servizi sono troppi per una schermata leggibile."
+    }
+  }
+}

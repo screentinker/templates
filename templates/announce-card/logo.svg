@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 240" width="1100" height="240">
+  <!-- Placeholder logo for the fictional "Northwind". Original work, MIT. Replace it with your own logo. -->
+  <rect x="12" y="12" width="216" height="216" rx="56" fill="none" stroke="#14213D" stroke-width="14"/>
+  <path d="M72 172 V68 L168 172 V68" fill="none" stroke="#14213D" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="168" cy="68" r="15" fill="#E8613A"/>
+  <path d="M309 168 V72 L373 168 V72
+           M441 72 A42 48 0 1 0 441 168 A42 48 0 1 0 441 72
+           M509 168 V72 H545 A26 26 0 0 1 545 124 H509
+           M539 124 L573 168
+           M599 72 H663
+           M631 72 V168
+           M689 72 V168
+           M753 72 V168
+           M689 120 H753
+           M779 72 L801 168 L827 96 L853 168 L875 72
+           M901 72 V168
+           M927 168 V72 L991 168 V72
+           M1017 72 V168 H1043 A44 48 0 0 0 1043 72 Z" fill="none" stroke="#14213D" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

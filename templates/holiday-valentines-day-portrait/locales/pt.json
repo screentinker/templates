@@ -1,0 +1,46 @@
+{
+  "name": "Dia dos Namorados (retrato)",
+  "description": "Uma mensagem calorosa de Dia dos Namorados em vinho profundo: dois corações de formas suaves, uma manchete, uma mensagem para loja, café ou escritório e uma linha para a data ou o horário.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "A linha curta acima da manchete. Deixe vazio para ocultar.",
+      "default": "COM CARINHO, NORTHWIND"
+    },
+    "headline": {
+      "label": "Manchete",
+      "help": "Duas linhas são reservadas para ela: cabem cerca de 24 caracteres. Uma manchete mais longa passa para a terceira linha e invade a mensagem.",
+      "default": "Feliz Dia dos Namorados"
+    },
+    "message": {
+      "label": "Mensagem",
+      "help": "Uma ou duas frases abaixo da manchete; cabem até 200 caracteres. Uma quebra de linha começa uma nova linha.",
+      "default": "Hoje todo buquê e toda caixa de trufas ganham embrulho de presente grátis, e o café serve chocolate quente para dois até o fechamento."
+    },
+    "date_line": {
+      "label": "Linha da data",
+      "help": "Texto livre, digitado como deve aparecer: uma data, um horário e local, ou uma assinatura.",
+      "default": "14 · 02  ·  ABERTO ATÉ AS 21:00"
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se você não tiver logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG largo com fundo transparente (cerca de 3,4 : 1 preenche a área; outros formatos são ajustados dentro dela). Substitua o logotipo provisório da Northwind."
+    },
+    "accent": {
+      "label": "Cor do coração"
+    },
+    "accent2": {
+      "label": "Cor do coração pequeno"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

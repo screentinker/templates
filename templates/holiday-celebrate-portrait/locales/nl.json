@@ -1,0 +1,54 @@
+{
+  "name": "Feest (staand)",
+  "description": "Een confettifeest voor elke gelegenheid: een bedrijfsjubileum, een verjaardag, een recordmaand, een opening of een teamoverwinning. Een enorm getal, een kop, een bericht en een datumregel, in kleuren naar keuze.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "De korte regel boven de kop. Laat leeg om hem te verbergen.",
+      "default": "WE VIEREN TIEN JAAR"
+    },
+    "headline": {
+      "label": "Kop",
+      "help": "Er zijn twee regels voor gereserveerd: ongeveer 24 tekens passen. Een langere kop loopt door naar een derde regel en over het bericht.",
+      "default": "Tien jaar Northwind"
+    },
+    "message": {
+      "label": "Bericht",
+      "help": "Een zin of twee onder de kop; tot 200 tekens passen. Een regeleinde begint een nieuwe regel.",
+      "default": "Van twee mensen in een garage naar 140 collega’s in vier steden. Dank aan elke klant en collega die ons hier bracht. Om 15:00 is er taart in de keuken!"
+    },
+    "date_line": {
+      "label": "Datumregel",
+      "help": "Vrije tekst, getypt zoals hij moet verschijnen: een datum, een tijd en plaats, of een afsluiter."
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een brede PNG of SVG met transparante achtergrond (ongeveer 3,4 : 1 vult het vak; andere vormen worden erin gepast). Vervang de Northwind-placeholder."
+    },
+    "accent": {
+      "label": "Kleur van het getal"
+    },
+    "accent2": {
+      "label": "Tweede accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "big_text": {
+      "label": "Groot getal",
+      "help": "Het enorme getal: jaren, een verjaardag, een percentage, een plaats. Tot vier tekens; maak leeg voor geen getal."
+    },
+    "big_label": {
+      "label": "Onder het getal",
+      "help": "Een woord onder het grote getal, zoals JAAR of DAGEN.",
+      "default": "JAAR"
+    }
+  }
+}

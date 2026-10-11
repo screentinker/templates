@@ -1,0 +1,80 @@
+{
+  "name": "Weltuhren",
+  "description": "Zwei bis acht Live-Uhren für die Städte, mit denen Sie arbeiten — analog, digital oder beides, mit Datum, Tag-/Nacht-Hinweis und dem Zeitunterschied zu diesem Bildschirm. Ordnet sich als Raster, Hochformat-Liste oder schmaler Streifen an. Nichts wird abgerufen: Die Zeiten kommen von der Uhr des Bildschirms.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "help": "Leer lassen, um die Titelleiste auszublenden.",
+      "default": "Rund um die Welt"
+    },
+    "clocks": {
+      "label": "Uhren",
+      "help": "Eine Uhr pro Zeile, als Stadt | IANA-Zeitzone — zum Beispiel Mumbai | Asia/Kolkata. 2 bis 8 Zeilen; Zeilen mit unbekannter Zeitzone werden übersprungen und unten aufgeführt.",
+      "default": "London | Europe/London\nNew York | America/New_York\nTokio | Asia/Tokyo\nSydney | Australia/Sydney\nDubai | Asia/Dubai\nSan Francisco | America/Los_Angeles"
+    },
+    "face": {
+      "label": "Uhrenstil",
+      "options": {
+        "both": "Analog und digital",
+        "analog": "Nur analog",
+        "digital": "Nur digital"
+      }
+    },
+    "clock_format": {
+      "label": "Zeitformat",
+      "options": {
+        "24": "24 Stunden",
+        "12": "12 Stunden"
+      }
+    },
+    "show_seconds": {
+      "label": "Sekunden anzeigen"
+    },
+    "show_date": {
+      "label": "Datum anzeigen"
+    },
+    "show_daynight": {
+      "label": "Tag und Nacht zeigen",
+      "help": "Uhren, an denen es Tag ist, bekommen ein helles Zifferblatt und eine Sonne; nachts ein dunkles Zifferblatt und einen Mond."
+    },
+    "day_start": {
+      "label": "Tag beginnt um (Stunde)"
+    },
+    "day_end": {
+      "label": "Nacht beginnt um (Stunde)"
+    },
+    "highlight_local": {
+      "label": "Stadt dieses Bildschirms hervorheben",
+      "help": "Umrandet die Uhr, deren Zeitzone der des Bildschirms entspricht (oder der unten eingestellten)."
+    },
+    "home_timezone": {
+      "label": "Zeitzone dieses Bildschirms",
+      "help": "Für die Hervorhebung und die +/- Stunden. Leer lassen, um die Einstellung des Bildschirms zu verwenden."
+    },
+    "here_label": {
+      "label": "Beschriftung der hervorgehobenen Uhr",
+      "help": "Leer lassen für „Hier“ in der Sprache des Bildschirms."
+    },
+    "day_label": {
+      "label": "Beschriftung Tag",
+      "help": "Bei Städten, in denen es Tag ist. Leer lassen für „Tag“ in der Sprache des Bildschirms."
+    },
+    "night_label": {
+      "label": "Beschriftung Nacht",
+      "help": "Bei Städten, in denen es Nacht ist. Leer lassen für „Nacht“ in der Sprache des Bildschirms."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Die Sprache der Daten, von AM/PM und der Wörter auf dem Bildschirm, z. B. en-GB, de-DE oder ja-JP. Leer lassen für die Sprache des Bildschirms."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    }
+  }
+}

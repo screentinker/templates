@@ -1,0 +1,94 @@
+{
+  "name": "Dipendente del mese",
+  "description": "Festeggia un collega: una grande foto rotonda in un anello dorato, nome e ruolo, una citazione con parole sue, una curiosità e un badge del mese.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Meglio un PNG o SVG con sfondo trasparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Una foto a mezzo busto, ritagliata per riempire la cornice. Le foto quadrate rendono meglio."
+    },
+    "show_photo": {
+      "label": "Mostra la foto",
+      "help": "Se disattivato mostra un cerchio con le iniziali, per chi preferisce non esporre la propria foto."
+    },
+    "initials": {
+      "label": "Iniziali",
+      "help": "Compaiono nel cerchio quando la foto è disattivata. Una o due lettere."
+    },
+    "eyebrow": {
+      "label": "Titoletto",
+      "help": "Sopra il nome. In maiuscolo si legge meglio.",
+      "default": "DIPENDENTE DEL MESE"
+    },
+    "name": {
+      "label": "Nome",
+      "help": "Una riga, fino a 26 caratteri. Scrivilo normalmente; TUTTO MAIUSCOLO è più largo e potrebbe non starci."
+    },
+    "role": {
+      "label": "Ruolo",
+      "help": "Mansione, team, classe o sede. Se è lungo va a capo su una seconda riga.",
+      "default": "Senior Support Engineer, Assistenza clienti"
+    },
+    "show_quote": {
+      "label": "Mostra la citazione",
+      "help": "Se disattivato nasconde la citazione e le virgolette."
+    },
+    "quote": {
+      "label": "Citazione",
+      "help": "Una o due frasi con parole sue. Senza virgolette.",
+      "default": "Adoro il momento in cui un cliente esasperato dice \"ah, era facile\". Questo premio è di tutta la squadra di secondo livello."
+    },
+    "quote_mark": {
+      "label": "Virgolette",
+      "help": "Il grande segno decorativo accanto alla citazione. Usa quello della tua lingua, ad es. « o “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Mostra la curiosità",
+      "help": "Se disattivato nasconde etichetta e testo della curiosità."
+    },
+    "fact_label": {
+      "label": "Etichetta della curiosità",
+      "help": "Un’etichetta breve, ad es. CURIOSITÀ o CHIEDIMI DI.",
+      "default": "CURIOSITÀ"
+    },
+    "fun_fact": {
+      "label": "Curiosità",
+      "help": "Una o due frasi brevi.",
+      "default": "Priya ha corso una mezza maratona in quattro continenti e prepara dei panini al cardamomo strepitosi."
+    },
+    "show_badge": {
+      "label": "Mostra il badge"
+    },
+    "badge": {
+      "label": "Testo del badge",
+      "help": "Un mese, una data di inizio, un team o un traguardo. In maiuscolo si legge meglio.",
+      "default": "OTTOBRE 2026"
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "Anello, badge, titoletto e decorazioni."
+    },
+    "highlight": {
+      "label": "Colore del cerchio delle iniziali",
+      "help": "Il cerchio dietro le iniziali e parte dei coriandoli."
+    },
+    "background": {
+      "label": "Colore di sfondo",
+      "help": "È anche il colore del testo del badge."
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "card_color": {
+      "label": "Colore della scheda curiosità",
+      "help": "Meglio una tonalità un po’ più chiara dello sfondo."
+    },
+    "initials_color": {
+      "label": "Colore delle iniziali"
+    }
+  }
+}

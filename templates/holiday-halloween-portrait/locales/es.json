@@ -1,0 +1,46 @@
+{
+  "name": "Halloween (vertical)",
+  "description": "Una pantalla divertida de Halloween: una calabaza y la luna llena hechas de formas simples sobre colinas moradas, con titular, un mensaje para el desfile de disfraces o el horario y una línea de fecha.",
+  "params": {
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "La línea corta sobre el titular. Déjala vacía para ocultarla.",
+      "default": "¿TRUCO O TRATO?"
+    },
+    "headline": {
+      "label": "Titular",
+      "help": "Tiene dos líneas reservadas: caben unos 24 caracteres. Un titular más largo pasa a una tercera línea y se monta sobre el mensaje.",
+      "default": "Un Halloween de miedo"
+    },
+    "message": {
+      "label": "Mensaje",
+      "help": "Una o dos frases bajo el titular; caben hasta 200 caracteres. Un salto de línea empieza una línea nueva.",
+      "default": "Desfile de disfraces en el vestíbulo a las 15:00: el mejor disfraz gana una tarjeta regalo. Dulces en recepción toda la tarde, también sin frutos secos."
+    },
+    "date_line": {
+      "label": "Línea de fecha",
+      "help": "Texto libre, escrito tal como quieres que se lea: una fecha, una hora y un lugar, o una despedida.",
+      "default": "31 · 10  ·  DESFILE 15:00  ·  VESTÍBULO"
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactívalo si no tienes logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG ancho con fondo transparente (unos 3,4 : 1 llenan el espacio; otras proporciones se ajustan dentro). Sustituye el logotipo provisional de Northwind."
+    },
+    "accent": {
+      "label": "Color de la calabaza"
+    },
+    "accent2": {
+      "label": "Color de las colinas"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

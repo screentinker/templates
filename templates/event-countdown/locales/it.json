@@ -1,0 +1,66 @@
+{
+  "name": "Conto alla rovescia evento",
+  "description": "Una schermata con conto alla rovescia per una conferenza, un'inaugurazione o un lancio: nome dell'evento, slogan, data e luogo, un grande conto alla rovescia dal vivo che al momento giusto lascia il posto al tuo messaggio, e un QR code facoltativo per biglietti o iscrizioni.",
+  "params": {
+    "event_name": {
+      "label": "Nome dell'evento"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "Due giorni di talk, workshop e demo fino a tarda notte con chi sta costruendo il futuro."
+    },
+    "when_where": {
+      "label": "Riga data e luogo",
+      "default": "18–19 MARZO 2027  ·  RIVERSIDE HALL, DUBLINO"
+    },
+    "target": {
+      "label": "Conto alla rovescia fino a",
+      "help": "ISO 8601 con offset del fuso orario, ad es. 2027-03-18T09:00:00+01:00 o 2027-03-18T09:00:00-05:00. Senza offset si usa il fuso orario del server."
+    },
+    "countdown_label": {
+      "label": "Etichetta sopra il conto alla rovescia",
+      "default": "LE PORTE APRONO TRA"
+    },
+    "done_text": {
+      "label": "Testo alla fine",
+      "default": "Si comincia!"
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua delle unità del conto alla rovescia, ad es. it o it-CH (vuoto = lingua dello schermo). I server ScreenTinker meno recenti mostrano sempre d h m s."
+    },
+    "show_qr": {
+      "label": "Mostra il QR code dei biglietti",
+      "help": "Disattivalo se non hai un link: il QR, il suo riquadro e la didascalia spariscono."
+    },
+    "qr_url": {
+      "label": "Link biglietti / iscrizione",
+      "help": "L'indirizzo che apre il QR code. Tienilo breve: un link corto dà un codice leggibile da più lontano."
+    },
+    "qr_caption": {
+      "label": "Didascalia del QR",
+      "default": "Inquadra per i biglietti"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG quasi quadrato con sfondo trasparente. In alto a sinistra."
+    },
+    "background_image": {
+      "label": "Foto di sfondo",
+      "help": "Facoltativa. Una foto dell'evento o della location dietro a tutto; viene scurita con l'impostazione qui sotto."
+    },
+    "background_dim": {
+      "label": "Scurisci la foto",
+      "help": "0 = foto così com'è, 0,9 = quasi nera. Usato solo con una foto di sfondo."
+    },
+    "accent": {
+      "label": "Colore d'accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

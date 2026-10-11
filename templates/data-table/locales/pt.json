@@ -1,0 +1,115 @@
+{
+  "name": "Tabela de dados",
+  "description": "Qualquer tabela como um painel limpo e legível: uma classificação esportiva, taxas de poupança com as letras miúdas, níveis de estoque, uma grade de horários. Conecte uma planilha Google, CSV, lista REST ou tabela manual (ou digite as linhas), escolha as colunas, destaque células com regras simples como “Estoque < 5 vermelho”, e tabelas longas passam de página sozinhas.",
+  "params": {
+    "preset": {
+      "label": "Ponto de partida",
+      "help": "Preenche linhas de exemplo, um título e regras de destaque para o que você deixar vazio. Escolha “Nenhum” para usar só as suas configurações.",
+      "options": {
+        "league": "Classificação esportiva",
+        "rates": "Taxas bancárias / de poupança",
+        "stock": "Níveis de estoque",
+        "generic": "Genérico (treinamentos)",
+        "none": "Nenhum: só minhas configurações"
+      }
+    },
+    "title": {
+      "label": "Título",
+      "help": "Vazio usa o título do ponto de partida. Digite só - para ocultar."
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Uma linha sob o título. Vazio usa o do ponto de partida. Digite só - para ocultar."
+    },
+    "footer": {
+      "label": "Rodapé",
+      "help": "Texto pequeno na parte de baixo. Vazio usa o do ponto de partida. Digite só - para ocultar."
+    },
+    "disclosure": {
+      "label": "Aviso / letras miúdas",
+      "help": "Texto pequeno sob a tabela em todas as páginas, por exemplo o aviso legal das taxas. Vazio usa o do ponto de partida. Digite só - para ocultar."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Exibido ao lado do título."
+    },
+    "table": {
+      "label": "Fonte de dados da tabela (opcional)",
+      "help": "Uma planilha Google, CSV, lista REST ou tabela manual. A linha de cabeçalho vira os títulos das colunas. Substitui as linhas digitadas abaixo."
+    },
+    "rows": {
+      "label": "Tabela digitada",
+      "help": "Usada sem fonte de dados. Primeira linha = cabeçalhos, depois uma linha por registro, células separadas por |. Vazio mostra o exemplo do ponto de partida."
+    },
+    "show_columns": {
+      "label": "Colunas exibidas",
+      "help": "Opcional, cabeçalhos separados por vírgulas na ordem desejada, por exemplo Time, J, Pts. Vazio mostra todas as colunas."
+    },
+    "highlight_col": {
+      "label": "Coluna de destaque",
+      "help": "O cabeçalho da coluna que as regras testam. Vazio usa a do ponto de partida. Digite só - para não destacar."
+    },
+    "highlight_rules": {
+      "label": "Regras de destaque",
+      "help": "Separadas por ; e testadas em ordem, por exemplo < 5 vermelho; < 20 laranja; = Esgotado cinza. Cores: vermelho laranja verde azul roxo cinza accent ou #hex."
+    },
+    "highlight_style": {
+      "label": "Estilo de destaque",
+      "options": {
+        "preset": "Como o ponto de partida",
+        "cell": "Colorir a célula",
+        "row": "Colorir a linha inteira"
+      }
+    },
+    "rows_per_page": {
+      "label": "Linhas por página",
+      "help": "0 = automático: tudo em uma tela quando fica legível; senão, páginas de tamanho confortável."
+    },
+    "page_seconds": {
+      "label": "Segundos por página"
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "midnight": "Meia-noite (azul-escuro)",
+        "graphite": "Grafite (cinza-escuro)",
+        "paper": "Papel (claro)",
+        "contrast": "Alto contraste (preto e branco)"
+      }
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "Linha do título, linha de cabeçalho, pontos de página e a cor de regra “accent”."
+    },
+    "font": {
+      "label": "Fonte dos títulos",
+      "options": {
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (condensada)",
+        "inter": "Inter (limpa)"
+      }
+    },
+    "zebra": {
+      "label": "Linhas alternadas"
+    },
+    "show_updated": {
+      "label": "Mostrar a última atualização da fonte de dados",
+      "help": "Só com uma fonte de dados conectada."
+    },
+    "updated_label": {
+      "label": "Palavra “Atualizado”",
+      "help": "A palavra antes do horário. Vazio usa “Atualizado” no idioma da tela; só - mostra apenas o horário."
+    },
+    "limit_label": {
+      "label": "Aviso quando nem todas as linhas cabem",
+      "help": "Aparece quando a fonte tem mais linhas do que chegam à tela; {shown} e {total} são preenchidos. Vazio usa o texto padrão."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma das palavras fixas e das tabelas de exemplo, do horário de atualização e dos números de página. Vazio usa o idioma da tela."
+    },
+    "timezone": {
+      "label": "Fuso horário da atualização"
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+ "template": {
+  "aspect": "9:16",
+  "background": "{{param:background}}",
+  "elements": [
+   {
+    "slot": "ring",
+    "kind": "box",
+    "box": {
+     "x": 30,
+     "y": 10,
+     "w": 40,
+     "h": 22.5
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "opacity": 0.07,
+     "radius_cqw": 20
+    }
+   },
+   {
+    "slot": "disc",
+    "kind": "box",
+    "box": {
+     "x": 34,
+     "y": 12.25,
+     "w": 32,
+     "h": 18
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "radius_cqw": 16
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.1,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "badge",
+    "kind": "head",
+    "box": {
+     "x": 34,
+     "y": 15.37,
+     "w": 32
+    },
+    "style": {
+     "color": "{{param:background}}",
+     "size_cqw": 20,
+     "weight": 800,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.3,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "logo",
+    "kind": "image",
+    "fit": "contain",
+    "content_id": "{{param:logo}}",
+    "box": {
+     "x": 8,
+     "y": 3.4,
+     "w": 36,
+     "h": 4.4
+    },
+    "style": {
+     "opacity": "{{param:show_logo}}"
+    }
+   },
+   {
+    "slot": "number",
+    "kind": "body",
+    "box": {
+     "x": 56,
+     "y": 3.8,
+     "w": 36
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 4.2,
+     "weight": 700,
+     "font": "oswald",
+     "align": "right"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.2,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "eyebrow",
+    "kind": "body",
+    "box": {
+     "x": 8,
+     "y": 37,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 3.5,
+     "weight": 700,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.35,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "fact",
+    "kind": "head",
+    "box": {
+     "x": 8,
+     "y": 40.5,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 8.4,
+     "weight": 800,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.45,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "rule",
+    "kind": "rule",
+    "box": {
+     "x": 44,
+     "y": 60.5,
+     "w": 12,
+     "h": 0.32
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.8,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "detail",
+    "kind": "body",
+    "box": {
+     "x": 9,
+     "y": 63.5,
+     "w": 82
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 3.7,
+     "weight": 400,
+     "font": "inter",
+     "align": "center",
+     "opacity": 0.86
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.9,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "footer",
+    "kind": "body",
+    "box": {
+     "x": 10,
+     "y": 90.5,
+     "w": 80
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 2.6,
+     "weight": 500,
+     "font": "inter",
+     "align": "center",
+     "opacity": 0.58
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 1.1,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   }
+  ]
+ },
+ "fields": {
+  "badge": "{{param:badge}}",
+  "number": "{{param:number}}",
+  "eyebrow": "{{param:eyebrow}}",
+  "fact": "{{param:fact}}",
+  "detail": "{{param:detail}}",
+  "footer": "{{param:footer}}"
+ }
+}

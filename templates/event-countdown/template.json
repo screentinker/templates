@@ -191,14 +191,15 @@
     "slot": "countdown",
     "kind": "countdown",
     "target": "{{param:target}}",
+    "locale": "{{param:locale}}",
     "box": {
      "x": 5.6,
      "y": 73.5,
-     "w": 54
+     "w": 58
     },
     "style": {
      "color": "{{param:text_color}}",
-     "size_cqw": 7.2,
+     "size_cqw": 5.4,
      "weight": 500,
      "font": "oswald"
     },

@@ -1,0 +1,143 @@
+{
+  "name": "Veranstaltungsprogramm",
+  "description": "Programmtafel für Hotels, Tagungszentren, Hochschulen und Gemeindezentren: die nächsten Veranstaltungen nach Tag, heute (oder heute Abend) groß, mit Uhrzeit, Raum, Referent und Richtungspfeil. Die laufende Sitzung wird hervorgehoben, beendete verschwinden von selbst. Programm eintippen oder Kalender (iCal), Google Sheet oder manuelle Tabelle verbinden.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "help": "Die große Überschrift. Leer lassen, um sie auszublenden.",
+      "default": "Veranstaltungen"
+    },
+    "subtitle": {
+      "label": "Untertitel",
+      "help": "Eine Zeile unter dem Titel, zum Beispiel der Ort oder der Name der Veranstaltung. Leer lassen, um sie auszublenden.",
+      "default": "Harbourview Hotel & Konferenzzentrum"
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Kleingedrucktes am unteren Rand. Leer lassen, um sie auszublenden.",
+      "default": "Gäste-WLAN: Harbourview-Guest  ·  Rezeption und Garderobe auf Ebene 1"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Wird neben dem Titel gezeigt."
+    },
+    "agenda": {
+      "label": "Programm (wenn keine Datenquelle verbunden ist)",
+      "help": "Eine Veranstaltung pro Zeile: Datum | Beginn | Ende | Titel | Ort | Gastgeber | Pfeil. Datum als 2026-10-12, oder +0 für heute, +1 für morgen. Zeiten wie 09:30 oder 7pm. Siehe README.",
+      "default": "+0|09:30|10:30|Eröffnungs-Keynote: Bauen für die nächste Milliarde|Großer Ballsaal|Maya Okafor|↑\n+0|13:00|14:00|Networking-Mittagessen|Terrassenrestaurant||↓\n+0|19:00|23:00|Benefizdinner des Harbour Rotary Club|Großer Ballsaal|Rotary Club|↑\n+1|09:00|10:00|Keynote: Logistik in Echtzeit|Großer Ballsaal|Dr Amara Nwosu|↑"
+    },
+    "events": {
+      "label": "Datenquelle für Veranstaltungen (optional)",
+      "help": "Ein Kalender (iCal) oder ein Google Sheet, CSV oder eine manuelle Tabelle mit den Spalten unten. Wenn verbunden, ersetzt sie das oben eingetippte Programm."
+    },
+    "date_col": {
+      "label": "Tabellenspalte: Datum",
+      "default": "Datum"
+    },
+    "start_col": {
+      "label": "Tabellenspalte: Beginn",
+      "default": "Beginn"
+    },
+    "end_col": {
+      "label": "Tabellenspalte: Ende",
+      "default": "Ende"
+    },
+    "title_col": {
+      "label": "Tabellenspalte: Titel",
+      "default": "Titel"
+    },
+    "location_col": {
+      "label": "Tabellenspalte: Ort",
+      "default": "Ort"
+    },
+    "host_col": {
+      "label": "Tabellenspalte: Gastgeber oder Referent",
+      "default": "Gastgeber"
+    },
+    "arrow_col": {
+      "label": "Tabellenspalte: Richtungspfeil",
+      "help": "Optional. Ein Pfeil (← ↑ → ↓ ↖ ↗ ↘ ↙) oder ein englisches Wort: left, right, ahead, up, down, up-left, up-right …",
+      "default": "Pfeil"
+    },
+    "days_ahead": {
+      "label": "Angezeigte Tage",
+      "help": "Heute und die folgenden Tage. 1 zeigt nur heute."
+    },
+    "rows_per_page": {
+      "label": "Höchstens Veranstaltungen pro Seite",
+      "help": "Pro Spalte. Es werden weniger gezeigt, wenn sie nicht lesbar groß passen; der Rest blättert um."
+    },
+    "page_seconds": {
+      "label": "Sekunden pro Seite",
+      "help": "Nur, wenn das Programm nicht auf einen Bildschirm passt."
+    },
+    "show_tonight": {
+      "label": "Abends „Heute Abend“ sagen",
+      "help": "Aus: den ganzen Tag „Heute“."
+    },
+    "tonight_hour": {
+      "label": "„Heute Abend“ ab (Uhr)",
+      "help": "Ab dieser Stunde steht über dem ersten Tag der Heute-Abend-Text statt „Heute“."
+    },
+    "today_label": {
+      "label": "Text: Heute",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache der Tafel."
+    },
+    "tonight_label": {
+      "label": "Text: Heute Abend",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache der Tafel."
+    },
+    "tomorrow_label": {
+      "label": "Text: Morgen",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache der Tafel."
+    },
+    "now_label": {
+      "label": "Text: Jetzt (an der laufenden Sitzung)",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache der Tafel."
+    },
+    "show_next": {
+      "label": "Nächste Sitzung heute markieren",
+      "help": "Ein Als-Nächstes-Etikett und „in 25 Min.“ an der nächsten Sitzung, die noch nicht begonnen hat."
+    },
+    "next_label": {
+      "label": "Text: Als Nächstes (an der nächsten Sitzung heute)",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache der Tafel."
+    },
+    "all_day_label": {
+      "label": "Text: Ganztägig",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache der Tafel."
+    },
+    "empty_label": {
+      "label": "Text, wenn nichts geplant ist",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache der Tafel."
+    },
+    "clock_format": {
+      "label": "Uhrzeiten",
+      "options": {
+        "auto": "Wie in der Sprache üblich",
+        "24": "24 Stunden",
+        "12": "12 Stunden"
+      }
+    },
+    "show_clock": {
+      "label": "Uhr und Datum zeigen"
+    },
+    "timezone": {
+      "label": "Zeitzone",
+      "help": "Die Zeitzone des Veranstaltungsorts. Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wörter, Tage, Datum und Uhrzeit der Tafel, z. B. en-GB oder de-DE. Leer = Sprache des Bildschirms. Gilt auch für Kalender; dort die Zeitzone des Orts einstellen."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    }
+  }
+}

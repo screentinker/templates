@@ -22,7 +22,7 @@ synced by the ScreenTinker server and handed to the page when it renders.
 | Show progress to target | checkbox | on | Hide the bar and the "x% of target" line. |
 | An increase is good | checkbox | on | A positive change is coloured with the good colour. Metrics whose name contains *open, backlog, response, wait, queue, churn, cost, spend, error, incident, bug, latency, downtime, defect* or *complaint* are treated the other way round (fewer open tickets is good). Untick for a board where every metric is "lower is better". |
 | Accent / Good / Bad / Background / Text colour | colour | `#7C6CFF` / `#2FD08B` / `#FF6363` / `#0E1020` / `#F4F5FB` | |
-| Number and date language | locale | the screen's | Thousands separators, decimal mark, compact numbers (1.2M), the "Updated" time. |
+| Language | locale | the screen's | Thousands separators, decimal mark, compact numbers (1.2M), percentages, the "Updated" time and the built-in words. |
 | Timezone for "Updated" | timezone | the screen's | |
 
 ### Values
@@ -57,6 +57,29 @@ you want on screen (12 at most are shown).
 If the bound source has no `row_count`, or none of its rows has a Metric or Value column (for example
 a weather source bound by mistake), the typed-in metrics are shown instead — the screen never goes
 blank or shows `undefined`.
+
+## Languages
+
+The settings form (name, description, every label and help text, the example title and metrics) is
+translated into German, Spanish, French, Hindi, Italian, Japanese, Dutch, Portuguese and Simplified Chinese in `locales/<lang>.json`; English in
+`manifest.json` stays the source and fallback, and a server that does not know about `locales/`
+ignores the folder. The data-source column names (Metric, Value, Target, Unit, Change) stay
+English: they are keys, not text.
+
+On screen, **Language** (empty = the player's own language) formats values, targets, changes and
+percentages with `Intl` (`184.250 €`, `92 %` in German), sets the page's `lang` and picks the
+built-in words "Updated {time}", "{pct} of {target} target", the fallback title and the empty-state
+hint from a table in `app.js` (same ten languages, others fall back to English). The
+"lower is better" names (open, response time, cost, …) are also recognised in the chosen
+language. Typed values accept a decimal comma (`1,8`). Fonts: the bundled Archivo and Inter are
+Latin-only; CJK and Devanagari use the player's Noto Sans CJK / Noto Sans Devanagari fonts.
+
+## Changes
+
+- **1.1.0** — translations of the settings into nine languages (`locales/`); built-in words,
+  percentages and changes follow the Language setting; decimal comma; `R$` as a currency prefix;
+  CJK/Devanagari font fallbacks.
+- **1.0.0** — first release.
 
 ## Files
 

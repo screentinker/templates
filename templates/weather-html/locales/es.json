@@ -1,0 +1,43 @@
+{
+  "name": "El tiempo — animado",
+  "description": "Una escena del tiempo animada a pantalla completa: el cielo, la lluvia, la nieve o el sol siguen las condiciones actuales, con un pronóstico de cinco días y rangos de temperatura. Lee una de tus fuentes de datos del tiempo; tu servidor obtiene los datos, así que esta plantilla no necesita acceso a la red.",
+  "params": {
+    "weather": {
+      "label": "Fuente de datos del tiempo",
+      "help": "Una fuente de datos de tipo Tiempo (Fuentes de datos → Nueva → Tiempo). Allí se configuran la ubicación y las unidades."
+    },
+    "location": {
+      "label": "Nombre del lugar",
+      "help": "Déjalo vacío para usar el nombre de lugar de la fuente de datos."
+    },
+    "theme": {
+      "label": "Fondo",
+      "options": {
+        "sky": "Sigue el tiempo",
+        "solid": "Color sólido"
+      }
+    },
+    "background": {
+      "label": "Color de fondo sólido",
+      "help": "Se usa cuando Fondo está en Color sólido."
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "animate": {
+      "label": "Animar la escena",
+      "help": "Desactívalo en reproductores de muy poca potencia."
+    },
+    "show_clock": {
+      "label": "Mostrar el reloj"
+    },
+    "timezone": {
+      "label": "Zona horaria del reloj",
+      "help": "Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "El idioma de todas las palabras, fechas y números en pantalla, por ejemplo es o ja. Déjalo vacío para usar el idioma de la pantalla."
+    }
+  }
+}

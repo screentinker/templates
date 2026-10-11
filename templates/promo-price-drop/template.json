@@ -1,0 +1,351 @@
+{
+ "template": {
+  "aspect": "16:9",
+  "background": "{{param:background}}",
+  "background_content_id": "{{param:background_image}}",
+  "background_dim": "{{param:background_dim}}",
+  "elements": [
+   {
+    "slot": "ring",
+    "kind": "box",
+    "box": {
+     "x": 56,
+     "y": 9,
+     "w": 40,
+     "h": 71.11
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "opacity": 0.16,
+     "radius_cqw": 20
+    }
+   },
+   {
+    "slot": "ring_inner",
+    "kind": "box",
+    "box": {
+     "x": 62,
+     "y": 19.67,
+     "w": 28,
+     "h": 49.78
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "opacity": 0.14,
+     "radius_cqw": 14
+    }
+   },
+   {
+    "slot": "picture",
+    "kind": "image",
+    "box": {
+     "x": 57,
+     "y": 10,
+     "w": 38,
+     "h": 69
+    },
+    "fit": "contain",
+    "content_id": "{{param:product_image}}",
+    "style": {
+     "opacity": "{{param:show_image}}"
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.25,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "save_bg",
+    "kind": "box",
+    "box": {
+     "x": 57,
+     "y": 64,
+     "w": 17,
+     "h": 12
+    },
+    "style": {
+     "color": "{{param:highlight}}",
+     "radius_cqw": 3.4
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.8,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "save_text",
+    "kind": "stat",
+    "box": {
+     "x": 57,
+     "y": 67.98,
+     "w": 17
+    },
+    "style": {
+     "color": "{{param:background}}",
+     "size_cqw": 2.1,
+     "weight": 800,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.85,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "logo",
+    "kind": "image",
+    "box": {
+     "x": 6,
+     "y": 6.5,
+     "w": 4.4,
+     "h": 7.82
+    },
+    "fit": "contain",
+    "content_id": "{{param:logo}}",
+    "style": {
+     "opacity": "{{param:show_logo}}"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "brand",
+    "kind": "body",
+    "box": {
+     "x": 11.6,
+     "y": 8.7,
+     "w": 40
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 1.5,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.05,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "badge_bg",
+    "kind": "box",
+    "box": {
+     "x": 6,
+     "y": 19.5,
+     "w": 15,
+     "h": 5.6
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "radius_cqw": 1.6
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.15,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "badge",
+    "kind": "body",
+    "box": {
+     "x": 6,
+     "y": 20.75,
+     "w": 15
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 1.4,
+     "weight": 800,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.3,
+     "duration": 0.5,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "headline",
+    "kind": "head",
+    "box": {
+     "x": 6,
+     "y": 28.5,
+     "w": 41
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 3.9,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.3,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "was_price",
+    "kind": "body",
+    "box": {
+     "x": 6,
+     "y": 52,
+     "w": 46
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 2,
+     "weight": 500,
+     "font": "inter",
+     "opacity": 0.68
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.55,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "price",
+    "kind": "stat",
+    "box": {
+     "x": 5.4,
+     "y": 56.5,
+     "w": 50
+    },
+    "style": {
+     "color": "{{param:highlight}}",
+     "size_cqw": 11,
+     "weight": 700,
+     "font": "oswald"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.6,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "bar",
+    "kind": "box",
+    "box": {
+     "x": 0,
+     "y": 86,
+     "w": 100,
+     "h": 14
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.4,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "small_print",
+    "kind": "body",
+    "box": {
+     "x": 6,
+     "y": 90.9,
+     "w": 52
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 1,
+     "weight": 500,
+     "font": "inter",
+     "opacity": 0.92
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.9,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "countdown_label",
+    "kind": "body",
+    "box": {
+     "x": 62,
+     "y": 88.6,
+     "w": 32
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 1,
+     "weight": 800,
+     "font": "archivo",
+     "align": "right",
+     "opacity": "{{param:show_countdown}}"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 1,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "countdown",
+    "kind": "countdown",
+    "box": {
+     "x": 54,
+     "y": 91.2,
+     "w": 40
+    },
+    "target": "{{param:countdown_target}}",
+    "locale": "{{param:locale}}",
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 2.6,
+     "weight": 600,
+     "font": "oswald",
+     "align": "right",
+     "opacity": "{{param:show_countdown}}"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 1.05,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   }
+  ]
+ },
+ "fields": {
+  "brand": "{{param:brand}}",
+  "badge": "{{param:badge}}",
+  "headline": "{{param:headline}}",
+  "was_price": "{{param:was_price}}",
+  "price": "{{param:price}}",
+  "save_text": "{{param:save_text}}",
+  "countdown_label": "{{param:countdown_label}}",
+  "countdown": "{{param:countdown_done}}",
+  "small_print": "{{param:small_print}}"
+ }
+}

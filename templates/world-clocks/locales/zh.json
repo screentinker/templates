@@ -1,0 +1,80 @@
+{
+  "name": "世界时钟",
+  "description": "为你合作的城市显示二到八个实时时钟——指针、数字或两者兼有，并显示日期、昼夜提示以及与本屏幕的时差。可自动排成网格、竖屏列表或细长条。不获取任何数据：时间来自屏幕自己的时钟。",
+  "params": {
+    "title": {
+      "label": "标题",
+      "help": "留空则隐藏标题栏。",
+      "default": "世界时间"
+    },
+    "clocks": {
+      "label": "时钟",
+      "help": "每行一个时钟，格式为 城市 | IANA 时区，例如 孟买 | Asia/Kolkata。2 到 8 行；时区无法识别的行会被跳过，并列在屏幕底部。",
+      "default": "伦敦 | Europe/London\n纽约 | America/New_York\n东京 | Asia/Tokyo\n悉尼 | Australia/Sydney\n迪拜 | Asia/Dubai\n旧金山 | America/Los_Angeles"
+    },
+    "face": {
+      "label": "时钟样式",
+      "options": {
+        "both": "指针和数字",
+        "analog": "仅指针",
+        "digital": "仅数字"
+      }
+    },
+    "clock_format": {
+      "label": "时间格式",
+      "options": {
+        "24": "24 小时制",
+        "12": "12 小时制"
+      }
+    },
+    "show_seconds": {
+      "label": "显示秒"
+    },
+    "show_date": {
+      "label": "显示日期"
+    },
+    "show_daynight": {
+      "label": "显示白天和夜晚",
+      "help": "白天的城市显示浅色表盘和太阳；夜晚显示深色表盘和月亮。"
+    },
+    "day_start": {
+      "label": "白天开始于（时）"
+    },
+    "day_end": {
+      "label": "夜晚开始于（时）"
+    },
+    "highlight_local": {
+      "label": "突出显示本屏幕所在城市",
+      "help": "为时区与屏幕（或下方设置）相同的时钟加上边框。"
+    },
+    "home_timezone": {
+      "label": "本屏幕的时区",
+      "help": "用于突出显示和计算时差。留空则使用屏幕自己的设置。"
+    },
+    "here_label": {
+      "label": "突出显示时钟的标签",
+      "help": "留空则以屏幕语言显示“本地”。"
+    },
+    "day_label": {
+      "label": "白天标签",
+      "help": "显示在白天的城市上。留空则以屏幕语言显示“白天”。"
+    },
+    "night_label": {
+      "label": "夜晚标签",
+      "help": "显示在夜晚的城市上。留空则以屏幕语言显示“夜晚”。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "日期、上午/下午和屏幕文字的语言，例如 zh-CN、en-GB 或 ja-JP。留空则使用屏幕的语言。"
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "background": {
+      "label": "背景颜色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    }
+  }
+}

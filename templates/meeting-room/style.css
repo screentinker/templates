@@ -13,7 +13,7 @@
 html, body { margin: 0; height: 100%; overflow: hidden; }
 body {
   background: var(--bg); color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased; cursor: none;
 }
 [hidden] { display: none !important; }
@@ -38,8 +38,8 @@ body {
 .band > * { position: relative; }
 .band-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 3vmin; }
 .room {
-  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800; letter-spacing: -.01em; line-height: 1.05;
-  min-width: 0; flex: 1 1 auto; overflow: hidden; overflow-wrap: break-word;
+  font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 800; letter-spacing: -.01em; line-height: 1.05;
+  min-width: 0; flex: 1 1 auto; overflow: hidden; overflow-wrap: break-word; hyphens: auto;
   display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
 }
 .clockbox { flex: none; text-align: right; }
@@ -49,7 +49,7 @@ body {
 .state { margin: auto 0; padding: 2vmin 0; }
 .word-row { display: flex; align-items: center; gap: .1em; min-width: 0; }
 .word {
-  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 900; text-transform: uppercase;
+  font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 900; text-transform: uppercase;
   letter-spacing: -.02em; line-height: .9; white-space: nowrap;
 }
 .dot {
@@ -58,7 +58,7 @@ body {
   align-self: center; margin-right: .06em;
 }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.55); } 70%, 100% { box-shadow: 0 0 0 .22em rgba(255,255,255,0); } }
-.detail { font-weight: 600; opacity: .95; margin-top: .5em; }
+.detail { font-weight: 600; opacity: .95; margin-top: .5em; overflow-wrap: break-word; hyphens: auto; }
 
 .now {
   border-top: 2px solid rgba(255,255,255,.28);
@@ -67,8 +67,9 @@ body {
   font-weight: 700; text-transform: uppercase; letter-spacing: .14em; opacity: .75;
 }
 .now-title, .card-title {
-  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 700; line-height: 1.12; letter-spacing: -.01em;
+  font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 700; line-height: 1.12; letter-spacing: -.01em;
   overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  overflow-wrap: break-word; hyphens: auto;
 }
 .meta { font-weight: 500; opacity: .82; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
 .meta .sep { opacity: .5; margin: 0 .5em; }
@@ -107,6 +108,15 @@ body {
   position: absolute; right: 2vmin; bottom: 2vmin; font-size: 1.5vmin; font-weight: 600; letter-spacing: .04em;
   padding: .45em 1em; border-radius: 99em; background: rgba(255,255,255,.08); opacity: .7;
 }
+
+/* ---------- languages ---------- */
+/* Chinese: Simplified glyphs first (the Japanese CJK face otherwise wins for shared characters). */
+:lang(zh) body { font-family: 'Inter', "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK JP", "Noto Sans Devanagari", system-ui, sans-serif; }
+:lang(zh) .room, :lang(zh) .word, :lang(zh) .now-title, :lang(zh) .card-title { font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK JP", "Noto Sans Devanagari", system-ui, sans-serif; }
+/* Wide letter-spacing and capitals are a Latin habit: CJK and Devanagari read better without them. */
+:lang(ja) .kicker, :lang(zh) .kicker, :lang(hi) .kicker,
+:lang(ja) .item.current .title::after, :lang(zh) .item.current .title::after, :lang(hi) .item.current .title::after { letter-spacing: .02em; }
+:lang(ja) .word, :lang(zh) .word, :lang(hi) .word { letter-spacing: 0; line-height: 1.1; }
 
 /* ================= portrait door sign (e.g. 1080x1920) ================= */
 body.portrait .app { grid-template-rows: 55% 45%; }

@@ -5,9 +5,13 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; overflow: hidden; }
 body {
-  color: #fff; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; cursor: none;
+  color: #fff; -webkit-font-smoothing: antialiased; cursor: none;
+  /* Inter is a Latin subset: Japanese, Chinese and Hindi fall through to the player's Noto fonts. */
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
   background: #0E1A2B;
 }
+:lang(zh) body { font-family: 'Inter', "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK JP", "Noto Sans Devanagari", system-ui, sans-serif; }
+.place, .cond, .waiting { overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
 
 /* ---------- the sky ---------- */
 .sky { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(165deg, var(--top) 0%, var(--bottom) 100%); transition: background 2s; }
@@ -68,6 +72,28 @@ body {
 .range { position: relative; flex: 1; height: .8vh; border-radius: 1vh; background: rgba(255,255,255,.18); }
 .range i { position: absolute; top: 0; bottom: 0; border-radius: 1vh; background: linear-gradient(90deg, #7FD3FF, var(--accent)); }
 .rain { font-size: 1.8vh; font-weight: 600; opacity: .75; }
+
+/* ---------- portrait zones: stack the reading, one forecast row per day ---------- */
+@media (max-aspect-ratio: 1/1) {
+  .top { flex-direction: column; top: 4vh; }
+  .place { font-size: 4.4vh; }
+  .date { font-size: 1.8vh; }
+  .clock { font-size: 4.6vh; margin-top: 1.2vh; }
+  .now { top: 20vh; left: 6vw; height: auto; flex-direction: column; align-items: flex-start; gap: 1vh; }
+  .bigicon { width: 14vh; height: 14vh; }
+  .temp { font-size: 11vh; }
+  .unit { font-size: 3vh; margin-top: 2vh; }
+  .deg { margin-top: 1.4vh; }
+  .cond { font-size: 3.6vh; }
+  .chips { margin-top: 1.8vh; gap: 1vh 2vw; }
+  .chip { font-size: 1.7vh; }
+  .days { bottom: 4vh; height: 30vh; flex-direction: column; gap: 1vh; }
+  .day { flex-direction: row; padding: 0 4vw; border-radius: 1.6vh; gap: 3vw; }
+  .dname { width: 12vw; font-size: 2vh; }
+  .dicon { width: 4.6vh; height: 4.6vh; flex: none; }
+  .hl { flex: 1; font-size: 2vh; }
+  .rain { width: 22vw; text-align: right; font-size: 1.6vh; }
+}
 
 /* ---------- icon parts ---------- */
 .spin { transform-box: fill-box; transform-origin: center; animation: spin 40s linear infinite; }

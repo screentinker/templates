@@ -1,0 +1,70 @@
+{
+  "name": "Recensione cliente",
+  "description": "Una recensione sullo schermo: le stelle, le parole del cliente in un caldo carattere con grazie, nome e avatar con le iniziali, più il tuo punteggio complessivo. Per vetrine, showroom, reception e sale d’attesa.",
+  "params": {
+    "eyebrow": {
+      "label": "Titoletto",
+      "default": "COSA DICONO I NOSTRI CLIENTI"
+    },
+    "rating": {
+      "label": "Valutazione in stelle",
+      "options": {
+        "tpl:stars/5.svg": "5 stelle",
+        "tpl:stars/4.5.svg": "4½ stelle",
+        "tpl:stars/4.svg": "4 stelle",
+        "tpl:stars/3.svg": "3 stelle",
+        "tpl:stars/none.svg": "Nascondi le stelle"
+      }
+    },
+    "quote": {
+      "label": "Recensione",
+      "help": "Le parole del cliente, senza virgolette. Fino a circa 220 caratteri; più breve si legge meglio.",
+      "default": "Hanno montato tutta la cucina in quattro giorni, lasciato la casa pulitissima e sono tornati dopo una settimana per controllare ogni cassetto. Li abbiamo già consigliati a due vicini."
+    },
+    "name": {
+      "label": "Nome del cliente",
+      "help": "Solo con il permesso del cliente."
+    },
+    "detail": {
+      "label": "Dettaglio sul cliente",
+      "help": "Cosa ha acquistato, da dove viene o «Cliente verificato».",
+      "default": "Ristrutturazione cucina · Riverside"
+    },
+    "initials": {
+      "label": "Iniziali nell’avatar"
+    },
+    "show_score": {
+      "label": "Mostra il punteggio complessivo",
+      "help": "Disattivato nasconde il punteggio grande e la sua didascalia."
+    },
+    "score": {
+      "label": "Punteggio complessivo",
+      "help": "La tua valutazione media, ad es. 4,9. Usa un dato reale.",
+      "default": "4,9"
+    },
+    "score_caption": {
+      "label": "Didascalia del punteggio",
+      "default": "media su 1.240 recensioni verificate"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattivato nasconde il logo e il suo spazio resta vuoto."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG con sfondo trasparente. Quello di esempio è bianco per il pannello colorato (orizzontale) o scuro per la pagina (verticale)."
+    },
+    "accent": {
+      "label": "Colore d’accento",
+      "help": "Il pannello laterale (orizzontale) o inferiore (verticale), l’avatar e il titoletto."
+    },
+    "background": {
+      "label": "Colore di sfondo",
+      "help": "La pagina. Anche le iniziali nell’avatar sono disegnate in questo colore."
+    },
+    "text_color": {
+      "label": "Colore del testo",
+      "help": "La recensione e il nome."
+    }
+  }
+}

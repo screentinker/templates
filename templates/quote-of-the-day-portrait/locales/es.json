@@ -1,0 +1,66 @@
+{
+  "name": "Frase del día (vertical)",
+  "description": "Una pantalla de citas tipográfica: una gran frase en letra serif, quién la dijo y dónde, con la fecha en vivo en tu idioma. Para un vestíbulo, la sala de descanso, un pasillo escolar o la pantalla junto a la cafetera. Diseño vertical 9:16.",
+  "params": {
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "Una etiqueta corta sobre la cita. Mejor en mayúsculas.",
+      "default": "FRASE DEL DÍA"
+    },
+    "quote": {
+      "label": "Cita",
+      "help": "Sin comillas: la comilla grande se dibuja sola. Hasta unos 130 caracteres.",
+      "default": "No es que tengamos poco tiempo, sino que perdemos mucho."
+    },
+    "attribution": {
+      "label": "Quién lo dijo",
+      "default": "Séneca"
+    },
+    "attribution_detail": {
+      "label": "Fuente o cargo",
+      "help": "Un libro, un cargo o un año. Déjalo vacío para ocultarlo.",
+      "default": "Sobre la brevedad de la vida, c. 49 d. C."
+    },
+    "show_date": {
+      "label": "Mostrar la fecha de hoy",
+      "help": "La fecha en vivo de la pantalla, en el idioma y la zona horaria de abajo."
+    },
+    "date_format": {
+      "label": "Estilo de fecha",
+      "options": {
+        "weekday": "Día de la semana, día y mes",
+        "long": "Fecha completa con año",
+        "short": "Fecha corta",
+        "numeric": "Solo números"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria de la fecha",
+      "help": "En qué zona horaria es «hoy». Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma de la fecha, p. ej. es-ES, es-MX o fr-CA. Déjalo vacío para usar el idioma de la pantalla."
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactivado oculta el logotipo y su espacio queda vacío."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG con fondo transparente, en un color claro para el fondo oscuro predeterminado."
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "La comilla grande, el encabezado pequeño, la línea y la decoración."
+    },
+    "background": {
+      "label": "Color de fondo",
+      "help": "Detrás de todo."
+    },
+    "text_color": {
+      "label": "Color del texto",
+      "help": "La cita y el nombre."
+    }
+  }
+}

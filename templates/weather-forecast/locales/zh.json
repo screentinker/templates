@@ -1,0 +1,68 @@
+{
+  "name": "天气预报",
+  "description": "从您的某个天气数据源获取当前天气和五天预报。天气由您的服务器自行获取，模板只负责排版。",
+  "params": {
+    "weather": {
+      "label": "天气数据源",
+      "help": "类型为“天气”的数据源（数据源 → 新建 → 天气）。地点、单位和语言都在那里设置。"
+    },
+    "location": {
+      "label": "地点名称",
+      "default": "本地天气",
+      "help": "标题，通常是城市或站点名称。"
+    },
+    "units_label": {
+      "label": "温度后缀",
+      "help": "显示在每个温度后面：单独的 °，或与数据源一致的 °C / °F。"
+    },
+    "feels_like_label": {
+      "label": "“体感”标签",
+      "help": "显示在体感温度前。",
+      "default": "体感"
+    },
+    "humidity_label": {
+      "label": "“湿度”标签",
+      "help": "显示在湿度前。",
+      "default": "湿度"
+    },
+    "today_label": {
+      "label": "“今天”标签",
+      "help": "显示在今天的最高和最低气温前。",
+      "default": "今天"
+    },
+    "precip_label": {
+      "label": "“降水概率”标签",
+      "help": "显示在今天的降水概率前。",
+      "default": "降水概率"
+    },
+    "updated_label": {
+      "label": "“更新于”标签",
+      "help": "显示在最近一次读数的时间前。",
+      "default": "更新于"
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    },
+    "timezone": {
+      "label": "时钟时区",
+      "help": "留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "日期的语言，例如 zh-CN 或 en-US。留空则使用屏幕的语言。预报中的星期名称和天气描述来自数据源。"
+    },
+    "clock_format": {
+      "label": "时钟格式",
+      "options": {
+        "24": "24 小时制",
+        "12": "12 小时制"
+      }
+    }
+  }
+}

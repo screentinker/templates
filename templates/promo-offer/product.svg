@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <!-- Placeholder product: a pair of headphones drawn for this template (original work, MIT). -->
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4A505B"/>
+      <stop offset="0.45" stop-color="#262A31"/>
+      <stop offset="1" stop-color="#121418"/>
+    </linearGradient>
+    <linearGradient id="shellR" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3C414B"/>
+      <stop offset="0.5" stop-color="#22262C"/>
+      <stop offset="1" stop-color="#0F1114"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E3238"/>
+      <stop offset="1" stop-color="#16181C"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3F48"/>
+      <stop offset="1" stop-color="#1A1D22"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9AA1AC"/>
+      <stop offset="0.5" stop-color="#E4E8EE"/>
+      <stop offset="1" stop-color="#8A919C"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8B184"/>
+      <stop offset="1" stop-color="#A9643A"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#000" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="300" cy="548" rx="230" ry="26" fill="url(#shadow)"/>
+
+  <!-- headband -->
+  <path d="M128 330 C 118 120, 482 120, 472 330" fill="none" stroke="url(#band)" stroke-width="40" stroke-linecap="round"/>
+  <path d="M146 300 C 146 150, 454 150, 454 300" fill="none" stroke="#0E1013" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+  <path d="M170 196 C 230 128, 370 128, 430 196" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.18"/>
+
+  <!-- sliders -->
+  <rect x="117" y="300" width="22" height="78" rx="8" fill="url(#metal)"/>
+  <rect x="461" y="300" width="22" height="78" rx="8" fill="url(#metal)"/>
+
+  <!-- left cup -->
+  <rect x="62" y="350" width="104" height="186" rx="50" fill="url(#shell)"/>
+  <rect x="150" y="362" width="52" height="162" rx="26" fill="url(#pad)"/>
+  <rect x="80" y="372" width="10" height="142" rx="5" fill="url(#copper)"/>
+  <path d="M100 372 C 92 400, 92 486, 100 514" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.16"/>
+
+  <!-- right cup -->
+  <rect x="434" y="350" width="104" height="186" rx="50" fill="url(#shellR)"/>
+  <rect x="398" y="362" width="52" height="162" rx="26" fill="url(#pad)"/>
+  <rect x="510" y="372" width="10" height="142" rx="5" fill="url(#copper)"/>
+  <circle cx="486" cy="420" r="7" fill="#6FE3B4"/>
+  <path d="M500 372 C 508 400, 508 486, 500 514" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.12"/>
+</svg>

@@ -1,0 +1,55 @@
+{
+  "name": "Nieuwsticker",
+  "description": "Koppen als wisselend hoofdbericht plus een vloeiend lopende ticker. Typ ze zelf of koppel een RSS-feed, Google Sheet, CSV of tabel. Schermvullend toont hij beide, in een smalle strook een tickerbalk en in een hoge zone een verticale ticker. Het scherm haalt niets op, dus het werkt offline.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "default": "Laatste nieuws"
+    },
+    "feed": {
+      "label": "Gegevensbron voor koppen (optioneel)",
+      "help": "Een RSS-/Atom-feed, Google Sheet, CSV of tabel. Zodra die koppen heeft, vervangen ze de getypte lijst; tot dan wordt de lijst getoond."
+    },
+    "column": {
+      "label": "Kolom met koppen (Sheet, CSV of tabel)",
+      "help": "De kop van de kolom met de koppen. Heeft geen kolom deze naam, dan wordt de eerste kolom gebruikt. Niet van toepassing op RSS-feeds.",
+      "default": "Kop"
+    },
+    "headlines": {
+      "label": "Koppen (zonder gegevensbron)",
+      "help": "Eén kop per regel. Lege regels worden genegeerd. Ook getoond zolang een gekoppelde gegevensbron leeg is.",
+      "default": "Northwind opent op 6 oktober zijn nieuwe studio aan de rivier\nKwartaalbijeenkomst verhuist naar het atrium – deuren 16:30\nProficiat, supportteam: 98% tevredenheid dit kwartaal\nParkeerterrein oost tot vrijdag dicht wegens asfaltwerk\nNieuwe fietsenstalling achter gebouw B, met e-bike-laders\nLunch & learn donderdag: toegankelijk ontwerpen"
+    },
+    "max_items": {
+      "label": "Maximaal tonen",
+      "help": "Koppen boven dit aantal worden niet getoond."
+    },
+    "speed": {
+      "label": "Tickersnelheid",
+      "help": "Pixels per seconde op een scherm van 1080 pixels hoog. Schaalt mee met het scherm."
+    },
+    "rotate_seconds": {
+      "label": "Seconden per hoofdbericht"
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "show_clock": {
+      "label": "Klok tonen"
+    },
+    "timezone": {
+      "label": "Tijdzone van de klok",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de datum en de ingebouwde woorden, bijvoorbeeld nl of en-GB. Laat leeg voor de taal van het scherm."
+    }
+  }
+}

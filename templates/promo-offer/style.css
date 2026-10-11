@@ -1,0 +1,379 @@
+/* Promo offer — ScreenTinker community template. MIT. Fonts: Inter, Archivo, Oswald, Bitter — SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Inter'; font-weight: 400 800; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+@font-face { font-family: 'Archivo'; font-weight: 400 800; font-style: normal; src: url(fonts/archivo.woff2) format('woff2'); }
+@font-face { font-family: 'Oswald'; font-weight: 300 700; font-style: normal; src: url(fonts/oswald.woff2) format('woff2'); }
+@font-face { font-family: 'Bitter'; font-weight: 400 800; font-style: normal; src: url(fonts/bitter.woff2) format('woff2'); }
+
+/* ---------- palettes (the style select) ---------- */
+:root, body[data-style="bold"] {
+  --bg: #D0102F; --bg2: #7A0A1F;
+  --ink: #FFFFFF; --muted: rgba(255,255,255,.80); --line: rgba(255,255,255,.22);
+  --accent: #FFD23F;
+  --badge-bg: #FFD23F; --badge-ink: #2A0710;
+  --tile-bg: rgba(0,0,0,.24); --tile-ink: #FFFFFF; --tile-line: rgba(255,255,255,.14);
+  --disc: rgba(255,255,255,.10); --disc-line: rgba(255,255,255,.18);
+  --eyebrow-bg: #1C0409; --eyebrow-ink: #FFD23F;
+  --display: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  --numeric: 'Oswald', 'Archivo', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  --head-weight: 800; --head-case: uppercase; --head-track: -.01em; --head-lh: .96;
+  --price-weight: 700;
+}
+body[data-style="minimal"] {
+  --bg: #F5F3EF; --bg2: #ECE8E1;
+  --ink: #151515; --muted: #5C5A57; --line: #DAD5CC;
+  --accent: #151515;
+  --badge-bg: #E4572E; --badge-ink: #FFFFFF;
+  --tile-bg: #FFFFFF; --tile-ink: #151515; --tile-line: #E1DCD3;
+  --disc: #E8E3DA; --disc-line: transparent;
+  --eyebrow-bg: transparent; --eyebrow-ink: #E4572E;
+  --display: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  --numeric: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  --head-weight: 700; --head-case: none; --head-track: -.035em; --head-lh: 1.0;
+  --price-weight: 700;
+}
+body[data-style="cafe"] {
+  --bg: #F3E7D3; --bg2: #E6D1AF;
+  --ink: #3B2416; --muted: #6E5140; --line: rgba(59,36,22,.2);
+  --accent: #B4502A;
+  --badge-bg: #3B2416; --badge-ink: #F6EAD6;
+  --tile-bg: #3B2416; --tile-ink: #F6EAD6; --tile-line: transparent;
+  --disc: #E5CFA9; --disc-line: rgba(59,36,22,.25);
+  --eyebrow-bg: transparent; --eyebrow-ink: #B4502A;
+  --display: 'Bitter', Georgia, "Noto Serif", "Noto Serif CJK JP", serif;
+  --numeric: 'Bitter', Georgia, "Noto Serif", "Noto Serif CJK JP", serif;
+  --head-weight: 700; --head-case: none; --head-track: -.01em; --head-lh: 1.02;
+  --price-weight: 800;
+}
+
+:root {
+  /* One unit for every shape: 1% of the height, but at most 0.9% of the width (portrait).
+     --k is lowered by app.js when unusually long text would not otherwise fit. */
+  --k: 1;
+  --u: calc(min(1vh, 0.9vw) * var(--k));
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+[hidden] { display: none !important; }
+/* Long words (German) break at syllables in the page's language; CJK and Devanagari wrap by the
+   browser's own rules once <html lang> is set. */
+.headline, .offer, .fallback-text, .fine, .ended-text, .timer-label, .end-date, .qr-label, .badge span { hyphens: auto; -webkit-hyphens: auto; }
+.offer, .fine, .fallback-text, .qr-label, .end-date { overflow-wrap: break-word; }
+/* Japanese/Chinese: never start a line with a small kana or a closing mark (line-break: strict). In
+   the small boxes, break between phrases where the browser can (word-break: auto-phrase). The headline
+   keeps per-character breaking: a phrase wider than the column would leave one kana alone on a line. */
+body { line-break: strict; }
+.badge span, .qr-label, .ended-text { word-break: auto-phrase; }
+
+/* ---------- background ---------- */
+.bg { position: absolute; inset: 0; overflow: hidden; background: linear-gradient(135deg, var(--bg) 0%, var(--bg) 45%, var(--bg2) 100%); }
+.deco { position: absolute; inset: 0; }
+body[data-style="bold"] .deco {
+  background:
+    repeating-linear-gradient(-55deg, rgba(255,255,255,.045) 0 2.2vmin, transparent 2.2vmin 4.4vmin),
+    radial-gradient(70vmax 60vmax at 78% 50%, rgba(255,255,255,.12), transparent 60%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 30%, #000 70%);
+          mask-image: linear-gradient(90deg, transparent 30%, #000 70%);
+}
+body[data-style="bold"].portrait .deco {
+  -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent 55%);
+          mask-image: linear-gradient(180deg, #000 20%, transparent 55%);
+}
+body[data-style="minimal"] .bg { background: var(--bg); }
+body[data-style="cafe"] .deco {
+  background:
+    radial-gradient(circle, rgba(59,36,22,.10) 0.16vmin, transparent 0.2vmin) 0 0 / 2.6vmin 2.6vmin,
+    radial-gradient(80vmax 60vmax at 15% 0%, rgba(255,255,255,.45), transparent 60%);
+}
+
+/* ---------- layout: landscape ---------- */
+.promo {
+  position: absolute; inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas: "copy visual" "fine visual";
+  column-gap: calc(var(--u) * 4);
+  padding: calc(var(--u) * 6) calc(var(--u) * 6.5) calc(var(--u) * 4.2);
+}
+.copy {
+  grid-area: copy; min-width: 0; min-height: 0; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+}
+.visual { grid-area: visual; position: relative; min-width: 0; min-height: 0; }
+.fine { grid-area: fine; }
+
+/* ---------- copy ---------- */
+.eyebrow {
+  display: inline-block; flex: none;
+  font-family: var(--display); font-weight: 800;
+  font-size: calc(var(--u) * 2.5); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--eyebrow-ink); background: var(--eyebrow-bg);
+  padding: .5em .95em .45em; border-radius: .3em;
+  margin-bottom: calc(var(--u) * 2.6);
+  max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transform: rotate(-1.5deg); transform-origin: left center;
+}
+body[data-style="minimal"] .eyebrow, body[data-style="cafe"] .eyebrow { padding: 0; transform: none; letter-spacing: .2em; }
+body[data-style="minimal"] .eyebrow { font-weight: 700; }
+body[data-style="cafe"] .eyebrow { font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 700; }
+body[data-style="cafe"] .eyebrow::before, body[data-style="cafe"] .eyebrow::after { content: '\2014'; margin: 0 .5em; opacity: .55; }
+body[data-style="cafe"] .eyebrow::before { margin-left: 0; }
+.eyebrow:empty { display: none; }
+
+.headline {
+  margin: 0; flex: none; max-width: 100%;
+  font-family: var(--display); font-weight: var(--head-weight);
+  text-transform: var(--head-case); letter-spacing: var(--head-track); line-height: var(--head-lh);
+  font-size: calc(var(--u) * 10);
+  overflow-wrap: break-word;
+}
+.offer {
+  margin: calc(var(--u) * 2.4) 0 0; flex: none; max-width: 34em;
+  font-size: calc(var(--u) * 2.9); line-height: 1.32; color: var(--muted);
+}
+.offer:empty { display: none; }
+
+.price-row {
+  display: flex; align-items: baseline; flex-wrap: wrap; column-gap: calc(var(--u) * 3);
+  margin-top: calc(var(--u) * 3.2); flex: none; max-width: 100%;
+}
+.price {
+  font-family: var(--numeric); font-weight: var(--price-weight);
+  font-size: calc(var(--u) * 14); line-height: .92; letter-spacing: -.01em;
+  color: var(--accent); white-space: nowrap; font-variant-numeric: lining-nums;
+}
+.price .cur { font-size: .52em; vertical-align: .62em; margin: 0 .04em; }
+.price .frac { font-size: .46em; vertical-align: .9em; margin-left: .04em; }
+.price .frac .dec { display: none; }
+body[data-style="minimal"] .price .frac .dec, body[data-style="cafe"] .price .frac .dec { display: inline; }
+body[data-style="minimal"] .price .frac, body[data-style="cafe"] .price .frac { font-size: 1em; vertical-align: baseline; margin-left: 0; }
+.price.text { font-size: calc(var(--u) * 9); white-space: normal; }
+.was {
+  font-family: var(--numeric); font-weight: 500;
+  font-size: calc(var(--u) * 5.4); color: var(--muted); white-space: nowrap;
+  position: relative;
+}
+.was::after {
+  content: ''; position: absolute; left: -.08em; right: -.08em; top: 52%; height: .085em;
+  background: currentColor; transform: rotate(-8deg); border-radius: .05em;
+}
+body[data-style="bold"] .was::after { background: var(--accent); }
+.was:empty { display: none; }
+.price-row.ended { opacity: .45; }
+
+.deal { display: flex; align-items: flex-end; justify-content: space-between; gap: calc(var(--u) * 4); width: 100%; flex: none; }
+.deal-main { min-width: 0; }
+.deal .qr-card { position: static; flex: none; }
+
+/* ---------- countdown ---------- */
+.timer { margin-top: calc(var(--u) * 4); flex: none; display: flex; align-items: center; gap: calc(var(--u) * 2.4); flex-wrap: wrap; }
+.timer-label {
+  font-weight: 700; font-size: calc(var(--u) * 2.2); letter-spacing: .18em; text-transform: uppercase;
+  color: var(--muted); max-width: 10em;
+}
+.timer-label:empty { display: none; }
+.tiles { display: flex; gap: calc(var(--u) * 1.1); }
+.tile {
+  min-width: calc(var(--u) * 10.4); padding: calc(var(--u) * 1.1) calc(var(--u) * 1.2) calc(var(--u) * 1.0);
+  background: var(--tile-bg); color: var(--tile-ink);
+  border: 1px solid var(--tile-line); border-radius: calc(var(--u) * 1.2);
+  text-align: center;
+}
+.tile .n {
+  display: block; font-family: var(--numeric); font-weight: 600;
+  font-size: calc(var(--u) * 6.2); line-height: 1; font-variant-numeric: tabular-nums;
+}
+.tile .l {
+  display: block; margin-top: calc(var(--u) * .6);
+  font-size: calc(var(--u) * 1.55); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; opacity: .72;
+  white-space: nowrap;
+}
+body[data-style="minimal"] .tile .n { font-weight: 600; letter-spacing: -.02em; }
+.ended-text {
+  font-family: var(--display); font-weight: 700; font-size: calc(var(--u) * 4);
+  padding: .35em .8em; border-radius: .3em;
+  background: var(--tile-bg); color: var(--tile-ink);
+}
+.end-date { margin-top: calc(var(--u) * 1.8); font-size: calc(var(--u) * 2.2); color: var(--muted); flex: none; }
+.end-date:empty { display: none; }
+
+/* ---------- visual ---------- */
+.disc {
+  position: absolute; left: 50%; top: 47%;
+  width: min(100%, 86vh); aspect-ratio: 1 / 1; height: auto;
+  transform: translate(-50%, -50%);
+  border-radius: 50%; background: var(--disc);
+  box-shadow: inset 0 0 0 calc(var(--u) * .35) var(--disc-line);
+}
+@supports not (aspect-ratio: 1 / 1) { .disc { height: min(100%, 86vh); width: auto; padding-left: min(100%, 86vh); } }
+body[data-style="bold"] .disc { box-shadow: 0 0 0 calc(var(--u) * 2.2) rgba(255,255,255,.05), inset 0 0 0 calc(var(--u) * .35) var(--disc-line); }
+body[data-style="cafe"] .disc { box-shadow: 0 0 0 calc(var(--u) * 1.6) var(--bg), 0 0 0 calc(var(--u) * 1.85) var(--disc-line); }
+.no-image .disc { display: none; }
+.product {
+  position: absolute; left: 50%; top: 47%;
+  width: 84%; height: 84%; object-fit: contain;
+  transform: translate(-50%, -50%) rotate(-6deg);
+  filter: drop-shadow(0 calc(var(--u) * 2) calc(var(--u) * 2.5) rgba(0,0,0,.28));
+}
+body[data-style="minimal"] .product { transform: translate(-50%, -50%); filter: drop-shadow(0 calc(var(--u) * 1.4) calc(var(--u) * 2) rgba(0,0,0,.14)); }
+
+.badge {
+  position: absolute; left: 2%; top: 4%;
+  width: calc(var(--u) * 19); height: calc(var(--u) * 19);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  border-radius: 50%; background: var(--badge-bg); color: var(--badge-ink);
+  transform: rotate(-12deg);
+  box-shadow: 0 calc(var(--u) * .8) calc(var(--u) * 2.2) rgba(0,0,0,.22);
+}
+.badge span {
+  display: block; padding: 0 12%;
+  font-family: var(--display); font-weight: 800; font-size: calc(var(--u) * 3.8); line-height: 1.02;
+  text-transform: uppercase; letter-spacing: -.01em;
+}
+body[data-style="bold"] .badge {
+  /* a sixteen-point starburst */
+  border-radius: 0;
+  clip-path: polygon(
+    50% 0%, 57.8% 10.8%, 69.1% 3.8%, 72.8% 16.6%, 85.4% 14.6%, 83.4% 27.2%, 96.2% 30.9%, 89.2% 42.2%,
+    100% 50%, 89.2% 57.8%, 96.2% 69.1%, 83.4% 72.8%, 85.4% 85.4%, 72.8% 83.4%, 69.1% 96.2%, 57.8% 89.2%,
+    50% 100%, 42.2% 89.2%, 30.9% 96.2%, 27.2% 83.4%, 14.6% 85.4%, 16.6% 72.8%, 3.8% 69.1%, 10.8% 57.8%,
+    0% 50%, 10.8% 42.2%, 3.8% 30.9%, 16.6% 27.2%, 14.6% 14.6%, 27.2% 16.6%, 30.9% 3.8%, 42.2% 10.8%
+  );
+  box-shadow: none;
+}
+body[data-style="minimal"] .badge { border-radius: calc(var(--u) * 1); width: auto; height: auto; padding: calc(var(--u) * 1.6) calc(var(--u) * 2.2); transform: none; left: 0; top: 2%; box-shadow: none; }
+body[data-style="minimal"] .badge span { padding: 0; font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 700; text-transform: none; font-size: calc(var(--u) * 3.4); white-space: nowrap; }
+body[data-style="cafe"] .badge { box-shadow: inset 0 0 0 calc(var(--u) * .7) var(--badge-bg), inset 0 0 0 calc(var(--u) * .95) var(--badge-ink); }
+body[data-style="cafe"] .badge span { font-family: 'Bitter', Georgia, "Noto Serif", "Noto Serif CJK JP", serif; text-transform: none; font-size: calc(var(--u) * 3.6); }
+
+.qr-card {
+  position: absolute; right: 0; bottom: 0;
+  display: flex; flex-direction: column; align-items: center;
+  padding: calc(var(--u) * 1.3) calc(var(--u) * 1.3) calc(var(--u) * 1.1);
+  background: #FFFFFF; color: #141414; border-radius: calc(var(--u) * 1.4);
+  box-shadow: 0 calc(var(--u) * .8) calc(var(--u) * 2.4) rgba(0,0,0,.20);
+}
+body[data-style="minimal"] .qr-card { box-shadow: 0 0 0 1px var(--line); }
+.qr { width: calc(var(--u) * 16); height: calc(var(--u) * 16); }
+.qr svg { display: block; width: 100%; height: 100%; }
+.qr-label {
+  margin-top: calc(var(--u) * .7); max-width: calc(var(--u) * 16);
+  font-weight: 700; font-size: calc(var(--u) * 1.8); text-align: center; line-height: 1.15;
+}
+.qr-label:empty { display: none; }
+
+/* ---------- fine print ---------- */
+.fine {
+  margin-top: calc(var(--u) * 2.4); max-width: 60em;
+  font-size: calc(var(--u) * 1.65); line-height: 1.4; color: var(--muted); opacity: .85;
+}
+.fine:empty { display: none; }
+
+/* ---------- text-only (no image) ---------- */
+body.no-visual .promo { grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy" "fine"; }
+body.no-visual .visual { display: none; }
+body.no-visual .headline { font-size: calc(var(--u) * 12); }
+body.no-visual .offer { max-width: 40em; font-size: calc(var(--u) * 3.4); }
+/* With nothing beside it the copy has the whole screen: scale the deal up to fill it. */
+body.no-visual .price { font-size: calc(var(--u) * 20); }
+body.no-visual .was { font-size: calc(var(--u) * 7); }
+body.no-visual .tile { min-width: calc(var(--u) * 13); }
+body.no-visual .tile .n { font-size: calc(var(--u) * 8.4); }
+body.no-visual .tile .l { font-size: calc(var(--u) * 1.9); }
+body.no-visual .timer-label, body.no-visual .end-date { font-size: calc(var(--u) * 2.6); }
+body.no-image:not(.no-visual) .badge { left: auto; right: 0; top: 4%; }
+
+/* ---------- portrait ---------- */
+body.portrait .promo {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 40fr) minmax(0, 60fr) auto;
+  grid-template-areas: "visual" "copy" "fine";
+  padding: calc(var(--u) * 7) calc(var(--u) * 7) calc(var(--u) * 6);
+}
+body.portrait .copy { justify-content: center; padding-top: calc(var(--u) * 3); }
+body.portrait .disc { width: auto; height: 100%; top: 50%; }
+@supports not (aspect-ratio: 1 / 1) { body.portrait .disc { padding-left: 0; width: 70vw; height: 70vw; } }
+body.portrait .product { top: 50%; width: 92%; height: 92%; }
+body.portrait .headline { font-size: calc(var(--u) * 11.5); }
+body.portrait .offer { font-size: calc(var(--u) * 3.4); }
+body.portrait .eyebrow { font-size: calc(var(--u) * 2.9); }
+body.portrait .price { font-size: calc(var(--u) * 17); }
+body.portrait .was { font-size: calc(var(--u) * 6.4); }
+body.portrait .timer-label { font-size: calc(var(--u) * 2.6); }
+body.portrait .tile { min-width: calc(var(--u) * 12.5); }
+body.portrait .tile .n { font-size: calc(var(--u) * 7.4); }
+body.portrait .tile .l { font-size: calc(var(--u) * 1.85); }
+body.portrait .end-date { font-size: calc(var(--u) * 2.6); }
+body.portrait .fine { font-size: calc(var(--u) * 2.1); }
+body.portrait .badge { width: calc(var(--u) * 22); height: calc(var(--u) * 22); left: 0; top: 0; }
+body.portrait .badge span { font-size: calc(var(--u) * 4.4); }
+body.portrait .qr { width: calc(var(--u) * 19); height: calc(var(--u) * 19); }
+body.portrait .qr-label { font-size: calc(var(--u) * 2.1); max-width: calc(var(--u) * 19); }
+body.portrait.no-visual .headline { font-size: calc(var(--u) * 14); }
+body.portrait.no-visual .price { font-size: calc(var(--u) * 24); }
+body.portrait.no-visual .offer { font-size: calc(var(--u) * 4.2); }
+body.portrait.no-visual .tile .n { font-size: calc(var(--u) * 9.6); }
+body.portrait.no-visual .tile { min-width: calc(var(--u) * 15); }
+body.portrait.no-visual .promo { grid-template-rows: minmax(0, 1fr) auto; grid-template-areas: "copy" "fine"; }
+
+/* ---------- a thin strip: one row ---------- */
+body.strip { --s: min(1vh, 0.25vw); }
+body.strip .promo { display: flex; align-items: center; gap: calc(var(--s) * 7); padding: calc(var(--s) * 9) calc(var(--s) * 10); }
+body.strip .copy { flex: 1 1 auto; flex-direction: row; align-items: center; gap: calc(var(--s) * 7); justify-content: flex-start; height: 100%; }
+body.strip .copy > *, body.strip .deal-main > * { margin: 0; }
+body.strip .deal, body.strip .deal-main { display: contents; }
+body.strip .eyebrow { font-size: calc(var(--s) * 9); margin: 0; flex: none; }
+body.strip .headline { flex: 0 1 auto; min-width: 0; font-size: calc(var(--s) * 26); line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.strip .offer, body.strip .end-date, body.strip .fine { display: none; }
+body.strip .price-row { margin-left: auto; flex: none; flex-wrap: nowrap; column-gap: calc(var(--s) * 5); }
+body.strip .price { font-size: calc(var(--s) * 44); }
+body.strip .price.text { font-size: calc(var(--s) * 26); white-space: nowrap; }
+body.strip .was { font-size: calc(var(--s) * 18); }
+body.strip .timer { flex: none; flex-wrap: nowrap; gap: calc(var(--s) * 4); }
+body.strip .timer-label { font-size: calc(var(--s) * 8); max-width: 6em; }
+body.strip .tiles { gap: calc(var(--s) * 3); }
+body.strip .tile { min-width: calc(var(--s) * 34); padding: calc(var(--s) * 4) calc(var(--s) * 4) calc(var(--s) * 3.5); border-radius: calc(var(--s) * 5); }
+body.strip .tile .n { font-size: calc(var(--s) * 24); }
+body.strip .tile .l { font-size: calc(var(--s) * 6.5); margin-top: calc(var(--s) * 2); }
+body.strip .ended-text { font-size: calc(var(--s) * 16); }
+body.strip .visual { flex: none; height: 100%; display: flex; align-items: center; }
+body.strip .disc, body.strip .product, body.strip .badge { display: none; }
+body.strip .qr-card { position: static; flex-direction: row; gap: calc(var(--s) * 5); height: 100%; padding: calc(var(--s) * 4); border-radius: calc(var(--s) * 5); }
+body.strip .qr { width: auto; height: 100%; aspect-ratio: 1 / 1; }
+body.strip .qr-label { margin: 0 calc(var(--s) * 3) 0 0; font-size: calc(var(--s) * 9); max-width: 7em; text-align: left; }
+/* not enough room for the headline in the strip: drop the countdown label, then the small heading */
+body.strip.tight .timer-label, body.strip.tighter .eyebrow { display: none; }
+
+/* ---------- after the end, fallback mode ---------- */
+.fallback {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  padding: calc(var(--u) * 8);
+}
+.fallback .eyebrow { transform: none; }
+.fallback-text {
+  max-width: 22em; font-family: var(--display); font-weight: var(--head-weight);
+  font-size: calc(var(--u) * 7); line-height: 1.08; letter-spacing: var(--head-track);
+}
+body.portrait .fallback-text { font-size: calc(var(--u) * 8); }
+body.strip .fallback { flex-direction: row; gap: calc(var(--s) * 8); padding: 0 calc(var(--s) * 10); }
+body.strip .fallback .eyebrow { margin: 0; font-size: calc(var(--s) * 9); }
+body.strip .fallback-text { font-size: calc(var(--s) * 24); max-width: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.fallback-on .promo { display: none; }
+
+/* ---------- scripts without capitals ----------
+   Letter-spacing pulls Devanagari conjuncts apart, and wide tracking looks loose in Japanese and
+   Chinese: the tracked uppercase labels go back to plain spacing in those languages. */
+html:lang(hi) .eyebrow, html:lang(hi) .timer-label, html:lang(hi) .tile .l, html:lang(hi) .headline,
+html:lang(hi) body[data-style="minimal"] .eyebrow, html:lang(hi) body[data-style="cafe"] .eyebrow { letter-spacing: 0; }
+html:lang(ja) .eyebrow, html:lang(ja) .timer-label, html:lang(ja) .tile .l,
+html:lang(ja) body[data-style="minimal"] .eyebrow, html:lang(ja) body[data-style="cafe"] .eyebrow,
+html:lang(zh) .eyebrow, html:lang(zh) .timer-label, html:lang(zh) .tile .l,
+html:lang(zh) body[data-style="minimal"] .eyebrow, html:lang(zh) body[data-style="cafe"] .eyebrow { letter-spacing: .06em; }

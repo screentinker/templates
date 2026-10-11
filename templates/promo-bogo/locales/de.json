@@ -1,0 +1,103 @@
+{
+  "name": "Zwei für eins",
+  "description": "Ein kräftiger „2 für 1“-Bildschirm für Café, Bäckerei oder Laden: das Angebot in drei großen Zeilen, wofür es gilt, ein runder Sticker auf einer farbigen Bildfläche und ein optionaler Live-Countdown bis zum letzten Tag.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ein annähernd quadratisches PNG oder SVG. Das mitgelieferte Abzeichen ist ein Platzhalter – ersetzen Sie es durch Ihr eigenes."
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Ausschalten, wenn Sie kein Logo haben (ein leeres Logo-Feld zeigt sonst einen gestrichelten Rahmen)."
+    },
+    "brand": {
+      "label": "Name des Geschäfts",
+      "help": "Steht neben dem Logo. Leer lassen, wenn Ihr Logo den Namen schon enthält."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "default": "NUR DIESE WOCHE"
+    },
+    "line1": {
+      "label": "Angebot, erste Zeile",
+      "help": "Das Angebot steht in drei großen Zeilen, z. B. „Kauf zwei,“ / „dazu eins“ / „GRATIS“.",
+      "default": "Kauf eins,"
+    },
+    "line2": {
+      "label": "Angebot, zweite Zeile",
+      "default": "dazu eins"
+    },
+    "line3": {
+      "label": "Angebot, dritte Zeile (Akzent)",
+      "help": "Die größte Zeile, daher höchstens 8 Zeichen: GRATIS, −50 %.",
+      "default": "GRATIS"
+    },
+    "product": {
+      "label": "Wofür es gilt",
+      "default": "Latte, Flat White, Mocha"
+    },
+    "detail": {
+      "label": "Detailzeile",
+      "default": "Bring jemanden mit. Alle Größen; gratis ist das Getränk mit gleichem oder kleinerem Preis."
+    },
+    "sticker": {
+      "label": "Runder Sticker",
+      "help": "Kurz – höchstens zwei Wörter. Leer lassen für einen schlichten Punkt.",
+      "default": "2 FÜR 1"
+    },
+    "product_image": {
+      "label": "Produktbild",
+      "help": "Am besten ein freigestelltes PNG oder SVG mit transparentem Hintergrund. Es wird eingepasst, nie beschnitten."
+    },
+    "show_image": {
+      "label": "Produktbild anzeigen",
+      "help": "Ausschalten, um die Fläche ohne Bild zu lassen (ein leeres Bild-Feld zeigt sonst einen gestrichelten Rahmen)."
+    },
+    "show_countdown": {
+      "label": "Countdown anzeigen",
+      "help": "Ausschalten bei Angeboten ohne Enddatum: Beschriftung und Timer verschwinden beide."
+    },
+    "countdown_label": {
+      "label": "Beschriftung über dem Countdown",
+      "help": "Bleibt nach Ablauf stehen – wählen Sie Worte, die auch zur Schlussmeldung passen.",
+      "default": "NUR KURZE ZEIT"
+    },
+    "countdown_target": {
+      "label": "Angebot endet am",
+      "help": "ISO 8601 mit Zeitzonen-Versatz, z. B. 2026-11-01T23:59:00+01:00 oder 2026-11-01T23:59:00+00:00."
+    },
+    "countdown_done": {
+      "label": "Anzeige nach Ablauf des Countdowns",
+      "default": "Endet bald"
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache des Live-Countdowns, z. B. de oder de-CH. Leer = Sprache des Bildschirms. Ihre eigenen Texte erscheinen so, wie Sie sie eingeben."
+    },
+    "small_print": {
+      "label": "Kleingedrucktes",
+      "default": "Nur in teilnehmenden Filialen. Nicht mit anderen Angeboten oder bei Lieferbestellungen kombinierbar."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Die Bildfläche und die dritte Angebotszeile."
+    },
+    "highlight": {
+      "label": "Sticker-Farbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "background_image": {
+      "label": "Hintergrundfoto",
+      "help": "Optional. Ein Foto hinter allem, abgedunkelt durch die Einstellung darunter."
+    },
+    "background_dim": {
+      "label": "Foto abdunkeln",
+      "help": "0 = Foto unverändert, 0,9 = fast schwarz. Nur mit Hintergrundfoto wirksam."
+    }
+  }
+}

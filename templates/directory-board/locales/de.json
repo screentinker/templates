@@ -1,0 +1,126 @@
+{
+  "name": "Gebäudeverzeichnis",
+  "description": "Ein Lobby-Verzeichnis für Bürohaus, Einkaufszentrum oder Campus: alle Mieter mit Etage und Raum, nach Etage gruppiert oder von A bis Z mit Register, mit Richtungspfeilen, einer „Sie sind hier“-Zeile und einer Uhr. Verteilt sich in Spalten über den Bildschirm und blättert durch lange Listen. Mieter eintippen oder in einem Google Sheet pflegen.",
+  "params": {
+    "building_name": {
+      "label": "Name des Gebäudes"
+    },
+    "address": {
+      "label": "Adresse oder Untertitel",
+      "help": "Eine Zeile unter dem Gebäudenamen. Leer lassen, um sie auszublenden."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Ohne Logo werden die Initialen des Gebäudes in der Akzentfarbe gezeigt."
+    },
+    "here_text": {
+      "label": "„Sie sind hier“-Zeile",
+      "help": "Unter dem Kopf mit einer Kartennadel. Leer lassen, um sie auszublenden.",
+      "default": "Sie sind hier · Foyer, Erdgeschoss"
+    },
+    "here_floor": {
+      "label": "Etage dieses Bildschirms",
+      "help": "Genau so geschrieben wie in der Spalte Etage. Diese Etage wird in der Liste und im Register mit einer Nadel markiert."
+    },
+    "group_by": {
+      "label": "Sortieren nach",
+      "options": {
+        "floor": "Etage",
+        "alpha": "Name, A bis Z",
+        "category": "Kategorie"
+      }
+    },
+    "floor_order": {
+      "label": "Reihenfolge der Etagen",
+      "help": "Gilt bei Sortierung nach Etage.",
+      "options": {
+        "asc": "Unterste Etage zuerst",
+        "desc": "Oberste Etage zuerst"
+      }
+    },
+    "show_index": {
+      "label": "Registerleiste zeigen",
+      "help": "Buchstaben A bis Z (oder Etagen bzw. Kategorien) unten; die auf der aktuellen Seite leuchten auf."
+    },
+    "show_category": {
+      "label": "Kategorien unter den Namen zeigen"
+    },
+    "entries": {
+      "label": "Mieter",
+      "help": "Eine Zeile pro Mieter: Name | Etage | Raum | Kategorie | Pfeil. Pfeil: links, rechts, geradeaus, zurück, up-left…, Aufzug oder Treppe. Gilt ohne Datenquelle.",
+      "default": "Empfang & Sicherheit | G | Foyer | Gebäudeservice | links\nHarbour Street Café | G | G02 | Essen & Trinken | rechts\nBesucherparkplatz | B1 | P1 | Parken | Treppe\nNorthwind Legal LLP | 2 | 201 | Recht |\nBrightwater Dental | 3 | 312 | Gesundheit |\nLumen Analytics | 5 | 520 | Technologie |\nTailspin Travel | 6 | 614 | Reisen |\nWoodgrove Bank Offices | 8 | 800 | Finanzen |"
+    },
+    "directory": {
+      "label": "Datenquelle für das Verzeichnis (optional)",
+      "help": "Ein Google Sheet, eine CSV oder manuelle Tabelle mit Kopfzeile. Hat sie die Namensspalte, ersetzt sie die oben eingetippten Mieter."
+    },
+    "name_col": {
+      "label": "Spalte Name",
+      "default": "Name"
+    },
+    "floor_col": {
+      "label": "Spalte Etage",
+      "default": "Etage"
+    },
+    "suite_col": {
+      "label": "Spalte Raum",
+      "default": "Raum"
+    },
+    "category_col": {
+      "label": "Spalte Kategorie",
+      "default": "Kategorie"
+    },
+    "arrow_col": {
+      "label": "Spalte Pfeil",
+      "default": "Pfeil"
+    },
+    "floor_names": {
+      "label": "Namen der Etagen",
+      "help": "Optional, eine pro Zeile: Etage = Name. Nicht aufgeführte Etagen erscheinen als Wort „Etage“ plus Nummer.",
+      "default": "G = Erdgeschoss\nB1 = Untergeschoss\n12 = Penthouse"
+    },
+    "floor_word": {
+      "label": "Wort für „Etage“",
+      "help": "Für Überschriften wie „Etage 7“. Leer lassen für das Wort in der Sprache des Bildschirms. {n} setzt die Nummer an diese Stelle („{n}. OG“)."
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Kleingedrucktes unten. Leer lassen, um sie auszublenden.",
+      "default": "Aufzüge zu allen Etagen geradeaus · Besucher bitte am Empfang anmelden"
+    },
+    "empty_text": {
+      "label": "Text bei leerer Liste",
+      "help": "Leer lassen für „Noch keine Mieter eingetragen“ in der Sprache des Bildschirms."
+    },
+    "clock_format": {
+      "label": "Uhr",
+      "options": {
+        "auto": "Wie in der Sprache üblich",
+        "24": "24 Stunden",
+        "12": "12 Stunden",
+        "off": "Uhr ausblenden"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone der Uhr",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu nutzen."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Für die Wörter der Tafel, Datum, Uhr und die Sortierung A bis Z. Leer lassen für die Sprache des Bildschirms."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "page_seconds": {
+      "label": "Sekunden pro Seite",
+      "help": "Nur wenn die Liste nicht in lesbarer Größe auf einen Bildschirm passt."
+    }
+  }
+}

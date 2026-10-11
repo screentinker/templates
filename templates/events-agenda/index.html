@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What's on</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="landscape">
+<div class="bg" aria-hidden="true"></div>
+
+<div class="frame">
+  <header class="head">
+    <img id="logo" class="logo" alt="" hidden>
+    <div class="titles">
+      <h1 id="title" class="title" dir="auto"></h1>
+      <div id="subtitle" class="subtitle" dir="auto"></div>
+    </div>
+    <div id="clockbox" class="clockbox">
+      <div id="clock" class="clock"></div>
+      <div id="date" class="date"></div>
+    </div>
+  </header>
+
+  <main id="board" class="board">
+    <section id="lead-col" class="col lead"><div id="lead" class="list"></div></section>
+    <section id="later-col" class="col later"><div id="later" class="list"></div></section>
+    <div id="empty" class="empty" hidden>
+      <div id="empty-day" class="empty-day"></div>
+      <div id="empty-text" class="empty-text"></div>
+    </div>
+  </main>
+
+  <footer id="foot" class="foot">
+    <div id="footer" class="footer-text" dir="auto"></div>
+    <div id="pager" class="pager" aria-hidden="true"></div>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

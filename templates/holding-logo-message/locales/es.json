@@ -1,0 +1,50 @@
+{
+  "name": "Pantalla en espera — logo, mensaje y web",
+  "description": "Una pantalla de espera con tu marca para entre campañas: tu logo, un mensaje breve con una línea de detalle, tu web en letra grande y un código QR opcional que la abre. No se descarga nada; el servidor dibuja el código.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG con fondo transparente. Se muestra arriba a la izquierda."
+    },
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "Una etiqueta corta sobre el mensaje. Queda mejor en mayúsculas."
+    },
+    "message": {
+      "label": "Mensaje",
+      "help": "Unas pocas palabras. Hasta unos 40 caracteres caben en dos líneas.",
+      "default": "Algo nuevo está en camino"
+    },
+    "detail": {
+      "label": "Detalle",
+      "help": "Una o dos frases cortas bajo el mensaje. Intro empieza una línea nueva.",
+      "default": "Nuestra próxima muestra abre el lunes. Mientras tanto, mira la colección completa y reserva en línea una visita al estudio."
+    },
+    "website": {
+      "label": "Línea de la web",
+      "help": "Se muestra en letra grande. Escríbela sin https:// y tal como la debe teclear la gente."
+    },
+    "show_qr": {
+      "label": "Mostrar un código QR",
+      "help": "Desactivado oculta el código, su tarjeta y su texto."
+    },
+    "qr_url": {
+      "label": "Enlace del código QR",
+      "help": "La dirección completa que abre el código. Los enlaces más cortos dan un código que se escanea desde más lejos."
+    },
+    "qr_caption": {
+      "label": "Texto del QR",
+      "default": "Escanea para visitarnos"
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "El encabezado pequeño, las líneas y el panel tintado."
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

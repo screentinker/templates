@@ -1,0 +1,126 @@
+{
+  "name": "Elenco dell’edificio",
+  "description": "Un elenco per l’atrio di un edificio di uffici, un centro commerciale o un campus: ogni inquilino con piano e interno, raggruppati per piano o dalla A alla Z con indice, frecce di direzione, una riga «Voi siete qui» e un orologio. Si dispone in colonne per riempire lo schermo e sfoglia le liste lunghe. Scrivete gli inquilini o teneteli in un foglio Google.",
+  "params": {
+    "building_name": {
+      "label": "Nome dell’edificio"
+    },
+    "address": {
+      "label": "Indirizzo o sottotitolo",
+      "help": "Una riga sotto il nome dell’edificio. Lasciate vuoto per nasconderla."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Senza logo, le iniziali dell’edificio appaiono nel colore di risalto."
+    },
+    "here_text": {
+      "label": "Riga «Voi siete qui»",
+      "help": "Sotto l’intestazione, con un segnaposto. Lasciate vuoto per nasconderla.",
+      "default": "Voi siete qui · Atrio principale, piano terra"
+    },
+    "here_floor": {
+      "label": "Piano di questo schermo",
+      "help": "Scritto come nella colonna Piano. Quel piano è segnato con un segnaposto nell’elenco e nell’indice."
+    },
+    "group_by": {
+      "label": "Ordina per",
+      "options": {
+        "floor": "Piano",
+        "alpha": "Nome, dalla A alla Z",
+        "category": "Categoria"
+      }
+    },
+    "floor_order": {
+      "label": "Ordine dei piani",
+      "help": "Usato quando si ordina per piano.",
+      "options": {
+        "asc": "Prima il piano più basso",
+        "desc": "Prima l’ultimo piano"
+      }
+    },
+    "show_index": {
+      "label": "Mostra la barra dell’indice",
+      "help": "Le lettere dalla A alla Z (o i piani, o le categorie) in basso; si illuminano quelle della pagina corrente."
+    },
+    "show_category": {
+      "label": "Mostra le categorie sotto i nomi"
+    },
+    "entries": {
+      "label": "Inquilini",
+      "help": "Uno per riga: Nome | Piano | Interno | Categoria | Freccia. Freccia: sinistra, destra, dritto, indietro, up-left…, ascensore o scale. Senza fonte dati.",
+      "default": "Reception e sicurezza | G | Atrio | Servizi dell’edificio | sinistra\nHarbour Street Café | G | G02 | Cibo e bevande | destra\nParcheggio visitatori | B1 | P1 | Parcheggio | scale\nNorthwind Legal LLP | 2 | 201 | Legale |\nBrightwater Dental | 3 | 312 | Salute |\nLumen Analytics | 5 | 520 | Tecnologia |\nWoodgrove Bank Offices | 8 | 800 | Finanza |"
+    },
+    "directory": {
+      "label": "Fonte dati dell’elenco (facoltativa)",
+      "help": "Un foglio Google, un CSV o una tabella manuale con riga di intestazione. Se ha la colonna Nome, sostituisce gli inquilini scritti sopra."
+    },
+    "name_col": {
+      "label": "Colonna Nome",
+      "default": "Nome"
+    },
+    "floor_col": {
+      "label": "Colonna Piano",
+      "default": "Piano"
+    },
+    "suite_col": {
+      "label": "Colonna Interno",
+      "default": "Interno"
+    },
+    "category_col": {
+      "label": "Colonna Categoria",
+      "default": "Categoria"
+    },
+    "arrow_col": {
+      "label": "Colonna Freccia",
+      "default": "Freccia"
+    },
+    "floor_names": {
+      "label": "Nomi dei piani",
+      "help": "Facoltativo, uno per riga: Piano = Nome. I piani non elencati appaiono come la parola «Piano» più il numero.",
+      "default": "G = Piano terra\nB1 = Piano interrato\n12 = Attico"
+    },
+    "floor_word": {
+      "label": "Parola per «piano»",
+      "help": "Per titoli come «Piano 7». Lasciate vuoto per la parola nella lingua dello schermo. Mettete {n} dove va il numero («Livello {n}»)."
+    },
+    "footer": {
+      "label": "Riga in fondo",
+      "help": "Testo piccolo in basso. Lasciate vuoto per nasconderlo.",
+      "default": "Ascensori per tutti i piani di fronte · I visitatori sono pregati di registrarsi alla reception"
+    },
+    "empty_text": {
+      "label": "Testo con l’elenco vuoto",
+      "help": "Lasciate vuoto per «Ancora nessun inquilino» nella lingua dello schermo."
+    },
+    "clock_format": {
+      "label": "Orologio",
+      "options": {
+        "auto": "Come nella lingua",
+        "24": "24 ore",
+        "12": "12 ore",
+        "off": "Nascondi l’orologio"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario dell’orologio",
+      "help": "Lasciate vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Per le parole dell’elenco, la data, l’orologio e l’ordine dalla A alla Z. Lasciate vuoto per la lingua dello schermo."
+    },
+    "accent": {
+      "label": "Colore di risalto"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "page_seconds": {
+      "label": "Secondi per pagina",
+      "help": "Solo quando l’elenco non sta in uno schermo a una dimensione leggibile."
+    }
+  }
+}

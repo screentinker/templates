@@ -1,0 +1,66 @@
+{
+  "name": "Cuenta atrás para eventos",
+  "description": "Una pantalla de cuenta atrás para un congreso, una inauguración o un lanzamiento: el nombre del evento, un eslogan, la fecha y el lugar, una gran cuenta atrás en directo que cambia a su propio mensaje cuando llega el momento y un código QR opcional para entradas o reservas.",
+  "params": {
+    "event_name": {
+      "label": "Nombre del evento"
+    },
+    "tagline": {
+      "label": "Eslogan",
+      "default": "Dos días de charlas, talleres y demos hasta tarde con quienes están creando lo que viene."
+    },
+    "when_where": {
+      "label": "Línea de fecha y lugar",
+      "default": "18–19 DE MARZO DE 2027  ·  RIVERSIDE HALL, DUBLÍN"
+    },
+    "target": {
+      "label": "Cuenta atrás hasta",
+      "help": "ISO 8601 con desfase horario, p. ej. 2027-03-18T09:00:00+01:00 o 2027-03-18T09:00:00-05:00. Sin desfase se usa la zona horaria del servidor."
+    },
+    "countdown_label": {
+      "label": "Texto sobre la cuenta atrás",
+      "default": "LAS PUERTAS ABREN EN"
+    },
+    "done_text": {
+      "label": "Texto al terminar",
+      "default": "Ya ha empezado"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma de las unidades de la cuenta atrás, p. ej. es o es-MX (vacío = idioma de la pantalla). Los servidores ScreenTinker antiguos siempre muestran d h m s."
+    },
+    "show_qr": {
+      "label": "Mostrar el QR de entradas",
+      "help": "Desactívelo si no tiene enlace: el QR, su tarjeta y el texto desaparecen."
+    },
+    "qr_url": {
+      "label": "Enlace de entradas / reserva",
+      "help": "La dirección que abre el código QR. Que sea corta: un enlace corto genera un código que se escanea desde más lejos."
+    },
+    "qr_caption": {
+      "label": "Texto del QR",
+      "default": "Escanee para comprar entradas"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG casi cuadrado con fondo transparente. Arriba a la izquierda."
+    },
+    "background_image": {
+      "label": "Foto de fondo",
+      "help": "Opcional. Una foto del evento o del lugar detrás de todo; se oscurece con el ajuste de abajo."
+    },
+    "background_dim": {
+      "label": "Oscurecer la foto",
+      "help": "0 = la foto tal cual, 0,9 = casi negra. Solo con foto de fondo."
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

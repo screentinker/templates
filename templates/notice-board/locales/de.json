@@ -1,0 +1,131 @@
+{
+  "name": "Schwarzes Brett",
+  "description": "Ein Aushangbrett für Pausenraum, Schule oder Werkhalle: Karten mit farbigen Kategorien (Dringend, Sicherheit, Veranstaltung, Personal, Info), angeheftete Aushänge oben und Start- und Enddaten, damit Aushänge von selbst erscheinen und verschwinden. Ein großer Aushang mit den übrigen daneben oder einer nach dem anderen. Aushänge eintippen oder aus einem Google Sheet laden.",
+  "params": {
+    "title": {
+      "label": "Titel des Bretts",
+      "default": "Schwarzes Brett"
+    },
+    "subtitle": {
+      "label": "Untertitel",
+      "help": "Eine Zeile unter dem Titel, etwa Standort oder Abteilung. Leer lassen, um sie auszublenden.",
+      "default": "Northwind Works · Gebäude 2"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Neben dem Titel. Ohne Logo erscheint ein kleines Brett-Symbol in der Akzentfarbe."
+    },
+    "layout": {
+      "label": "Layout",
+      "options": {
+        "featured": "Großer Aushang + die übrigen daneben",
+        "rotate": "Ein Aushang nach dem anderen, bildschirmfüllend"
+      }
+    },
+    "notices": {
+      "label": "Aushänge",
+      "help": "Einer pro Zeile: Titel | Text | Kategorie | Start | Ende | Angeheftet | Von. Daten: 2026-10-14, 2026-10-14 17:00 oder +N Tage ab heute. Gilt ohne Datenquelle.",
+      "default": "Parkplatz Nord bis Freitag gesperrt | Die Belagsarbeiten beginnen um 06:00. | Dringend | | +3 | ja | Haustechnik\nWarnweste an der Laderampe | Diese Woche mehr Staplerverkehr. | Sicherheit | | | | Marcus Lee\nNeu in der Küche: Hafermilch | An der Kaffeemaschine in Etage 2. | Info | | | | Office-Team"
+    },
+    "source": {
+      "label": "Datenquelle für Aushänge (optional)",
+      "help": "Ein Google Sheet, eine CSV oder manuelle Tabelle mit einer Zeile pro Aushang. Hat sie die Titelspalte, ersetzt sie die oben eingetippten Aushänge."
+    },
+    "title_col": {
+      "label": "Spalte Titel",
+      "default": "Titel"
+    },
+    "body_col": {
+      "label": "Spalte Text",
+      "default": "Text"
+    },
+    "category_col": {
+      "label": "Spalte Kategorie",
+      "default": "Kategorie"
+    },
+    "start_col": {
+      "label": "Spalte Start",
+      "help": "Optional. Ein Aushang mit Startdatum bleibt bis dahin verborgen.",
+      "default": "Start"
+    },
+    "end_col": {
+      "label": "Spalte Ende",
+      "help": "Optional. Ein Aushang verschwindet nach seinem Enddatum (ein Datum allein heißt: Ende dieses Tages).",
+      "default": "Ende"
+    },
+    "pinned_col": {
+      "label": "Spalte Angeheftet",
+      "help": "Ja, yes, true, 1, x oder pinned hält den Aushang oben (und groß).",
+      "default": "Angeheftet"
+    },
+    "from_col": {
+      "label": "Spalte Von",
+      "help": "Optional. Wer den Aushang gemacht hat, klein unten auf der Karte.",
+      "default": "Von"
+    },
+    "date_order": {
+      "label": "Daten mit Schrägstrich sind",
+      "help": "Nur für Daten wie 03/04/2026. 2026-10-14 wird immer verstanden.",
+      "options": {
+        "auto": "Nach der Sprache (US: Monat zuerst)",
+        "dmy": "Tag zuerst (14/10/2026)",
+        "mdy": "Monat zuerst (10/14/2026)"
+      }
+    },
+    "category_colors": {
+      "label": "Farben der Kategorien",
+      "help": "Optional, eine pro Zeile: Kategorie = #RRGGBB. Dringend, Sicherheit, Veranstaltung, Personal, IT, Info und andere haben schon Farben."
+    },
+    "theme": {
+      "label": "Design",
+      "options": {
+        "dark": "Dunkel",
+        "light": "Hell"
+      }
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Titellinie, Seitenpunkte und Brett-Symbol."
+    },
+    "seconds": {
+      "label": "Sekunden pro Seite oder Aushang",
+      "help": "Wie lange jede Seite (oder jeder einzelne Aushang) stehen bleibt."
+    },
+    "show_dates": {
+      "label": "„Bis“-Daten auf den Karten zeigen"
+    },
+    "until_label": {
+      "label": "Text vor einem Enddatum",
+      "help": "Leer lassen für „Bis …“ in der Sprache des Bildschirms."
+    },
+    "today_label": {
+      "label": "Text für einen Aushang, der heute endet",
+      "help": "Leer lassen für „Endet heute“ in der Sprache des Bildschirms."
+    },
+    "pinned_label": {
+      "label": "Text des Angeheftet-Abzeichens",
+      "help": "Leer lassen für „Angeheftet“ in der Sprache des Bildschirms."
+    },
+    "empty_label": {
+      "label": "Text, wenn es keine Aushänge gibt",
+      "help": "Leer lassen für „Zurzeit keine Aushänge“ in der Sprache des Bildschirms."
+    },
+    "clock_format": {
+      "label": "Uhr",
+      "options": {
+        "auto": "Wie in der Sprache üblich",
+        "24": "24 Stunden",
+        "12": "12 Stunden",
+        "off": "Uhr und Datum ausblenden"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone",
+      "help": "Für die Uhr und für Start und Ende der Aushänge. Leer lassen, um die Uhr des Bildschirms zu nutzen."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Für die Wörter des Bretts und die Daten, zum Beispiel de-DE oder de-CH. Leer lassen für die Sprache des Bildschirms."
+    }
+  }
+}

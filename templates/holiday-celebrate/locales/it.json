@@ -1,0 +1,54 @@
+{
+  "name": "Festa",
+  "description": "Una festa di coriandoli per ogni occasione (un anniversario aziendale, un compleanno, un mese record, un’inaugurazione o una vittoria di squadra): un numero gigante, un titolo, un messaggio e una riga della data nei colori che scegli.",
+  "params": {
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "La riga breve sopra il titolo. Lasciala vuota per nasconderla.",
+      "default": "FESTEGGIAMO DIECI ANNI"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "Ha due righe riservate: ci stanno circa 24 caratteri. Un titolo più lungo va a capo su una terza riga e copre il messaggio.",
+      "default": "Dieci anni di Northwind"
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Una o due frasi sotto il titolo; ci stanno fino a 200 caratteri. Un a capo inizia una nuova riga.",
+      "default": "Da due persone in un garage a 140 colleghi in quattro città. Grazie a ogni cliente e collega che ci ha portato fin qui: torta in cucina alle 15:00!"
+    },
+    "date_line": {
+      "label": "Riga della data",
+      "help": "Testo libero, scritto come deve apparire: una data, un orario e un luogo, o una firma."
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG largo con sfondo trasparente (circa 3,4 : 1 riempie il riquadro; altre forme vi vengono adattate). Sostituisci il segnaposto Northwind."
+    },
+    "accent": {
+      "label": "Colore del numero"
+    },
+    "accent2": {
+      "label": "Secondo colore d’accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "big_text": {
+      "label": "Numero grande",
+      "help": "La cifra gigante: anni, un compleanno, una percentuale, una posizione. Fino a quattro caratteri; svuotalo per non mostrarla."
+    },
+    "big_label": {
+      "label": "Sotto il numero",
+      "help": "Una parola sotto il numero grande, come ANNI o GIORNI.",
+      "default": "ANNI"
+    }
+  }
+}

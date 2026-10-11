@@ -1,0 +1,87 @@
+{
+  "name": "排行榜",
+  "description": "适用于销售团队、募捐活动、步数挑战或游戏之夜的排行榜：前三名站上金、银、铜领奖台，其他人以动画进度条显示。手动输入分数或连接 Google 表格，排行榜会自动更新。",
+  "params": {
+    "title": {
+      "label": "标题",
+      "default": "销售排行榜"
+    },
+    "period": {
+      "label": "周期",
+      "help": "标题旁的简短标签，例如“本月”或“第三季度”。留空则隐藏。",
+      "default": "本月"
+    },
+    "logo": {
+      "label": "标志",
+      "help": "可选。显示在标题旁。"
+    },
+    "entries": {
+      "label": "分数",
+      "help": "每行一条：姓名 | 分数 | 副标题。顺序不限，排行榜会自动排序。未连接数据源时使用。",
+      "default": "Maya Okafor | 48250 | 大客户\nLiam Chen | 41900 | 中型企业\nSofia Alvarez | 39475 | 大客户\nNoah Williams | 33120 | 中小企业\nAva Patel | 31860 | 中型企业\nEthan Brooks | 27400 | 中小企业\nZara Hussain | 24975 | 大客户\nLucas Meyer | 21300 | 合作伙伴\nChloe Dubois | 18640 | 中小企业\nOwen Murphy | 15210 | 合作伙伴"
+    },
+    "scores": {
+      "label": "分数数据源（可选）",
+      "help": "Google 表格、CSV、REST 列表或手动表格。若包含姓名和分数列，将替代上方输入的分数。"
+    },
+    "name_col": {
+      "label": "姓名列",
+      "help": "数据源中姓名列的标题，请按原样输入。",
+      "default": "姓名"
+    },
+    "score_col": {
+      "label": "分数列",
+      "default": "分数"
+    },
+    "sub_col": {
+      "label": "副标题列",
+      "help": "可选。每个姓名下方的第二行，例如团队或地区。",
+      "default": "团队"
+    },
+    "order": {
+      "label": "获胜规则",
+      "options": {
+        "high": "分数最高者获胜",
+        "low": "分数最低者获胜（用时、高尔夫）"
+      }
+    },
+    "score_prefix": {
+      "label": "前缀",
+      "help": "显示在每个分数前，例如 ¥ 或 $。留空则只显示数字。",
+      "default": "¥"
+    },
+    "score_suffix": {
+      "label": "后缀",
+      "help": "显示在每个分数后，例如 分、km 或 %。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "排行榜固定文字的语言及数字写法（de-DE 显示为 48.250）。留空则使用屏幕的语言。"
+    },
+    "max_rows": {
+      "label": "最多显示",
+      "help": "显示的名次数量（含领奖台）。屏幕较小时会显示更少。"
+    },
+    "show_bars": {
+      "label": "显示进度条",
+      "help": "领奖台以外的每个姓名下方显示进度条，分数越接近第一名越长。"
+    },
+    "font": {
+      "label": "标题字体",
+      "options": {
+        "archivo": "Archivo（展示）",
+        "oswald": "Oswald（窄体）",
+        "inter": "Inter（简洁）"
+      }
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    }
+  }
+}

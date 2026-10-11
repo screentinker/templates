@@ -1,0 +1,59 @@
+{
+  "name": "Sicherheitstipp",
+  "description": "Ein gut sichtbarer Sicherheitstipp für Fabriken, Lager, Küchen und Baustellen: ein Warnsymbol auf sicherheitsgelber Fläche, die Regel in großer Schrift, bis zu vier Schritte und wen man anruft.",
+  "params": {
+    "icon": {
+      "label": "Symbol",
+      "help": "Ein quadratisches PNG oder SVG mit transparentem Hintergrund, dunkel genug für die Akzentfläche."
+    },
+    "panel_title": {
+      "label": "Titel auf der Fläche",
+      "default": "SICHERHEIT"
+    },
+    "tip_number": {
+      "label": "Tipp-Nummer",
+      "help": "Unter dem Titel, z. B. „TIPP 14 VON 52“. Leer lassen zum Ausblenden.",
+      "default": "TIPP 14 VON 52"
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Für wen oder wo der Tipp gilt.",
+      "default": "DIESE WOCHE · LAGER & LADERAMPE"
+    },
+    "headline": {
+      "label": "Tipp",
+      "help": "Die Regel in wenigen Worten.",
+      "default": "Beine statt Rücken: richtig heben"
+    },
+    "steps": {
+      "label": "So geht’s",
+      "help": "Bis zu vier kurze Zeilen; die Eingabetaste beginnt eine neue Zeile. Jede unter etwa 45 Zeichen.",
+      "default": "1. Nah herantreten, Füße schulterbreit\n2. Knie beugen, Rücken gerade halten\n3. Fest greifen, ohne Verdrehen heben\n4. Über 23 kg? Wagen nutzen oder Hilfe holen"
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Wen man anruft oder wo man meldet.",
+      "default": "Melden Sie jeden Beinaheunfall Ihrer Führungskraft oder rufen Sie Durchwahl 2240 an"
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Aus blendet das Logo aus, sein Platz bleibt leer."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "PNG oder SVG mit transparentem Hintergrund, in einer hellen Farbe für den dunklen Standardhintergrund."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Die Fläche hinter dem Symbol, die kleine Überschrift und die Linie."
+    },
+    "background": {
+      "label": "Hintergrundfarbe",
+      "help": "Die Seite. Auch Titel und Tipp-Nummer auf der Fläche werden in dieser Farbe gezeichnet."
+    },
+    "text_color": {
+      "label": "Textfarbe",
+      "help": "Der Tipp, die Schritte und die Fußzeile."
+    }
+  }
+}

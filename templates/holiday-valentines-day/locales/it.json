@@ -1,0 +1,46 @@
+{
+  "name": "San Valentino",
+  "description": "Un caldo augurio di San Valentino su rosso vino: due cuori fatti di forme morbide, un titolo, un messaggio per negozio, caffè o ufficio e una riga per la data o gli orari.",
+  "params": {
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "La riga breve sopra il titolo. Lasciala vuota per nasconderla.",
+      "default": "CON AMORE DA NORTHWIND"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "Ha due righe riservate: ci stanno circa 24 caratteri. Un titolo più lungo va a capo su una terza riga e copre il messaggio.",
+      "default": "Buon San Valentino"
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Una o due frasi sotto il titolo; ci stanno fino a 200 caratteri. Un a capo inizia una nuova riga.",
+      "default": "Oggi ogni mazzo di fiori e ogni scatola di cioccolatini viene incartato gratis, e il caffè serve cioccolata calda per due fino alla chiusura."
+    },
+    "date_line": {
+      "label": "Riga della data",
+      "help": "Testo libero, scritto come deve apparire: una data, un orario e un luogo, o una firma.",
+      "default": "14 · 02  ·  APERTO FINO ALLE 21:00"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG largo con sfondo trasparente (circa 3,4 : 1 riempie il riquadro; altre forme vi vengono adattate). Sostituisci il segnaposto Northwind."
+    },
+    "accent": {
+      "label": "Colore del cuore"
+    },
+    "accent2": {
+      "label": "Colore del cuore piccolo"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

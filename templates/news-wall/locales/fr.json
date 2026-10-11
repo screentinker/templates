@@ -1,0 +1,68 @@
+{
+  "name": "Mur d’actualités",
+  "description": "Un mur d’actualités façon magazine pour tout flux RSS ou Atom : un grand article à la une qui change toutes les quelques secondes, les quatre suivants en cartes, le titre du flux et des dates relatives. Typographique par choix (pas d’images distantes), donc il marche hors ligne. Ou saisissez vos propres titres.",
+  "params": {
+    "feed": {
+      "label": "Flux d’actualités (source RSS / Atom, facultatif)",
+      "help": "Une source de données RSS. Laissez vide pour afficher les articles saisis ci-dessous."
+    },
+    "title": {
+      "label": "Titre",
+      "help": "Laissez vide pour utiliser le titre du flux (sans flux : « Actualités » dans la langue de l’écran)."
+    },
+    "stories": {
+      "label": "Articles (sans flux)",
+      "help": "Un par ligne : Titre | Résumé court. Le résumé est facultatif.",
+      "default": "Fernhill Works ouvre son studio dans l’ancien moulin | Trois étages, ouverts au public le samedi.\nLe meilleur printemps de notre histoire | Commandes en hausse de 18 % sur un an.\nLa journée bénévole rapporte 4 200 pour le sentier | Deux nouvelles passerelles.\nNouveau menu à la cantine dès lundi | Plus de plats végétaux."
+    },
+    "max_items": {
+      "label": "Articles en rotation"
+    },
+    "rotate_seconds": {
+      "label": "Secondes par article à la une"
+    },
+    "date_style": {
+      "label": "Dates des articles",
+      "options": {
+        "relative": "Relative (il y a 2 heures)",
+        "absolute": "Date et heure",
+        "off": "Masquer"
+      }
+    },
+    "feature_label": {
+      "label": "Étiquette de l’article à la une",
+      "help": "Laissez vide pour « À la une » dans la langue de l’écran."
+    },
+    "next_label": {
+      "label": "Titre au-dessus des cartes",
+      "help": "Laissez vide pour « À suivre » dans la langue de l’écran."
+    },
+    "show_summaries": {
+      "label": "Afficher le résumé de l’article à la une"
+    },
+    "show_clock": {
+      "label": "Afficher l’horloge"
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "accent2": {
+      "label": "Deuxième couleur d’accent",
+      "help": "La carte à la une mêle les deux couleurs d’accent."
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "timezone": {
+      "label": "Fuseau horaire (horloge et dates)",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Langue de l’horloge, des dates et des étiquettes intégrées, par exemple fr ou en-GB. Laissez vide pour la langue de l’écran."
+    }
+  }
+}

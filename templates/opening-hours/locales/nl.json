@@ -1,0 +1,166 @@
+{
+  "name": "Openingstijden",
+  "description": "Openingstijden met live status: groot „Nu open, sluit om 17:00” of „Gesloten, opent morgen om 09:00”, de tijden van deze week met vandaag gemarkeerd, gesplitste tijden en lunchpauzes, en feestdagen die de week vervangen. Voor winkels, apotheken, bibliotheken, praktijken en kantoren. Typ bijzondere dagen in of houd ze bij in een Google-spreadsheet.",
+  "params": {
+    "title": {
+      "label": "Naam",
+      "default": "Northwind Apotheek"
+    },
+    "subtitle": {
+      "label": "Ondertitel",
+      "help": "Eén regel onder de naam, zoals het adres. Laat leeg om te verbergen.",
+      "default": "12 Harbour Street · Recepten en advies zonder afspraak"
+    },
+    "footer": {
+      "label": "Voettekst",
+      "help": "Kleine tekst onderaan. Laat leeg om te verbergen.",
+      "default": "Buiten openingstijden? Bel 0161 496 0000 of ga naar northwind.example/urgent"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Naast de naam. Het standaardlogo is een voorbeeld: vervang of verwijder het."
+    },
+    "hours_mon": {
+      "label": "Maandag",
+      "help": "Tijden zoals 09:00-17:00. Gesplitste tijden met een komma: 09:00-12:30, 13:30-17:00. Gesloten, of 24h. 18:00-02:00 loopt door na middernacht."
+    },
+    "hours_tue": {
+      "label": "Dinsdag"
+    },
+    "hours_wed": {
+      "label": "Woensdag"
+    },
+    "hours_thu": {
+      "label": "Donderdag"
+    },
+    "hours_fri": {
+      "label": "Vrijdag"
+    },
+    "hours_sat": {
+      "label": "Zaterdag"
+    },
+    "hours_sun": {
+      "label": "Zondag",
+      "default": "Gesloten"
+    },
+    "week_start": {
+      "label": "Week begint op",
+      "options": {
+        "monday": "Maandag",
+        "sunday": "Zondag",
+        "saturday": "Zaterdag"
+      }
+    },
+    "specials": {
+      "label": "Bijzondere dagen",
+      "help": "Eén per regel: Datum | Tijden | Notitie. Datum is 2026-12-24, een periode 2026-12-24..2026-12-26, of 12-25 voor elk jaar. Ze vervangen de week.",
+      "default": "12-24 | 08:30-13:00 | Kerstavond\n12-25..12-26 | Gesloten | Kerst\n12-31 | 08:30-15:00 | Oudejaarsdag\n01-01 | Gesloten | Nieuwjaarsdag\n2026-10-09 | 08:30-13:00 | Teamtraining in de middag\n2026-11-02 | 10:00-13:00, 14:00-18:30 | Later open vanwege inventarisatie"
+    },
+    "specials_source": {
+      "label": "Gegevensbron voor bijzondere dagen (optioneel)",
+      "help": "Een Google-spreadsheet, CSV of handmatige tabel met kolommen voor datum, tijden en notitie. Gekoppeld vervangt die de dagen hierboven."
+    },
+    "date_col": {
+      "label": "Kolom datum",
+      "help": "De kop van die kolom in je bron, in Latijnse letters."
+    },
+    "hours_col": {
+      "label": "Kolom tijden"
+    },
+    "note_col": {
+      "label": "Kolom notitie"
+    },
+    "specials_count": {
+      "label": "Komende bijzondere dagen in de lijst",
+      "help": "0 verbergt de lijst. De weektabel toont bijzondere tijden altijd op de dag zelf."
+    },
+    "open_label": {
+      "label": "Status: open",
+      "help": "Leeg = „Nu open” in de taal van het scherm."
+    },
+    "soon_label": {
+      "label": "Status: sluit binnenkort",
+      "help": "Leeg = „Sluit binnenkort” in de taal van het scherm."
+    },
+    "closed_label": {
+      "label": "Status en tabel: gesloten",
+      "help": "Leeg = „Gesloten” in de taal van het scherm."
+    },
+    "always_open_label": {
+      "label": "Dag en nacht open",
+      "help": "Leeg = „24 uur per dag open” in de taal van het scherm."
+    },
+    "closes_text": {
+      "label": "Regel: sluit",
+      "help": "{time} is de sluitingstijd. Leeg = „Sluit om {time}” in de taal van het scherm; - verbergt de regel."
+    },
+    "reopens_text": {
+      "label": "Regel: pauze",
+      "help": "Als het later die dag weer opengaat. Leeg = tekst in de taal van het scherm; - verbergt de regel."
+    },
+    "opens_text": {
+      "label": "Regel: opent",
+      "help": "{day} is vandaag, morgen of een weekdag; {time} de openingstijd. Leeg = tekst in de taal van het scherm; - verbergt de regel."
+    },
+    "hours_heading": {
+      "label": "Kop: deze week",
+      "help": "Leeg = „Openingstijden” in de taal van het scherm; - verbergt de kop."
+    },
+    "specials_heading": {
+      "label": "Kop: bijzondere dagen",
+      "help": "Leeg = „Afwijkende openingstijden” in de taal van het scherm; - verbergt de kop."
+    },
+    "today_label": {
+      "label": "Markering voor vandaag",
+      "help": "Leeg = het woord voor vandaag in de taal van het scherm."
+    },
+    "timezone": {
+      "label": "Tijdzone van de zaak",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Woorden, dagen, datums en tijden op het scherm, bijvoorbeeld en-GB, fr-FR of de-DE. Leeg = de taal van het scherm."
+    },
+    "clock_format": {
+      "label": "Tijden en klok",
+      "options": {
+        "auto": "Zoals gebruikelijk in de taal, met klok",
+        "24": "24 uur, met klok",
+        "12": "12 uur, met klok",
+        "off": "Zoals gebruikelijk in de taal, zonder klok"
+      }
+    },
+    "font": {
+      "label": "Lettertype van de koppen",
+      "options": {
+        "archivo": "Archivo (opvallend)",
+        "bitter": "Bitter (schreef)",
+        "inter": "Inter (strak)"
+      }
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "De rij van vandaag, de koppen en bijzondere dagen."
+    },
+    "open_color": {
+      "label": "Kleur: open"
+    },
+    "soon_color": {
+      "label": "Kleur: sluit binnenkort"
+    },
+    "closed_color": {
+      "label": "Kleur: gesloten"
+    },
+    "soon_minutes": {
+      "label": "„Sluit binnenkort”, minuten voor sluiting",
+      "help": "0 zet „Sluit binnenkort” uit."
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "name": "Öffnungszeiten",
+  "description": "Öffnungszeiten mit Live-Status: groß „Jetzt geöffnet, schließt um 17:00“ oder „Geschlossen, öffnet morgen um 09:00“, die Zeiten dieser Woche mit hervorgehobenem Tag, geteilte Zeiten und Mittagspausen sowie Feiertage, die die Woche ersetzen. Für Geschäfte, Apotheken, Bibliotheken, Praxen und Büros. Sondertermine eintippen oder in einer Google-Tabelle pflegen.",
+  "params": {
+    "title": {
+      "label": "Name",
+      "default": "Northwind Apotheke"
+    },
+    "subtitle": {
+      "label": "Untertitel",
+      "help": "Eine Zeile unter dem Namen, z. B. die Adresse. Leer lassen, um sie auszublenden.",
+      "default": "12 Harbour Street · Rezepte und Beratung ohne Termin"
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Kleingedrucktes am unteren Rand. Leer lassen, um sie auszublenden.",
+      "default": "Außerhalb der Öffnungszeiten? Rufen Sie 0161 496 0000 an oder besuchen Sie northwind.example/urgent"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Neben dem Namen. Das Standardlogo ist ein Platzhalter: ersetzen oder entfernen."
+    },
+    "hours_mon": {
+      "label": "Montag",
+      "help": "Zeiten wie 09:00-17:00. Geteilte Zeiten mit Komma: 09:00-12:30, 13:30-17:00. Geschlossen oder 24h. 18:00-02:00 geht über Mitternacht."
+    },
+    "hours_tue": {
+      "label": "Dienstag"
+    },
+    "hours_wed": {
+      "label": "Mittwoch"
+    },
+    "hours_thu": {
+      "label": "Donnerstag"
+    },
+    "hours_fri": {
+      "label": "Freitag"
+    },
+    "hours_sat": {
+      "label": "Samstag"
+    },
+    "hours_sun": {
+      "label": "Sonntag",
+      "default": "Geschlossen"
+    },
+    "week_start": {
+      "label": "Woche beginnt am",
+      "options": {
+        "monday": "Montag",
+        "sunday": "Sonntag",
+        "saturday": "Samstag"
+      }
+    },
+    "specials": {
+      "label": "Sondertermine",
+      "help": "Einer pro Zeile: Datum | Zeiten | Hinweis. Datum ist 2026-12-24, ein Zeitraum 2026-12-24..2026-12-26 oder 12-25 für jedes Jahr. Sie ersetzen die Woche.",
+      "default": "12-24 | 08:30-13:00 | Heiligabend\n12-25..12-26 | Geschlossen | Weihnachten\n12-31 | 08:30-15:00 | Silvester\n01-01 | Geschlossen | Neujahr\n2026-10-09 | 08:30-13:00 | Nachmittags Teamschulung\n2026-11-02 | 10:00-13:00, 14:00-18:30 | Später geöffnet wegen Inventur"
+    },
+    "specials_source": {
+      "label": "Datenquelle für Sondertermine (optional)",
+      "help": "Eine Google-Tabelle, CSV oder manuelle Tabelle mit Spalten für Datum, Zeiten und Hinweis. Verbunden ersetzt sie die oben eingegebenen Sondertermine."
+    },
+    "date_col": {
+      "label": "Spalte Datum",
+      "help": "Die Überschrift dieser Spalte in Ihrer Quelle, in lateinischen Buchstaben."
+    },
+    "hours_col": {
+      "label": "Spalte Zeiten"
+    },
+    "note_col": {
+      "label": "Spalte Hinweis"
+    },
+    "specials_count": {
+      "label": "Kommende Sondertermine in der Liste",
+      "help": "0 blendet die Liste aus. Die Wochentabelle zeigt Sonderzeiten immer am betreffenden Tag."
+    },
+    "open_label": {
+      "label": "Status: geöffnet",
+      "help": "Leer = „Jetzt geöffnet“ in der Sprache des Bildschirms."
+    },
+    "soon_label": {
+      "label": "Status: schließt bald",
+      "help": "Leer = „Schließt bald“ in der Sprache des Bildschirms."
+    },
+    "closed_label": {
+      "label": "Status und Tabelle: geschlossen",
+      "help": "Leer = „Geschlossen“ in der Sprache des Bildschirms."
+    },
+    "always_open_label": {
+      "label": "Rund um die Uhr geöffnet",
+      "help": "Leer = „24 Stunden geöffnet“ in der Sprache des Bildschirms."
+    },
+    "closes_text": {
+      "label": "Zeile: schließt",
+      "help": "{time} ist die Schließzeit. Leer = „Schließt um {time}“ in der Sprache des Bildschirms; - blendet die Zeile aus."
+    },
+    "reopens_text": {
+      "label": "Zeile: Pause",
+      "help": "Wenn am selben Tag später wieder geöffnet wird. Leer = Text in der Sprache des Bildschirms; - blendet die Zeile aus."
+    },
+    "opens_text": {
+      "label": "Zeile: öffnet",
+      "help": "{day} ist heute, morgen oder ein Wochentag; {time} die Öffnungszeit. Leer = Text in der Sprache des Bildschirms; - blendet sie aus."
+    },
+    "hours_heading": {
+      "label": "Überschrift: diese Woche",
+      "help": "Leer = „Öffnungszeiten“ in der Sprache des Bildschirms; - blendet die Überschrift aus."
+    },
+    "specials_heading": {
+      "label": "Überschrift: Sondertermine",
+      "help": "Leer = „Sonderöffnungszeiten“ in der Sprache des Bildschirms; - blendet die Überschrift aus."
+    },
+    "today_label": {
+      "label": "Markierung für heute",
+      "help": "Leer = das Wort für heute in der Sprache des Bildschirms."
+    },
+    "timezone": {
+      "label": "Zeitzone des Geschäfts",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wörter, Tage, Daten und Zeiten auf dem Bildschirm, z. B. en-GB, fr-FR oder de-DE. Leer = Sprache des Bildschirms."
+    },
+    "clock_format": {
+      "label": "Zeiten und Uhr",
+      "options": {
+        "auto": "Wie in der Sprache üblich, mit Uhr",
+        "24": "24 Stunden, mit Uhr",
+        "12": "12 Stunden, mit Uhr",
+        "off": "Wie in der Sprache üblich, ohne Uhr"
+      }
+    },
+    "font": {
+      "label": "Schrift der Überschriften",
+      "options": {
+        "archivo": "Archivo (markant)",
+        "bitter": "Bitter (Serifen)",
+        "inter": "Inter (schlicht)"
+      }
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Die heutige Zeile, Überschriften und Sondertermine."
+    },
+    "open_color": {
+      "label": "Farbe: geöffnet"
+    },
+    "soon_color": {
+      "label": "Farbe: schließt bald"
+    },
+    "closed_color": {
+      "label": "Farbe: geschlossen"
+    },
+    "soon_minutes": {
+      "label": "„Schließt bald“, Minuten vor Schluss",
+      "help": "0 schaltet „Schließt bald“ aus."
+    }
+  }
+}

@@ -30,6 +30,64 @@ ST.ready(function () {
   var DIFF = { easy: 0.6, normal: 1, hard: 1.5 }[V.difficulty] || 1;
   if (V.crt !== false) document.body.classList.add('crt');
 
+  /* ============================================================== language */
+
+  // Every word on screen follows the Language setting (empty = the screen's language); numbers go
+  // through Intl. The canvas has no CSS cascade, so the font stack lives here: a monospace for Latin,
+  // then Noto for Japanese, Chinese and Devanagari (canvas text falls back per character, like CSS).
+  function pickLocale(want) {
+    var tries = [want, navigator.language, 'en'];
+    for (var i = 0; i < tries.length; i++) {
+      if (!tries[i]) continue;
+      try { return new Intl.NumberFormat(tries[i]).resolvedOptions().locale || tries[i]; } catch (e) { /* next */ }
+    }
+    return 'en';
+  }
+  var LOC = pickLocale(V.locale);
+  var LANG = LOC.split('-')[0].toLowerCase();
+  document.documentElement.lang = LOC;
+  var STR = UPTIME_STRINGS[LANG] || UPTIME_STRINGS.en;
+  function T(key, n) {
+    var txt = STR[key] !== undefined ? STR[key] : UPTIME_STRINGS.en[key];
+    return n === undefined ? txt : txt.replace('{n}', n);
+  }
+  var numF = null, pctF = null;
+  try { numF = new Intl.NumberFormat(LOC, { maximumFractionDigits: 0 }); } catch (e) { numF = null; }
+  try { pctF = new Intl.NumberFormat(LOC, { style: 'percent', maximumFractionDigits: 0 }); } catch (e) { pctF = null; }
+  function fnum(x) { return numF ? numF.format(x) : String(x); }
+  function fpct(x) { return pctF ? pctF.format(x / 100) : x + '%'; }
+  // Trailer-style letter spacing (P R E S E N T S) — only for scripts where letters stand alone.
+  var SPACED = !/^(ja|zh|hi|ko|th)$/.test(LANG);
+  function spread(txt) {
+    if (!SPACED) return txt;
+    return txt.split(' ').map(function (w) { return chars(w).join(' '); }).join('  ');
+  }
+  // Text as user-perceived characters, so typing a line out never splits a Devanagari syllable.
+  var segmenter = null;
+  try { if (typeof Intl.Segmenter === 'function') segmenter = new Intl.Segmenter(LOC, { granularity: 'grapheme' }); } catch (e) { segmenter = null; }
+  function chars(txt) {
+    if (!segmenter) return Array.from(txt);
+    var out = [];
+    var it = segmenter.segment(txt)[Symbol.iterator]();
+    for (var r = it.next(); !r.done; r = it.next()) out.push(r.value.segment);
+    return out;
+  }
+  function typed(txt, frac) {
+    var c = chars(txt);
+    return c.slice(0, Math.ceil(frac * c.length)).join('');
+  }
+  var CJK = LANG === 'zh' ? '"Noto Sans CJK SC", "Noto Sans CJK JP"' : '"Noto Sans CJK JP", "Noto Sans CJK SC"';
+  var FONTS = 'ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace, "Noto Sans", ' + CJK + ', "Noto Sans Devanagari", system-ui, sans-serif';
+  // Sets the font, shrunk until `text` fits in maxW pixels (long German words, wide CJK glyphs).
+  function fitFont(ctx, text, weight, size, maxW) {
+    ctx.font = weight + ' ' + size + 'px ' + FONTS;
+    if (maxW > 0) {
+      var w = ctx.measureText(text).width;
+      if (w > maxW) { size = size * maxW / w; ctx.font = weight + ' ' + size + 'px ' + FONTS; }
+    }
+    return size;
+  }
+
   /* ============================================================== rng */
 
   function rng(seed) {
@@ -252,7 +310,7 @@ ST.ready(function () {
 
   var MAP = 28;
   var map, rooms, exitCell, level, levelSeed;
-  var player, enemies, pickups, bolts, particles, score, message, messageSub, messageUntil, deadUntil;
+  var player, enemies, pickups, bolts, particles, score, message, messageSub, messageUntil, messageRed, deadUntil;
 
   function generate(seed, lvl) {
     var r = rng(seed * 31 + lvl * 7919);
@@ -374,15 +432,15 @@ ST.ready(function () {
     level = 1; levelSeed = seed; score = 0;
     player.hp = 100; player.energy = 100;
     generate(levelSeed, level);
-    say('FLOOR 1', 2200, 'THE SERVERS ARE DOWN');
+    say(T('floor', fnum(1)), 2200, T('servers_down'));
   }
   function nextLevel() {
     level++; score += 500;
     player.hp = Math.min(100, player.hp + 25); player.energy = 100;
     generate(levelSeed, level);
-    say('FLOOR ' + level, 2600, 'SERVERS RESTORED — NEXT FLOOR');
+    say(T('floor', fnum(level)), 2600, T('restored'));
   }
-  function say(text, ms, sub) { message = text; messageSub = sub || ''; messageUntil = performance.now() + ms; }
+  function say(text, ms, sub, red) { message = text; messageSub = sub || ''; messageRed = !!red; messageUntil = performance.now() + ms; }
 
   /* ============================================================== input */
 
@@ -605,7 +663,7 @@ ST.ready(function () {
     }
     player.hurt = Math.max(0, player.hurt - dt * 2);
     if (bot) player.hp = Math.min(100, player.hp + dt * 2);
-    if (player.hp <= 0) { player.hp = 0; deadUntil = now + 2600; say('KERNEL PANIC', 2600, 'UPTIME HIT ZERO'); }
+    if (player.hp <= 0) { player.hp = 0; deadUntil = now + 2600; say(T('panic'), 2600, T('panic_sub'), true); }
 
     // Supplies.
     for (var p = 0; p < pickups.length; p++) {
@@ -824,8 +882,8 @@ ST.ready(function () {
     vctx.restore();
   }
 
-  function neon(text, x, y, size, col, align, blur) {
-    hctx.font = '700 ' + size + 'px ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace';
+  function neon(text, x, y, size, col, align, blur, maxW) {
+    size = fitFont(hctx, text, 700, size, maxW === undefined ? HW * 0.94 : maxW);
     hctx.textAlign = align || 'center';
     hctx.textBaseline = 'middle';
     hctx.shadowColor = 'rgb(' + col.join(',') + ')';
@@ -842,7 +900,7 @@ ST.ready(function () {
     hctx.shadowColor = hctx.fillStyle; hctx.shadowBlur = h;
     hctx.fillRect(x + 2, y + 2, Math.max(0, (w - 4) * frac), h - 4);
     hctx.shadowBlur = 0;
-    neon(label, x, y - h * 0.9, h * 0.9, col, 'left', 4);
+    neon(label, x, y - h * 0.9, h * 0.9, col, 'left', 4, w);
   }
 
   function renderHud(now) {
@@ -868,17 +926,17 @@ ST.ready(function () {
       hctx.stroke();
     }
     // Status.
-    bar(u * 3, HH - u * 7, HW * 0.22, u * 2.6, Math.max(0, player.hp) / 100, [60, 255, 150], 'UPTIME ' + Math.ceil(Math.max(0, player.hp)) + '%');
-    bar(HW - u * 3 - HW * 0.22, HH - u * 7, HW * 0.22, u * 2.6, player.energy / 100, ACC, 'PATCHES ' + Math.floor(player.energy));
+    bar(u * 3, HH - u * 7, HW * 0.22, u * 2.6, Math.max(0, player.hp) / 100, [60, 255, 150], T('uptime', fpct(Math.ceil(Math.max(0, player.hp)))));
+    bar(HW - u * 3 - HW * 0.22, HH - u * 7, HW * 0.22, u * 2.6, player.energy / 100, ACC, T('patches', fnum(Math.floor(player.energy))));
     var left = 0;
     for (var i = 0; i < enemies.length; i++) if (!enemies[i].dead) left++;
-    neon('FLOOR ' + level + '   ' + String(score).padStart(6, '0') + '   BUGS ' + left, HW / 2, u * 4, u * 2.6, ACC, 'center', u);
+    neon(T('floor', fnum(level)) + '   ' + String(score).padStart(6, '0') + '   ' + T('bugs', fnum(left)), HW / 2, u * 4, u * 2.6, ACC, 'center', u, HW * 0.48);
 
     if (message && now < messageUntil) {
       var a = Math.min(1, (messageUntil - now) / 500);
       hctx.globalAlpha = a;
-      neon(message, HW / 2, HH * 0.3, u * 7, message === 'KERNEL PANIC' ? [255, 60, 70] : ACC2, 'center');
-      if (messageSub) neon(messageSub, HW / 2, HH * 0.3 + u * 7, u * 2.4, message === 'KERNEL PANIC' ? [255, 60, 70] : [60, 255, 120], 'center', u);
+      neon(message, HW / 2, HH * 0.3, u * 7, messageRed ? [255, 60, 70] : ACC2, 'center');
+      if (messageSub) neon(messageSub, HW / 2, HH * 0.3 + u * 7, u * 2.4, messageRed ? [255, 60, 70] : [60, 255, 120], 'center', u);
       hctx.globalAlpha = 1;
     }
 
@@ -887,8 +945,10 @@ ST.ready(function () {
       // too. The "press any key" line stays up throughout.
       var cyc = (now % 16000) / 16000;
       var cardA = cyc < 0.375 ? Math.min(1, cyc * 16) : Math.max(0, 1 - (cyc - 0.375) * 16);
-      if (PLAYABLE && ((now / 600) | 0) % 2 === 0) neon('CLICK OR PRESS ANY KEY TO PLAY', HW / 2, HH * 0.86, u * 2.4, [255, 255, 255], 'center', u);
-      neon('AUTOPILOT DEMO', u * 3, u * 4, u * 1.8, ACC2, 'left', 3);
+      if (PLAYABLE && ((now / 600) | 0) % 2 === 0) neon(T('press'), HW / 2, HH * 0.86, u * 2.4, [255, 255, 255], 'center', u);
+      // Clear of the centred status line: beside it when wide, under it on a tall screen.
+      if (HW > HH) neon(T('demo'), u * 3, u * 4, u * 1.8, ACC2, 'left', 3, HW * 0.24 - u * 3);
+      else neon(T('demo'), HW / 2, u * 7.5, u * 1.8, ACC2, 'center', 3);
       if (cardA <= 0) return;
       hctx.globalAlpha = cardA;
       hctx.fillStyle = 'rgba(2,3,10,.45)';
@@ -898,7 +958,7 @@ ST.ready(function () {
       neon(TITLE, HW / 2, HH * 0.42, Math.min(u * 13, HW / (TITLE.length * 0.72)), ACC, 'center', u * 3);
       hctx.globalAlpha = cardA;
       if (TAGLINE) neon(TAGLINE, HW / 2, HH * 0.53, Math.min(u * 2.6, HW / (TAGLINE.length * 0.7)), ACC2, 'center', u);
-      if (PLAYABLE) neon('MOVE  ARROWS / WASD     TURN  ← → / Q E     PATCH  SPACE / CTRL / F     QUIT  ESC', HW / 2, HH * 0.64, u * 1.7, ACC, 'center', 2);
+      if (PLAYABLE) neon(T('controls'), HW / 2, HH * 0.64, u * 1.7, ACC, 'center', 2);
       hctx.globalAlpha = 1;
     }
   }
@@ -967,13 +1027,14 @@ ST.ready(function () {
     ctx.restore();
   }
 
-  function glowText(text, x, y, size, col, alpha, spacing, weight) {
+  // fitTo: the full line when `text` is being typed out, so the size does not jump at the end.
+  function glowText(text, x, y, size, col, alpha, spacing, weight, fitTo) {
     hctx.save();
     hctx.globalAlpha = alpha;
-    hctx.font = (weight || 700) + ' ' + size + 'px ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace';
+    if ('letterSpacing' in hctx) hctx.letterSpacing = (spacing || 0) + 'px';
+    size = fitFont(hctx, fitTo || text, weight || 700, size, HW * 0.94);
     hctx.textAlign = 'center';
     hctx.textBaseline = 'middle';
-    if ('letterSpacing' in hctx) hctx.letterSpacing = (spacing || 0) + 'px';
     hctx.shadowColor = 'rgb(' + col.join(',') + ')';
     hctx.shadowBlur = size * 0.45;
     hctx.fillStyle = 'rgb(' + mixc(col, [255, 255, 255], 0.5).map(Math.round).join(',') + ')';
@@ -1027,19 +1088,19 @@ ST.ready(function () {
       var wa = 1 - out;
       if (shown > 0) glowText(word.slice(0, shown) + (shown < word.length && ((now / 90) | 0) % 2 ? '_' : ''), cx, cy + size * 0.5, Math.min(u * 8, HW / 12), BRAND, wa, u * 1.2, 800);
       var pa = seg(t, 3.1, 3.5) * wa;
-      if (pa > 0) glowText('P R E S E N T S', cx, cy + size * 0.5 + u * 9, u * 2.8, [200, 210, 230], pa, u * 0.3, 600);
+      if (pa > 0) glowText(spread(T('presents')), cx, cy + size * 0.5 + u * 9, u * 2.8, [200, 210, 230], pa, u * 0.3, 600);
     }
 
     // Trailer cards: white on black, typed out, the way a trailer voice would say them.
-    var cardsT = [[4.5, 6.0, '3036.', 'EVERY SERVER IS DOWN.'], [6.0, 7.5, 'ONE TECH', 'IS ON CALL.']];
+    var cardsT = [[4.5, 6.0, T('card1_big'), T('card1_small')], [6.0, 7.5, T('card2_big'), T('card2_small')]];
     for (var ci = 0; ci < cardsT.length; ci++) {
       var ct = cardsT[ci];
       if (t < ct[0] || t > ct[1]) continue;
       var cp = seg(t, ct[0], ct[1]);
       var ca = Math.min(1, cp * 5) * Math.min(1, (1 - cp) * 5);
-      var line2 = ct[3].slice(0, Math.ceil(seg(t, ct[0] + 0.25, ct[0] + 0.9) * ct[3].length));
+      var line2 = typed(ct[3], seg(t, ct[0] + 0.25, ct[0] + 0.9));
       glowText(ct[2], cx, HH * 0.44, u * 7, [230, 236, 250], ca, u * 0.4, 800);
-      glowText(line2, cx, HH * 0.56, u * 3.6, ci === 0 ? [255, 70, 80] : [60, 255, 120], ca, u * 0.3, 700);
+      glowText(line2, cx, HH * 0.56, u * 3.6, ci === 0 ? [255, 70, 80] : [60, 255, 120], ca, u * 0.3, 700, ct[3]);
     }
 
     // CRT power-on line, then the title smash.
@@ -1072,7 +1133,7 @@ ST.ready(function () {
       var sub = seg(t, 9.4, 10) * fade;
       if (TAGLINE) glowText(TAGLINE, cx, HH * 0.58, Math.min(u * 2.6, HW / (TAGLINE.length * 0.7)), ACC2, sub, u * 0.1, 600);
       var credit = seg(t, 10, 10.6) * fade;
-      glowText('A  S C R E E N T I N K E R  G A M E', cx, HH * 0.84, u * 2.4, BRAND, credit, 0, 600);
+      glowText(spread(T('credit')), cx, HH * 0.84, u * 2.4, BRAND, credit, 0, 600);
     }
     // Letterbox bars: it is a trailer.
     hctx.fillStyle = '#000';

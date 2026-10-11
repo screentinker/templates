@@ -1,0 +1,164 @@
+{
+  "name": "安全生产天数",
+  "description": "适用于工厂、仓库或工地的安全看板：大字显示距上次事故的天数（或小时数）、最佳纪录、绿/黄/红目标进度条、劳保用品标识和轮播安全提示。事故当天变为红色。可通过 Google 表格重置。",
+  "params": {
+    "site_name": {
+      "label": "场所名称",
+      "default": "Northwind Logistics · Riverside 配送中心"
+    },
+    "last_incident": {
+      "label": "上次事故日期",
+      "help": "YYYY-MM-DD，或精确到时间的 YYYY-MM-DD HH:MM（按下方时区）。已连接的数据源优先。"
+    },
+    "incidents": {
+      "label": "事故数据源（可选）",
+      "help": "含上次事故日期列的 Google 表格或手动表格。以该列中最新的日期为准。"
+    },
+    "date_col": {
+      "label": "日期列"
+    },
+    "best_col": {
+      "label": "最佳纪录列（可选）",
+      "help": "记录最长连续天数的列。数据源没有该列时忽略。"
+    },
+    "date_order": {
+      "label": "03/04/2026 这类日期的顺序",
+      "options": {
+        "dmy": "日在前（2026年4月3日）",
+        "mdy": "月在前（2026年3月4日）"
+      }
+    },
+    "count_unit": {
+      "label": "计数单位",
+      "options": {
+        "days": "天",
+        "days_hours": "天和小时",
+        "hours": "小时",
+        "minutes": "分钟"
+      }
+    },
+    "unit_label": {
+      "label": "单位文字",
+      "help": "留空则使用所选语言的单位（天、days、Tage 等）。"
+    },
+    "headline": {
+      "label": "数字下方的文字",
+      "default": "无损工事故"
+    },
+    "since_label": {
+      "label": "事故日期前的文字",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "incident_today_label": {
+      "label": "事故当天显示的文字",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "incident_today_note": {
+      "label": "当天下方的文字",
+      "default": "确保现场安全，及时上报，互相关照。"
+    },
+    "best_record": {
+      "label": "最佳纪录（天）"
+    },
+    "best_label": {
+      "label": "标题：最佳纪录",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "new_record_label": {
+      "label": "打破纪录时显示",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "target_days": {
+      "label": "目标（天）"
+    },
+    "target_label": {
+      "label": "标题：目标",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "amber_days": {
+      "label": "黄色起始（天）",
+      "help": "低于此值时看板为红色。"
+    },
+    "green_days": {
+      "label": "绿色起始（天）"
+    },
+    "status_green": {
+      "label": "状态文字：绿",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "status_amber": {
+      "label": "状态文字：黄",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "status_red": {
+      "label": "状态文字：红",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "messages": {
+      "label": "安全提示",
+      "help": "每行一条，在底部轮播。留空则隐藏提示栏。",
+      "default": "每一次未遂事件都要上报，这样才能保持零事故。\n叉车作业区：行人请走划定的通道。\n上下梯子和台阶时保持三点接触。\n发现泄漏？停下、隔离、上报。\n用腿发力搬运，超过 25 公斤请找人帮忙。\n疲劳或身体不适？请告诉班组长，无需顾虑。"
+    },
+    "message_seconds": {
+      "label": "每条提示的秒数"
+    },
+    "ppe_heading": {
+      "label": "标题：劳保用品标识",
+      "help": "留空则使用屏幕语言的内置文字。"
+    },
+    "ppe_labels": {
+      "label": "劳保用品名称",
+      "help": "用 | 分隔的六个名称，顺序为：安全帽、护目镜、反光背心、手套、安全鞋、护耳。空名称使用内置名称。"
+    },
+    "ppe_hard_hat": {
+      "label": "显示劳保用品：安全帽"
+    },
+    "ppe_goggles": {
+      "label": "显示劳保用品：护目镜"
+    },
+    "ppe_hivis": {
+      "label": "显示劳保用品：反光背心"
+    },
+    "ppe_gloves": {
+      "label": "显示劳保用品：手套"
+    },
+    "ppe_boots": {
+      "label": "显示劳保用品：安全鞋"
+    },
+    "ppe_ear": {
+      "label": "显示劳保用品：护耳"
+    },
+    "green_color": {
+      "label": "绿色"
+    },
+    "amber_color": {
+      "label": "黄色"
+    },
+    "red_color": {
+      "label": "红色"
+    },
+    "accent": {
+      "label": "警示条纹颜色"
+    },
+    "background": {
+      "label": "背景颜色"
+    },
+    "clock_format": {
+      "label": "时钟",
+      "options": {
+        "auto": "跟随语言",
+        "24": "24 小时制",
+        "12": "12 小时制",
+        "off": "隐藏时钟"
+      }
+    },
+    "timezone": {
+      "label": "场所时区",
+      "help": "按此时区的午夜换日。留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "屏幕上的文字、日期和数字，例如 zh-CN。留空则使用屏幕的语言。"
+    }
+  }
+}

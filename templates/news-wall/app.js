@@ -31,10 +31,86 @@
     if (clamp || s.length <= max) return s;
     return s.slice(0, max).replace(/\s+\S*$/, '') + '…';
   }
-  /* The first letter or digit of a headline, for the typographic badges. */
+  /* The first letter or digit of a headline, for the typographic badges. Any script where the engine
+     knows Unicode properties (a kanji, a Devanagari letter), else Latin, Greek and Cyrillic. */
+  var LETTER = /[A-Za-z0-9À-ɏͰ-ϿЀ-ӿ]/;
+  try { LETTER = new RegExp('[\\p{L}\\p{N}]', 'u'); } catch (e) { /* older engine: keep the fallback */ }
   function initial(s) {
-    var m = /[A-Za-z0-9À-ɏͰ-ϿЀ-ӿ]/.exec(s || '');
+    var m = LETTER.exec(s || '');
     return m ? m[0].toUpperCase() : '•';
+  }
+
+  /* Built-in words, picked by the primary subtag of the "locale" setting (empty = the screen's
+     language), falling back to English. Typed labels in the settings still win over these. */
+  var STRINGS = {
+    en: {
+      latest: 'Latest news',
+      top: 'Top story',
+      next: 'Up next',
+      empty: 'No stories yet. Bind an RSS data source, or type headlines in the template settings.'
+    },
+    de: {
+      latest: 'Aktuelles',
+      top: 'Top-Thema',
+      next: 'Als Nächstes',
+      empty: 'Noch keine Meldungen. Eine RSS-Datenquelle verbinden oder Schlagzeilen in den Vorlageneinstellungen eintragen.'
+    },
+    es: {
+      latest: 'Últimas noticias',
+      top: 'Destacado',
+      next: 'A continuación',
+      empty: 'Aún no hay noticias. Vincula una fuente RSS o escribe titulares en los ajustes de la plantilla.'
+    },
+    fr: {
+      latest: 'Actualités',
+      top: 'À la une',
+      next: 'À suivre',
+      empty: 'Aucune actualité pour l’instant. Liez une source RSS ou saisissez des titres dans les réglages du modèle.'
+    },
+    hi: {
+      latest: 'ताज़ा ख़बरें',
+      top: 'मुख्य ख़बर',
+      next: 'आगे',
+      empty: 'अभी कोई ख़बर नहीं। कोई RSS डेटा स्रोत जोड़ें, या टेम्पलेट सेटिंग में सुर्खियाँ लिखें।'
+    },
+    it: {
+      latest: 'Ultime notizie',
+      top: 'In primo piano',
+      next: 'A seguire',
+      empty: 'Ancora nessuna notizia. Collega una fonte RSS o scrivi i titoli nelle impostazioni del modello.'
+    },
+    ja: {
+      latest: '最新ニュース',
+      top: 'トップニュース',
+      next: '次のニュース',
+      empty: 'まだ記事がありません。RSS データソースを接続するか、テンプレート設定で見出しを入力してください。'
+    },
+    nl: {
+      latest: 'Laatste nieuws',
+      top: 'Uitgelicht',
+      next: 'Hierna',
+      empty: 'Nog geen berichten. Koppel een RSS-gegevensbron of typ koppen in de sjablooninstellingen.'
+    },
+    pt: {
+      latest: 'Últimas notícias',
+      top: 'Destaque',
+      next: 'A seguir',
+      empty: 'Ainda não há notícias. Vincule uma fonte RSS ou digite manchetes nas configurações do modelo.'
+    },
+    zh: {
+      latest: '最新消息',
+      top: '头条',
+      next: '接下来',
+      empty: '暂无新闻。请绑定 RSS 数据源，或在模板设置中输入标题。'
+    }
+  };
+  /* A usable BCP-47 tag for Intl: the setting if this engine has it, else the screen's language. */
+  function pickLocale(tag) {
+    var t = String(tag || '').trim();
+    if (t) {
+      try { if (Intl.DateTimeFormat.supportedLocalesOf([t]).length) return t; } catch (e) { /* invalid tag */ }
+    }
+    return (typeof navigator !== 'undefined' && navigator.language) || 'en';
   }
 
   ST.ready(function () {
@@ -46,7 +122,11 @@
     if (v.accent2) root.style.setProperty('--accent2', v.accent2);
     if (clamp) document.body.classList.add('clamp');
 
-    var locale = v.locale || undefined;
+    var locale = pickLocale(v.locale);
+    // The words follow the setting even where this engine's Intl lacks that language's data.
+    var lang = String(v.locale || '').trim() || locale;
+    var words = STRINGS[lang.toLowerCase().split(/[-_]/)[0]] || STRINGS.en;
+    root.setAttribute('lang', lang);
     var tz = v.timezone || undefined;
     var maxItems = Math.round(num(v.max_items, 1, 20, 8));
     var rotateMs = Math.round(num(v.rotate_seconds, 4, 60, 10) * 1000);
@@ -113,11 +193,13 @@
     var index = 0;
     var feature = $('feature'), body = feature.querySelector('.feature-body');
 
-    function pad(n) { return n < 10 ? '0' + n : String(n); }
+    var nf2 = null;
+    try { nf2 = new Intl.NumberFormat(locale, { minimumIntegerDigits: 2, useGrouping: false }); } catch (e) { nf2 = null; }
+    function pad(n) { return nf2 ? nf2.format(n) : (n < 10 ? '0' + n : String(n)); }
     function showFeature() {
       var s = stories[index];
       $('glyph').textContent = initial(s.title);
-      $('f-kicker').textContent = str(v.feature_label) || 'Top story';
+      $('f-kicker').textContent = str(v.feature_label) || words.top;
       var date = when(s);
       var meta = [date, s.author].filter(Boolean).join(' · ');
       $('f-date').textContent = meta;
@@ -146,7 +228,9 @@
         li.style.animationDelay = (k * 80) + 'ms';
         li.appendChild(el('div', 'badge', initial(it.title)));
         var text = el('div', 'card-text');
-        text.appendChild(el('div', 'card-title', cut(it.title, 90)));
+        var ct = el('div', 'card-title', cut(it.title, 90));
+        ct.dir = 'auto';
+        text.appendChild(ct);
         var d = when(it);
         if (d) text.appendChild(el('div', 'card-date', d));
         li.appendChild(text);
@@ -159,15 +243,15 @@
     var lastKey = '';
     function load() {
       var src = fromFeed() || fromTyped();
-      $('title').textContent = str(v.title) || src.title || 'Latest news';
-      $('rail-label').textContent = str(v.next_label) || 'Up next';
+      $('title').textContent = str(v.title) || src.title || words.latest;
+      $('rail-label').textContent = str(v.next_label) || words.next;
       var key = JSON.stringify(src.items);
       if (key === lastKey) return;
       lastKey = key;
       stories = src.items;
       var empty = $('empty');
       if (!stories.length) {
-        empty.textContent = 'No stories yet. Bind an RSS data source, or type headlines in the template settings.';
+        empty.textContent = words.empty;
         empty.hidden = false;
         document.querySelector('.wall').hidden = true;
         return;

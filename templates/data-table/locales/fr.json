@@ -1,0 +1,115 @@
+{
+  "name": "Tableau de données",
+  "description": "Tout tableau en affichage clair et lisible : classement sportif, taux d’épargne et leurs mentions, stocks, planning. Connectez une feuille Google, un CSV, une liste REST ou un tableau manuel (ou saisissez les lignes), choisissez les colonnes, colorez des cellules avec des règles simples comme « Stock < 5 rouge » ; les longs tableaux défilent par pages.",
+  "params": {
+    "preset": {
+      "label": "Point de départ",
+      "help": "Fournit lignes d’exemple, titre et règles de mise en évidence pour tout ce que vous laissez vide. Choisissez « Aucun » pour n’utiliser que vos réglages.",
+      "options": {
+        "league": "Classement sportif",
+        "rates": "Taux bancaires / d’épargne",
+        "stock": "Niveaux de stock",
+        "generic": "Générique (formations)",
+        "none": "Aucun : mes réglages seulement"
+      }
+    },
+    "title": {
+      "label": "Titre",
+      "help": "Vide reprend le titre du point de départ. Un seul - le masque."
+    },
+    "subtitle": {
+      "label": "Sous-titre",
+      "help": "Une ligne sous le titre. Vide reprend celui du point de départ. Un seul - le masque."
+    },
+    "footer": {
+      "label": "Pied de page",
+      "help": "Petit texte en bas. Vide reprend celui du point de départ. Un seul - le masque."
+    },
+    "disclosure": {
+      "label": "Mentions / petits caractères",
+      "help": "Petit texte sous le tableau sur chaque page, p. ex. les mentions légales des taux. Vide reprend celles du point de départ. Un seul - les masque."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facultatif. Affiché à côté du titre."
+    },
+    "table": {
+      "label": "Source de données du tableau (facultatif)",
+      "help": "Une feuille Google, un CSV, une liste REST ou un tableau manuel. Sa ligne d’en-tête donne les titres de colonnes. Remplace les lignes saisies ci-dessous."
+    },
+    "rows": {
+      "label": "Tableau saisi",
+      "help": "Utilisé sans source de données. Première ligne = en-têtes, puis une ligne par rangée, cellules séparées par |. Vide affiche l’exemple du point de départ."
+    },
+    "show_columns": {
+      "label": "Colonnes affichées",
+      "help": "Facultatif, en-têtes séparés par des virgules dans l’ordre voulu, p. ex. Équipe, J, Pts. Vide affiche toutes les colonnes."
+    },
+    "highlight_col": {
+      "label": "Colonne mise en évidence",
+      "help": "L’en-tête de la colonne testée par les règles. Vide reprend celle du point de départ. Un seul - désactive la mise en évidence."
+    },
+    "highlight_rules": {
+      "label": "Règles de mise en évidence",
+      "help": "Séparées par ; et testées dans l’ordre, p. ex. < 5 rouge; < 20 orange; = Épuisé gris. Couleurs : rouge orange vert bleu violet gris accent ou #hex."
+    },
+    "highlight_style": {
+      "label": "Style de mise en évidence",
+      "options": {
+        "preset": "Comme le point de départ",
+        "cell": "Colorer la cellule",
+        "row": "Colorer toute la ligne"
+      }
+    },
+    "rows_per_page": {
+      "label": "Lignes par page",
+      "help": "0 = automatique : tout sur un écran si c’est lisible, sinon des pages de taille confortable."
+    },
+    "page_seconds": {
+      "label": "Secondes par page"
+    },
+    "theme": {
+      "label": "Thème",
+      "options": {
+        "midnight": "Minuit (bleu foncé)",
+        "graphite": "Graphite (gris foncé)",
+        "paper": "Papier (clair)",
+        "contrast": "Contraste élevé (noir et blanc)"
+      }
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Filet du titre, ligne d’en-tête, points de page et la couleur de règle « accent »."
+    },
+    "font": {
+      "label": "Police des titres",
+      "options": {
+        "archivo": "Archivo (affiche)",
+        "oswald": "Oswald (condensée)",
+        "inter": "Inter (sobre)"
+      }
+    },
+    "zebra": {
+      "label": "Lignes alternées"
+    },
+    "show_updated": {
+      "label": "Afficher la dernière mise à jour de la source",
+      "help": "Seulement avec une source de données connectée."
+    },
+    "updated_label": {
+      "label": "Mot « Mis à jour »",
+      "help": "Le mot avant l’heure. Vide affiche « Mis à jour » dans la langue de l’écran ; un seul - n’affiche que l’heure."
+    },
+    "limit_label": {
+      "label": "Note quand toutes les lignes ne tiennent pas",
+      "help": "Affichée si la source a plus de lignes qu’il n’en arrive à l’écran ; {shown} et {total} sont remplis. Vide utilise le texte par défaut."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue des mots fixes et des tableaux d’exemple, de l’heure de mise à jour et des numéros de page. Vide utilise la langue de l’écran."
+    },
+    "timezone": {
+      "label": "Fuseau horaire de la mise à jour"
+    }
+  }
+}

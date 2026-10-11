@@ -1,0 +1,46 @@
+{
+  "name": "Dia da Terra (retrato)",
+  "description": "Uma tela para o Dia da Terra em verde-floresta e azul-oceano: um planeta feito de formas simples com lua e estrelas, sua manchete, uma mensagem sobre o que sua equipe fez e uma linha para a data ou um evento.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "A linha curta acima da manchete. Deixe vazio para ocultar.",
+      "default": "FELIZ DIA DA TERRA"
+    },
+    "headline": {
+      "label": "Manchete",
+      "help": "Duas linhas são reservadas para ela: cabem cerca de 24 caracteres. Uma manchete mais longa passa para a terceira linha e invade a mensagem.",
+      "default": "Cada passo conta"
+    },
+    "message": {
+      "label": "Mensagem",
+      "help": "Uma ou duas frases abaixo da manchete; cabem até 200 caracteres. Uma quebra de linha começa uma nova linha.",
+      "default": "Este ano nossos escritórios passaram a usar 100% de energia renovável e cortaram 38% do lixo. Obrigado por cada garrafa reabastecida e cada ida de bicicleta."
+    },
+    "date_line": {
+      "label": "Linha da data",
+      "help": "Texto livre, digitado como deve aparecer: uma data, um horário e local, ou uma assinatura.",
+      "default": "22 · 04  ·  MUDAS GRÁTIS DAS 10:00 ÀS 14:00"
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se você não tiver logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG largo com fundo transparente (cerca de 3,4 : 1 preenche a área; outros formatos são ajustados dentro dela). Substitua o logotipo provisório da Northwind."
+    },
+    "accent": {
+      "label": "Cor da terra"
+    },
+    "accent2": {
+      "label": "Cor do oceano"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

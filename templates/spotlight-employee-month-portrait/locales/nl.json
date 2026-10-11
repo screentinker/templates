@@ -1,0 +1,94 @@
+{
+  "name": "Medewerker van de maand (staand)",
+  "description": "Zet een collega in het zonnetje: een grote ronde foto in een gouden ring, naam en functie, een quote in eigen woorden, een leuk weetje en een badge voor de maand. Staande 9:16-indeling.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond werkt het best."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Een foto van hoofd en schouders, bijgesneden tot het kader. Vierkante foto’s werken het best."
+    },
+    "show_photo": {
+      "label": "Foto tonen",
+      "help": "Uit toont in plaats daarvan een cirkel met de initialen, voor wie liever geen foto laat zien."
+    },
+    "initials": {
+      "label": "Initialen",
+      "help": "Staan in de cirkel als de foto uit staat. Eén of twee letters."
+    },
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "Boven de naam. Hoofdletters lezen het best.",
+      "default": "MEDEWERKER VAN DE MAAND"
+    },
+    "name": {
+      "label": "Naam",
+      "help": "Eén regel, tot 26 tekens. Typ in gewone hoofd- en kleine letters; ALLES IN HOOFDLETTERS is breder en past misschien niet."
+    },
+    "role": {
+      "label": "Functie",
+      "help": "Functietitel, team, klas of locatie. Langere tekst loopt door op een tweede regel.",
+      "default": "Senior supportengineer, Klantenservice"
+    },
+    "show_quote": {
+      "label": "Quote tonen",
+      "help": "Uit verbergt de quote en het aanhalingsteken."
+    },
+    "quote": {
+      "label": "Quote",
+      "help": "Een of twee zinnen in eigen woorden. Aanhalingstekens zijn niet nodig.",
+      "default": "Ik geniet van het moment dat een gefrustreerde klant zegt: \"o, dat was makkelijk\". Deze prijs is van het hele tier 2-team."
+    },
+    "quote_mark": {
+      "label": "Aanhalingsteken",
+      "help": "Het grote sierteken bij de quote. Gebruik het teken van je taal, bijv. “ of „.",
+      "default": "“"
+    },
+    "show_fact": {
+      "label": "Leuk weetje tonen",
+      "help": "Uit verbergt het label en de tekst van het weetje."
+    },
+    "fact_label": {
+      "label": "Label van het weetje",
+      "help": "Een kort label, bijv. LEUK WEETJE of VRAAG ME NAAR.",
+      "default": "LEUK WEETJE"
+    },
+    "fun_fact": {
+      "label": "Leuk weetje",
+      "help": "Een of twee korte zinnen.",
+      "default": "Priya liep een halve marathon op vier continenten en bakt geweldige kardemombroodjes."
+    },
+    "show_badge": {
+      "label": "Badge tonen"
+    },
+    "badge": {
+      "label": "Tekst op de badge",
+      "help": "Een maand, startdatum, team of mijlpaal. Hoofdletters lezen het best.",
+      "default": "OKTOBER 2026"
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Ring, badge, kleine kop en versiering."
+    },
+    "highlight": {
+      "label": "Kleur van de initialencirkel",
+      "help": "De cirkel achter de initialen en een deel van de confetti."
+    },
+    "background": {
+      "label": "Achtergrondkleur",
+      "help": "Ook de kleur van de tekst op de badge."
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "card_color": {
+      "label": "Kleur van de weetjeskaart",
+      "help": "Een tint iets lichter dan de achtergrond werkt het best."
+    },
+    "initials_color": {
+      "label": "Kleur van de initialen"
+    }
+  }
+}

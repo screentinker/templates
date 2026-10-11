@@ -1,0 +1,126 @@
+{
+  "name": "Happy Hour (Hochformat)",
+  "description": "Hochformat (9:16). Eine Happy Hour oder ein Tageszeit-Angebot für Bar oder Restaurant: eine große Überschrift, Tage und Uhrzeiten, drei Angebote mit Preisen, ein Getränkebild mit warmem Schein und eine Live-Uhr, damit Gäste sehen, wie viel Zeit bleibt.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ein annähernd quadratisches PNG oder SVG. Das mitgelieferte Abzeichen ist ein Platzhalter – ersetzen Sie es durch Ihr eigenes."
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Ausschalten, wenn Sie kein Logo haben (ein leeres Logo-Feld zeigt sonst einen gestrichelten Rahmen)."
+    },
+    "brand": {
+      "label": "Name des Geschäfts",
+      "help": "Steht neben dem Logo. Leer lassen, wenn Ihr Logo den Namen schon enthält."
+    },
+    "headline": {
+      "label": "Überschrift, erste Zeile",
+      "help": "Die Überschrift steht in zwei großen Zeilen, je ein, zwei Wörter: Happy / Hour, Wochenend / Brunch.",
+      "default": "Happy"
+    },
+    "headline_2": {
+      "label": "Überschrift, zweite Zeile (Akzent)",
+      "default": "Hour"
+    },
+    "hours": {
+      "label": "Wann es gilt",
+      "help": "So eingeben, wie es dastehen soll; anders als die Uhr wird es nicht übersetzt. Planen Sie die Folie in der Playlist nur für diese Zeiten ein.",
+      "default": "MONTAG – FREITAG · 16 – 19 UHR"
+    },
+    "deal1_price": {
+      "label": "Angebot 1 – Preis",
+      "default": "6 €"
+    },
+    "deal1_name": {
+      "label": "Angebot 1 – Name",
+      "default": "Hauswein"
+    },
+    "deal1_note": {
+      "label": "Angebot 1 – Hinweis",
+      "default": "Rot, Weiß oder Rosé, glasweise"
+    },
+    "deal2_price": {
+      "label": "Angebot 2 – Preis",
+      "default": "5 €"
+    },
+    "deal2_name": {
+      "label": "Angebot 2 – Name",
+      "default": "Bier vom Fass"
+    },
+    "deal2_note": {
+      "label": "Angebot 2 – Hinweis",
+      "default": "Jeder Zapfhahn, auch das Saisonbier"
+    },
+    "deal3_price": {
+      "label": "Angebot 3 – Preis",
+      "default": "8 €"
+    },
+    "deal3_name": {
+      "label": "Angebot 3 – Name",
+      "default": "Klassische Cocktails"
+    },
+    "deal3_note": {
+      "label": "Angebot 3 – Hinweis",
+      "default": "Margarita, Negroni, Old Fashioned"
+    },
+    "product_image": {
+      "label": "Produktbild",
+      "help": "Am besten ein freigestelltes PNG oder SVG mit transparentem Hintergrund. Es wird eingepasst, nie beschnitten."
+    },
+    "show_image": {
+      "label": "Produktbild anzeigen",
+      "help": "Ausschalten, um die Fläche ohne Bild zu lassen (ein leeres Bild-Feld zeigt sonst einen gestrichelten Rahmen)."
+    },
+    "show_clock": {
+      "label": "Uhr anzeigen",
+      "help": "Eine Live-Uhr in der oberen Ecke, damit Gäste sehen, wie viel Zeit bleibt."
+    },
+    "clock_label": {
+      "label": "Beschriftung der Uhr",
+      "default": "JETZT"
+    },
+    "timezone": {
+      "label": "Zeitzone der Uhr",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache der Uhr, z. B. de-DE oder de-AT. Leer = Sprache des Bildschirms."
+    },
+    "clock_format": {
+      "label": "Uhrformat",
+      "help": "24 Stunden passt für die meisten Länder. 12 Stunden (AM/PM) z. B. für die USA.",
+      "options": {
+        "12": "12 Stunden",
+        "24": "24 Stunden"
+      }
+    },
+    "small_print": {
+      "label": "Kleingedrucktes",
+      "default": "Nur an der Bar und auf der Terrasse. Bitte verantwortungsvoll trinken – Ausweis erforderlich."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Die zweite Überschriftenzeile, der Schein hinter dem Bild und die Uhr-Pille."
+    },
+    "highlight": {
+      "label": "Preisfarbe",
+      "help": "Die Angebotspreise und die Zeile mit den Uhrzeiten."
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "background_image": {
+      "label": "Hintergrundfoto",
+      "help": "Optional. Ein Foto hinter allem, abgedunkelt durch die Einstellung darunter."
+    },
+    "background_dim": {
+      "label": "Foto abdunkeln",
+      "help": "0 = Foto unverändert, 0,9 = fast schwarz. Nur mit Hintergrundfoto wirksam."
+    }
+  }
+}

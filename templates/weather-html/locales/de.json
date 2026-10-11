@@ -1,0 +1,43 @@
+{
+  "name": "Wetter — animiert",
+  "description": "Eine bildschirmfüllende, animierte Wetterszene: Himmel, Regen, Schnee oder Sonne folgen dem aktuellen Wetter, dazu eine Fünf-Tage-Vorschau mit Temperaturspannen. Liest eine Ihrer Wetter-Datenquellen; Ihr Server holt die Wetterdaten, die Vorlage braucht also keinerlei Netzwerkzugriff.",
+  "params": {
+    "weather": {
+      "label": "Wetter-Datenquelle",
+      "help": "Eine Datenquelle vom Typ Wetter (Datenquellen → Neu → Wetter). Ort und Einheiten werden dort festgelegt."
+    },
+    "location": {
+      "label": "Ortsname",
+      "help": "Leer lassen, um den Ortsnamen der Datenquelle zu verwenden."
+    },
+    "theme": {
+      "label": "Hintergrund",
+      "options": {
+        "sky": "Folgt dem Wetter",
+        "solid": "Einfarbig"
+      }
+    },
+    "background": {
+      "label": "Hintergrundfarbe (einfarbig)",
+      "help": "Wird verwendet, wenn Hintergrund auf Einfarbig steht."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "animate": {
+      "label": "Szene animieren",
+      "help": "Auf sehr schwachen Playern ausschalten."
+    },
+    "show_clock": {
+      "label": "Uhr anzeigen"
+    },
+    "timezone": {
+      "label": "Zeitzone der Uhr",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache aller Wörter, Daten und Zahlen auf dem Bildschirm, z. B. de oder ja. Leer lassen für die Sprache des Bildschirms."
+    }
+  }
+}

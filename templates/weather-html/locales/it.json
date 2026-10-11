@@ -1,0 +1,43 @@
+{
+  "name": "Meteo — animato",
+  "description": "Una scena meteo animata a schermo intero: cielo, pioggia, neve o sole seguono le condizioni attuali, con previsioni a cinque giorni e intervalli di temperatura. Legge una delle tue sorgenti dati Meteo; il meteo lo recupera il tuo server, quindi questo modello non ha bisogno di alcun accesso alla rete.",
+  "params": {
+    "weather": {
+      "label": "Sorgente dati meteo",
+      "help": "Una sorgente dati di tipo Meteo (Sorgenti dati → Nuova → Meteo). Località e unità si impostano lì."
+    },
+    "location": {
+      "label": "Nome della località",
+      "help": "Lascia vuoto per usare il nome della località della sorgente dati."
+    },
+    "theme": {
+      "label": "Sfondo",
+      "options": {
+        "sky": "Segue il meteo",
+        "solid": "Tinta unita"
+      }
+    },
+    "background": {
+      "label": "Colore di sfondo",
+      "help": "Usato quando Sfondo è impostato su Tinta unita."
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "animate": {
+      "label": "Anima la scena",
+      "help": "Disattiva sui player poco potenti."
+    },
+    "show_clock": {
+      "label": "Mostra l’orologio"
+    },
+    "timezone": {
+      "label": "Fuso orario dell’orologio",
+      "help": "Lascia vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua di tutte le parole, date e numeri sullo schermo, per esempio it o ja. Lascia vuoto per la lingua dello schermo."
+    }
+  }
+}

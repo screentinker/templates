@@ -1,0 +1,108 @@
+{
+  "id": "holding-logo-message-portrait",
+  "name": "Holding screen — logo, message and website (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A branded \"back soon\" screen for between campaigns: your logo, a short message and a line of detail, your website in large type and an optional QR code that opens it. Nothing is fetched; the code is drawn by the server. Portrait 9:16 layout.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-logo-message-portrait",
+  "license": "MIT",
+  "tags": [
+    "holding",
+    "standby",
+    "branding",
+    "qr",
+    "retail",
+    "lobby",
+    "corporate",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A PNG or SVG with a transparent background. Shown top left.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "A short label above the message. Capitals read best.",
+      "default": "NORTHWIND STUDIO"
+    },
+    {
+      "name": "message",
+      "type": "text",
+      "label": "Message",
+      "max": 50,
+      "help": "A few words. Up to about 40 characters sits on two lines.",
+      "default": "Something new is on its way"
+    },
+    {
+      "name": "detail",
+      "type": "textarea",
+      "label": "Detail",
+      "max": 140,
+      "help": "One or two short sentences under the message. Enter starts a new line.",
+      "default": "Our next showcase opens on Monday. Until then, browse the full collection and book a studio visit online."
+    },
+    {
+      "name": "website",
+      "type": "text",
+      "label": "Website line",
+      "max": 40,
+      "help": "Shown in large type. Write it the way people should type it, without https://.",
+      "default": "northwind.example"
+    },
+    {
+      "name": "show_qr",
+      "type": "checkbox",
+      "label": "Show a QR code",
+      "help": "Off hides the code, its card and its caption.",
+      "default": true
+    },
+    {
+      "name": "qr_url",
+      "type": "text",
+      "label": "QR code link",
+      "max": 300,
+      "help": "The full address the code opens. Shorter links make a code that scans from further away.",
+      "default": "https://example.com/northwind"
+    },
+    {
+      "name": "qr_caption",
+      "type": "text",
+      "label": "QR caption",
+      "max": 28,
+      "default": "Scan to visit"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "default": "#2F7D6D",
+      "help": "Small heading, rules and the tinted panel."
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#F4F1EA"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#1B1E24"
+    }
+  ]
+}

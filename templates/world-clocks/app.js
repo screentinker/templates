@@ -4,6 +4,10 @@
  * Everything this reads comes from window.ST (the server injects the operator's values). Every time
  * shown is the screen's own clock run through Intl.DateTimeFormat with a timeZone: nothing is
  * fetched, nothing is stored, and values are written with textContent only.
+ *
+ * Language: dates, AM/PM and numbers follow the Language setting (empty = the screen's language);
+ * the fixed words (Here, Day, Night, the notes) come from strings.js unless the operator typed
+ * their own label.
  */
 (function () {
   'use strict';
@@ -51,10 +55,35 @@
     return { clocks: ok, skipped: skipped, extra: extra };
   }
 
+  /* The language: the Language setting, else the screen's, else English — whatever Intl accepts. */
+  function pickLocale(want) {
+    var tries = [want, navigator.language, 'en'];
+    for (var i = 0; i < tries.length; i++) {
+      if (!tries[i]) continue;
+      try { return new Intl.DateTimeFormat(tries[i]).resolvedOptions().locale || tries[i]; } catch (e) { /* next */ }
+    }
+    return 'en';
+  }
+
   ST.ready(function () {
     var v = ST.values || {};
     var root = document.documentElement;
     var body = document.body;
+
+    var locale = pickLocale(v.locale);
+    var lang = locale.split('-')[0].toLowerCase();
+    root.lang = locale;
+    var STR = CLOCK_STRINGS[lang] || CLOCK_STRINGS.en;
+    function str(key, vars) {
+      var txt = STR[key] !== undefined ? STR[key] : CLOCK_STRINGS.en[key];
+      for (var k in vars) txt = txt.split('{' + k + '}').join(vars[k]);
+      return txt;
+    }
+    var numF = null, plural = null;
+    try { numF = new Intl.NumberFormat(locale); } catch (e) { numF = null; }
+    try { plural = new Intl.PluralRules(locale); } catch (e) { plural = null; }
+    function fnum(x) { return numF ? numF.format(x) : String(x); }
+    function label(value, key) { return String(value || '').trim() || str(key); }
     // Colours are validated as #hex by the server before they get here.
     if (v.background) root.style.setProperty('--bg', v.background);
     if (v.accent) root.style.setProperty('--accent', v.accent);
@@ -65,7 +94,6 @@
     var showSec = v.show_seconds !== false;
     var dayStart = num(v.day_start, 0, 23, 7);
     var dayEnd = num(v.day_end, 1, 24, 19);
-    var locale = v.locale || undefined;
     body.classList.add('f-' + face);
     if (!showSec) body.classList.add('no-seconds');
     if (v.show_date === false) body.classList.add('no-date');
@@ -88,8 +116,11 @@
 
     var parsed = parseClocks(v.clocks);
     var notes = [];
-    if (parsed.skipped.length) notes.push('Skipped — unknown timezone: ' + parsed.skipped.join(', '));
-    if (parsed.extra) notes.push('Showing the first ' + MAX_CLOCKS + ' clocks; ' + parsed.extra + ' more not shown');
+    if (parsed.skipped.length) notes.push(str('skipped', { list: parsed.skipped.join(', ') }));
+    if (parsed.extra) {
+      var form = plural && plural.select(parsed.extra) === 'one' ? 'extra_one' : 'extra_other';
+      notes.push(str(form, { max: fnum(MAX_CLOCKS), n: fnum(parsed.extra) }));
+    }
     if (notes.length) {
       document.getElementById('note').textContent = notes.join('  ·  ');
       root.style.setProperty('--noteh', '4vh');
@@ -120,6 +151,15 @@
       var o = { timeZone: tz, hour: 'numeric', hour12: true };
       try { return new Intl.DateTimeFormat(locale, o); } catch (e) { return new Intl.DateTimeFormat('en-US', o); }
     }
+    /* Some languages put AM/PM before the time (Japanese 午前10:09, Chinese 上午10:09). */
+    var periodFirst = false;
+    try {
+      var pp = dayPeriodFmt('UTC').formatToParts(new Date(Date.UTC(2020, 0, 1, 10)));
+      for (var pi = 0; pi < pp.length; pi++) {
+        if (pp[pi].type === 'dayPeriod') { periodFirst = true; break; }
+        if (pp[pi].type === 'hour') break;
+      }
+    } catch (e) { periodFirst = false; }
     var homeFmt = home ? partsFmt(home) : null;
 
     /* ---------- build one card per clock, once ---------- */
@@ -129,11 +169,13 @@
       card.style.animationDelay = (0.12 + i * 0.07).toFixed(2) + 's';
 
       var top = el('div', 'top');
-      top.appendChild(el('span', 'city', c.city));
+      var cityEl = el('span', 'city', c.city);
+      cityEl.dir = 'auto';
+      top.appendChild(cityEl);
       var here = v.highlight_local !== false && homeCanon && canonical(c.tz) === homeCanon;
       if (here) {
         card.classList.add('here');
-        top.appendChild(el('span', 'chip here-chip', String(v.here_label || '').trim() || 'Here'));
+        top.appendChild(el('span', 'chip here-chip', label(v.here_label, 'here')));
       }
       var dn = el('span', 'chip dn-chip');
       var icon = el('i', 'icon');
@@ -160,9 +202,10 @@
 
       var time = el('div', 'time');
       var hm = el('span', 'hm'), sec = el('span', 'sec'), ap = el('span', 'ap');
+      if (h12 && periodFirst) { ap.className = 'ap pre'; time.appendChild(ap); }
       time.appendChild(hm);
       if (showSec) time.appendChild(sec);
-      if (h12) time.appendChild(ap);
+      if (h12 && !periodFirst) time.appendChild(ap);
       card.appendChild(time);
 
       var meta = el('div', 'meta');
@@ -179,7 +222,7 @@
     });
 
     if (!cards.length) {
-      grid.appendChild(el('div', 'empty-msg', 'Add clocks in the template settings — one per line, as City | Timezone.'));
+      grid.appendChild(el('div', 'empty-msg', str('empty')));
     }
 
     /* ---------- layout: grid, portrait list or strip, from the zone's shape ---------- */
@@ -209,17 +252,53 @@
       if (face === 'digital' && arr === 'side') arr = 'stack';
       ['m-grid', 'm-list', 'm-strip', 'a-list', 'a-stack', 'a-side'].forEach(function (c) { body.classList.remove(c); });
       body.classList.add('m-' + mode); body.classList.add('a-' + arr);
+      curArr = arr; curMode = mode; baseWd = box[0];
       root.style.setProperty('--wd', box[0]);
       root.style.setProperty('--hd', box[1]);
+      fit();
+    }
+
+    /* The design box assumes short time text. A long AM/PM word (午前, 上午, a.m.) or a long date
+     * would overflow the card, so measure the real rows (in --u) and widen the box to fit. */
+    var probe = el('div');
+    probe.style.cssText = 'position:absolute;visibility:hidden;left:0;top:0;height:0;width:calc(var(--u) * 100)';
+    body.appendChild(probe);
+    var curArr = 'stack', curMode = 'grid', baseWd = 100, fitSig = '';
+    function textW(node) {
+      if (!node || node.offsetParent === null) return 0;
+      var r = document.createRange();
+      r.selectNodeContents(node);
+      return r.getBoundingClientRect().width;
+    }
+    function fit() {
+      var u = probe.getBoundingClientRect().width / 100;
+      if (!(u > 0) || !cards.length) return;
+      var timeU = 0, metaU = 0, topU = 0;
+      for (var i = 0; i < cards.length; i++) {
+        var c = cards[i];
+        timeU = Math.max(timeU, textW(c.hm.parentNode) / u);
+        metaU = Math.max(metaU, textW(c.date.parentNode) / u);
+        topU = Math.max(topU, textW(c.card.firstChild) / u);
+      }
+      var faceU = face === 'digital' ? 0 : curArr === 'side' ? 62 : curArr === 'list' ? (face === 'analog' ? 64 : 58) : (face === 'analog' ? 74 : 60);
+      var padU = curArr === 'list' ? 14 : curMode === 'strip' ? 8 : 12;
+      var need;
+      if (curArr === 'side') need = faceU + 7 + Math.max(timeU, metaU);
+      else if (curArr === 'list') need = faceU + 8 + 5 + timeU + Math.max(30, Math.min(metaU, 60));
+      else need = Math.max(faceU, timeU, metaU, Math.min(topU, baseWd * 1.5));
+      // A little slack for glyph overhang; everything scales with --u, so one pass is enough.
+      var wd = Math.max(baseWd, Math.ceil((need + padU) * 1.04));
+      root.style.setProperty('--wd', wd);
     }
     layout();
     window.addEventListener('resize', layout);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fitSig = ''; layout(); });
 
     /* ---------- the tick: one timer, re-armed for the start of each second ---------- */
     function fmtOffset(mins) {
-      if (mins === 0) return '±0h';
+      if (mins === 0) return str('offset', { v: '±' + fnum(0) });
       var sign = mins > 0 ? '+' : '−', a = Math.abs(mins);
-      return sign + Math.floor(a / 60) + (a % 60 ? ':' + pad2(a % 60) : '') + 'h';
+      return str('offset', { v: sign + fnum(Math.floor(a / 60)) + (a % 60 ? ':' + pad2(a % 60) : '') });
     }
     function periodText(c, when) {
       var p = '';
@@ -231,6 +310,7 @@
     function tick() {
       var when = new Date();
       var homeOff = homeFmt ? offsetMin(fields(homeFmt, when), when) : null;
+      var sig = '';
       for (var i = 0; i < cards.length; i++) {
         var c = cards[i];
         var f = fields(c.pf, when);
@@ -242,7 +322,8 @@
         var dh = h12 ? (h % 12 || 12) : pad2(h);
         c.hm.textContent = dh + ':' + pad2(m);
         c.sec.textContent = ':' + pad2(s);
-        if (h12) c.ap.textContent = periodText(c, when) || (h < 12 ? 'AM' : 'PM');
+        if (h12) c.ap.textContent = periodText(c, when) || str(h < 12 ? 'am' : 'pm');
+        sig += c.hm.textContent.length + c.ap.textContent + '|';
 
         var isDay = dayStart < dayEnd ? (h >= dayStart && h < dayEnd) : (h >= dayStart || h < dayEnd);
         if (isDay !== c.lastDn) {
@@ -250,7 +331,7 @@
           c.card.classList.toggle('day', isDay);
           c.card.classList.toggle('night', !isDay);
           c.icon.className = 'icon ' + (isDay ? 'sun' : 'moon');
-          c.dnText.textContent = isDay ? 'Day' : 'Night';
+          c.dnText.textContent = isDay ? label(v.day_label, 'day') : label(v.night_label, 'night');
         }
         if (f.day !== c.lastDay || s === 0) {
           c.lastDay = f.day;
@@ -264,6 +345,8 @@
           }
         }
       }
+      sig += cards.length ? cards[0].date.textContent.length : '';
+      if (sig !== fitSig) { fitSig = sig; fit(); }
       timer = setTimeout(tick, 1000 - (Date.now() % 1000) + 15);
     }
     var timer = null;

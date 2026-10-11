@@ -1,0 +1,53 @@
+{
+  "name": "KPI-dashboard",
+  "description": "Grote, in één oogopslag leesbare tegels met kerncijfers, voortgang naar het doel en een gekleurde verandering. Uit een Google Sheet, CSV, REST-API of handmatige tabel (kolommen Metric, Value, Target, Unit, Change), of zelf getypt. 1 tot 12 tegels in elke schermvorm.",
+  "params": {
+    "data": {
+      "label": "Gegevensbron voor cijfers (optioneel)",
+      "help": "Een tabelbron (Google Sheets, CSV, REST-API of handmatige tabel) met kolommen Metric, Value en optioneel Target, Unit, Change. Laat leeg voor de cijfers hieronder."
+    },
+    "metrics": {
+      "label": "Cijfers (zonder gegevensbron)",
+      "help": "Eén per regel: Cijfer | Waarde | Doel | Eenheid | Verandering. Alleen Cijfer en Waarde zijn verplicht.",
+      "default": "Omzet deze maand | 184250 | 200000 | € | +6.4%\nNieuwe klanten | 312 | 300 | | +18\nNet Promoter Score | 64 | 60 | | +3\nOpen supporttickets | 27 | | | -9\nGem. reactietijd | 1.8 | 2 | u | -0.4\nBeschikbaarheid | 99.97 | 99.9 | % | +0.02"
+    },
+    "title": {
+      "label": "Titel",
+      "default": "Resultaten deze maand"
+    },
+    "max_tiles": {
+      "label": "Maximaal tonen",
+      "help": "Rijen boven dit aantal worden niet getoond."
+    },
+    "show_targets": {
+      "label": "Voortgang naar doel tonen"
+    },
+    "up_is_good": {
+      "label": "Een stijging is goed",
+      "help": "Kleurt een positieve verandering als goed. Bevat de naam open, reactietijd, verloop, kosten, fout of wachttijd (ook in het Engels), dan is het omgekeerd."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "good_color": {
+      "label": "Kleur voor goed"
+    },
+    "bad_color": {
+      "label": "Kleur voor slecht"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Getallen, tijd en ingebouwde woorden, bijvoorbeeld nl of en-US. Laat leeg voor de taal van het scherm."
+    },
+    "timezone": {
+      "label": "Tijdzone voor ‘Bijgewerkt’",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    }
+  }
+}

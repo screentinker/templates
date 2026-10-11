@@ -1,0 +1,49 @@
+{
+  "name": "Tela de espera — logo e relógio (retrato)",
+  "description": "Uma tela de espera para quando não há nada programado: seu logo, um grande relógio ao vivo e a data de hoje sobre um fundo calmo com um halo suave, no seu fuso horário e idioma. Mantém a tela bem cuidada entre campanhas. Layout retrato 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Um PNG ou SVG com fundo transparente, claro sobre escuro. Exibido centralizado no topo."
+    },
+    "footer": {
+      "label": "Linha de rodapé",
+      "help": "Uma linha curta embaixo: um local, um andar, um contato. Deixe vazio para nenhuma.",
+      "default": "Northwind Studio  ·  Recepção, 3º andar"
+    },
+    "clock_format": {
+      "label": "Formato da hora",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas"
+      }
+    },
+    "date_format": {
+      "label": "Estilo da data",
+      "options": {
+        "weekday": "Dia da semana, dia e mês",
+        "long": "Data completa com ano",
+        "short": "Data curta",
+        "numeric": "Só números"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário",
+      "help": "O lugar a que a hora e a data se referem. Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Como a hora e a data são escritas, ex.: en-GB, de-DE ou fr-CA. Deixe vazio para usar o idioma da tela."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "O halo atrás do relógio e o pequeno traço."
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

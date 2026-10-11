@@ -1,0 +1,46 @@
+{
+  "name": "Valentijnsdag (staand)",
+  "description": "Een warme valentijnsgroet op diep wijnrood: twee harten van zachte vormen, een kop, een bericht voor een winkel, café of kantoor, en een regel voor de datum of openingstijden.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "De korte regel boven de kop. Laat leeg om hem te verbergen.",
+      "default": "MET LIEFDE VAN NORTHWIND"
+    },
+    "headline": {
+      "label": "Kop",
+      "help": "Er zijn twee regels voor gereserveerd: ongeveer 24 tekens passen. Een langere kop loopt door naar een derde regel en over het bericht.",
+      "default": "Fijne Valentijnsdag"
+    },
+    "message": {
+      "label": "Bericht",
+      "help": "Een zin of twee onder de kop; tot 200 tekens passen. Een regeleinde begint een nieuwe regel.",
+      "default": "Elk boeket en elke doos truffels pakken we vandaag gratis in, en het café schenkt tot sluitingstijd warme chocolademelk voor twee."
+    },
+    "date_line": {
+      "label": "Datumregel",
+      "help": "Vrije tekst, getypt zoals hij moet verschijnen: een datum, een tijd en plaats, of een afsluiter.",
+      "default": "14 · 02  ·  OPEN TOT 21:00"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een brede PNG of SVG met transparante achtergrond (ongeveer 3,4 : 1 vult het vak; andere vormen worden erin gepast). Vervang de Northwind-placeholder."
+    },
+    "accent": {
+      "label": "Hartkleur"
+    },
+    "accent2": {
+      "label": "Kleur van het kleine hart"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

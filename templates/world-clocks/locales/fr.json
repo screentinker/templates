@@ -1,0 +1,80 @@
+{
+  "name": "Horloges du monde",
+  "description": "De deux à huit horloges en direct pour les villes avec lesquelles vous travaillez — analogiques, numériques ou les deux, avec la date, un repère jour/nuit et le décalage horaire avec cet écran. S’organise en grille, en liste verticale ou en bandeau fin. Rien n’est téléchargé : l’heure vient de l’horloge de l’écran.",
+  "params": {
+    "title": {
+      "label": "Titre",
+      "help": "Laissez vide pour masquer la barre de titre.",
+      "default": "Tour du monde"
+    },
+    "clocks": {
+      "label": "Horloges",
+      "help": "Une horloge par ligne, sous la forme Ville | fuseau IANA — par exemple Bombay | Asia/Kolkata. 2 à 8 lignes ; les lignes au fuseau inconnu sont ignorées et listées en bas.",
+      "default": "Londres | Europe/London\nNew York | America/New_York\nTokyo | Asia/Tokyo\nSydney | Australia/Sydney\nDubaï | Asia/Dubai\nSan Francisco | America/Los_Angeles"
+    },
+    "face": {
+      "label": "Style d’horloge",
+      "options": {
+        "both": "Analogique et numérique",
+        "analog": "Analogique seule",
+        "digital": "Numérique seule"
+      }
+    },
+    "clock_format": {
+      "label": "Format de l’heure",
+      "options": {
+        "24": "24 heures",
+        "12": "12 heures"
+      }
+    },
+    "show_seconds": {
+      "label": "Afficher les secondes"
+    },
+    "show_date": {
+      "label": "Afficher la date"
+    },
+    "show_daynight": {
+      "label": "Afficher le jour et la nuit",
+      "help": "Les horloges où il fait jour ont un cadran clair et un soleil ; la nuit, un cadran sombre et une lune."
+    },
+    "day_start": {
+      "label": "Le jour commence à (heure)"
+    },
+    "day_end": {
+      "label": "La nuit commence à (heure)"
+    },
+    "highlight_local": {
+      "label": "Mettre en avant la ville de cet écran",
+      "help": "Entoure l’horloge dont le fuseau est celui de l’écran (ou celui réglé ci-dessous)."
+    },
+    "home_timezone": {
+      "label": "Fuseau horaire de cet écran",
+      "help": "Sert à la mise en avant et aux heures +/-. Laissez vide pour utiliser le réglage de l’écran."
+    },
+    "here_label": {
+      "label": "Libellé de l’horloge mise en avant",
+      "help": "Laissez vide pour « Ici » dans la langue de l’écran."
+    },
+    "day_label": {
+      "label": "Libellé jour",
+      "help": "Sur les villes où il fait jour. Laissez vide pour « Jour » dans la langue de l’écran."
+    },
+    "night_label": {
+      "label": "Libellé nuit",
+      "help": "Sur les villes où il fait nuit. Laissez vide pour « Nuit » dans la langue de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue des dates, de AM/PM et des mots à l’écran, par exemple fr-FR, en-GB ou ja-JP. Laissez vide pour la langue de l’écran."
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    }
+  }
+}

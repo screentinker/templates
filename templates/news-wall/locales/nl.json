@@ -1,0 +1,68 @@
+{
+  "name": "Nieuwswand",
+  "description": "Een nieuwswand in tijdschriftstijl voor elke RSS- of Atom-feed: een groot hoofdbericht dat om de paar seconden wisselt, de volgende vier als kaarten, de feedtitel en relatieve tijden. Bewust typografisch (geen externe afbeeldingen), dus het werkt offline. Of typ je eigen koppen.",
+  "params": {
+    "feed": {
+      "label": "Nieuwsfeed (RSS-/Atom-gegevensbron, optioneel)",
+      "help": "Een RSS-gegevensbron. Laat leeg om de hieronder getypte berichten te tonen."
+    },
+    "title": {
+      "label": "Titel",
+      "help": "Laat leeg om de titel van de feed te gebruiken (zonder feed: ‘Laatste nieuws’ in de taal van het scherm)."
+    },
+    "stories": {
+      "label": "Berichten (zonder feed)",
+      "help": "Eén per regel: Kop | Korte samenvatting. De samenvatting is optioneel.",
+      "default": "Fernhill Works opent designstudio in de oude molen | Drie verdiepingen, zaterdags open voor iedereen.\nBeste voorjaar in onze geschiedenis | Orders 18% hoger dan vorig jaar.\nVrijwilligersdag levert 4.200 op voor het oeverpad | Twee nieuwe voetbruggen.\nNieuw menu in het bedrijfsrestaurant vanaf maandag | Meer plantaardige gerechten."
+    },
+    "max_items": {
+      "label": "Berichten in rotatie"
+    },
+    "rotate_seconds": {
+      "label": "Seconden per hoofdbericht"
+    },
+    "date_style": {
+      "label": "Datum van berichten",
+      "options": {
+        "relative": "Relatief (2 uur geleden)",
+        "absolute": "Datum en tijd",
+        "off": "Verbergen"
+      }
+    },
+    "feature_label": {
+      "label": "Label op het hoofdbericht",
+      "help": "Laat leeg voor ‘Uitgelicht’ in de taal van het scherm."
+    },
+    "next_label": {
+      "label": "Kop boven de kaarten",
+      "help": "Laat leeg voor ‘Hierna’ in de taal van het scherm."
+    },
+    "show_summaries": {
+      "label": "Samenvatting van het hoofdbericht tonen"
+    },
+    "show_clock": {
+      "label": "Klok tonen"
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "accent2": {
+      "label": "Tweede accentkleur",
+      "help": "De kaart van het hoofdbericht loopt over tussen beide accentkleuren."
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "timezone": {
+      "label": "Tijdzone (klok en datums)",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de klok, de datums en de ingebouwde labels, bijvoorbeeld fr of en-GB. Laat leeg voor de taal van het scherm."
+    }
+  }
+}

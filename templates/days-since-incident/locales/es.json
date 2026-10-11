@@ -1,0 +1,164 @@
+{
+  "name": "Días sin incidentes",
+  "description": "Panel de seguridad para fábrica, almacén u obra: el número de días (u horas) desde el último incidente, la mejor marca, un indicador verde/ámbar/rojo hacia el objetivo, señales de EPI y mensajes de seguridad rotativos. El día de un incidente se pone en rojo. Se puede reiniciar desde una hoja de Google.",
+  "params": {
+    "site_name": {
+      "label": "Nombre del centro",
+      "default": "Northwind Logistics · Centro Riverside"
+    },
+    "last_incident": {
+      "label": "Fecha del último incidente",
+      "help": "AAAA-MM-DD, o AAAA-MM-DD HH:MM para una hora exacta (en la zona horaria de abajo). Una fuente de datos conectada tiene prioridad."
+    },
+    "incidents": {
+      "label": "Fuente de datos de incidentes (opcional)",
+      "help": "Una hoja de Google o tabla manual con una columna con la fecha del último incidente. Cuenta la fecha más reciente."
+    },
+    "date_col": {
+      "label": "Columna de fecha"
+    },
+    "best_col": {
+      "label": "Columna de mejor marca (opcional)",
+      "help": "Una columna con la racha más larga en días. Se ignora si la fuente no la tiene."
+    },
+    "date_order": {
+      "label": "Las fechas como 03/04/2026 son",
+      "options": {
+        "dmy": "Día primero (3 de abril de 2026)",
+        "mdy": "Mes primero (4 de marzo de 2026)"
+      }
+    },
+    "count_unit": {
+      "label": "Contar en",
+      "options": {
+        "days": "Días",
+        "days_hours": "Días y horas",
+        "hours": "Horas",
+        "minutes": "Minutos"
+      }
+    },
+    "unit_label": {
+      "label": "Palabra de unidad",
+      "help": "Déjelo vacío para la palabra en el idioma elegido (días, days, Tage...)."
+    },
+    "headline": {
+      "label": "Línea bajo el número",
+      "default": "sin accidentes con baja"
+    },
+    "since_label": {
+      "label": "Texto antes de la fecha del incidente",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "incident_today_label": {
+      "label": "Texto el día de un incidente",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "incident_today_note": {
+      "label": "Línea debajo ese día",
+      "default": "Asegure la zona, informe y cuídense entre todos."
+    },
+    "best_record": {
+      "label": "Mejor marca (días)"
+    },
+    "best_label": {
+      "label": "Título: mejor marca",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "new_record_label": {
+      "label": "Texto al batir la marca",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "target_days": {
+      "label": "Objetivo (días)"
+    },
+    "target_label": {
+      "label": "Título: objetivo",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "amber_days": {
+      "label": "Ámbar desde (días)",
+      "help": "Por debajo, el panel está en rojo."
+    },
+    "green_days": {
+      "label": "Verde desde (días)"
+    },
+    "status_green": {
+      "label": "Estado: verde",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "status_amber": {
+      "label": "Estado: ámbar",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "status_red": {
+      "label": "Estado: rojo",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "messages": {
+      "label": "Mensajes de seguridad",
+      "help": "Uno por línea. Rotan en la parte inferior. Déjelo vacío para ocultar la barra.",
+      "default": "Informe de cada casi accidente. Así seguimos en cero.\nZona de carretillas: peatones por los pasillos marcados.\nTres puntos de apoyo en cada escalera y peldaño.\n¿Ve un derrame? Pare, señalice la zona y avise.\nLevante con las piernas y pida ayuda con más de 25 kg.\n¿Cansado o indispuesto? Avise a su jefe de turno."
+    },
+    "message_seconds": {
+      "label": "Segundos por mensaje"
+    },
+    "ppe_heading": {
+      "label": "Título: señales de EPI",
+      "help": "Déjelo vacío para usar el texto integrado en el idioma de la pantalla."
+    },
+    "ppe_labels": {
+      "label": "Nombres de los EPI",
+      "help": "Seis nombres separados por |, en este orden: casco, gafas, chaleco, guantes, calzado, protección auditiva. Los vacíos usan los integrados."
+    },
+    "ppe_hard_hat": {
+      "label": "Mostrar EPI: casco"
+    },
+    "ppe_goggles": {
+      "label": "Mostrar EPI: gafas de protección"
+    },
+    "ppe_hivis": {
+      "label": "Mostrar EPI: chaleco reflectante"
+    },
+    "ppe_gloves": {
+      "label": "Mostrar EPI: guantes"
+    },
+    "ppe_boots": {
+      "label": "Mostrar EPI: calzado de seguridad"
+    },
+    "ppe_ear": {
+      "label": "Mostrar EPI: protección auditiva"
+    },
+    "green_color": {
+      "label": "Color verde"
+    },
+    "amber_color": {
+      "label": "Color ámbar"
+    },
+    "red_color": {
+      "label": "Color rojo"
+    },
+    "accent": {
+      "label": "Color de las franjas de peligro"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "clock_format": {
+      "label": "Reloj",
+      "options": {
+        "auto": "Según el idioma",
+        "24": "24 horas",
+        "12": "12 horas",
+        "off": "Ocultar el reloj"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria del centro",
+      "help": "Los días cambian a medianoche en esta zona. Déjelo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palabras, fechas y números en pantalla, por ejemplo es-ES o es-MX. Déjelo vacío para el idioma de la pantalla."
+    }
+  }
+}

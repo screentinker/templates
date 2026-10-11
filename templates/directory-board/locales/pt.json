@@ -1,0 +1,126 @@
+{
+  "name": "Diretório do prédio",
+  "description": "Um diretório de saguão para um prédio comercial, shopping ou campus: cada empresa com andar e sala, agrupadas por andar ou de A a Z com índice, setas de direção, uma linha “Você está aqui” e um relógio. Distribui-se em colunas para preencher a tela e passa páginas em listas longas. Digite as empresas ou mantenha-as numa planilha Google ou tabela manual.",
+  "params": {
+    "building_name": {
+      "label": "Nome do prédio"
+    },
+    "address": {
+      "label": "Endereço ou subtítulo",
+      "help": "Uma linha abaixo do nome do prédio. Deixe vazio para ocultar."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Sem logotipo, as iniciais do prédio aparecem na cor de destaque."
+    },
+    "here_text": {
+      "label": "Linha “Você está aqui”",
+      "help": "Aparece abaixo do cabeçalho com um marcador. Deixe vazio para ocultar.",
+      "default": "Você está aqui · Saguão principal, térreo"
+    },
+    "here_floor": {
+      "label": "Andar desta tela",
+      "help": "Escrito como na coluna Andar. Esse andar recebe um marcador na lista e no índice."
+    },
+    "group_by": {
+      "label": "Organizar por",
+      "options": {
+        "floor": "Andar",
+        "alpha": "Nome, de A a Z",
+        "category": "Categoria"
+      }
+    },
+    "floor_order": {
+      "label": "Ordem dos andares",
+      "help": "Usado ao organizar por andar.",
+      "options": {
+        "asc": "Andar mais baixo primeiro",
+        "desc": "Último andar primeiro"
+      }
+    },
+    "show_index": {
+      "label": "Mostrar a barra de índice",
+      "help": "Letras de A a Z (ou os andares, ou as categorias) embaixo; as da página atual acendem."
+    },
+    "show_category": {
+      "label": "Mostrar categorias abaixo dos nomes"
+    },
+    "entries": {
+      "label": "Empresas",
+      "help": "Uma por linha: Nome | Andar | Sala | Categoria | Seta. Seta: esquerda, direita, frente, atrás, up-left…, elevador ou escada. Sem fonte de dados.",
+      "default": "Recepção e segurança | G | Saguão | Serviços do prédio | esquerda\nHarbour Street Café | G | G02 | Alimentação | direita\nEstacionamento de visitantes | B1 | P1 | Estacionamento | escada\nNorthwind Legal LLP | 2 | 201 | Jurídico |\nBrightwater Dental | 3 | 312 | Saúde |\nLumen Analytics | 5 | 520 | Tecnologia |\nWoodgrove Bank Offices | 8 | 800 | Finanças |"
+    },
+    "directory": {
+      "label": "Fonte de dados do diretório (opcional)",
+      "help": "Uma planilha Google, CSV ou tabela manual com linha de cabeçalho. Se tiver a coluna Nome, substitui as empresas digitadas acima."
+    },
+    "name_col": {
+      "label": "Coluna Nome",
+      "default": "Nome"
+    },
+    "floor_col": {
+      "label": "Coluna Andar",
+      "default": "Andar"
+    },
+    "suite_col": {
+      "label": "Coluna Sala",
+      "default": "Sala"
+    },
+    "category_col": {
+      "label": "Coluna Categoria",
+      "default": "Categoria"
+    },
+    "arrow_col": {
+      "label": "Coluna Seta",
+      "default": "Seta"
+    },
+    "floor_names": {
+      "label": "Nomes dos andares",
+      "help": "Opcional, um por linha: Andar = Nome. Andares não listados aparecem como a palavra “Andar” mais o número.",
+      "default": "G = Térreo\nB1 = Subsolo\n12 = Cobertura"
+    },
+    "floor_word": {
+      "label": "Palavra para “andar”",
+      "help": "Para títulos como “Andar 7”. Deixe vazio para a palavra no idioma da tela. Use {n} onde vai o número (“{n}º andar”)."
+    },
+    "footer": {
+      "label": "Linha de rodapé",
+      "help": "Letras pequenas embaixo. Deixe vazio para ocultar.",
+      "default": "Elevadores para todos os andares em frente · Visitantes, identifiquem-se na recepção"
+    },
+    "empty_text": {
+      "label": "Texto com a lista vazia",
+      "help": "Deixe vazio para “Nenhum inquilino ainda” no idioma da tela."
+    },
+    "clock_format": {
+      "label": "Relógio",
+      "options": {
+        "auto": "Padrão do idioma",
+        "24": "24 horas",
+        "12": "12 horas",
+        "off": "Ocultar o relógio"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário do relógio",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Para as palavras do diretório, a data, o relógio e a ordem de A a Z. Deixe vazio para o idioma da tela."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "page_seconds": {
+      "label": "Segundos por página",
+      "help": "Só quando a lista não cabe numa tela em tamanho legível."
+    }
+  }
+}

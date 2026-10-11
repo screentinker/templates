@@ -1,0 +1,96 @@
+{
+  "id": "holiday-halloween",
+  "name": "Halloween",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A playful Halloween screen: a jack-o’-lantern and full moon drawn from simple shapes over purple hills, with a headline, a message for your costume parade or opening hours, and a date line.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-halloween",
+  "license": "MIT",
+  "tags": [
+    "holiday",
+    "seasonal",
+    "halloween",
+    "autumn",
+    "fall",
+    "retail"
+  ],
+  "orientation": [
+    "landscape"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "The short line above the headline. Leave empty to hide it.",
+      "default": "TRICK OR TREAT"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline",
+      "max": 28,
+      "help": "Two lines are kept for it: about 24 characters fit. Longer headlines wrap to a third line and run into the message.",
+      "default": "Have a spooky Halloween"
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "label": "Message",
+      "max": 200,
+      "help": "A sentence or two under the headline; up to 200 characters fit. A line break starts a new line.",
+      "default": "Costume parade in the lobby at 15:00 — the best costume wins a gift card. Treats at reception all afternoon, with nut-free options."
+    },
+    {
+      "name": "date_line",
+      "type": "text",
+      "label": "Date line",
+      "max": 70,
+      "help": "Plain text, typed the way you want it to read: a date, a time and place, or a sign-off.",
+      "default": "31 · 10  ·  PARADE 15:00  ·  LOBBY"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A wide PNG or SVG with a transparent background (about 3.4 : 1 fills the box; other shapes are fitted inside it). Replace the Northwind placeholder.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Pumpkin colour",
+      "default": "#FF7A1A"
+    },
+    {
+      "name": "accent2",
+      "type": "color",
+      "label": "Hill colour",
+      "default": "#7B4FE0"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#140C22"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#FBEFE3"
+    }
+  ]
+}

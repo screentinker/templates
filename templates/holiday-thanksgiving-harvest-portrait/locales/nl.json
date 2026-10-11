@@ -1,0 +1,46 @@
+{
+  "name": "Thanksgiving & oogstfeest (staand)",
+  "description": "Een oogstscherm in gouden avondlicht voor Thanksgiving of elk oogstfeest: een lage zon boven glooiende velden, tarwe op de voorgrond en ruimte voor een kop, een bericht over een buurtlunch of voedselinzameling, en een datumregel.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "De korte regel boven de kop. Laat leeg om hem te verbergen.",
+      "default": "FIJNE THANKSGIVING"
+    },
+    "headline": {
+      "label": "Kop",
+      "help": "Er zijn twee regels voor gereserveerd: ongeveer 24 tekens passen. Een langere kop loopt door naar een derde regel en over het bericht.",
+      "default": "Samen dankbaar"
+    },
+    "message": {
+      "label": "Bericht",
+      "help": "Een zin of twee onder de kop; tot 200 tekens passen. Een regeleinde begint een nieuwe regel.",
+      "default": "Doe mee met de oogstlunch voor de buurt: 340 maaltijden gekookt door ons keukenteam, en elke donatie gaat naar de Voedselbank Riverside."
+    },
+    "date_line": {
+      "label": "Datumregel",
+      "help": "Vrije tekst, getypt zoals hij moet verschijnen: een datum, een tijd en plaats, of een afsluiter.",
+      "default": "26 · 11  ·  12:00–14:00  ·  GROTE ZAAL"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een brede PNG of SVG met transparante achtergrond (ongeveer 3,4 : 1 vult het vak; andere vormen worden erin gepast). Vervang de Northwind-placeholder."
+    },
+    "accent": {
+      "label": "Zonkleur"
+    },
+    "accent2": {
+      "label": "Veldkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

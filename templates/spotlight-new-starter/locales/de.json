@@ -1,0 +1,96 @@
+{
+  "name": "Willkommen im Team",
+  "description": "Begrüßen Sie jemanden am ersten Tag: Name und Funktion, ein Satz in eigenen Worten, Themen für ein erstes Hallo und ein Abzeichen mit dem Startdatum. Zeigt einen Kreis mit Initialen, bis Sie ein Foto hinzufügen.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Am besten eine PNG- oder SVG-Datei mit transparentem Hintergrund."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Ein Foto von Kopf und Schultern, passend zum Rahmen zugeschnitten. Schalten Sie „Foto anzeigen“ ein, sobald Sie eins gewählt haben."
+    },
+    "show_photo": {
+      "label": "Foto anzeigen",
+      "help": "Aus zeigt stattdessen einen Kreis mit den Initialen, für alle, die lieber kein Foto zeigen möchten."
+    },
+    "initials": {
+      "label": "Initialen",
+      "help": "Erscheinen im Kreis, wenn das Foto aus ist. Ein oder zwei Buchstaben."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Über dem Namen. In Großbuchstaben am besten lesbar.",
+      "default": "HERZLICH WILLKOMMEN"
+    },
+    "name": {
+      "label": "Name",
+      "help": "Eine Zeile, bis zu 26 Zeichen. In normaler Groß- und Kleinschreibung eingeben; GROSSBUCHSTABEN sind breiter und passen evtl. nicht."
+    },
+    "role": {
+      "label": "Funktion",
+      "help": "Berufsbezeichnung, Team, Klasse oder Standort. Längere Angaben brechen in eine zweite Zeile um.",
+      "default": "Junior Product Designer, Brand Studio"
+    },
+    "show_quote": {
+      "label": "Zitat anzeigen",
+      "help": "Aus blendet das Zitat und das Anführungszeichen aus."
+    },
+    "quote": {
+      "label": "Zitat",
+      "help": "Ein, zwei Sätze in eigenen Worten. Ohne Anführungszeichen.",
+      "default": "Bin gerade aus Göteborg hergezogen und freue mich riesig auf euch alle. Kommt vorbei und sagt hej!"
+    },
+    "quote_mark": {
+      "label": "Anführungszeichen",
+      "help": "Das große Zierzeichen am Zitat. Nehmen Sie das in Ihrer Sprache übliche, z. B. „ » oder “.",
+      "default": "“"
+    },
+    "show_fact": {
+      "label": "Fun Fact anzeigen",
+      "help": "Aus blendet Bezeichnung und Text des Fun Facts aus."
+    },
+    "fact_label": {
+      "label": "Fun-Fact-Bezeichnung",
+      "help": "Eine kurze Bezeichnung, z. B. GUT ZU WISSEN oder FRAG MICH NACH.",
+      "default": "GESPRÄCHSTHEMEN"
+    },
+    "fun_fact": {
+      "label": "Fun Fact",
+      "help": "Ein oder zwei kurze Sätze.",
+      "default": "Brettspiele, Bouldern und die große Zimtschnecken-Debatte. Sam sitzt an Platz 4B, 3. Stock."
+    },
+    "show_badge": {
+      "label": "Abzeichen anzeigen"
+    },
+    "badge": {
+      "label": "Text des Abzeichens",
+      "help": "Ein Monat, ein Startdatum, ein Team oder ein Jubiläum. In Großbuchstaben am besten lesbar.",
+      "default": "START: MO., 12. OKT."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Die große Karte hinter dem Foto, kleine Überschrift und Beschriftungen."
+    },
+    "highlight": {
+      "label": "Hervorhebungsfarbe",
+      "help": "Das Abzeichen, die kurze Linie und das Konfetti."
+    },
+    "badge_text_color": {
+      "label": "Textfarbe des Abzeichens"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "card_color": {
+      "label": "Farbe von Karte und Initialenkreis",
+      "help": "Die Fun-Fact-Karte und der Kreis hinter den Initialen."
+    },
+    "initials_color": {
+      "label": "Farbe der Initialen"
+    }
+  }
+}

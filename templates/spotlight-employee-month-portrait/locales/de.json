@@ -1,0 +1,94 @@
+{
+  "name": "Mitarbeiter des Monats (Hochformat)",
+  "description": "Würdigen Sie eine Kollegin oder einen Kollegen: großes rundes Foto im goldenen Ring, Name und Funktion, ein Zitat in eigenen Worten, ein Fun Fact und ein Abzeichen für den Monat. Hochformat 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Am besten eine PNG- oder SVG-Datei mit transparentem Hintergrund."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Ein Foto von Kopf und Schultern, passend zum Rahmen zugeschnitten. Quadratische Fotos eignen sich am besten."
+    },
+    "show_photo": {
+      "label": "Foto anzeigen",
+      "help": "Aus zeigt stattdessen einen Kreis mit den Initialen, für alle, die lieber kein Foto zeigen möchten."
+    },
+    "initials": {
+      "label": "Initialen",
+      "help": "Erscheinen im Kreis, wenn das Foto aus ist. Ein oder zwei Buchstaben."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Über dem Namen. In Großbuchstaben am besten lesbar.",
+      "default": "MITARBEITERIN DES MONATS"
+    },
+    "name": {
+      "label": "Name",
+      "help": "Eine Zeile, bis zu 26 Zeichen. In normaler Groß- und Kleinschreibung eingeben; GROSSBUCHSTABEN sind breiter und passen evtl. nicht."
+    },
+    "role": {
+      "label": "Funktion",
+      "help": "Berufsbezeichnung, Team, Klasse oder Standort. Längere Angaben brechen in eine zweite Zeile um.",
+      "default": "Senior Support Engineer, Kundenservice"
+    },
+    "show_quote": {
+      "label": "Zitat anzeigen",
+      "help": "Aus blendet das Zitat und das Anführungszeichen aus."
+    },
+    "quote": {
+      "label": "Zitat",
+      "help": "Ein, zwei Sätze in eigenen Worten. Ohne Anführungszeichen.",
+      "default": "Ich liebe den Moment, wenn ein genervter Kunde sagt: „Ach, das war ja einfach.“ Diese Auszeichnung gehört dem ganzen Tier-2-Team."
+    },
+    "quote_mark": {
+      "label": "Anführungszeichen",
+      "help": "Das große Zierzeichen am Zitat. Nehmen Sie das in Ihrer Sprache übliche, z. B. „ » oder “.",
+      "default": "“"
+    },
+    "show_fact": {
+      "label": "Fun Fact anzeigen",
+      "help": "Aus blendet Bezeichnung und Text des Fun Facts aus."
+    },
+    "fact_label": {
+      "label": "Fun-Fact-Bezeichnung",
+      "help": "Eine kurze Bezeichnung, z. B. GUT ZU WISSEN oder FRAG MICH NACH.",
+      "default": "GUT ZU WISSEN"
+    },
+    "fun_fact": {
+      "label": "Fun Fact",
+      "help": "Ein oder zwei kurze Sätze.",
+      "default": "Priya ist auf vier Kontinenten Halbmarathon gelaufen und backt umwerfende Kardamomschnecken."
+    },
+    "show_badge": {
+      "label": "Abzeichen anzeigen"
+    },
+    "badge": {
+      "label": "Text des Abzeichens",
+      "help": "Ein Monat, ein Startdatum, ein Team oder ein Jubiläum. In Großbuchstaben am besten lesbar.",
+      "default": "OKTOBER 2026"
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Ring, Abzeichen, kleine Überschrift und Verzierungen."
+    },
+    "highlight": {
+      "label": "Farbe des Initialenkreises",
+      "help": "Der Kreis hinter den Initialen und ein Teil des Konfettis."
+    },
+    "background": {
+      "label": "Hintergrundfarbe",
+      "help": "Auch die Textfarbe des Abzeichens."
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "card_color": {
+      "label": "Farbe der Fun-Fact-Karte",
+      "help": "Am besten ein Ton etwas heller als der Hintergrund."
+    },
+    "initials_color": {
+      "label": "Farbe der Initialen"
+    }
+  }
+}

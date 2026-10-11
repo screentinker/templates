@@ -1,0 +1,181 @@
+{
+  "id": "spotlight-teacher-volunteer-portrait",
+  "name": "Teacher & volunteer spotlight (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "Say thank you in public: a warm, bookish layout with a photo, name, role, a quote and a line about the person outside the classroom. Made for schools, libraries, charities and community groups. Portrait 9:16 layout.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-teacher-volunteer-portrait",
+  "license": "MIT",
+  "tags": [
+    "spotlight",
+    "people",
+    "recognition",
+    "school",
+    "education",
+    "volunteer",
+    "community",
+    "thank-you",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A PNG or SVG with a transparent background works best.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "photo",
+      "type": "image",
+      "label": "Photo",
+      "help": "A head-and-shoulders photo, cropped to fit the frame. Square photos work best.",
+      "default": "tpl:photo.svg"
+    },
+    {
+      "name": "show_photo",
+      "type": "checkbox",
+      "label": "Show the photo",
+      "help": "Off shows a circle with the initials below instead, for anyone who would rather not have a photo up.",
+      "default": true
+    },
+    {
+      "name": "initials",
+      "type": "text",
+      "label": "Initials",
+      "max": 2,
+      "help": "Shown in the circle when the photo is off. One or two letters.",
+      "default": "EV"
+    },
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "Above the name. Capitals read best.",
+      "default": "TEACHER SPOTLIGHT"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "max": 26,
+      "help": "One line, up to 26 characters. Type it in normal mixed case; ALL CAPS is wider and may not fit.",
+      "default": "Ms Elena Vasquez"
+    },
+    {
+      "name": "role",
+      "type": "text",
+      "label": "Role",
+      "max": 70,
+      "help": "Job title, team, class or site. Longer roles wrap onto a second line.",
+      "default": "Year 4 teacher and Reading Club lead"
+    },
+    {
+      "name": "show_quote",
+      "type": "checkbox",
+      "label": "Show the quote",
+      "help": "Off hides the quote and its quote mark.",
+      "default": true
+    },
+    {
+      "name": "quote",
+      "type": "textarea",
+      "label": "Quote",
+      "max": 150,
+      "help": "A sentence or two in their own words. No quote marks needed.",
+      "default": "Every child is one good book away from loving to read. I help them find that book."
+    },
+    {
+      "name": "quote_mark",
+      "type": "text",
+      "label": "Quote mark",
+      "max": 2,
+      "help": "The big decorative mark beside the quote. Use the one your language prefers, e.g. “ « „ or 「.",
+      "default": "“"
+    },
+    {
+      "name": "show_fact",
+      "type": "checkbox",
+      "label": "Show the fun fact",
+      "help": "Off hides the fun-fact label and text.",
+      "default": true
+    },
+    {
+      "name": "fact_label",
+      "type": "text",
+      "label": "Fun-fact label",
+      "max": 28,
+      "help": "A short label, e.g. FUN FACT or ASK ME ABOUT.",
+      "default": "OUTSIDE THE CLASSROOM"
+    },
+    {
+      "name": "fun_fact",
+      "type": "textarea",
+      "label": "Fun fact",
+      "max": 120,
+      "help": "One or two short sentences.",
+      "default": "Elena keeps bees on the school allotment, and her class named the queen \"Her Royal Buzzness\"."
+    },
+    {
+      "name": "show_badge",
+      "type": "checkbox",
+      "label": "Show the badge",
+      "default": true
+    },
+    {
+      "name": "badge",
+      "type": "text",
+      "label": "Badge label",
+      "max": 22,
+      "help": "A month, a start date, a team or a milestone. Capitals read best.",
+      "default": "14 YEARS AT ELMWOOD"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "default": "#2F6B4F",
+      "help": "Badge, small heading, labels and the band along the bottom."
+    },
+    {
+      "name": "highlight",
+      "type": "color",
+      "label": "Highlight colour",
+      "default": "#E9A23B",
+      "help": "The quote mark and the circle behind the initials."
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#FBF6EC"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#1F2A24"
+    },
+    {
+      "name": "card_color",
+      "type": "color",
+      "label": "Offset circle colour",
+      "default": "#F1E2C2",
+      "help": "The soft circle set behind the photo."
+    },
+    {
+      "name": "initials_color",
+      "type": "color",
+      "label": "Initials colour",
+      "default": "#FFFFFF"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "name": "Promoção happy hour",
+  "description": "Um happy hour ou oferta por horário para bar ou restaurante: um grande título, os dias e horários, três ofertas com preço, a imagem de um drinque com um brilho quente e um relógio ao vivo para os clientes verem quanto tempo resta.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG mais ou menos quadrado. O selo incluído é provisório; substitua pelo seu."
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se não tiver logotipo (senão um logotipo vazio mostra uma caixa tracejada)."
+    },
+    "brand": {
+      "label": "Nome da loja",
+      "help": "Aparece ao lado do logotipo. Deixe vazio se o logotipo já tiver o nome."
+    },
+    "headline": {
+      "label": "Título, primeira linha",
+      "help": "O título vem em duas linhas grandes, uma ou duas palavras cada: Happy / Hour, Brunch / de domingo.",
+      "default": "Happy"
+    },
+    "headline_2": {
+      "label": "Título, segunda linha (destaque)",
+      "default": "Hour"
+    },
+    "hours": {
+      "label": "Quando vale",
+      "help": "Digite como deve aparecer; ao contrário do relógio, não é traduzido. Agende o slide na playlist só para esses horários.",
+      "default": "SEGUNDA A SEXTA · 16H ÀS 19H"
+    },
+    "deal1_price": {
+      "label": "Oferta 1: preço",
+      "default": "R$ 19"
+    },
+    "deal1_name": {
+      "label": "Oferta 1: nome",
+      "default": "Vinho da casa"
+    },
+    "deal1_note": {
+      "label": "Oferta 1: observação",
+      "default": "Tinto, branco ou rosé, na taça"
+    },
+    "deal2_price": {
+      "label": "Oferta 2: preço",
+      "default": "R$ 12"
+    },
+    "deal2_name": {
+      "label": "Oferta 2: nome",
+      "default": "Chope"
+    },
+    "deal2_note": {
+      "label": "Oferta 2: observação",
+      "default": "Todas as torneiras, inclusive a sazonal"
+    },
+    "deal3_price": {
+      "label": "Oferta 3: preço",
+      "default": "R$ 25"
+    },
+    "deal3_name": {
+      "label": "Oferta 3: nome",
+      "default": "Drinques clássicos"
+    },
+    "deal3_note": {
+      "label": "Oferta 3: observação",
+      "default": "Margarita, Negroni, Old Fashioned"
+    },
+    "product_image": {
+      "label": "Imagem do produto",
+      "help": "O ideal é um PNG ou SVG recortado com fundo transparente. Ela é ajustada, nunca cortada."
+    },
+    "show_image": {
+      "label": "Mostrar a imagem do produto",
+      "help": "Desative para deixar o painel sem imagem (senão uma imagem vazia mostra uma caixa tracejada)."
+    },
+    "show_clock": {
+      "label": "Mostrar o relógio",
+      "help": "Um relógio ao vivo no canto superior, para os clientes verem quanto tempo resta."
+    },
+    "clock_label": {
+      "label": "Rótulo do relógio",
+      "default": "AGORA"
+    },
+    "timezone": {
+      "label": "Fuso horário do relógio",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma do relógio, ex.: pt-BR ou pt-PT. Vazio = o idioma da tela."
+    },
+    "clock_format": {
+      "label": "Formato do relógio",
+      "help": "24 horas serve para a maioria dos países. Escolha 12 horas (AM/PM) para os EUA e lugares parecidos.",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas"
+      }
+    },
+    "small_print": {
+      "label": "Letras miúdas",
+      "default": "Somente no bar e na varanda. Beba com moderação. Documento obrigatório."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "A segunda linha do título, o brilho atrás da imagem e a pílula do relógio."
+    },
+    "highlight": {
+      "label": "Cor dos preços",
+      "help": "Os preços das ofertas e a linha dos horários."
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "background_image": {
+      "label": "Foto de fundo",
+      "help": "Opcional. Uma foto atrás de tudo, escurecida pela configuração abaixo."
+    },
+    "background_dim": {
+      "label": "Escurecer a foto",
+      "help": "0 = a foto como está, 0,9 = quase preta. Só vale com foto de fundo."
+    }
+  }
+}

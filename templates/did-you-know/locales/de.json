@@ -1,0 +1,54 @@
+{
+  "name": "Schon gewusst?",
+  "description": "Ein kräftiger Fakt-des-Tages-Bildschirm: ein großes Zeichen in einer leuchtenden Scheibe, ein überraschender Satz, eine kurze Erklärung und eine Quellenzeile. Für Schulen, Bibliotheken, Museen, Wartezimmer und Büroküchen.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "default": "WUSSTEN SIE SCHON?"
+    },
+    "badge": {
+      "label": "Zeichen in der Scheibe",
+      "help": "Ein bis drei Zeichen, groß in der farbigen Scheibe: ?, !, eine Zahl."
+    },
+    "number": {
+      "label": "Fakt-Nummer",
+      "help": "Oben rechts, z. B. „Nr. 27“. Leer lassen zum Ausblenden.",
+      "default": "Nr. 27"
+    },
+    "fact": {
+      "label": "Der Fakt",
+      "help": "Die Schlagzeile: ein kurzer, überraschender Satz.",
+      "default": "Ein Oktopus hat drei Herzen und blaues Blut."
+    },
+    "detail": {
+      "label": "Erklärung",
+      "help": "Ein oder zwei Sätze zur Erklärung. Die Eingabetaste beginnt eine neue Zeile.",
+      "default": "Zwei Herzen pumpen das Blut durch die Kiemen, das dritte durch den Körper. Es ist blau, weil Kupfer statt Eisen den Sauerstoff trägt."
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Eine Quelle, der Name der Reihe oder wo man mehr erfährt.",
+      "default": "Wissenschaftswoche in der Northwind-Bibliothek · Leseliste an der Information"
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Aus blendet das Logo aus, sein Platz bleibt leer."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "PNG oder SVG mit transparentem Hintergrund, in einer hellen Farbe für den dunklen Standardhintergrund."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Die Scheibe, die kleine Überschrift, die Nummer und die Linie."
+    },
+    "background": {
+      "label": "Hintergrundfarbe",
+      "help": "Hinter allem. Auch das Zeichen in der Scheibe wird in dieser Farbe gezeichnet."
+    },
+    "text_color": {
+      "label": "Textfarbe",
+      "help": "Der Fakt, die Erklärung und die Fußzeile."
+    }
+  }
+}

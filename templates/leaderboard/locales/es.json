@@ -1,0 +1,87 @@
+{
+  "name": "Clasificación",
+  "description": "Una clasificación para equipos de ventas, campañas solidarias, retos de pasos o noches de juegos: un podio de oro, plata y bronce para los tres primeros y barras animadas para el resto. Escribe las puntuaciones o conecta una hoja de Google y el panel se actualiza solo.",
+  "params": {
+    "title": {
+      "label": "Título",
+      "default": "Clasificación de ventas"
+    },
+    "period": {
+      "label": "Periodo",
+      "help": "Una etiqueta corta junto al título, como «Este mes» o «T3». Déjala vacía para ocultarla.",
+      "default": "Este mes"
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Se muestra junto al título."
+    },
+    "entries": {
+      "label": "Puntuaciones",
+      "help": "Una por línea: Nombre | Puntuación | Subtítulo. El orden da igual, el panel lo ordena. Se usa si no hay ninguna fuente de datos conectada.",
+      "default": "Maya Okafor | 48250 | Grandes cuentas\nLiam Chen | 41900 | Mediana empresa\nSofia Alvarez | 39475 | Grandes cuentas\nNoah Williams | 33120 | Pymes\nAva Patel | 31860 | Mediana empresa\nEthan Brooks | 27400 | Pymes\nZara Hussain | 24975 | Grandes cuentas\nLucas Meyer | 21300 | Socios\nChloe Dubois | 18640 | Pymes\nOwen Murphy | 15210 | Socios"
+    },
+    "scores": {
+      "label": "Fuente de datos de puntuaciones (opcional)",
+      "help": "Una hoja de Google, CSV, lista REST o tabla manual. Si tiene las columnas de nombre y puntuación, sustituye a las puntuaciones escritas arriba."
+    },
+    "name_col": {
+      "label": "Columna de nombre",
+      "help": "El encabezado de la columna de nombres en tu fuente de datos, tal como aparece allí.",
+      "default": "Nombre"
+    },
+    "score_col": {
+      "label": "Columna de puntuación",
+      "default": "Puntuación"
+    },
+    "sub_col": {
+      "label": "Columna de subtítulo",
+      "help": "Opcional. Una segunda línea bajo cada nombre, como un equipo o una región.",
+      "default": "Equipo"
+    },
+    "order": {
+      "label": "Ganador",
+      "options": {
+        "high": "Gana la puntuación más alta",
+        "low": "Gana la más baja (tiempos, golf)"
+      }
+    },
+    "score_prefix": {
+      "label": "Prefijo",
+      "help": "Se muestra antes de cada puntuación, por ejemplo € o $. Déjalo vacío para números sin más.",
+      "default": "€"
+    },
+    "score_suffix": {
+      "label": "Sufijo",
+      "help": "Se muestra después de cada puntuación, por ejemplo pts, km o %."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "El idioma de los textos fijos del panel y cómo se escriben los números (de-DE muestra 48.250). Déjalo vacío para usar el idioma de la pantalla."
+    },
+    "max_rows": {
+      "label": "Mostrar como máximo",
+      "help": "Puestos mostrados, incluido el podio. Si la pantalla es pequeña, se muestran menos."
+    },
+    "show_bars": {
+      "label": "Mostrar barras",
+      "help": "Una barra bajo cada nombre después del podio, más larga cuanto más se acerca la puntuación a la del líder."
+    },
+    "font": {
+      "label": "Fuente de títulos",
+      "options": {
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (condensada)",
+        "inter": "Inter (sobria)"
+      }
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

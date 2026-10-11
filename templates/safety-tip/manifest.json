@@ -1,0 +1,115 @@
+{
+  "id": "safety-tip",
+  "name": "Safety tip",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A high-visibility safety tip for factories, warehouses, kitchens and sites: a warning icon on a safety-yellow panel, the rule in big type, up to four how-to steps and who to call.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/safety-tip",
+  "license": "MIT",
+  "tags": [
+    "safety",
+    "health-and-safety",
+    "workplace",
+    "factory",
+    "warehouse",
+    "office"
+  ],
+  "orientation": [
+    "landscape"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "icon",
+      "type": "image",
+      "label": "Icon",
+      "help": "A square PNG or SVG with a transparent background, dark enough to read on the accent panel.",
+      "default": "tpl:icon.svg"
+    },
+    {
+      "name": "panel_title",
+      "type": "text",
+      "label": "Panel title",
+      "max": 20,
+      "default": "SAFETY TIP"
+    },
+    {
+      "name": "tip_number",
+      "type": "text",
+      "label": "Tip number",
+      "max": 24,
+      "help": "Under the panel title, e.g. \"TIP 14 OF 52\". Leave empty to hide.",
+      "default": "TIP 14 OF 52"
+    },
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 44,
+      "help": "Who or where it is for.",
+      "default": "THIS WEEK · WAREHOUSE & LOADING BAY"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Tip",
+      "max": 48,
+      "help": "The rule in a few words.",
+      "default": "Lift with your legs, not your back"
+    },
+    {
+      "name": "steps",
+      "type": "textarea",
+      "label": "How to",
+      "max": 240,
+      "help": "Up to four short lines; Enter starts a new line. Keep each under about 45 characters.",
+      "default": "1. Stand close, feet shoulder-width apart\n2. Bend your knees and keep your back straight\n3. Grip firmly and lift without twisting\n4. Over 23 kg? Use a trolley or ask a colleague"
+    },
+    {
+      "name": "footer",
+      "type": "text",
+      "label": "Footer line",
+      "max": 90,
+      "help": "Who to call or where to report.",
+      "default": "Report every near-miss to your supervisor or call the safety line on ext. 2240"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Off hides the logo and its space stays empty.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A PNG or SVG with a transparent background, in a light colour for the default dark background.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "help": "The panel behind the icon, the small heading and the rule.",
+      "default": "#FFC20E"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "help": "The page. The panel title and tip number are drawn in this colour too.",
+      "default": "#15171A"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "help": "The tip, steps and footer.",
+      "default": "#F4F4F1"
+    }
+  ]
+}

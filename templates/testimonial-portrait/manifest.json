@@ -1,0 +1,150 @@
+{
+  "id": "testimonial-portrait",
+  "name": "Customer testimonial (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A customer review on screen: a star rating, the customer’s words in a warm serif, their name and an initials avatar, plus your overall score. For shop windows, showrooms, reception desks and waiting areas. Portrait 9:16 layout.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/testimonial-portrait",
+  "license": "MIT",
+  "tags": [
+    "testimonial",
+    "review",
+    "customer",
+    "retail",
+    "hospitality",
+    "social-proof",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "default": "WHAT OUR CUSTOMERS SAY"
+    },
+    {
+      "name": "rating",
+      "type": "select",
+      "label": "Star rating",
+      "default": "tpl:stars/5.svg",
+      "options": [
+        {
+          "value": "tpl:stars/5.svg",
+          "label": "5 stars"
+        },
+        {
+          "value": "tpl:stars/4.5.svg",
+          "label": "4½ stars"
+        },
+        {
+          "value": "tpl:stars/4.svg",
+          "label": "4 stars"
+        },
+        {
+          "value": "tpl:stars/3.svg",
+          "label": "3 stars"
+        },
+        {
+          "value": "tpl:stars/none.svg",
+          "label": "Hide the stars"
+        }
+      ]
+    },
+    {
+      "name": "quote",
+      "type": "textarea",
+      "label": "Testimonial",
+      "max": 220,
+      "help": "The customer’s words, without quotation marks. Up to about 220 characters; shorter reads better.",
+      "default": "They fitted our whole kitchen in four days, left the house spotless and came back a week later just to check every drawer still closed properly. We have already sent two neighbours their way."
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Customer name",
+      "max": 40,
+      "help": "Only with the customer’s permission.",
+      "default": "Priya Raman"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Customer detail",
+      "max": 60,
+      "help": "What they bought, where they are from, or \"Verified customer\".",
+      "default": "Kitchen renovation · Riverside"
+    },
+    {
+      "name": "initials",
+      "type": "text",
+      "label": "Initials in the avatar",
+      "max": 3,
+      "default": "PR"
+    },
+    {
+      "name": "show_score",
+      "type": "checkbox",
+      "label": "Show the overall score",
+      "help": "Off hides the big score and its caption.",
+      "default": true
+    },
+    {
+      "name": "score",
+      "type": "text",
+      "label": "Overall score",
+      "max": 6,
+      "help": "Your average rating, e.g. 4.9. Use a real figure.",
+      "default": "4.9"
+    },
+    {
+      "name": "score_caption",
+      "type": "text",
+      "label": "Score caption",
+      "max": 60,
+      "default": "average from 1,240 verified reviews"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Off hides the logo and its space stays empty.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A PNG or SVG with a transparent background. The placeholder is white for the coloured panel (landscape) or dark for the page (portrait).",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "help": "The side panel (landscape) or bottom panel (portrait), the avatar and the small heading.",
+      "default": "#B9461E"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "help": "The page. The avatar initials are drawn in this colour too.",
+      "default": "#F6F0E7"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "help": "The testimonial and the name.",
+      "default": "#1F2430"
+    }
+  ]
+}

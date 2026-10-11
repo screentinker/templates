@@ -1,0 +1,50 @@
+{
+  "name": "UPTIME 3036",
+  "description": "Um jogo de tiro arcade original em primeira pessoa sobre o pior plantão do ano 3036: todos os servidores caíram e o datacenter está infestado de bugs. Ninguém jogando? Ele joga sozinho no modo demo com piloto automático. Clique ou aperte uma tecla para assumir; saia e a demo volta a jogar.",
+  "params": {
+    "title": {
+      "label": "Título"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "OS SERVIDORES CAÍRAM. VOCÊ ESTÁ DE PLANTÃO."
+    },
+    "accent": {
+      "label": "Cor neon"
+    },
+    "accent2": {
+      "label": "Segunda cor neon"
+    },
+    "difficulty": {
+      "label": "Dificuldade",
+      "options": {
+        "easy": "Fácil",
+        "normal": "Normal",
+        "hard": "Difícil"
+      }
+    },
+    "playable": {
+      "label": "Jogável (clique / teclado)",
+      "help": "Desligado: o bot joga sem parar, um loop de demonstração."
+    },
+    "idle_sec": {
+      "label": "Voltar à demo após (segundos sem uso)"
+    },
+    "resolution": {
+      "label": "Resolução de renderização",
+      "help": "Menor é mais rápido em players pequenos; o visual pixelado é proposital.",
+      "options": {
+        "320": "Retrô (320)",
+        "400": "Padrão (400)",
+        "560": "Nítida (560)"
+      }
+    },
+    "crt": {
+      "label": "Linhas de varredura CRT"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma de todas as palavras e números na tela, por exemplo pt ou ja. Deixe vazio para o idioma da tela. O título e o slogan você mesmo escreve."
+    }
+  }
+}

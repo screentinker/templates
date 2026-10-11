@@ -1,0 +1,50 @@
+{
+  "name": "UPTIME 3036",
+  "description": "Un shooter arcade original en primera persona sobre la peor guardia del año 3036: todos los servidores están caídos y el centro de datos está plagado de bugs. ¿Nadie juega? Se juega solo en modo demo con piloto automático. Haz clic o pulsa una tecla para tomar el control; si te vas, la demo vuelve a jugar.",
+  "params": {
+    "title": {
+      "label": "Título"
+    },
+    "tagline": {
+      "label": "Eslogan",
+      "default": "LOS SERVIDORES ESTÁN CAÍDOS. TÚ ESTÁS DE GUARDIA."
+    },
+    "accent": {
+      "label": "Color neón"
+    },
+    "accent2": {
+      "label": "Segundo color neón"
+    },
+    "difficulty": {
+      "label": "Dificultad",
+      "options": {
+        "easy": "Fácil",
+        "normal": "Normal",
+        "hard": "Difícil"
+      }
+    },
+    "playable": {
+      "label": "Jugable (clic / teclado)",
+      "help": "Desactivado: el bot juega sin parar, un bucle de demostración."
+    },
+    "idle_sec": {
+      "label": "Volver al modo demo tras (segundos sin actividad)"
+    },
+    "resolution": {
+      "label": "Resolución de render",
+      "help": "Menos es más rápido en reproductores pequeños; el aspecto pixelado es intencionado.",
+      "options": {
+        "320": "Retro (320)",
+        "400": "Estándar (400)",
+        "560": "Nítida (560)"
+      }
+    },
+    "crt": {
+      "label": "Líneas de escaneo CRT"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "El idioma de todas las palabras y números en pantalla, por ejemplo es o ja. Déjalo vacío para el idioma de la pantalla. El título y el eslogan los escribes tú."
+    }
+  }
+}

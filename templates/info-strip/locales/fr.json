@@ -1,0 +1,96 @@
+{
+  "name": "Bandeau d’infos",
+  "description": "Un bandeau compact pour le bord de l’écran : votre logo, l’heure et la date, la météo du moment et une ligne d’annonces courtes qui défilent. Fait pour les bandeaux en L, les bandes du bas et les colonnes latérales ; il se réorganise pour une bande fine, une colonne haute ou un plein écran. Rien n’est téléchargé : la météo vient de votre propre source de données Météo.",
+  "params": {
+    "messages": {
+      "label": "Messages",
+      "help": "Un message court par ligne, affichés à tour de rôle. Commencez par une étiquette et | pour un badge, par exemple : Aujourd’hui | Réunion à 15:30. Vide = horloge et météo seules.",
+      "default": "Bienvenue | Visiteurs, votre badge vous attend à l’accueil\nAujourd’hui | Réunion générale à 15:30 dans l’atrium, avec café\nSécurité | Test d’alarme incendie jeudi à 11:00, pas d’évacuation\nCafé | Soupe du jour : courge rôtie et pain au levain, 4,50\nWi-Fi | Réseau invités Northwind-Guest, mot de passe à l’accueil\nBravo | Dix ans dans l’équipe : bravo Priya Raman !"
+    },
+    "message_seconds": {
+      "label": "Secondes par message"
+    },
+    "weather": {
+      "label": "Source de données météo (facultatif)",
+      "help": "Une source de données de type Météo (Data Sources → New → Weather). Laissez vide pour masquer la météo."
+    },
+    "location": {
+      "label": "Nom du lieu",
+      "help": "Sous la température, quand il y a la place. Vide = le nom du lieu de la source météo."
+    },
+    "show_forecast": {
+      "label": "Afficher les trois prochains jours",
+      "help": "Seulement dans la colonne latérale et en plein écran, où il y a la place."
+    },
+    "name": {
+      "label": "Nom de l’organisation",
+      "help": "À côté du logo. Laissez vide pour n’afficher que le logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un logo carré ou large sur fond transparent fonctionne le mieux. Retirez-le pour le masquer."
+    },
+    "clock_format": {
+      "label": "Format de l’horloge",
+      "options": {
+        "24": "24 heures (14:30)",
+        "12": "12 heures (2:30 PM)",
+        "auto": "Le format habituel de la langue"
+      }
+    },
+    "show_seconds": {
+      "label": "Afficher les secondes"
+    },
+    "date_format": {
+      "label": "Date",
+      "options": {
+        "long": "mardi 6 octobre",
+        "short": "mar. 6 oct.",
+        "numeric": "06/10/2026 (dans l’ordre de la langue)",
+        "none": "Masquer la date"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Mots de la météo, format des dates et des nombres, par exemple en-GB, de-DE ou fr-CA. Vide = la langue de l’écran."
+    },
+    "layout": {
+      "label": "Disposition",
+      "options": {
+        "auto": "Automatique, selon la forme de la zone",
+        "row": "Toujours une bande horizontale",
+        "column": "Toujours une colonne latérale",
+        "full": "Toujours la disposition plein écran"
+      }
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "edge": {
+      "label": "Filet d’accent",
+      "help": "Une fine ligne couleur d’accent sur le côté qui touche le contenu principal.",
+      "options": {
+        "auto": "Automatique (en haut d’une bande, à gauche d’une colonne)",
+        "top": "En haut",
+        "bottom": "En bas",
+        "left": "À gauche",
+        "right": "À droite",
+        "none": "Aucun"
+      }
+    },
+    "animate": {
+      "label": "Animer",
+      "help": "Les messages glissent à l’écran et une fine barre indique l’arrivée du suivant. À désactiver sur les lecteurs très peu puissants."
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "name": "Tabellone orari",
+  "description": "Cosa c’è ora, quanti minuti mancano e cosa viene dopo: un tabellone con conto alla rovescia per la campanella, i corsi in palestra, turni e pause in fabbrica o gli orari delle celebrazioni, con l’orario di oggi accanto e il blocco attuale evidenziato. Scrivete l’orario (più orari con nome, sceglietene uno) o collegate un foglio Google. Fuori orario indica quando si riparte.",
+  "params": {
+    "preset": {
+      "label": "Modello",
+      "help": "Imposta i testi e l’orario di esempio mostrato finché non scrivete o collegate il vostro, entrambi nella lingua dello schermo.",
+      "options": {
+        "school": "Campanella / orario scolastico",
+        "gym": "Corsi in palestra o studio",
+        "factory": "Turni e pause",
+        "worship": "Orari delle celebrazioni"
+      }
+    },
+    "schedule": {
+      "label": "Orario",
+      "help": "Un blocco per riga: Giorni | Inizio-Fine | Titolo | Aula | Referente, es. Mon-Fri | 08:00-08:50 | 1ª ora | Aula 12 | Prof.ssa Patel. [Esami] avvia un altro orario. Vuoto = esempio."
+    },
+    "schedule_source": {
+      "label": "Origine dati dell’orario (facoltativa)",
+      "help": "Un foglio Google, CSV o tabella manuale con le colonne Days, Start, End, Title, Room, Host (e facoltativamente Schedule). Sostituisce l’orario scritto."
+    },
+    "active_schedule": {
+      "label": "Orario attivo",
+      "help": "Quale orario con nome mostrare, contato nell’ordine in cui compare. Cambiatelo per la settimana degli esami, l’uscita anticipata o le festività.",
+      "options": {
+        "1": "Orario 1",
+        "2": "Orario 2",
+        "3": "Orario 3",
+        "4": "Orario 4",
+        "5": "Orario 5",
+        "6": "Orario 6",
+        "7": "Orario 7",
+        "8": "Orario 8"
+      }
+    },
+    "view": {
+      "label": "Vista",
+      "options": {
+        "split": "Ora + orario di oggi",
+        "focus": "Solo ora (grande conto alla rovescia)",
+        "list": "Solo l’orario di oggi"
+      }
+    },
+    "title": {
+      "label": "Titolo",
+      "help": "Vuoto = il titolo del modello nella lingua dello schermo (o il nome dell’esempio mentre è visibile)."
+    },
+    "subtitle": {
+      "label": "Sottotitolo",
+      "help": "Una riga sotto il titolo. Il nome dell’orario attivo viene aggiunto dopo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Mostrato accanto al titolo."
+    },
+    "show_badge": {
+      "label": "Mostra le iniziali se non c’è un logo"
+    },
+    "show_where": {
+      "label": "Mostra aula e referente"
+    },
+    "warn_minutes": {
+      "label": "Avvisa negli ultimi … minuti",
+      "help": "Il conto alla rovescia passa al colore di avviso questi minuti prima della fine di un blocco. 0 = mai."
+    },
+    "now_label": {
+      "label": "Titolo: blocco attuale",
+      "help": "Vuoto = il testo del modello nella lingua dello schermo («Adesso», «In corso»…)."
+    },
+    "next_label": {
+      "label": "Titolo: blocco successivo",
+      "help": "Vuoto = il testo del modello nella lingua dello schermo («A seguire», «Prossimo corso»…)."
+    },
+    "then_label": {
+      "label": "Titolo: il blocco dopo il prossimo",
+      "help": "Vuoto = «Poi» nella lingua dello schermo."
+    },
+    "ends_label": {
+      "label": "Testo del conto alla rovescia durante un blocco",
+      "help": "Vuoto = «Finisce tra» nella lingua dello schermo."
+    },
+    "starts_label": {
+      "label": "Testo del conto alla rovescia prima di un blocco",
+      "help": "Vuoto = «Inizia tra» nella lingua dello schermo."
+    },
+    "offhours_today": {
+      "label": "Messaggio prima del primo blocco di oggi",
+      "help": "Usate {time} e {title}. Vuoto = quello del modello nella lingua dello schermo, es. «Le lezioni iniziano alle {time}»."
+    },
+    "offhours_later": {
+      "label": "Messaggio quando il prossimo blocco è un altro giorno",
+      "help": "Usate {day}, {time} e {title}. Vuoto = quello del modello nella lingua dello schermo, es. «Prossime lezioni: {day}, {time}»."
+    },
+    "empty_text": {
+      "label": "Messaggio se questa settimana non c’è nulla",
+      "help": "Vuoto = quello del modello nella lingua dello schermo."
+    },
+    "font": {
+      "label": "Carattere dei titoli",
+      "options": {
+        "archivo": "Archivo (d’impatto)",
+        "oswald": "Oswald (condensato)",
+        "inter": "Inter (pulito)",
+        "bitter": "Bitter (con grazie)"
+      }
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "warn_color": {
+      "label": "Colore di avviso"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "clock_format": {
+      "label": "Formato dell’ora",
+      "options": {
+        "12": "12 ore",
+        "24": "24 ore",
+        "auto": "Secondo la lingua",
+        "off": "Nascondi l’orologio (orari secondo la lingua)"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario",
+      "help": "Gli orari sono in questo fuso orario. Vuoto = l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Le parole, gli orari e le date sullo schermo, ad esempio it o it-CH. Vuoto = la lingua dello schermo."
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "name": "Prijsverlaging-promo (staand)",
+  "description": "Staand (9:16). Een actiescherm voor een prijsverlaging: de productafbeelding op een gekleurde ring, de oude prijs, een grote nieuwe prijs en een voordeelsticker, met een balk onderaan voor de voorwaarden en een optionele aftelklok tot het einde van de actie.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Een min of meer vierkante PNG of SVG. Het meegeleverde embleem is een voorbeeld; vervang het door je eigen logo."
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt (een leeg logo toont anders een gestippeld kader)."
+    },
+    "brand": {
+      "label": "Winkelnaam",
+      "help": "Naast het logo. Laat leeg als je logo de naam al bevat."
+    },
+    "badge": {
+      "label": "Label",
+      "help": "Het pilletje boven de kop. Laat leeg en het blijft een effen gekleurd tabje.",
+      "default": "AFGEPRIJSD"
+    },
+    "headline": {
+      "label": "Product / kop",
+      "help": "Ruimte voor drie regels; 40 tekens passen altijd.",
+      "default": "Studio Pro koptelefoon met ANC"
+    },
+    "was_price": {
+      "label": "Oude prijs",
+      "help": "Typ hem zoals hij er moet staan, bijv. \"Van € 249,00\". Laat leeg om te verbergen.",
+      "default": "Van € 249,00"
+    },
+    "price": {
+      "label": "Nieuwe prijs",
+      "help": "Het grote getal, zoals het er moet staan: € 179, € 1.299,99.",
+      "default": "€ 179"
+    },
+    "save_text": {
+      "label": "Voordeelsticker",
+      "help": "Op de gele sticker over de afbeelding. Kort houden: −€ 70, −30%, HALVE PRIJS.",
+      "default": "−€ 70"
+    },
+    "product_image": {
+      "label": "Productafbeelding",
+      "help": "Het mooist is een uitgeknipte PNG of SVG met transparante achtergrond. Hij wordt passend gemaakt, nooit bijgesneden."
+    },
+    "show_image": {
+      "label": "Productafbeelding tonen",
+      "help": "Zet uit om het vlak zonder afbeelding te laten (een lege afbeelding toont anders een gestippeld kader)."
+    },
+    "show_countdown": {
+      "label": "Aftelklok tonen",
+      "help": "Zet uit bij een aanbieding zonder einddatum: label en klok verdwijnen allebei."
+    },
+    "countdown_label": {
+      "label": "Label boven de aftelklok",
+      "help": "Blijft staan na afloop, dus kies woorden die ook bij de eindtekst passen.",
+      "default": "TIJDELIJK"
+    },
+    "countdown_target": {
+      "label": "Aanbieding eindigt op",
+      "help": "ISO 8601 met tijdzoneverschil, bijv. 2026-11-01T23:59:00+01:00 of 2026-11-01T23:59:00-05:00."
+    },
+    "countdown_done": {
+      "label": "Tekst als de aftelklok afloopt",
+      "default": "Op = op"
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de live aftelklok, bijv. nl of nl-BE. Leeg = de taal van het scherm. Je eigen teksten verschijnen zoals je ze typt."
+    },
+    "small_print": {
+      "label": "Kleine lettertjes",
+      "help": "Voorwaarden in de balk onderaan. Een zin of twee.",
+      "default": "Geldig t/m 31 december 2026 of zolang de voorraad strekt. Eén per klant. In de winkel en online."
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Het label, de balk onderaan en de ring achter de afbeelding."
+    },
+    "highlight": {
+      "label": "Prijskleur",
+      "help": "De nieuwe prijs en de voordeelsticker."
+    },
+    "background": {
+      "label": "Achtergrondkleur",
+      "help": "Ook de tekstkleur op de sticker."
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "background_image": {
+      "label": "Achtergrondfoto",
+      "help": "Optioneel. Een foto achter alles, donkerder gemaakt met de instelling hieronder."
+    },
+    "background_dim": {
+      "label": "Foto donkerder maken",
+      "help": "0 = de foto zoals hij is, 0,9 = bijna zwart. Alleen met een achtergrondfoto."
+    }
+  }
+}

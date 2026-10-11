@@ -1,0 +1,138 @@
+{
+  "name": "Stundenplan-Anzeige",
+  "description": "Was gerade läuft, wie lange noch und was danach kommt: Countdown für Schulglocke, Fitnesskurse, Schichten und Pausen oder Gottesdienste, mit dem heutigen Plan daneben. Plan eintippen (mehrere benannte Pläne, einer aktiv) oder ein Google Sheet verbinden. Außerhalb der Zeiten zeigt sie, wann es wieder losgeht.",
+  "params": {
+    "preset": {
+      "label": "Vorlage",
+      "help": "Legt die Wortwahl und den Beispielplan fest, der erscheint, bis Sie Ihren eigenen eintragen oder verbinden – beides in der Sprache des Bildschirms.",
+      "options": {
+        "school": "Schule / Stundenplan",
+        "gym": "Kurse in Fitnessstudio oder Studio",
+        "factory": "Schichten und Pausen",
+        "worship": "Gottesdienste / Veranstaltungen"
+      }
+    },
+    "schedule": {
+      "label": "Plan",
+      "help": "Ein Block pro Zeile: Tage | Beginn-Ende | Titel | Raum | Leitung, z. B. Mon-Fri | 08:00-08:50 | 1. Stunde | Raum 12 | Frau Patel. [Prüfungswoche] beginnt einen weiteren Plan. Leer = Beispiel."
+    },
+    "schedule_source": {
+      "label": "Datenquelle für den Plan (optional)",
+      "help": "Ein Google Sheet, eine CSV oder manuelle Tabelle mit den Spalten Days, Start, End, Title, Room, Host (optional Schedule). Ersetzt den eingetippten Plan."
+    },
+    "active_schedule": {
+      "label": "Aktiver Plan",
+      "help": "Welcher benannte Plan angezeigt wird, gezählt in der Reihenfolge, in der sie stehen. Umschalten für Prüfungswoche, verkürzten Tag oder Ferienplan.",
+      "options": {
+        "1": "1. Plan",
+        "2": "2. Plan",
+        "3": "3. Plan",
+        "4": "4. Plan",
+        "5": "5. Plan",
+        "6": "6. Plan",
+        "7": "7. Plan",
+        "8": "8. Plan"
+      }
+    },
+    "view": {
+      "label": "Ansicht",
+      "options": {
+        "split": "Jetzt + heutiger Plan",
+        "focus": "Nur jetzt (großer Countdown)",
+        "list": "Nur der heutige Plan"
+      }
+    },
+    "title": {
+      "label": "Titel",
+      "help": "Leer = die Überschrift der Vorlage in der Sprache des Bildschirms (oder der Name des Beispiels, solange es angezeigt wird)."
+    },
+    "subtitle": {
+      "label": "Untertitel",
+      "help": "Eine Zeile unter dem Titel. Der Name des aktiven Plans wird angehängt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Wird neben dem Titel angezeigt."
+    },
+    "show_badge": {
+      "label": "Ohne Logo ein Kürzel-Abzeichen zeigen"
+    },
+    "show_where": {
+      "label": "Raum und Leitung zeigen"
+    },
+    "warn_minutes": {
+      "label": "In den letzten … Minuten warnen",
+      "help": "Der Countdown wechselt so viele Minuten vor dem Ende eines Blocks in die Warnfarbe. 0 = nie."
+    },
+    "now_label": {
+      "label": "Überschrift: aktueller Block",
+      "help": "Leer = die Wortwahl der Vorlage in der Sprache des Bildschirms („Jetzt“, „Läuft gerade“ …)."
+    },
+    "next_label": {
+      "label": "Überschrift: nächster Block",
+      "help": "Leer = die Wortwahl der Vorlage in der Sprache des Bildschirms („Als Nächstes“, „Nächster Kurs“ …)."
+    },
+    "then_label": {
+      "label": "Überschrift: übernächster Block",
+      "help": "Leer = „Danach“ in der Sprache des Bildschirms."
+    },
+    "ends_label": {
+      "label": "Countdown-Text während eines Blocks",
+      "help": "Leer = „Endet in“ in der Sprache des Bildschirms."
+    },
+    "starts_label": {
+      "label": "Countdown-Text vor einem Block",
+      "help": "Leer = „Beginnt in“ in der Sprache des Bildschirms."
+    },
+    "offhours_today": {
+      "label": "Meldung vor dem ersten Block heute",
+      "help": "Mit {time} und {title}. Leer = die der Vorlage in der Sprache des Bildschirms, z. B. „Unterricht ab {time}“."
+    },
+    "offhours_later": {
+      "label": "Meldung, wenn der nächste Block an einem anderen Tag ist",
+      "help": "Mit {day}, {time} und {title}. Leer = die der Vorlage in der Sprache des Bildschirms, z. B. „Unterricht ab {day}, {time}“."
+    },
+    "empty_text": {
+      "label": "Meldung, wenn diese Woche nichts geplant ist",
+      "help": "Leer = die der Vorlage in der Sprache des Bildschirms."
+    },
+    "font": {
+      "label": "Schrift der Überschriften",
+      "options": {
+        "archivo": "Archivo (markant)",
+        "oswald": "Oswald (schmal)",
+        "inter": "Inter (sachlich)",
+        "bitter": "Bitter (Serifen)"
+      }
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "warn_color": {
+      "label": "Warnfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "clock_format": {
+      "label": "Zeitformat",
+      "options": {
+        "12": "12 Stunden",
+        "24": "24 Stunden",
+        "auto": "Wie in der Sprache üblich",
+        "off": "Uhr ausblenden (Zeiten wie in der Sprache üblich)"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone",
+      "help": "Die Zeiten des Plans gelten in dieser Zeitzone. Leer = die Uhr des Bildschirms."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wörter, Uhrzeiten und Daten auf dem Bildschirm, z. B. de oder de-CH. Leer = die Sprache des Bildschirms."
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "name": "Programma degli eventi",
+  "description": "Bacheca «In programma» per hotel, centri congressi, campus e centri civici: i prossimi eventi per giorno, oggi (o stasera) in grande, con orari, sale, relatori e frecce. La sessione in corso è evidenziata, quelle finite spariscono da sole. Scrivi il programma o collega un calendario (iCal), un Foglio Google o una tabella manuale.",
+  "params": {
+    "title": {
+      "label": "Titolo",
+      "help": "Il titolo grande. Lascia vuoto per nasconderlo.",
+      "default": "In programma"
+    },
+    "subtitle": {
+      "label": "Sottotitolo",
+      "help": "Una riga sotto il titolo, per esempio la sede o il nome dell’evento. Lascia vuoto per nasconderla.",
+      "default": "Harbourview Hotel & Centro Congressi"
+    },
+    "footer": {
+      "label": "Riga in basso",
+      "help": "Testo piccolo lungo il bordo inferiore. Lascia vuoto per nasconderlo.",
+      "default": "Wi-Fi ospiti: Harbourview-Guest  ·  Reception e guardaroba al livello 1"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Mostrato accanto al titolo."
+    },
+    "agenda": {
+      "label": "Programma (senza fonte dati collegata)",
+      "help": "Un evento per riga: Data | Inizio | Fine | Titolo | Luogo | Relatore | Freccia. Data come 2026-10-12, oppure +0 per oggi, +1 per domani. Orari come 09:30 o 7pm. Vedi il README.",
+      "default": "+0|09:30|10:30|Keynote di apertura: Costruire per il prossimo miliardo|Gran Salone|Maya Okafor|↑\n+0|13:00|14:00|Pranzo di networking|Ristorante Terrazza||↓\n+0|19:00|23:00|Cena di beneficenza dell’Harbour Rotary Club|Gran Salone|Rotary Club|↑\n+1|09:00|10:00|Keynote: Logistica in tempo reale|Gran Salone|Dr Amara Nwosu|↑"
+    },
+    "events": {
+      "label": "Fonte dati degli eventi (facoltativa)",
+      "help": "Un calendario (iCal), oppure un Foglio Google, CSV o tabella manuale con le colonne qui sotto. Se collegata, sostituisce il programma scritto sopra."
+    },
+    "date_col": {
+      "label": "Colonna del foglio: data",
+      "default": "Data"
+    },
+    "start_col": {
+      "label": "Colonna del foglio: ora di inizio",
+      "default": "Inizio"
+    },
+    "end_col": {
+      "label": "Colonna del foglio: ora di fine",
+      "default": "Fine"
+    },
+    "title_col": {
+      "label": "Colonna del foglio: titolo",
+      "default": "Titolo"
+    },
+    "location_col": {
+      "label": "Colonna del foglio: luogo",
+      "default": "Luogo"
+    },
+    "host_col": {
+      "label": "Colonna del foglio: organizzatore o relatore",
+      "default": "Relatore"
+    },
+    "arrow_col": {
+      "label": "Colonna del foglio: freccia di direzione",
+      "help": "Facoltativa. Una freccia (← ↑ → ↓ ↖ ↗ ↘ ↙) o una parola inglese: left, right, ahead, up, down, up-left, up-right…",
+      "default": "Freccia"
+    },
+    "days_ahead": {
+      "label": "Giorni mostrati",
+      "help": "Oggi e i giorni seguenti. 1 mostra solo oggi."
+    },
+    "rows_per_page": {
+      "label": "Massimo di eventi per pagina",
+      "help": "Per colonna. Se ne mostrano meno quando non entrano a una dimensione leggibile; il resto va nelle pagine seguenti."
+    },
+    "page_seconds": {
+      "label": "Secondi per pagina",
+      "help": "Solo quando il programma non entra in una schermata."
+    },
+    "show_tonight": {
+      "label": "Dire «Stasera» la sera",
+      "help": "Disattivato: «Oggi» tutto il giorno."
+    },
+    "tonight_hour": {
+      "label": "«Stasera» dalle (ora)",
+      "help": "Da quest’ora il primo giorno porta il testo «Stasera» invece di «Oggi»."
+    },
+    "today_label": {
+      "label": "Testo: Oggi",
+      "help": "Lascia vuoto per la parola integrata nella lingua della bacheca."
+    },
+    "tonight_label": {
+      "label": "Testo: Stasera",
+      "help": "Lascia vuoto per la parola integrata nella lingua della bacheca."
+    },
+    "tomorrow_label": {
+      "label": "Testo: Domani",
+      "help": "Lascia vuoto per la parola integrata nella lingua della bacheca."
+    },
+    "now_label": {
+      "label": "Testo: Ora (sulla sessione in corso)",
+      "help": "Lascia vuoto per la parola integrata nella lingua della bacheca."
+    },
+    "show_next": {
+      "label": "Segnala la prossima sessione di oggi",
+      "help": "Un’etichetta «A seguire» e «tra 25 min» sulla prossima sessione non ancora iniziata."
+    },
+    "next_label": {
+      "label": "Testo: A seguire (sulla prossima sessione di oggi)",
+      "help": "Lascia vuoto per la parola integrata nella lingua della bacheca."
+    },
+    "all_day_label": {
+      "label": "Testo: Tutto il giorno",
+      "help": "Lascia vuoto per la parola integrata nella lingua della bacheca."
+    },
+    "empty_label": {
+      "label": "Testo quando non c’è nulla in programma",
+      "help": "Lascia vuoto per la parola integrata nella lingua della bacheca."
+    },
+    "clock_format": {
+      "label": "Orari",
+      "options": {
+        "auto": "Come da lingua",
+        "24": "24 ore",
+        "12": "12 ore"
+      }
+    },
+    "show_clock": {
+      "label": "Mostra orologio e data"
+    },
+    "timezone": {
+      "label": "Fuso orario",
+      "help": "Il fuso orario della sede. Lascia vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Parole, giorni, date e orari della bacheca, ad es. it-IT o it-CH. Vuoto = lingua dello schermo. Vale anche per il calendario; impostagli il fuso orario della sede."
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

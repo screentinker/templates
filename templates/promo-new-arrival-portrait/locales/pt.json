@@ -1,0 +1,93 @@
+{
+  "name": "Promoção novidade (retrato)",
+  "description": "Retrato (9:16). Uma tela calma e editorial para um produto novo: o nome em letra serifada, uma descrição curta, o preço e onde encontrar, o produto sobre um painel colorido com um selo \"Novo\" e um QR code opcional para a página do produto.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG mais ou menos quadrado. O selo incluído é provisório; substitua pelo seu."
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se não tiver logotipo (senão um logotipo vazio mostra uma caixa tracejada)."
+    },
+    "brand": {
+      "label": "Nome da loja",
+      "help": "Aparece ao lado do logotipo. Deixe vazio se o logotipo já tiver o nome."
+    },
+    "eyebrow": {
+      "label": "Chamada",
+      "default": "ACABOU DE CHEGAR"
+    },
+    "sticker": {
+      "label": "Selo redondo",
+      "help": "Uma palavra curta. Deixe vazio para um círculo liso.",
+      "default": "NOVO"
+    },
+    "headline": {
+      "label": "Nome do produto",
+      "help": "Espaço para três linhas; 34 caracteres sempre cabem.",
+      "default": "Bolsa Harbour de lona encerada"
+    },
+    "description": {
+      "label": "Descrição",
+      "default": "Lona encerada, alças de couro curtido ao vegetal e bolso interno com zíper. Nas cores tinta, oliva e areia."
+    },
+    "price": {
+      "label": "Preço",
+      "help": "Como deve aparecer, ex.: R$ 148 ou R$ 1.299,00. Deixe vazio para ocultar.",
+      "default": "R$ 148"
+    },
+    "where": {
+      "label": "Onde encontrar",
+      "default": "JÁ NA LOJA · PISO 1"
+    },
+    "product_image": {
+      "label": "Imagem do produto",
+      "help": "O ideal é um PNG ou SVG recortado com fundo transparente. Ela é ajustada, nunca cortada."
+    },
+    "show_image": {
+      "label": "Mostrar a imagem do produto",
+      "help": "Desative para deixar o painel sem imagem (senão uma imagem vazia mostra uma caixa tracejada)."
+    },
+    "show_qr": {
+      "label": "Mostrar o QR code",
+      "help": "Desative se não tiver link: o código, o cartão e a legenda somem."
+    },
+    "qr_url": {
+      "label": "Link do QR code",
+      "help": "A página que o código abre. Links curtos são lidos de mais longe."
+    },
+    "qr_caption": {
+      "label": "Legenda do QR code",
+      "default": "Veja todas as cores"
+    },
+    "small_print": {
+      "label": "Letras miúdas",
+      "default": "Enquanto durarem os estoques. As cores podem variar em relação à imagem."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "A chamada, o selo e os fios."
+    },
+    "panel": {
+      "label": "Cor do painel da imagem"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "sticker_text": {
+      "label": "Cor do texto do selo"
+    },
+    "background_image": {
+      "label": "Foto de fundo",
+      "help": "Opcional. Uma foto atrás de tudo, escurecida pela configuração abaixo."
+    },
+    "background_dim": {
+      "label": "Escurecer a foto",
+      "help": "0 = a foto como está, 0,9 = quase preta. Só vale com foto de fundo."
+    }
+  }
+}

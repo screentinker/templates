@@ -1,0 +1,68 @@
+{
+  "name": "Previsión del tiempo",
+  "description": "Condiciones actuales y una previsión de cinco días a partir de una de sus fuentes de datos de tiempo. Su servidor obtiene el tiempo por sí mismo; la plantilla solo lo presenta.",
+  "params": {
+    "weather": {
+      "label": "Fuente de datos del tiempo",
+      "help": "Una fuente de datos de tipo Tiempo (Fuentes de datos → Nueva → Tiempo). Allí se configuran la ubicación, las unidades y el idioma."
+    },
+    "location": {
+      "label": "Nombre del lugar",
+      "default": "El tiempo aquí",
+      "help": "El encabezado. Normalmente la ciudad o el nombre del centro."
+    },
+    "units_label": {
+      "label": "Sufijo de temperatura",
+      "help": "Se muestra tras cada temperatura: ° solo, o °C / °F según la fuente de datos."
+    },
+    "feels_like_label": {
+      "label": "Texto «Sensación»",
+      "help": "Se muestra antes de la temperatura aparente.",
+      "default": "Sensación"
+    },
+    "humidity_label": {
+      "label": "Texto «Humedad»",
+      "help": "Se muestra antes de la humedad.",
+      "default": "Humedad"
+    },
+    "today_label": {
+      "label": "Texto «Hoy»",
+      "help": "Se muestra antes de la máxima y la mínima de hoy.",
+      "default": "Hoy"
+    },
+    "precip_label": {
+      "label": "Texto «Prob. de lluvia»",
+      "help": "Se muestra antes de la probabilidad de precipitación de hoy.",
+      "default": "Probabilidad de lluvia"
+    },
+    "updated_label": {
+      "label": "Texto «Actualizado»",
+      "help": "Se muestra antes de la hora de la última lectura.",
+      "default": "Actualizado"
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "timezone": {
+      "label": "Zona horaria del reloj",
+      "help": "Déjelo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma de la fecha, p. ej. es o es-MX. Déjelo vacío para usar el idioma de la pantalla. Los días del pronóstico y la descripción del tiempo vienen de la fuente de datos."
+    },
+    "clock_format": {
+      "label": "Formato del reloj",
+      "options": {
+        "24": "24 horas",
+        "12": "12 horas"
+      }
+    }
+  }
+}

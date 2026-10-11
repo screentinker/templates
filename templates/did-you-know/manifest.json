@@ -1,0 +1,109 @@
+{
+  "id": "did-you-know",
+  "name": "Did you know?",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A bold fact-of-the-day screen: a big character in a bright disc, one surprising sentence, a short explanation and a source line. For schools, libraries, museums, waiting rooms and office kitchens.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/did-you-know",
+  "license": "MIT",
+  "tags": [
+    "fact",
+    "trivia",
+    "education",
+    "school",
+    "library",
+    "lobby",
+    "office"
+  ],
+  "orientation": [
+    "landscape"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "default": "DID YOU KNOW?"
+    },
+    {
+      "name": "badge",
+      "type": "text",
+      "label": "Character in the disc",
+      "max": 3,
+      "help": "One to three characters, drawn big in the coloured disc: ?, !, a number.",
+      "default": "?"
+    },
+    {
+      "name": "number",
+      "type": "text",
+      "label": "Fact number",
+      "max": 16,
+      "help": "Top right, e.g. \"No. 27\". Leave empty to hide.",
+      "default": "No. 27"
+    },
+    {
+      "name": "fact",
+      "type": "text",
+      "label": "The fact",
+      "max": 60,
+      "help": "The headline: one short, surprising sentence.",
+      "default": "An octopus has three hearts and blue blood."
+    },
+    {
+      "name": "detail",
+      "type": "textarea",
+      "label": "Explanation",
+      "max": 200,
+      "help": "One or two sentences that explain it. Enter starts a new line.",
+      "default": "Two hearts pump blood through the gills and the third sends it round the body. The blood is blue because it carries oxygen with copper instead of iron."
+    },
+    {
+      "name": "footer",
+      "type": "text",
+      "label": "Footer line",
+      "max": 90,
+      "help": "A source, a series name or where to find out more.",
+      "default": "Science Week at Northwind Library · Ask at the front desk for the reading list"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Off hides the logo and its space stays empty.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A PNG or SVG with a transparent background, in a light colour for the default dark background.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "help": "The disc, small heading, number and rule.",
+      "default": "#FFC845"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "help": "Behind everything. The character in the disc is drawn in this colour too.",
+      "default": "#0D3A42"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "help": "The fact, explanation and footer.",
+      "default": "#F1FAF8"
+    }
+  ]
+}

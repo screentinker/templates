@@ -1,0 +1,66 @@
+{
+  "name": "Uitspraak van de dag",
+  "description": "Een typografisch citaatscherm: een groot citaat in een schreefletter, wie het zei en waar, met de datum van vandaag in jouw taal. Voor een lobby, kantine, schoolgang of het scherm bij de koffieautomaat.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "Een kort label boven het citaat. Hoofdletters lezen het best.",
+      "default": "UITSPRAAK VAN DE DAG"
+    },
+    "quote": {
+      "label": "Citaat",
+      "help": "Zonder aanhalingstekens: het grote teken wordt voor je getekend. Tot ongeveer 130 tekens.",
+      "default": "We hebben niet te weinig tijd, maar we verspillen er veel van."
+    },
+    "attribution": {
+      "label": "Wie het zei",
+      "default": "Seneca"
+    },
+    "attribution_detail": {
+      "label": "Bron of functie",
+      "help": "Een boek, functie of jaar. Laat leeg om te verbergen.",
+      "default": "Over de kortheid van het leven, ca. 49 n.Chr."
+    },
+    "show_date": {
+      "label": "Datum van vandaag tonen",
+      "help": "De live datum van het scherm, in de taal en tijdzone hieronder."
+    },
+    "date_format": {
+      "label": "Datumstijl",
+      "options": {
+        "weekday": "Weekdag, dag en maand",
+        "long": "Volledige datum met jaar",
+        "short": "Korte datum",
+        "numeric": "Alleen cijfers"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone van de datum",
+      "help": "In welke tijdzone ‘vandaag’ valt. Laat leeg voor de klok van het scherm."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de datum, bijv. nl-NL, nl-BE of de-DE. Laat leeg voor de taal van het scherm."
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Uit verbergt het logo; de ruimte blijft leeg."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond, in een lichte kleur voor de standaard donkere achtergrond."
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Het grote aanhalingsteken, de kleine kop, de lijn en de decoratie."
+    },
+    "background": {
+      "label": "Achtergrondkleur",
+      "help": "Achter alles."
+    },
+    "text_color": {
+      "label": "Tekstkleur",
+      "help": "Het citaat en de naam."
+    }
+  }
+}

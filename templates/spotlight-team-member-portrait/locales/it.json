@@ -1,0 +1,97 @@
+{
+  "name": "Conosci il team (verticale)",
+  "description": "Presenta qualcuno a tutto l’edificio: un pannello colorato con foto, nome e ruolo, una breve risposta con parole sue e una curiosità, su due schede pulite. Layout verticale 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Meglio un PNG o SVG con sfondo trasparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Una foto a mezzo busto, ritagliata per riempire la cornice. Le foto quadrate rendono meglio."
+    },
+    "show_photo": {
+      "label": "Mostra la foto",
+      "help": "Se disattivato mostra un cerchio con le iniziali, per chi preferisce non esporre la propria foto."
+    },
+    "initials": {
+      "label": "Iniziali",
+      "help": "Compaiono nel cerchio quando la foto è disattivata. Una o due lettere."
+    },
+    "eyebrow": {
+      "label": "Titoletto",
+      "help": "Sopra il nome. In maiuscolo si legge meglio.",
+      "default": "CONOSCI IL TEAM"
+    },
+    "name": {
+      "label": "Nome",
+      "help": "Una riga, fino a 26 caratteri. Scrivilo normalmente; TUTTO MAIUSCOLO è più largo e potrebbe non starci."
+    },
+    "role": {
+      "label": "Ruolo",
+      "help": "Mansione, team, classe o sede. Se è lungo va a capo su una seconda riga.",
+      "default": "Responsabile operazioni di magazzino, deposito di Leeds"
+    },
+    "show_quote": {
+      "label": "Mostra la citazione",
+      "help": "Se disattivato nasconde la citazione e le virgolette."
+    },
+    "quote": {
+      "label": "Citazione",
+      "help": "Una o due frasi con parole sue. Senza virgolette.",
+      "default": "Chiedetemi della notte in cui abbiamo spostato 14.000 pacchi durante un blackout. Spoiler: frontali e tanto tè."
+    },
+    "quote_mark": {
+      "label": "Virgolette",
+      "help": "Il grande segno decorativo accanto alla citazione. Usa quello della tua lingua, ad es. « o “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Mostra la curiosità",
+      "help": "Se disattivato nasconde etichetta e testo della curiosità."
+    },
+    "fact_label": {
+      "label": "Etichetta della curiosità",
+      "help": "Un’etichetta breve, ad es. CURIOSITÀ o CHIEDIMI DI.",
+      "default": "FUORI DAL LAVORO"
+    },
+    "fun_fact": {
+      "label": "Curiosità",
+      "help": "Una o due frasi brevi.",
+      "default": "Allena una squadra di calcio under 11 ed è a caccia del miglior riso jollof dello Yorkshire."
+    },
+    "show_badge": {
+      "label": "Mostra il badge"
+    },
+    "badge": {
+      "label": "Testo del badge",
+      "help": "Un mese, una data di inizio, un team o un traguardo. In maiuscolo si legge meglio.",
+      "default": "LOGISTICA  ·  6 ANNI"
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "Badge, titoletto, virgolette ed etichette delle schede."
+    },
+    "panel_color": {
+      "label": "Colore del pannello",
+      "help": "Il grande pannello dietro la foto. Ospita il testo chiaro e il logo."
+    },
+    "highlight": {
+      "label": "Colore del cerchio delle iniziali",
+      "help": "Il cerchio dietro le iniziali."
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "card_color": {
+      "label": "Colore delle schede",
+      "help": "Le due schede e l’anello attorno alla foto."
+    },
+    "initials_color": {
+      "label": "Colore delle iniziali"
+    }
+  }
+}

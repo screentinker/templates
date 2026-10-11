@@ -1,7 +1,7 @@
 {
   "id": "news-wall",
   "name": "News wall",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "html",
   "description": "A magazine-style news wall for any RSS or Atom feed: a large featured story that rotates every few seconds, the next four stories as cards, the feed's title and relative dates. Typographic by design (no remote images), so it works offline. Or type your own headlines.",
   "author": "ScreenTinker",
@@ -37,7 +37,7 @@
       "label": "Title",
       "max": 48,
       "default": "",
-      "help": "Leave empty to use the feed's own title."
+      "help": "Leave empty to use the feed's own title (without a feed: “Latest news” in the screen's language)."
     },
     {
       "name": "stories",
@@ -90,14 +90,16 @@
       "type": "text",
       "label": "Label on the featured story",
       "max": 24,
-      "default": "Top story"
+      "default": "",
+      "help": "Leave empty for “Top story” in the screen's language."
     },
     {
       "name": "next_label",
       "type": "text",
       "label": "Heading above the cards",
       "max": 24,
-      "default": "Up next"
+      "default": "",
+      "help": "Leave empty for “Up next” in the screen's language."
     },
     {
       "name": "show_summaries",
@@ -146,8 +148,8 @@
     {
       "name": "locale",
       "type": "locale",
-      "label": "Language (clock and dates)",
-      "help": "For example en-GB or fr-FR. Leave empty for the screen's language.",
+      "label": "Language",
+      "help": "Language of the clock, the story dates and the built-in labels, for example fr or en-GB. Leave empty for the screen's language.",
       "default": ""
     }
   ]

@@ -1,0 +1,51 @@
+{
+  "name": "感谢日（竖屏）",
+  "description": "明亮的致谢画面，适合员工、志愿者、客户或教师感谢日：米色底上的醒目几何形状、大大的感谢标题、列出值得庆祝的数字的正文，以及多种语言的“谢谢”。",
+  "params": {
+    "eyebrow": {
+      "label": "小标题",
+      "help": "标题上方的短行。留空即可隐藏。",
+      "default": "员工感谢日"
+    },
+    "headline": {
+      "label": "标题",
+      "help": "预留两行，中文每行约8个字，共约16个字。更长的标题会换到第三行并压住正文。",
+      "default": "感谢有你"
+    },
+    "message": {
+      "label": "正文",
+      "help": "标题下的一两句话，中文约可容纳90个字。换行会另起一行。",
+      "default": "从夜班到前台：发货 1,284 单，五星好评 96%，创下最佳季度纪录。今天的午餐我们请客。"
+    },
+    "date_line": {
+      "label": "日期行",
+      "help": "按你希望显示的样子输入的纯文本：日期、时间和地点，或落款。",
+      "default": "12:30  ·  中庭  ·  欢迎所有人"
+    },
+    "show_logo": {
+      "label": "显示标志",
+      "help": "如果没有标志，请关闭。"
+    },
+    "logo": {
+      "label": "标志",
+      "help": "背景透明的横版 PNG 或 SVG（约 3.4 : 1 可填满框；其他比例会缩放到框内）。请替换 Northwind 占位标志。"
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "accent2": {
+      "label": "第二强调色"
+    },
+    "background": {
+      "label": "背景颜色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    },
+    "thanks_line": {
+      "label": "底部一行",
+      "help": "日期行下方的小字，默认是多种语言的“谢谢”。",
+      "default": "Thank you  ·  Merci  ·  Danke  ·  Gracias  ·  Grazie  ·  Obrigado  ·  Tack"
+    }
+  }
+}

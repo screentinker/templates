@@ -1,0 +1,66 @@
+{
+  "name": "Zitat des Tages (Hochformat)",
+  "description": "Ein typografischer Zitat-Bildschirm: ein großes Zitat in Serifenschrift, wer es sagte und wo, dazu das aktuelle Datum in Ihrer Sprache. Für Foyer, Pausenraum, Schulflur oder den Bildschirm an der Kaffeemaschine. Hochformat-Layout 9:16.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Ein kurzes Etikett über dem Zitat. Großbuchstaben wirken am besten.",
+      "default": "ZITAT DES TAGES"
+    },
+    "quote": {
+      "label": "Zitat",
+      "help": "Ohne Anführungszeichen: Das große Zeichen wird automatisch gesetzt. Bis etwa 130 Zeichen.",
+      "default": "Es ist nicht wenig Zeit, die wir haben, sondern viel, die wir nicht nutzen."
+    },
+    "attribution": {
+      "label": "Wer es gesagt hat",
+      "default": "Seneca"
+    },
+    "attribution_detail": {
+      "label": "Quelle oder Rolle",
+      "help": "Ein Buch, eine Rolle oder ein Jahr. Leer lassen zum Ausblenden.",
+      "default": "Von der Kürze des Lebens, um 49 n. Chr."
+    },
+    "show_date": {
+      "label": "Heutiges Datum anzeigen",
+      "help": "Das aktuelle Datum des Bildschirms, in der Sprache und Zeitzone unten."
+    },
+    "date_format": {
+      "label": "Datumsstil",
+      "options": {
+        "weekday": "Wochentag, Tag und Monat",
+        "long": "Volles Datum mit Jahr",
+        "short": "Kurzes Datum",
+        "numeric": "Nur Zahlen"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone für das Datum",
+      "help": "In welcher Zeitzone „heute“ ist. Leer lassen, um die Uhr des Bildschirms zu nutzen."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache des Datums, z. B. de-DE, de-CH oder fr-CA. Leer lassen für die Sprache des Bildschirms."
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Aus blendet das Logo aus, sein Platz bleibt leer."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "PNG oder SVG mit transparentem Hintergrund, in einer hellen Farbe für den dunklen Standardhintergrund."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Das große Anführungszeichen, die kleine Überschrift, die Linie und die Dekoration."
+    },
+    "background": {
+      "label": "Hintergrundfarbe",
+      "help": "Hinter allem."
+    },
+    "text_color": {
+      "label": "Textfarbe",
+      "help": "Das Zitat und der Name."
+    }
+  }
+}

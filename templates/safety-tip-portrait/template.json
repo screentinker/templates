@@ -1,0 +1,231 @@
+{
+ "template": {
+  "aspect": "9:16",
+  "background": "{{param:background}}",
+  "elements": [
+   {
+    "slot": "panel",
+    "kind": "box",
+    "box": {
+     "x": 0,
+     "y": 0,
+     "w": 100,
+     "h": 40
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "slideD",
+     "delay": 0,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "icon",
+    "kind": "image",
+    "fit": "contain",
+    "content_id": "{{param:icon}}",
+    "box": {
+     "x": 35,
+     "y": 5.5,
+     "w": 30,
+     "h": 16.9
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.3,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "panel_title",
+    "kind": "head",
+    "box": {
+     "x": 4,
+     "y": 24.8,
+     "w": 92
+    },
+    "style": {
+     "color": "{{param:background}}",
+     "size_cqw": 8.5,
+     "weight": 800,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.45,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "tip_number",
+    "kind": "body",
+    "box": {
+     "x": 4,
+     "y": 32,
+     "w": 92
+    },
+    "style": {
+     "color": "{{param:background}}",
+     "size_cqw": 3.6,
+     "weight": 700,
+     "font": "oswald",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.55,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "eyebrow",
+    "kind": "body",
+    "box": {
+     "x": 8,
+     "y": 45.5,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 2.9,
+     "weight": 700,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.4,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "headline",
+    "kind": "head",
+    "box": {
+     "x": 8,
+     "y": 49,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 8.6,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.5,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "rule",
+    "kind": "rule",
+    "box": {
+     "x": 8,
+     "y": 61.5,
+     "w": 12,
+     "h": 0.32
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.8,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "steps",
+    "kind": "body",
+    "box": {
+     "x": 8,
+     "y": 64.5,
+     "w": 86
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 3.6,
+     "weight": 500,
+     "font": "inter",
+     "opacity": 0.9
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.9,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "divider",
+    "kind": "rule",
+    "box": {
+     "x": 8,
+     "y": 83.5,
+     "w": 84,
+     "h": 0.1
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "opacity": 0.2
+    }
+   },
+   {
+    "slot": "footer",
+    "kind": "body",
+    "box": {
+     "x": 8,
+     "y": 85.5,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 2.9,
+     "weight": 500,
+     "font": "inter",
+     "opacity": 0.65
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 1.1,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "logo",
+    "kind": "image",
+    "fit": "contain",
+    "content_id": "{{param:logo}}",
+    "box": {
+     "x": 8,
+     "y": 92.5,
+     "w": 30,
+     "h": 3.66
+    },
+    "style": {
+     "opacity": "{{param:show_logo}}"
+    }
+   }
+  ]
+ },
+ "fields": {
+  "panel_title": "{{param:panel_title}}",
+  "tip_number": "{{param:tip_number}}",
+  "eyebrow": "{{param:eyebrow}}",
+  "headline": "{{param:headline}}",
+  "steps": "{{param:steps}}",
+  "footer": "{{param:footer}}"
+ }
+}

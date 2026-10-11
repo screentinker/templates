@@ -1,0 +1,43 @@
+{
+  "name": "Clima — animado",
+  "description": "Uma cena de clima animada em tela cheia: o céu, a chuva, a neve ou o sol acompanham as condições atuais, com previsão de cinco dias e faixas de temperatura. Lê uma das suas fontes de dados de Clima; o seu servidor busca o tempo, então este modelo não precisa de nenhum acesso à rede.",
+  "params": {
+    "weather": {
+      "label": "Fonte de dados de clima",
+      "help": "Uma fonte de dados do tipo Clima (Fontes de dados → Nova → Clima). Local e unidades são definidos lá."
+    },
+    "location": {
+      "label": "Nome do local",
+      "help": "Deixe vazio para usar o nome do local da fonte de dados."
+    },
+    "theme": {
+      "label": "Fundo",
+      "options": {
+        "sky": "Acompanha o clima",
+        "solid": "Cor sólida"
+      }
+    },
+    "background": {
+      "label": "Cor de fundo sólida",
+      "help": "Usada quando Fundo está em Cor sólida."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "animate": {
+      "label": "Animar a cena",
+      "help": "Desative em players de baixo desempenho."
+    },
+    "show_clock": {
+      "label": "Mostrar o relógio"
+    },
+    "timezone": {
+      "label": "Fuso horário do relógio",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma de todas as palavras, datas e números na tela, por exemplo pt ou ja. Deixe vazio para o idioma da tela."
+    }
+  }
+}

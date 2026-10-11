@@ -1,0 +1,166 @@
+{
+  "name": "Orari di apertura",
+  "description": "Orari di apertura con stato in tempo reale: un grande «Aperto, chiude alle 17:00» o «Chiuso, apre domani alle 09:00», gli orari della settimana con oggi in evidenza, orari spezzati e pause pranzo, e chiusure festive che sostituiscono la settimana. Per negozi, farmacie, biblioteche, ambulatori e uffici. Scrivi le date speciali o tienile in un foglio Google.",
+  "params": {
+    "title": {
+      "label": "Nome",
+      "default": "Farmacia Northwind"
+    },
+    "subtitle": {
+      "label": "Sottotitolo",
+      "help": "Una riga sotto il nome, come l’indirizzo. Lascia vuoto per nasconderla.",
+      "default": "12 Harbour Street · Ricette e consigli senza appuntamento"
+    },
+    "footer": {
+      "label": "Riga in basso",
+      "help": "Testo piccolo lungo il bordo inferiore. Lascia vuoto per nasconderlo.",
+      "default": "Fuori orario? Chiama lo 0161 496 0000 o visita northwind.example/urgent"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Accanto al nome. Quello predefinito è un segnaposto: sostituiscilo o rimuovilo."
+    },
+    "hours_mon": {
+      "label": "Lunedì",
+      "help": "Orari come 09:00-17:00. Orario spezzato con una virgola: 09:00-12:30, 13:30-17:00. Chiuso, o 24h. 18:00-02:00 va oltre la mezzanotte."
+    },
+    "hours_tue": {
+      "label": "Martedì"
+    },
+    "hours_wed": {
+      "label": "Mercoledì"
+    },
+    "hours_thu": {
+      "label": "Giovedì"
+    },
+    "hours_fri": {
+      "label": "Venerdì"
+    },
+    "hours_sat": {
+      "label": "Sabato"
+    },
+    "hours_sun": {
+      "label": "Domenica",
+      "default": "Chiuso"
+    },
+    "week_start": {
+      "label": "La settimana inizia di",
+      "options": {
+        "monday": "Lunedì",
+        "sunday": "Domenica",
+        "saturday": "Sabato"
+      }
+    },
+    "specials": {
+      "label": "Date speciali",
+      "help": "Una per riga: Data | Orari | Nota. La data è 2026-12-24, un periodo 2026-12-24..2026-12-26, o 12-25 per ogni anno. Sostituiscono la settimana.",
+      "default": "12-24 | 08:30-13:00 | Vigilia di Natale\n12-25..12-26 | Chiuso | Natale\n12-31 | 08:30-15:00 | San Silvestro\n01-01 | Chiuso | Capodanno\n2026-10-09 | 08:30-13:00 | Formazione del personale nel pomeriggio\n2026-11-02 | 10:00-13:00, 14:00-18:30 | Apertura posticipata per inventario"
+    },
+    "specials_source": {
+      "label": "Origine dati delle date speciali (facoltativa)",
+      "help": "Un foglio Google, un CSV o una tabella manuale con colonne per data, orari e nota. Se collegata, sostituisce le date scritte sopra."
+    },
+    "date_col": {
+      "label": "Colonna data",
+      "help": "L’intestazione di quella colonna nella tua origine, in lettere latine."
+    },
+    "hours_col": {
+      "label": "Colonna orari"
+    },
+    "note_col": {
+      "label": "Colonna nota"
+    },
+    "specials_count": {
+      "label": "Prossime date speciali in elenco",
+      "help": "0 nasconde l’elenco. La tabella della settimana mostra sempre gli orari speciali nel giorno in cui valgono."
+    },
+    "open_label": {
+      "label": "Stato: aperto",
+      "help": "Vuoto = «Aperto» nella lingua dello schermo."
+    },
+    "soon_label": {
+      "label": "Stato: chiude a breve",
+      "help": "Vuoto = «Chiude a breve» nella lingua dello schermo."
+    },
+    "closed_label": {
+      "label": "Stato e tabella: chiuso",
+      "help": "Vuoto = «Chiuso» nella lingua dello schermo."
+    },
+    "always_open_label": {
+      "label": "Aperto giorno e notte",
+      "help": "Vuoto = «Aperto 24 ore su 24» nella lingua dello schermo."
+    },
+    "closes_text": {
+      "label": "Riga di chiusura",
+      "help": "{time} è l’orario di chiusura. Vuoto = «Chiude alle {time}» nella lingua dello schermo; - la nasconde."
+    },
+    "reopens_text": {
+      "label": "Riga della pausa",
+      "help": "Mostrata quando riapre più tardi nello stesso giorno. Vuoto = testo nella lingua dello schermo; - la nasconde."
+    },
+    "opens_text": {
+      "label": "Riga di apertura",
+      "help": "{day} è oggi, domani o un giorno della settimana; {time} l’orario di apertura. Vuoto = lingua dello schermo; - la nasconde."
+    },
+    "hours_heading": {
+      "label": "Titolo: questa settimana",
+      "help": "Vuoto = «Orari di apertura» nella lingua dello schermo; - nasconde il titolo."
+    },
+    "specials_heading": {
+      "label": "Titolo: date speciali",
+      "help": "Vuoto = «Orari speciali» nella lingua dello schermo; - nasconde il titolo."
+    },
+    "today_label": {
+      "label": "Etichetta di oggi",
+      "help": "Vuoto = la parola «oggi» nella lingua dello schermo."
+    },
+    "timezone": {
+      "label": "Fuso orario dell’attività",
+      "help": "Lascia vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Parole, giorni, date e orari sullo schermo, per esempio en-GB, fr-FR o de-DE. Vuoto = la lingua dello schermo."
+    },
+    "clock_format": {
+      "label": "Orari e orologio",
+      "options": {
+        "auto": "Come nella lingua, con orologio",
+        "24": "24 ore, con orologio",
+        "12": "12 ore, con orologio",
+        "off": "Come nella lingua, senza orologio"
+      }
+    },
+    "font": {
+      "label": "Carattere dei titoli",
+      "options": {
+        "archivo": "Archivo (d’impatto)",
+        "bitter": "Bitter (con grazie)",
+        "inter": "Inter (pulito)"
+      }
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "La riga di oggi, i titoli e le date speciali."
+    },
+    "open_color": {
+      "label": "Colore: aperto"
+    },
+    "soon_color": {
+      "label": "Colore: chiude a breve"
+    },
+    "closed_color": {
+      "label": "Colore: chiuso"
+    },
+    "soon_minutes": {
+      "label": "«Chiude a breve», minuti prima della chiusura",
+      "help": "0 disattiva lo stato «Chiude a breve»."
+    }
+  }
+}

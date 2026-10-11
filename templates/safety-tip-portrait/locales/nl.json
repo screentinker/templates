@@ -1,0 +1,59 @@
+{
+  "name": "Veiligheidstip (staand)",
+  "description": "Een goed zichtbare veiligheidstip voor fabrieken, magazijnen, keukens en bouwplaatsen: een waarschuwingsicoon op een geel paneel, de regel in grote letters, tot vier stappen en wie je belt. Staande opmaak 9:16.",
+  "params": {
+    "icon": {
+      "label": "Icoon",
+      "help": "Een vierkante PNG of SVG met transparante achtergrond, donker genoeg voor het accentpaneel."
+    },
+    "panel_title": {
+      "label": "Titel op het paneel",
+      "default": "VEILIGHEID"
+    },
+    "tip_number": {
+      "label": "Tipnummer",
+      "help": "Onder de paneeltitel, bijv. ‘TIP 14 VAN 52’. Laat leeg om te verbergen.",
+      "default": "TIP 14 VAN 52"
+    },
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "Voor wie of waar de tip geldt.",
+      "default": "DEZE WEEK · MAGAZIJN & LAADPERRON"
+    },
+    "headline": {
+      "label": "Tip",
+      "help": "De regel in een paar woorden.",
+      "default": "Til met je benen, niet met je rug"
+    },
+    "steps": {
+      "label": "Zo doe je het",
+      "help": "Tot vier korte regels; Enter begint een nieuwe regel. Elk onder ongeveer 45 tekens.",
+      "default": "1. Sta dichtbij, voeten op schouderbreedte\n2. Buig je knieën, houd je rug recht\n3. Pak stevig vast, til zonder te draaien\n4. Boven 23 kg? Pak een karretje of vraag hulp"
+    },
+    "footer": {
+      "label": "Voetregel",
+      "help": "Wie je belt of waar je meldt.",
+      "default": "Meld elk bijna-ongeval bij je leidinggevende of bel de veiligheidslijn, toestel 2240"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Uit verbergt het logo; de ruimte blijft leeg."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond, in een lichte kleur voor de standaard donkere achtergrond."
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Het paneel achter het icoon, de kleine kop en de lijn."
+    },
+    "background": {
+      "label": "Achtergrondkleur",
+      "help": "De pagina. Paneeltitel en tipnummer krijgen ook deze kleur."
+    },
+    "text_color": {
+      "label": "Tekstkleur",
+      "help": "De tip, de stappen en de voetregel."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Le saviez-vous ?",
+  "description": "Un écran « le saviez-vous » percutant : un grand caractère dans un disque vif, une phrase étonnante, une courte explication et une ligne de source. Pour écoles, bibliothèques, musées, salles d’attente et cuisines de bureau.",
+  "params": {
+    "eyebrow": {
+      "label": "Petit titre",
+      "default": "LE SAVIEZ-VOUS ?"
+    },
+    "badge": {
+      "label": "Caractère du disque",
+      "help": "Un à trois caractères, dessinés en grand dans le disque coloré : ?, !, un nombre."
+    },
+    "number": {
+      "label": "Numéro de l’info",
+      "help": "En haut à droite, par ex. « N° 27 ». Laissez vide pour masquer.",
+      "default": "N° 27"
+    },
+    "fact": {
+      "label": "L’info",
+      "help": "Le titre : une phrase courte et surprenante.",
+      "default": "La pieuvre a trois cœurs et le sang bleu."
+    },
+    "detail": {
+      "label": "Explication",
+      "help": "Une ou deux phrases d’explication. Entrée commence une nouvelle ligne.",
+      "default": "Deux cœurs envoient le sang dans les branchies, le troisième dans tout le corps. Il est bleu car l’oxygène y est porté par du cuivre, pas du fer."
+    },
+    "footer": {
+      "label": "Ligne de pied",
+      "help": "Une source, le nom de la série ou où en savoir plus.",
+      "default": "Semaine des sciences à la bibliothèque Northwind · Liste de lecture à l’accueil"
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivé, le logo est masqué et son espace reste vide."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent, de couleur claire pour le fond sombre par défaut."
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Le disque, le petit titre, le numéro et le filet."
+    },
+    "background": {
+      "label": "Couleur de fond",
+      "help": "Derrière tout le reste. Le caractère du disque est aussi dessiné dans cette couleur."
+    },
+    "text_color": {
+      "label": "Couleur du texte",
+      "help": "L’info, l’explication et la ligne de pied."
+    }
+  }
+}

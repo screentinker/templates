@@ -1,0 +1,80 @@
+{
+  "name": "Relógios mundiais",
+  "description": "De dois a oito relógios ao vivo para as cidades com que você trabalha — analógicos, digitais ou ambos, com a data, um sinal de dia/noite e a diferença de horas em relação a esta tela. Organiza-se em grade, lista vertical ou faixa fina. Nada é baixado: os horários vêm do relógio da própria tela.",
+  "params": {
+    "title": {
+      "label": "Título",
+      "help": "Deixe vazio para ocultar a barra de título.",
+      "default": "Ao redor do mundo"
+    },
+    "clocks": {
+      "label": "Relógios",
+      "help": "Um relógio por linha, como Cidade | fuso IANA — por exemplo Mumbai | Asia/Kolkata. De 2 a 8 linhas; linhas com fuso desconhecido são ignoradas e listadas na parte de baixo.",
+      "default": "Londres | Europe/London\nNova York | America/New_York\nTóquio | Asia/Tokyo\nSydney | Australia/Sydney\nDubai | Asia/Dubai\nSão Francisco | America/Los_Angeles"
+    },
+    "face": {
+      "label": "Estilo do relógio",
+      "options": {
+        "both": "Analógico e digital",
+        "analog": "Só analógico",
+        "digital": "Só digital"
+      }
+    },
+    "clock_format": {
+      "label": "Formato da hora",
+      "options": {
+        "24": "24 horas",
+        "12": "12 horas"
+      }
+    },
+    "show_seconds": {
+      "label": "Mostrar segundos"
+    },
+    "show_date": {
+      "label": "Mostrar a data"
+    },
+    "show_daynight": {
+      "label": "Mostrar dia e noite",
+      "help": "Relógios onde é dia ganham mostrador claro e um sol; à noite, mostrador escuro e uma lua."
+    },
+    "day_start": {
+      "label": "O dia começa às (hora)"
+    },
+    "day_end": {
+      "label": "A noite começa às (hora)"
+    },
+    "highlight_local": {
+      "label": "Destacar a cidade desta tela",
+      "help": "Contorna o relógio cujo fuso é o mesmo da tela (ou o definido abaixo)."
+    },
+    "home_timezone": {
+      "label": "Fuso horário desta tela",
+      "help": "Usado no destaque e nas horas +/-. Deixe vazio para usar a configuração da tela."
+    },
+    "here_label": {
+      "label": "Rótulo do relógio destacado",
+      "help": "Deixe vazio para \"Aqui\" no idioma da tela."
+    },
+    "day_label": {
+      "label": "Rótulo de dia",
+      "help": "Nas cidades onde é dia. Deixe vazio para \"Dia\" no idioma da tela."
+    },
+    "night_label": {
+      "label": "Rótulo de noite",
+      "help": "Nas cidades onde é noite. Deixe vazio para \"Noite\" no idioma da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma das datas, de AM/PM e das palavras na tela, por exemplo pt-BR, en-GB ou ja-JP. Deixe vazio para o idioma da tela."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

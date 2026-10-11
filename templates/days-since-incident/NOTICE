@@ -1,0 +1,12 @@
+Days since last incident — third-party material bundled in this template
+
+fonts/oswald.woff2
+  Oswald (latin subset), Copyright 2016 The Oswald Project Authors (https://github.com/googlefonts/OswaldFont)
+  SIL Open Font License 1.1 — full text in fonts/OFL-oswald.txt
+
+fonts/inter.woff2
+  Inter (latin subset), Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+  SIL Open Font License 1.1 — full text in fonts/OFL-inter.txt
+
+Everything else in this folder, including the PPE pictograms and the warning sign drawn as inline
+SVG in index.html, is original work under the MIT licence in LICENSE.

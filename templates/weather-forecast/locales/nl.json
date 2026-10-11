@@ -1,0 +1,68 @@
+{
+  "name": "Weersverwachting",
+  "description": "Het actuele weer en een verwachting voor vijf dagen uit een van uw weergegevensbronnen. Uw server haalt het weer zelf op; de sjabloon zet het alleen op het scherm.",
+  "params": {
+    "weather": {
+      "label": "Weergegevensbron",
+      "help": "Een gegevensbron van het type Weer (Gegevensbronnen → Nieuw → Weer). Locatie, eenheden en taal stelt u daar in."
+    },
+    "location": {
+      "label": "Plaatsnaam",
+      "default": "Het weer hier",
+      "help": "De kop. Meestal de stad of de naam van de vestiging."
+    },
+    "units_label": {
+      "label": "Temperatuurachtervoegsel",
+      "help": "Achter elke temperatuur: alleen ° of °C / °F, passend bij de gegevensbron."
+    },
+    "feels_like_label": {
+      "label": "Label ‘Voelt als’",
+      "help": "Vóór de gevoelstemperatuur.",
+      "default": "Voelt als"
+    },
+    "humidity_label": {
+      "label": "Label ‘Luchtvochtigheid’",
+      "help": "Vóór de luchtvochtigheid.",
+      "default": "Luchtvochtigheid"
+    },
+    "today_label": {
+      "label": "Label ‘Vandaag’",
+      "help": "Vóór de hoogste en laagste temperatuur van vandaag.",
+      "default": "Vandaag"
+    },
+    "precip_label": {
+      "label": "Label ‘Neerslag’",
+      "help": "Vóór de neerslagkans van vandaag.",
+      "default": "Kans op neerslag"
+    },
+    "updated_label": {
+      "label": "Label ‘Bijgewerkt’",
+      "help": "Vóór het tijdstip van de laatste meting.",
+      "default": "Bijgewerkt"
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "timezone": {
+      "label": "Tijdzone van de klok",
+      "help": "Leeg laten om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de datum, bijv. nl of nl-BE. Leeg laten voor de taal van het scherm. De dagen van de verwachting en de weersomschrijving komen uit de gegevensbron."
+    },
+    "clock_format": {
+      "label": "Klokweergave",
+      "options": {
+        "24": "24-uurs",
+        "12": "12-uurs"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Danke-Tag",
+  "description": "Ein heller Dankeschön-Bildschirm für einen Tag der Wertschätzung von Team, Ehrenamtlichen, Kundschaft oder Lehrkräften: kräftige geometrische Formen auf Creme, eine große Dank-Schlagzeile, eine Nachricht mit den Zahlen zum Feiern und ein Danke in mehreren Sprachen.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Die kurze Zeile über der Schlagzeile. Leer lassen, um sie auszublenden.",
+      "default": "TAG DER MITARBEITENDEN"
+    },
+    "headline": {
+      "label": "Schlagzeile",
+      "help": "Zwei Zeilen sind dafür reserviert: etwa 24 Zeichen passen. Längere Schlagzeilen brechen in eine dritte Zeile um und laufen in die Nachricht.",
+      "default": "Danke für alles"
+    },
+    "message": {
+      "label": "Nachricht",
+      "help": "Ein, zwei Sätze unter der Schlagzeile; bis zu 200 Zeichen passen. Ein Zeilenumbruch beginnt eine neue Zeile.",
+      "default": "Von der Nachtschicht bis zum Empfang: 1.284 Bestellungen verschickt, 96 % Fünf-Sterne-Bewertungen und unser bestes Quartal bisher. Das Mittagessen geht heute auf uns."
+    },
+    "date_line": {
+      "label": "Datumszeile",
+      "help": "Freier Text, genau so getippt, wie er erscheinen soll: ein Datum, Uhrzeit und Ort oder ein Gruß.",
+      "default": "12:30  ·  ATRIUM  ·  ALLE SIND WILLKOMMEN"
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Ausschalten, wenn Sie kein Logo haben."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Ein breites PNG oder SVG mit transparentem Hintergrund (etwa 3,4 : 1 füllt die Fläche; andere Formate werden eingepasst). Ersetzen Sie den Northwind-Platzhalter."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "accent2": {
+      "label": "Zweite Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "thanks_line": {
+      "label": "Zeile ganz unten",
+      "help": "Kleingedrucktes unter der Datumszeile – standardmäßig Danke in mehreren Sprachen.",
+      "default": "Thank you  ·  Merci  ·  Gracias  ·  Grazie  ·  Obrigado  ·  Tack  ·  Asante"
+    }
+  }
+}

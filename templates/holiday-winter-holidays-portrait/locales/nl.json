@@ -1,0 +1,46 @@
+{
+  "name": "Winterfeestdagen (staand)",
+  "description": "Een inclusieve feestdagengroet voor elk winterfeest: een snoer gekleurde lampjes, vallende sneeuw en besneeuwde heuvels onder een nachtblauwe lucht, met een gecentreerde groet, je bericht en een datumregel; ideaal voor openingstijden rond de feestdagen.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "De korte regel boven de kop. Laat leeg om hem te verbergen.",
+      "default": "FIJNE FEESTDAGEN"
+    },
+    "headline": {
+      "label": "Kop",
+      "help": "Er zijn twee regels voor gereserveerd: ongeveer 24 tekens passen. Een langere kop loopt door naar een derde regel en over het bericht.",
+      "default": "Warme wensen voor iedereen"
+    },
+    "message": {
+      "label": "Bericht",
+      "help": "Een zin of twee onder de kop; tot 200 tekens passen. Een regeleinde begint een nieuwe regel.",
+      "default": "We wensen je warmte, rust en goed gezelschap. Onze kantoren sluiten op 24-12 en gaan weer open op 04-01; de supportlijn is steeds bereikbaar van 08:00 tot 20:00."
+    },
+    "date_line": {
+      "label": "Datumregel",
+      "help": "Vrije tekst, getypt zoals hij moet verschijnen: een datum, een tijd en plaats, of een afsluiter.",
+      "default": "VAN IEDEREEN BIJ NORTHWIND"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een brede PNG of SVG met transparante achtergrond (ongeveer 3,4 : 1 vult het vak; andere vormen worden erin gepast). Vervang de Northwind-placeholder."
+    },
+    "accent": {
+      "label": "Warme lichtkleur"
+    },
+    "accent2": {
+      "label": "Koele lichtkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

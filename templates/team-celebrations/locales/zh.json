@@ -1,0 +1,134 @@
+{
+ "name": "团队庆祝",
+ "description": "适合办公室或茶水间的生日、入职周年和新同事欢迎屏。轮播卡片配有彩色姓名首字母头像,入职满 1、5、10、15 和 20 年以上会有纪念奖章,还有今天、本周或本月庆祝人员的名单。可直接输入人员,也可用 Google 表格维护。可选欢快的彩纸主题或优雅的深色主题。",
+ "params": {
+  "title": {
+   "label": "标题",
+   "help": "页面标题。留空即隐藏。",
+   "default": "Northwind 庆祝时刻"
+  },
+  "logo": {
+   "label": "标志",
+   "help": "可选。显示在标题旁边。"
+  },
+  "window": {
+   "label": "显示范围",
+   "options": {
+    "today": "仅今天",
+    "week": "本周(日历周)",
+    "next7": "未来 7 天",
+    "month": "本月",
+    "next30": "未来 30 天"
+   }
+  },
+  "week_start": {
+   "label": "每周开始于",
+   "help": "仅用于“本周”。",
+   "options": {
+    "monday": "星期一",
+    "sunday": "星期日",
+    "saturday": "星期六"
+   }
+  },
+  "show_birthdays": {
+   "label": "显示生日"
+  },
+  "show_anniversaries": {
+   "label": "显示入职周年"
+  },
+  "show_new_hires": {
+   "label": "显示新同事欢迎"
+  },
+  "milestones_only": {
+   "label": "仅显示整数周年(1、5、10、15、20、25……年)"
+  },
+  "welcome_days": {
+   "label": "欢迎新同事的天数",
+   "help": "无论选择哪个范围,新同事在入职后的这些天内都会显示在屏幕上。"
+  },
+  "theme": {
+   "label": "主题",
+   "options": {
+    "playful": "欢快(浅色、彩纸)",
+    "elegant": "优雅(深色、金色)"
+   }
+  },
+  "animate": {
+   "label": "背景动画(彩纸 / 金色光点)",
+   "help": "在很慢的播放器上请关闭。"
+  },
+  "seconds": {
+   "label": "每人显示秒数"
+  },
+  "birthday_label": {
+   "label": "生日标题",
+   "help": "显示在生日卡片的姓名上方。留空:以屏幕语言显示“生日快乐”。"
+  },
+  "anniversary_label": {
+   "label": "周年标题",
+   "help": "{n} 会替换为年数,例如“入职{n}周年”。留空:以屏幕语言显示这句话。"
+  },
+  "anniversary_one_label": {
+   "label": "满一年的标题",
+   "help": "用于第一个周年,例如“入职1周年”。留空则使用上面的标题或内置文字。"
+  },
+  "new_hire_label": {
+   "label": "新同事标题",
+   "help": "留空:以屏幕语言显示“欢迎加入团队”。"
+  },
+  "list_title": {
+   "label": "名单标题",
+   "help": "显示在范围内所有人员名单的上方。留空:以屏幕语言显示“庆祝名单”。只填 - 则隐藏。"
+  },
+  "empty_title": {
+   "label": "无人庆祝时的文字",
+   "help": "留空:以屏幕语言显示“目前没有庆祝活动”。"
+  },
+  "empty_text": {
+   "label": "无人庆祝时的小字",
+   "help": "留空:以屏幕语言显示一句友好的话。只填 - 则隐藏。"
+  },
+  "next_label": {
+   "label": "下一场庆祝的标题(无人庆祝时)",
+   "help": "无人庆祝时,下方显示一年内的下一位。留空:“下一位”。只填 - 则隐藏。"
+  },
+  "people": {
+   "label": "人员数据源(可选)",
+   "help": "每人一行的 Google 表格、CSV 或手动表格。如果包含姓名列,就会替换下面的示例人员。"
+  },
+  "name_col": {
+   "label": "姓名列"
+  },
+  "type_col": {
+   "label": "类型列",
+   "help": "可选:生日、入职周年或新同事(也可用英文)。没有此列时,每行根据日期生成生日,根据入职日期生成周年或欢迎。"
+  },
+  "date_col": {
+   "label": "生日 / 日期列",
+   "help": "MM-DD 或 YYYY-MM-DD。从不显示出生年份。"
+  },
+  "start_col": {
+   "label": "入职日期列",
+   "help": "YYYY-MM-DD,入职第一天。用于生成入职周年和新同事欢迎。"
+  },
+  "title_col": {
+   "label": "职位列"
+  },
+  "team_col": {
+   "label": "团队列"
+  },
+  "sample": {
+   "label": "人员(未连接数据源时使用)",
+   "help": "每行一人:姓名 | 类型 | 日期 | 入职日期 | 职位 | 团队。日期也可写作 today、today+3 或 today+3-5y(5 年前)。",
+   "default": "Priya Raman | 生日 | today | | 高级产品设计师 | 设计\nMarcus Okafor | 入职周年 | | today+1-10y | 物流主管 | 运营\nLena Fischer | 新同事 | | today-2 | 数据工程师 | 平台\nTomás Alvarez | 生日 | today+2 | | 客户经理 | 销售\nGrace Mensah | 入职周年 | | today+2-1y | 行政经理 | 人事行政\nAiko Tanaka | 入职周年 | | today+3-5y | 客户成功负责人 | 支持\nRavi Shah | 入职周年 | | today+4-15y | 仓库主管 | 运营\nHannah Cole | 入职周年 | | today+6-20y | 首席工程师 | 平台"
+  },
+  "timezone": {
+   "label": "时区",
+   "help": "决定“今天”何时开始。留空则使用屏幕的时钟。"
+  },
+  "locale": {
+   "label": "语言",
+   "help": "内置标题、今天/明天以及日期所用的语言,例如 zh-CN。留空则使用屏幕的语言。"
+  }
+ }
+}

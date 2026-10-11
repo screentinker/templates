@@ -1,0 +1,145 @@
+{
+ "name": "Offre promotionnelle",
+ "description": "Un écran de vente flash ou de promotion : grand titre, l’offre, le prix avec l’ancien prix barré et la remise calculée pour vous, et un compte à rebours en direct qui passe tout seul à « offre terminée ». Ajoutez une photo du produit et un QR code vers votre boutique. Trois looks : commerce percutant, épuré et minimal, café chaleureux. Rien n’est téléchargé.",
+ "params": {
+  "style": {
+   "label": "Style",
+   "options": {
+    "bold": "Commerce percutant",
+    "minimal": "Épuré et minimal",
+    "cafe": "Café chaleureux"
+   }
+  },
+  "eyebrow": {
+   "label": "Surtitre",
+   "help": "Une courte mention au-dessus du titre. Laissez vide pour la masquer.",
+   "default": "Vente flash du week-end"
+  },
+  "headline": {
+   "label": "Titre",
+   "default": "Casque sans fil Aura"
+  },
+  "offer": {
+   "label": "Texte de l’offre",
+   "help": "Une ou deux lignes sous le titre. Laissez vide pour le masquer.",
+   "default": "Réduction de bruit active et 40 heures d’autonomie, à notre meilleur prix de l’année."
+  },
+  "price": {
+   "label": "Prix",
+   "help": "Un nombre comme 89 ou 89,99 est mis en forme dans votre devise. Tout le reste (« 2 pour 1 ») s’affiche tel quel. Laissez vide pour masquer le prix."
+  },
+  "was_price": {
+   "label": "Ancien prix",
+   "help": "Facultatif. Affiché barré à côté du prix."
+  },
+  "currency": {
+   "label": "Code de devise",
+   "help": "Un code ISO à trois lettres : EUR, CHF, CAD, USD, GBP… Le symbole et sa place suivent la langue. Vide pour des nombres seuls."
+  },
+  "decimals": {
+   "label": "Décimales",
+   "options": {
+    "auto": "Seulement si le prix a des centimes (89, 89,50)",
+    "always": "Toujours (89,00)"
+   }
+  },
+  "saving": {
+   "label": "Pastille de remise",
+   "help": "Calculée à partir du prix et de l’ancien prix ; masquée si l’un des deux n’est pas un nombre.",
+   "options": {
+    "percent": "Pourcentage (Remise 40 %)",
+    "amount": "Montant (Remise 60 €)",
+    "off": "Pas de pastille"
+   }
+  },
+  "saving_text": {
+   "label": "Texte de la pastille",
+   "help": "{saving} est remplacé par le pourcentage ou le montant, p. ex. « -{saving} ». Vide : « Remise {saving} » dans la langue de l’écran. Un seul - affiche la remise seule."
+  },
+  "ends_at": {
+   "label": "Fin de l’offre",
+   "help": "Date et heure comme 2026-11-29T23:59, ou une date seule pour la fin de ce jour. Lue dans le fuseau horaire ci-dessous. Vide : l’offre se termine chaque jour à minuit."
+  },
+  "timezone": {
+   "label": "Fuseau horaire",
+   "help": "Le fuseau de l’heure de fin. Vide utilise l’horloge de l’écran."
+  },
+  "locale": {
+   "label": "Langue",
+   "help": "La langue des textes intégrés, des dates, des prix et des unités du compte à rebours. Vide utilise la langue de l’écran."
+  },
+  "clock_format": {
+   "label": "Format de l’heure",
+   "options": {
+    "auto": "Selon la langue",
+    "24": "24 heures",
+    "12": "12 heures"
+   }
+  },
+  "show_countdown": {
+   "label": "Afficher le compte à rebours"
+  },
+  "countdown_label": {
+   "label": "Texte du compte à rebours",
+   "help": "Vide : « Fin dans » dans la langue de l’écran. Un seul - le masque."
+  },
+  "show_end_date": {
+   "label": "Afficher la fin de l’offre",
+   "help": "Une ligne comme « Valable jusqu’au dim. 29 nov., 23:59 » sous le compte à rebours."
+  },
+  "end_date_label": {
+   "label": "Texte avant la date de fin",
+   "help": "Placé devant la date. Vide : « Valable jusqu’au … » dans la langue de l’écran. Un seul - affiche la date seule."
+  },
+  "after_end": {
+   "label": "Quand l’offre est terminée",
+   "options": {
+    "message": "Garder la promo et afficher le message de fin",
+    "fallback": "Remplacer toute la promo par la ligne de remplacement"
+   }
+  },
+  "ended_text": {
+   "label": "Message de fin",
+   "help": "Vide : « Cette offre est terminée » dans la langue de l’écran."
+  },
+  "fallback_heading": {
+   "label": "Surtitre de remplacement",
+   "help": "Une petite ligne au-dessus de la ligne de remplacement. Vide affiche la ligne seule."
+  },
+  "fallback_text": {
+   "label": "Ligne de remplacement",
+   "help": "Affichée en plein écran après la fin si le réglage ci-dessus le prévoit. Vide utilise le message de fin.",
+   "default": "De nouvelles offres chaque vendredi. À bientôt !"
+  },
+  "image": {
+   "label": "Image du produit",
+   "help": "Idéalement un PNG à fond transparent. Laissez vide pour une promo en texte seul."
+  },
+  "qr_url": {
+   "label": "Lien du QR code",
+   "help": "Dessiné en QR code à l’écran. Laissez vide pour le masquer."
+  },
+  "qr_label": {
+   "label": "Légende du QR code",
+   "help": "Vide : « Scannez pour acheter » dans la langue de l’écran. Un seul - la masque."
+  },
+  "fine_print": {
+   "label": "Mentions légales",
+   "default": "Dans la limite des stocks disponibles. Deux par client maximum. Non cumulable avec d’autres offres. Prix TTC."
+  },
+  "custom_colors": {
+   "label": "Utiliser mes couleurs",
+   "help": "Non : la palette du style. Oui : les trois couleurs ci-dessous."
+  },
+  "background": {
+   "label": "Couleur de fond"
+  },
+  "text_color": {
+   "label": "Couleur du texte"
+  },
+  "accent": {
+   "label": "Couleur d’accent",
+   "help": "Le prix, la pastille et le compte à rebours."
+  }
+ }
+}

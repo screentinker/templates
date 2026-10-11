@@ -1,0 +1,81 @@
+{
+  "name": "Affichage de salle de réunion",
+  "description": "Un affichage de porte pour salle de réunion : un grand bandeau vert LIBRE ou rouge OCCUPÉE, la réunion en cours et la suivante, et l’agenda du jour, depuis n’importe quelle source de données Calendrier (iCal). Le mode confidentiel affiche « Réservée » au lieu des titres. Conçu pour un écran vertical près de la porte ; fonctionne aussi en paysage ou en bandeau.",
+  "params": {
+    "calendar": {
+      "label": "Calendrier de la salle (source de données Calendrier / iCal)",
+      "help": "Une source de données Calendrier pointant vers le flux iCal de la salle (Google, Outlook/Exchange, toute URL .ics). Sans elle, un planning d’exemple s’affiche."
+    },
+    "room_name": {
+      "label": "Nom de la salle",
+      "default": "Salle du conseil"
+    },
+    "available_label": {
+      "label": "Texte « libre »",
+      "help": "Laissez vide pour le mot intégré dans la langue de l’affichage."
+    },
+    "busy_label": {
+      "label": "Texte « occupée »",
+      "help": "Laissez vide pour le mot intégré dans la langue de l’affichage."
+    },
+    "hide_titles": {
+      "label": "Confidentialité : masquer titres et organisateurs"
+    },
+    "reserved_label": {
+      "label": "Texte affiché à la place d’un titre masqué",
+      "help": "Laissez vide pour le mot intégré dans la langue de l’affichage."
+    },
+    "show_organizer": {
+      "label": "Afficher les organisateurs"
+    },
+    "now_label": {
+      "label": "Titre : réunion en cours",
+      "help": "Laissez vide pour le mot intégré dans la langue de l’affichage."
+    },
+    "next_label": {
+      "label": "Titre : réunion suivante",
+      "help": "Laissez vide pour le mot intégré dans la langue de l’affichage."
+    },
+    "agenda_label": {
+      "label": "Titre : agenda du jour",
+      "help": "Laissez vide pour le mot intégré dans la langue de l’affichage."
+    },
+    "upcoming_label": {
+      "label": "Titre : réservations à venir (quand plus rien n’est prévu aujourd’hui)",
+      "help": "Laissez vide pour le mot intégré dans la langue de l’affichage."
+    },
+    "empty_label": {
+      "label": "Texte quand rien n’est réservé",
+      "help": "Laissez vide pour le mot intégré dans la langue de l’affichage."
+    },
+    "available_color": {
+      "label": "Couleur « libre »"
+    },
+    "busy_color": {
+      "label": "Couleur « occupée »"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "clock_format": {
+      "label": "Horloge",
+      "options": {
+        "auto": "Selon la langue",
+        "24": "24 heures",
+        "12": "12 heures",
+        "off": "Masquer l’horloge"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire de l’horloge",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Mots, dates et heures de l’affichage, p. ex. fr-FR ou fr-CA. Vide = langue de l’écran. Vaut aussi pour le calendrier ; donnez-lui le même fuseau horaire que l’horloge."
+    }
+  }
+}

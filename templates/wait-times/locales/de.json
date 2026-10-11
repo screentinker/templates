@@ -1,0 +1,146 @@
+{
+  "name": "Wartezeiten-Anzeige",
+  "description": "Voraussichtliche Wartezeiten für Praxis, Notfallambulanz, Apotheke oder Schalter: jeder Bereich mit Wartezeit in Minuten und dem Status Offen, Ausgelastet oder Geschlossen in klaren Farben, dazu Aktualisierungszeit, ein beruhigender Hinweis und eine Erinnerung zur Anmeldung. Pflege per Google Sheet oder manueller Tabelle vom Handy aus, oder Liste eintippen.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "default": "Gesundheitszentrum Northwind"
+    },
+    "subtitle": {
+      "label": "Untertitel",
+      "default": "Voraussichtliche Wartezeiten",
+      "help": "Eine Zeile unter dem Titel. Leer lassen zum Ausblenden."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Neben dem Titel. Ein weißes oder transparentes Logo passt zum farbigen Kopfbereich."
+    },
+    "services": {
+      "label": "Bereiche",
+      "help": "Einer pro Zeile: Bereich | Wartezeit in Minuten | Status | Hinweis. Status ist Offen, Ausgelastet oder Geschlossen (leer = aus der Wartezeit). Ohne Datenquelle verwendet.",
+      "default": "Notaufnahme | 45 | Ausgelastet | EG · Roter Linie folgen\nHausarzt | 20 | | EG · Räume 1–6\nApotheke | 10 | | Rezepte · Schalter 3\nBlutabnahme | 15 | | 1. OG · Ohne Termin\nRöntgen | 55 | Ausgelastet | 1. OG · Ostflügel\nKleine Wunden | 25 | | EG · Raum 8\nImpfungen | 0 | | 2. OG · Grippe, Reise\nPhysiotherapie | | Geschlossen | Heute nur mit Termin"
+    },
+    "waits": {
+      "label": "Datenquelle für Wartezeiten (optional)",
+      "help": "Ein Google Sheet, eine CSV oder manuelle Tabelle mit einer Zeile pro Bereich. Ersetzt die oben eingetippten Bereiche."
+    },
+    "service_col": {
+      "label": "Spalte: Bereich",
+      "default": "Bereich",
+      "help": "Die Überschrift in Ihrer Tabelle. Fehlt sie, wird „Service“ und dann die erste Spalte gelesen."
+    },
+    "wait_col": {
+      "label": "Spalte: Wartezeit",
+      "default": "Wartezeit",
+      "help": "Minuten als Zahl (25), Spanne (15-20) oder h:mm (1:30). Anderer Text wird so angezeigt. Fehlt die Spalte, wird „Wait“ gelesen."
+    },
+    "status_col": {
+      "label": "Spalte: Status",
+      "default": "Status",
+      "help": "Offen, Ausgelastet oder Geschlossen. Eine leere Zelle wird aus der Wartezeit abgeleitet. Fehlt die Spalte, wird „Status“ gelesen."
+    },
+    "note_col": {
+      "label": "Spalte: Hinweis",
+      "default": "Hinweis",
+      "help": "Optionale kleine Zeile unter dem Bereich: wohin, oder wann wieder geöffnet. Fehlt die Spalte, wird „Note“ gelesen."
+    },
+    "notice": {
+      "label": "Hinweiszeile",
+      "default": "Die Zeiten sind Schätzungen. Wir behandeln nach Dringlichkeit, nicht nach Ankunft – geht es Ihnen beim Warten schlechter, sagen Sie bitte sofort Bescheid.",
+      "help": "Ein beruhigender Hinweis am unteren Rand. Leer lassen zum Ausblenden."
+    },
+    "checkin": {
+      "label": "Anmelde-Hinweis",
+      "default": "Bitte am Empfang anmelden",
+      "help": "Hervorgehobene Erinnerung in der Fußzeile. Leer lassen zum Ausblenden."
+    },
+    "order": {
+      "label": "Reihenfolge",
+      "help": "Beim Sortieren stehen geschlossene Bereiche immer am Ende.",
+      "options": {
+        "listed": "Wie eingetragen",
+        "shortest": "Kürzeste Wartezeit zuerst",
+        "longest": "Längste Wartezeit zuerst"
+      }
+    },
+    "busy_minutes": {
+      "label": "Ausgelastet ab (Minuten)",
+      "help": "Ein Bereich ohne Status gilt als ausgelastet, sobald seine Wartezeit diesen Wert erreicht."
+    },
+    "open_label": {
+      "label": "Text: offen",
+      "help": "Leer = das eingebaute Wort in der Sprache des Bildschirms („Offen“)."
+    },
+    "busy_label": {
+      "label": "Text: ausgelastet",
+      "help": "Leer = das eingebaute Wort in der Sprache des Bildschirms („Ausgelastet“)."
+    },
+    "closed_label": {
+      "label": "Text: geschlossen",
+      "help": "Leer = das eingebaute Wort in der Sprache des Bildschirms („Geschlossen“)."
+    },
+    "nowait_label": {
+      "label": "Text: keine Wartezeit",
+      "help": "Statt der Zeit angezeigt, wenn die Wartezeit 0 ist. Leer = das eingebaute Wort in der Sprache des Bildschirms („Sofort“)."
+    },
+    "updated_label": {
+      "label": "Text: aktualisiert",
+      "help": "Vor der Uhrzeit; {time} setzt die Uhrzeit an eine andere Stelle. Leer = der eingebaute Text in der Sprache des Bildschirms („Aktualisiert {time}“)."
+    },
+    "empty_label": {
+      "label": "Text, wenn keine Daten da sind",
+      "help": "Erscheint, solange die Datenquelle noch keine Zeilen hat. Leer = der eingebaute Satz in der Sprache des Bildschirms."
+    },
+    "show_updated": {
+      "label": "Aktualisierungszeit anzeigen"
+    },
+    "stale_minutes": {
+      "label": "Erinnern, wenn Werte unverändert seit (Minuten)",
+      "help": "Mit Datenquelle wird die Aktualisierungszeit gelb, wenn sich so lange kein Wert geändert hat (auch bei Synchronisierung ohne Änderung) – als Erinnerung fürs Personal. 0 = aus."
+    },
+    "show_meter": {
+      "label": "Wartebalken bei jedem Bereich zeigen"
+    },
+    "theme": {
+      "label": "Design",
+      "options": {
+        "light": "Hell",
+        "dark": "Dunkel"
+      }
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Kopfbereich und Anmelde-Hinweis."
+    },
+    "open_color": {
+      "label": "Farbe: offen"
+    },
+    "busy_color": {
+      "label": "Farbe: ausgelastet"
+    },
+    "closed_color": {
+      "label": "Farbe: geschlossen"
+    },
+    "clock_format": {
+      "label": "Uhr",
+      "options": {
+        "12": "12 Stunden",
+        "24": "24 Stunden",
+        "auto": "Wie in der Sprache üblich",
+        "off": "Uhr ausblenden"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone",
+      "help": "Leer = die Uhr des Bildschirms."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wörter, Uhrzeiten und Zahlen auf dem Bildschirm, z. B. de oder de-AT. Leer = die Sprache des Bildschirms."
+    },
+    "page_seconds": {
+      "label": "Sekunden pro Seite",
+      "help": "Nur wenn zu viele Bereiche für eine gut lesbare Seite da sind."
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "name": "Voortgang doel",
+  "description": "Laat zien hoe dicht een inzameling, actie of verkoopdoel is: thermometer, balk of ring met het opgehaalde bedrag, percentage, mijlpalen, aantal gevers en een aftelling. Confetti als het doel is bereikt. Typ het totaal in, of koppel een Google Sheet, formulierreacties of een REST API.",
+  "params": {
+    "headline": {
+      "label": "Kop",
+      "help": "De grote regel. Tot drie regels op het scherm.",
+      "default": "Vul de schappen van de Riverside Voedselbank"
+    },
+    "kicker": {
+      "label": "Naam van de actie",
+      "help": "Kleine regel boven de kop. Laat leeg om te verbergen.",
+      "default": "Northwind Community Fund · Winteractie"
+    },
+    "thanks": {
+      "label": "Bedankregel",
+      "help": "Onderaan. Laat leeg om te verbergen.",
+      "default": "Elke gift blijft in Riverside. Bedankt dat u uw buren steunt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Boven de kop."
+    },
+    "style": {
+      "label": "Meter",
+      "help": "Een brede strook gebruikt altijd de balk.",
+      "options": {
+        "thermometer": "Thermometer",
+        "bar": "Voortgangsbalk",
+        "ring": "Ring"
+      }
+    },
+    "raised": {
+      "label": "Tot nu toe opgehaald",
+      "help": "Gebruikt zonder gekoppelde gegevensbron, of als die geen bedragkolom heeft."
+    },
+    "target": {
+      "label": "Doel"
+    },
+    "supporters": {
+      "label": "Aantal gevers",
+      "help": "0 verbergt het. Bij een giftenlog als bron worden de rijen geteld."
+    },
+    "currency": {
+      "label": "Valutacode",
+      "help": "Drie letters: EUR, USD, GBP, CHF, JPY… Laat leeg voor gewone getallen (uren, boeken, aanmeldingen).",
+      "default": "EUR"
+    },
+    "unit": {
+      "label": "Eenheid (zonder valuta)",
+      "help": "Na gewone getallen, bijv. \"boeken\" of \"km\". Genegeerd als er een valuta is."
+    },
+    "show_cents": {
+      "label": "Centen / decimalen tonen"
+    },
+    "milestones": {
+      "label": "Mijlpalen",
+      "help": "Eén per regel: Bedrag | Naam. Tot 10, tussen 0 en het doel. Laat leeg voor geen.",
+      "default": "10000 | Nieuwe stellingen\n25000 | Vriescel\n40000 | Bestelbus"
+    },
+    "deadline": {
+      "label": "Deadline",
+      "help": "Een datum (2026-12-24), datum en tijd (2026-12-24T17:00), of month-end, quarter-end, year-end. Laat leeg om de aftelling te verbergen."
+    },
+    "timezone": {
+      "label": "Tijdzone van de deadline",
+      "help": "Laat leeg voor de klok van het scherm."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Woorden, getallen en datums op het scherm, bijvoorbeeld nl-NL of nl-BE. Laat leeg voor de taal van het scherm."
+    },
+    "goal_text": {
+      "label": "Tekst onder het bedrag",
+      "help": "{target} wordt vervangen door het doel. Leeg: ingebouwde tekst in de taal van het scherm. Typ - om het te verbergen."
+    },
+    "percent_label": {
+      "label": "Bijschrift: percentage",
+      "help": "Leeg: ingebouwde tekst in de taal van het scherm. Typ - om het te verbergen."
+    },
+    "supporters_label": {
+      "label": "Bijschrift: gevers",
+      "help": "Leeg: ingebouwde tekst in de taal van het scherm. Typ - om het te verbergen."
+    },
+    "countdown_label": {
+      "label": "Bijschrift: aftelling",
+      "help": "Leeg: ingebouwde tekst in de taal van het scherm. Typ - om het te verbergen."
+    },
+    "ended_label": {
+      "label": "Tekst na de deadline",
+      "help": "Leeg: ingebouwde tekst in de taal van het scherm. Typ - om het te verbergen."
+    },
+    "next_text": {
+      "label": "Regel volgende mijlpaal",
+      "help": "{milestone}, {amount} en {remaining} worden ingevuld. Leeg: ingebouwde tekst in de taal van het scherm. Typ - om het te verbergen."
+    },
+    "celebrate_text": {
+      "label": "Tekst als het doel is bereikt",
+      "help": "Leeg: ingebouwde tekst in de taal van het scherm. Typ - om het te verbergen."
+    },
+    "source": {
+      "label": "Gegevensbron voor het totaal (optioneel)",
+      "help": "Een Google Sheet, formulierreacties, CSV, REST API of handmatige tabel. De README beschrijft welke opbouw werkt."
+    },
+    "amount_col": {
+      "label": "Kolom of veld voor het bedrag",
+      "help": "Hoofdletters en leestekens maken niet uit. Een giftenlog kan zijn bedragkolom gebruiken."
+    },
+    "amount_mode": {
+      "label": "Hoe het bedrag te lezen",
+      "options": {
+        "auto": "Automatisch (één rij = totaal; meerdere = optellen)",
+        "sum": "Alle rijen optellen (giftenlog)",
+        "last": "Laatste rij (lopend totaal)",
+        "first": "Eerste rij"
+      }
+    },
+    "target_col": {
+      "label": "Kolom of veld voor het doel (optioneel)"
+    },
+    "supporters_col": {
+      "label": "Kolom of veld voor gevers (optioneel)"
+    },
+    "font": {
+      "label": "Lettertype kop",
+      "options": {
+        "archivo": "Archivo (display)",
+        "bitter": "Bitter (schreef)",
+        "oswald": "Oswald (smal)",
+        "inter": "Inter (strak)"
+      }
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "De bovenkant van de vulling, het bedrag en bereikte mijlpalen."
+    },
+    "accent2": {
+      "label": "Tweede vulkleur",
+      "help": "De vulling loopt van deze kleur over in de accentkleur."
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "animate": {
+      "label": "Animeren (vullen bij laden, confetti bij het doel)",
+      "help": "Uitzetten op heel trage players."
+    }
+  }
+}

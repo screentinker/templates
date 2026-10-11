@@ -1,7 +1,7 @@
 {
   "id": "kpi-dashboard",
   "name": "KPI dashboard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "html",
   "description": "Big, glanceable metric tiles with progress to target and a coloured change indicator. Feed it a Google Sheet, CSV, REST API or manual table (columns Metric, Value, Target, Unit, Change), or type the metrics in. Fits 1 to 12 tiles in any screen shape.",
   "author": "ScreenTinker",
@@ -24,13 +24,13 @@
       "help": "Rows beyond this number are not shown." },
     { "name": "show_targets", "type": "checkbox", "label": "Show progress to target", "default": true },
     { "name": "up_is_good", "type": "checkbox", "label": "An increase is good",
-      "help": "Colours a positive change as good. A metric whose name contains open, response time, churn, cost, error or wait is treated the other way round.", "default": true },
+      "help": "Colours a positive change as good. A metric whose name contains open, response time, churn, cost, error or wait (also in the chosen language) is treated the other way round.", "default": true },
     { "name": "accent", "type": "color", "label": "Accent colour", "default": "#7C6CFF" },
     { "name": "good_color", "type": "color", "label": "Good colour", "default": "#2FD08B" },
     { "name": "bad_color", "type": "color", "label": "Bad colour", "default": "#FF6363" },
     { "name": "background", "type": "color", "label": "Background colour", "default": "#0E1020" },
     { "name": "text_color", "type": "color", "label": "Text colour", "default": "#F4F5FB" },
-    { "name": "locale", "type": "locale", "label": "Number and date language", "help": "For example en-US or de-DE. Leave empty for the screen's language.", "default": "" },
+    { "name": "locale", "type": "locale", "label": "Language", "help": "Numbers, the time and the built-in words, for example de or en-US. Leave empty for the screen's language.", "default": "" },
     { "name": "timezone", "type": "timezone", "label": "Timezone for “Updated”", "help": "Leave empty to use the screen's own clock.", "default": "" }
   ]
 }

@@ -1,0 +1,96 @@
+{
+  "name": "Bienvenue aux nouveaux arrivants (portrait)",
+  "description": "Accueillez quelqu’un pour son premier jour : nom et poste, une phrase en ses propres mots, de quoi lancer la conversation et un badge avec la date d’arrivée. Affiche un cercle avec les initiales tant qu’aucune photo n’est ajoutée. Mise en page portrait 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent donne le meilleur résultat."
+    },
+    "photo": {
+      "label": "Photo",
+      "help": "Une photo tête et épaules, recadrée pour remplir le cadre. Activez « Afficher la photo » une fois la photo choisie."
+    },
+    "show_photo": {
+      "label": "Afficher la photo",
+      "help": "Désactivé, un cercle avec les initiales s’affiche à la place, pour qui préfère ne pas montrer sa photo."
+    },
+    "initials": {
+      "label": "Initiales",
+      "help": "Affichées dans le cercle quand la photo est désactivée. Une ou deux lettres."
+    },
+    "eyebrow": {
+      "label": "Petit titre",
+      "help": "Au-dessus du nom. Les majuscules se lisent le mieux.",
+      "default": "BIENVENUE À"
+    },
+    "name": {
+      "label": "Nom",
+      "help": "Une ligne, 26 caractères maximum. Saisissez-le normalement ; TOUT EN MAJUSCULES est plus large et risque de déborder."
+    },
+    "role": {
+      "label": "Poste",
+      "help": "Intitulé de poste, équipe, classe ou site. Un texte long passe sur une deuxième ligne.",
+      "default": "Designer produit junior, Brand Studio"
+    },
+    "show_quote": {
+      "label": "Afficher la citation",
+      "help": "Désactivé, la citation et son guillemet sont masqués."
+    },
+    "quote": {
+      "label": "Citation",
+      "help": "Une ou deux phrases en ses propres mots. Inutile d’ajouter des guillemets.",
+      "default": "Je viens d’arriver de Göteborg et j’ai hâte de vous rencontrer. Venez me dire hej !"
+    },
+    "quote_mark": {
+      "label": "Guillemet",
+      "help": "Le grand guillemet décoratif près de la citation. Utilisez celui de votre langue, par ex. « ou “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Afficher l’anecdote",
+      "help": "Désactivé, le libellé et le texte de l’anecdote sont masqués."
+    },
+    "fact_label": {
+      "label": "Libellé de l’anecdote",
+      "help": "Un libellé court, par ex. LE SAVIEZ-VOUS ? ou PARLEZ-MOI DE.",
+      "default": "PARLEZ-MOI DE"
+    },
+    "fun_fact": {
+      "label": "Anecdote",
+      "help": "Une ou deux phrases courtes.",
+      "default": "Jeux de société, escalade de bloc et le grand débat des brioches à la cannelle. Sam est au poste 4B, niveau 3."
+    },
+    "show_badge": {
+      "label": "Afficher le badge"
+    },
+    "badge": {
+      "label": "Texte du badge",
+      "help": "Un mois, une date d’arrivée, une équipe ou une étape. Les majuscules se lisent le mieux.",
+      "default": "ARRIVE LUNDI 12 OCT."
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "La grande carte derrière la photo, le petit titre et les libellés."
+    },
+    "highlight": {
+      "label": "Couleur de mise en valeur",
+      "help": "Le badge, le petit filet et les confettis."
+    },
+    "badge_text_color": {
+      "label": "Couleur du texte du badge"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "card_color": {
+      "label": "Couleur de la carte et du cercle des initiales",
+      "help": "La carte anecdote et le cercle derrière les initiales."
+    },
+    "initials_color": {
+      "label": "Couleur des initiales"
+    }
+  }
+}

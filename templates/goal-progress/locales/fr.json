@@ -1,0 +1,152 @@
+{
+  "name": "Progression de l’objectif",
+  "description": "Montre où en est une collecte, un appel aux dons ou un objectif de ventes : thermomètre, barre ou anneau avec le montant, le pourcentage, les étapes, le nombre de donateurs et un compte à rebours. Des confettis quand l’objectif est atteint. Saisissez le total ou connectez une feuille Google, un formulaire ou une API REST.",
+  "params": {
+    "headline": {
+      "label": "Titre",
+      "help": "La grande ligne. Jusqu’à trois lignes à l’écran.",
+      "default": "Remplissons les rayons de l’épicerie solidaire Riverside"
+    },
+    "kicker": {
+      "label": "Nom de la campagne",
+      "help": "Petite ligne au-dessus du titre. Laissez vide pour la masquer.",
+      "default": "Northwind Community Fund · Collecte d’hiver"
+    },
+    "thanks": {
+      "label": "Ligne de remerciement",
+      "help": "En bas de l’écran. Laissez vide pour la masquer.",
+      "default": "Chaque don reste à Riverside. Merci d’être aux côtés de vos voisins."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facultatif. Affiché au-dessus du titre."
+    },
+    "style": {
+      "label": "Jauge",
+      "help": "Une bande large utilise toujours la barre.",
+      "options": {
+        "thermometer": "Thermomètre",
+        "bar": "Barre de progression",
+        "ring": "Anneau"
+      }
+    },
+    "raised": {
+      "label": "Montant collecté",
+      "help": "Utilisé sans source de données connectée, ou si elle n’a pas de colonne de montant."
+    },
+    "target": {
+      "label": "Objectif"
+    },
+    "supporters": {
+      "label": "Nombre de donateurs",
+      "help": "0 le masque. Avec un journal de dons comme source, ses lignes sont comptées."
+    },
+    "currency": {
+      "label": "Code de devise",
+      "help": "Trois lettres : EUR, CAD, CHF, USD, GBP… Laissez vide pour des nombres simples (heures, livres, inscriptions).",
+      "default": "EUR"
+    },
+    "unit": {
+      "label": "Unité (sans devise)",
+      "help": "Affichée après les nombres simples, p. ex. « livres » ou « km ». Ignorée si une devise est définie."
+    },
+    "show_cents": {
+      "label": "Afficher les centimes / décimales"
+    },
+    "milestones": {
+      "label": "Étapes",
+      "help": "Une par ligne : Montant | Libellé. Jusqu’à 10, entre 0 et l’objectif. Laissez vide pour aucune.",
+      "default": "10000 | Nouveaux rayonnages\n25000 | Chambre froide\n40000 | Camionnette de livraison"
+    },
+    "deadline": {
+      "label": "Échéance",
+      "help": "Une date (2026-12-24), une date et heure (2026-12-24T17:00), ou month-end, quarter-end, year-end. Laissez vide pour masquer le compte à rebours."
+    },
+    "timezone": {
+      "label": "Fuseau horaire de l’échéance",
+      "help": "Laissez vide pour l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Mots, nombres et dates à l’écran, par exemple fr-FR, fr-CA ou fr-BE. Laissez vide pour la langue de l’écran."
+    },
+    "goal_text": {
+      "label": "Texte sous le montant",
+      "help": "{target} est remplacé par l’objectif. Vide : texte intégré dans la langue de l’écran. Tapez - pour le masquer."
+    },
+    "percent_label": {
+      "label": "Légende : pourcentage",
+      "help": "Vide : texte intégré dans la langue de l’écran. Tapez - pour le masquer."
+    },
+    "supporters_label": {
+      "label": "Légende : donateurs",
+      "help": "Vide : texte intégré dans la langue de l’écran. Tapez - pour le masquer."
+    },
+    "countdown_label": {
+      "label": "Légende : compte à rebours",
+      "help": "Vide : texte intégré dans la langue de l’écran. Tapez - pour le masquer."
+    },
+    "ended_label": {
+      "label": "Texte après l’échéance",
+      "help": "Vide : texte intégré dans la langue de l’écran. Tapez - pour le masquer."
+    },
+    "next_text": {
+      "label": "Ligne de la prochaine étape",
+      "help": "{milestone}, {amount} et {remaining} sont remplis. Vide : texte intégré dans la langue de l’écran. Tapez - pour le masquer."
+    },
+    "celebrate_text": {
+      "label": "Texte quand l’objectif est atteint",
+      "help": "Vide : texte intégré dans la langue de l’écran. Tapez - pour le masquer."
+    },
+    "source": {
+      "label": "Source de données du total (facultatif)",
+      "help": "Une feuille Google, des réponses de formulaire, un CSV, une API REST ou un tableau manuel. Le README décrit les formats compris."
+    },
+    "amount_col": {
+      "label": "Colonne ou champ du montant",
+      "help": "Majuscules et ponctuation n’importent pas. Un journal de dons peut utiliser sa colonne Montant."
+    },
+    "amount_mode": {
+      "label": "Lecture du montant",
+      "options": {
+        "auto": "Automatique (une ligne = total ; plusieurs = addition)",
+        "sum": "Additionner toutes les lignes (journal de dons)",
+        "last": "Dernière ligne (total cumulé)",
+        "first": "Première ligne"
+      }
+    },
+    "target_col": {
+      "label": "Colonne ou champ de l’objectif (facultatif)"
+    },
+    "supporters_col": {
+      "label": "Colonne ou champ des donateurs (facultatif)"
+    },
+    "font": {
+      "label": "Police du titre",
+      "options": {
+        "archivo": "Archivo (affichage)",
+        "bitter": "Bitter (serif)",
+        "oswald": "Oswald (étroite)",
+        "inter": "Inter (sobre)"
+      }
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Le haut du remplissage, le montant et les étapes atteintes."
+    },
+    "accent2": {
+      "label": "Deuxième couleur de remplissage",
+      "help": "Le remplissage passe de cette couleur à la couleur d’accent."
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "animate": {
+      "label": "Animer (remplissage au chargement, confettis à l’objectif)",
+      "help": "Désactivez sur les lecteurs très lents."
+    }
+  }
+}

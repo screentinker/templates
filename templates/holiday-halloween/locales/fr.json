@@ -1,0 +1,46 @@
+{
+  "name": "Halloween",
+  "description": "Un écran d’Halloween ludique : une citrouille et une pleine lune faites de formes simples au-dessus de collines violettes, avec un titre, un message pour le défilé costumé ou les horaires, et une ligne de date.",
+  "params": {
+    "eyebrow": {
+      "label": "Surtitre",
+      "help": "La ligne courte au-dessus du titre. Laissez vide pour la masquer.",
+      "default": "UN BONBON OU UN SORT"
+    },
+    "headline": {
+      "label": "Titre",
+      "help": "Deux lignes lui sont réservées : environ 24 caractères tiennent. Un titre plus long passe sur une troisième ligne et empiète sur le message.",
+      "default": "Joyeux Halloween !"
+    },
+    "message": {
+      "label": "Message",
+      "help": "Une phrase ou deux sous le titre ; jusqu’à 200 caractères tiennent. Un retour à la ligne commence une nouvelle ligne.",
+      "default": "Défilé costumé dans le hall à 15 h : le meilleur costume gagne une carte cadeau. Friandises à l’accueil tout l’après-midi, dont des options sans fruits à coque."
+    },
+    "date_line": {
+      "label": "Ligne de date",
+      "help": "Texte libre, saisi tel qu’il doit s’afficher : une date, une heure et un lieu, ou une signature.",
+      "default": "31 · 10  ·  DÉFILÉ 15 H  ·  HALL"
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivez si vous n’avez pas de logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG large à fond transparent (environ 3,4 : 1 remplit le cadre ; les autres formats y sont ajustés). Remplacez le logo provisoire Northwind."
+    },
+    "accent": {
+      "label": "Couleur de la citrouille"
+    },
+    "accent2": {
+      "label": "Couleur des collines"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    }
+  }
+}

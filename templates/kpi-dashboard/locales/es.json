@@ -1,0 +1,53 @@
+{
+  "name": "Panel de KPI",
+  "description": "Grandes mosaicos de métricas que se leen de un vistazo, con progreso hacia el objetivo y un indicador de cambio en color. Desde una hoja de Google, CSV, API REST o tabla manual (columnas Metric, Value, Target, Unit, Change), o escritas a mano. De 1 a 12 mosaicos en cualquier formato de pantalla.",
+  "params": {
+    "data": {
+      "label": "Fuente de datos de métricas (opcional)",
+      "help": "Una fuente en tabla (Google Sheets, CSV, API REST o tabla manual) con columnas Metric, Value y, si quieres, Target, Unit, Change. Déjalo vacío para usar las métricas de abajo."
+    },
+    "metrics": {
+      "label": "Métricas (sin fuente de datos)",
+      "help": "Una por línea: Métrica | Valor | Objetivo | Unidad | Cambio. Solo Métrica y Valor son obligatorios.",
+      "default": "Ingresos del mes | 184250 | 200000 | € | +6.4%\nClientes nuevos | 312 | 300 | | +18\nNet Promoter Score | 64 | 60 | | +3\nTickets de soporte abiertos | 27 | | | -9\nTiempo medio de respuesta | 1.8 | 2 | h | -0.4\nDisponibilidad | 99.97 | 99.9 | % | +0.02"
+    },
+    "title": {
+      "label": "Título",
+      "default": "Resultados del mes"
+    },
+    "max_tiles": {
+      "label": "Mostrar como máximo",
+      "help": "Las filas por encima de este número no se muestran."
+    },
+    "show_targets": {
+      "label": "Mostrar el progreso hacia el objetivo"
+    },
+    "up_is_good": {
+      "label": "Un aumento es bueno",
+      "help": "Colorea un cambio positivo como bueno. Si el nombre contiene abierto, respuesta, abandono, coste, error o espera (también en inglés), es al revés."
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "good_color": {
+      "label": "Color para bueno"
+    },
+    "bad_color": {
+      "label": "Color para malo"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Números, hora y textos integrados, por ejemplo es o en-US. Déjalo vacío para usar el idioma de la pantalla."
+    },
+    "timezone": {
+      "label": "Zona horaria de «Actualizado»",
+      "help": "Déjalo vacío para usar el reloj de la pantalla."
+    }
+  }
+}

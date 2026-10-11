@@ -1,0 +1,75 @@
+{
+  "name": "Aviso — dividido (vertical)",
+  "description": "Um aviso em dois tons: o título sobre um bloco da sua cor de destaque, os detalhes abaixo sobre fundo claro, com rodapé e um QR code opcional. Bom para palestras, treinamentos e inscrições. Layout vertical 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona melhor um PNG ou SVG com fundo transparente. Fica no canto superior esquerdo."
+    },
+    "eyebrow": {
+      "label": "Chamada",
+      "help": "Um rótulo curto acima do título, por ex. LEMBRETE ou NOVO. Em maiúsculas fica melhor.",
+      "default": "ALMOÇO COM PALESTRA"
+    },
+    "headline": {
+      "label": "Título",
+      "help": "O aviso em poucas palavras. Até 40 caracteres; ocupa duas ou três linhas na tela.",
+      "default": "Privacidade de dados sem complicação"
+    },
+    "body": {
+      "label": "Detalhes",
+      "help": "Uma ou duas frases. Pressione Enter para uma nova linha.",
+      "default": "Priya Raman, do Jurídico, explica o que podemos e o que não podemos fazer com dados de clientes, com exemplos reais dos nossos chamados de suporte. 45 minutos, com almoço: inscreva-se para pedirmos comida suficiente."
+    },
+    "footer": {
+      "label": "Rodapé",
+      "help": "Quem envia, uma data, uma sala ou um contato.",
+      "default": "Quarta-feira, 4 de novembro  ·  12h30  ·  Sala Orchard, 3º andar"
+    },
+    "show_qr": {
+      "label": "Mostrar um QR code",
+      "help": "Desative se não tiver link: o código e a legenda somem."
+    },
+    "qr_url": {
+      "label": "Link do QR code",
+      "help": "O endereço que o QR code abre. Links mais curtos geram um código que pode ser lido de mais longe."
+    },
+    "qr_caption": {
+      "label": "Legenda do QR",
+      "default": "Escaneie para se inscrever"
+    },
+    "show_date": {
+      "label": "Mostrar a data de hoje",
+      "help": "A data atual da tela, no idioma e no fuso horário abaixo."
+    },
+    "date_format": {
+      "label": "Formato da data",
+      "options": {
+        "weekday": "Dia da semana, dia e mês",
+        "long": "Data completa com ano",
+        "short": "Data curta",
+        "numeric": "Só números"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário da data",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma da data, por ex. en-GB, de-DE ou fr-CA. Deixe vazio para usar o idioma da tela."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "panel_text": {
+      "label": "Cor do texto no painel de destaque"
+    }
+  }
+}

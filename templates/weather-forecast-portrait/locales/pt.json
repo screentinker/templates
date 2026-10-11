@@ -1,0 +1,68 @@
+{
+  "name": "Previsão do tempo (retrato)",
+  "description": "Condições atuais e previsão de cinco dias a partir de uma das suas fontes de dados de clima. O seu servidor busca o clima sozinho; o modelo apenas organiza na tela. Layout em retrato 9:16.",
+  "params": {
+    "weather": {
+      "label": "Fonte de dados de clima",
+      "help": "Uma fonte de dados do tipo Clima (Fontes de dados → Nova → Clima). Local, unidades e idioma são definidos lá."
+    },
+    "location": {
+      "label": "Nome do local",
+      "default": "Clima local",
+      "help": "O título. Normalmente a cidade ou o nome da unidade."
+    },
+    "units_label": {
+      "label": "Sufixo da temperatura",
+      "help": "Aparece após cada temperatura: só ° ou °C / °F conforme a fonte de dados."
+    },
+    "feels_like_label": {
+      "label": "Rótulo “Sensação”",
+      "help": "Aparece antes da sensação térmica.",
+      "default": "Sensação"
+    },
+    "humidity_label": {
+      "label": "Rótulo “Umidade”",
+      "help": "Aparece antes da umidade.",
+      "default": "Umidade"
+    },
+    "today_label": {
+      "label": "Rótulo “Hoje”",
+      "help": "Aparece antes da máxima e da mínima de hoje.",
+      "default": "Hoje"
+    },
+    "precip_label": {
+      "label": "Rótulo “Chuva”",
+      "help": "Aparece antes da chance de precipitação de hoje.",
+      "default": "Chance de chuva"
+    },
+    "updated_label": {
+      "label": "Rótulo “Atualizado”",
+      "help": "Aparece antes do horário da última leitura.",
+      "default": "Atualizado"
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "timezone": {
+      "label": "Fuso horário do relógio",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma da data, por ex. pt-BR ou pt-PT. Deixe vazio para usar o idioma da tela. Os dias da previsão e a descrição do tempo vêm da fonte de dados."
+    },
+    "clock_format": {
+      "label": "Formato do relógio",
+      "options": {
+        "24": "24 horas",
+        "12": "12 horas"
+      }
+    }
+  }
+}

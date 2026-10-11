@@ -1,0 +1,50 @@
+{
+  "name": "Wachtscherm — logo, boodschap en website (staand)",
+  "description": "Een wachtscherm in je huisstijl voor tussen campagnes: je logo, een korte boodschap met een regel uitleg, je website in grote letters en een optionele QR-code die hem opent. Er wordt niets opgehaald; de server tekent de code. Staande opmaak 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond. Linksboven."
+    },
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "Een kort label boven de boodschap. Hoofdletters lezen het best."
+    },
+    "message": {
+      "label": "Boodschap",
+      "help": "Een paar woorden. Tot ongeveer 40 tekens past op twee regels.",
+      "default": "Er komt iets nieuws aan"
+    },
+    "detail": {
+      "label": "Toelichting",
+      "help": "Een of twee korte zinnen onder de boodschap. Enter begint een nieuwe regel.",
+      "default": "Onze volgende presentatie opent maandag. Bekijk tot die tijd de hele collectie en boek online een bezoek aan de studio."
+    },
+    "website": {
+      "label": "Websiteregel",
+      "help": "In grote letters. Schrijf het zonder https:// en zoals mensen het moeten typen."
+    },
+    "show_qr": {
+      "label": "QR-code tonen",
+      "help": "Uit verbergt de code, de kaart en het onderschrift."
+    },
+    "qr_url": {
+      "label": "Link van de QR-code",
+      "help": "Het volledige adres dat de code opent. Kortere links geven een code die van verder weg scant."
+    },
+    "qr_caption": {
+      "label": "QR-onderschrift",
+      "default": "Scan voor een bezoek"
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Kleine kop, lijnen en het getinte vlak."
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

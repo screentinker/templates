@@ -1,0 +1,87 @@
+{
+  "name": "Ranglijst",
+  "description": "Een ranglijst voor salesteams, inzamelingsacties, stappenchallenges of spelavonden: een podium in goud, zilver en brons voor de top drie en geanimeerde balken voor de rest. Typ de scores in of koppel een Google Sheet en het bord houdt zichzelf bij.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "default": "Verkoopranglijst"
+    },
+    "period": {
+      "label": "Periode",
+      "help": "Een kort label naast de titel, zoals ‘Deze maand’ of ‘Q3’. Laat leeg om het te verbergen.",
+      "default": "Deze maand"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Wordt naast de titel getoond."
+    },
+    "entries": {
+      "label": "Scores",
+      "help": "Eén per regel: Naam | Score | Subtitel. De volgorde maakt niet uit, het bord sorteert. Gebruikt als er geen gegevensbron is gekoppeld.",
+      "default": "Maya Okafor | 48250 | Grootzakelijk\nLiam Chen | 41900 | Middenmarkt\nSofia Alvarez | 39475 | Grootzakelijk\nNoah Williams | 33120 | MKB\nAva Patel | 31860 | Middenmarkt\nEthan Brooks | 27400 | MKB\nZara Hussain | 24975 | Grootzakelijk\nLucas Meyer | 21300 | Partners\nChloe Dubois | 18640 | MKB\nOwen Murphy | 15210 | Partners"
+    },
+    "scores": {
+      "label": "Gegevensbron voor scores (optioneel)",
+      "help": "Een Google Sheet, CSV, REST-lijst of handmatige tabel. Met kolommen voor naam en score vervangt die de hierboven getypte scores."
+    },
+    "name_col": {
+      "label": "Kolom naam",
+      "help": "De kop van de kolom met namen in je gegevensbron, precies zoals hij daar staat.",
+      "default": "Naam"
+    },
+    "score_col": {
+      "label": "Kolom score",
+      "default": "Score"
+    },
+    "sub_col": {
+      "label": "Kolom subtitel",
+      "help": "Optioneel. Een tweede regel onder elke naam, zoals een team of regio.",
+      "default": "Team"
+    },
+    "order": {
+      "label": "Winnaar",
+      "options": {
+        "high": "Hoogste score wint",
+        "low": "Laagste score wint (tijden, golf)"
+      }
+    },
+    "score_prefix": {
+      "label": "Voorvoegsel",
+      "help": "Voor elke score, bijvoorbeeld € of $. Laat leeg voor gewone getallen.",
+      "default": "€"
+    },
+    "score_suffix": {
+      "label": "Achtervoegsel",
+      "help": "Na elke score, bijvoorbeeld ptn, km of %."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De taal van de vaste woorden op het bord en hoe getallen worden geschreven (de-DE toont 48.250). Laat leeg voor de taal van het scherm."
+    },
+    "max_rows": {
+      "label": "Hoogstens tonen",
+      "help": "Getoonde plaatsen, inclusief het podium. Op een klein scherm toont het bord er minder."
+    },
+    "show_bars": {
+      "label": "Balken tonen",
+      "help": "Een balk onder elke naam na het podium, langer naarmate de score dichter bij die van de koploper ligt."
+    },
+    "font": {
+      "label": "Lettertype koppen",
+      "options": {
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (smal)",
+        "inter": "Inter (strak)"
+      }
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

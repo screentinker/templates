@@ -1,0 +1,126 @@
+{
+  "name": "Gebouwwijzer",
+  "description": "Een wegwijzer voor de hal van een kantoorgebouw, winkelcentrum of campus: elke huurder met verdieping en unit, per verdieping gegroepeerd of van A tot Z met een index, richtingspijlen, een regel ‘U bent hier’ en een klok. Verdeelt zich in kolommen over het scherm en bladert door lange lijsten. Typ de huurders in of houd ze bij in een Google Sheet of handmatige tabel.",
+  "params": {
+    "building_name": {
+      "label": "Naam van het gebouw"
+    },
+    "address": {
+      "label": "Adres of ondertitel",
+      "help": "Eén regel onder de naam van het gebouw. Laat leeg om te verbergen."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Zonder logo staan de initialen van het gebouw in de accentkleur."
+    },
+    "here_text": {
+      "label": "Regel ‘U bent hier’",
+      "help": "Onder de kop met een kaartspeld. Laat leeg om te verbergen.",
+      "default": "U bent hier · Centrale hal, begane grond"
+    },
+    "here_floor": {
+      "label": "Verdieping van dit scherm",
+      "help": "Geschreven zoals in de kolom Verdieping. Die verdieping krijgt een speld in de lijst en de index."
+    },
+    "group_by": {
+      "label": "Indelen op",
+      "options": {
+        "floor": "Verdieping",
+        "alpha": "Naam, A tot Z",
+        "category": "Categorie"
+      }
+    },
+    "floor_order": {
+      "label": "Volgorde van verdiepingen",
+      "help": "Bij indeling op verdieping.",
+      "options": {
+        "asc": "Laagste verdieping eerst",
+        "desc": "Bovenste verdieping eerst"
+      }
+    },
+    "show_index": {
+      "label": "Indexbalk tonen",
+      "help": "De letters A tot Z (of de verdiepingen, of de categorieën) onderaan; die op de huidige pagina lichten op."
+    },
+    "show_category": {
+      "label": "Categorieën onder de namen tonen"
+    },
+    "entries": {
+      "label": "Huurders",
+      "help": "Eén per regel: Naam | Verdieping | Unit | Categorie | Pijl. Pijl: links, rechts, rechtdoor, terug, up-left…, lift of trap. Zonder gegevensbron.",
+      "default": "Receptie & beveiliging | G | Hal | Gebouwdiensten | links\nHarbour Street Café | G | G02 | Eten & drinken | rechts\nBezoekersparkeren | B1 | P1 | Parkeren | trap\nNorthwind Legal LLP | 2 | 201 | Juridisch |\nBrightwater Dental | 3 | 312 | Gezondheid |\nLumen Analytics | 5 | 520 | Technologie |\nWoodgrove Bank Offices | 8 | 800 | Financiën |"
+    },
+    "directory": {
+      "label": "Gegevensbron voor de wijzer (optioneel)",
+      "help": "Een Google Sheet, CSV of handmatige tabel met een kopregel. Heeft die de kolom Naam, dan vervangt hij de huurders hierboven."
+    },
+    "name_col": {
+      "label": "Kolom Naam",
+      "default": "Naam"
+    },
+    "floor_col": {
+      "label": "Kolom Verdieping",
+      "default": "Verdieping"
+    },
+    "suite_col": {
+      "label": "Kolom Unit",
+      "default": "Unit"
+    },
+    "category_col": {
+      "label": "Kolom Categorie",
+      "default": "Categorie"
+    },
+    "arrow_col": {
+      "label": "Kolom Pijl",
+      "default": "Pijl"
+    },
+    "floor_names": {
+      "label": "Namen van verdiepingen",
+      "help": "Optioneel, één per regel: Verdieping = Naam. Niet genoemde verdiepingen tonen het woord ‘Verdieping’ plus het nummer.",
+      "default": "G = Begane grond\nB1 = Souterrain\n12 = Penthouse"
+    },
+    "floor_word": {
+      "label": "Woord voor ‘verdieping’",
+      "help": "Voor koppen als ‘Verdieping 7’. Laat leeg voor het woord in de taal van het scherm. Zet {n} waar het nummer hoort (‘{n}e etage’)."
+    },
+    "footer": {
+      "label": "Voetregel",
+      "help": "Kleine tekst onderaan. Laat leeg om te verbergen.",
+      "default": "Liften naar alle verdiepingen rechtdoor · Bezoekers graag aanmelden bij de receptie"
+    },
+    "empty_text": {
+      "label": "Tekst bij een lege lijst",
+      "help": "Laat leeg voor ‘Nog geen huurders’ in de taal van het scherm."
+    },
+    "clock_format": {
+      "label": "Klok",
+      "options": {
+        "auto": "Zoals gebruikelijk in de taal",
+        "24": "24 uur",
+        "12": "12 uur",
+        "off": "Klok verbergen"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone van de klok",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Voor de eigen woorden van de wijzer, de datum, de klok en de sortering A tot Z. Laat leeg voor de taal van het scherm."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "page_seconds": {
+      "label": "Seconden per pagina",
+      "help": "Alleen als de lijst niet op leesbare grootte op één scherm past."
+    }
+  }
+}

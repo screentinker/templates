@@ -1,0 +1,50 @@
+{
+  "name": "UPTIME 3036",
+  "description": "Uno sparatutto arcade originale in prima persona sul peggior turno di reperibilità dell’anno 3036: tutti i server sono giù e il datacenter brulica di bug. Nessuno gioca? Gioca da solo in modalità demo con pilota automatico. Clicca o premi un tasto per prendere il comando; se te ne vai, torna la demo.",
+  "params": {
+    "title": {
+      "label": "Titolo"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "I SERVER SONO GIÙ. SEI DI TURNO TU."
+    },
+    "accent": {
+      "label": "Colore neon"
+    },
+    "accent2": {
+      "label": "Secondo colore neon"
+    },
+    "difficulty": {
+      "label": "Difficoltà",
+      "options": {
+        "easy": "Facile",
+        "normal": "Normale",
+        "hard": "Difficile"
+      }
+    },
+    "playable": {
+      "label": "Giocabile (clic / tastiera)",
+      "help": "Disattivato: il bot gioca all’infinito, un puro loop dimostrativo."
+    },
+    "idle_sec": {
+      "label": "Torna alla demo dopo (secondi di inattività)"
+    },
+    "resolution": {
+      "label": "Risoluzione di rendering",
+      "help": "Più bassa è più veloce sui player piccoli; l’effetto pixel è voluto.",
+      "options": {
+        "320": "Retrò (320)",
+        "400": "Standard (400)",
+        "560": "Nitida (560)"
+      }
+    },
+    "crt": {
+      "label": "Linee di scansione CRT"
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua di tutte le parole e i numeri sullo schermo, per esempio it o ja. Lascia vuoto per la lingua dello schermo. Titolo e slogan li scrivi tu."
+    }
+  }
+}

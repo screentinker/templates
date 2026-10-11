@@ -1,0 +1,97 @@
+{
+  "id": "holiday-winter-holidays-portrait",
+  "name": "Winter holidays (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "An inclusive season’s-greetings screen for any winter celebration: a string of coloured lights, falling snow and snowy hills on a night-blue sky, with a centred greeting, your message and a date line — ideal for holiday opening hours.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-winter-holidays-portrait",
+  "license": "MIT",
+  "tags": [
+    "holiday",
+    "seasonal",
+    "winter",
+    "holidays",
+    "seasons-greetings",
+    "closure",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "The short line above the headline. Leave empty to hide it.",
+      "default": "SEASON’S GREETINGS"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline",
+      "max": 28,
+      "help": "Two lines are kept for it: about 24 characters fit. Longer headlines wrap to a third line and run into the message.",
+      "default": "Warmest wishes to all"
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "label": "Message",
+      "max": 200,
+      "help": "A sentence or two under the headline; up to 200 characters fit. A line break starts a new line.",
+      "default": "Wishing you warmth, rest and good company. Our offices close on 24.12 and reopen on 04.01, and the support line stays open from 08:00 to 20:00 throughout."
+    },
+    {
+      "name": "date_line",
+      "type": "text",
+      "label": "Date line",
+      "max": 70,
+      "help": "Plain text, typed the way you want it to read: a date, a time and place, or a sign-off.",
+      "default": "FROM ALL OF US AT NORTHWIND"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A wide PNG or SVG with a transparent background (about 3.4 : 1 fills the box; other shapes are fitted inside it). Replace the Northwind placeholder.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Warm light colour",
+      "default": "#F6D58E"
+    },
+    {
+      "name": "accent2",
+      "type": "color",
+      "label": "Cool light colour",
+      "default": "#9AD1F5"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#0F2444"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#F4F8FF"
+    }
+  ]
+}

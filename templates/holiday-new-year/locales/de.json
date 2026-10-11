@@ -1,0 +1,70 @@
+{
+  "name": "Neujahr",
+  "description": "Ein mitternachtsblauer Neujahrsgruß mit goldenem und rosa Feuerwerk aus Punkten, der neuen Jahreszahl in riesiger Schrift hinter der Schlagzeile und einem optionalen Live-Countdown bis Mitternacht, der zum Jahreswechsel auf Ihre eigene Nachricht umschaltet.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Die kurze Zeile über der Schlagzeile. Leer lassen, um sie auszublenden.",
+      "default": "VON UNS ALLEN BEI NORTHWIND"
+    },
+    "headline": {
+      "label": "Schlagzeile",
+      "help": "Zwei Zeilen sind dafür reserviert: etwa 24 Zeichen passen. Längere Schlagzeilen brechen in eine dritte Zeile um und laufen in die Nachricht.",
+      "default": "Ein gutes neues Jahr!"
+    },
+    "message": {
+      "label": "Nachricht",
+      "help": "Ein, zwei Sätze unter der Schlagzeile; bis zu 200 Zeichen passen. Ein Zeilenumbruch beginnt eine neue Zeile.",
+      "default": "Danke für ein großartiges Jahr. Auf neue Anfänge, mutige Ideen und alles, was wir als Nächstes gemeinsam aufbauen."
+    },
+    "date_line": {
+      "label": "Datumszeile",
+      "help": "Freier Text, genau so getippt, wie er erscheinen soll: ein Datum, Uhrzeit und Ort oder ein Gruß."
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Ausschalten, wenn Sie kein Logo haben."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Ein breites PNG oder SVG mit transparentem Hintergrund (etwa 3,4 : 1 füllt die Fläche; andere Formate werden eingepasst). Ersetzen Sie den Northwind-Platzhalter."
+    },
+    "accent": {
+      "label": "Goldakzent"
+    },
+    "accent2": {
+      "label": "Feuerwerk-Akzent"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "big_text": {
+      "label": "Großer Hintergrundtext",
+      "help": "Die riesigen, blassen Ziffern hinter der Schlagzeile – meist das neue Jahr."
+    },
+    "show_countdown": {
+      "label": "Countdown anzeigen",
+      "help": "Ausschalten, um den Countdown und seine Beschriftung auszublenden."
+    },
+    "target": {
+      "label": "Countdown bis",
+      "help": "Ändern Sie den Offset am Ende auf IHRE Zeitzone, sonst endet der Countdown falsch. +00:00 ist Mitternacht in London; 2027-01-01T00:00:00+01:00 ist Mitternacht in Berlin."
+    },
+    "countdown_label": {
+      "label": "Beschriftung über dem Countdown",
+      "help": "Sie steht über dem Countdown und über der Nachricht, die ihn ablöst – sie sollte zu beidem passen.",
+      "default": "SILVESTER  ·  MITTERNACHT"
+    },
+    "done_text": {
+      "label": "Nach Ablauf des Countdowns",
+      "default": "Frohes neues Jahr!"
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache der Countdown-Einheiten (leer = Sprache des Bildschirms). Ältere ScreenTinker-Server zeigen sie immer als d h m s."
+    }
+  }
+}

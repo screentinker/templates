@@ -1,0 +1,68 @@
+{
+  "name": "Prévisions météo (portrait)",
+  "description": "Conditions actuelles et prévisions sur cinq jours à partir de l'une de vos sources de données Météo. Votre serveur récupère la météo lui-même ; le modèle se contente de la mettre en page. Mise en page portrait 9:16.",
+  "params": {
+    "weather": {
+      "label": "Source de données météo",
+      "help": "Une source de données de type Météo (Sources de données → Nouvelle → Météo). Le lieu, les unités et la langue s'y règlent."
+    },
+    "location": {
+      "label": "Nom du lieu",
+      "default": "Météo locale",
+      "help": "Le titre. En général la ville ou le nom du site."
+    },
+    "units_label": {
+      "label": "Suffixe de température",
+      "help": "Affiché après chaque température : ° seul, ou °C / °F selon la source de données."
+    },
+    "feels_like_label": {
+      "label": "Libellé « Ressenti »",
+      "help": "Affiché avant la température ressentie.",
+      "default": "Ressenti"
+    },
+    "humidity_label": {
+      "label": "Libellé « Humidité »",
+      "help": "Affiché avant l'humidité.",
+      "default": "Humidité"
+    },
+    "today_label": {
+      "label": "Libellé « Aujourd'hui »",
+      "help": "Affiché avant les maximales et minimales du jour.",
+      "default": "Aujourd'hui"
+    },
+    "precip_label": {
+      "label": "Libellé « Précipitations »",
+      "help": "Affiché avant la probabilité de précipitations du jour.",
+      "default": "Risque de précipitations"
+    },
+    "updated_label": {
+      "label": "Libellé « Mis à jour »",
+      "help": "Affiché avant l'heure du dernier relevé.",
+      "default": "Mis à jour"
+    },
+    "accent": {
+      "label": "Couleur d'accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "timezone": {
+      "label": "Fuseau horaire de l'horloge",
+      "help": "Laissez vide pour utiliser l'horloge de l'écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Langue de la date, par ex. fr ou fr-CA. Laissez vide pour la langue de l'écran. Les jours des prévisions et la description du temps viennent de la source de données."
+    },
+    "clock_format": {
+      "label": "Format de l'heure",
+      "options": {
+        "24": "24 heures",
+        "12": "12 heures"
+      }
+    }
+  }
+}

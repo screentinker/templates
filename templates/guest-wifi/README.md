@@ -30,12 +30,26 @@ it with a QR app.
 | Small heading | text (40) | `Complimentary Wi-Fi` | Accent-coloured line above the headline. |
 | Headline | text (70) | `Stay connected while you're with us` | |
 | Hint under the code | text (40) | `Point your camera here to join` | Empty hides it. |
-| Label for the network name / password | text (24) | `Network` / `Password` | Translate these for your guests. |
-| Text for an open network | text (40) | `No password needed` | |
-| Text when the password is not shown | text (40) | `Scan the code to join` | |
+| Label for the network name / password | text (24) | empty | Empty: *Network* / *Password* in the screen's language. Type your own words to override. |
+| Text for an open network | text (40) | empty | Empty: *No password needed* in the screen's language. |
+| Text when the password is not shown | text (40) | empty | Empty: *Scan the code to join* in the screen's language. |
 | Footer | text (100) | a front-desk line | Hidden in the strip layout. |
 | Logo | image | the bundled placeholder `logo.svg` | Empty hides it. Hidden in the strip layout. |
 | Accent / Background / Text colour | colour | `#5CC8B5` / `#10222A` / `#F3EDE3` | The code is always dark on a white card, whatever colours you pick, so it stays scannable. |
+| Language | locale | empty | The language of the words the screen writes itself. Empty uses the screen's own language. |
+
+## Languages
+
+The settings page is translated into German, Spanish, French, Hindi, Italian, Japanese, Dutch,
+Portuguese and Chinese (`locales/<lang>.json`), including translated starting texts for the heading,
+headline, hint and footer. On screen, the built-in words (*Network*, *Password*, *No password
+needed*, *Scan the code to join* and the two placeholder messages) follow the *Language* setting,
+or the player's own language when it is empty; any other language falls back to English. Leave
+the four label/text settings empty to get them in that language, or type your own to override.
+
+The bundled Inter and JetBrains Mono cover Latin scripts only. Japanese, Chinese and Hindi text
+is drawn with the player's Noto fonts (Noto Sans CJK / Noto Sans Devanagari). A server that does not
+know about `locales/` simply shows the settings in English; the template works the same.
 
 ## How the code is built — and why this is an HTML template
 
@@ -63,6 +77,7 @@ error-correction level, including payloads with all five special characters and 
 ## Files
 
 - `index.html`, `style.css`, `app.js` — the page
+- `locales/` — translations of the settings page
 - `qr.js` — the QR encoder (original, MIT)
 - `logo.svg` — placeholder logo, original work, MIT
 - `fonts/` — Inter and JetBrains Mono (SIL OFL 1.1, licence texts alongside; see `NOTICE`)

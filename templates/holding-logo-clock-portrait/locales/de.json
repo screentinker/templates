@@ -1,0 +1,49 @@
+{
+  "name": "Standby-Bildschirm — Logo und Uhr (Hochformat)",
+  "description": "Ein Standby-Bildschirm für Zeiten ohne Programm: Ihr Logo, eine große Live-Uhr und das heutige Datum auf ruhigem Hintergrund mit sanftem Lichtkranz, in Ihrer Zeitzone und Sprache. So wirkt ein Bildschirm auch zwischen Kampagnen gepflegt. Hochformat 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ein PNG oder SVG mit transparentem Hintergrund, hell auf dunkel. Erscheint oben in der Mitte."
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Eine kurze Zeile am unteren Rand: ein Ort, eine Etage, ein Kontakt. Leer lassen für keine.",
+      "default": "Northwind Studio  ·  Empfang, 3. Etage"
+    },
+    "clock_format": {
+      "label": "Uhrzeitformat",
+      "options": {
+        "12": "12 Stunden",
+        "24": "24 Stunden"
+      }
+    },
+    "date_format": {
+      "label": "Datumsformat",
+      "options": {
+        "weekday": "Wochentag, Tag und Monat",
+        "long": "Vollständiges Datum mit Jahr",
+        "short": "Kurzes Datum",
+        "numeric": "Nur Ziffern"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone",
+      "help": "Für welchen Ort Uhr und Datum gelten. Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wie Uhrzeit und Datum geschrieben werden, z. B. en-GB, de-DE oder fr-CA. Leer lassen für die Sprache des Bildschirms."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Der Lichtkranz hinter der Uhr und die kleine Linie."
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    }
+  }
+}

@@ -13,7 +13,7 @@ fills from your own Weather data source — the template never talks to a weathe
 ## Before you use it
 
 Create a data source of type **Weather** (Data Sources → New → Weather) and pick it in the
-**Weather data source** setting. Units, day names and the place name come from the data source.
+**Weather data source** setting. Units and the place name come from the data source.
 Until its first sync the template shows "Waiting for weather data".
 
 ## Settings
@@ -27,11 +27,31 @@ Until its first sync the template shows "Waiting for weather data".
 | Accent colour | colour | `#FFD166` |
 | Animate the scene | checkbox | on — turn off on very low-powered players |
 | Show the clock | checkbox | on |
-| Clock timezone / Clock and date language | timezone / locale | the screen's own |
+| Clock timezone | timezone | the screen's own |
+| Language | locale | empty = the screen's language |
+
+## Languages
+
+Everything on screen follows the **Language** setting (empty = the player's own language): the
+date and clock, the day names (formatted from each forecast day's date), numbers, percentages and
+wind speed (`Intl`), the condition (translated from its WMO weather code), and the fixed words —
+Feels like, Humidity, Wind, Rain/Snow and the "Waiting for weather data" notice — in English,
+German, Spanish, French, Hindi, Italian, Japanese, Dutch, Portuguese and Simplified Chinese; any
+other language falls back to English words with that language's dates and numbers. The settings
+themselves are translated for the dashboard in `locales/<lang>.json` (servers that do not know
+that file ignore it). The bundled Inter is Latin-only; Japanese, Chinese and Devanagari use the
+player's Noto fonts.
 
 ## Files
 
-`index.html`, `style.css`, `app.js`; `fonts/inter.woff2` (SIL OFL 1.1, see `NOTICE`). Icons are
+`index.html`, `style.css`, `app.js`, `strings.js` (the on-screen words per language), `locales/`
+(the settings, translated); `fonts/inter.woff2` (SIL OFL 1.1, see `NOTICE`). Icons are
 drawn in code — no image files, no emoji font needed.
+
+## Changes
+
+- **1.1.0** — translatable: a Language setting for every word, date and number on screen, the
+  condition and day names in that language, and translated settings (`locales/`).
+- **1.0.0** — first release.
 
 Licence: MIT (see `LICENSE`); bundled font OFL-1.1.

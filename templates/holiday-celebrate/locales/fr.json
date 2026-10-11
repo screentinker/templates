@@ -1,0 +1,54 @@
+{
+  "name": "Célébration",
+  "description": "Une fête en confettis pour toute occasion (anniversaire d’entreprise, anniversaire, mois record, inauguration ou victoire d’équipe) : un nombre géant, un titre, un message et une ligne de date, dans les couleurs de votre choix.",
+  "params": {
+    "eyebrow": {
+      "label": "Surtitre",
+      "help": "La ligne courte au-dessus du titre. Laissez vide pour la masquer.",
+      "default": "DIX ANS DÉJÀ"
+    },
+    "headline": {
+      "label": "Titre",
+      "help": "Deux lignes lui sont réservées : environ 24 caractères tiennent. Un titre plus long passe sur une troisième ligne et empiète sur le message.",
+      "default": "Northwind fête ses dix ans"
+    },
+    "message": {
+      "label": "Message",
+      "help": "Une phrase ou deux sous le titre ; jusqu’à 200 caractères tiennent. Un retour à la ligne commence une nouvelle ligne.",
+      "default": "De deux personnes dans un garage à 140 collègues dans quatre villes. Merci à chaque client et coéquipier qui nous a menés jusqu’ici. Gâteau à la cuisine à 15 h !"
+    },
+    "date_line": {
+      "label": "Ligne de date",
+      "help": "Texte libre, saisi tel qu’il doit s’afficher : une date, une heure et un lieu, ou une signature."
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivez si vous n’avez pas de logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG large à fond transparent (environ 3,4 : 1 remplit le cadre ; les autres formats y sont ajustés). Remplacez le logo provisoire Northwind."
+    },
+    "accent": {
+      "label": "Couleur du nombre"
+    },
+    "accent2": {
+      "label": "Seconde couleur d’accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "big_text": {
+      "label": "Grand nombre",
+      "help": "Le chiffre géant : des années, un anniversaire, un pourcentage, un rang. Quatre caractères au plus ; videz-le pour ne rien afficher."
+    },
+    "big_label": {
+      "label": "Sous le nombre",
+      "help": "Un mot sous le grand nombre, comme ANS ou JOURS.",
+      "default": "ANS"
+    }
+  }
+}

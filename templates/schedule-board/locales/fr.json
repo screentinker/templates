@@ -1,0 +1,138 @@
+{
+  "name": "Tableau des horaires",
+  "description": "Ce qui se passe, le temps restant et la suite : un compte à rebours pour la sonnerie de l’école, les cours de sport, les postes et pauses ou les célébrations, avec le planning du jour à côté. Saisissez l’horaire (plusieurs horaires nommés, un actif) ou connectez une feuille Google. Hors horaires, il indique la reprise.",
+  "params": {
+    "preset": {
+      "label": "Modèle",
+      "help": "Définit les formulations et l’horaire d’exemple affiché tant que vous n’avez pas saisi ou connecté le vôtre, dans la langue de l’écran.",
+      "options": {
+        "school": "Sonnerie / emploi du temps",
+        "gym": "Cours de sport ou de studio",
+        "factory": "Postes et pauses",
+        "worship": "Horaires des célébrations"
+      }
+    },
+    "schedule": {
+      "label": "Horaire",
+      "help": "Un créneau par ligne : Jours | Début-Fin | Titre | Salle | Animateur, ex. Mon-Fri | 08:00-08:50 | 1re heure | Salle 12 | Mme Patel. [Examens] démarre un autre horaire. Vide = exemple."
+    },
+    "schedule_source": {
+      "label": "Source de données de l’horaire (facultatif)",
+      "help": "Une feuille Google, un CSV ou un tableau manuel avec les colonnes Days, Start, End, Title, Room, Host (et Schedule en option). Remplace l’horaire saisi."
+    },
+    "active_schedule": {
+      "label": "Horaire actif",
+      "help": "L’horaire nommé à afficher, compté dans l’ordre d’apparition. À changer pour la semaine d’examens, une journée courte ou les vacances.",
+      "options": {
+        "1": "Horaire 1",
+        "2": "Horaire 2",
+        "3": "Horaire 3",
+        "4": "Horaire 4",
+        "5": "Horaire 5",
+        "6": "Horaire 6",
+        "7": "Horaire 7",
+        "8": "Horaire 8"
+      }
+    },
+    "view": {
+      "label": "Affichage",
+      "options": {
+        "split": "Maintenant + planning du jour",
+        "focus": "Maintenant seul (grand compte à rebours)",
+        "list": "Planning du jour seul"
+      }
+    },
+    "title": {
+      "label": "Titre",
+      "help": "Vide = le titre du modèle dans la langue de l’écran (ou le nom de l’exemple tant qu’il est affiché)."
+    },
+    "subtitle": {
+      "label": "Sous-titre",
+      "help": "Une ligne sous le titre. Le nom de l’horaire actif est ajouté après."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facultatif. Affiché à côté du titre."
+    },
+    "show_badge": {
+      "label": "Afficher des initiales s’il n’y a pas de logo"
+    },
+    "show_where": {
+      "label": "Afficher la salle et l’animateur"
+    },
+    "warn_minutes": {
+      "label": "Avertir dans les … dernières minutes",
+      "help": "Le compte à rebours passe à la couleur d’alerte ce nombre de minutes avant la fin d’un créneau. 0 = jamais."
+    },
+    "now_label": {
+      "label": "Titre : créneau en cours",
+      "help": "Vide = la formulation du modèle dans la langue de l’écran (« En cours », « En ce moment »…)."
+    },
+    "next_label": {
+      "label": "Titre : créneau suivant",
+      "help": "Vide = la formulation du modèle dans la langue de l’écran (« À suivre », « Prochain cours »…)."
+    },
+    "then_label": {
+      "label": "Titre : le créneau d’après",
+      "help": "Vide = « Puis » dans la langue de l’écran."
+    },
+    "ends_label": {
+      "label": "Texte du compte à rebours pendant un créneau",
+      "help": "Vide = « Se termine dans » dans la langue de l’écran."
+    },
+    "starts_label": {
+      "label": "Texte du compte à rebours avant un créneau",
+      "help": "Vide = « Commence dans » dans la langue de l’écran."
+    },
+    "offhours_today": {
+      "label": "Message avant le premier créneau du jour",
+      "help": "Avec {time} et {title}. Vide = celui du modèle dans la langue de l’écran, ex. « Les cours commencent à {time} »."
+    },
+    "offhours_later": {
+      "label": "Message quand le prochain créneau est un autre jour",
+      "help": "Avec {day}, {time} et {title}. Vide = celui du modèle dans la langue de l’écran, ex. « Reprise des cours : {day}, {time} »."
+    },
+    "empty_text": {
+      "label": "Message quand rien n’est prévu cette semaine",
+      "help": "Vide = celui du modèle dans la langue de l’écran."
+    },
+    "font": {
+      "label": "Police des titres",
+      "options": {
+        "archivo": "Archivo (affiche)",
+        "oswald": "Oswald (condensée)",
+        "inter": "Inter (sobre)",
+        "bitter": "Bitter (à empattements)"
+      }
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "warn_color": {
+      "label": "Couleur d’alerte"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "clock_format": {
+      "label": "Format de l’heure",
+      "options": {
+        "12": "12 heures",
+        "24": "24 heures",
+        "auto": "Selon la langue",
+        "off": "Masquer l’horloge (heures selon la langue)"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire",
+      "help": "Les heures de l’horaire sont dans ce fuseau. Vide = l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Les mots, heures et dates à l’écran, par exemple fr ou fr-CA. Vide = la langue de l’écran."
+    }
+  }
+}

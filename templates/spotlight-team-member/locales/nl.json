@@ -1,0 +1,97 @@
+{
+  "name": "Maak kennis met het team",
+  "description": "Stel iemand voor aan de rest van het gebouw: een kleurvlak met foto, naam en functie, een kort antwoord in eigen woorden en een leuk weetje, op twee strakke kaarten.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond werkt het best."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Een foto van hoofd en schouders, bijgesneden tot het kader. Vierkante foto’s werken het best."
+    },
+    "show_photo": {
+      "label": "Foto tonen",
+      "help": "Uit toont in plaats daarvan een cirkel met de initialen, voor wie liever geen foto laat zien."
+    },
+    "initials": {
+      "label": "Initialen",
+      "help": "Staan in de cirkel als de foto uit staat. Eén of twee letters."
+    },
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "Boven de naam. Hoofdletters lezen het best.",
+      "default": "MAAK KENNIS MET HET TEAM"
+    },
+    "name": {
+      "label": "Naam",
+      "help": "Eén regel, tot 26 tekens. Typ in gewone hoofd- en kleine letters; ALLES IN HOOFDLETTERS is breder en past misschien niet."
+    },
+    "role": {
+      "label": "Functie",
+      "help": "Functietitel, team, klas of locatie. Langere tekst loopt door op een tweede regel.",
+      "default": "Teamleider magazijn, depot Leeds"
+    },
+    "show_quote": {
+      "label": "Quote tonen",
+      "help": "Uit verbergt de quote en het aanhalingsteken."
+    },
+    "quote": {
+      "label": "Quote",
+      "help": "Een of twee zinnen in eigen woorden. Aanhalingstekens zijn niet nodig.",
+      "default": "Vraag me naar de nacht dat we bij een stroomstoring 14.000 pakketten verplaatsten. Spoiler: hoofdlampjes en veel thee."
+    },
+    "quote_mark": {
+      "label": "Aanhalingsteken",
+      "help": "Het grote sierteken bij de quote. Gebruik het teken van je taal, bijv. “ of „.",
+      "default": "“"
+    },
+    "show_fact": {
+      "label": "Leuk weetje tonen",
+      "help": "Uit verbergt het label en de tekst van het weetje."
+    },
+    "fact_label": {
+      "label": "Label van het weetje",
+      "help": "Een kort label, bijv. LEUK WEETJE of VRAAG ME NAAR.",
+      "default": "NAAST HET WERK"
+    },
+    "fun_fact": {
+      "label": "Leuk weetje",
+      "help": "Een of twee korte zinnen.",
+      "default": "Traint een voetbalteam onder 11 en zoekt de lekkerste jollofrijst van Yorkshire."
+    },
+    "show_badge": {
+      "label": "Badge tonen"
+    },
+    "badge": {
+      "label": "Tekst op de badge",
+      "help": "Een maand, startdatum, team of mijlpaal. Hoofdletters lezen het best.",
+      "default": "LOGISTIEK  ·  6 JAAR"
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Badge, kleine kop, aanhalingsteken en kaartlabels."
+    },
+    "panel_color": {
+      "label": "Kleur van het paneel",
+      "help": "Het grote paneel achter de foto. Lichte tekst en het logo staan erop."
+    },
+    "highlight": {
+      "label": "Kleur van de initialencirkel",
+      "help": "De cirkel achter de initialen."
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "card_color": {
+      "label": "Kaartkleur",
+      "help": "De twee kaarten en de ring rond de foto."
+    },
+    "initials_color": {
+      "label": "Kleur van de initialen"
+    }
+  }
+}

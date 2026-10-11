@@ -1,0 +1,75 @@
+{
+  "name": "Annuncio — diviso",
+  "description": "Un avviso in due toni: il titolo su un blocco del tuo colore di accento, i dettagli accanto su sfondo chiaro, con un piè di pagina e un codice QR facoltativo. Ideale per incontri, corsi e iscrizioni.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ideale un PNG o SVG con sfondo trasparente. Compare in alto a sinistra."
+    },
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "Una breve etichetta sopra il titolo, ad es. PROMEMORIA o NOVITÀ. In maiuscolo si legge meglio.",
+      "default": "PRANZO DI FORMAZIONE"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "L'annuncio in poche parole. Fino a 40 caratteri; occupa due o tre righe sullo schermo.",
+      "default": "La privacy dei dati, in parole semplici"
+    },
+    "body": {
+      "label": "Dettagli",
+      "help": "Una o due frasi. Premi Invio per andare a capo.",
+      "default": "Priya Raman dell'Ufficio legale spiega cosa possiamo e non possiamo fare con i dati dei clienti, con esempi reali dai nostri ticket di assistenza. 45 minuti, pranzo incluso: iscriviti così ordiniamo cibo a sufficienza."
+    },
+    "footer": {
+      "label": "Piè di pagina",
+      "help": "Chi lo invia, una data, una sala o un contatto.",
+      "default": "Mercoledì 4 novembre  ·  12:30  ·  Sala Orchard, piano 3"
+    },
+    "show_qr": {
+      "label": "Mostra un codice QR",
+      "help": "Disattiva se non hai un link: il codice e la sua didascalia spariscono."
+    },
+    "qr_url": {
+      "label": "Link del codice QR",
+      "help": "L'indirizzo aperto dal codice QR. Un link più corto crea un codice leggibile da più lontano."
+    },
+    "qr_caption": {
+      "label": "Didascalia del QR",
+      "default": "Inquadra per iscriverti"
+    },
+    "show_date": {
+      "label": "Mostra la data di oggi",
+      "help": "La data attuale dello schermo, nella lingua e nel fuso orario qui sotto."
+    },
+    "date_format": {
+      "label": "Formato data",
+      "options": {
+        "weekday": "Giorno della settimana, giorno e mese",
+        "long": "Data completa con anno",
+        "short": "Data breve",
+        "numeric": "Solo numeri"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario della data",
+      "help": "Lascia vuoto per usare l'orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua della data, ad es. en-GB, de-DE o fr-CA. Lascia vuoto per la lingua dello schermo."
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "panel_text": {
+      "label": "Colore del testo sul pannello di accento"
+    }
+  }
+}

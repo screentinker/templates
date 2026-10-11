@@ -1,0 +1,68 @@
+{
+  "name": "Nachrichtenwand",
+  "description": "Eine Nachrichtenwand im Magazinstil für jeden RSS- oder Atom-Feed: eine große Top-Meldung, die alle paar Sekunden wechselt, die nächsten vier als Karten, der Feedtitel und relative Zeitangaben. Bewusst typografisch (keine Bilder aus dem Netz), daher offline-fähig. Oder eigene Schlagzeilen eintippen.",
+  "params": {
+    "feed": {
+      "label": "Newsfeed (RSS-/Atom-Datenquelle, optional)",
+      "help": "Eine RSS-Datenquelle. Leer lassen, um die unten eingetippten Meldungen zu zeigen."
+    },
+    "title": {
+      "label": "Titel",
+      "help": "Leer lassen für den Titel des Feeds (ohne Feed: „Aktuelles“ in der Sprache des Bildschirms)."
+    },
+    "stories": {
+      "label": "Meldungen (ohne Feed)",
+      "help": "Eine pro Zeile: Schlagzeile | Kurze Zusammenfassung. Die Zusammenfassung ist optional.",
+      "default": "Fernhill Works eröffnet Designstudio in der alten Mühle | Drei Etagen Werkstatt, samstags für alle offen.\nBestes Frühjahr der Firmengeschichte | Aufträge 18 % über Vorjahr.\nFreiwilligentag bringt 4.200 für den Uferweg | 46 Kollegen bauten zwei Fußbrücken.\nNeue Kantinenkarte ab Montag | Mehr pflanzliche Gerichte."
+    },
+    "max_items": {
+      "label": "Meldungen in der Rotation"
+    },
+    "rotate_seconds": {
+      "label": "Sekunden pro Top-Meldung"
+    },
+    "date_style": {
+      "label": "Datum der Meldungen",
+      "options": {
+        "relative": "Relativ (vor 2 Stunden)",
+        "absolute": "Datum und Uhrzeit",
+        "off": "Ausblenden"
+      }
+    },
+    "feature_label": {
+      "label": "Etikett der Top-Meldung",
+      "help": "Leer lassen für „Top-Thema“ in der Sprache des Bildschirms."
+    },
+    "next_label": {
+      "label": "Überschrift über den Karten",
+      "help": "Leer lassen für „Als Nächstes“ in der Sprache des Bildschirms."
+    },
+    "show_summaries": {
+      "label": "Zusammenfassung der Top-Meldung zeigen"
+    },
+    "show_clock": {
+      "label": "Uhr anzeigen"
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "accent2": {
+      "label": "Zweite Akzentfarbe",
+      "help": "Die Karte der Top-Meldung verläuft zwischen beiden Akzentfarben."
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "timezone": {
+      "label": "Zeitzone (Uhr und Datum)",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache von Uhr, Datum und eingebauten Etiketten, z. B. fr oder en-GB. Leer lassen für die Sprache des Bildschirms."
+    }
+  }
+}

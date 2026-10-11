@@ -1,0 +1,70 @@
+{
+  "name": "Capodanno",
+  "description": "Un augurio di Capodanno blu notte con fuochi d’artificio oro e rosa fatti di punti, il nuovo anno in cifre giganti dietro il titolo e un conto alla rovescia facoltativo fino a mezzanotte, che allo scoccare dell’anno lascia il posto al tuo messaggio.",
+  "params": {
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "La riga breve sopra il titolo. Lasciala vuota per nasconderla.",
+      "default": "DA TUTTI NOI DI NORTHWIND"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "Ha due righe riservate: ci stanno circa 24 caratteri. Un titolo più lungo va a capo su una terza riga e copre il messaggio.",
+      "default": "Buon anno a tutti!"
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Una o due frasi sotto il titolo; ci stanno fino a 200 caratteri. Un a capo inizia una nuova riga.",
+      "default": "Grazie per un anno straordinario. Ai nuovi inizi, alle idee coraggiose e a tutto ciò che costruiremo insieme."
+    },
+    "date_line": {
+      "label": "Riga della data",
+      "help": "Testo libero, scritto come deve apparire: una data, un orario e un luogo, o una firma."
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG largo con sfondo trasparente (circa 3,4 : 1 riempie il riquadro; altre forme vi vengono adattate). Sostituisci il segnaposto Northwind."
+    },
+    "accent": {
+      "label": "Accento oro"
+    },
+    "accent2": {
+      "label": "Accento fuochi d’artificio"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "big_text": {
+      "label": "Testo grande di sfondo",
+      "help": "Le cifre giganti e tenui dietro il titolo, di solito il nuovo anno."
+    },
+    "show_countdown": {
+      "label": "Mostra il conto alla rovescia",
+      "help": "Disattiva per nascondere il conto alla rovescia e la sua etichetta."
+    },
+    "target": {
+      "label": "Conto alla rovescia fino a",
+      "help": "Imposta lo scostamento finale sul TUO fuso orario, o il conto finirà al momento sbagliato. +00:00 è mezzanotte a Londra; 2027-01-01T00:00:00+01:00 a Roma."
+    },
+    "countdown_label": {
+      "label": "Etichetta sopra il conto",
+      "help": "Resta sopra il conto alla rovescia e sopra il messaggio che lo sostituisce: deve funzionare con entrambi.",
+      "default": "SAN SILVESTRO  ·  MEZZANOTTE"
+    },
+    "done_text": {
+      "label": "Al termine del conto alla rovescia",
+      "default": "Buon anno!"
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua delle unità del conto alla rovescia (vuoto = lingua dello schermo). I server ScreenTinker meno recenti le mostrano sempre come d h m s."
+    }
+  }
+}

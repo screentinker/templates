@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- Placeholder badge for the fictional "Northwind" stores. Original work, MIT. Replace it with your own logo. -->
+  <circle cx="120" cy="120" r="116" fill="#FFFFFF"/>
+  <circle cx="120" cy="120" r="100" fill="none" stroke="#1B1D2E" stroke-width="6"/>
+  <path d="M120 42 L158 150 L120 132 Z" fill="#1B1D2E"/>
+  <path d="M120 42 L82 150 L120 132 Z" fill="#FF6A3D"/>
+  <rect x="78" y="168" width="84" height="10" rx="5" fill="#1B1D2E"/>
+</svg>

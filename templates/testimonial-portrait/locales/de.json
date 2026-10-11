@@ -1,0 +1,70 @@
+{
+  "name": "Kundenstimme (Hochformat)",
+  "description": "Eine Kundenbewertung auf dem Bildschirm: Sterne, die Worte des Kunden in warmer Serifenschrift, Name und Initialen-Avatar, dazu Ihre Gesamtbewertung. Für Schaufenster, Ausstellungsräume, Empfang und Wartebereiche. Hochformat-Layout 9:16.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "default": "DAS SAGEN UNSERE KUNDEN"
+    },
+    "rating": {
+      "label": "Sternebewertung",
+      "options": {
+        "tpl:stars/5.svg": "5 Sterne",
+        "tpl:stars/4.5.svg": "4½ Sterne",
+        "tpl:stars/4.svg": "4 Sterne",
+        "tpl:stars/3.svg": "3 Sterne",
+        "tpl:stars/none.svg": "Sterne ausblenden"
+      }
+    },
+    "quote": {
+      "label": "Kundenstimme",
+      "help": "Die Worte des Kunden, ohne Anführungszeichen. Bis etwa 220 Zeichen; kürzer liest sich besser.",
+      "default": "Sie haben unsere ganze Küche in vier Tagen eingebaut, alles sauber hinterlassen und eine Woche später geprüft, ob jede Schublade noch schließt. Zwei Nachbarn haben wir schon geschickt."
+    },
+    "name": {
+      "label": "Name des Kunden",
+      "help": "Nur mit Erlaubnis des Kunden."
+    },
+    "detail": {
+      "label": "Angabe zum Kunden",
+      "help": "Was gekauft wurde, woher der Kunde kommt oder „Verifizierter Kunde“.",
+      "default": "Küchenrenovierung · Riverside"
+    },
+    "initials": {
+      "label": "Initialen im Avatar"
+    },
+    "show_score": {
+      "label": "Gesamtbewertung anzeigen",
+      "help": "Aus blendet die große Zahl und ihre Beschriftung aus."
+    },
+    "score": {
+      "label": "Gesamtbewertung",
+      "help": "Ihre Durchschnittsbewertung, z. B. 4,9. Verwenden Sie einen echten Wert.",
+      "default": "4,9"
+    },
+    "score_caption": {
+      "label": "Beschriftung der Bewertung",
+      "default": "Schnitt aus 1.240 geprüften Bewertungen"
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Aus blendet das Logo aus, sein Platz bleibt leer."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "PNG oder SVG mit transparentem Hintergrund. Der Platzhalter ist weiß für die farbige Fläche (quer) bzw. dunkel für die Seite (hoch)."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Die Seitenfläche (quer) bzw. untere Fläche (hoch), der Avatar und die kleine Überschrift."
+    },
+    "background": {
+      "label": "Hintergrundfarbe",
+      "help": "Die Seite. Auch die Initialen im Avatar werden in dieser Farbe gezeichnet."
+    },
+    "text_color": {
+      "label": "Textfarbe",
+      "help": "Die Kundenstimme und der Name."
+    }
+  }
+}

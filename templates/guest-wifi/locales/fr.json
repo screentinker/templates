@@ -1,0 +1,80 @@
+{
+  "name": "Wi-Fi invités",
+  "description": "Le nom et le mot de passe de votre réseau invités, en grand et bien lisibles, à côté d’un code QR qui connecte en un scan, avec les caractères spéciaux correctement échappés pour que ça marche. Pour hôtels, cafés, cabinets et bureaux ; en plein écran, affiche verticale ou bandeau. Rien n’est téléchargé : le code est dessiné à l’écran.",
+  "params": {
+    "ssid": {
+      "label": "Nom du réseau (SSID)",
+      "help": "Exactement comme vos appareils l’affichent, majuscules et espaces compris."
+    },
+    "password": {
+      "label": "Mot de passe",
+      "help": "Affiché exprès : c’est un réseau invités. Saisissez-le tel quel ; les caractères comme ; : , \" et \\ sont échappés pour vous dans le code QR."
+    },
+    "security": {
+      "label": "Sécurité",
+      "options": {
+        "WPA": "WPA / WPA2 / WPA3 (la plupart des réseaux)",
+        "WEP": "WEP (anciens routeurs)",
+        "nopass": "Ouvert, sans mot de passe"
+      }
+    },
+    "hidden": {
+      "label": "Le réseau est masqué",
+      "help": "À activer seulement si le réseau ne diffuse pas son nom."
+    },
+    "show_password": {
+      "label": "Afficher le mot de passe en texte",
+      "help": "Désactivé, seul le code QR est affiché ; le code contient toujours le mot de passe."
+    },
+    "eyebrow": {
+      "label": "Petit titre",
+      "default": "Wi-Fi offert"
+    },
+    "headline": {
+      "label": "Titre",
+      "default": "Restez connecté pendant votre visite"
+    },
+    "hint": {
+      "label": "Indication sous le code",
+      "help": "Laissez vide pour la masquer.",
+      "default": "Visez le code avec l’appareil photo"
+    },
+    "ssid_label": {
+      "label": "Libellé du nom du réseau",
+      "help": "Laissez vide pour le mot « Réseau » dans la langue de l’écran."
+    },
+    "password_label": {
+      "label": "Libellé du mot de passe",
+      "help": "Laissez vide pour les mots « Mot de passe » dans la langue de l’écran."
+    },
+    "open_text": {
+      "label": "Texte pour un réseau ouvert",
+      "help": "Laissez vide pour « Aucun mot de passe requis » dans la langue de l’écran."
+    },
+    "hidden_text": {
+      "label": "Texte quand le mot de passe est masqué",
+      "help": "Laissez vide pour « Scannez le code pour vous connecter » dans la langue de l’écran."
+    },
+    "footer": {
+      "label": "Pied de page",
+      "default": "Besoin d’aide ? Demandez à l’accueil, nous serons ravis de vous aider."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent. Laissez vide pour ne pas afficher de logo."
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue des mots que l’écran écrit lui-même (libellés, messages). Laissez vide pour la langue de l’écran."
+    }
+  }
+}

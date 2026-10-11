@@ -1,0 +1,68 @@
+{
+  "name": "Bacheca notizie",
+  "description": "Una bacheca di notizie in stile rivista per qualsiasi feed RSS o Atom: una grande notizia in primo piano che cambia ogni pochi secondi, le quattro successive come schede, il titolo del feed e date relative. Tipografica per scelta (nessuna immagine remota), quindi funziona offline. Oppure scrivi i tuoi titoli.",
+  "params": {
+    "feed": {
+      "label": "Feed di notizie (fonte RSS / Atom, facoltativa)",
+      "help": "Una fonte dati RSS. Lascia vuoto per mostrare le notizie scritte qui sotto."
+    },
+    "title": {
+      "label": "Titolo",
+      "help": "Lascia vuoto per usare il titolo del feed (senza feed: «Ultime notizie» nella lingua dello schermo)."
+    },
+    "stories": {
+      "label": "Notizie (senza feed)",
+      "help": "Una per riga: Titolo | Breve riassunto. Il riassunto è facoltativo.",
+      "default": "Fernhill Works apre lo studio nel vecchio mulino | Tre piani, aperti al pubblico il sabato.\nLa migliore primavera della nostra storia | Ordini in crescita del 18% sull’anno scorso.\nLa giornata di volontariato raccoglie 4.200 per il sentiero | Due nuove passerelle.\nNuovo menù in mensa da lunedì | Più piatti vegetali."
+    },
+    "max_items": {
+      "label": "Notizie in rotazione"
+    },
+    "rotate_seconds": {
+      "label": "Secondi per notizia in primo piano"
+    },
+    "date_style": {
+      "label": "Date delle notizie",
+      "options": {
+        "relative": "Relativa (2 ore fa)",
+        "absolute": "Data e ora",
+        "off": "Nascondi"
+      }
+    },
+    "feature_label": {
+      "label": "Etichetta della notizia in primo piano",
+      "help": "Lascia vuoto per «In primo piano» nella lingua dello schermo."
+    },
+    "next_label": {
+      "label": "Intestazione sopra le schede",
+      "help": "Lascia vuoto per «A seguire» nella lingua dello schermo."
+    },
+    "show_summaries": {
+      "label": "Mostra il riassunto della notizia in primo piano"
+    },
+    "show_clock": {
+      "label": "Mostra l’orologio"
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "accent2": {
+      "label": "Secondo colore di accento",
+      "help": "La scheda in primo piano sfuma tra i due colori di accento."
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "timezone": {
+      "label": "Fuso orario (orologio e date)",
+      "help": "Lascia vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua dell’orologio, delle date e delle etichette integrate, ad esempio fr o en-GB. Lascia vuoto per la lingua dello schermo."
+    }
+  }
+}

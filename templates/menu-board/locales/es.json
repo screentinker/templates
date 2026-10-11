@@ -1,0 +1,104 @@
+{
+  "name": "Carta del menú",
+  "description": "Una carta para cafetería, restaurante o bar que se maqueta sola: platos agrupados por categoría, precios alineados, etiquetas como V o Nuevo y los agotados en gris. Escribe la carta o conecta una hoja de Google o una tabla manual y cambia los precios sin tocar la pantalla.",
+  "params": {
+    "title": {
+      "label": "Título"
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Una línea bajo el título. Déjalo vacío para ocultarla.",
+      "default": "Tostado en casa · Leche de avena sin coste extra"
+    },
+    "footer": {
+      "label": "Línea al pie",
+      "help": "Letra pequeña en la parte inferior. Déjalo vacío para ocultarla.",
+      "default": "Pregúntanos por los alérgenos · Precios con IVA incluido"
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Se muestra junto al título."
+    },
+    "items": {
+      "label": "Platos",
+      "help": "Un plato por línea: Artículo | Precio | Descripción | Categoría | Etiqueta. Se usa si no hay una fuente de datos conectada.",
+      "default": "Espresso | 2.80 | Doble, notas de chocolate y cereza | Café |\nFlat White | 3.60 | Leche sedosa, ristretto doble | Café | Popular\nCold Brew | 4.20 | Infusionado 18 horas en frío | Café | Nuevo\nEarl Grey | 3.00 | Bergamota, hoja suelta | Té | V\nNudo de canela | 3.40 | Azúcar de cardamomo | Bollería | Popular\nFinancier de almendra | 3.10 | Sin gluten | Bollería | Agotado"
+    },
+    "menu": {
+      "label": "Fuente de datos de la carta (opcional)",
+      "help": "Una hoja de Google, CSV, lista REST o tabla manual. Si tiene una columna Artículo, sustituye a los platos escritos arriba."
+    },
+    "item_col": {
+      "label": "Columna del artículo",
+      "help": "Los encabezados de columna de tu fuente. Si no se encuentra uno, se prueba el inglés (Item, Price, Description, Category, Tag).",
+      "default": "Artículo"
+    },
+    "price_col": {
+      "label": "Columna del precio",
+      "default": "Precio"
+    },
+    "desc_col": {
+      "label": "Columna de la descripción",
+      "default": "Descripción"
+    },
+    "category_col": {
+      "label": "Columna de la categoría",
+      "default": "Categoría"
+    },
+    "tag_col": {
+      "label": "Columna de la etiqueta",
+      "help": "Una etiqueta corta en forma de píldora. «Agotado» pone el plato en gris y tacha su precio.",
+      "default": "Etiqueta"
+    },
+    "currency": {
+      "label": "Símbolo de moneda",
+      "default": "€"
+    },
+    "currency_position": {
+      "label": "Posición de la moneda",
+      "options": {
+        "auto": "Como se usa en el idioma de la pantalla",
+        "before": "Antes del precio ($3.50)",
+        "after": "Después del precio (3,50 €)"
+      }
+    },
+    "decimals": {
+      "label": "Decimales",
+      "options": {
+        "2": "Siempre dos (3,50)",
+        "auto": "Solo si hacen falta (3,5, 4)",
+        "0": "Ninguno (4)"
+      }
+    },
+    "decimal_comma": {
+      "label": "Usar siempre coma decimal (3,50)",
+      "help": "Desactivado: el separador decimal sigue el idioma de la pantalla (3.50 en inglés, 3,50 en español)."
+    },
+    "font": {
+      "label": "Fuente de los títulos",
+      "options": {
+        "bitter": "Bitter (serifa)",
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (estrecha)",
+        "inter": "Inter (limpia)"
+      }
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "page_seconds": {
+      "label": "Segundos por página",
+      "help": "Solo se usa cuando la carta es demasiado larga para caber en una pantalla a un tamaño legible."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "El idioma del formato de precios y de las pocas palabras que escribe la propia carta. Déjalo vacío para usar el idioma de la pantalla."
+    }
+  }
+}

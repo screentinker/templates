@@ -1,0 +1,100 @@
+{
+  "name": "Preissenkung (Hochformat)",
+  "description": "Hochformat (9:16). Ein Angebotsbildschirm für eine Preissenkung: das Produktbild auf einem farbigen Ring, der alte Preis, ein großer neuer Preis und ein Spar-Sticker, dazu eine Leiste für Ihre Bedingungen und ein optionaler Live-Countdown bis Angebotsende.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ein annähernd quadratisches PNG oder SVG. Das mitgelieferte Abzeichen ist ein Platzhalter – ersetzen Sie es durch Ihr eigenes."
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Ausschalten, wenn Sie kein Logo haben (ein leeres Logo-Feld zeigt sonst einen gestrichelten Rahmen)."
+    },
+    "brand": {
+      "label": "Name des Geschäfts",
+      "help": "Steht neben dem Logo. Leer lassen, wenn Ihr Logo den Namen schon enthält."
+    },
+    "badge": {
+      "label": "Etikett",
+      "help": "Die Pille über der Überschrift. Leer lassen, dann bleibt sie ein schlichter farbiger Reiter.",
+      "default": "REDUZIERT"
+    },
+    "headline": {
+      "label": "Produkt / Überschrift",
+      "help": "Platz für drei Zeilen; 40 Zeichen passen immer.",
+      "default": "Studio Pro ANC-Kopfhörer"
+    },
+    "was_price": {
+      "label": "Alter Preis",
+      "help": "So eingeben, wie es dastehen soll, z. B. „Statt 249,00 €“. Leer lassen zum Ausblenden.",
+      "default": "Statt 249,00 €"
+    },
+    "price": {
+      "label": "Neuer Preis",
+      "help": "Die große Zahl, so wie sie dastehen soll: 179 €, 1.299,99 €.",
+      "default": "179 €"
+    },
+    "save_text": {
+      "label": "Spar-Sticker",
+      "help": "Auf dem gelben Sticker über dem Bild. Kurz halten: −70 €, −30 %, HALBER PREIS.",
+      "default": "−70 €"
+    },
+    "product_image": {
+      "label": "Produktbild",
+      "help": "Am besten ein freigestelltes PNG oder SVG mit transparentem Hintergrund. Es wird eingepasst, nie beschnitten."
+    },
+    "show_image": {
+      "label": "Produktbild anzeigen",
+      "help": "Ausschalten, um die Fläche ohne Bild zu lassen (ein leeres Bild-Feld zeigt sonst einen gestrichelten Rahmen)."
+    },
+    "show_countdown": {
+      "label": "Countdown anzeigen",
+      "help": "Ausschalten bei Angeboten ohne Enddatum: Beschriftung und Timer verschwinden beide."
+    },
+    "countdown_label": {
+      "label": "Beschriftung über dem Countdown",
+      "help": "Bleibt nach Ablauf stehen – wählen Sie Worte, die auch zur Schlussmeldung passen.",
+      "default": "NUR KURZE ZEIT"
+    },
+    "countdown_target": {
+      "label": "Angebot endet am",
+      "help": "ISO 8601 mit Zeitzonen-Versatz, z. B. 2026-11-01T23:59:00+01:00 oder 2026-11-01T23:59:00+00:00."
+    },
+    "countdown_done": {
+      "label": "Anzeige nach Ablauf des Countdowns",
+      "default": "Solange vorrätig"
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache des Live-Countdowns, z. B. de oder de-CH. Leer = Sprache des Bildschirms. Ihre eigenen Texte erscheinen so, wie Sie sie eingeben."
+    },
+    "small_print": {
+      "label": "Kleingedrucktes",
+      "help": "Bedingungen in der unteren Leiste. Ein, zwei Sätze.",
+      "default": "Angebot gültig bis 31. Dezember 2026 oder solange der Vorrat reicht. Ein Stück pro Kunde. Im Geschäft und online."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Das Etikett, die untere Leiste und der Ring hinter dem Bild."
+    },
+    "highlight": {
+      "label": "Preisfarbe",
+      "help": "Der neue Preis und der Spar-Sticker."
+    },
+    "background": {
+      "label": "Hintergrundfarbe",
+      "help": "Auch die Textfarbe auf dem Sticker."
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "background_image": {
+      "label": "Hintergrundfoto",
+      "help": "Optional. Ein Foto hinter allem, abgedunkelt durch die Einstellung darunter."
+    },
+    "background_dim": {
+      "label": "Foto abdunkeln",
+      "help": "0 = Foto unverändert, 0,9 = fast schwarz. Nur mit Hintergrundfoto wirksam."
+    }
+  }
+}

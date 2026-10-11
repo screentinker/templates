@@ -21,8 +21,9 @@ day names follow the data source's settings.
 | Weather data source | data source (required) | — |
 | Location name | text (60) | `Local weather` |
 | Temperature suffix | text (4) | `°` (use `°C` or `°F` if you prefer) |
+| Feels-like / Humidity / Today / Precipitation / Updated label | text (24 / 24 / 16 / 32 / 24) | `Feels like` / `Humidity` / `Today` / `Chance of precipitation` / `Updated` |
 | Accent / Background / Text colour | colour | `#6CC4F0` / `#0B1D2E` / `#FFFFFF` |
-| Clock timezone / Date language / Clock format | timezone / locale / select | the screen's own / 24-hour |
+| Clock timezone / Language / Clock format | timezone / locale / select | the screen's own / 24-hour |
 
 ## How it reads the data
 
@@ -31,5 +32,18 @@ Every value is a `{{ds:<source>.<key>}}` reference, built from the chosen source
 `apparent_temperature`, `humidity`, `day0_high/low/precip_prob` (today) and `day1…day5`
 `_name/_icon/_high/_low`, plus `updated`. The icons are the data source's emoji, drawn by the
 player's own emoji font.
+
+## Languages
+
+The dashboard shows this template's name, description and every setting's label and help in English, German,
+Spanish, French, Hindi, Italian, Japanese, Dutch, Portuguese and Chinese (`locales/<lang>.json`; a
+server without translation support simply shows English). The words on the slide that are not weather data —
+"Feels like", "Humidity", "Today", "Chance of precipitation" and "Updated" — are settings, and
+start out in the dashboard's language (for example `Gefühlt`, `Luftfeuchte`, `Heute`,
+`Niederschlagsrisiko`, `Aktualisiert` in German). The date follows the **Language** setting (empty =
+the screen's language). The forecast day names come from the data source's own language setting; the
+condition text ("Partly cloudy") is produced by the server's Weather data source and is currently
+English only. The slide renderer's bundled fonts cover Latin; Japanese, Chinese and Hindi fall back to the screen's own
+fonts (Noto on ScreenTinker players).
 
 Licence: MIT (see `LICENSE`).

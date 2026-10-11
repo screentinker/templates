@@ -1,0 +1,96 @@
+{
+  "name": "Bienvenida a nuevas incorporaciones (vertical)",
+  "description": "Da la bienvenida a alguien en su primer día: nombre y puesto, una frase con sus propias palabras, temas para saludar y una insignia con la fecha de inicio. Muestra un círculo con iniciales hasta que añadas una foto. Formato vertical 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona mejor un PNG o SVG con fondo transparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Una foto de cabeza y hombros, recortada para encajar en el marco. Activa «Mostrar la foto» cuando elijas una."
+    },
+    "show_photo": {
+      "label": "Mostrar la foto",
+      "help": "Desactivado muestra en su lugar un círculo con las iniciales, para quien prefiera no mostrar su foto."
+    },
+    "initials": {
+      "label": "Iniciales",
+      "help": "Se muestran en el círculo cuando la foto está desactivada. Una o dos letras."
+    },
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "Encima del nombre. Se lee mejor en mayúsculas.",
+      "default": "DEMOS LA BIENVENIDA A"
+    },
+    "name": {
+      "label": "Nombre",
+      "help": "Una línea, hasta 26 caracteres. Escríbelo con mayúsculas y minúsculas normales; TODO EN MAYÚSCULAS ocupa más y puede no caber."
+    },
+    "role": {
+      "label": "Puesto",
+      "help": "Cargo, equipo, clase o sede. Si es largo, pasa a una segunda línea.",
+      "default": "Diseñador de producto júnior, Brand Studio"
+    },
+    "show_quote": {
+      "label": "Mostrar la cita",
+      "help": "Desactivado oculta la cita y sus comillas."
+    },
+    "quote": {
+      "label": "Cita",
+      "help": "Una o dos frases con sus propias palabras. Sin comillas.",
+      "default": "Acabo de llegar de Gotemburgo y tengo muchas ganas de conocerlos. ¡Pasen a decir hej!"
+    },
+    "quote_mark": {
+      "label": "Comillas",
+      "help": "El signo decorativo grande junto a la cita. Usa el habitual en tu idioma, p. ej. « o “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Mostrar el dato curioso",
+      "help": "Desactivado oculta la etiqueta y el texto del dato curioso."
+    },
+    "fact_label": {
+      "label": "Etiqueta del dato curioso",
+      "help": "Una etiqueta corta, p. ej. DATO CURIOSO o PREGÚNTAME POR.",
+      "default": "HÁBLAME DE"
+    },
+    "fun_fact": {
+      "label": "Dato curioso",
+      "help": "Una o dos frases cortas.",
+      "default": "Juegos de mesa, escalada en bloque y el gran debate de los rollos de canela. Sam está en el puesto 4B, planta 3."
+    },
+    "show_badge": {
+      "label": "Mostrar la insignia"
+    },
+    "badge": {
+      "label": "Texto de la insignia",
+      "help": "Un mes, una fecha de inicio, un equipo o un hito. Se lee mejor en mayúsculas.",
+      "default": "EMPIEZA EL LUN 12 OCT"
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "La tarjeta grande detrás de la foto, el encabezado pequeño y las etiquetas."
+    },
+    "highlight": {
+      "label": "Color de realce",
+      "help": "La insignia, la línea corta y el confeti."
+    },
+    "badge_text_color": {
+      "label": "Color del texto de la insignia"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "card_color": {
+      "label": "Color de la tarjeta y del círculo de iniciales",
+      "help": "La tarjeta del dato curioso y el círculo detrás de las iniciales."
+    },
+    "initials_color": {
+      "label": "Color de las iniciales"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "UPTIME 3036",
+  "description": "Un jeu de tir arcade original à la première personne sur la pire astreinte de l’an 3036 : tous les serveurs sont en panne et le datacenter grouille de bogues. Personne ne joue ? Il joue tout seul en mode démo sur pilote automatique. Cliquez ou appuyez sur une touche pour prendre la main ; partez, et la démo reprend.",
+  "params": {
+    "title": {
+      "label": "Titre"
+    },
+    "tagline": {
+      "label": "Accroche",
+      "default": "LES SERVEURS SONT EN PANNE. TU ES D’ASTREINTE."
+    },
+    "accent": {
+      "label": "Couleur néon"
+    },
+    "accent2": {
+      "label": "Seconde couleur néon"
+    },
+    "difficulty": {
+      "label": "Difficulté",
+      "options": {
+        "easy": "Facile",
+        "normal": "Normale",
+        "hard": "Difficile"
+      }
+    },
+    "playable": {
+      "label": "Jouable (clic / clavier)",
+      "help": "Désactivé : le bot joue sans fin, une pure boucle de démonstration."
+    },
+    "idle_sec": {
+      "label": "Retour au mode démo après (secondes d’inactivité)"
+    },
+    "resolution": {
+      "label": "Résolution de rendu",
+      "help": "Plus bas, c’est plus rapide sur les petits lecteurs ; l’aspect pixelisé est voulu.",
+      "options": {
+        "320": "Rétro (320)",
+        "400": "Standard (400)",
+        "560": "Net (560)"
+      }
+    },
+    "crt": {
+      "label": "Lignes de balayage CRT"
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue de tous les mots et nombres à l’écran, par exemple fr ou ja. Laissez vide pour la langue de l’écran. Le titre et l’accroche sont à écrire vous-même."
+    }
+  }
+}

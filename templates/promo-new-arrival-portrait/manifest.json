@@ -1,0 +1,185 @@
+{
+  "id": "promo-new-arrival-portrait",
+  "name": "New arrival promo (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A portrait (9:16) calm, editorial screen for a new product in a shop: a serif product name, a short description, the price and where to find it, the product on a tinted panel with a \"New\" sticker, and an optional QR code to the product page.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-new-arrival-portrait",
+  "license": "MIT",
+  "tags": [
+    "promo",
+    "retail",
+    "new",
+    "product",
+    "qr",
+    "boutique",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A square-ish PNG or SVG. The bundled badge is a placeholder; replace it with your own.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo (an empty logo setting would otherwise show a dashed box).",
+      "default": true
+    },
+    {
+      "name": "brand",
+      "type": "text",
+      "label": "Store name",
+      "max": 22,
+      "help": "Shown beside the logo. Leave empty if your logo already says it.",
+      "default": "NORTHWIND"
+    },
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 30,
+      "default": "NEW ARRIVAL"
+    },
+    {
+      "name": "sticker",
+      "type": "text",
+      "label": "Round sticker",
+      "max": 6,
+      "help": "One short word. Leave empty for a plain dot.",
+      "default": "NEW"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Product name",
+      "max": 34,
+      "help": "Room for three lines; 34 characters is the most that always fits.",
+      "default": "The Harbour Waxed Canvas Tote"
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "label": "Description",
+      "max": 120,
+      "default": "Waxed canvas, vegetable-tanned leather handles and an inside zip pocket. In ink, olive and sand."
+    },
+    {
+      "name": "price",
+      "type": "text",
+      "label": "Price",
+      "max": 10,
+      "help": "As it should read, e.g. $148 or 1.299,00 €. Leave empty to hide.",
+      "default": "$148"
+    },
+    {
+      "name": "where",
+      "type": "text",
+      "label": "Where to find it",
+      "max": 40,
+      "default": "IN STORE NOW · LEVEL 1"
+    },
+    {
+      "name": "product_image",
+      "type": "image",
+      "label": "Product picture",
+      "help": "A cut-out PNG or SVG with a transparent background works best. It is fitted, never cropped.",
+      "default": "tpl:tote.svg"
+    },
+    {
+      "name": "show_image",
+      "type": "checkbox",
+      "label": "Show the product picture",
+      "help": "Turn off to leave the panel without a picture (an empty picture setting would otherwise show a dashed box).",
+      "default": true
+    },
+    {
+      "name": "show_qr",
+      "type": "checkbox",
+      "label": "Show the QR code",
+      "help": "Turn off if you have no link: the code, its card and caption disappear.",
+      "default": true
+    },
+    {
+      "name": "qr_url",
+      "type": "text",
+      "label": "QR link",
+      "max": 300,
+      "help": "The page the code opens. Shorter links scan from further away.",
+      "default": "https://example.com/harbour-tote"
+    },
+    {
+      "name": "qr_caption",
+      "type": "text",
+      "label": "QR caption",
+      "max": 22,
+      "default": "See all colours"
+    },
+    {
+      "name": "small_print",
+      "type": "text",
+      "label": "Small print",
+      "max": 120,
+      "default": "While stocks last. Colours may vary from the picture."
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "help": "The small heading, sticker and rules.",
+      "default": "#B4532A"
+    },
+    {
+      "name": "panel",
+      "type": "color",
+      "label": "Picture panel colour",
+      "default": "#E2D3C1"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#F5F0E8"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#1F1B17"
+    },
+    {
+      "name": "sticker_text",
+      "type": "color",
+      "label": "Sticker text colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "name": "background_image",
+      "type": "image",
+      "label": "Background photo",
+      "help": "Optional. A photo behind everything, darkened by the setting below.",
+      "default": ""
+    },
+    {
+      "name": "background_dim",
+      "type": "number",
+      "label": "Darken the photo",
+      "min": 0,
+      "max": 0.9,
+      "step": 0.05,
+      "default": 0.3,
+      "help": "0 = the photo as is, 0.9 = almost black. Only used with a background photo."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Accueil – Bienvenue (portrait)",
+  "description": "Un écran d'accueil sobre pour une réception ou un hall : votre logo, un titre et une ligne de détail, avec une horloge et la date en direct dans le fuseau horaire et la langue du bâtiment. Mise en page portrait 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Idéalement un PNG ou SVG à fond transparent. Affiché en haut."
+    },
+    "eyebrow": {
+      "label": "Petit titre",
+      "default": "RAVIS DE VOUS VOIR"
+    },
+    "headline": {
+      "label": "Titre",
+      "default": "Bienvenue chez Northwind Studio"
+    },
+    "subline": {
+      "label": "Ligne de détail",
+      "default": "Merci de vous présenter à l'accueil : votre hôte arrive dans un instant."
+    },
+    "footer": {
+      "label": "Pied de page",
+      "default": "Wi-Fi invités : Northwind-Guest"
+    },
+    "accent": {
+      "label": "Couleur d'accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "timezone": {
+      "label": "Fuseau horaire de l'horloge",
+      "help": "Laissez vide pour utiliser l'horloge de l'écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Langue de la date (jour et mois), par ex. fr ou fr-CA. Laissez vide pour la langue de l'écran."
+    },
+    "clock_format": {
+      "label": "Format de l'heure",
+      "options": {
+        "24": "24 heures",
+        "12": "12 heures"
+      }
+    }
+  }
+}

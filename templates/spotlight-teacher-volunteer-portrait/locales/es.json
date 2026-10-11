@@ -1,0 +1,94 @@
+{
+  "name": "Docentes y voluntarios destacados (vertical)",
+  "description": "Da las gracias en público: un diseño cálido y libresco con foto, nombre, cargo, una cita y una línea sobre la persona fuera del aula. Pensado para escuelas, bibliotecas, ONG y grupos comunitarios. Formato vertical 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona mejor un PNG o SVG con fondo transparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Una foto de cabeza y hombros, recortada para encajar en el marco. Las fotos cuadradas funcionan mejor."
+    },
+    "show_photo": {
+      "label": "Mostrar la foto",
+      "help": "Desactivado muestra en su lugar un círculo con las iniciales, para quien prefiera no mostrar su foto."
+    },
+    "initials": {
+      "label": "Iniciales",
+      "help": "Se muestran en el círculo cuando la foto está desactivada. Una o dos letras."
+    },
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "Encima del nombre. Se lee mejor en mayúsculas.",
+      "default": "DOCENTE DESTACADA"
+    },
+    "name": {
+      "label": "Nombre",
+      "help": "Una línea, hasta 26 caracteres. Escríbelo con mayúsculas y minúsculas normales; TODO EN MAYÚSCULAS ocupa más y puede no caber.",
+      "default": "Sra. Elena Vasquez"
+    },
+    "role": {
+      "label": "Puesto",
+      "help": "Cargo, equipo, clase o sede. Si es largo, pasa a una segunda línea.",
+      "default": "Maestra de 4.º curso y responsable del club de lectura"
+    },
+    "show_quote": {
+      "label": "Mostrar la cita",
+      "help": "Desactivado oculta la cita y sus comillas."
+    },
+    "quote": {
+      "label": "Cita",
+      "help": "Una o dos frases con sus propias palabras. Sin comillas.",
+      "default": "A cada niño solo le separa un buen libro de amar la lectura. Yo le ayudo a encontrarlo."
+    },
+    "quote_mark": {
+      "label": "Comillas",
+      "help": "El signo decorativo grande junto a la cita. Usa el habitual en tu idioma, p. ej. « o “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Mostrar el dato curioso",
+      "help": "Desactivado oculta la etiqueta y el texto del dato curioso."
+    },
+    "fact_label": {
+      "label": "Etiqueta del dato curioso",
+      "help": "Una etiqueta corta, p. ej. DATO CURIOSO o PREGÚNTAME POR.",
+      "default": "FUERA DEL AULA"
+    },
+    "fun_fact": {
+      "label": "Dato curioso",
+      "help": "Una o dos frases cortas.",
+      "default": "Elena tiene abejas en el huerto escolar, y su clase bautizó a la reina como «Su Majestad Zumbona»."
+    },
+    "show_badge": {
+      "label": "Mostrar la insignia"
+    },
+    "badge": {
+      "label": "Texto de la insignia",
+      "help": "Un mes, una fecha de inicio, un equipo o un hito. Se lee mejor en mayúsculas.",
+      "default": "14 AÑOS EN ELMWOOD"
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "Insignia, encabezado pequeño, etiquetas y la franja inferior."
+    },
+    "highlight": {
+      "label": "Color de realce",
+      "help": "Las comillas y el círculo detrás de las iniciales."
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "card_color": {
+      "label": "Color del círculo desplazado",
+      "help": "El círculo suave detrás de la foto."
+    },
+    "initials_color": {
+      "label": "Color de las iniciales"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "name": "Benvenuto ai nuovi colleghi (verticale)",
+  "description": "Accogli qualcuno nel suo primo giorno: nome e ruolo, una frase con parole sue, di cosa parlare per salutarlo e un badge con la data di inizio. Mostra un cerchio con le iniziali finché non aggiungi una foto. Layout verticale 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Meglio un PNG o SVG con sfondo trasparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Una foto a mezzo busto, ritagliata per riempire la cornice. Attiva «Mostra la foto» dopo averne scelta una."
+    },
+    "show_photo": {
+      "label": "Mostra la foto",
+      "help": "Se disattivato mostra un cerchio con le iniziali, per chi preferisce non esporre la propria foto."
+    },
+    "initials": {
+      "label": "Iniziali",
+      "help": "Compaiono nel cerchio quando la foto è disattivata. Una o due lettere."
+    },
+    "eyebrow": {
+      "label": "Titoletto",
+      "help": "Sopra il nome. In maiuscolo si legge meglio.",
+      "default": "DIAMO IL BENVENUTO A"
+    },
+    "name": {
+      "label": "Nome",
+      "help": "Una riga, fino a 26 caratteri. Scrivilo normalmente; TUTTO MAIUSCOLO è più largo e potrebbe non starci."
+    },
+    "role": {
+      "label": "Ruolo",
+      "help": "Mansione, team, classe o sede. Se è lungo va a capo su una seconda riga.",
+      "default": "Junior Product Designer, Brand Studio"
+    },
+    "show_quote": {
+      "label": "Mostra la citazione",
+      "help": "Se disattivato nasconde la citazione e le virgolette."
+    },
+    "quote": {
+      "label": "Citazione",
+      "help": "Una o due frasi con parole sue. Senza virgolette.",
+      "default": "Vengo da Göteborg e non vedo l’ora di conoscervi tutti. Passate a dire hej!"
+    },
+    "quote_mark": {
+      "label": "Virgolette",
+      "help": "Il grande segno decorativo accanto alla citazione. Usa quello della tua lingua, ad es. « o “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Mostra la curiosità",
+      "help": "Se disattivato nasconde etichetta e testo della curiosità."
+    },
+    "fact_label": {
+      "label": "Etichetta della curiosità",
+      "help": "Un’etichetta breve, ad es. CURIOSITÀ o CHIEDIMI DI.",
+      "default": "PARLAMI DI"
+    },
+    "fun_fact": {
+      "label": "Curiosità",
+      "help": "Una o due frasi brevi.",
+      "default": "Giochi da tavolo, arrampicata boulder e l’eterno dibattito sui cinnamon roll. Sam è alla postazione 4B, piano 3."
+    },
+    "show_badge": {
+      "label": "Mostra il badge"
+    },
+    "badge": {
+      "label": "Testo del badge",
+      "help": "Un mese, una data di inizio, un team o un traguardo. In maiuscolo si legge meglio.",
+      "default": "INIZIA LUN 12 OTT"
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "La grande scheda dietro la foto, il titoletto e le etichette."
+    },
+    "highlight": {
+      "label": "Colore di evidenziazione",
+      "help": "Il badge, la linea corta e i coriandoli."
+    },
+    "badge_text_color": {
+      "label": "Colore del testo del badge"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "card_color": {
+      "label": "Colore della scheda e del cerchio delle iniziali",
+      "help": "La scheda curiosità e il cerchio dietro le iniziali."
+    },
+    "initials_color": {
+      "label": "Colore delle iniziali"
+    }
+  }
+}

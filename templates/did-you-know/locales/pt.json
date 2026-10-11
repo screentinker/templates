@@ -1,0 +1,54 @@
+{
+  "name": "Você sabia?",
+  "description": "Uma tela de curiosidade do dia marcante: um caractere grande num disco vibrante, uma frase surpreendente, uma explicação curta e uma linha de fonte. Para escolas, bibliotecas, museus, salas de espera e copas de escritório.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "default": "VOCÊ SABIA?"
+    },
+    "badge": {
+      "label": "Caractere no disco",
+      "help": "De um a três caracteres, grandes no disco colorido: ?, !, um número."
+    },
+    "number": {
+      "label": "Número da curiosidade",
+      "help": "No canto superior direito, por exemplo “Nº 27”. Deixe vazio para ocultar.",
+      "default": "Nº 27"
+    },
+    "fact": {
+      "label": "A curiosidade",
+      "help": "O título: uma frase curta e surpreendente.",
+      "default": "O polvo tem três corações e sangue azul."
+    },
+    "detail": {
+      "label": "Explicação",
+      "help": "Uma ou duas frases que explicam. Enter começa uma nova linha.",
+      "default": "Dois corações bombeiam o sangue pelas brânquias e o terceiro pelo corpo. Ele é azul porque leva oxigênio com cobre, e não com ferro."
+    },
+    "footer": {
+      "label": "Rodapé",
+      "help": "Uma fonte, o nome da série ou onde saber mais.",
+      "default": "Semana da Ciência na Biblioteca Northwind · Peça a lista de leitura na recepção"
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desligado oculta o logotipo e o espaço dele fica vazio."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG com fundo transparente, em cor clara para o fundo escuro padrão."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "O disco, o título pequeno, o número e a linha."
+    },
+    "background": {
+      "label": "Cor de fundo",
+      "help": "Atrás de tudo. O caractere no disco também é desenhado nesta cor."
+    },
+    "text_color": {
+      "label": "Cor do texto",
+      "help": "A curiosidade, a explicação e o rodapé."
+    }
+  }
+}

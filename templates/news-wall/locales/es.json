@@ -1,0 +1,68 @@
+{
+  "name": "Muro de noticias",
+  "description": "Un muro de noticias estilo revista para cualquier feed RSS o Atom: una gran noticia destacada que rota cada pocos segundos, las cuatro siguientes como tarjetas, el título del feed y fechas relativas. Tipográfico a propósito (sin imágenes remotas), así que funciona sin conexión. O escribe tus propios titulares.",
+  "params": {
+    "feed": {
+      "label": "Feed de noticias (fuente RSS / Atom, opcional)",
+      "help": "Una fuente de datos RSS. Déjalo vacío para mostrar las noticias escritas abajo."
+    },
+    "title": {
+      "label": "Título",
+      "help": "Déjalo vacío para usar el título del feed (sin feed: «Últimas noticias» en el idioma de la pantalla)."
+    },
+    "stories": {
+      "label": "Noticias (sin feed)",
+      "help": "Una por línea: Titular | Resumen breve. El resumen es opcional.",
+      "default": "Fernhill Works abre su estudio de diseño en el viejo molino | Tres plantas, abiertas al público los sábados.\nLa mejor primavera de la empresa | Pedidos un 18 % por encima del año pasado.\nLa jornada de voluntariado recauda 4.200 para el sendero | Dos nuevas pasarelas.\nNuevo menú en el comedor desde el lunes | Más platos vegetales."
+    },
+    "max_items": {
+      "label": "Noticias en rotación"
+    },
+    "rotate_seconds": {
+      "label": "Segundos por noticia destacada"
+    },
+    "date_style": {
+      "label": "Fechas de las noticias",
+      "options": {
+        "relative": "Relativa (hace 2 horas)",
+        "absolute": "Fecha y hora",
+        "off": "Ocultar"
+      }
+    },
+    "feature_label": {
+      "label": "Etiqueta de la noticia destacada",
+      "help": "Déjalo vacío para «Destacado» en el idioma de la pantalla."
+    },
+    "next_label": {
+      "label": "Encabezado sobre las tarjetas",
+      "help": "Déjalo vacío para «A continuación» en el idioma de la pantalla."
+    },
+    "show_summaries": {
+      "label": "Mostrar el resumen de la noticia destacada"
+    },
+    "show_clock": {
+      "label": "Mostrar el reloj"
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "accent2": {
+      "label": "Segundo color de acento",
+      "help": "La tarjeta destacada mezcla los dos colores de acento."
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "timezone": {
+      "label": "Zona horaria (reloj y fechas)",
+      "help": "Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma del reloj, las fechas y las etiquetas integradas, por ejemplo fr o en-GB. Déjalo vacío para usar el idioma de la pantalla."
+    }
+  }
+}

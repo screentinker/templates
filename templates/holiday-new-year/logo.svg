@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" width="360" height="100">
+  <!-- Placeholder wordmark for the fictional "Northwind". Original work, MIT. Replace it with your own logo. -->
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#FFF8EC" stroke-width="7"/>
+  <path d="M34 70 V30 L66 70 V30" fill="none" stroke="#FFF8EC" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="108" y="64" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="2" fill="#FFF8EC">NORTHWIND</text>
+</svg>

@@ -1,0 +1,51 @@
+{
+  "name": "Journée merci",
+  "description": "Un écran lumineux de remerciements pour une journée du personnel, des bénévoles, des clients ou des enseignants : formes géométriques sur fond crème, un grand titre de remerciement, un message avec les chiffres à fêter et un merci en plusieurs langues.",
+  "params": {
+    "eyebrow": {
+      "label": "Surtitre",
+      "help": "La ligne courte au-dessus du titre. Laissez vide pour la masquer.",
+      "default": "JOURNÉE DU PERSONNEL"
+    },
+    "headline": {
+      "label": "Titre",
+      "help": "Deux lignes lui sont réservées : environ 24 caractères tiennent. Un titre plus long passe sur une troisième ligne et empiète sur le message.",
+      "default": "Merci pour tout"
+    },
+    "message": {
+      "label": "Message",
+      "help": "Une phrase ou deux sous le titre ; jusqu’à 200 caractères tiennent. Un retour à la ligne commence une nouvelle ligne.",
+      "default": "De l’équipe de nuit à l’accueil : 1 284 commandes expédiées, 96 % d’avis cinq étoiles et notre meilleur trimestre. Aujourd’hui, le déjeuner est offert."
+    },
+    "date_line": {
+      "label": "Ligne de date",
+      "help": "Texte libre, saisi tel qu’il doit s’afficher : une date, une heure et un lieu, ou une signature.",
+      "default": "12 H 30  ·  ATRIUM  ·  TOUS BIENVENUS"
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivez si vous n’avez pas de logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG large à fond transparent (environ 3,4 : 1 remplit le cadre ; les autres formats y sont ajustés). Remplacez le logo provisoire Northwind."
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "accent2": {
+      "label": "Seconde couleur d’accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "thanks_line": {
+      "label": "Ligne du bas",
+      "help": "Petits caractères sous la ligne de date ; par défaut, merci en plusieurs langues.",
+      "default": "Thank you  ·  Danke  ·  Gracias  ·  Grazie  ·  Obrigado  ·  Tack  ·  Asante"
+    }
+  }
+}

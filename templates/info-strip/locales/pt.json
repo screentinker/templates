@@ -1,0 +1,96 @@
+{
+  "name": "Barra de informações",
+  "description": "Uma barra compacta para a borda da tela: seu logotipo, a hora e a data, o tempo agora e uma linha de avisos curtos que se alternam. Feita para barras em L, faixas inferiores e barras laterais; ela se reorganiza para uma faixa fina, uma coluna alta ou a tela inteira. Nada é baixado: o tempo vem da sua própria fonte de dados de clima.",
+  "params": {
+    "messages": {
+      "label": "Mensagens",
+      "help": "Uma mensagem curta por linha; elas se alternam. Comece a linha com um rótulo e | para mostrá-lo como etiqueta, por exemplo: Hoje | Reunião geral às 15:30. Vazio = só relógio e clima.",
+      "default": "Boas-vindas | Visitantes: registro e crachá na recepção\nHoje | Reunião geral no átrio às 15:30, com café às 15:00\nSegurança | Teste do alarme de incêndio na quinta às 11:00, sem evacuação\nCafé | Sopa do dia: abóbora assada e pão artesanal, 4,50\nWi-Fi | Rede de visitantes Northwind-Guest, senha na recepção\nParabéns | Priya Raman completa dez anos na equipe!"
+    },
+    "message_seconds": {
+      "label": "Segundos por mensagem"
+    },
+    "weather": {
+      "label": "Fonte de dados de clima (opcional)",
+      "help": "Uma fonte de dados do tipo Clima (Data Sources → New → Weather). Deixe vazio para ocultar o clima."
+    },
+    "location": {
+      "label": "Nome do local",
+      "help": "Abaixo da temperatura, quando há espaço. Vazio = o nome do local da fonte de dados de clima."
+    },
+    "show_forecast": {
+      "label": "Mostrar os próximos três dias",
+      "help": "Só na barra lateral e na tela inteira, onde há espaço."
+    },
+    "name": {
+      "label": "Nome da organização",
+      "help": "Ao lado do logotipo. Deixe vazio para mostrar só o logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um logotipo quadrado ou largo com fundo transparente funciona melhor. Remova para ocultar."
+    },
+    "clock_format": {
+      "label": "Formato do relógio",
+      "options": {
+        "24": "24 horas (14:30)",
+        "12": "12 horas (2:30 PM)",
+        "auto": "O formato usual do idioma"
+      }
+    },
+    "show_seconds": {
+      "label": "Mostrar segundos"
+    },
+    "date_format": {
+      "label": "Data",
+      "options": {
+        "long": "terça-feira, 6 de outubro",
+        "short": "ter., 6 de out.",
+        "numeric": "06/10/2026 (na ordem do idioma)",
+        "none": "Ocultar a data"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palavras do clima e formato de datas e números, por exemplo en-GB, de-DE ou fr-CA. Vazio = o idioma da tela."
+    },
+    "layout": {
+      "label": "Layout",
+      "options": {
+        "auto": "Automático, pela forma da zona",
+        "row": "Sempre uma faixa horizontal",
+        "column": "Sempre uma barra lateral vertical",
+        "full": "Sempre o layout de tela inteira"
+      }
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "edge": {
+      "label": "Linha de destaque",
+      "help": "Uma linha fina na cor de destaque no lado que encosta no conteúdo principal.",
+      "options": {
+        "auto": "Automática (em cima numa faixa, à esquerda numa barra lateral)",
+        "top": "Em cima",
+        "bottom": "Embaixo",
+        "left": "À esquerda",
+        "right": "À direita",
+        "none": "Nenhuma"
+      }
+    },
+    "animate": {
+      "label": "Animar",
+      "help": "As mensagens entram deslizando e uma barra fina mostra quando vem a próxima. Desligue em players muito fracos."
+    }
+  }
+}

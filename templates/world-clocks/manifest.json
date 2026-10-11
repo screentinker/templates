@@ -1,7 +1,7 @@
 {
   "id": "world-clocks",
   "name": "World clocks",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "html",
   "description": "Two to eight live clocks for the cities you work with — analog, digital or both, with the date, a day/night cue and the hour difference from this screen. Lays itself out as a grid, a portrait list or a thin strip. Nothing is fetched: the times come from the screen's own clock.",
   "author": "ScreenTinker",
@@ -29,8 +29,10 @@
     { "name": "day_end", "type": "number", "label": "Night starts at (hour)", "min": 1, "max": 24, "step": 1, "default": 19 },
     { "name": "highlight_local", "type": "checkbox", "label": "Highlight this screen's city", "help": "Outlines the clock whose timezone matches the screen's own (or the one set below).", "default": true },
     { "name": "home_timezone", "type": "timezone", "label": "This screen's timezone", "help": "Used for the highlight and the +/- hours. Leave empty to use the screen's own setting.", "default": "" },
-    { "name": "here_label", "type": "text", "label": "Label on the highlighted clock", "max": 16, "default": "Here" },
-    { "name": "locale", "type": "locale", "label": "Date language", "help": "For example en-GB, de-DE or ja-JP. Leave empty for the screen's language.", "default": "" },
+    { "name": "here_label", "type": "text", "label": "Label on the highlighted clock", "max": 16, "default": "", "help": "Leave empty for \"Here\" in the screen's language." },
+    { "name": "day_label", "type": "text", "label": "Day label", "max": 16, "default": "", "help": "Shown on cities where it is daytime. Leave empty for \"Day\" in the screen's language." },
+    { "name": "night_label", "type": "text", "label": "Night label", "max": 16, "default": "", "help": "Shown on cities where it is night. Leave empty for \"Night\" in the screen's language." },
+    { "name": "locale", "type": "locale", "label": "Language", "help": "The language of the dates, AM/PM and the words on screen, for example en-GB, de-DE or ja-JP. Leave empty for the screen's language.", "default": "" },
     { "name": "accent", "type": "color", "label": "Accent colour", "default": "#F2B13C" },
     { "name": "background", "type": "color", "label": "Background colour", "default": "#0D1117" },
     { "name": "text_color", "type": "color", "label": "Text colour", "default": "#F3F1EC" }

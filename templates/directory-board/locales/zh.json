@@ -1,0 +1,122 @@
+{
+  "name": "楼宇指引",
+  "description": "写字楼、商场或园区大堂的楼层指引:列出每家单位及其楼层和房号,可按楼层分组或按 A 到 Z 排列并带索引,还有方向箭头、“您的位置”一行和时钟。自动分栏铺满屏幕,列表过长时自动翻页。可直接输入,也可用 Google 表格或手动表格维护。",
+  "params": {
+    "building_name": {
+      "label": "楼宇名称"
+    },
+    "address": {
+      "label": "地址或副标题",
+      "help": "显示在楼宇名称下方的一行。留空则不显示。"
+    },
+    "logo": {
+      "label": "标志",
+      "help": "可选。没有标志时,以强调色显示楼宇名称的首字母。"
+    },
+    "here_text": {
+      "label": "“您的位置”一行",
+      "help": "带定位标记,显示在页眉下方。留空则不显示。",
+      "default": "您的位置 · 大堂层 主大堂"
+    },
+    "here_floor": {
+      "label": "本屏幕所在楼层",
+      "help": "写法与“楼层”列一致。该楼层会在列表和索引中标出定位标记。"
+    },
+    "group_by": {
+      "label": "排列方式",
+      "options": {
+        "floor": "按楼层",
+        "alpha": "按名称 A 到 Z",
+        "category": "按类别"
+      }
+    },
+    "floor_order": {
+      "label": "楼层顺序",
+      "help": "按楼层排列时使用。",
+      "options": {
+        "asc": "低楼层在前",
+        "desc": "高楼层在前"
+      }
+    },
+    "show_index": {
+      "label": "显示索引栏",
+      "help": "底部显示 A 到 Z(或楼层、类别),当前页包含的会亮起。"
+    },
+    "show_category": {
+      "label": "在名称下显示类别"
+    },
+    "entries": {
+      "label": "入驻单位",
+      "help": "每行一个:名称 | 楼层 | 房号 | 类别 | 箭头。箭头:左、右、前、后、up-left…、电梯或楼梯。未连接数据源时使用。",
+      "default": "前台与安保 | G | 大堂 | 楼宇服务 | 左\nHarbour Street Café | G | G02 | 餐饮 | 右\n快递收发室 | G | G10 | 楼宇服务 | 左\n访客停车场 | B1 | P1 | 停车 | 楼梯\nNorthwind Legal LLP | 2 | 201 | 法律 |\nBrightwater Dental | 3 | 312 | 医疗健康 |\nLumen Analytics | 5 | 520 | 科技 |\nWoodgrove Bank Offices | 8 | 800 | 金融 |\n物业管理处 | 12 | 1200 | 楼宇服务 |\nSkyline Conference Centre | 12 | 1210 | 活动 |"
+    },
+    "directory": {
+      "label": "指引数据源(可选)",
+      "help": "带标题行的 Google 表格、CSV 或手动表格。只要有 Name 列,就会替代上面输入的单位。"
+    },
+    "name_col": {
+      "label": "名称列",
+      "help": "标题请使用英文字母和数字(中文标题会变成 col1、col2 这样的名称)。"
+    },
+    "floor_col": {
+      "label": "楼层列"
+    },
+    "suite_col": {
+      "label": "房号列"
+    },
+    "category_col": {
+      "label": "类别列"
+    },
+    "arrow_col": {
+      "label": "箭头列"
+    },
+    "floor_names": {
+      "label": "楼层名称",
+      "help": "可选,每行一个:楼层 = 名称。未列出的楼层显示为“◯层”。",
+      "default": "G = 大堂层\nB1 = 地下一层\n12 = 顶层"
+    },
+    "floor_word": {
+      "label": "“层”的写法",
+      "help": "用于“7层”这样的标题。留空则使用屏幕语言的写法。{n} 表示楼层号的位置(“{n}F”)。"
+    },
+    "footer": {
+      "label": "页脚",
+      "help": "底部的小字。留空则不显示。",
+      "default": "前方电梯通往各楼层 · 访客请在前台登记"
+    },
+    "empty_text": {
+      "label": "列表为空时的文字",
+      "help": "留空则以屏幕语言显示“暂无入驻单位”。"
+    },
+    "clock_format": {
+      "label": "时钟",
+      "options": {
+        "auto": "随语言默认",
+        "24": "24 小时制",
+        "12": "12 小时制",
+        "off": "隐藏时钟"
+      }
+    },
+    "timezone": {
+      "label": "时钟时区",
+      "help": "留空则使用屏幕自己的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "用于指引自带的文字、日期、时钟和排序。留空则使用屏幕的语言。"
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    },
+    "page_seconds": {
+      "label": "每页秒数",
+      "help": "仅在列表无法以清晰的字号放进一屏时使用。"
+    }
+  }
+}

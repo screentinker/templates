@@ -1,0 +1,146 @@
+{
+  "name": "Painel de tempos de espera",
+  "description": "Tempos de espera estimados para clínica, pronto-socorro, farmácia ou balcão de atendimento: cada serviço com a espera em minutos e o status Aberto, Lotado ou Fechado em cores claras, a hora da atualização, um aviso tranquilizador e um lembrete de check-in. A equipe atualiza uma planilha Google ou tabela manual pelo celular, ou digita a lista.",
+  "params": {
+    "title": {
+      "label": "Título",
+      "default": "Clínica Comunitária Northwind"
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "default": "Tempos de espera estimados",
+      "help": "Uma linha abaixo do título. Deixe vazio para ocultar."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Ao lado do título. Um logotipo branco ou transparente combina com o cabeçalho colorido."
+    },
+    "services": {
+      "label": "Serviços",
+      "help": "Um por linha: Serviço | Espera em minutos | Status | Nota. Status é Aberto, Lotado ou Fechado (vazio = pela espera). Usado sem fonte de dados.",
+      "default": "Pronto-socorro | 45 | Lotado | Térreo · Siga a linha vermelha\nClínica geral | 20 | | Térreo · Salas 1–6\nFarmácia | 10 | | Receitas · Balcão 3\nExames de sangue | 15 | | 1º andar · Sem agendamento\nRaio-X | 55 | Lotado | 1º andar · Ala leste\nCurativos | 25 | | Térreo · Sala 8\nVacinas | 0 | | 2º andar · Gripe, viagem\nFisioterapia | | Fechado | Hoje só com agendamento"
+    },
+    "waits": {
+      "label": "Fonte de dados das esperas (opcional)",
+      "help": "Uma planilha Google, CSV ou tabela manual com uma linha por serviço. Quando escolhida, substitui os serviços digitados acima."
+    },
+    "service_col": {
+      "label": "Coluna de serviço",
+      "default": "Serviço",
+      "help": "O cabeçalho na sua planilha. Se faltar, lê \"Service\" e depois a primeira coluna."
+    },
+    "wait_col": {
+      "label": "Coluna de espera",
+      "default": "Espera",
+      "help": "Minutos como número (25), intervalo (15-20) ou h:mm (1:30). Outro texto aparece como digitado. Se faltar, lê \"Wait\"."
+    },
+    "status_col": {
+      "label": "Coluna de status",
+      "default": "Status",
+      "help": "Aberto, Lotado ou Fechado. Uma célula vazia é deduzida da espera. Se faltar, lê \"Status\"."
+    },
+    "note_col": {
+      "label": "Coluna de nota",
+      "default": "Nota",
+      "help": "Linha pequena opcional sob o serviço: aonde ir ou quando reabre. Se faltar, lê \"Note\"."
+    },
+    "notice": {
+      "label": "Linha de aviso",
+      "default": "Os tempos são estimativas. O atendimento segue a gravidade, não a ordem de chegada — se você piorar enquanto espera, avise a equipe imediatamente.",
+      "help": "Um aviso tranquilizador na parte de baixo. Deixe vazio para ocultar."
+    },
+    "checkin": {
+      "label": "Lembrete de check-in",
+      "default": "Faça o check-in na recepção",
+      "help": "Lembrete em destaque no rodapé. Deixe vazio para ocultar."
+    },
+    "order": {
+      "label": "Ordem",
+      "help": "Ao ordenar, os serviços fechados sempre ficam por último.",
+      "options": {
+        "listed": "Como na lista",
+        "shortest": "Menor espera primeiro",
+        "longest": "Maior espera primeiro"
+      }
+    },
+    "busy_minutes": {
+      "label": "Lotado a partir de (minutos)",
+      "help": "Um serviço sem status aparece como Lotado quando a espera chega a este valor."
+    },
+    "open_label": {
+      "label": "Texto: aberto",
+      "help": "Vazio = a palavra embutida no idioma da tela (\"Aberto\")."
+    },
+    "busy_label": {
+      "label": "Texto: lotado",
+      "help": "Vazio = a palavra embutida no idioma da tela (\"Lotado\")."
+    },
+    "closed_label": {
+      "label": "Texto: fechado",
+      "help": "Vazio = a palavra embutida no idioma da tela (\"Fechado\")."
+    },
+    "nowait_label": {
+      "label": "Texto: sem espera",
+      "help": "Exibido no lugar do tempo quando a espera é 0. Vazio = o texto embutido no idioma da tela (\"Sem espera\")."
+    },
+    "updated_label": {
+      "label": "Texto: atualizado",
+      "help": "Antes da hora; coloque {time} onde a hora deve ficar. Vazio = o texto embutido no idioma da tela (\"Atualizado: {time}\")."
+    },
+    "empty_label": {
+      "label": "Texto quando não há dados",
+      "help": "Exibido enquanto a fonte de dados ainda não tem linhas. Vazio = a frase embutida no idioma da tela."
+    },
+    "show_updated": {
+      "label": "Mostrar a hora da última atualização"
+    },
+    "stale_minutes": {
+      "label": "Lembrar quando os números não mudam há (minutos)",
+      "help": "Com fonte de dados, a hora de atualização fica âmbar se nenhum número mudar nesse tempo (mesmo com sincronização), como lembrete para a equipe. 0 = desligado."
+    },
+    "show_meter": {
+      "label": "Mostrar uma barra de espera em cada serviço"
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "light": "Claro",
+        "dark": "Escuro"
+      }
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "A faixa do cabeçalho e o lembrete de check-in."
+    },
+    "open_color": {
+      "label": "Cor de aberto"
+    },
+    "busy_color": {
+      "label": "Cor de lotado"
+    },
+    "closed_color": {
+      "label": "Cor de fechado"
+    },
+    "clock_format": {
+      "label": "Relógio",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas",
+        "auto": "Conforme o idioma",
+        "off": "Ocultar o relógio"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário",
+      "help": "Vazio = o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "As palavras, horas e números na tela, por exemplo pt ou pt-PT. Vazio = o idioma da tela."
+    },
+    "page_seconds": {
+      "label": "Segundos por página",
+      "help": "Usado só quando há serviços demais para uma tela legível."
+    }
+  }
+}

@@ -35,7 +35,8 @@
 html, body { margin: 0; height: 100%; overflow: hidden; }
 body {
   background: var(--bg); color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  /* Inter and Oswald are Latin subsets: Japanese, Chinese and Hindi fall through to the player's Noto fonts. */
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   cursor: none;
 }
@@ -68,6 +69,7 @@ body {
   opacity: .55; white-space: nowrap; padding-top: 1vh; margin-left: 3vw;
 }
 body.no-head .head { display: none; }
+:lang(zh) body { font-family: 'Inter', "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK JP", "Noto Sans Devanagari", system-ui, sans-serif; }
 
 /* ---------- the grid of cards ---------- */
 .grid {
@@ -131,13 +133,14 @@ body.no-seconds .hand.s { display: none; }
 
 .time {
   grid-area: time;
-  font-family: 'Oswald', 'Inter', sans-serif; font-weight: 500;
+  font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 500;
   font-size: calc(var(--u) * 20); line-height: 1.05;
   font-variant-numeric: tabular-nums;
   white-space: nowrap; text-align: center;
 }
 .time .sec, .time .ap { font-size: .5em; font-weight: 400; opacity: .6; margin-left: .12em; }
 .time .ap { opacity: .75; letter-spacing: .04em; }
+.time .ap.pre { margin-left: 0; margin-right: .12em; }
 .meta {
   grid-area: meta;
   font-size: calc(var(--u) * 4.6); font-weight: 500; opacity: .66;
@@ -186,7 +189,7 @@ body.no-date .meta .date, body.no-date .meta .sep { display: none; }
   height: var(--noteh); display: flex; align-items: flex-end;
   font-size: min(1.7vh, 1.9vw); opacity: .6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.empty-msg { align-self: center; justify-self: center; font-size: 3vh; opacity: .7; text-align: center; }
+.empty-msg { align-self: center; justify-self: center; font-size: 3vh; opacity: .7; text-align: center; overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
 
 @keyframes rise {
   from { opacity: 0; transform: translateY(2.5vh); }

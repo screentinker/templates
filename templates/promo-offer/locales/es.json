@@ -1,0 +1,145 @@
+{
+ "name": "Oferta promocional",
+ "description": "Una pantalla de oferta flash o promoción: gran titular, la oferta, el precio con el precio anterior tachado y el ahorro calculado, y una cuenta atrás en vivo que cambia sola a «oferta terminada». Añade una foto del producto y un código QR a tu tienda. Tres estilos: comercio llamativo, limpio y minimal, y cafetería cálida. No descarga nada.",
+ "params": {
+  "style": {
+   "label": "Estilo",
+   "options": {
+    "bold": "Comercio llamativo",
+    "minimal": "Limpio y minimal",
+    "cafe": "Cafetería cálida"
+   }
+  },
+  "eyebrow": {
+   "label": "Antetítulo",
+   "help": "Una etiqueta corta sobre el titular. Déjalo vacío para ocultarla.",
+   "default": "Oferta flash de fin de semana"
+  },
+  "headline": {
+   "label": "Titular",
+   "default": "Auriculares inalámbricos Aura"
+  },
+  "offer": {
+   "label": "Texto de la oferta",
+   "help": "Una o dos líneas bajo el titular. Déjalo vacío para ocultarlo.",
+   "default": "Cancelación activa de ruido y 40 horas de batería, a nuestro mejor precio del año."
+  },
+  "price": {
+   "label": "Precio",
+   "help": "Un número como 89 o 89,99 se formatea en tu moneda. Cualquier otra cosa («2x1») se muestra tal cual. Déjalo vacío para ocultar el precio."
+  },
+  "was_price": {
+   "label": "Precio anterior",
+   "help": "Opcional. Se muestra tachado junto al precio."
+  },
+  "currency": {
+   "label": "Código de moneda",
+   "help": "Un código ISO de tres letras: EUR, USD, MXN, GBP, JPY… El símbolo y su posición siguen el idioma. Vacío para números sin moneda."
+  },
+  "decimals": {
+   "label": "Decimales",
+   "options": {
+    "auto": "Solo si el precio tiene céntimos (89, 89,50)",
+    "always": "Siempre (89,00)"
+   }
+  },
+  "saving": {
+   "label": "Etiqueta de ahorro",
+   "help": "Se calcula a partir del precio y el precio anterior; se oculta si alguno no es un número.",
+   "options": {
+    "percent": "Porcentaje (Ahorra 40 %)",
+    "amount": "Importe (Ahorra 60 €)",
+    "off": "Sin etiqueta"
+   }
+  },
+  "saving_text": {
+   "label": "Texto de la etiqueta de ahorro",
+   "help": "{saving} se sustituye por el porcentaje o el importe, p. ej. «{saving} de descuento». Vacío: «Ahorra {saving}» en el idioma de la pantalla. Un solo - muestra solo el ahorro."
+  },
+  "ends_at": {
+   "label": "Fin de la oferta",
+   "help": "Fecha y hora como 2026-11-29T23:59, o solo una fecha para el final de ese día. Se lee en la zona horaria de abajo. Vacío: la oferta termina cada día a medianoche."
+  },
+  "timezone": {
+   "label": "Zona horaria",
+   "help": "La zona horaria de la hora de fin. Vacío usa el reloj de la pantalla."
+  },
+  "locale": {
+   "label": "Idioma",
+   "help": "El idioma de los textos integrados, fechas, precios y unidades de la cuenta atrás. Vacío usa el idioma de la pantalla."
+  },
+  "clock_format": {
+   "label": "Formato de hora",
+   "options": {
+    "auto": "Según el idioma",
+    "24": "24 horas",
+    "12": "12 horas"
+   }
+  },
+  "show_countdown": {
+   "label": "Mostrar la cuenta atrás"
+  },
+  "countdown_label": {
+   "label": "Texto de la cuenta atrás",
+   "help": "Vacío: «Termina en» en el idioma de la pantalla. Un solo - lo oculta."
+  },
+  "show_end_date": {
+   "label": "Mostrar cuándo termina la oferta",
+   "help": "Una línea como «Válido hasta el dom, 29 nov, 23:59» bajo la cuenta atrás."
+  },
+  "end_date_label": {
+   "label": "Texto antes de la fecha de fin",
+   "help": "Va delante de la fecha. Vacío: «Válido hasta el …» en el idioma de la pantalla. Un solo - muestra solo la fecha."
+  },
+  "after_end": {
+   "label": "Cuando la oferta ha terminado",
+   "options": {
+    "message": "Mantener la promoción y mostrar el mensaje de fin",
+    "fallback": "Sustituir toda la promoción por la línea alternativa"
+   }
+  },
+  "ended_text": {
+   "label": "Mensaje de fin",
+   "help": "Vacío: «Esta oferta ha terminado» en el idioma de la pantalla."
+  },
+  "fallback_heading": {
+   "label": "Antetítulo alternativo",
+   "help": "Una línea pequeña sobre la línea alternativa. Vacío muestra la línea alternativa sola."
+  },
+  "fallback_text": {
+   "label": "Línea alternativa",
+   "help": "Se muestra a pantalla completa tras el fin si así lo indica el ajuste de arriba. Vacío usa el mensaje de fin.",
+   "default": "Nuevas ofertas cada viernes. ¡Hasta pronto!"
+  },
+  "image": {
+   "label": "Imagen del producto",
+   "help": "Lo mejor es un PNG con fondo transparente. Déjalo vacío para una promoción solo de texto."
+  },
+  "qr_url": {
+   "label": "Enlace del código QR",
+   "help": "Se dibuja como código QR en la pantalla. Déjalo vacío para ocultarlo."
+  },
+  "qr_label": {
+   "label": "Texto bajo el código QR",
+   "help": "Vacío: «Escanea y compra» en el idioma de la pantalla. Un solo - lo oculta."
+  },
+  "fine_print": {
+   "label": "Letra pequeña",
+   "default": "Hasta agotar existencias. Máximo dos por cliente. No acumulable a otras ofertas. Precios con IVA incluido."
+  },
+  "custom_colors": {
+   "label": "Usar mis propios colores",
+   "help": "No: la paleta del estilo. Sí: los tres colores de abajo."
+  },
+  "background": {
+   "label": "Color de fondo"
+  },
+  "text_color": {
+   "label": "Color del texto"
+  },
+  "accent": {
+   "label": "Color de acento",
+   "help": "El precio, la etiqueta y la cuenta atrás."
+  }
+ }
+}

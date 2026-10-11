@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Illustrated placeholder portrait drawn for this template. Original work, MIT. Replace it with a photo. -->
+  <rect width="400" height="400" fill="#F3E3C3"/>
+  <circle cx="330" cy="70" r="90" fill="#EBD3A6"/>
+  <path d="M110 330 C96 250 104 150 140 112 C170 82 236 80 266 112 C300 150 306 250 292 330 Z" fill="#2B1B16"/>
+  <path d="M40 400 C44 322 112 292 200 292 C288 292 356 322 360 400 Z" fill="#2E6F8E"/>
+  <path d="M160 292 L200 344 L240 292 Z" fill="#F6EFE4"/>
+  <rect x="172" y="236" width="56" height="70" rx="24" fill="#9C6A46"/>
+  <ellipse cx="128" cy="200" rx="14" ry="20" fill="#9C6A46"/>
+  <ellipse cx="272" cy="200" rx="14" ry="20" fill="#9C6A46"/>
+  <ellipse cx="200" cy="192" rx="72" ry="86" fill="#B9825A"/>
+  <ellipse cx="172" cy="198" rx="7" ry="9" fill="#2A1A12"/>
+  <ellipse cx="228" cy="198" rx="7" ry="9" fill="#2A1A12"/>
+  <path d="M158 176 Q172 168 186 176 M214 176 Q228 168 242 176" fill="none" stroke="#2A1A12" stroke-width="6" stroke-linecap="round"/>
+  <path d="M200 206 Q194 222 202 226" fill="none" stroke="#9C6A46" stroke-width="5" stroke-linecap="round"/>
+  <path d="M176 240 Q200 258 224 240" fill="none" stroke="#2A1A12" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="156" cy="226" rx="13" ry="8" fill="#C2453A" opacity="0.35"/>
+  <ellipse cx="244" cy="226" rx="13" ry="8" fill="#C2453A" opacity="0.35"/>
+  <path d="M126 196 C120 130 152 100 204 100 C252 100 284 132 276 196 C262 160 240 140 200 136 C172 150 150 168 126 196 Z" fill="#2B1B16"/>
+</svg>

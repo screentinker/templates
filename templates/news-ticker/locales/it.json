@@ -1,0 +1,55 @@
+{
+  "name": "Ticker di notizie",
+  "description": "Titoli in primo piano a rotazione e un ticker a scorrimento fluido. Scrivili a mano o collega un feed RSS, un foglio Google, un CSV o una tabella. A schermo intero mostra entrambi, in una striscia sottile un nastro, in una zona alta un ticker verticale. Lo schermo non scarica nulla: funziona offline.",
+  "params": {
+    "title": {
+      "label": "Titolo",
+      "default": "Ultime notizie"
+    },
+    "feed": {
+      "label": "Fonte dati dei titoli (facoltativa)",
+      "help": "Un feed RSS/Atom, un foglio Google, un CSV o una tabella. Quando contiene titoli, sostituiscono l’elenco scritto; fino ad allora si vede l’elenco."
+    },
+    "column": {
+      "label": "Colonna dei titoli (foglio, CSV o tabella)",
+      "help": "L’intestazione della colonna con i titoli. Se nessuna colonna ha questo nome, si usa la prima. Ignorato per i feed RSS.",
+      "default": "Titolo"
+    },
+    "headlines": {
+      "label": "Titoli (senza fonte dati)",
+      "help": "Un titolo per riga. Le righe vuote vengono ignorate. Mostrati anche finché la fonte dati collegata è vuota.",
+      "default": "Northwind apre il nuovo studio sul fiume il 6 ottobre\nL’assemblea trimestrale si sposta nell’atrio: porte alle 16:30\nComplimenti al team di assistenza: 98% di soddisfazione\nIl parcheggio est è chiuso per lavori fino a venerdì\nNuova rastrelliera dietro l’edificio B, con ricarica e-bike\nLunch & learn giovedì: l’accessibilità nel design quotidiano"
+    },
+    "max_items": {
+      "label": "Mostra al massimo",
+      "help": "I titoli oltre questo numero non vengono mostrati."
+    },
+    "speed": {
+      "label": "Velocità del ticker",
+      "help": "Pixel al secondo su uno schermo alto 1080 pixel. Si adatta allo schermo."
+    },
+    "rotate_seconds": {
+      "label": "Secondi per titolo in primo piano"
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "show_clock": {
+      "label": "Mostra l’orologio"
+    },
+    "timezone": {
+      "label": "Fuso orario dell’orologio",
+      "help": "Lascia vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua della data e dei testi integrati, ad esempio it o en-GB. Lascia vuoto per la lingua dello schermo."
+    }
+  }
+}
