@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wait times board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+<div class="frame">
+  <header class="head">
+    <div class="head-bg" aria-hidden="true"></div>
+    <img id="logo" class="logo" alt="" hidden>
+    <div class="titles">
+      <h1 id="title" class="title" dir="auto"></h1>
+      <div id="subtitle" class="subtitle" dir="auto"></div>
+      <div id="updated-strip" class="updated strip-only" hidden><span class="updated-dot"></span><span class="updated-strip-text"></span></div>
+    </div>
+    <div id="clockbox" class="clockbox">
+      <div id="clock" class="clock"></div>
+      <div id="date" class="date"></div>
+    </div>
+  </header>
+
+  <main id="stage" class="stage">
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" hidden>
+      <svg class="empty-icon" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M24 13v12l8 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div id="empty-text" class="empty-text" dir="auto"></div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div id="checkin" class="checkin" hidden>
+      <svg class="checkin-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 12h12M12 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span id="checkin-text" dir="auto"></span>
+    </div>
+    <div id="notice" class="notice" hidden>
+      <svg class="notice-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 10.5v6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="12" cy="7.2" r="1.4" fill="currentColor"/>
+      </svg>
+      <span id="notice-text" dir="auto"></span>
+    </div>
+    <div class="foot-end">
+      <div id="pager" class="pager" aria-hidden="true"></div>
+      <div id="updated" class="updated" hidden><span class="updated-dot"></span><span id="updated-text"></span></div>
+    </div>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

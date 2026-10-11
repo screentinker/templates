@@ -1,0 +1,46 @@
+{
+  "name": "Ação de Graças e colheita",
+  "description": "Uma tela de colheita na luz dourada do fim de tarde para o Dia de Ação de Graças ou qualquer festa da colheita: um sol baixo sobre campos ondulados, trigo em primeiro plano e espaço para manchete, mensagem sobre um almoço comunitário ou campanha de alimentos e linha da data.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "A linha curta acima da manchete. Deixe vazio para ocultar.",
+      "default": "FELIZ AÇÃO DE GRAÇAS"
+    },
+    "headline": {
+      "label": "Manchete",
+      "help": "Duas linhas são reservadas para ela: cabem cerca de 24 caracteres. Uma manchete mais longa passa para a terceira linha e invade a mensagem.",
+      "default": "Juntos, agradecendo"
+    },
+    "message": {
+      "label": "Mensagem",
+      "help": "Uma ou duas frases abaixo da manchete; cabem até 200 caracteres. Uma quebra de linha começa uma nova linha.",
+      "default": "Venha ao almoço comunitário da colheita: 340 refeições preparadas pela nossa cozinha, e cada doação vai para o Banco de Alimentos Riverside."
+    },
+    "date_line": {
+      "label": "Linha da data",
+      "help": "Texto livre, digitado como deve aparecer: uma data, um horário e local, ou uma assinatura.",
+      "default": "26 · 11  ·  12:00–14:00  ·  SALÃO PRINCIPAL"
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se você não tiver logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG largo com fundo transparente (cerca de 3,4 : 1 preenche a área; outros formatos são ajustados dentro dela). Substitua o logotipo provisório da Northwind."
+    },
+    "accent": {
+      "label": "Cor do sol"
+    },
+    "accent2": {
+      "label": "Cor do campo"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

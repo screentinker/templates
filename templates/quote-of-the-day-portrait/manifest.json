@@ -1,0 +1,139 @@
+{
+  "id": "quote-of-the-day-portrait",
+  "name": "Quote of the day (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A typography-led quote screen: a big serif quotation, who said it and where, with a live date in your language. For a lobby, staff room, school corridor or the screen by the coffee machine. Portrait 9:16 layout.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/quote-of-the-day-portrait",
+  "license": "MIT",
+  "tags": [
+    "quote",
+    "inspiration",
+    "motivation",
+    "office",
+    "lobby",
+    "corporate",
+    "school",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "A short label above the quote. Capitals read best.",
+      "default": "QUOTE OF THE DAY"
+    },
+    {
+      "name": "quote",
+      "type": "textarea",
+      "label": "Quote",
+      "max": 130,
+      "help": "Without quotation marks: the big mark is drawn for you. Up to about 130 characters.",
+      "default": "It is not that we have a short time to live, but that we waste a lot of it."
+    },
+    {
+      "name": "attribution",
+      "type": "text",
+      "label": "Who said it",
+      "max": 48,
+      "default": "Seneca"
+    },
+    {
+      "name": "attribution_detail",
+      "type": "text",
+      "label": "Source or role",
+      "max": 80,
+      "help": "A book, a role or a year. Leave empty to hide.",
+      "default": "On the Shortness of Life, c. 49 AD"
+    },
+    {
+      "name": "show_date",
+      "type": "checkbox",
+      "label": "Show today's date",
+      "help": "The screen's live date, in the language and timezone below.",
+      "default": true
+    },
+    {
+      "name": "date_format",
+      "type": "select",
+      "label": "Date style",
+      "default": "weekday",
+      "options": [
+        {
+          "value": "weekday",
+          "label": "Weekday, day and month"
+        },
+        {
+          "value": "long",
+          "label": "Full date with year"
+        },
+        {
+          "value": "short",
+          "label": "Short date"
+        },
+        {
+          "value": "numeric",
+          "label": "Numbers only"
+        }
+      ]
+    },
+    {
+      "name": "timezone",
+      "type": "timezone",
+      "label": "Date timezone",
+      "help": "Which timezone \"today\" is in. Leave empty to use the screen's own clock.",
+      "default": ""
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "help": "The language of the date, e.g. en-GB, de-DE or fr-CA. Leave empty for the screen's language.",
+      "default": ""
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Off hides the logo and its space stays empty.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A PNG or SVG with a transparent background, in a light colour for the default dark background.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "help": "The big quotation mark, small heading, rule and decoration.",
+      "default": "#E3A857"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "help": "Behind everything.",
+      "default": "#17130F"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "help": "The quote and the name.",
+      "default": "#F4EEE3"
+    }
+  ]
+}

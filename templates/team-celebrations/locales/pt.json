@@ -1,0 +1,134 @@
+{
+ "name": "Comemorações da equipe",
+ "description": "Aniversários, tempo de casa e boas-vindas a novos colegas para o escritório ou a copa. Cartões que se alternam com avatares coloridos de iniciais, medalhas em 1, 5, 10, 15 e 20+ anos e uma lista de quem comemora hoje, nesta semana ou neste mês. Digite as pessoas ou mantenha-as numa planilha Google. Confete divertido ou um tema escuro elegante.",
+ "params": {
+  "title": {
+   "label": "Título",
+   "help": "O cabeçalho. Deixe vazio para ocultar.",
+   "default": "Comemorações na Northwind"
+  },
+  "logo": {
+   "label": "Logotipo",
+   "help": "Opcional. Aparece ao lado do título."
+  },
+  "window": {
+   "label": "Quem mostrar",
+   "options": {
+    "today": "Só hoje",
+    "week": "Esta semana (semana do calendário)",
+    "next7": "Os próximos 7 dias",
+    "month": "Este mês",
+    "next30": "Os próximos 30 dias"
+   }
+  },
+  "week_start": {
+   "label": "A semana começa no",
+   "help": "Usado só por “Esta semana”.",
+   "options": {
+    "monday": "Segunda-feira",
+    "sunday": "Domingo",
+    "saturday": "Sábado"
+   }
+  },
+  "show_birthdays": {
+   "label": "Mostrar aniversários"
+  },
+  "show_anniversaries": {
+   "label": "Mostrar tempo de casa"
+  },
+  "show_new_hires": {
+   "label": "Mostrar boas-vindas a novos colegas"
+  },
+  "milestones_only": {
+   "label": "Só marcos de tempo de casa (1, 5, 10, 15, 20, 25… anos)"
+  },
+  "welcome_days": {
+   "label": "Dar boas-vindas por (dias)",
+   "help": "Um novo colega fica na tela por esse número de dias após o primeiro dia, seja qual for o período."
+  },
+  "theme": {
+   "label": "Tema",
+   "options": {
+    "playful": "Divertido (claro, confete)",
+    "elegant": "Elegante (escuro, dourado)"
+   }
+  },
+  "animate": {
+   "label": "Animar o fundo (confete / brilhos dourados)",
+   "help": "Desligue em players muito lentos."
+  },
+  "seconds": {
+   "label": "Segundos por pessoa"
+  },
+  "birthday_label": {
+   "label": "Título de aniversário",
+   "help": "Acima do nome num cartão de aniversário. Vazio: “Feliz aniversário” no idioma da tela."
+  },
+  "anniversary_label": {
+   "label": "Título de tempo de casa",
+   "help": "{n} é trocado pelo número de anos, p. ex. “{n} anos com a gente”. Vazio: essa frase no idioma da tela, no plural certo."
+  },
+  "anniversary_one_label": {
+   "label": "Título para um ano",
+   "help": "Para o primeiro ano, p. ex. “1 ano com a gente”. Vazio usa o título acima ou o texto embutido."
+  },
+  "new_hire_label": {
+   "label": "Título de boas-vindas",
+   "help": "Vazio: “Boas-vindas ao time” no idioma da tela."
+  },
+  "list_title": {
+   "label": "Título da lista",
+   "help": "Acima da lista de todos no período. Vazio: “Quem comemora” no idioma da tela. Um único - oculta o título."
+  },
+  "empty_title": {
+   "label": "Texto quando não há ninguém",
+   "help": "Vazio: “Nenhuma comemoração agora” no idioma da tela."
+  },
+  "empty_text": {
+   "label": "Texto pequeno quando não há ninguém",
+   "help": "Vazio: uma frase simpática no idioma da tela. Um único - oculta o texto."
+  },
+  "next_label": {
+   "label": "Título da próxima comemoração (quando não há ninguém)",
+   "help": "Sem ninguém no período, a próxima pessoa em até um ano aparece abaixo. Vazio: “A seguir”. Um único - oculta o título."
+  },
+  "people": {
+   "label": "Fonte de dados das pessoas (opcional)",
+   "help": "Uma planilha Google, um CSV ou uma tabela manual com uma linha por pessoa. Se tiver a coluna de nome, substitui as pessoas de exemplo abaixo."
+  },
+  "name_col": {
+   "label": "Coluna do nome"
+  },
+  "type_col": {
+   "label": "Coluna do tipo",
+   "help": "Opcional: Aniversário, Tempo de casa ou Novo colaborador (inglês também vale). Sem ela, cada linha dá um aniversário pela data e tempo de casa ou boas-vindas pela data de início."
+  },
+  "date_col": {
+   "label": "Coluna de aniversário / data",
+   "help": "MM-DD ou AAAA-MM-DD. O ano de nascimento nunca aparece."
+  },
+  "start_col": {
+   "label": "Coluna da data de início",
+   "help": "AAAA-MM-DD, o primeiro dia de trabalho. Gera tempo de casa e boas-vindas."
+  },
+  "title_col": {
+   "label": "Coluna do cargo"
+  },
+  "team_col": {
+   "label": "Coluna da equipe"
+  },
+  "sample": {
+   "label": "Pessoas (sem fonte de dados conectada)",
+   "help": "Uma pessoa por linha: Nome | Tipo | Data | Início | Cargo | Equipe. As datas também podem ser today, today+3 ou today+3-5y (5 anos atrás).",
+   "default": "Priya Raman | Aniversário | today | | Designer de produto sênior | Design\nMarcus Okafor | Tempo de casa | | today+1-10y | Gerente de logística | Operações\nLena Fischer | Novo colaborador | | today-2 | Engenheira de dados | Plataforma\nGrace Mensah | Tempo de casa | | today+2-1y | Gerente administrativa | Pessoas e espaços"
+  },
+  "timezone": {
+   "label": "Fuso horário",
+   "help": "Define quando o “hoje” começa. Vazio usa o relógio da tela."
+  },
+  "locale": {
+   "label": "Idioma",
+   "help": "O idioma dos títulos embutidos, de Hoje/Amanhã e das datas, p. ex. pt-BR ou pt-PT. Vazio usa o idioma da tela."
+  }
+ }
+}

@@ -1,0 +1,87 @@
+{
+  "name": "Classifica",
+  "description": "Una classifica per team di vendita, raccolte fondi, sfide di passi o serate di giochi: un podio oro, argento e bronzo per i primi tre e barre animate per tutti gli altri. Scrivi i punteggi o collega un foglio Google e il tabellone si aggiorna da solo.",
+  "params": {
+    "title": {
+      "label": "Titolo",
+      "default": "Classifica vendite"
+    },
+    "period": {
+      "label": "Periodo",
+      "help": "Una breve etichetta accanto al titolo, come “Questo mese” o “T3”. Lascia vuoto per nasconderla.",
+      "default": "Questo mese"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Mostrato accanto al titolo."
+    },
+    "entries": {
+      "label": "Punteggi",
+      "help": "Uno per riga: Nome | Punteggio | Sottotitolo. L’ordine non conta, il tabellone ordina da solo. Usato se non è collegata una fonte dati.",
+      "default": "Maya Okafor | 48250 | Grandi clienti\nLiam Chen | 41900 | Medie imprese\nSofia Alvarez | 39475 | Grandi clienti\nNoah Williams | 33120 | PMI\nAva Patel | 31860 | Medie imprese\nEthan Brooks | 27400 | PMI\nZara Hussain | 24975 | Grandi clienti\nLucas Meyer | 21300 | Partner\nChloe Dubois | 18640 | PMI\nOwen Murphy | 15210 | Partner"
+    },
+    "scores": {
+      "label": "Fonte dati dei punteggi (facoltativa)",
+      "help": "Un foglio Google, CSV, elenco REST o tabella manuale. Se ha le colonne nome e punteggio, sostituisce i punteggi scritti sopra."
+    },
+    "name_col": {
+      "label": "Colonna nome",
+      "help": "L’intestazione della colonna dei nomi nella fonte dati, scritta come appare lì.",
+      "default": "Nome"
+    },
+    "score_col": {
+      "label": "Colonna punteggio",
+      "default": "Punteggio"
+    },
+    "sub_col": {
+      "label": "Colonna sottotitolo",
+      "help": "Facoltativa. Una seconda riga sotto ogni nome, come una squadra o una regione.",
+      "default": "Squadra"
+    },
+    "order": {
+      "label": "Vincitore",
+      "options": {
+        "high": "Vince il punteggio più alto",
+        "low": "Vince il più basso (tempi, golf)"
+      }
+    },
+    "score_prefix": {
+      "label": "Prefisso",
+      "help": "Mostrato prima di ogni punteggio, per esempio € o $. Lascia vuoto per numeri semplici.",
+      "default": "€"
+    },
+    "score_suffix": {
+      "label": "Suffisso",
+      "help": "Mostrato dopo ogni punteggio, per esempio pt, km o %."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua delle parole fisse del tabellone e come si scrivono i numeri (de-DE mostra 48.250). Lascia vuoto per la lingua dello schermo."
+    },
+    "max_rows": {
+      "label": "Mostra al massimo",
+      "help": "Posizioni mostrate, podio compreso. Se lo schermo è piccolo ne mostra meno."
+    },
+    "show_bars": {
+      "label": "Mostra barre",
+      "help": "Una barra sotto ogni nome dopo il podio, tanto più lunga quanto più il punteggio si avvicina al primo."
+    },
+    "font": {
+      "label": "Carattere dei titoli",
+      "options": {
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (condensato)",
+        "inter": "Inter (pulito)"
+      }
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

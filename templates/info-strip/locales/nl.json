@@ -1,0 +1,96 @@
+{
+  "name": "Infobalk",
+  "description": "Een compacte balk voor de rand van een scherm: je logo, tijd en datum, het actuele weer en een wisselende regel met korte mededelingen. Gemaakt voor L-balken, stroken onderaan en zijbalken; hij past zich aan een dunne strook, een hoge zijkolom of een volledig scherm aan. Er wordt niets opgehaald: het weer komt uit je eigen weergegevensbron.",
+  "params": {
+    "messages": {
+      "label": "Berichten",
+      "help": "Eén kort bericht per regel; ze wisselen elkaar af. Begin een regel met een label en | om het als label te tonen, bijvoorbeeld: Vandaag | Teamoverleg om 15:30. Leeg = alleen klok en weer.",
+      "default": "Welkom | Bezoekers melden zich bij de receptie voor hun badge\nVandaag | Teamoverleg om 15:30 in het atrium, met koffie\nVeiligheid | Test brandalarm donderdag om 11:00, niet ontruimen\nCafé | Soep van de dag: geroosterde pompoen met zuurdesem, 4,50\nWifi | Gastnetwerk Northwind-Guest, wachtwoord bij de balie\nProficiat | Priya Raman: tien jaar in het team, gefeliciteerd!"
+    },
+    "message_seconds": {
+      "label": "Seconden per bericht"
+    },
+    "weather": {
+      "label": "Weergegevensbron (optioneel)",
+      "help": "Een gegevensbron van het type Weer (Data Sources → New → Weather). Laat leeg om het weer te verbergen."
+    },
+    "location": {
+      "label": "Plaatsnaam",
+      "help": "Onder de temperatuur, als er ruimte is. Leeg = de plaatsnaam van de weergegevensbron."
+    },
+    "show_forecast": {
+      "label": "Toon de komende drie dagen",
+      "help": "Alleen in de zijbalk en op volledig scherm, waar er ruimte voor is."
+    },
+    "name": {
+      "label": "Naam van de organisatie",
+      "help": "Naast het logo. Laat leeg om alleen het logo te tonen."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een vierkant of breed logo met transparante achtergrond werkt het best. Verwijder het om het te verbergen."
+    },
+    "clock_format": {
+      "label": "Klokweergave",
+      "options": {
+        "24": "24 uur (14:30)",
+        "12": "12 uur (2:30 PM)",
+        "auto": "Zoals gebruikelijk in de taal"
+      }
+    },
+    "show_seconds": {
+      "label": "Seconden tonen"
+    },
+    "date_format": {
+      "label": "Datum",
+      "options": {
+        "long": "dinsdag 6 oktober",
+        "short": "di 6 okt",
+        "numeric": "06-10-2026 (in de volgorde van de taal)",
+        "none": "Datum verbergen"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Weerwoorden, datum- en getalnotatie, bijvoorbeeld en-GB, de-DE of fr-CA. Leeg = de taal van het scherm."
+    },
+    "layout": {
+      "label": "Indeling",
+      "options": {
+        "auto": "Automatisch, naar de vorm van de zone",
+        "row": "Altijd een horizontale strook",
+        "column": "Altijd een verticale zijbalk",
+        "full": "Altijd de indeling voor volledig scherm"
+      }
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "edge": {
+      "label": "Accentlijn",
+      "help": "Een dunne lijn in de accentkleur langs de kant die aan de hoofdinhoud grenst.",
+      "options": {
+        "auto": "Automatisch (boven bij een strook, links bij een zijbalk)",
+        "top": "Boven",
+        "bottom": "Onder",
+        "left": "Links",
+        "right": "Rechts",
+        "none": "Geen"
+      }
+    },
+    "animate": {
+      "label": "Animeren",
+      "help": "Berichten schuiven in beeld en een dunne balk toont wanneer het volgende komt. Zet uit op zeer trage players."
+    }
+  }
+}

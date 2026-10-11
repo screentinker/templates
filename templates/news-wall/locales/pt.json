@@ -1,0 +1,68 @@
+{
+  "name": "Mural de notícias",
+  "description": "Um mural de notícias em estilo revista para qualquer feed RSS ou Atom: uma grande notícia em destaque que troca a cada poucos segundos, as quatro seguintes em cartões, o título do feed e datas relativas. Tipográfico de propósito (sem imagens remotas), então funciona offline. Ou digite suas próprias manchetes.",
+  "params": {
+    "feed": {
+      "label": "Feed de notícias (fonte RSS / Atom, opcional)",
+      "help": "Uma fonte de dados RSS. Deixe vazio para mostrar as notícias digitadas abaixo."
+    },
+    "title": {
+      "label": "Título",
+      "help": "Deixe vazio para usar o título do feed (sem feed: “Últimas notícias” no idioma da tela)."
+    },
+    "stories": {
+      "label": "Notícias (sem feed)",
+      "help": "Uma por linha: Manchete | Resumo curto. O resumo é opcional.",
+      "default": "Fernhill Works inaugura estúdio no antigo moinho | Três andares, abertos ao público aos sábados.\nA melhor primavera da história da empresa | Pedidos 18% acima do ano passado.\nDia do voluntariado arrecada 4.200 para a trilha | Duas novas passarelas.\nNovo cardápio no refeitório a partir de segunda | Mais pratos à base de plantas."
+    },
+    "max_items": {
+      "label": "Notícias em rotação"
+    },
+    "rotate_seconds": {
+      "label": "Segundos por notícia em destaque"
+    },
+    "date_style": {
+      "label": "Datas das notícias",
+      "options": {
+        "relative": "Relativa (há 2 horas)",
+        "absolute": "Data e hora",
+        "off": "Ocultar"
+      }
+    },
+    "feature_label": {
+      "label": "Rótulo da notícia em destaque",
+      "help": "Deixe vazio para “Destaque” no idioma da tela."
+    },
+    "next_label": {
+      "label": "Título acima dos cartões",
+      "help": "Deixe vazio para “A seguir” no idioma da tela."
+    },
+    "show_summaries": {
+      "label": "Mostrar o resumo da notícia em destaque"
+    },
+    "show_clock": {
+      "label": "Mostrar o relógio"
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "accent2": {
+      "label": "Segunda cor de destaque",
+      "help": "O cartão em destaque mistura as duas cores de destaque."
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "timezone": {
+      "label": "Fuso horário (relógio e datas)",
+      "help": "Deixe vazio para usar o relógio da própria tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma do relógio, das datas e dos rótulos embutidos, por exemplo fr ou en-GB. Deixe vazio para usar o idioma da tela."
+    }
+  }
+}

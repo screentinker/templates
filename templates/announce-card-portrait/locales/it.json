@@ -1,0 +1,76 @@
+{
+  "name": "Annuncio — scheda (verticale)",
+  "description": "Un avviso cordiale su una scheda bianca: un'icona emoji, un titolo, un breve paragrafo, un piè di pagina e un codice QR facoltativo. Ideale per eventi, promemoria e buone notizie in uffici, scuole e spazi comuni. Layout verticale 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ideale un PNG o SVG con sfondo trasparente. Compare in alto a sinistra."
+    },
+    "icon": {
+      "label": "Icona (emoji)",
+      "help": "Un emoji nel cerchio colorato, ad es. 📣 🎉 ⚠️ 📅. Lascia vuoto per un cerchio semplice."
+    },
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "Una breve etichetta sopra il titolo, ad es. PROMEMORIA o NOVITÀ. In maiuscolo si legge meglio.",
+      "default": "QUESTO GIOVEDÌ"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "L'annuncio in poche parole. Fino a 40 caratteri; occupa due o tre righe sullo schermo.",
+      "default": "Vendita di dolci benefica in aula magna"
+    },
+    "body": {
+      "label": "Dettagli",
+      "help": "Una o due frasi. Premi Invio per andare a capo.",
+      "default": "Torte, biscotti e cioccolata calda dalle 12:15 alle 13:30. Ogni centesimo va alla gita scientifica delle terze: porta un amico e qualche moneta."
+    },
+    "footer": {
+      "label": "Piè di pagina",
+      "help": "Chi lo invia, una data, una sala o un contatto.",
+      "default": "Organizzato dall'Associazione Genitori"
+    },
+    "show_qr": {
+      "label": "Mostra un codice QR",
+      "help": "Disattiva se non hai un link: il codice e la sua didascalia spariscono."
+    },
+    "qr_url": {
+      "label": "Link del codice QR",
+      "help": "L'indirizzo aperto dal codice QR. Un link più corto crea un codice leggibile da più lontano."
+    },
+    "qr_caption": {
+      "label": "Didascalia del QR",
+      "default": "Iscriviti per preparare dolci"
+    },
+    "show_date": {
+      "label": "Mostra la data di oggi",
+      "help": "La data attuale dello schermo, nella lingua e nel fuso orario qui sotto."
+    },
+    "date_format": {
+      "label": "Formato data",
+      "options": {
+        "weekday": "Giorno della settimana, giorno e mese",
+        "long": "Data completa con anno",
+        "short": "Data breve",
+        "numeric": "Solo numeri"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario della data",
+      "help": "Lascia vuoto per usare l'orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua della data, ad es. en-GB, de-DE o fr-CA. Lascia vuoto per la lingua dello schermo."
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

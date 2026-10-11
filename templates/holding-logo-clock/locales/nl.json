@@ -1,0 +1,49 @@
+{
+  "name": "Wachtscherm — logo en klok",
+  "description": "Een wachtscherm voor als er niets gepland staat: je logo, een grote live klok en de datum van vandaag op een rustige achtergrond met een zachte gloed, in je eigen tijdzone en taal. Zo ziet een scherm er ook tussen campagnes verzorgd uit.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond, licht op donker. Gecentreerd bovenaan."
+    },
+    "footer": {
+      "label": "Voettekst",
+      "help": "Een korte regel onderaan: een plek, een verdieping, een contact. Laat leeg voor geen.",
+      "default": "Northwind Studio  ·  Receptie, 3e verdieping"
+    },
+    "clock_format": {
+      "label": "Klokweergave",
+      "options": {
+        "12": "12-uurs",
+        "24": "24-uurs"
+      }
+    },
+    "date_format": {
+      "label": "Datumstijl",
+      "options": {
+        "weekday": "Weekdag, dag en maand",
+        "long": "Volledige datum met jaar",
+        "short": "Korte datum",
+        "numeric": "Alleen cijfers"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone",
+      "help": "Voor welke plek de klok en datum gelden. Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Hoe tijd en datum worden geschreven, bijv. en-GB, de-DE of fr-CA. Laat leeg voor de taal van het scherm."
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "De gloed achter de klok en het lijntje."
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+ "template": {
+  "aspect": "9:16",
+  "background": "#141832",
+  "elements": [
+   {
+    "slot": "gradient",
+    "kind": "image",
+    "fit": "cover",
+    "content_id": "{{param:palette}}",
+    "box": {
+     "x": 0,
+     "y": 0,
+     "w": 100,
+     "h": 100
+    }
+   },
+   {
+    "slot": "clock",
+    "kind": "clock",
+    "clock_format": "{{param:clock_format}}",
+    "tz": "{{param:timezone}}",
+    "locale": "{{param:locale}}",
+    "box": {
+     "x": 0,
+     "y": 35.5,
+     "w": 100
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 23,
+     "weight": 300,
+     "font": "oswald",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.1,
+     "duration": 1.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "date",
+    "kind": "date",
+    "date_format": "{{param:date_format}}",
+    "tz": "{{param:timezone}}",
+    "locale": "{{param:locale}}",
+    "box": {
+     "x": 6,
+     "y": 51.5,
+     "w": 88
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 5,
+     "weight": 400,
+     "font": "inter",
+     "align": "center",
+     "opacity": 0.88
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.7,
+     "duration": 1.2,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "logo",
+    "kind": "image",
+    "fit": "contain",
+    "content_id": "{{param:logo}}",
+    "box": {
+     "x": 28,
+     "y": 84,
+     "w": 44,
+     "h": 4.4
+    },
+    "style": {
+     "opacity": "{{param:show_logo}}"
+    }
+   },
+   {
+    "slot": "message",
+    "kind": "body",
+    "box": {
+     "x": 8,
+     "y": 90.5,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 2.9,
+     "weight": 500,
+     "font": "inter",
+     "align": "center",
+     "opacity": 0.7
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 1.1,
+     "duration": 1.2,
+     "easing": "soft"
+    }
+   }
+  ]
+ },
+ "fields": {
+  "message": "{{param:message}}"
+ }
+}

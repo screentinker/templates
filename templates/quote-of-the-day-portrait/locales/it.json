@@ -1,0 +1,66 @@
+{
+  "name": "Citazione del giorno (verticale)",
+  "description": "Una schermata di citazioni tipografica: una grande citazione con grazie, chi l’ha detta e dove, con la data di oggi nella tua lingua. Per un atrio, la sala pausa, un corridoio scolastico o lo schermo vicino alla macchina del caffè. Layout verticale 9:16.",
+  "params": {
+    "eyebrow": {
+      "label": "Titoletto",
+      "help": "Una breve etichetta sopra la citazione. Meglio in maiuscolo.",
+      "default": "CITAZIONE DEL GIORNO"
+    },
+    "quote": {
+      "label": "Citazione",
+      "help": "Senza virgolette: quella grande è disegnata per te. Fino a circa 130 caratteri.",
+      "default": "Non è che abbiamo poco tempo, è che ne perdiamo molto."
+    },
+    "attribution": {
+      "label": "Chi l’ha detto",
+      "default": "Seneca"
+    },
+    "attribution_detail": {
+      "label": "Fonte o ruolo",
+      "help": "Un libro, un ruolo o un anno. Lascia vuoto per nasconderlo.",
+      "default": "La brevità della vita, 49 d.C. circa"
+    },
+    "show_date": {
+      "label": "Mostra la data di oggi",
+      "help": "La data in tempo reale dello schermo, nella lingua e nel fuso orario qui sotto."
+    },
+    "date_format": {
+      "label": "Stile della data",
+      "options": {
+        "weekday": "Giorno della settimana, giorno e mese",
+        "long": "Data completa con anno",
+        "short": "Data breve",
+        "numeric": "Solo numeri"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario della data",
+      "help": "In quale fuso orario è «oggi». Lascia vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua della data, ad es. it-IT, it-CH o de-DE. Lascia vuoto per la lingua dello schermo."
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattivato nasconde il logo e il suo spazio resta vuoto."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG con sfondo trasparente, in un colore chiaro per lo sfondo scuro predefinito."
+    },
+    "accent": {
+      "label": "Colore d’accento",
+      "help": "La grande virgoletta, il titoletto, la linea e la decorazione."
+    },
+    "background": {
+      "label": "Colore di sfondo",
+      "help": "Dietro a tutto."
+    },
+    "text_color": {
+      "label": "Colore del testo",
+      "help": "La citazione e il nome."
+    }
+  }
+}

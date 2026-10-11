@@ -1,0 +1,143 @@
+{
+  "id": "holding-gradient-time-portrait",
+  "name": "Holding screen — calm gradient with time and date (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A quiet standby screen: a large, light clock and the date over a soft gradient, with an optional small logo and one line of text. Six bundled gradients, your timezone and language. Easy on the eye for screens that sit idle for hours. Portrait 9:16 layout.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-gradient-time-portrait",
+  "license": "MIT",
+  "tags": [
+    "holding",
+    "standby",
+    "clock",
+    "ambient",
+    "lobby",
+    "office",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "palette",
+      "type": "select",
+      "label": "Gradient",
+      "default": "tpl:bg-dusk.svg",
+      "help": "The background wash. All six are dark enough for light text.",
+      "options": [
+        {
+          "value": "tpl:bg-dusk.svg",
+          "label": "Dusk (indigo to rose)"
+        },
+        {
+          "value": "tpl:bg-ocean.svg",
+          "label": "Ocean (navy to teal)"
+        },
+        {
+          "value": "tpl:bg-forest.svg",
+          "label": "Forest (pine to moss)"
+        },
+        {
+          "value": "tpl:bg-ember.svg",
+          "label": "Ember (plum to copper)"
+        },
+        {
+          "value": "tpl:bg-aurora.svg",
+          "label": "Aurora (night to green)"
+        },
+        {
+          "value": "tpl:bg-slate.svg",
+          "label": "Slate (charcoal to steel)"
+        }
+      ]
+    },
+    {
+      "name": "clock_format",
+      "type": "select",
+      "label": "Clock format",
+      "default": "24",
+      "options": [
+        {
+          "value": "24",
+          "label": "24-hour"
+        },
+        {
+          "value": "12",
+          "label": "12-hour"
+        }
+      ]
+    },
+    {
+      "name": "date_format",
+      "type": "select",
+      "label": "Date style",
+      "default": "weekday",
+      "options": [
+        {
+          "value": "weekday",
+          "label": "Weekday, day and month"
+        },
+        {
+          "value": "long",
+          "label": "Full date with year"
+        },
+        {
+          "value": "short",
+          "label": "Short date"
+        },
+        {
+          "value": "numeric",
+          "label": "Numbers only"
+        }
+      ]
+    },
+    {
+      "name": "timezone",
+      "type": "timezone",
+      "label": "Timezone",
+      "help": "Where the clock and date are for. Leave empty to use the screen's own clock.",
+      "default": ""
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "help": "How the time and date are written, e.g. en-GB, de-DE or fr-CA. Leave empty for the screen's language.",
+      "default": ""
+    },
+    {
+      "name": "message",
+      "type": "text",
+      "label": "Line of text",
+      "max": 70,
+      "help": "A small line along the bottom. Leave empty for none.",
+      "default": "Northwind Studio  ·  Visitors please sign in at the front desk"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "A small logo at the bottom.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A light (white) PNG or SVG with a transparent background reads best on the gradient.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#FFFFFF",
+      "help": "Clock, date and the line of text. Keep it light: every gradient is dark."
+    }
+  ]
+}

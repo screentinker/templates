@@ -1,0 +1,145 @@
+{
+ "name": "Actieaanbieding",
+ "description": "Een scherm voor flash sales en acties: grote kop, het aanbod, de prijs met de oude prijs doorgestreept en de besparing voor je uitgerekend, en een live aftelklok die vanzelf overgaat in ‘actie afgelopen’. Voeg een productfoto en een QR-code naar je webshop toe. Drie stijlen: opvallende retail, strak en minimaal, warm café. Er wordt niets opgehaald.",
+ "params": {
+  "style": {
+   "label": "Stijl",
+   "options": {
+    "bold": "Opvallende retail",
+    "minimal": "Strak en minimaal",
+    "cafe": "Warm café"
+   }
+  },
+  "eyebrow": {
+   "label": "Kleine kop",
+   "help": "Een kort label boven de kop. Laat leeg om het te verbergen.",
+   "default": "Weekend flash sale"
+  },
+  "headline": {
+   "label": "Kop",
+   "default": "Aura draadloze koptelefoon"
+  },
+  "offer": {
+   "label": "Aanbodregel",
+   "help": "Een of twee regels onder de kop. Laat leeg om te verbergen.",
+   "default": "Actieve ruisonderdrukking en 40 uur accu, voor onze laagste prijs van het jaar."
+  },
+  "price": {
+   "label": "Prijs",
+   "help": "Een getal als 89 of 89,99 wordt in je valuta weergegeven. Al het andere (‘2 halen, 1 betalen’) verschijnt zoals getypt. Laat leeg om de prijs te verbergen."
+  },
+  "was_price": {
+   "label": "Oude prijs",
+   "help": "Optioneel. Doorgestreept naast de prijs."
+  },
+  "currency": {
+   "label": "Valutacode",
+   "help": "Een ISO-code van drie letters: EUR, USD, GBP, CHF, JPY… Symbool en plaats volgen de taal. Leeg voor kale getallen."
+  },
+  "decimals": {
+   "label": "Decimalen",
+   "options": {
+    "auto": "Alleen als de prijs centen heeft (89, 89,50)",
+    "always": "Altijd (89,00)"
+   }
+  },
+  "saving": {
+   "label": "Besparingsbadge",
+   "help": "Berekend uit de prijs en de oude prijs; verborgen als een van beide geen getal is.",
+   "options": {
+    "percent": "Percentage (Bespaar 40%)",
+    "amount": "Bedrag (Bespaar € 60)",
+    "off": "Geen badge"
+   }
+  },
+  "saving_text": {
+   "label": "Tekst op de badge",
+   "help": "{saving} wordt het percentage of bedrag, bijv. ‘{saving} korting’. Leeg: ‘Bespaar {saving}’ in de taal van het scherm. Eén - toont alleen de besparing."
+  },
+  "ends_at": {
+   "label": "Actie eindigt",
+   "help": "Datum en tijd zoals 2026-11-29T23:59, of alleen een datum voor het einde van die dag. Gelezen in de tijdzone hieronder. Leeg: de actie eindigt elke dag om middernacht."
+  },
+  "timezone": {
+   "label": "Tijdzone",
+   "help": "De tijdzone van de eindtijd. Leeg gebruikt de klok van het scherm."
+  },
+  "locale": {
+   "label": "Taal",
+   "help": "De taal van de ingebouwde teksten, datums, prijzen en eenheden van de aftelklok. Leeg gebruikt de taal van het scherm."
+  },
+  "clock_format": {
+   "label": "Tijdnotatie",
+   "options": {
+    "auto": "Zoals de taal het wil",
+    "24": "24-uurs",
+    "12": "12-uurs"
+   }
+  },
+  "show_countdown": {
+   "label": "Aftelklok tonen"
+  },
+  "countdown_label": {
+   "label": "Label bij de aftelklok",
+   "help": "Leeg: ‘Eindigt over’ in de taal van het scherm. Eén - verbergt het."
+  },
+  "show_end_date": {
+   "label": "Einde van de actie tonen",
+   "help": "Een regel als ‘Geldig t/m zo 29 nov, 23:59’ onder de aftelklok."
+  },
+  "end_date_label": {
+   "label": "Tekst voor de einddatum",
+   "help": "Staat voor de datum. Leeg: ‘Geldig t/m …’ in de taal van het scherm. Eén - toont alleen de datum."
+  },
+  "after_end": {
+   "label": "Als de actie voorbij is",
+   "options": {
+    "message": "Actie laten staan en de eindmelding tonen",
+    "fallback": "De hele actie vervangen door de vervangende regel"
+   }
+  },
+  "ended_text": {
+   "label": "Eindmelding",
+   "help": "Leeg: ‘Deze actie is afgelopen’ in de taal van het scherm."
+  },
+  "fallback_heading": {
+   "label": "Vervangende kleine kop",
+   "help": "Een kleine regel boven de vervangende regel. Leeg toont de regel alleen."
+  },
+  "fallback_text": {
+   "label": "Vervangende regel",
+   "help": "Schermvullend na het einde als de instelling hierboven dat zegt. Leeg gebruikt de eindmelding.",
+   "default": "Elke vrijdag nieuwe deals. Tot dan!"
+  },
+  "image": {
+   "label": "Productafbeelding",
+   "help": "Een PNG met transparante achtergrond werkt het best. Laat leeg voor een actie met alleen tekst."
+  },
+  "qr_url": {
+   "label": "Link voor de QR-code",
+   "help": "Wordt als QR-code op het scherm getekend. Laat leeg om te verbergen."
+  },
+  "qr_label": {
+   "label": "Tekst onder de QR-code",
+   "help": "Leeg: ‘Scan en shop’ in de taal van het scherm. Eén - verbergt hem."
+  },
+  "fine_print": {
+   "label": "Kleine lettertjes",
+   "default": "Zolang de voorraad strekt. Maximaal twee per klant. Niet geldig met andere acties. Prijzen inclusief btw."
+  },
+  "custom_colors": {
+   "label": "Eigen kleuren gebruiken",
+   "help": "Uit: het palet van de stijl. Aan: de drie kleuren hieronder."
+  },
+  "background": {
+   "label": "Achtergrondkleur"
+  },
+  "text_color": {
+   "label": "Tekstkleur"
+  },
+  "accent": {
+   "label": "Accentkleur",
+   "help": "De prijs, de badge en de aftelklok."
+  }
+ }
+}

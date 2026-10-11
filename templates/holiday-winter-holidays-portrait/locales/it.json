@@ -1,0 +1,46 @@
+{
+  "name": "Feste d’inverno (verticale)",
+  "description": "Un augurio inclusivo per ogni festa d’inverno: una fila di luci colorate, neve che cade e colline innevate sotto un cielo blu notte, con un augurio centrato, il tuo messaggio e una riga della data; ideale per gli orari delle feste.",
+  "params": {
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "La riga breve sopra il titolo. Lasciala vuota per nasconderla.",
+      "default": "BUONE FESTE"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "Ha due righe riservate: ci stanno circa 24 caratteri. Un titolo più lungo va a capo su una terza riga e copre il messaggio.",
+      "default": "Tanti auguri a tutti"
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Una o due frasi sotto il titolo; ci stanno fino a 200 caratteri. Un a capo inizia una nuova riga.",
+      "default": "Vi auguriamo calore, riposo e buona compagnia. I nostri uffici chiudono il 24.12 e riaprono il 04.01; l’assistenza resta attiva dalle 8:00 alle 20:00."
+    },
+    "date_line": {
+      "label": "Riga della data",
+      "help": "Testo libero, scritto come deve apparire: una data, un orario e un luogo, o una firma.",
+      "default": "DA TUTTI NOI DI NORTHWIND"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG largo con sfondo trasparente (circa 3,4 : 1 riempie il riquadro; altre forme vi vengono adattate). Sostituisci il segnaposto Northwind."
+    },
+    "accent": {
+      "label": "Colore luce calda"
+    },
+    "accent2": {
+      "label": "Colore luce fredda"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "待机屏幕 — 柔和渐变配时间和日期",
+  "description": "安静的待机屏幕：柔和渐变背景上显示一个大而轻盈的时钟和日期，可选配小标志和一行文字。内置六种渐变，采用你的时区和语言。适合长时间闲置的屏幕，看着也不累眼。",
+  "params": {
+    "palette": {
+      "label": "渐变",
+      "help": "背景色调。六种都足够暗，适合浅色文字。",
+      "options": {
+        "tpl:bg-dusk.svg": "黄昏（靛蓝到玫瑰）",
+        "tpl:bg-ocean.svg": "海洋（藏青到青绿）",
+        "tpl:bg-forest.svg": "森林（松绿到苔绿）",
+        "tpl:bg-ember.svg": "余烬（梅紫到铜色）",
+        "tpl:bg-aurora.svg": "极光（夜色到绿色）",
+        "tpl:bg-slate.svg": "石板（炭灰到钢灰）"
+      }
+    },
+    "clock_format": {
+      "label": "时钟格式",
+      "options": {
+        "12": "12 小时制",
+        "24": "24 小时制"
+      }
+    },
+    "date_format": {
+      "label": "日期样式",
+      "options": {
+        "weekday": "星期、日和月",
+        "long": "含年份的完整日期",
+        "short": "简短日期",
+        "numeric": "仅数字"
+      }
+    },
+    "timezone": {
+      "label": "时区",
+      "help": "时钟和日期按哪个地方的时间显示。留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "时间和日期的书写方式，例如 en-GB、de-DE 或 fr-CA。留空则使用屏幕的语言。"
+    },
+    "message": {
+      "label": "文字行",
+      "help": "底部的一行小字。留空则不显示。",
+      "default": "Northwind Studio  ·  访客请在前台登记"
+    },
+    "show_logo": {
+      "label": "显示标志",
+      "help": "底部的小标志。"
+    },
+    "logo": {
+      "label": "标志",
+      "help": "浅色（白色）、透明背景的 PNG 或 SVG 在渐变上最清晰。"
+    },
+    "text_color": {
+      "label": "文字颜色",
+      "help": "时钟、日期和文字行的颜色。请保持浅色：所有渐变都偏暗。"
+    }
+  }
+}

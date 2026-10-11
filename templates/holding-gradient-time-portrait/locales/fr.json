@@ -1,0 +1,59 @@
+{
+  "name": "Écran d'attente — dégradé calme avec heure et date (portrait)",
+  "description": "Un écran d'attente paisible : une grande horloge légère et la date sur un dégradé doux, avec un petit logo et une ligne de texte facultatifs. Six dégradés inclus, votre fuseau horaire et votre langue. Reposant pour les écrans qui restent inactifs des heures. Mise en page portrait 9:16.",
+  "params": {
+    "palette": {
+      "label": "Dégradé",
+      "help": "Le fond. Les six sont assez sombres pour un texte clair.",
+      "options": {
+        "tpl:bg-dusk.svg": "Crépuscule (indigo à rose)",
+        "tpl:bg-ocean.svg": "Océan (marine à turquoise)",
+        "tpl:bg-forest.svg": "Forêt (pin à mousse)",
+        "tpl:bg-ember.svg": "Braise (prune à cuivre)",
+        "tpl:bg-aurora.svg": "Aurore (nuit à vert)",
+        "tpl:bg-slate.svg": "Ardoise (anthracite à acier)"
+      }
+    },
+    "clock_format": {
+      "label": "Format de l'heure",
+      "options": {
+        "12": "12 heures",
+        "24": "24 heures"
+      }
+    },
+    "date_format": {
+      "label": "Style de date",
+      "options": {
+        "weekday": "Jour de la semaine, jour et mois",
+        "long": "Date complète avec l'année",
+        "short": "Date courte",
+        "numeric": "Chiffres seulement"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire",
+      "help": "Le lieu pour lequel l'heure et la date s'affichent. Laissez vide pour utiliser l'horloge de l'écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La façon d'écrire l'heure et la date, par ex. en-GB, de-DE ou fr-CA. Laissez vide pour la langue de l'écran."
+    },
+    "message": {
+      "label": "Ligne de texte",
+      "help": "Une petite ligne en bas. Laissez vide pour ne rien afficher.",
+      "default": "Northwind Studio  ·  Visiteurs, merci de passer à l'accueil"
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Un petit logo en bas."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG clair (blanc) à fond transparent ressort mieux sur le dégradé."
+    },
+    "text_color": {
+      "label": "Couleur du texte",
+      "help": "Horloge, date et ligne de texte. Gardez-la claire : tous les dégradés sont sombres."
+    }
+  }
+}

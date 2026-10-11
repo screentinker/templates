@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <!-- A canvas tote bag with leather handles, drawn for this template. Original work, MIT. -->
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B5C6E"/>
+      <stop offset="1" stop-color="#22394A"/>
+    </linearGradient>
+    <linearGradient id="leather" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C98552"/>
+      <stop offset="1" stop-color="#9C5C30"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="300" cy="566" rx="220" ry="16" fill="#000000" fill-opacity="0.18"/>
+  <!-- back handle, behind the bag -->
+  <path d="M236 240 C236 118 364 118 364 240" fill="none" stroke="#7A4423" stroke-width="18" stroke-linecap="round"/>
+  <!-- body -->
+  <path d="M130 230 L470 230 L505 545 Q505 555 495 555 L105 555 Q95 555 95 545 Z" fill="url(#canvas)"/>
+  <path d="M130 230 L470 230 L474 262 L126 262 Z" fill="#1B2E3C"/>
+  <!-- stitching -->
+  <path d="M132 276 L468 276" stroke="#E9DCC8" stroke-width="3" stroke-dasharray="10 8" stroke-opacity="0.7"/>
+  <path d="M110 530 L490 530" stroke="#E9DCC8" stroke-width="3" stroke-dasharray="10 8" stroke-opacity="0.5"/>
+  <!-- front handle -->
+  <path d="M200 262 C200 62 400 62 400 262" fill="none" stroke="url(#leather)" stroke-width="22" stroke-linecap="round"/>
+  <!-- leather tabs -->
+  <rect x="180" y="236" width="40" height="70" rx="8" fill="url(#leather)"/>
+  <rect x="380" y="236" width="40" height="70" rx="8" fill="url(#leather)"/>
+  <circle cx="200" cy="288" r="6" fill="#E8C690"/>
+  <circle cx="400" cy="288" r="6" fill="#E8C690"/>
+  <!-- front pocket -->
+  <path d="M190 360 L410 360 L418 470 L182 470 Z" fill="#000000" fill-opacity="0.16"/>
+  <path d="M192 370 L408 370" stroke="#E9DCC8" stroke-width="3" stroke-dasharray="8 7" stroke-opacity="0.6"/>
+  <rect x="270" y="395" width="60" height="26" rx="5" fill="#E9DCC8"/>
+  <!-- highlight -->
+  <path d="M150 300 L128 510" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="16" stroke-linecap="round"/>
+</svg>

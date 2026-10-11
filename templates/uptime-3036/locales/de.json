@@ -1,0 +1,50 @@
+{
+  "name": "UPTIME 3036",
+  "description": "Ein eigenständiger Ego-Arcade-Shooter über die schlimmste Bereitschaftsschicht des Jahres 3036: Alle Server sind ausgefallen, und im Rechenzentrum wimmelt es von Bugs. Spielt gerade niemand? Dann spielt er sich im Autopilot-Demomodus selbst. Klicken oder eine Taste drücken, um zu übernehmen; wer geht, übergibt wieder an die Demo.",
+  "params": {
+    "title": {
+      "label": "Titel"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "DIE SERVER SIND AUSGEFALLEN. DU HAST BEREITSCHAFT."
+    },
+    "accent": {
+      "label": "Neonfarbe"
+    },
+    "accent2": {
+      "label": "Zweite Neonfarbe"
+    },
+    "difficulty": {
+      "label": "Schwierigkeit",
+      "options": {
+        "easy": "Leicht",
+        "normal": "Normal",
+        "hard": "Schwer"
+      }
+    },
+    "playable": {
+      "label": "Spielbar (Klick / Tastatur)",
+      "help": "Aus: Der Bot spielt endlos, eine reine Attract-Schleife."
+    },
+    "idle_sec": {
+      "label": "Zurück zum Demomodus nach (Sekunden ohne Eingabe)"
+    },
+    "resolution": {
+      "label": "Render-Auflösung",
+      "help": "Niedriger ist schneller auf kleinen Playern; der Pixel-Look ist Absicht.",
+      "options": {
+        "320": "Retro (320)",
+        "400": "Standard (400)",
+        "560": "Scharf (560)"
+      }
+    },
+    "crt": {
+      "label": "CRT-Scanlines"
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache aller Wörter und Zahlen auf dem Bildschirm, z. B. de oder ja. Leer lassen für die Sprache des Bildschirms. Titel und Slogan schreiben Sie selbst."
+    }
+  }
+}

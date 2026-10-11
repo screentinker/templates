@@ -1,0 +1,50 @@
+{
+  "name": "Empfang – Willkommen (Hochformat)",
+  "description": "Ein ruhiger Begrüßungsbildschirm für Empfang oder Lobby: Ihr Logo, eine Überschrift und eine Detailzeile, dazu eine Live-Uhr und das Datum in der Zeitzone und Sprache des Gebäudes. Hochformat 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Am besten ein PNG oder SVG mit transparentem Hintergrund. Oben angezeigt."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "default": "SCHÖN, DASS SIE DA SIND"
+    },
+    "headline": {
+      "label": "Überschrift",
+      "default": "Willkommen im Northwind Studio"
+    },
+    "subline": {
+      "label": "Detailzeile",
+      "default": "Bitte melden Sie sich am Empfang an – Ihr Gastgeber ist gleich für Sie da."
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "default": "Gäste-WLAN: Northwind-Guest"
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "timezone": {
+      "label": "Zeitzone der Uhr",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache des Datums (Wochentag und Monat), z. B. de oder de-CH. Leer lassen für die Sprache des Bildschirms."
+    },
+    "clock_format": {
+      "label": "Uhrformat",
+      "options": {
+        "24": "24 Stunden",
+        "12": "12 Stunden"
+      }
+    }
+  }
+}

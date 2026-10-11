@@ -1,0 +1,134 @@
+{
+ "name": "Team-Feiern",
+ "description": "Geburtstage, Firmenjubiläen und Willkommensgrüße für Büro oder Pausenraum. Wechselnde Karten mit bunten Initialen-Avataren, Jubiläums-Medaillen bei 1, 5, 10, 15 und 20+ Jahren und eine Liste aller, die heute, diese Woche oder diesen Monat feiern. Personen eintippen oder in einem Google Sheet pflegen. Verspielt mit Konfetti oder elegant und dunkel.",
+ "params": {
+  "title": {
+   "label": "Titel",
+   "help": "Die Überschrift. Leer lassen, um sie auszublenden.",
+   "default": "Feiern bei Northwind"
+  },
+  "logo": {
+   "label": "Logo",
+   "help": "Optional. Neben dem Titel."
+  },
+  "window": {
+   "label": "Wen anzeigen",
+   "options": {
+    "today": "Nur heute",
+    "week": "Diese Woche (Kalenderwoche)",
+    "next7": "Die nächsten 7 Tage",
+    "month": "Diesen Monat",
+    "next30": "Die nächsten 30 Tage"
+   }
+  },
+  "week_start": {
+   "label": "Wochen beginnen am",
+   "help": "Nur für „Diese Woche“.",
+   "options": {
+    "monday": "Montag",
+    "sunday": "Sonntag",
+    "saturday": "Samstag"
+   }
+  },
+  "show_birthdays": {
+   "label": "Geburtstage zeigen"
+  },
+  "show_anniversaries": {
+   "label": "Firmenjubiläen zeigen"
+  },
+  "show_new_hires": {
+   "label": "Neue Kolleginnen und Kollegen begrüßen"
+  },
+  "milestones_only": {
+   "label": "Nur runde Jubiläen (1, 5, 10, 15, 20, 25 … Jahre)"
+  },
+  "welcome_days": {
+   "label": "Neue im Team begrüßen für (Tage)",
+   "help": "Neue bleiben so viele Tage nach ihrem ersten Tag auf dem Bildschirm, unabhängig vom Zeitraum."
+  },
+  "theme": {
+   "label": "Design",
+   "options": {
+    "playful": "Verspielt (hell, Konfetti)",
+    "elegant": "Elegant (dunkel, Gold)"
+   }
+  },
+  "animate": {
+   "label": "Hintergrund animieren (Konfetti / Goldfunken)",
+   "help": "Auf sehr langsamen Playern ausschalten."
+  },
+  "seconds": {
+   "label": "Sekunden pro Person"
+  },
+  "birthday_label": {
+   "label": "Überschrift Geburtstag",
+   "help": "Über dem Namen auf einer Geburtstagskarte. Leer: „Alles Gute zum Geburtstag“ in der Sprache des Bildschirms."
+  },
+  "anniversary_label": {
+   "label": "Überschrift Jubiläum",
+   "help": "{n} wird durch die Zahl der Jahre ersetzt, z. B. „{n} Jahre bei uns“. Leer: diese Zeile in der Sprache des Bildschirms, mit richtigem Plural."
+  },
+  "anniversary_one_label": {
+   "label": "Überschrift für ein Jahr",
+   "help": "Für das erste Jubiläum, z. B. „1 Jahr bei uns“. Leer nutzt die Überschrift darüber oder den eingebauten Text."
+  },
+  "new_hire_label": {
+   "label": "Überschrift für Neue",
+   "help": "Leer: „Willkommen im Team“ in der Sprache des Bildschirms."
+  },
+  "list_title": {
+   "label": "Überschrift der Liste",
+   "help": "Über der Liste aller im Zeitraum. Leer: „Wer feiert“ in der Sprache des Bildschirms. Ein einzelnes - blendet sie aus."
+  },
+  "empty_title": {
+   "label": "Text, wenn niemand feiert",
+   "help": "Leer: „Gerade gibt es nichts zu feiern“ in der Sprache des Bildschirms."
+  },
+  "empty_text": {
+   "label": "Kleiner Text, wenn niemand feiert",
+   "help": "Leer: ein freundlicher Satz in der Sprache des Bildschirms. Ein einzelnes - blendet ihn aus."
+  },
+  "next_label": {
+   "label": "Überschrift über der nächsten Feier (wenn niemand feiert)",
+   "help": "Wenn niemand feiert, erscheint darunter die nächste Person innerhalb eines Jahres. Leer: „Als Nächstes“. Ein einzelnes - blendet sie aus."
+  },
+  "people": {
+   "label": "Datenquelle für Personen (optional)",
+   "help": "Ein Google Sheet, CSV oder eine manuelle Tabelle mit einer Zeile pro Person. Hat sie die Namensspalte, ersetzt sie die Beispielpersonen unten."
+  },
+  "name_col": {
+   "label": "Spalte Name"
+  },
+  "type_col": {
+   "label": "Spalte Art",
+   "help": "Optional: Geburtstag, Jubiläum oder Neu im Team (auch Englisch). Ohne sie ergibt jede Zeile einen Geburtstag aus dem Datum und ein Jubiläum oder Willkommen aus dem Startdatum."
+  },
+  "date_col": {
+   "label": "Spalte Geburtstag / Datum",
+   "help": "MM-TT oder JJJJ-MM-TT. Das Geburtsjahr wird nie angezeigt."
+  },
+  "start_col": {
+   "label": "Spalte Startdatum",
+   "help": "JJJJ-MM-TT, der erste Arbeitstag. Ergibt Jubiläen und Willkommensgrüße."
+  },
+  "title_col": {
+   "label": "Spalte Jobtitel"
+  },
+  "team_col": {
+   "label": "Spalte Team"
+  },
+  "sample": {
+   "label": "Personen (ohne verbundene Datenquelle)",
+   "help": "Eine Person pro Zeile: Name | Art | Datum | Startdatum | Titel | Team. Datumsangaben auch als today, today+3 oder today+3-5y (vor 5 Jahren).",
+   "default": "Priya Raman | Geburtstag | today | | Senior Product Designerin | Design\nMarcus Okafor | Jubiläum | | today+1-10y | Leiter Logistik | Betrieb\nLena Fischer | Neu im Team | | today-2 | Data Engineer | Plattform\nGrace Mensah | Jubiläum | | today+2-1y | Office-Managerin | Personal & Standorte\nAiko Tanaka | Jubiläum | | today+3-5y | Leiterin Customer Success | Support"
+  },
+  "timezone": {
+   "label": "Zeitzone",
+   "help": "Legt fest, wann „heute“ beginnt. Leer nutzt die Uhr des Bildschirms."
+  },
+  "locale": {
+   "label": "Sprache",
+   "help": "Die Sprache der eingebauten Überschriften, von Heute/Morgen und der Daten, z. B. de-DE oder de-CH. Leer nutzt die Sprache des Bildschirms."
+  }
+ }
+}

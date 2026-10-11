@@ -1,0 +1,164 @@
+{
+  "name": "Giorni senza infortuni",
+  "description": "Tabellone sicurezza per stabilimento, magazzino o cantiere: i giorni (o le ore) dall’ultimo incidente, il record, un indicatore verde/giallo/rosso verso l’obiettivo, i cartelli DPI e messaggi di sicurezza a rotazione. Il giorno di un incidente diventa rosso. Si azzera anche da un foglio Google.",
+  "params": {
+    "site_name": {
+      "label": "Nome del sito",
+      "default": "Northwind Logistics · Magazzino Riverside"
+    },
+    "last_incident": {
+      "label": "Data dell’ultimo incidente",
+      "help": "AAAA-MM-GG, oppure AAAA-MM-GG HH:MM per un orario preciso (nel fuso qui sotto). Una fonte dati collegata ha la precedenza."
+    },
+    "incidents": {
+      "label": "Fonte dati incidenti (facoltativa)",
+      "help": "Un foglio Google o una tabella manuale con una colonna con la data dell’ultimo incidente. Vale la data più recente."
+    },
+    "date_col": {
+      "label": "Colonna della data"
+    },
+    "best_col": {
+      "label": "Colonna del record (facoltativa)",
+      "help": "Una colonna con la serie più lunga in giorni. Ignorata se la fonte non ce l’ha."
+    },
+    "date_order": {
+      "label": "Le date come 03/04/2026 sono",
+      "options": {
+        "dmy": "Prima il giorno (3 aprile 2026)",
+        "mdy": "Prima il mese (4 marzo 2026)"
+      }
+    },
+    "count_unit": {
+      "label": "Conta in",
+      "options": {
+        "days": "Giorni",
+        "days_hours": "Giorni e ore",
+        "hours": "Ore",
+        "minutes": "Minuti"
+      }
+    },
+    "unit_label": {
+      "label": "Unità",
+      "help": "Lascia vuoto per la parola nella lingua scelta (giorni, days, Tage...)."
+    },
+    "headline": {
+      "label": "Riga sotto il numero",
+      "default": "senza infortuni con assenza"
+    },
+    "since_label": {
+      "label": "Testo prima della data dell’incidente",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "incident_today_label": {
+      "label": "Mostrato il giorno di un incidente",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "incident_today_note": {
+      "label": "Riga sotto in quel giorno",
+      "default": "Metti in sicurezza l’area, segnala, abbiate cura l’uno dell’altro."
+    },
+    "best_record": {
+      "label": "Record (giorni)"
+    },
+    "best_label": {
+      "label": "Titolo: record",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "new_record_label": {
+      "label": "Mostrato quando il record è battuto",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "target_days": {
+      "label": "Obiettivo (giorni)"
+    },
+    "target_label": {
+      "label": "Titolo: obiettivo",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "amber_days": {
+      "label": "Giallo da (giorni)",
+      "help": "Sotto questa soglia il tabellone è rosso."
+    },
+    "green_days": {
+      "label": "Verde da (giorni)"
+    },
+    "status_green": {
+      "label": "Stato: verde",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "status_amber": {
+      "label": "Stato: giallo",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "status_red": {
+      "label": "Stato: rosso",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "messages": {
+      "label": "Messaggi di sicurezza",
+      "help": "Uno per riga. Scorrono in basso. Lascia vuoto per nascondere la barra.",
+      "default": "Segnala ogni quasi incidente. Così restiamo a zero.\nZona carrelli: pedoni solo sui percorsi segnati.\nTre punti di appoggio su ogni scala e gradino.\nVedi una perdita? Fermati, delimita l’area, segnala.\nSolleva con le gambe e chiedi aiuto oltre i 25 kg.\nStanco o non stai bene? Avvisa il capoturno."
+    },
+    "message_seconds": {
+      "label": "Secondi per messaggio"
+    },
+    "ppe_heading": {
+      "label": "Titolo: cartelli DPI",
+      "help": "Lascia vuoto per il testo predefinito nella lingua dello schermo."
+    },
+    "ppe_labels": {
+      "label": "Nomi dei DPI",
+      "help": "Sei nomi separati da |, in quest’ordine: elmetto, occhiali, alta visibilità, guanti, scarpe, protezione udito. I nomi vuoti usano quelli predefiniti."
+    },
+    "ppe_hard_hat": {
+      "label": "Mostra DPI: elmetto"
+    },
+    "ppe_goggles": {
+      "label": "Mostra DPI: occhiali protettivi"
+    },
+    "ppe_hivis": {
+      "label": "Mostra DPI: alta visibilità"
+    },
+    "ppe_gloves": {
+      "label": "Mostra DPI: guanti"
+    },
+    "ppe_boots": {
+      "label": "Mostra DPI: scarpe antinfortunistiche"
+    },
+    "ppe_ear": {
+      "label": "Mostra DPI: protezione dell’udito"
+    },
+    "green_color": {
+      "label": "Colore verde"
+    },
+    "amber_color": {
+      "label": "Colore giallo"
+    },
+    "red_color": {
+      "label": "Colore rosso"
+    },
+    "accent": {
+      "label": "Colore delle strisce di pericolo"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "clock_format": {
+      "label": "Orologio",
+      "options": {
+        "auto": "Come la lingua",
+        "24": "24 ore",
+        "12": "12 ore",
+        "off": "Nascondi l’orologio"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario del sito",
+      "help": "I giorni cambiano a mezzanotte in questo fuso. Lascia vuoto per l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Parole, date e numeri sullo schermo, ad esempio it-IT o it-CH. Lascia vuoto per la lingua dello schermo."
+    }
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "id": "promo-happy-hour-portrait",
+  "name": "Happy hour promo (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A portrait (9:16) happy hour or daypart offer for a bar or restaurant: a big headline, the days and hours, three deals with prices, a drink picture with a warm glow, and a live clock so guests can see how long is left.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-happy-hour-portrait",
+  "license": "MIT",
+  "tags": [
+    "promo",
+    "bar",
+    "restaurant",
+    "hospitality",
+    "happy-hour",
+    "daypart",
+    "clock",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A square-ish PNG or SVG. The bundled badge is a placeholder; replace it with your own.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo (an empty logo setting would otherwise show a dashed box).",
+      "default": true
+    },
+    {
+      "name": "brand",
+      "type": "text",
+      "label": "Store name",
+      "max": 22,
+      "help": "Shown beside the logo. Leave empty if your logo already says it.",
+      "default": "NORTHWIND"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline, first line",
+      "max": 10,
+      "help": "The headline is set in two big lines, a word or two each: Happy / Hour, Weekend / Brunch, Late / Bites.",
+      "default": "Happy"
+    },
+    {
+      "name": "headline_2",
+      "type": "text",
+      "label": "Headline, second line (accent)",
+      "max": 10,
+      "default": "Hour"
+    },
+    {
+      "name": "hours",
+      "type": "text",
+      "label": "When it runs",
+      "max": 36,
+      "help": "Typed as it should read; unlike the clock it is not translated. Schedule the slide in your playlist to show only during these hours.",
+      "default": "MONDAY – FRIDAY · 4 – 7 PM"
+    },
+    {
+      "name": "deal1_price",
+      "type": "text",
+      "label": "Deal 1 price",
+      "max": 7,
+      "default": "$6"
+    },
+    {
+      "name": "deal1_name",
+      "type": "text",
+      "label": "Deal 1 name",
+      "max": 20,
+      "default": "House wines"
+    },
+    {
+      "name": "deal1_note",
+      "type": "text",
+      "label": "Deal 1 note",
+      "max": 40,
+      "default": "Red, white or rosé by the glass"
+    },
+    {
+      "name": "deal2_price",
+      "type": "text",
+      "label": "Deal 2 price",
+      "max": 7,
+      "default": "$5"
+    },
+    {
+      "name": "deal2_name",
+      "type": "text",
+      "label": "Deal 2 name",
+      "max": 20,
+      "default": "Draft pints"
+    },
+    {
+      "name": "deal2_note",
+      "type": "text",
+      "label": "Deal 2 note",
+      "max": 40,
+      "default": "Every tap, including the seasonal sour"
+    },
+    {
+      "name": "deal3_price",
+      "type": "text",
+      "label": "Deal 3 price",
+      "max": 7,
+      "default": "$8"
+    },
+    {
+      "name": "deal3_name",
+      "type": "text",
+      "label": "Deal 3 name",
+      "max": 20,
+      "default": "Classic cocktails"
+    },
+    {
+      "name": "deal3_note",
+      "type": "text",
+      "label": "Deal 3 note",
+      "max": 40,
+      "default": "Margarita, Negroni, Old Fashioned"
+    },
+    {
+      "name": "product_image",
+      "type": "image",
+      "label": "Product picture",
+      "help": "A cut-out PNG or SVG with a transparent background works best. It is fitted, never cropped.",
+      "default": "tpl:cocktail.svg"
+    },
+    {
+      "name": "show_image",
+      "type": "checkbox",
+      "label": "Show the product picture",
+      "help": "Turn off to leave the panel without a picture (an empty picture setting would otherwise show a dashed box).",
+      "default": true
+    },
+    {
+      "name": "show_clock",
+      "type": "checkbox",
+      "label": "Show the clock",
+      "help": "A live clock in the top corner, so guests can see how long is left.",
+      "default": true
+    },
+    {
+      "name": "clock_label",
+      "type": "text",
+      "label": "Clock label",
+      "max": 6,
+      "default": "NOW"
+    },
+    {
+      "name": "timezone",
+      "type": "timezone",
+      "label": "Clock timezone",
+      "help": "Leave empty to use the screen’s own clock.",
+      "default": ""
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "help": "The language of the clock, e.g. en-US or de-DE. Leave empty for the screen’s language.",
+      "default": ""
+    },
+    {
+      "name": "clock_format",
+      "type": "select",
+      "label": "Clock format",
+      "help": "24-hour suits most countries. Pick 12-hour (AM/PM) for the US and other places that use it.",
+      "default": "24",
+      "options": [
+        {
+          "value": "24",
+          "label": "24-hour"
+        },
+        {
+          "value": "12",
+          "label": "12-hour"
+        }
+      ]
+    },
+    {
+      "name": "small_print",
+      "type": "text",
+      "label": "Small print",
+      "max": 120,
+      "default": "Bar and patio only. Please drink responsibly — ID required."
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "help": "The second headline line, the glow behind the picture and the clock pill.",
+      "default": "#FF7A3D"
+    },
+    {
+      "name": "highlight",
+      "type": "color",
+      "label": "Price colour",
+      "help": "The deal prices and the hours line.",
+      "default": "#FFC24B"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#190F2B"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#FFF4E8"
+    },
+    {
+      "name": "background_image",
+      "type": "image",
+      "label": "Background photo",
+      "help": "Optional. A photo behind everything, darkened by the setting below.",
+      "default": ""
+    },
+    {
+      "name": "background_dim",
+      "type": "number",
+      "label": "Darken the photo",
+      "min": 0,
+      "max": 0.9,
+      "step": 0.05,
+      "default": 0.65,
+      "help": "0 = the photo as is, 0.9 = almost black. Only used with a background photo."
+    }
+  ]
+}

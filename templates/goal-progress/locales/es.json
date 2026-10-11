@@ -1,0 +1,152 @@
+{
+  "name": "Progreso de la meta",
+  "description": "Muestra lo cerca que está una colecta, campaña o meta de ventas: termómetro, barra o anillo con lo recaudado, porcentaje, hitos, número de donantes y cuenta atrás. Lanza confeti al llegar a la meta. Escriba el total o conecte una hoja de Google, respuestas de un formulario o una API REST.",
+  "params": {
+    "headline": {
+      "label": "Titular",
+      "help": "La línea grande. Hasta tres líneas en pantalla.",
+      "default": "Llenemos los estantes del banco de alimentos Riverside"
+    },
+    "kicker": {
+      "label": "Nombre de la campaña",
+      "help": "Línea pequeña sobre el titular. Déjelo vacío para ocultarla.",
+      "default": "Northwind Community Fund · Campaña de invierno"
+    },
+    "thanks": {
+      "label": "Línea de agradecimiento",
+      "help": "En la parte inferior. Déjelo vacío para ocultarla.",
+      "default": "Cada donativo se queda en Riverside. Gracias por apoyar a sus vecinos."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Se muestra sobre el titular."
+    },
+    "style": {
+      "label": "Indicador",
+      "help": "Una franja ancha siempre usa la barra de progreso.",
+      "options": {
+        "thermometer": "Termómetro",
+        "bar": "Barra de progreso",
+        "ring": "Anillo"
+      }
+    },
+    "raised": {
+      "label": "Recaudado hasta ahora",
+      "help": "Se usa sin fuente de datos conectada o si no tiene columna de importe."
+    },
+    "target": {
+      "label": "Meta"
+    },
+    "supporters": {
+      "label": "Número de donantes",
+      "help": "0 lo oculta. Con un registro de donaciones como fuente se cuentan sus filas."
+    },
+    "currency": {
+      "label": "Código de moneda",
+      "help": "Tres letras: EUR, USD, MXN, GBP, JPY… Déjelo vacío para números simples (horas, libros, inscripciones).",
+      "default": "EUR"
+    },
+    "unit": {
+      "label": "Unidad (sin moneda)",
+      "help": "Aparece tras los números simples, p. ej. «libros» o «km». Se ignora si hay moneda."
+    },
+    "show_cents": {
+      "label": "Mostrar céntimos / decimales"
+    },
+    "milestones": {
+      "label": "Hitos",
+      "help": "Uno por línea: Importe | Nombre. Hasta 10, entre 0 y la meta. Déjelo vacío para ninguno.",
+      "default": "10000 | Estanterías nuevas\n25000 | Cámara frigorífica\n40000 | Furgoneta de reparto"
+    },
+    "deadline": {
+      "label": "Fecha límite",
+      "help": "Una fecha (2026-12-24), fecha y hora (2026-12-24T17:00) o month-end, quarter-end, year-end. Déjelo vacío para ocultar la cuenta atrás."
+    },
+    "timezone": {
+      "label": "Zona horaria de la fecha límite",
+      "help": "Déjelo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palabras, números y fechas en pantalla, por ejemplo es-ES, es-MX o es-AR. Déjelo vacío para el idioma de la pantalla."
+    },
+    "goal_text": {
+      "label": "Texto bajo el importe",
+      "help": "{target} se sustituye por la meta. Vacío: texto integrado en el idioma de la pantalla. Escriba - para ocultarlo."
+    },
+    "percent_label": {
+      "label": "Leyenda: porcentaje",
+      "help": "Vacío: texto integrado en el idioma de la pantalla. Escriba - para ocultarlo."
+    },
+    "supporters_label": {
+      "label": "Leyenda: donantes",
+      "help": "Vacío: texto integrado en el idioma de la pantalla. Escriba - para ocultarlo."
+    },
+    "countdown_label": {
+      "label": "Leyenda: cuenta atrás",
+      "help": "Vacío: texto integrado en el idioma de la pantalla. Escriba - para ocultarlo."
+    },
+    "ended_label": {
+      "label": "Texto tras la fecha límite",
+      "help": "Vacío: texto integrado en el idioma de la pantalla. Escriba - para ocultarlo."
+    },
+    "next_text": {
+      "label": "Línea del siguiente hito",
+      "help": "Se rellenan {milestone}, {amount} y {remaining}. Vacío: texto integrado en el idioma de la pantalla. Escriba - para ocultarlo."
+    },
+    "celebrate_text": {
+      "label": "Texto al alcanzar la meta",
+      "help": "Vacío: texto integrado en el idioma de la pantalla. Escriba - para ocultarlo."
+    },
+    "source": {
+      "label": "Fuente de datos del total (opcional)",
+      "help": "Una hoja de Google, respuestas de formulario, CSV, API REST o tabla manual. El README explica los formatos que entiende."
+    },
+    "amount_col": {
+      "label": "Columna o campo del importe",
+      "help": "No importan mayúsculas ni signos. Un registro de donaciones puede usar su columna de importe."
+    },
+    "amount_mode": {
+      "label": "Cómo leer el importe",
+      "options": {
+        "auto": "Automático (una fila = total; varias filas = sumar)",
+        "sum": "Sumar todas las filas (registro de donaciones)",
+        "last": "Última fila (total acumulado)",
+        "first": "Primera fila"
+      }
+    },
+    "target_col": {
+      "label": "Columna o campo de la meta (opcional)"
+    },
+    "supporters_col": {
+      "label": "Columna o campo de donantes (opcional)"
+    },
+    "font": {
+      "label": "Fuente del titular",
+      "options": {
+        "archivo": "Archivo (display)",
+        "bitter": "Bitter (serif)",
+        "oswald": "Oswald (condensada)",
+        "inter": "Inter (limpia)"
+      }
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "La parte alta del relleno, el importe y los hitos alcanzados."
+    },
+    "accent2": {
+      "label": "Segundo color de relleno",
+      "help": "El relleno pasa de este color al de acento."
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "animate": {
+      "label": "Animar (relleno al cargar, confeti en la meta)",
+      "help": "Desactívelo en reproductores muy lentos."
+    }
+  }
+}

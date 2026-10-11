@@ -1,0 +1,66 @@
+{
+  "name": "Frase do dia",
+  "description": "Uma tela de citação tipográfica: uma grande frase em fonte serifada, quem disse e onde, com a data de hoje no seu idioma. Para recepção, copa, corredor de escola ou a tela ao lado da máquina de café.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "Um rótulo curto acima da citação. Fica melhor em maiúsculas.",
+      "default": "FRASE DO DIA"
+    },
+    "quote": {
+      "label": "Citação",
+      "help": "Sem aspas: a aspa grande é desenhada para você. Até cerca de 130 caracteres.",
+      "default": "Não é que tenhamos pouco tempo, mas sim que desperdiçamos muito."
+    },
+    "attribution": {
+      "label": "Quem disse",
+      "default": "Sêneca"
+    },
+    "attribution_detail": {
+      "label": "Fonte ou cargo",
+      "help": "Um livro, um cargo ou um ano. Deixe vazio para ocultar.",
+      "default": "Sobre a brevidade da vida, c. 49 d.C."
+    },
+    "show_date": {
+      "label": "Mostrar a data de hoje",
+      "help": "A data ao vivo da tela, no idioma e no fuso horário abaixo."
+    },
+    "date_format": {
+      "label": "Estilo da data",
+      "options": {
+        "weekday": "Dia da semana, dia e mês",
+        "long": "Data completa com ano",
+        "short": "Data curta",
+        "numeric": "Só números"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário da data",
+      "help": "Em qual fuso horário é “hoje”. Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma da data, por exemplo pt-BR, pt-PT ou es-ES. Deixe vazio para o idioma da tela."
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desligado oculta o logotipo e o espaço dele fica vazio."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG com fundo transparente, em cor clara para o fundo escuro padrão."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "A aspa grande, o título pequeno, a linha e a decoração."
+    },
+    "background": {
+      "label": "Cor de fundo",
+      "help": "Atrás de tudo."
+    },
+    "text_color": {
+      "label": "Cor do texto",
+      "help": "A citação e o nome."
+    }
+  }
+}

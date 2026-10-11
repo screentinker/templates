@@ -1,0 +1,278 @@
+/* Days since last incident — ScreenTinker community template. MIT. Fonts: Oswald and Inter, SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Oswald'; font-weight: 300 700; font-style: normal; src: url(fonts/oswald.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 100 900; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+
+:root {
+  --bg: #15181B;
+  --accent: #F2C400;      /* hazard stripes and the message bar's warning sign */
+  --state: #2FBF71;       /* set by app.js: the green, amber or red colour of the streak */
+  --green: #2FBF71;
+  --amber: #F5A524;
+  --red: #E5383B;
+  --ppe: #1C5DA8;         /* mandatory-sign blue */
+  --text: #F2F4F5;
+  --u: 1vmin;
+  --stripe: repeating-linear-gradient(-45deg, var(--accent) 0 calc(var(--u) * 2.2), #111 calc(var(--u) * 2.2) calc(var(--u) * 4.4));
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased; cursor: none;
+  /* A faint steel-plate texture: two crossed hairline grids. */
+  background-image:
+    radial-gradient(120vmax 80vmax at 100% 0%, rgba(255,255,255,.05), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0 1px, transparent 1px 6px);
+}
+[hidden] { display: none !important; }
+/* Long German or Dutch words break with a hyphen (the page's lang is set from the locale setting). */
+.site, .unit, .headline, .since, .kicker, .chip, .pill, .ppe-name, .msg { overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
+/* Letter-spacing and capitals are a Latin habit: CJK and Devanagari labels are set without tracking. */
+html:lang(ja) body .site, html:lang(ja) body .unit, html:lang(ja) body .chip, html:lang(ja) body .kicker, html:lang(ja) body .pill,
+html:lang(zh) body .site, html:lang(zh) body .unit, html:lang(zh) body .chip, html:lang(zh) body .kicker, html:lang(zh) body .pill,
+html:lang(hi) body .site, html:lang(hi) body .unit, html:lang(hi) body .chip, html:lang(hi) body .kicker, html:lang(hi) body .pill { letter-spacing: 0; }
+html:lang(hi) body .unit, html:lang(hi) body .headline, html:lang(hi) body .msg, html:lang(hi) body .ppe-name { line-height: 1.35; }
+/* Japanese breaks between phrases where the engine can (Chromium 119+), not inside a word. */
+html:lang(ja) body .headline, html:lang(ja) body .msg { word-break: auto-phrase; }
+.defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* Hazard tape along the top and bottom edges. */
+body::before, body::after {
+  content: ''; position: absolute; left: 0; right: 0; height: calc(var(--u) * 1.5);
+  background: var(--stripe); z-index: 2;
+}
+body::before { top: 0; }
+body::after { bottom: 0; }
+
+.app {
+  position: absolute; inset: 0;
+  display: grid; gap: calc(var(--u) * 2.4);
+  padding: calc(var(--u) * 4) calc(var(--u) * 4.5) calc(var(--u) * 3.6);
+}
+
+/* ---------- header ---------- */
+.head { grid-area: head; display: flex; align-items: center; justify-content: space-between; gap: calc(var(--u) * 3); min-width: 0; }
+.site {
+  font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .06em; font-size: calc(var(--u) * 4.6); line-height: 1.05;
+  min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.clockbox { flex: none; text-align: right; }
+.clock { font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 500; font-size: calc(var(--u) * 4.6); line-height: 1; font-variant-numeric: tabular-nums; }
+.date { font-size: calc(var(--u) * 1.9); font-weight: 500; opacity: .62; margin-top: calc(var(--u) * .5); white-space: nowrap; letter-spacing: .02em; }
+
+/* ---------- the streak ---------- */
+.hero {
+  grid-area: hero; position: relative; min-width: 0; min-height: 0; overflow: hidden;
+  display: flex; flex-direction: column;
+  padding: calc(var(--u) * 3.2) calc(var(--u) * 4) calc(var(--u) * 3.4);
+  background: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.08);
+  border-left: calc(var(--u) * 1.1) solid var(--state);
+  border-radius: calc(var(--u) * .6);
+}
+/* Rivets in the corners, for the plate look. */
+.hero::before, .hero::after {
+  content: ''; position: absolute; top: calc(var(--u) * 1.4); width: calc(var(--u) * 1); height: calc(var(--u) * 1);
+  border-radius: 50%; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,.35), rgba(255,255,255,.06) 70%);
+}
+.hero::before { right: calc(var(--u) * 1.4); }
+.hero::after { right: calc(var(--u) * 1.4); top: auto; bottom: calc(var(--u) * 1.4); }
+
+.hero-top { display: flex; flex: none; margin-bottom: calc(var(--u) * 2); }
+.chip {
+  display: inline-block; font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .14em; font-size: calc(var(--u) * 2.4); line-height: 1;
+  padding: .42em .9em .38em; border-radius: .2em; background: var(--state); color: #111;
+}
+.count-row { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; }
+/* app.js sizes the count to the room left over, so the count and its words sit centred together. */
+.count-wrap { flex: none; min-height: 0; display: flex; align-items: center; margin-bottom: calc(var(--u) * 2); }
+.count {
+  font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 700; color: var(--state);
+  /* line-height 1 with negative margins: the box hugs the figures (Oswald draws them from about
+     0.14em to 0.95em of a 1em line), so fitting the box fits the glyphs. */
+  font-size: calc(var(--u) * 90); line-height: 1; margin: -.13em 0 -.04em; letter-spacing: -.01em; white-space: nowrap;
+  font-variant-numeric: tabular-nums; text-shadow: 0 .02em .06em rgba(0,0,0,.4);
+}
+.count-text { flex: none; min-width: 0; }
+.unit {
+  font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 600; text-transform: uppercase;
+  font-size: calc(var(--u) * 6.4); letter-spacing: .08em; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.unit .extra { color: var(--state); }
+.headline {
+  font-size: calc(var(--u) * 3.6); font-weight: 600; line-height: 1.2; margin-top: calc(var(--u) * 1.2);
+  overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+}
+.since { font-size: calc(var(--u) * 2.4); font-weight: 500; opacity: .62; margin-top: calc(var(--u) * 1.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* The day of an incident: the plate turns red with warning stripes and the chip pulses. */
+body.incident .hero {
+  background:
+    repeating-linear-gradient(-45deg, rgba(229,56,59,.16) 0 calc(var(--u) * 3), rgba(229,56,59,.05) calc(var(--u) * 3) calc(var(--u) * 6)),
+    linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
+  border-color: var(--state);
+}
+body.incident .chip { animation: pulse 1.6s ease-in-out infinite; }
+body.incident .headline { color: var(--state); }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+body.invalid .count { color: rgba(255,255,255,.3); }
+
+/* ---------- side cards ---------- */
+/* With no PPE signs, the two remaining cards share the column. */
+body.no-ppe .side > .card { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.side { grid-area: side; display: flex; flex-direction: column; gap: calc(var(--u) * 2.4); min-width: 0; min-height: 0; }
+.card {
+  position: relative; min-width: 0;
+  padding: calc(var(--u) * 2.4) calc(var(--u) * 3);
+  background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.08);
+  border-radius: calc(var(--u) * .6);
+}
+.kicker {
+  font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 500; text-transform: uppercase;
+  letter-spacing: .16em; font-size: calc(var(--u) * 2.1); opacity: .66; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.big-row { display: flex; flex-wrap: wrap; align-items: center; gap: calc(var(--u) * 1) calc(var(--u) * 1.6); margin-top: calc(var(--u) * .8); min-width: 0; }
+.big {
+  font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 600; font-size: calc(var(--u) * 6.2); line-height: 1.2;
+  /* line-height 1.2 keeps descenders (the y in "days") inside the box; overflow is only for the ellipsis. */
+  padding-bottom: .04em;
+  font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0;
+}
+.big .of { opacity: .5; font-weight: 400; font-size: .62em; }
+.pill {
+  flex: none; font-family: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .12em;
+  font-size: calc(var(--u) * 1.8); padding: .35em .7em .3em; border-radius: .25em;
+  background: var(--accent); color: #111;
+}
+
+.gauge { position: relative; margin-top: calc(var(--u) * 2.2); height: calc(var(--u) * 2.2); }
+.zones { position: absolute; inset: 0; display: flex; border-radius: calc(var(--u) * .4); overflow: hidden; opacity: .26; }
+.z { display: block; height: 100%; }
+.z.red { background: var(--red); }
+.z.amber { background: var(--amber); }
+.z.green { background: var(--green); }
+.fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: calc(var(--u) * .4); background: var(--state); }
+.tick { position: absolute; top: calc(var(--u) * -.7); bottom: calc(var(--u) * -1.1); width: calc(var(--u) * .8); margin-left: calc(var(--u) * -.4); border-radius: 2px; box-shadow: 0 0 0 calc(var(--u) * .2) rgba(0,0,0,.55); }
+.tick.amber { background: var(--amber); }
+.tick.green { background: var(--green); }
+.pointer {
+  position: absolute; top: calc(var(--u) * -1.2); width: 0; height: 0; margin-left: calc(var(--u) * -.9);
+  border-left: calc(var(--u) * .9) solid transparent; border-right: calc(var(--u) * .9) solid transparent;
+  border-top: calc(var(--u) * 1.1) solid var(--text);
+}
+
+.ppe { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+.ppe-list {
+  list-style: none; margin: calc(var(--u) * 1.2) 0 0; padding: calc(var(--u) * .8) 0 0; flex: 1; min-height: 0;
+  display: grid; grid-template-columns: repeat(var(--ppe-cols, 3), 1fr); gap: calc(var(--u) * 1.6) calc(var(--u) * 1.4);
+  align-content: space-evenly; overflow: hidden;
+}
+.ppe-list li { display: flex; flex-direction: column; align-items: center; min-width: 0; text-align: center; }
+.sign {
+  display: block; width: var(--sign, calc(var(--u) * 10)); height: var(--sign, calc(var(--u) * 10)); border-radius: 50%;
+  background: var(--ppe); color: var(--ppe);
+  box-shadow: 0 0 0 calc(var(--u) * .35) #fff, 0 0 0 calc(var(--u) * .5) rgba(0,0,0,.4);
+  padding: calc(var(--sign, calc(var(--u) * 10)) * .15);
+}
+.sign svg { display: block; width: 100%; height: 100%; }
+.ppe-name { margin-top: calc(var(--u) * 1.4); font-size: calc(var(--u) * 1.9); font-weight: 600; line-height: 1.15; max-width: 100%; overflow-wrap: break-word; }
+
+/* ---------- rotating messages ---------- */
+.msgbar {
+  grid-area: msg; display: flex; align-items: center; gap: calc(var(--u) * 2.2); min-width: 0;
+  padding: calc(var(--u) * 1.6) calc(var(--u) * 2.6);
+  background: rgba(0,0,0,.32); border: 1px solid rgba(255,255,255,.07); border-radius: calc(var(--u) * .6);
+}
+.warn { flex: none; width: calc(var(--u) * 5.4); height: calc(var(--u) * 5.4); color: var(--accent); }
+.msg-wrap { flex: 1; min-width: 0; }
+.msg {
+  font-size: calc(var(--u) * 3.2); font-weight: 600; line-height: 1.2;
+  overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  transition: opacity .6s ease, transform .6s ease;
+}
+.msg.out { opacity: 0; transform: translateY(.4em); }
+.dots { flex: none; display: flex; gap: calc(var(--u) * .8); }
+.dots span { width: calc(var(--u) * 1); height: calc(var(--u) * 1); border-radius: 50%; background: var(--text); opacity: .2; transition: opacity .5s, background .5s; }
+.dots span.on { opacity: 1; background: var(--accent); }
+
+/* ================= landscape (e.g. 1920x1080) ================= */
+body.landscape .app {
+  grid-template-columns: minmax(0, 1.62fr) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-areas: "head head" "hero side" "msg msg";
+}
+/* A short count (up to 3 figures) sits beside its words; a longer one gets the whole plate width. */
+body.landscape:not(.long) .count-row { flex-direction: row; align-items: center; gap: calc(var(--u) * 4); }
+body.landscape:not(.long) .count-wrap { flex: none; margin-bottom: 0; }
+body.landscape:not(.long) .count-text { flex: 1; min-width: 0; }
+body.landscape:not(.long) .unit { font-size: calc(var(--u) * 7.2); white-space: normal; line-height: 1.05; }
+body.landscape:not(.long) .since { white-space: normal; line-height: 1.3; }
+body.landscape.no-msg .app { grid-template-rows: auto minmax(0, 1fr); grid-template-areas: "head head" "hero side"; }
+
+/* ================= portrait (e.g. 1080x1920) ================= */
+body.portrait .app {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  grid-template-areas: "head" "hero" "side" "msg";
+  padding: calc(var(--u) * 5) calc(var(--u) * 5) calc(var(--u) * 4.5);
+  gap: calc(var(--u) * 3);
+}
+body.portrait .site { white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font-size: calc(var(--u) * 5.2); }
+body.portrait .hero { padding: calc(var(--u) * 4.5) calc(var(--u) * 5) calc(var(--u) * 5); }
+body.portrait .chip { font-size: calc(var(--u) * 3); }
+/* Stacked in portrait, the plate is centred so the count fills it evenly. */
+body.portrait .hero-top { justify-content: center; }
+body.portrait .count-wrap { justify-content: center; }
+body.portrait .count-text { text-align: center; }
+body.portrait .count { font-size: calc(var(--u) * 90); }
+body.portrait .unit { font-size: calc(var(--u) * 8.4); }
+body.portrait .headline { font-size: calc(var(--u) * 4.6); }
+body.portrait .since { font-size: calc(var(--u) * 3.1); }
+body.portrait .side { display: grid; grid-template-columns: 1fr 1fr; gap: calc(var(--u) * 3); }
+body.portrait .ppe { grid-column: 1 / -1; }
+body.portrait .kicker { font-size: calc(var(--u) * 2.6); }
+body.portrait .big { font-size: calc(var(--u) * 7.4); }
+body.portrait .card { padding: calc(var(--u) * 3) calc(var(--u) * 3.6); }
+body.portrait .ppe-list { grid-template-columns: repeat(var(--ppe-cols, 4), 1fr); margin-top: calc(var(--u) * 2.6); }
+body.portrait .ppe-name { font-size: calc(var(--u) * 2.6); }
+body.portrait .msg { font-size: calc(var(--u) * 3.8); }
+body.portrait .msgbar { padding: calc(var(--u) * 2.6) calc(var(--u) * 3.2); min-height: calc(var(--u) * 15); }
+body.portrait .warn { width: calc(var(--u) * 7); height: calc(var(--u) * 7); }
+
+/* ================= strip (wider than about 3:1, e.g. 1920x200) ================= */
+body.strip { --u: 1vh; }
+body.strip::before, body.strip::after { left: 0; right: auto; top: 0; bottom: 0; height: auto; width: 1.1vw;
+  background: repeating-linear-gradient(-45deg, var(--accent) 0 1.1vw, #111 1.1vw 2.2vw); }
+body.strip::after { left: auto; right: 0; }
+body.strip .app {
+  grid-template-columns: minmax(0, 46%) minmax(0, 17%) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-areas: "hero side msg";
+  padding: 9vh 2.4vw; gap: 1.4vw;
+}
+body.strip .head { display: none; }
+body.strip .hero { padding: 0 1.4vw 0 1.6vw; border-left-width: .6vw; flex-direction: row; align-items: center; }
+body.strip .hero::before, body.strip .hero::after { display: none; }
+body.strip .hero-top { display: none; }
+body.strip .count-row { flex-direction: row; align-items: center; gap: 1.4vw; height: 100%; min-width: 0; flex: 1; }
+body.strip .count-wrap { flex: none; height: 100%; }
+body.strip .count { font-size: 80vh; }
+body.strip .count-text { flex: 1; }
+body.strip .unit { font-size: 20vh; }
+body.strip .headline { font-size: 11vh; margin-top: 2vh; -webkit-line-clamp: 1; white-space: nowrap; text-overflow: ellipsis; display: block; }
+body.strip .since { font-size: 9vh; margin-top: 2vh; }
+body.strip .side { justify-content: center; }
+body.strip .card { padding: 0 1.2vw; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+body.strip .target, body.strip .ppe { display: none; }
+body.strip .kicker { font-size: 10vh; }
+body.strip .big { font-size: 26vh; }
+body.strip .big-row { margin-top: 2vh; flex-wrap: wrap; gap: 2vh 1vw; }
+body.strip .pill { font-size: 9vh; }
+body.strip .msgbar { padding: 0 1.4vw; gap: 1.2vw; }
+body.strip .warn { width: 34vh; height: 34vh; }
+body.strip .msg { font-size: 15vh; }
+body.strip .dots { display: none; }
+body.strip.no-msg .app { grid-template-columns: minmax(0, 1fr) minmax(0, 26%); grid-template-areas: "hero side"; }

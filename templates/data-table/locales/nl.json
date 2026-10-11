@@ -1,0 +1,115 @@
+{
+  "name": "Gegevenstabel",
+  "description": "Elke tabel als een helder, leesbaar bord: een competitiestand, spaarrentes met de kleine lettertjes, voorraad, een rooster. Koppel een Google Sheet, CSV, REST-lijst of handmatige tabel (of typ de rijen in), kies de kolommen, kleur cellen met eenvoudige regels als ‘Voorraad < 5 rood’, en lange tabellen bladeren vanzelf.",
+  "params": {
+    "preset": {
+      "label": "Startpunt",
+      "help": "Vult voorbeeldrijen, een titel en markeerregels in voor alles wat je leeg laat. Kies ‘Geen’ om alleen je eigen instellingen te gebruiken.",
+      "options": {
+        "league": "Sportcompetitie",
+        "rates": "Bank- / spaarrentes",
+        "stock": "Voorraad",
+        "generic": "Algemeen (trainingen)",
+        "none": "Geen: alleen mijn instellingen"
+      }
+    },
+    "title": {
+      "label": "Titel",
+      "help": "Leeg gebruikt de titel van het startpunt. Eén - verbergt hem."
+    },
+    "subtitle": {
+      "label": "Ondertitel",
+      "help": "Eén regel onder de titel. Leeg gebruikt die van het startpunt. Eén - verbergt hem."
+    },
+    "footer": {
+      "label": "Voettekst",
+      "help": "Kleine tekst onderaan. Leeg gebruikt die van het startpunt. Eén - verbergt hem."
+    },
+    "disclosure": {
+      "label": "Toelichting / kleine lettertjes",
+      "help": "Klein onder de tabel op elke pagina, bijv. de verplichte tekst bij rentes. Leeg gebruikt die van het startpunt. Eén - verbergt hem."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Wordt naast de titel getoond."
+    },
+    "table": {
+      "label": "Gegevensbron voor de tabel (optioneel)",
+      "help": "Een Google Sheet, CSV, REST-lijst of handmatige tabel. De koprij wordt de kolomkoppen. Vervangt de hieronder getypte rijen."
+    },
+    "rows": {
+      "label": "Getypte tabel",
+      "help": "Gebruikt zonder gekoppelde gegevensbron. Eerste regel = koppen, dan één rij per regel, cellen gescheiden door |. Leeg toont het voorbeeld van het startpunt."
+    },
+    "show_columns": {
+      "label": "Te tonen kolommen",
+      "help": "Optioneel, koppen gescheiden door komma’s in de gewenste volgorde, bijv. Club, GS, Ptn. Leeg toont alle kolommen."
+    },
+    "highlight_col": {
+      "label": "Kolom om te markeren",
+      "help": "De kop van de kolom die de regels testen. Leeg gebruikt die van het startpunt. Eén - zet markeren uit."
+    },
+    "highlight_rules": {
+      "label": "Markeerregels",
+      "help": "Gescheiden door ; en op volgorde getest, bijv. < 5 rood; < 20 oranje; = Uitverkocht grijs. Kleuren: rood oranje groen blauw paars grijs accent of #hex."
+    },
+    "highlight_style": {
+      "label": "Markeerstijl",
+      "options": {
+        "preset": "Zoals het startpunt",
+        "cell": "De cel kleuren",
+        "row": "De hele rij kleuren"
+      }
+    },
+    "rows_per_page": {
+      "label": "Rijen per pagina",
+      "help": "0 = automatisch: alles op één scherm als het leesbaar blijft, anders pagina’s van een prettige grootte."
+    },
+    "page_seconds": {
+      "label": "Seconden per pagina"
+    },
+    "theme": {
+      "label": "Thema",
+      "options": {
+        "midnight": "Middernacht (donkerblauw)",
+        "graphite": "Grafiet (donkergrijs)",
+        "paper": "Papier (licht)",
+        "contrast": "Hoog contrast (zwart-wit)"
+      }
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Titellijn, koprij, paginapunten en de regelkleur ‘accent’."
+    },
+    "font": {
+      "label": "Lettertype koppen",
+      "options": {
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (smal)",
+        "inter": "Inter (strak)"
+      }
+    },
+    "zebra": {
+      "label": "Zebrastrepen"
+    },
+    "show_updated": {
+      "label": "Laatste update van de gegevensbron tonen",
+      "help": "Alleen met een gekoppelde gegevensbron."
+    },
+    "updated_label": {
+      "label": "Woord ‘Bijgewerkt’",
+      "help": "Het woord voor de tijd. Leeg gebruikt ‘Bijgewerkt’ in de taal van het scherm; één - toont alleen de tijd."
+    },
+    "limit_label": {
+      "label": "Melding als niet alle rijen passen",
+      "help": "Verschijnt als de bron meer rijen heeft dan het scherm bereiken; {shown} en {total} worden ingevuld. Leeg gebruikt de standaardtekst."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De taal van de vaste woorden en voorbeeldtabellen, de updatetijd en de paginanummers. Leeg gebruikt de taal van het scherm."
+    },
+    "timezone": {
+      "label": "Tijdzone van de updatetijd"
+    }
+  }
+}

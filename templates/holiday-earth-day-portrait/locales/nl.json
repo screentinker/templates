@@ -1,0 +1,46 @@
+{
+  "name": "Dag van de Aarde (staand)",
+  "description": "Een scherm voor de Dag van de Aarde in bosgroen en oceaanblauw: een planeet van eenvoudige vormen met maan en sterren, je kop, een bericht over wat je team heeft gedaan en een regel voor de datum of een evenement.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "De korte regel boven de kop. Laat leeg om hem te verbergen.",
+      "default": "FIJNE DAG VAN DE AARDE"
+    },
+    "headline": {
+      "label": "Kop",
+      "help": "Er zijn twee regels voor gereserveerd: ongeveer 24 tekens passen. Een langere kop loopt door naar een derde regel en over het bericht.",
+      "default": "Elke stap telt"
+    },
+    "message": {
+      "label": "Bericht",
+      "help": "Een zin of twee onder de kop; tot 200 tekens passen. Een regeleinde begint een nieuwe regel.",
+      "default": "Dit jaar draaien onze kantoren op 100% groene stroom en is ons restafval 38% minder. Bedankt voor elke bijgevulde fles en elke fietsrit naar het werk."
+    },
+    "date_line": {
+      "label": "Datumregel",
+      "help": "Vrije tekst, getypt zoals hij moet verschijnen: een datum, een tijd en plaats, of een afsluiter.",
+      "default": "22 · 04  ·  GRATIS BOOMPJES 10:00–14:00"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een brede PNG of SVG met transparante achtergrond (ongeveer 3,4 : 1 vult het vak; andere vormen worden erin gepast). Vervang de Northwind-placeholder."
+    },
+    "accent": {
+      "label": "Kleur van het land"
+    },
+    "accent2": {
+      "label": "Kleur van de oceaan"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

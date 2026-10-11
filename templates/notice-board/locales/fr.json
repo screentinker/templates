@@ -1,0 +1,131 @@
+{
+  "name": "Tableau d’affichage",
+  "description": "Un tableau d’affichage pour salle de pause, école ou atelier : cartes avec des catégories en couleur (Urgent, Sécurité, Événement, RH, Info), annonces épinglées en tête, dates de début et de fin pour qu’elles apparaissent et expirent d’elles-mêmes. Une annonce à la une avec les autres à côté, ou une à la fois. Saisissez les annonces ou pilotez-le depuis une Google Sheet.",
+  "params": {
+    "title": {
+      "label": "Titre du tableau",
+      "default": "Tableau d’affichage"
+    },
+    "subtitle": {
+      "label": "Sous-titre",
+      "help": "Une ligne sous le titre, comme le site ou le service. Laissez vide pour la masquer.",
+      "default": "Northwind Works · Bâtiment 2"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facultatif. À côté du titre. Sans logo, une petite icône de tableau s’affiche dans la couleur d’accent."
+    },
+    "layout": {
+      "label": "Disposition",
+      "options": {
+        "featured": "Annonce à la une + les autres à côté",
+        "rotate": "Une annonce à la fois, plein écran"
+      }
+    },
+    "notices": {
+      "label": "Annonces",
+      "help": "Une par ligne : Titre | Texte | Catégorie | Début | Fin | Épinglé | De. Dates : 2026-10-14, 2026-10-14 17:00 ou +N jours. Sans source de données.",
+      "default": "Parking nord fermé jusqu’à vendredi | Réfection de la chaussée dès 6 h. | Urgent | | +3 | oui | Services généraux\nGilet haute visibilité au quai de chargement | Plus de chariots élévateurs cette semaine. | Sécurité | | | | Marcus Lee\nNouveau à la cuisine : lait d’avoine | À la machine à café du 2e étage. | Info | | | | Équipe des bureaux"
+    },
+    "source": {
+      "label": "Source de données des annonces (facultatif)",
+      "help": "Une Google Sheet, un CSV ou un tableau manuel avec une ligne par annonce. S’il a la colonne Titre, il remplace les annonces saisies ci-dessus."
+    },
+    "title_col": {
+      "label": "Colonne Titre",
+      "default": "Titre"
+    },
+    "body_col": {
+      "label": "Colonne Texte",
+      "default": "Texte"
+    },
+    "category_col": {
+      "label": "Colonne Catégorie",
+      "default": "Catégorie"
+    },
+    "start_col": {
+      "label": "Colonne Début",
+      "help": "Facultatif. Une annonce avec une date de début reste cachée jusque-là.",
+      "default": "Début"
+    },
+    "end_col": {
+      "label": "Colonne Fin",
+      "help": "Facultatif. Une annonce disparaît après sa date de fin (une date seule signifie la fin de ce jour).",
+      "default": "Fin"
+    },
+    "pinned_col": {
+      "label": "Colonne Épinglé",
+      "help": "Oui, yes, true, 1, x ou pinned garde l’annonce en tête (et à la une).",
+      "default": "Épinglé"
+    },
+    "from_col": {
+      "label": "Colonne De",
+      "help": "Facultatif. Qui a publié l’annonce, en petit au pied de la carte.",
+      "default": "De"
+    },
+    "date_order": {
+      "label": "Les dates avec des barres obliques sont",
+      "help": "Ne compte que pour des dates comme 03/04/2026. 2026-10-14 est toujours compris.",
+      "options": {
+        "auto": "Selon la langue (US : mois d’abord)",
+        "dmy": "Jour d’abord (14/10/2026)",
+        "mdy": "Mois d’abord (10/14/2026)"
+      }
+    },
+    "category_colors": {
+      "label": "Couleurs des catégories",
+      "help": "Facultatif, une par ligne : Catégorie = #RRGGBB. Urgent, Sécurité, Événement, RH, Informatique, Info et d’autres ont déjà une couleur."
+    },
+    "theme": {
+      "label": "Thème",
+      "options": {
+        "dark": "Sombre",
+        "light": "Clair"
+      }
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Filet du titre, points de page et icône du tableau."
+    },
+    "seconds": {
+      "label": "Secondes par page ou par annonce",
+      "help": "Durée d’affichage de chaque page d’annonces (ou de chaque annonce, une à la fois)."
+    },
+    "show_dates": {
+      "label": "Afficher les dates « jusqu’au » sur les cartes"
+    },
+    "until_label": {
+      "label": "Texte avant une date de fin",
+      "help": "Laissez vide pour « Jusqu’au … » dans la langue de l’écran."
+    },
+    "today_label": {
+      "label": "Texte pour une annonce qui finit aujourd’hui",
+      "help": "Laissez vide pour « Se termine aujourd’hui » dans la langue de l’écran."
+    },
+    "pinned_label": {
+      "label": "Texte du badge Épinglé",
+      "help": "Laissez vide pour « Épinglé » dans la langue de l’écran."
+    },
+    "empty_label": {
+      "label": "Texte quand il n’y a aucune annonce",
+      "help": "Laissez vide pour « Aucune annonce pour le moment » dans la langue de l’écran."
+    },
+    "clock_format": {
+      "label": "Horloge",
+      "options": {
+        "auto": "Selon la langue",
+        "24": "24 heures",
+        "12": "12 heures",
+        "off": "Masquer l’horloge et la date"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire",
+      "help": "Pour l’horloge et le début et la fin des annonces. Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Pour les mots du tableau et les dates, par exemple fr-FR ou fr-CA. Laissez vide pour la langue de l’écran."
+    }
+  }
+}

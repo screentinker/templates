@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Schedule board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="landscape view-split">
+<div class="bg" aria-hidden="true"></div>
+
+<div class="frame">
+  <header class="head">
+    <div class="brand">
+      <img id="logo" class="logo" alt="" hidden>
+      <div id="badge" class="badge" aria-hidden="true" hidden></div>
+      <div class="titles">
+        <h1 id="title" class="title" dir="auto"></h1>
+        <div id="subtitle" class="subtitle" dir="auto"></div>
+      </div>
+    </div>
+    <div id="clockbox" class="clockbox">
+      <div id="clock" class="clock"></div>
+      <div id="date" class="date"></div>
+    </div>
+  </header>
+
+  <section id="focus" class="focus">
+    <div class="focus-top">
+      <div class="kicker-row"><span id="kicker" class="kicker"></span></div>
+      <div id="ftitle" class="ftitle" dir="auto"></div>
+      <div id="fmeta" class="fmeta"></div>
+    </div>
+    <div id="countbox" class="countbox">
+      <div id="countlabel" class="countlabel"></div>
+      <div id="count" class="count"></div>
+    </div>
+    <div id="progress" class="progress">
+      <div class="bar"><div id="fill" class="fill"></div></div>
+      <div class="ends"><span id="pfrom"></span><span id="pto"></span></div>
+    </div>
+    <div id="next" class="next">
+      <div class="next-k"><span id="nextlabel"></span><span id="nextin" class="next-in"></span></div>
+      <div class="next-row"><span id="nexttime" class="next-time"></span><span id="nexttitle" class="next-title" dir="auto"></span></div>
+      <div id="nextmeta" class="next-meta"></div>
+    </div>
+  </section>
+
+  <section id="listbox" class="listbox">
+    <div id="listhead" class="list-head">
+      <span id="listlabel" class="list-label"></span>
+      <span id="listdate" class="list-date"></span>
+      <span id="listchip" class="chip" hidden></span>
+    </div>
+    <ol id="list" class="list"></ol>
+  </section>
+</div>
+
+<script src="presets.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

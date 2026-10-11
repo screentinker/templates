@@ -1,0 +1,46 @@
+{
+  "name": "Saint-Valentin (portrait)",
+  "description": "Des vœux chaleureux de Saint-Valentin sur rouge bordeaux : deux cœurs faits de formes douces, un titre, un message pour une boutique, un café ou un bureau, et une ligne pour la date ou les horaires.",
+  "params": {
+    "eyebrow": {
+      "label": "Surtitre",
+      "help": "La ligne courte au-dessus du titre. Laissez vide pour la masquer.",
+      "default": "AVEC AMOUR, NORTHWIND"
+    },
+    "headline": {
+      "label": "Titre",
+      "help": "Deux lignes lui sont réservées : environ 24 caractères tiennent. Un titre plus long passe sur une troisième ligne et empiète sur le message.",
+      "default": "Joyeuse Saint-Valentin"
+    },
+    "message": {
+      "label": "Message",
+      "help": "Une phrase ou deux sous le titre ; jusqu’à 200 caractères tiennent. Un retour à la ligne commence une nouvelle ligne.",
+      "default": "Aujourd’hui, chaque bouquet et chaque boîte de truffes est emballé gratuitement, et le café sert un chocolat chaud pour deux jusqu’à la fermeture."
+    },
+    "date_line": {
+      "label": "Ligne de date",
+      "help": "Texte libre, saisi tel qu’il doit s’afficher : une date, une heure et un lieu, ou une signature.",
+      "default": "14 · 02  ·  OUVERT JUSQU’À 21 H"
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivez si vous n’avez pas de logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG large à fond transparent (environ 3,4 : 1 remplit le cadre ; les autres formats y sont ajustés). Remplacez le logo provisoire Northwind."
+    },
+    "accent": {
+      "label": "Couleur du cœur"
+    },
+    "accent2": {
+      "label": "Couleur du petit cœur"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    }
+  }
+}

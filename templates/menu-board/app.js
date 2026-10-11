@@ -6,9 +6,41 @@
   'use strict';
 
   var MAX_ITEMS = 100;
-  var SOLD_OUT = { sold_out: 1, soldout: 1, sold: 1, unavailable: 1, out_of_stock: 1 };
+  // Tags that grey an item, as slugs (English plus the catalog languages written in Latin letters)…
+  var SOLD_OUT = {
+    sold_out: 1, soldout: 1, sold: 1, unavailable: 1, out_of_stock: 1,
+    ausverkauft: 1, vergriffen: 1, agotado: 1, agotada: 1, epuise: 1, epuisee: 1, esaurito: 1, esaurita: 1,
+    uitverkocht: 1, esgotado: 1, esgotada: 1
+  };
+  // …and as typed, for the scripts a slug cannot hold (Japanese, Chinese, Hindi).
+  var SOLD_OUT_TEXT = { '売り切れ': 1, '売切れ': 1, '完売': 1, '售罄': 1, '已售完': 1, '售完': 1, 'बिक गया': 1, 'स्टॉक में नहीं': 1 };
+
+  /*
+   * The few words the board writes itself, in each catalog language, picked by the "locale" param's
+   * primary subtag (empty = the player's language; unknown = English).
+   */
+  var STRINGS = {
+    en: { cont: 'cont.', empty: 'The menu is empty.' },
+    de: { cont: 'Forts.', empty: 'Die Karte ist leer.' },
+    es: { cont: 'cont.', empty: 'La carta está vacía.' },
+    fr: { cont: 'suite', empty: 'La carte est vide.' },
+    hi: { cont: 'जारी', empty: 'मेन्यू खाली है।' },
+    it: { cont: 'segue', empty: 'Il menù è vuoto.' },
+    ja: { cont: '続き', empty: 'メニューがありません。' },
+    nl: { cont: 'vervolg', empty: 'De kaart is leeg.' },
+    pt: { cont: 'cont.', empty: 'O cardápio está vazio.' },
+    zh: { cont: '续', empty: '菜单为空。' }
+  };
 
   function str(x) { return x == null ? '' : String(x).trim(); }
+
+  /* The template's language: the "locale" param, else the player's, as a canonical BCP-47 tag. */
+  function resolveLocale(raw) {
+    var l = str(raw);
+    if (!l && typeof navigator !== 'undefined') l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    try { l = Intl.getCanonicalLocales(l || 'en')[0] || 'en'; } catch (e) { l = 'en'; }
+    return l;
+  }
 
   // The same key the server gives a column (server/lib/data-sources/tabular.js slugKey).
   function slug(s) {
@@ -26,15 +58,20 @@
     var menuEl = document.getElementById('menu');
     var stage = document.getElementById('stage');
     var pager = document.getElementById('pager');
+    var locale = resolveLocale(v.locale);
+    var T = STRINGS[locale.split('-')[0].toLowerCase()] || STRINGS.en;
+    root.lang = locale;
 
     if (v.background) root.style.setProperty('--bg', v.background);
     if (v.accent) root.style.setProperty('--accent', v.accent);
     if (v.text_color) root.style.setProperty('--text', v.text_color);
     body.setAttribute('data-font', str(v.font) || 'bitter');
 
-    document.getElementById('title').textContent = str(v.title);
-    document.getElementById('subtitle').textContent = str(v.subtitle);
-    document.getElementById('footer').textContent = str(v.footer);
+    ['title', 'subtitle', 'footer'].forEach(function (id) {
+      var e = document.getElementById(id);
+      e.textContent = str(v[id]);
+      e.setAttribute('dir', 'auto');
+    });
     if (v.logo) {
       var logo = document.getElementById('logo');
       logo.src = v.logo;
@@ -43,9 +80,37 @@
 
     /* ---------- prices ---------- */
     var currency = str(v.currency);
-    var after = v.currency_position === 'after';
     var decimals = str(v.decimals) || '2';
     var comma = v.decimal_comma === true || v.decimal_comma === 'true';
+    var digits = decimals === '0' ? [0, 0] : decimals === 'auto' ? [0, 2] : [2, 2];
+    // Yen and won have no cents: "Always two" would print ¥480.00, so whole-unit currencies get none.
+    // "¥" counts as yen only on a Japanese screen (in Chinese it is the yuan, which has fen).
+    if (decimals === '2' && (/^(円|₩|원)$/.test(currency) ||
+        (/^(¥|￥)$/.test(currency) && /^ja\b/i.test(locale)))) digits = [0, 0];
+    var nf = null;
+    try {
+      nf = new Intl.NumberFormat(locale, { minimumFractionDigits: digits[0], maximumFractionDigits: digits[1] });
+      if (!nf.formatToParts) nf = null;
+    } catch (e) { nf = null; }
+    // Where the symbol goes: "before"/"after" as chosen, or "auto" = where the screen's language puts
+    // a currency sign (en $3.50, de 3,50 €, nl € 3,50), read from Intl's own currency format.
+    var cur = { after: v.currency_position === 'after', space: v.currency_position === 'after' };
+    if (v.currency_position !== 'before' && v.currency_position !== 'after') {
+      cur = { after: false, space: false };
+      try {
+        var parts = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' }).formatToParts(1);
+        var ci = -1, ni = -1;
+        parts.forEach(function (pt, i) {
+          if (pt.type === 'currency') ci = i;
+          if (pt.type === 'integer' && ni < 0) ni = i;
+        });
+        if (ci >= 0 && ni >= 0) {
+          cur.after = ci > ni;
+          var between = cur.after ? parts[ci - 1] : parts[ci + 1];
+          cur.space = !!(between && between.type === 'literal' && /\s/.test(between.value));
+        }
+      } catch (e) { /* keep "before" */ }
+    }
 
     // A single number, perhaps with a currency sign around it: "3.50", "$3.50", "3,50 €", "1,250".
     function toNumber(s) {
@@ -62,21 +127,40 @@
       var n = toNumber(s);
       if (n == null) return s;                       // "Market price", "3.50 / 4.20": shown as typed
       var t;
-      if (decimals === '0') t = String(Math.round(n));
-      else if (decimals === 'auto') t = String(Math.round(n * 100) / 100);
-      else t = n.toFixed(2);
-      if (comma) t = t.replace('.', ',');
+      if (nf) {
+        // The screen's language decides the decimal mark and digit grouping; "decimal comma" forces ",".
+        t = nf.formatToParts(n).map(function (pt) {
+          if (!comma) return pt.value;
+          if (pt.type === 'decimal') return ',';
+          if (pt.type === 'group' && pt.value === ',') return '.';
+          return pt.value;
+        }).join('');
+      } else {
+        if (decimals === '0') t = String(Math.round(n));
+        else if (decimals === 'auto') t = String(Math.round(n * 100) / 100);
+        else t = n.toFixed(digits[1]);
+        if (comma) t = t.replace('.', ',');
+      }
       if (!currency) return t;
-      return after ? t + ' ' + currency : currency + t;
+      var gap = cur.space ? '\u00a0' : '';
+      return cur.after ? t + gap + currency : currency + gap + t;
     }
 
     /* ---------- the menu itself ---------- */
     function fromSource() {
       var d = ST.data && ST.data.menu;
       if (!d || typeof d !== 'object') return null;
+      // The configured heading, or the English one when the sheet does not have it (so a sheet made
+      // with Item/Price/... keeps working after the column settings were translated).
+      function col(name, english) {
+        var a = slug(name);
+        if (a && d['row1_' + a] !== undefined) return a;
+        var b = slug(english);
+        return d['row1_' + b] !== undefined ? b : (a || b);
+      }
       var k = {
-        item: slug(v.item_col || 'Item'), price: slug(v.price_col || 'Price'),
-        desc: slug(v.desc_col || 'Description'), cat: slug(v.category_col || 'Category'), tag: slug(v.tag_col || 'Tag'),
+        item: col(v.item_col, 'Item'), price: col(v.price_col, 'Price'),
+        desc: col(v.desc_col, 'Description'), cat: col(v.category_col, 'Category'), tag: col(v.tag_col, 'Tag'),
       };
       if (!k.item || d['row1_' + k.item] === undefined) return null;
       var out = [];
@@ -113,7 +197,7 @@
     if (!entries.length) {
       var note = document.createElement('div');
       note.className = 'empty-note';
-      note.textContent = 'The menu is empty.';
+      note.textContent = T.empty;
       menuEl.appendChild(note);
       return;
     }
@@ -125,10 +209,11 @@
       return e;
     }
     function itemNode(it) {
-      var sold = !!SOLD_OUT[slug(it.tag)];
+      var sold = !!(SOLD_OUT[slug(it.tag)] || SOLD_OUT_TEXT[str(it.tag).toLowerCase()]);
       var n = el('div', sold ? 'it soldout' : 'it');
       var row = el('div', 'row');
       var name = row.appendChild(el('span', 'name', it.name));
+      name.setAttribute('dir', 'auto');
       // The pill sits inside the name so it follows the last word if a long name wraps.
       if (it.tag) { name.appendChild(document.createTextNode(' ')); name.appendChild(el('span', 'pill', it.tag)); }
       var price = formatPrice(it.price);
@@ -137,12 +222,13 @@
         row.appendChild(el('span', 'price', price));
       }
       n.appendChild(row);
-      if (it.desc) n.appendChild(el('div', 'desc', it.desc));
+      if (it.desc) n.appendChild(el('div', 'desc', it.desc)).setAttribute('dir', 'auto');
       return n;
     }
     function headingNode(g, cont) {
       var h = el('div', 'cat', g.name);
-      if (cont) h.appendChild(el('span', 'cont', 'cont.'));
+      h.setAttribute('dir', 'auto');
+      if (cont) h.appendChild(el('span', 'cont', T.cont));
       return h;
     }
     // Render entries [a, b) into the menu. A heading is kept with the item under it. `grouped` keeps

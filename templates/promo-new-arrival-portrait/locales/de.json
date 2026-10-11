@@ -1,0 +1,93 @@
+{
+  "name": "Neuheit (Hochformat)",
+  "description": "Hochformat (9:16). Ein ruhiger, redaktioneller Bildschirm für ein neues Produkt: ein Produktname in Serifenschrift, eine kurze Beschreibung, Preis und Fundort, das Produkt auf einer getönten Fläche mit „Neu“-Sticker und ein optionaler QR-Code zur Produktseite.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ein annähernd quadratisches PNG oder SVG. Das mitgelieferte Abzeichen ist ein Platzhalter – ersetzen Sie es durch Ihr eigenes."
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Ausschalten, wenn Sie kein Logo haben (ein leeres Logo-Feld zeigt sonst einen gestrichelten Rahmen)."
+    },
+    "brand": {
+      "label": "Name des Geschäfts",
+      "help": "Steht neben dem Logo. Leer lassen, wenn Ihr Logo den Namen schon enthält."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "default": "NEU EINGETROFFEN"
+    },
+    "sticker": {
+      "label": "Runder Sticker",
+      "help": "Ein kurzes Wort. Leer lassen für einen schlichten Punkt.",
+      "default": "NEU"
+    },
+    "headline": {
+      "label": "Produktname",
+      "help": "Platz für drei Zeilen; 34 Zeichen passen immer.",
+      "default": "Harbour Tote aus Wachs-Canvas"
+    },
+    "description": {
+      "label": "Beschreibung",
+      "default": "Gewachstes Canvas, pflanzlich gegerbte Ledergriffe und ein Reißverschlussfach innen. In Tinte, Oliv und Sand."
+    },
+    "price": {
+      "label": "Preis",
+      "help": "So, wie er dastehen soll, z. B. 148 € oder 1.299,00 €. Leer lassen zum Ausblenden.",
+      "default": "148 €"
+    },
+    "where": {
+      "label": "Wo es zu finden ist",
+      "default": "JETZT IM LADEN · EBENE 1"
+    },
+    "product_image": {
+      "label": "Produktbild",
+      "help": "Am besten ein freigestelltes PNG oder SVG mit transparentem Hintergrund. Es wird eingepasst, nie beschnitten."
+    },
+    "show_image": {
+      "label": "Produktbild anzeigen",
+      "help": "Ausschalten, um die Fläche ohne Bild zu lassen (ein leeres Bild-Feld zeigt sonst einen gestrichelten Rahmen)."
+    },
+    "show_qr": {
+      "label": "QR-Code anzeigen",
+      "help": "Ausschalten, wenn Sie keinen Link haben: Code, Karte und Bildunterschrift verschwinden."
+    },
+    "qr_url": {
+      "label": "QR-Link",
+      "help": "Die Seite, die der Code öffnet. Kürzere Links lassen sich aus größerer Entfernung scannen."
+    },
+    "qr_caption": {
+      "label": "QR-Bildunterschrift",
+      "default": "Alle Farben ansehen"
+    },
+    "small_print": {
+      "label": "Kleingedrucktes",
+      "default": "Solange der Vorrat reicht. Farben können vom Bild abweichen."
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Die kleine Überschrift, der Sticker und die Linien."
+    },
+    "panel": {
+      "label": "Farbe der Bildfläche"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "sticker_text": {
+      "label": "Textfarbe des Stickers"
+    },
+    "background_image": {
+      "label": "Hintergrundfoto",
+      "help": "Optional. Ein Foto hinter allem, abgedunkelt durch die Einstellung darunter."
+    },
+    "background_dim": {
+      "label": "Foto abdunkeln",
+      "help": "0 = Foto unverändert, 0,9 = fast schwarz. Nur mit Hintergrundfoto wirksam."
+    }
+  }
+}

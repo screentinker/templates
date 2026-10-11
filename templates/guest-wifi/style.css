@@ -18,12 +18,15 @@
   --text: #F3EDE3;
   --ink: #0F1419;
   --k: min(1vh, .5625vw);
+  /* The bundled fonts are Latin only: Japanese, Chinese and Hindi fall through to the Noto families. */
+  --sans: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, "Noto Sans Mono", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", monospace;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; overflow: hidden; }
 body {
   background: var(--bg); color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
   cursor: none;
 }
@@ -51,10 +54,12 @@ body.no-logo .logo { display: none; }
 .eyebrow {
   font-size: calc(var(--k) * 2.2); font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
   color: var(--accent); margin-bottom: calc(var(--k) * 1.6);
+  overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto;
 }
 .headline {
   margin: 0; font-size: calc(var(--k) * 6.4); line-height: 1.08; font-weight: 800; letter-spacing: -.02em;
   max-width: 17em;
+  overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto;
 }
 
 .creds {
@@ -72,8 +77,8 @@ body.no-logo .logo { display: none; }
   font-size: calc(var(--k) * 5.4); font-weight: 700; line-height: 1.15; letter-spacing: -.01em;
   overflow-wrap: anywhere;
 }
-.password { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 600; letter-spacing: 0; }
-.value.muted { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; opacity: .8; font-size: calc(var(--k) * 3.6); }
+.password { font-family: var(--mono); font-weight: 600; letter-spacing: 0; }
+.value.muted { font-family: var(--sans); font-weight: 600; opacity: .8; font-size: calc(var(--k) * 3.6); overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
 
 /* ---------- the code ---------- */
 .scan {
@@ -95,6 +100,7 @@ body.no-logo .logo { display: none; }
 .hint {
   display: flex; align-items: center; margin-top: calc(var(--k) * 3.4);
   font-size: calc(var(--k) * 2.6); font-weight: 700; letter-spacing: .02em;
+  overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto;
 }
 .phone {
   width: calc(var(--k) * 2.1); height: calc(var(--k) * 3.4); margin-right: calc(var(--k) * 1.4);
@@ -169,3 +175,11 @@ body.no-hint .hint { display: none; }
   from { opacity: 0; transform: scale(.94); }
   to { opacity: 1; transform: none; }
 }
+
+/* ---------- scripts that need different typography ---------- */
+/* Letter-spacing pulls Devanagari letters off their headline stroke: none for Hindi. */
+:lang(hi) .eyebrow, :lang(hi) .label, :lang(hi) .hint { letter-spacing: 0; }
+/* Wide tracking spaces kana and hanzi apart one by one: keep it small in Japanese and Chinese. */
+:lang(ja) .eyebrow, :lang(zh) .eyebrow, :lang(ja) .label, :lang(zh) .label { letter-spacing: .04em; }
+/* Japanese has no spaces: break between phrases, not inside a word, where the player supports it. */
+:lang(ja) .headline, :lang(ja) .hint, :lang(ja) .footer, :lang(ja) .value.muted, :lang(ja) .qr.empty { word-break: auto-phrase; }

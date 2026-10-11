@@ -1,7 +1,7 @@
 {
   "id": "event-countdown",
   "name": "Event countdown",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "slide",
   "description": "A launch-screen countdown for a conference, opening or product launch: the event name, a tagline and the date and venue, a big live countdown that switches to your own message when the moment arrives, and an optional ticket or RSVP QR code.",
   "author": "ScreenTinker",
@@ -21,6 +21,9 @@
       "default": "2027-03-18T09:00:00+00:00" },
     { "name": "countdown_label", "type": "text", "label": "Label above the countdown", "max": 40, "default": "DOORS OPEN IN" },
     { "name": "done_text", "type": "text", "label": "Shown when the countdown ends", "max": 24, "default": "Happening now" },
+    { "name": "locale", "type": "locale", "label": "Language",
+      "help": "Language of the countdown units, e.g. de or fr-CA (empty = the screen's language). Older ScreenTinker servers always show them as d h m s.",
+      "default": "" },
     { "name": "show_qr", "type": "checkbox", "label": "Show the ticket QR code", "help": "Turn off if you have no link — the QR, its card and caption all disappear.", "default": true },
     { "name": "qr_url", "type": "text", "label": "Ticket / RSVP link", "max": 300, "help": "The address the QR code opens. Keep it short: shorter links make a code that scans from further away.", "default": "https://example.com/aurora/tickets" },
     { "name": "qr_caption", "type": "text", "label": "QR caption", "max": 32, "default": "Scan for tickets" },

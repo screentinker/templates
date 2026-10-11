@@ -1,0 +1,96 @@
+{
+  "name": "Infoleiste",
+  "description": "Eine kompakte Leiste für den Bildschirmrand: Ihr Logo, Uhrzeit und Datum, das aktuelle Wetter und eine wechselnde Zeile mit kurzen Hinweisen. Für L-Leisten, untere Streifen und Seitenleisten; sie ordnet sich für einen schmalen Streifen, eine hohe Seitenspalte oder den ganzen Bildschirm neu. Nichts wird abgerufen: das Wetter kommt aus Ihrer eigenen Wetter-Datenquelle.",
+  "params": {
+    "messages": {
+      "label": "Meldungen",
+      "help": "Eine kurze Meldung pro Zeile; sie wechseln sich ab. Mit einem Etikett und | am Zeilenanfang wird es als Schild gezeigt, z. B.: Heute | Teamtreffen um 15:30. Leer = nur Uhr und Wetter.",
+      "default": "Willkommen | Besucher bitte am Empfang anmelden und den Ausweis abholen\nHeute | Teamtreffen im Atrium um 15:30, Kaffee und Gebäck ab 15:00\nSicherheit | Probealarm am Donnerstag um 11:00, kein Räumen nötig\nCafé | Tagessuppe: Kürbis mit Sauerteigbrot, 4,50\nWLAN | Gästenetz Northwind-Guest, Passwort am Empfang\nJubiläum | Glückwunsch an Priya Raman zu zehn Jahren im Team"
+    },
+    "message_seconds": {
+      "label": "Sekunden pro Meldung"
+    },
+    "weather": {
+      "label": "Wetter-Datenquelle (optional)",
+      "help": "Eine Datenquelle vom Typ Wetter (Data Sources → New → Weather). Leer lassen, um das Wetter auszublenden."
+    },
+    "location": {
+      "label": "Ortsname",
+      "help": "Unter der Temperatur, wo Platz ist. Leer = der Ortsname der Wetter-Datenquelle."
+    },
+    "show_forecast": {
+      "label": "Die nächsten drei Tage zeigen",
+      "help": "Nur in der Seitenleiste und im Vollbild, wo Platz dafür ist."
+    },
+    "name": {
+      "label": "Name der Organisation",
+      "help": "Neben dem Logo. Leer lassen, um nur das Logo zu zeigen."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Am besten ein quadratisches oder breites Logo mit transparentem Hintergrund. Entfernen, um es auszublenden."
+    },
+    "clock_format": {
+      "label": "Uhrformat",
+      "options": {
+        "24": "24 Stunden (14:30)",
+        "12": "12 Stunden (2:30 PM)",
+        "auto": "Wie in der Sprache üblich"
+      }
+    },
+    "show_seconds": {
+      "label": "Sekunden zeigen"
+    },
+    "date_format": {
+      "label": "Datum",
+      "options": {
+        "long": "Dienstag, 6. Oktober",
+        "short": "Di., 6. Okt.",
+        "numeric": "06.10.2026 (in der Reihenfolge der Sprache)",
+        "none": "Datum ausblenden"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wetterwörter, Datums- und Zahlenformat, z. B. en-GB, de-DE oder fr-CA. Leer = Sprache des Bildschirms."
+    },
+    "layout": {
+      "label": "Anordnung",
+      "options": {
+        "auto": "Automatisch, nach Form der Zone",
+        "row": "Immer ein waagerechter Streifen",
+        "column": "Immer eine senkrechte Seitenleiste",
+        "full": "Immer die Vollbild-Anordnung"
+      }
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "edge": {
+      "label": "Akzentlinie",
+      "help": "Eine dünne Linie in der Akzentfarbe an der Seite, die an den Hauptinhalt grenzt.",
+      "options": {
+        "auto": "Automatisch (oben am Streifen, links an der Seitenleiste)",
+        "top": "Oben",
+        "bottom": "Unten",
+        "left": "Links",
+        "right": "Rechts",
+        "none": "Keine"
+      }
+    },
+    "animate": {
+      "label": "Animieren",
+      "help": "Meldungen gleiten herein, ein dünner Balken zeigt, wann die nächste kommt. Für sehr schwache Player ausschalten."
+    }
+  }
+}

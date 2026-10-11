@@ -1,0 +1,94 @@
+{
+  "name": "Enseignants et bénévoles à l’honneur (portrait)",
+  "description": "Dites merci publiquement : une mise en page chaleureuse, façon livre, avec photo, nom, fonction, une citation et une ligne sur la personne en dehors de la classe. Pour écoles, bibliothèques, associations et groupes locaux. Mise en page portrait 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent donne le meilleur résultat."
+    },
+    "photo": {
+      "label": "Photo",
+      "help": "Une photo tête et épaules, recadrée pour remplir le cadre. Les photos carrées conviennent le mieux."
+    },
+    "show_photo": {
+      "label": "Afficher la photo",
+      "help": "Désactivé, un cercle avec les initiales s’affiche à la place, pour qui préfère ne pas montrer sa photo."
+    },
+    "initials": {
+      "label": "Initiales",
+      "help": "Affichées dans le cercle quand la photo est désactivée. Une ou deux lettres."
+    },
+    "eyebrow": {
+      "label": "Petit titre",
+      "help": "Au-dessus du nom. Les majuscules se lisent le mieux.",
+      "default": "ENSEIGNANTE À L’HONNEUR"
+    },
+    "name": {
+      "label": "Nom",
+      "help": "Une ligne, 26 caractères maximum. Saisissez-le normalement ; TOUT EN MAJUSCULES est plus large et risque de déborder.",
+      "default": "Mme Elena Vasquez"
+    },
+    "role": {
+      "label": "Poste",
+      "help": "Intitulé de poste, équipe, classe ou site. Un texte long passe sur une deuxième ligne.",
+      "default": "Enseignante de CM1 et responsable du club de lecture"
+    },
+    "show_quote": {
+      "label": "Afficher la citation",
+      "help": "Désactivé, la citation et son guillemet sont masqués."
+    },
+    "quote": {
+      "label": "Citation",
+      "help": "Une ou deux phrases en ses propres mots. Inutile d’ajouter des guillemets.",
+      "default": "Chaque enfant n’est qu’à un bon livre d’aimer lire. Je l’aide à trouver ce livre."
+    },
+    "quote_mark": {
+      "label": "Guillemet",
+      "help": "Le grand guillemet décoratif près de la citation. Utilisez celui de votre langue, par ex. « ou “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Afficher l’anecdote",
+      "help": "Désactivé, le libellé et le texte de l’anecdote sont masqués."
+    },
+    "fact_label": {
+      "label": "Libellé de l’anecdote",
+      "help": "Un libellé court, par ex. LE SAVIEZ-VOUS ? ou PARLEZ-MOI DE.",
+      "default": "HORS DE LA CLASSE"
+    },
+    "fun_fact": {
+      "label": "Anecdote",
+      "help": "Une ou deux phrases courtes.",
+      "default": "Elena élève des abeilles au potager de l’école, et sa classe a baptisé la reine « Sa Majesté Bzzz »."
+    },
+    "show_badge": {
+      "label": "Afficher le badge"
+    },
+    "badge": {
+      "label": "Texte du badge",
+      "help": "Un mois, une date d’arrivée, une équipe ou une étape. Les majuscules se lisent le mieux.",
+      "default": "14 ANS À ELMWOOD"
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Badge, petit titre, libellés et le bandeau du bas."
+    },
+    "highlight": {
+      "label": "Couleur de mise en valeur",
+      "help": "Le guillemet et le cercle derrière les initiales."
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "card_color": {
+      "label": "Couleur du cercle décalé",
+      "help": "Le cercle doux placé derrière la photo."
+    },
+    "initials_color": {
+      "label": "Couleur des initiales"
+    }
+  }
+}

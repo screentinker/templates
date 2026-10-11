@@ -1,0 +1,126 @@
+{
+  "name": "欢乐时光促销",
+  "description": "适合酒吧或餐厅的欢乐时光或时段优惠屏：醒目大标题、日期和时间、三款带价格的特惠、带暖色光晕的饮品图片，以及让客人知道还剩多少时间的实时时钟。",
+  "params": {
+    "logo": {
+      "label": "标志",
+      "help": "近似正方形的 PNG 或 SVG。自带的徽标只是占位图，请换成你自己的。"
+    },
+    "show_logo": {
+      "label": "显示标志",
+      "help": "没有标志时请关闭（否则空的标志会显示一个虚线框）。"
+    },
+    "brand": {
+      "label": "店名",
+      "help": "显示在标志旁边。如果标志里已有店名，请留空。"
+    },
+    "headline": {
+      "label": "标题第一行",
+      "help": "标题分两行大字，每行一两个词：欢乐 / 时光、周末 / 早午餐。",
+      "default": "欢乐"
+    },
+    "headline_2": {
+      "label": "标题第二行（强调色）",
+      "default": "时光"
+    },
+    "hours": {
+      "label": "时间",
+      "help": "按想显示的样子输入；与时钟不同，它不会被翻译。请在播放列表中排期，只在这些时段播放。",
+      "default": "周一至周五 · 16:00–19:00"
+    },
+    "deal1_price": {
+      "label": "特惠 1 价格",
+      "default": "¥38"
+    },
+    "deal1_name": {
+      "label": "特惠 1 名称",
+      "default": "招牌葡萄酒"
+    },
+    "deal1_note": {
+      "label": "特惠 1 说明",
+      "default": "红、白或桃红，按杯供应"
+    },
+    "deal2_price": {
+      "label": "特惠 2 价格",
+      "default": "¥28"
+    },
+    "deal2_name": {
+      "label": "特惠 2 名称",
+      "default": "扎啤"
+    },
+    "deal2_note": {
+      "label": "特惠 2 说明",
+      "default": "所有酒头，包括季节限定"
+    },
+    "deal3_price": {
+      "label": "特惠 3 价格",
+      "default": "¥58"
+    },
+    "deal3_name": {
+      "label": "特惠 3 名称",
+      "default": "经典鸡尾酒"
+    },
+    "deal3_note": {
+      "label": "特惠 3 说明",
+      "default": "玛格丽特、尼格罗尼、古典"
+    },
+    "product_image": {
+      "label": "商品图片",
+      "help": "最好用透明背景的抠图 PNG 或 SVG。图片会完整缩放进框内，不会被裁切。"
+    },
+    "show_image": {
+      "label": "显示商品图片",
+      "help": "关闭后面板不显示图片（否则空的图片会显示一个虚线框）。"
+    },
+    "show_clock": {
+      "label": "显示时钟",
+      "help": "顶部角落的实时时钟，让客人知道还剩多少时间。"
+    },
+    "clock_label": {
+      "label": "时钟标签",
+      "default": "现在"
+    },
+    "timezone": {
+      "label": "时钟时区",
+      "help": "留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "时钟的语言，例如 zh-CN 或 zh-TW。留空 = 屏幕的语言。"
+    },
+    "clock_format": {
+      "label": "时钟格式",
+      "help": "大多数国家使用 24 小时制。美国等使用 AM/PM 的地区请选 12 小时制。",
+      "options": {
+        "12": "12 小时制",
+        "24": "24 小时制"
+      }
+    },
+    "small_print": {
+      "label": "附注",
+      "default": "仅限吧台和露台。请理性饮酒，需出示身份证件。"
+    },
+    "accent": {
+      "label": "强调色",
+      "help": "标题第二行、图片后的光晕和时钟底色。"
+    },
+    "highlight": {
+      "label": "价格颜色",
+      "help": "特惠价格和时间行。"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    },
+    "background_image": {
+      "label": "背景照片",
+      "help": "可选。放在最底层的照片，可用下面的设置调暗。"
+    },
+    "background_dim": {
+      "label": "调暗照片",
+      "help": "0 = 原样，0.9 = 接近全黑。仅在有背景照片时生效。"
+    }
+  }
+}

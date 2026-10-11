@@ -1,0 +1,46 @@
+{
+  "name": "Ringraziamento e raccolto (verticale)",
+  "description": "Uno schermo del raccolto nella luce dorata per il Ringraziamento o qualsiasi festa del raccolto: un sole basso su campi ondulati, grano in primo piano e spazio per un titolo, un messaggio su un pranzo solidale o una raccolta alimentare e una riga della data.",
+  "params": {
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "La riga breve sopra il titolo. Lasciala vuota per nasconderla.",
+      "default": "BUON RINGRAZIAMENTO"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "Ha due righe riservate: ci stanno circa 24 caratteri. Un titolo più lungo va a capo su una terza riga e copre il messaggio.",
+      "default": "Insieme, per dire grazie"
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Una o due frasi sotto il titolo; ci stanno fino a 200 caratteri. Un a capo inizia una nuova riga.",
+      "default": "Unisciti a noi per il pranzo del raccolto: 340 pasti cucinati dalla nostra cucina, e ogni donazione va al Banco Alimentare Riverside."
+    },
+    "date_line": {
+      "label": "Riga della data",
+      "help": "Testo libero, scritto come deve apparire: una data, un orario e un luogo, o una firma.",
+      "default": "26 · 11  ·  12:00–14:00  ·  SALA GRANDE"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG largo con sfondo trasparente (circa 3,4 : 1 riempie il riquadro; altre forme vi vengono adattate). Sostituisci il segnaposto Northwind."
+    },
+    "accent": {
+      "label": "Colore del sole"
+    },
+    "accent2": {
+      "label": "Colore dei campi"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

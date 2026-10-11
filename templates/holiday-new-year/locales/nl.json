@@ -1,0 +1,70 @@
+{
+  "name": "Nieuwjaar",
+  "description": "Een middernachtblauwe nieuwjaarsgroet met goud en roze vuurwerk van stippen, het nieuwe jaar in reuzencijfers achter de kop en een optionele live aftelklok tot middernacht die bij de jaarwisseling overgaat in je eigen bericht.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "De korte regel boven de kop. Laat leeg om hem te verbergen.",
+      "default": "VAN IEDEREEN BIJ NORTHWIND"
+    },
+    "headline": {
+      "label": "Kop",
+      "help": "Er zijn twee regels voor gereserveerd: ongeveer 24 tekens passen. Een langere kop loopt door naar een derde regel en over het bericht.",
+      "default": "Een gelukkig nieuwjaar!"
+    },
+    "message": {
+      "label": "Bericht",
+      "help": "Een zin of twee onder de kop; tot 200 tekens passen. Een regeleinde begint een nieuwe regel.",
+      "default": "Bedankt voor een bijzonder jaar. Op nieuwe kansen, gedurfde ideeën en alles wat we straks samen gaan bouwen."
+    },
+    "date_line": {
+      "label": "Datumregel",
+      "help": "Vrije tekst, getypt zoals hij moet verschijnen: een datum, een tijd en plaats, of een afsluiter."
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een brede PNG of SVG met transparante achtergrond (ongeveer 3,4 : 1 vult het vak; andere vormen worden erin gepast). Vervang de Northwind-placeholder."
+    },
+    "accent": {
+      "label": "Goudaccent"
+    },
+    "accent2": {
+      "label": "Vuurwerkaccent"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "big_text": {
+      "label": "Grote achtergrondtekst",
+      "help": "De enorme vage cijfers achter de kop, meestal het nieuwe jaar."
+    },
+    "show_countdown": {
+      "label": "Aftellen tonen",
+      "help": "Zet uit om het aftellen en het label erboven te verbergen."
+    },
+    "target": {
+      "label": "Aftellen tot",
+      "help": "Zet de offset aan het eind op JOUW tijdzone, anders stopt het aftellen te vroeg of te laat. +00:00 is middernacht in Londen; 2027-01-01T00:00:00+01:00 in Amsterdam."
+    },
+    "countdown_label": {
+      "label": "Label boven het aftellen",
+      "help": "Het staat boven het aftellen en boven het bericht dat het vervangt, dus het moet bij allebei passen.",
+      "default": "OUDEJAARSAVOND  ·  MIDDERNACHT"
+    },
+    "done_text": {
+      "label": "Getoond als het aftellen klaar is",
+      "default": "Gelukkig nieuwjaar!"
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de eenheden van het aftellen (leeg = taal van het scherm). Oudere ScreenTinker-servers tonen ze altijd als d h m s."
+    }
+  }
+}

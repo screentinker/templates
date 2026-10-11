@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Promo offer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-style="bold">
+<div class="bg" aria-hidden="true"><div class="deco"></div></div>
+
+<div id="promo" class="promo">
+  <section class="copy" id="copy">
+    <div id="eyebrow" class="eyebrow" dir="auto"></div>
+    <h1 id="headline" class="headline" dir="auto"></h1>
+    <p id="offer" class="offer" dir="auto"></p>
+
+    <div id="deal" class="deal">
+      <div class="deal-main">
+        <div id="price-row" class="price-row">
+          <div id="price" class="price"></div>
+          <div id="was" class="was"></div>
+        </div>
+        <div id="timer" class="timer">
+          <div id="countdown-label" class="timer-label"></div>
+          <div id="tiles" class="tiles"></div>
+          <div id="ended" class="ended-text" hidden></div>
+        </div>
+        <div id="end-date" class="end-date"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visual" id="visual">
+    <div class="disc" aria-hidden="true"></div>
+    <img id="image" class="product" alt="" hidden>
+    <div id="badge" class="badge" hidden><span id="badge-text"></span></div>
+    <div id="qr-card" class="qr-card" hidden>
+      <div id="qr" class="qr"></div>
+      <div id="qr-label" class="qr-label"></div>
+    </div>
+  </section>
+
+  <footer id="fine" class="fine" dir="auto"></footer>
+</div>
+
+<div id="fallback" class="fallback" hidden>
+  <div id="fallback-eyebrow" class="eyebrow" dir="auto"></div>
+  <div id="fallback-text" class="fallback-text" dir="auto"></div>
+</div>
+
+<script src="qr.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

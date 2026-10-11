@@ -1,0 +1,50 @@
+{
+  "name": "UPTIME 3036",
+  "description": "Een originele first-person arcadeshooter over de ergste dienst van het jaar 3036: alle servers liggen plat en het datacenter krioelt van de bugs. Speelt er niemand? Dan speelt hij zichzelf in de demo op automatische piloot. Klik of druk op een toets om het over te nemen; loop weg en de demo neemt het weer over.",
+  "params": {
+    "title": {
+      "label": "Titel"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "DE SERVERS LIGGEN PLAT. JIJ HEBT DIENST."
+    },
+    "accent": {
+      "label": "Neonkleur"
+    },
+    "accent2": {
+      "label": "Tweede neonkleur"
+    },
+    "difficulty": {
+      "label": "Moeilijkheid",
+      "options": {
+        "easy": "Makkelijk",
+        "normal": "Normaal",
+        "hard": "Moeilijk"
+      }
+    },
+    "playable": {
+      "label": "Speelbaar (klik / toetsenbord)",
+      "help": "Uit: de bot speelt eindeloos, een pure demolus."
+    },
+    "idle_sec": {
+      "label": "Terug naar de demo na (seconden zonder invoer)"
+    },
+    "resolution": {
+      "label": "Renderresolutie",
+      "help": "Lager is sneller op kleine spelers; de pixellook is bewust.",
+      "options": {
+        "320": "Retro (320)",
+        "400": "Standaard (400)",
+        "560": "Scherp (560)"
+      }
+    },
+    "crt": {
+      "label": "CRT-scanlijnen"
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De taal van alle woorden en getallen op het scherm, bijvoorbeeld nl of ja. Laat leeg voor de taal van het scherm. Titel en slogan schrijf je zelf."
+    }
+  }
+}

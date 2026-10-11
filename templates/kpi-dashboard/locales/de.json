@@ -1,0 +1,53 @@
+{
+  "name": "KPI-Dashboard",
+  "description": "Große, auf einen Blick lesbare Kennzahl-Kacheln mit Fortschritt zum Ziel und farbiger Veränderung. Aus Google Sheet, CSV, REST-API oder manueller Tabelle (Spalten Metric, Value, Target, Unit, Change) oder selbst eingetippt. 1 bis 12 Kacheln für jede Bildschirmform.",
+  "params": {
+    "data": {
+      "label": "Datenquelle für Kennzahlen (optional)",
+      "help": "Eine Tabellenquelle (Google Sheets, CSV, REST-API oder manuelle Tabelle) mit den Spalten Metric, Value und optional Target, Unit, Change. Leer lassen für die unten eingetippten Werte."
+    },
+    "metrics": {
+      "label": "Kennzahlen (ohne Datenquelle)",
+      "help": "Eine pro Zeile: Kennzahl | Wert | Ziel | Einheit | Änderung. Nur Kennzahl und Wert sind Pflicht.",
+      "default": "Umsatz diesen Monat | 184250 | 200000 | € | +6.4%\nNeukunden | 312 | 300 | | +18\nNet Promoter Score | 64 | 60 | | +3\nOffene Support-Tickets | 27 | | | -9\nØ Antwortzeit | 1.8 | 2 | Std. | -0.4\nVerfügbarkeit | 99.97 | 99.9 | % | +0.02"
+    },
+    "title": {
+      "label": "Titel",
+      "default": "Ergebnisse diesen Monat"
+    },
+    "max_tiles": {
+      "label": "Höchstens anzeigen",
+      "help": "Zeilen über dieser Anzahl werden nicht gezeigt."
+    },
+    "show_targets": {
+      "label": "Fortschritt zum Ziel zeigen"
+    },
+    "up_is_good": {
+      "label": "Ein Anstieg ist gut",
+      "help": "Färbt eine positive Änderung als gut. Enthält der Name offen, Antwortzeit, Abwanderung, Kosten, Fehler oder Wartezeit (auch auf Englisch), gilt es umgekehrt."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "good_color": {
+      "label": "Farbe für gut"
+    },
+    "bad_color": {
+      "label": "Farbe für schlecht"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Zahlen, Uhrzeit und eingebaute Wörter, z. B. de oder en-US. Leer lassen für die Sprache des Bildschirms."
+    },
+    "timezone": {
+      "label": "Zeitzone für „Aktualisiert“",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    }
+  }
+}

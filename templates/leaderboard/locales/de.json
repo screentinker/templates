@@ -1,0 +1,87 @@
+{
+  "name": "Rangliste",
+  "description": "Eine Rangliste für Vertriebsteams, Spendenaktionen, Schrittwettbewerbe oder Spieleabende: ein Podest in Gold, Silber und Bronze für die besten drei und animierte Balken für alle anderen. Ergebnisse eintippen oder ein Google Sheet verbinden, dann hält sich die Tafel selbst aktuell.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "default": "Vertriebsrangliste"
+    },
+    "period": {
+      "label": "Zeitraum",
+      "help": "Ein kurzes Etikett neben dem Titel, etwa „Diesen Monat“ oder „Q3“. Leer lassen, um es auszublenden.",
+      "default": "Diesen Monat"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Wird neben dem Titel angezeigt."
+    },
+    "entries": {
+      "label": "Ergebnisse",
+      "help": "Eine Zeile pro Eintrag: Name | Punkte | Untertitel. Die Reihenfolge ist egal, die Tafel sortiert selbst. Gilt, wenn keine Datenquelle verbunden ist.",
+      "default": "Maya Okafor | 48250 | Großkunden\nLiam Chen | 41900 | Mittelstand\nSofia Alvarez | 39475 | Großkunden\nNoah Williams | 33120 | KMU\nAva Patel | 31860 | Mittelstand\nEthan Brooks | 27400 | KMU\nZara Hussain | 24975 | Großkunden\nLucas Meyer | 21300 | Partner\nChloe Dubois | 18640 | KMU\nOwen Murphy | 15210 | Partner"
+    },
+    "scores": {
+      "label": "Datenquelle für Ergebnisse (optional)",
+      "help": "Ein Google Sheet, CSV, eine REST-Liste oder manuelle Tabelle. Hat sie die Spalten für Name und Punkte, ersetzt sie die oben eingetippten Ergebnisse."
+    },
+    "name_col": {
+      "label": "Spalte Name",
+      "help": "Die Überschrift der Namensspalte in deiner Datenquelle, genau wie sie dort steht.",
+      "default": "Name"
+    },
+    "score_col": {
+      "label": "Spalte Punkte",
+      "default": "Punkte"
+    },
+    "sub_col": {
+      "label": "Spalte Untertitel",
+      "help": "Optional. Eine zweite Zeile unter jedem Namen, etwa ein Team oder eine Region.",
+      "default": "Team"
+    },
+    "order": {
+      "label": "Gewinner",
+      "options": {
+        "high": "Höchster Wert gewinnt",
+        "low": "Niedrigster Wert gewinnt (Zeiten, Golf)"
+      }
+    },
+    "score_prefix": {
+      "label": "Präfix",
+      "help": "Steht vor jedem Wert, zum Beispiel € oder $. Leer lassen für reine Zahlen.",
+      "default": "€"
+    },
+    "score_suffix": {
+      "label": "Suffix",
+      "help": "Steht nach jedem Wert, zum Beispiel Pkt., km oder %."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Die Sprache der festen Wörter der Tafel und wie Zahlen geschrieben werden (de-DE zeigt 48.250). Leer lassen für die Sprache des Bildschirms."
+    },
+    "max_rows": {
+      "label": "Höchstens anzeigen",
+      "help": "Angezeigte Plätze, einschließlich Podest. Ist der Bildschirm zu klein, zeigt die Tafel weniger."
+    },
+    "show_bars": {
+      "label": "Balken anzeigen",
+      "help": "Ein Balken unter jedem Namen unterhalb des Podests, umso länger, je näher der Wert dem des Führenden kommt."
+    },
+    "font": {
+      "label": "Schrift für Überschriften",
+      "options": {
+        "archivo": "Archivo (Display)",
+        "oswald": "Oswald (schmal)",
+        "inter": "Inter (schlicht)"
+      }
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    }
+  }
+}

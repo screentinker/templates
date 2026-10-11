@@ -1,0 +1,59 @@
+{
+  "name": "Consejo de seguridad (vertical)",
+  "description": "Un consejo de seguridad muy visible para fábricas, almacenes, cocinas y obras: un icono de aviso sobre un panel amarillo, la norma en letra grande, hasta cuatro pasos y a quién llamar. Diseño vertical 9:16.",
+  "params": {
+    "icon": {
+      "label": "Icono",
+      "help": "Un PNG o SVG cuadrado con fondo transparente, lo bastante oscuro para leerse sobre el panel de acento."
+    },
+    "panel_title": {
+      "label": "Título del panel",
+      "default": "SEGURIDAD"
+    },
+    "tip_number": {
+      "label": "Número del consejo",
+      "help": "Bajo el título del panel, p. ej. «CONSEJO 14 DE 52». Déjalo vacío para ocultarlo.",
+      "default": "CONSEJO 14 DE 52"
+    },
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "Para quién o dónde es.",
+      "default": "ESTA SEMANA · ALMACÉN Y MUELLE DE CARGA"
+    },
+    "headline": {
+      "label": "Consejo",
+      "help": "La norma en pocas palabras.",
+      "default": "Usa las piernas, no la espalda"
+    },
+    "steps": {
+      "label": "Cómo hacerlo",
+      "help": "Hasta cuatro líneas cortas; Intro empieza una línea nueva. Cada una de menos de unos 45 caracteres.",
+      "default": "1. Acércate, pies a la anchura de los hombros\n2. Dobla las rodillas, espalda recta\n3. Sujeta firme y levanta sin girar\n4. ¿Más de 23 kg? Usa un carro o pide ayuda"
+    },
+    "footer": {
+      "label": "Pie",
+      "help": "A quién llamar o dónde avisar.",
+      "default": "Comunica cada casi accidente a tu supervisor o llama a seguridad, ext. 2240"
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactivado oculta el logotipo y su espacio queda vacío."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG con fondo transparente, en un color claro para el fondo oscuro predeterminado."
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "El panel detrás del icono, el encabezado pequeño y la línea."
+    },
+    "background": {
+      "label": "Color de fondo",
+      "help": "La página. El título y el número del panel también se dibujan en este color."
+    },
+    "text_color": {
+      "label": "Color del texto",
+      "help": "El consejo, los pasos y el pie."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Météo — animée",
+  "description": "Une scène météo animée en plein écran : le ciel, la pluie, la neige ou le soleil suivent les conditions actuelles, avec des prévisions sur cinq jours et les écarts de température. Lit l’une de vos sources de données Météo ; votre serveur récupère la météo, ce modèle n’a donc besoin d’aucun accès réseau.",
+  "params": {
+    "weather": {
+      "label": "Source de données météo",
+      "help": "Une source de données de type Météo (Sources de données → Nouvelle → Météo). Le lieu et les unités se règlent là-bas."
+    },
+    "location": {
+      "label": "Nom du lieu",
+      "help": "Laissez vide pour utiliser le nom de lieu de la source de données."
+    },
+    "theme": {
+      "label": "Arrière-plan",
+      "options": {
+        "sky": "Suit la météo",
+        "solid": "Couleur unie"
+      }
+    },
+    "background": {
+      "label": "Couleur d’arrière-plan unie",
+      "help": "Utilisée quand Arrière-plan est réglé sur Couleur unie."
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "animate": {
+      "label": "Animer la scène",
+      "help": "À désactiver sur les lecteurs très peu puissants."
+    },
+    "show_clock": {
+      "label": "Afficher l’horloge"
+    },
+    "timezone": {
+      "label": "Fuseau horaire de l’horloge",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue de tous les mots, dates et nombres à l’écran, par exemple fr ou ja. Laissez vide pour la langue de l’écran."
+    }
+  }
+}

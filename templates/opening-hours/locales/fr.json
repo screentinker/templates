@@ -1,0 +1,166 @@
+{
+  "name": "Horaires d’ouverture",
+  "description": "Horaires d’ouverture avec statut en direct : un grand « Ouvert, ferme à 17:00 » ou « Fermé, ouvre demain à 09:00 », les horaires de la semaine avec aujourd’hui en évidence, horaires coupés et fermetures exceptionnelles qui remplacent la semaine. Pour commerces, pharmacies, bibliothèques, cabinets et bureaux. Dates spéciales saisies ici ou dans une feuille Google.",
+  "params": {
+    "title": {
+      "label": "Nom",
+      "default": "Pharmacie Northwind"
+    },
+    "subtitle": {
+      "label": "Sous-titre",
+      "help": "Une ligne sous le nom, comme l’adresse. Laissez vide pour la masquer.",
+      "default": "12 Harbour Street · Ordonnances et conseils sans rendez-vous"
+    },
+    "footer": {
+      "label": "Pied de page",
+      "help": "Petit texte en bas de l’écran. Laissez vide pour le masquer.",
+      "default": "En dehors des horaires ? Appelez le 0161 496 0000 ou allez sur northwind.example/urgent"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Affiché à côté du nom. Le logo par défaut est un exemple : remplacez-le ou retirez-le."
+    },
+    "hours_mon": {
+      "label": "Lundi",
+      "help": "Horaires comme 09:00-17:00. Horaires coupés avec une virgule : 09:00-12:30, 13:30-17:00. Fermé, ou 24h. 18:00-02:00 passe minuit."
+    },
+    "hours_tue": {
+      "label": "Mardi"
+    },
+    "hours_wed": {
+      "label": "Mercredi"
+    },
+    "hours_thu": {
+      "label": "Jeudi"
+    },
+    "hours_fri": {
+      "label": "Vendredi"
+    },
+    "hours_sat": {
+      "label": "Samedi"
+    },
+    "hours_sun": {
+      "label": "Dimanche",
+      "default": "Fermé"
+    },
+    "week_start": {
+      "label": "La semaine commence le",
+      "options": {
+        "monday": "Lundi",
+        "sunday": "Dimanche",
+        "saturday": "Samedi"
+      }
+    },
+    "specials": {
+      "label": "Dates spéciales",
+      "help": "Une par ligne : Date | Horaires | Note. La date est 2026-12-24, une période 2026-12-24..2026-12-26, ou 12-25 pour chaque année. Elles remplacent la semaine.",
+      "default": "12-24 | 08:30-13:00 | Réveillon de Noël\n12-25..12-26 | Fermé | Noël\n12-31 | 08:30-15:00 | Saint-Sylvestre\n01-01 | Fermé | Jour de l’An\n2026-10-09 | 08:30-13:00 | Formation de l’équipe l’après-midi\n2026-11-02 | 10:00-13:00, 14:00-18:30 | Ouverture tardive pour inventaire"
+    },
+    "specials_source": {
+      "label": "Source de données des dates spéciales (facultatif)",
+      "help": "Une feuille Google, un CSV ou un tableau manuel avec des colonnes date, horaires et note. Une fois reliée, elle remplace les dates saisies ci-dessus."
+    },
+    "date_col": {
+      "label": "Colonne date",
+      "help": "L’en-tête de cette colonne dans votre source, en lettres latines."
+    },
+    "hours_col": {
+      "label": "Colonne horaires"
+    },
+    "note_col": {
+      "label": "Colonne note"
+    },
+    "specials_count": {
+      "label": "Dates spéciales à venir dans la liste",
+      "help": "0 masque la liste. Le tableau de la semaine affiche toujours les horaires spéciaux le jour concerné."
+    },
+    "open_label": {
+      "label": "Statut : ouvert",
+      "help": "Vide = « Ouvert » dans la langue de l’écran."
+    },
+    "soon_label": {
+      "label": "Statut : ferme bientôt",
+      "help": "Vide = « Ferme bientôt » dans la langue de l’écran."
+    },
+    "closed_label": {
+      "label": "Statut et tableau : fermé",
+      "help": "Vide = « Fermé » dans la langue de l’écran."
+    },
+    "always_open_label": {
+      "label": "Ouvert jour et nuit",
+      "help": "Vide = « Ouvert 24 h/24 » dans la langue de l’écran."
+    },
+    "closes_text": {
+      "label": "Ligne de fermeture",
+      "help": "{time} est l’heure de fermeture. Vide = « Ferme à {time} » dans la langue de l’écran ; - la masque."
+    },
+    "reopens_text": {
+      "label": "Ligne de pause",
+      "help": "Affichée quand la réouverture a lieu plus tard le même jour. Vide = texte dans la langue de l’écran ; - la masque."
+    },
+    "opens_text": {
+      "label": "Ligne d’ouverture",
+      "help": "{day} est aujourd’hui, demain ou un jour de la semaine ; {time} l’heure d’ouverture. Vide = langue de l’écran ; - la masque."
+    },
+    "hours_heading": {
+      "label": "Titre : cette semaine",
+      "help": "Vide = « Horaires d’ouverture » dans la langue de l’écran ; - masque le titre."
+    },
+    "specials_heading": {
+      "label": "Titre : dates spéciales",
+      "help": "Vide = « Horaires exceptionnels » dans la langue de l’écran ; - masque le titre."
+    },
+    "today_label": {
+      "label": "Marqueur d’aujourd’hui",
+      "help": "Vide = le mot « aujourd’hui » dans la langue de l’écran."
+    },
+    "timezone": {
+      "label": "Fuseau horaire du commerce",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Mots, jours, dates et heures à l’écran, par exemple en-GB, fr-FR ou de-DE. Vide = la langue de l’écran."
+    },
+    "clock_format": {
+      "label": "Heures et horloge",
+      "options": {
+        "auto": "Selon la langue, horloge affichée",
+        "24": "24 heures, horloge affichée",
+        "12": "12 heures, horloge affichée",
+        "off": "Selon la langue, sans horloge"
+      }
+    },
+    "font": {
+      "label": "Police des titres",
+      "options": {
+        "archivo": "Archivo (affiche)",
+        "bitter": "Bitter (à empattements)",
+        "inter": "Inter (sobre)"
+      }
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "La ligne d’aujourd’hui, les titres et les dates spéciales."
+    },
+    "open_color": {
+      "label": "Couleur : ouvert"
+    },
+    "soon_color": {
+      "label": "Couleur : ferme bientôt"
+    },
+    "closed_color": {
+      "label": "Couleur : fermé"
+    },
+    "soon_minutes": {
+      "label": "« Ferme bientôt », minutes avant la fermeture",
+      "help": "0 désactive l’état « Ferme bientôt »."
+    }
+  }
+}

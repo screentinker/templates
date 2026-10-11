@@ -1,0 +1,81 @@
+{
+  "name": "会议室门牌",
+  "description": "会议室门口的状态牌：醒目的绿色“空闲”或红色“使用中”色带，显示当前和下一场会议以及今日日程，数据来自任意日历（iCal）数据源。隐私模式下以“已预订”代替会议标题。专为门旁的竖屏设计，也适用于横屏或条形区域。",
+  "params": {
+    "calendar": {
+      "label": "会议室日历（日历 / iCal 数据源）",
+      "help": "指向会议室 iCal 订阅的日历数据源（Google、Outlook/Exchange 或任意 .ics 链接）。未连接时显示示例日程。"
+    },
+    "room_name": {
+      "label": "会议室名称",
+      "default": "董事会会议室"
+    },
+    "available_label": {
+      "label": "“空闲”文字",
+      "help": "留空则使用门牌语言的内置文字。"
+    },
+    "busy_label": {
+      "label": "“使用中”文字",
+      "help": "留空则使用门牌语言的内置文字。"
+    },
+    "hide_titles": {
+      "label": "隐私：隐藏会议标题和组织者"
+    },
+    "reserved_label": {
+      "label": "代替隐藏标题显示的文字",
+      "help": "留空则使用门牌语言的内置文字。"
+    },
+    "show_organizer": {
+      "label": "显示组织者"
+    },
+    "now_label": {
+      "label": "标题：当前会议",
+      "help": "留空则使用门牌语言的内置文字。"
+    },
+    "next_label": {
+      "label": "标题：下一场会议",
+      "help": "留空则使用门牌语言的内置文字。"
+    },
+    "agenda_label": {
+      "label": "标题：今日日程",
+      "help": "留空则使用门牌语言的内置文字。"
+    },
+    "upcoming_label": {
+      "label": "标题：后续预订（今天已无安排时）",
+      "help": "留空则使用门牌语言的内置文字。"
+    },
+    "empty_label": {
+      "label": "无预订时的文字",
+      "help": "留空则使用门牌语言的内置文字。"
+    },
+    "available_color": {
+      "label": "“空闲”颜色"
+    },
+    "busy_color": {
+      "label": "“使用中”颜色"
+    },
+    "background": {
+      "label": "背景颜色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    },
+    "clock_format": {
+      "label": "时钟",
+      "options": {
+        "auto": "按语言默认",
+        "24": "24 小时制",
+        "12": "12 小时制",
+        "off": "隐藏时钟"
+      }
+    },
+    "timezone": {
+      "label": "时钟时区",
+      "help": "留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "门牌上的文字、日期和时间，例如 zh-CN 或 en-US。留空则使用屏幕语言。日历的时间和状态也按此语言显示；日历与时钟请使用同一时区。"
+    }
+  }
+}

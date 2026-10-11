@@ -1,0 +1,66 @@
+{
+  "name": "Contagem regressiva de evento (retrato)",
+  "description": "Uma tela de contagem regressiva para uma conferência, inauguração ou lançamento: o nome do evento, um slogan, a data e o local, uma grande contagem regressiva ao vivo que troca para a sua própria mensagem na hora certa e um QR code opcional para ingressos ou inscrições. Layout em retrato 9:16.",
+  "params": {
+    "event_name": {
+      "label": "Nome do evento"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "Dois dias de palestras, oficinas e demos até tarde com quem está criando o que vem por aí."
+    },
+    "when_where": {
+      "label": "Linha de data e local",
+      "default": "18–19 DE MARÇO DE 2027  ·  RIVERSIDE HALL, DUBLIN"
+    },
+    "target": {
+      "label": "Contar até",
+      "help": "ISO 8601 com fuso horário, por ex. 2027-03-18T09:00:00-03:00 ou 2027-03-18T09:00:00+00:00. Sem o fuso, vale o fuso horário do servidor."
+    },
+    "countdown_label": {
+      "label": "Texto acima da contagem",
+      "default": "AS PORTAS ABREM EM"
+    },
+    "done_text": {
+      "label": "Texto ao terminar",
+      "default": "Começou!"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma das unidades da contagem, por ex. pt-BR ou pt-PT (vazio = idioma da tela). Servidores ScreenTinker antigos sempre mostram d h m s."
+    },
+    "show_qr": {
+      "label": "Mostrar o QR code de ingressos",
+      "help": "Desative se não tiver um link: o QR code, o cartão e a legenda somem."
+    },
+    "qr_url": {
+      "label": "Link de ingressos / inscrição",
+      "help": "O endereço que o QR code abre. Prefira links curtos: eles geram um código que lê de mais longe."
+    },
+    "qr_caption": {
+      "label": "Legenda do QR",
+      "default": "Escaneie para ingressos"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Um PNG ou SVG quase quadrado com fundo transparente. No canto superior esquerdo."
+    },
+    "background_image": {
+      "label": "Foto de fundo",
+      "help": "Opcional. Uma foto do evento ou do local atrás de tudo; ela é escurecida pela opção abaixo."
+    },
+    "background_dim": {
+      "label": "Escurecer a foto",
+      "help": "0 = a foto como está, 0,9 = quase preta. Só vale com foto de fundo."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

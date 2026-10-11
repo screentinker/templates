@@ -1,0 +1,72 @@
+{
+  "name": "Annonce — percutante",
+  "description": "Une annonce forte et assurée : un très grand titre sur une couleur vive, un court paragraphe, un pied de page et un code QR facultatif pour les détails. Pour les fermetures, les échéances et tout ce qu'il ne faut pas manquer.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Idéalement un PNG ou un SVG à fond transparent. Affiché en haut à gauche."
+    },
+    "eyebrow": {
+      "label": "Surtitre",
+      "help": "Une courte étiquette au-dessus du titre, par ex. RAPPEL ou NOUVEAU. Les majuscules se lisent mieux.",
+      "default": "INFORMATION IMPORTANTE"
+    },
+    "headline": {
+      "label": "Titre",
+      "help": "L'annonce en quelques mots. Jusqu'à 40 caractères ; deux ou trois lignes à l'écran.",
+      "default": "Bureaux fermés vendredi 23 octobre"
+    },
+    "body": {
+      "label": "Détails",
+      "help": "Une ou deux phrases. Appuyez sur Entrée pour aller à la ligne.",
+      "default": "Le bâtiment est fermé toute la journée pour une maintenance électrique programmée. Merci de travailler depuis chez vous ; le support informatique reste joignable au poste 4400."
+    },
+    "footer": {
+      "label": "Pied de page",
+      "help": "De qui vient le message, une date, une salle ou un contact.",
+      "default": "Services généraux  ·  Questions ? facilities@northwind.example"
+    },
+    "show_qr": {
+      "label": "Afficher un code QR",
+      "help": "Désactivez si vous n'avez pas de lien : le code et sa légende disparaissent."
+    },
+    "qr_url": {
+      "label": "Lien du code QR",
+      "help": "L'adresse qu'ouvre le code QR. Un lien plus court donne un code lisible de plus loin."
+    },
+    "qr_caption": {
+      "label": "Légende du QR",
+      "default": "Détails et FAQ"
+    },
+    "show_date": {
+      "label": "Afficher la date du jour",
+      "help": "La date en direct de l'écran, dans la langue et le fuseau horaire ci-dessous."
+    },
+    "date_format": {
+      "label": "Format de date",
+      "options": {
+        "weekday": "Jour de la semaine, jour et mois",
+        "long": "Date complète avec l'année",
+        "short": "Date courte",
+        "numeric": "Chiffres uniquement"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire de la date",
+      "help": "Laissez vide pour utiliser l'horloge de l'écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue de la date, par ex. en-GB, de-DE ou fr-CA. Laissez vide pour la langue de l'écran."
+    },
+    "accent": {
+      "label": "Couleur d'accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    }
+  }
+}

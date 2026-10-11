@@ -1,0 +1,66 @@
+{
+  "name": "Citation du jour (portrait)",
+  "description": "Un écran de citation typographique : une grande citation en serif, son auteur et sa source, avec la date du jour dans votre langue. Pour un hall, une salle de pause, un couloir d’école ou l’écran près de la machine à café. Mise en page portrait 9:16.",
+  "params": {
+    "eyebrow": {
+      "label": "Petit titre",
+      "help": "Une courte étiquette au-dessus de la citation. Les capitales rendent mieux.",
+      "default": "CITATION DU JOUR"
+    },
+    "quote": {
+      "label": "Citation",
+      "help": "Sans guillemets : le grand guillemet est dessiné pour vous. Jusqu’à environ 130 caractères.",
+      "default": "Ce n’est pas que nous ayons peu de temps, c’est que nous en perdons beaucoup."
+    },
+    "attribution": {
+      "label": "Qui l’a dit",
+      "default": "Sénèque"
+    },
+    "attribution_detail": {
+      "label": "Source ou fonction",
+      "help": "Un livre, une fonction ou une année. Laissez vide pour masquer.",
+      "default": "De la brièveté de la vie, vers 49 apr. J.-C."
+    },
+    "show_date": {
+      "label": "Afficher la date du jour",
+      "help": "La date en direct de l’écran, dans la langue et le fuseau horaire ci-dessous."
+    },
+    "date_format": {
+      "label": "Style de date",
+      "options": {
+        "weekday": "Jour de la semaine, jour et mois",
+        "long": "Date complète avec année",
+        "short": "Date courte",
+        "numeric": "Chiffres seulement"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire de la date",
+      "help": "Le fuseau horaire où l’on est « aujourd’hui ». Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Langue de la date, par ex. fr-FR, fr-CA ou de-DE. Laissez vide pour la langue de l’écran."
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivé, le logo est masqué et son espace reste vide."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent, de couleur claire pour le fond sombre par défaut."
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Le grand guillemet, le petit titre, le filet et la décoration."
+    },
+    "background": {
+      "label": "Couleur de fond",
+      "help": "Derrière tout le reste."
+    },
+    "text_color": {
+      "label": "Couleur du texte",
+      "help": "La citation et le nom."
+    }
+  }
+}

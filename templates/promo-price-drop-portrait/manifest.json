@@ -1,0 +1,192 @@
+{
+  "id": "promo-price-drop-portrait",
+  "name": "Price drop promo (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A portrait (9:16) sale screen for a price cut: the product picture on a coloured ring, the old price, a big new price and a savings sticker, with a bottom bar for your terms and an optional live countdown to the end of the offer.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-price-drop-portrait",
+  "license": "MIT",
+  "tags": [
+    "promo",
+    "retail",
+    "sale",
+    "price",
+    "countdown",
+    "offer",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A square-ish PNG or SVG. The bundled badge is a placeholder; replace it with your own.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo (an empty logo setting would otherwise show a dashed box).",
+      "default": true
+    },
+    {
+      "name": "brand",
+      "type": "text",
+      "label": "Store name",
+      "max": 22,
+      "help": "Shown beside the logo. Leave empty if your logo already says it.",
+      "default": "NORTHWIND"
+    },
+    {
+      "name": "badge",
+      "type": "text",
+      "label": "Badge",
+      "max": 12,
+      "help": "The pill above the headline. Leave empty and the pill stays as a plain coloured tab.",
+      "default": "PRICE DROP"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Product / headline",
+      "max": 40,
+      "help": "Room for three lines; 40 characters is the most that always fits.",
+      "default": "Studio Pro noise-cancelling headphones"
+    },
+    {
+      "name": "was_price",
+      "type": "text",
+      "label": "Was-price line",
+      "max": 28,
+      "help": "Type it as it should read, e.g. \"Was $249.00\" or \"Avant 249,00 €\". Leave empty to hide.",
+      "default": "Was $249.00"
+    },
+    {
+      "name": "price",
+      "type": "text",
+      "label": "New price",
+      "max": 10,
+      "help": "The big number, as it should read: $179, 179 €, £1,299.99.",
+      "default": "$179"
+    },
+    {
+      "name": "save_text",
+      "type": "text",
+      "label": "Savings sticker",
+      "max": 10,
+      "help": "On the yellow sticker over the picture. Keep it short: SAVE $70, -30%, HALF PRICE.",
+      "default": "SAVE $70"
+    },
+    {
+      "name": "product_image",
+      "type": "image",
+      "label": "Product picture",
+      "help": "A cut-out PNG or SVG with a transparent background works best. It is fitted, never cropped.",
+      "default": "tpl:headphones.svg"
+    },
+    {
+      "name": "show_image",
+      "type": "checkbox",
+      "label": "Show the product picture",
+      "help": "Turn off to leave the panel without a picture (an empty picture setting would otherwise show a dashed box).",
+      "default": true
+    },
+    {
+      "name": "show_countdown",
+      "type": "checkbox",
+      "label": "Show the countdown",
+      "help": "Turn off for an offer with no end date: the label and timer both disappear.",
+      "default": true
+    },
+    {
+      "name": "countdown_label",
+      "type": "text",
+      "label": "Label above the countdown",
+      "max": 20,
+      "help": "It stays after the offer ends, so pick words that read well with the end message too.",
+      "default": "LIMITED TIME"
+    },
+    {
+      "name": "countdown_target",
+      "type": "text",
+      "label": "Offer ends at",
+      "max": 40,
+      "help": "ISO 8601 with a timezone offset, e.g. 2026-11-01T23:59:00+00:00 or 2026-11-01T23:59:00-05:00.",
+      "default": "2026-12-31T23:59:00+00:00"
+    },
+    {
+      "name": "countdown_done",
+      "type": "text",
+      "label": "Shown when the countdown ends",
+      "max": 18,
+      "default": "While stocks last"
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "help": "The language of the live countdown, e.g. de or fr-CA. Leave empty for the screen’s language. Your own text is shown exactly as you type it.",
+      "default": ""
+    },
+    {
+      "name": "small_print",
+      "type": "text",
+      "label": "Small print",
+      "max": 140,
+      "help": "Terms along the bottom bar. A sentence or two.",
+      "default": "Offer ends 31 December 2026 or while stocks last. One per customer. In store and online."
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "help": "The badge, the bottom bar and the ring behind the picture.",
+      "default": "#FF4D5E"
+    },
+    {
+      "name": "highlight",
+      "type": "color",
+      "label": "Price colour",
+      "help": "The new price and the savings sticker.",
+      "default": "#FFD23F"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "help": "Also the text colour on the sticker.",
+      "default": "#0D1530"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#F5F7FF"
+    },
+    {
+      "name": "background_image",
+      "type": "image",
+      "label": "Background photo",
+      "help": "Optional. A photo behind everything, darkened by the setting below.",
+      "default": ""
+    },
+    {
+      "name": "background_dim",
+      "type": "number",
+      "label": "Darken the photo",
+      "min": 0,
+      "max": 0.9,
+      "step": 0.05,
+      "default": 0.6,
+      "help": "0 = the photo as is, 0.9 = almost black. Only used with a background photo."
+    }
+  ]
+}

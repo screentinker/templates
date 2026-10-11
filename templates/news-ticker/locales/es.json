@@ -1,0 +1,55 @@
+{
+  "name": "Teletipo de noticias",
+  "description": "Titulares como noticia destacada rotativa y un teletipo con desplazamiento suave. Escríbelos o conecta un feed RSS, una hoja de Google, un CSV o una tabla. A pantalla completa muestra ambos; en una franja fina, una cinta; en una zona alta, un teletipo vertical. La pantalla no descarga nada: funciona sin conexión.",
+  "params": {
+    "title": {
+      "label": "Título",
+      "default": "Últimas noticias"
+    },
+    "feed": {
+      "label": "Fuente de datos de titulares (opcional)",
+      "help": "Un feed RSS/Atom, una hoja de Google, un CSV o una tabla. Cuando tenga titulares, sustituyen a la lista escrita; hasta entonces se muestra la lista."
+    },
+    "column": {
+      "label": "Columna de titulares (hoja, CSV o tabla)",
+      "help": "El encabezado de la columna con los titulares. Si ninguna columna se llama así, se usa la primera. No se aplica a los feeds RSS.",
+      "default": "Titular"
+    },
+    "headlines": {
+      "label": "Titulares (sin fuente de datos)",
+      "help": "Un titular por línea. Las líneas vacías se ignoran. También se muestran mientras la fuente de datos conectada esté vacía.",
+      "default": "Northwind abre su nuevo estudio junto al río el 6 de octubre\nLa reunión trimestral pasa al atrio: puertas a las 16:30\nEnhorabuena al equipo de soporte: 98 % de satisfacción\nEl aparcamiento este cierra hasta el viernes por obras\nNuevo aparcabicis tras el edificio B, con carga para e-bikes\nLunch & learn el jueves: accesibilidad en el diseño diario"
+    },
+    "max_items": {
+      "label": "Mostrar como máximo",
+      "help": "Los titulares por encima de este número no se muestran."
+    },
+    "speed": {
+      "label": "Velocidad del teletipo",
+      "help": "Píxeles por segundo en una pantalla de 1080 píxeles de alto. Se adapta a la pantalla."
+    },
+    "rotate_seconds": {
+      "label": "Segundos por titular destacado"
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "show_clock": {
+      "label": "Mostrar el reloj"
+    },
+    "timezone": {
+      "label": "Zona horaria del reloj",
+      "help": "Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma de la fecha y de los textos integrados, por ejemplo es o en-GB. Déjalo vacío para usar el idioma de la pantalla."
+    }
+  }
+}

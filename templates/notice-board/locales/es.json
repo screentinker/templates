@@ -1,0 +1,131 @@
+{
+  "name": "Tablón de anuncios",
+  "description": "Un tablón para la sala de descanso, el colegio o la planta de producción: tarjetas con categorías por colores (Urgente, Seguridad, Evento, RR. HH., Info), avisos fijados arriba y fechas de inicio y fin para que aparezcan y caduquen solos. Un aviso destacado con el resto al lado, o uno cada vez. Escriba los avisos o llévelos desde una hoja de Google o una tabla manual.",
+  "params": {
+    "title": {
+      "label": "Título del tablón",
+      "default": "Tablón de anuncios"
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Una línea bajo el título, como el centro o el departamento. Déjelo vacío para ocultarla.",
+      "default": "Northwind Works · Edificio 2"
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Junto al título. Sin logotipo se muestra un pequeño icono de tablón en el color de acento."
+    },
+    "layout": {
+      "label": "Diseño",
+      "options": {
+        "featured": "Aviso destacado + el resto al lado",
+        "rotate": "Un aviso cada vez, a pantalla completa"
+      }
+    },
+    "notices": {
+      "label": "Avisos",
+      "help": "Uno por línea: Título | Texto | Categoría | Inicio | Fin | Fijado | De. Fechas: 2026-10-14, 2026-10-14 17:00 o +N días desde hoy. Sin fuente de datos.",
+      "default": "Aparcamiento norte cerrado hasta el viernes | El reasfaltado empieza a las 06:00. | Urgente | | +3 | sí | Mantenimiento\nChaleco reflectante en el muelle de carga | Esta semana hay más tráfico de carretillas. | Seguridad | | | | Marcus Lee\nNueva leche de avena en la cocina | En la cafetera de la planta 2. | Info | | | | Equipo de oficina"
+    },
+    "source": {
+      "label": "Fuente de datos de avisos (opcional)",
+      "help": "Una hoja de Google, un CSV o una tabla manual con una fila por aviso. Si tiene la columna Título, sustituye a los avisos escritos arriba."
+    },
+    "title_col": {
+      "label": "Columna Título",
+      "default": "Título"
+    },
+    "body_col": {
+      "label": "Columna Texto",
+      "default": "Texto"
+    },
+    "category_col": {
+      "label": "Columna Categoría",
+      "default": "Categoría"
+    },
+    "start_col": {
+      "label": "Columna Inicio",
+      "help": "Opcional. Un aviso con fecha de inicio queda oculto hasta entonces.",
+      "default": "Inicio"
+    },
+    "end_col": {
+      "label": "Columna Fin",
+      "help": "Opcional. Un aviso desaparece tras su fecha de fin (una fecha sola significa el final de ese día).",
+      "default": "Fin"
+    },
+    "pinned_col": {
+      "label": "Columna Fijado",
+      "help": "Sí, yes, true, 1, x o pinned mantiene el aviso arriba (y destacado).",
+      "default": "Fijado"
+    },
+    "from_col": {
+      "label": "Columna De",
+      "help": "Opcional. Quién publica el aviso, en pequeño al pie de la tarjeta.",
+      "default": "De"
+    },
+    "date_order": {
+      "label": "Las fechas con barras son",
+      "help": "Solo importa en fechas como 03/04/2026. 2026-10-14 se entiende siempre.",
+      "options": {
+        "auto": "Según el idioma (EE. UU.: mes primero)",
+        "dmy": "Día primero (14/10/2026)",
+        "mdy": "Mes primero (10/14/2026)"
+      }
+    },
+    "category_colors": {
+      "label": "Colores de categoría",
+      "help": "Opcional, uno por línea: Categoría = #RRGGBB. Urgente, Seguridad, Evento, RR. HH., TI, Info y otras ya tienen color."
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "dark": "Oscuro",
+        "light": "Claro"
+      }
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "Línea del título, puntos de página e icono del tablón."
+    },
+    "seconds": {
+      "label": "Segundos por página o aviso",
+      "help": "Cuánto tiempo se muestra cada página de avisos (o cada aviso, uno a uno)."
+    },
+    "show_dates": {
+      "label": "Mostrar fechas «hasta» en las tarjetas"
+    },
+    "until_label": {
+      "label": "Texto antes de una fecha de fin",
+      "help": "Déjelo vacío para «Hasta el …» en el idioma de la pantalla."
+    },
+    "today_label": {
+      "label": "Texto para un aviso que termina hoy",
+      "help": "Déjelo vacío para «Termina hoy» en el idioma de la pantalla."
+    },
+    "pinned_label": {
+      "label": "Texto de la etiqueta Fijado",
+      "help": "Déjelo vacío para «Fijado» en el idioma de la pantalla."
+    },
+    "empty_label": {
+      "label": "Texto cuando no hay avisos",
+      "help": "Déjelo vacío para «No hay avisos ahora mismo» en el idioma de la pantalla."
+    },
+    "clock_format": {
+      "label": "Reloj",
+      "options": {
+        "auto": "Según el idioma",
+        "24": "24 horas",
+        "12": "12 horas",
+        "off": "Ocultar reloj y fecha"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria",
+      "help": "Para el reloj y el inicio y fin de los avisos. Déjelo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Para los textos propios del tablón y las fechas, por ejemplo es-ES o es-MX. Déjelo vacío para el idioma de la pantalla."
+    }
+  }
+}

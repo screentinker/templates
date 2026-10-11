@@ -1,0 +1,97 @@
+{
+  "id": "holiday-earth-day-portrait",
+  "name": "Earth Day (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "An Earth Day screen in forest green and ocean blue: a planet drawn from simple shapes with a moon and stars, your headline, a message about what your team has done, and a line for the date or an event.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-earth-day-portrait",
+  "license": "MIT",
+  "tags": [
+    "holiday",
+    "seasonal",
+    "earth-day",
+    "sustainability",
+    "awareness",
+    "environment",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "The short line above the headline. Leave empty to hide it.",
+      "default": "HAPPY EARTH DAY"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline",
+      "max": 28,
+      "help": "Two lines are kept for it: about 24 characters fit. Longer headlines wrap to a third line and run into the message.",
+      "default": "Small steps, big change"
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "label": "Message",
+      "max": 200,
+      "help": "A sentence or two under the headline; up to 200 characters fit. A line break starts a new line.",
+      "default": "This year our offices switched to 100% renewable power and cut landfill waste by 38%. Thank you for every bottle refilled and every bike ride in."
+    },
+    {
+      "name": "date_line",
+      "type": "text",
+      "label": "Date line",
+      "max": 70,
+      "help": "Plain text, typed the way you want it to read: a date, a time and place, or a sign-off.",
+      "default": "22 · 04  ·  FREE TREE SAPLINGS 10:00–14:00"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A wide PNG or SVG with a transparent background (about 3.4 : 1 fills the box; other shapes are fitted inside it). Replace the Northwind placeholder.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Land colour",
+      "default": "#7BD389"
+    },
+    {
+      "name": "accent2",
+      "type": "color",
+      "label": "Ocean colour",
+      "default": "#3E9FD1"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#0C2A22"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#F2F7EE"
+    }
+  ]
+}

@@ -14,7 +14,19 @@
   var MAX = 12;
   // Metrics where going DOWN is the good direction, whatever "An increase is good" says.
   var LOWER_IS_BETTER = /\b(open|backlog|response|wait|queue|churn|cost|spend|error|errors|incident|incidents|bugs?|latency|downtime|defects?|complaints?)\b/i;
-  var CURRENCY = /^[$€£¥₹₩₽¢]$|^(usd|eur|gbp|jpy|chf|aud|cad)$/i;
+  // The same idea for metric names typed in other languages: lower-cased substrings, by language.
+  var LOWER_WORDS = {
+    de: ['offen', 'rückstand', 'antwortzeit', 'reaktionszeit', 'wartezeit', 'warteschlange', 'abwanderung', 'kosten', 'ausgaben', 'fehler', 'störung', 'vorfäll', 'latenz', 'ausfall', 'mängel', 'beschwerde', 'reklamation'],
+    es: ['abiert', 'pendiente', 'respuesta', 'espera', 'cola', 'abandono', 'coste', 'costo', 'gasto', 'error', 'incidente', 'incidencia', 'latencia', 'caída', 'defecto', 'queja', 'reclamación'],
+    fr: ['ouvert', 'en attente', 'réponse', 'attente', 'file', 'attrition', 'résiliation', 'coût', 'dépense', 'erreur', 'incident', 'bogue', 'latence', 'panne', 'interruption', 'défaut', 'plainte', 'réclamation'],
+    hi: ['खुले', 'खुला', 'लंबित', 'प्रतिक्रिया', 'जवाब', 'प्रतीक्षा', 'इंतज़ार', 'कतार', 'लागत', 'खर्च', 'त्रुटि', 'घटना', 'विलंब', 'डाउनटाइम', 'दोष', 'शिकायत'],
+    it: ['apert', 'arretrat', 'risposta', 'attesa', 'coda', 'abbandon', 'costo', 'costi', 'spesa', 'errore', 'errori', 'incident', 'latenza', 'disserviz', 'difett', 'reclam'],
+    ja: ['未対応', '未解決', '未処理', 'オープン', '応答時間', '対応時間', '待ち', '解約', 'コスト', '費用', 'エラー', '障害', 'インシデント', 'バグ', '遅延', 'ダウンタイム', '停止', '不良', '欠陥', '苦情', 'クレーム'],
+    nl: ['open', 'achterstand', 'reactietijd', 'antwoordtijd', 'wachttijd', 'wachtrij', 'verloop', 'kosten', 'uitgaven', 'fout', 'incident', 'storing', 'latentie', 'uitval', 'defect', 'klacht'],
+    pt: ['abert', 'pendente', 'resposta', 'espera', 'fila', 'cancelamento', 'custo', 'gasto', 'despesa', 'erro', 'incidente', 'latência', 'indisponibilidade', 'defeito', 'reclamaç'],
+    zh: ['未解决', '未处理', '待处理', '响应时间', '回复时间', '等待', '排队', '流失', '成本', '费用', '支出', '错误', '故障', '事件', '缺陷', '延迟', '停机', '宕机', '投诉']
+  };
+  var CURRENCY = /^[$€£¥₹₩₽¢]$|^(r\$|usd|eur|gbp|jpy|chf|aud|cad)$/i;
 
   function num(v, lo, hi, dflt) {
     var n = Number(v);
@@ -27,10 +39,93 @@
     s = str(s).replace(/[\s$€£¥₹₩₽¢%]/g, '');
     if (!s) return null;
     if (/^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) s = s.replace(/\./g, '').replace(',', '.');
+    else if (/^[+-]?\d*,\d{1,2}$/.test(s)) s = s.replace(',', '.');
     else s = s.replace(/,/g, '');
     if (!/^[+-]?\d*\.?\d+(e[+-]?\d+)?$/i.test(s)) return null;
     var n = Number(s);
     return isFinite(n) ? n : null;
+  }
+  /* Built-in words, picked by the primary subtag of the "locale" setting (empty = the screen's
+     language), falling back to English. {pct}, {target} and {time} are filled in by the page. */
+  var STRINGS = {
+    en: {
+      title: 'Key metrics',
+      target: '{pct} of {target} target',
+      updated: 'Updated {time}',
+      empty: 'Add metrics in the template settings (Metric | Value | Target | Unit | Change), or connect a table data source.'
+    },
+    de: {
+      title: 'Kennzahlen',
+      target: '{pct} von {target} Ziel',
+      updated: 'Aktualisiert {time}',
+      empty: 'Kennzahlen in den Vorlageneinstellungen eintragen (Kennzahl | Wert | Ziel | Einheit | Änderung) oder eine Tabellen-Datenquelle verbinden.'
+    },
+    es: {
+      title: 'Indicadores clave',
+      target: '{pct} del objetivo de {target}',
+      updated: 'Actualizado {time}',
+      empty: 'Añade métricas en los ajustes de la plantilla (Métrica | Valor | Objetivo | Unidad | Cambio) o conecta una fuente de datos de tabla.'
+    },
+    fr: {
+      title: 'Indicateurs clés',
+      target: '{pct} de l’objectif de {target}',
+      updated: 'Mis à jour {time}',
+      empty: 'Ajoutez des indicateurs dans les réglages du modèle (Indicateur | Valeur | Objectif | Unité | Évolution) ou connectez une source de données en tableau.'
+    },
+    hi: {
+      title: 'मुख्य आँकड़े',
+      target: '{target} लक्ष्य का {pct}',
+      updated: 'अपडेट {time}',
+      empty: 'टेम्पलेट सेटिंग में आँकड़े जोड़ें (मीट्रिक | मान | लक्ष्य | इकाई | बदलाव), या कोई टेबल डेटा स्रोत जोड़ें।'
+    },
+    it: {
+      title: 'Indicatori chiave',
+      target: '{pct} dell’obiettivo di {target}',
+      updated: 'Aggiornato {time}',
+      empty: 'Aggiungi gli indicatori nelle impostazioni del modello (Indicatore | Valore | Obiettivo | Unità | Variazione) o collega una fonte dati a tabella.'
+    },
+    ja: {
+      title: '主要指標',
+      target: '目標 {target} の {pct}',
+      updated: '{time} 更新',
+      empty: 'テンプレート設定で指標を入力するか（指標 | 値 | 目標 | 単位 | 変化）、表形式のデータソースを接続してください。'
+    },
+    nl: {
+      title: 'Kerncijfers',
+      target: '{pct} van doel {target}',
+      updated: 'Bijgewerkt {time}',
+      empty: 'Voeg cijfers toe in de sjablooninstellingen (Cijfer | Waarde | Doel | Eenheid | Verandering) of koppel een tabelgegevensbron.'
+    },
+    pt: {
+      title: 'Indicadores-chave',
+      target: '{pct} da meta de {target}',
+      updated: 'Atualizado {time}',
+      empty: 'Adicione indicadores nas configurações do modelo (Indicador | Valor | Meta | Unidade | Variação) ou conecte uma fonte de dados em tabela.'
+    },
+    zh: {
+      title: '关键指标',
+      target: '目标 {target}，完成 {pct}',
+      updated: '{time} 更新',
+      empty: '请在模板设置中添加指标（指标 | 数值 | 目标 | 单位 | 变化），或连接表格数据源。'
+    }
+  };
+  /* A usable BCP-47 tag for Intl: the setting if this engine has it, else the screen's language. */
+  function pickLocale(tag) {
+    var t = String(tag || '').trim();
+    if (t) {
+      try { if (Intl.NumberFormat.supportedLocalesOf([t]).length) return t; } catch (e) { /* invalid tag */ }
+    }
+    return (typeof navigator !== 'undefined' && navigator.language) || 'en';
+  }
+  /* "{pct} of {target} target" -> text nodes, with {pct} in <b>. */
+  function phrase(parent, pattern, vals, bold) {
+    String(pattern).split(/(\{[a-z]+\})/).forEach(function (part) {
+      var m = /^\{([a-z]+)\}$/.exec(part);
+      if (!m) { if (part) parent.appendChild(document.createTextNode(part)); return; }
+      var val = vals[m[1]] === undefined ? '' : String(vals[m[1]]);
+      if (m[1] === bold) parent.appendChild(el('b', '', val));
+      else parent.appendChild(document.createTextNode(val));
+    });
   }
   function decimals(s) {
     var m = /[.,](\d+)\s*%?$/.exec(str(s).replace(/[^\d.,%-]/g, ''));
@@ -52,11 +147,23 @@
     if (v.good_color) root.style.setProperty('--good', v.good_color);
     if (v.bad_color) root.style.setProperty('--bad', v.bad_color);
 
-    var locale = v.locale || undefined;
+    var locale = pickLocale(v.locale);
+    // The words follow the setting even where this engine's Intl lacks that language's data.
+    var lang = String(v.locale || '').trim() || locale;
+    var primary = lang.toLowerCase().split(/[-_]/)[0];
+    var words = STRINGS[primary] || STRINGS.en;
+    var lowerWords = LOWER_WORDS[primary] || [];
+    root.setAttribute('lang', lang);
+    function lowerIsBetter(metric) {
+      if (LOWER_IS_BETTER.test(metric)) return true;
+      var m = String(metric || '').toLowerCase();
+      for (var k = 0; k < lowerWords.length; k++) if (m.indexOf(lowerWords[k]) >= 0) return true;
+      return false;
+    }
     var upIsGood = v.up_is_good !== false;
     var showTargets = v.show_targets !== false;
     var maxTiles = Math.round(num(v.max_tiles, 1, MAX, MAX));
-    document.getElementById('title').textContent = str(v.title) || 'Key metrics';
+    document.getElementById('title').textContent = str(v.title) || words.title;
 
     var nf = {};
     function fmt(n, dp) {
@@ -66,6 +173,21 @@
         catch (e) { nf[key] = new Intl.NumberFormat(undefined, { minimumFractionDigits: dp, maximumFractionDigits: dp }); }
       }
       return nf[key].format(n);
+    }
+    var pctNf = null;
+    /* 0.92 -> "92%" ("92 %" in German, "92 %" in French): the locale's own percent style. */
+    function pct(ratio) {
+      try {
+        if (!pctNf) pctNf = new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 0 });
+        return pctNf.format(Math.round(ratio * 100) / 100);
+      } catch (e) { return fmt(Math.round(ratio * 100), 0) + '%'; }
+    }
+    /* A typed change like "+6.4%", "-0.4" or "+18": its number in the locale's format, the rest as typed. */
+    function fmtChange(ch) {
+      var m = /^([^\d]*?)(\d[\d.,]*)(.*)$/.exec(ch);
+      if (!m) return ch;
+      var n = parseNumber(m[2]);
+      return n === null ? ch : m[1] + fmt(n, decimals(m[2])) + m[3];
     }
     var compactNf = null;
     function fmtValue(n, dp) {
@@ -117,9 +239,20 @@
     }
 
     /* ---------- one tile ---------- */
+    /* Does this language put a currency before the number ($184,250, € 184.250) or after it
+       (184.250 €)? Asked of Intl once; the symbol itself stays as typed. */
+    var curFirst = true;
+    try {
+      var cparts = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' }).formatToParts(1);
+      for (var ci = 0; ci < cparts.length; ci++) {
+        if (cparts[ci].type === 'currency') break;
+        if (cparts[ci].type === 'integer') { curFirst = false; break; }
+      }
+    } catch (e) { curFirst = true; }
     function affixed(text, unit) {
       var wrap = el('span', 'value');
-      if (unit && CURRENCY.test(unit)) { wrap.appendChild(el('span', 'affix', unit)); wrap.appendChild(document.createTextNode(text)); }
+      if (unit && CURRENCY.test(unit) && curFirst) { wrap.appendChild(el('span', 'affix', unit)); wrap.appendChild(document.createTextNode(text)); }
+      else if (unit && CURRENCY.test(unit)) { wrap.appendChild(document.createTextNode(text)); wrap.appendChild(el('span', 'affix', '\u00a0' + unit)); }
       else {
         wrap.appendChild(document.createTextNode(text));
         if (unit) wrap.appendChild(el('span', 'affix', unit === '%' ? '%' : ' ' + unit));
@@ -130,16 +263,18 @@
       var t = el('section', 'tile' + (compact ? ' compact' : ''));
       t.style.animationDelay = (index * 70) + 'ms';
       var head = el('div', 'head');
-      head.appendChild(el('div', 'label', r.metric || '—'));
+      var lab = el('div', 'label', r.metric || '—');
+      lab.dir = 'auto';
+      head.appendChild(lab);
       var ch = str(r.change);
       if (ch) {
         var cn = parseNumber(ch.replace(/^\+/, ''));
         var sign = cn === null ? 0 : (cn > 0 ? 1 : (cn < 0 ? -1 : 0));
-        var goodUp = LOWER_IS_BETTER.test(r.metric) ? !upIsGood : upIsGood;
+        var goodUp = lowerIsBetter(r.metric) ? !upIsGood : upIsGood;
         var cls = sign === 0 ? '' : ((sign > 0) === goodUp ? ' good' : ' bad');
         var chip = el('span', 'change' + cls);
         chip.appendChild(el('span', 'arrow', sign > 0 ? '▲' : (sign < 0 ? '▼' : '■')));
-        chip.appendChild(el('span', '', ch.replace(/^[+-]/, '')));
+        chip.appendChild(el('span', '', fmtChange(ch.replace(/^[+-]/, ''))));
         head.appendChild(chip);
       }
       t.appendChild(head);
@@ -160,8 +295,11 @@
         track.appendChild(fill);
         p.appendChild(track);
         var label = el('div', 'target' + (hit ? ' hit' : ''));
-        label.appendChild(el('b', '', fmt(Math.round(ratio * 100), 0) + '%'));
-        label.appendChild(document.createTextNode(' of ' + fmtValue(target, decimals(r.target)) + (r.unit && !CURRENCY.test(r.unit) && r.unit !== '%' ? ' ' + r.unit : (r.unit === '%' ? '%' : '')) + ' target'));
+        var tText = fmtValue(target, decimals(r.target));
+        if (r.unit && CURRENCY.test(r.unit)) tText = curFirst ? r.unit + tText : tText + '\u00a0' + r.unit;
+        else if (r.unit === '%') tText = tText + '%';
+        else if (r.unit) tText = tText + ' ' + r.unit;
+        phrase(label, words.target, { pct: pct(ratio), target: tText }, 'pct');
         p.appendChild(label);
         t.appendChild(p);
         fill.style.width = Math.max(2, Math.min(100, ratio * 100)) + '%';
@@ -205,7 +343,7 @@
     var updatedEl = document.getElementById('updated');
     var tf;
     try { tf = new Intl.DateTimeFormat(locale, { hour: '2-digit', minute: '2-digit', timeZone: v.timezone || undefined }); }
-    catch (e) { tf = new Intl.DateTimeFormat(undefined, { hour: '2-digit', minute: '2-digit' }); }
+    catch (e) { tf = new Intl.DateTimeFormat(locale, { hour: '2-digit', minute: '2-digit' }); }
 
     var lastKey = '';
     function render(force) {
@@ -214,14 +352,14 @@
       var key = JSON.stringify(rows) + '|' + (window.innerWidth + 'x' + window.innerHeight);
       var when = src.updated ? new Date(src.updated) : new Date();
       if (isNaN(when.getTime())) when = new Date();
-      updatedEl.textContent = 'Updated ' + tf.format(when);
+      updatedEl.textContent = words.updated.replace('{time}', tf.format(when));
       if (!force && key === lastKey) return;
       lastKey = key;
 
       var empty = document.getElementById('empty');
       while (grid.firstChild) grid.removeChild(grid.firstChild);
       if (!rows.length) {
-        empty.textContent = 'Add metrics in the template settings (Metric | Value | Target | Unit | Change), or connect a table data source.';
+        empty.textContent = words.empty;
         empty.hidden = false;
         return;
       }

@@ -1,0 +1,76 @@
+{
+  "name": "Annonce — carte",
+  "description": "Une annonce chaleureuse sur une carte blanche : une icône emoji, un titre, un court paragraphe, un pied de page et un code QR facultatif. Idéal pour les événements, les rappels et les bonnes nouvelles au bureau, à l'école ou dans les lieux associatifs.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Idéalement un PNG ou un SVG à fond transparent. Affiché en haut à gauche."
+    },
+    "icon": {
+      "label": "Icône (emoji)",
+      "help": "Un emoji dans le disque coloré, par ex. 📣 🎉 ⚠️ 📅. Laissez vide pour un disque uni."
+    },
+    "eyebrow": {
+      "label": "Surtitre",
+      "help": "Une courte étiquette au-dessus du titre, par ex. RAPPEL ou NOUVEAU. Les majuscules se lisent mieux.",
+      "default": "CE JEUDI"
+    },
+    "headline": {
+      "label": "Titre",
+      "help": "L'annonce en quelques mots. Jusqu'à 40 caractères ; deux ou trois lignes à l'écran.",
+      "default": "Vente de gâteaux solidaire au foyer"
+    },
+    "body": {
+      "label": "Détails",
+      "help": "Une ou deux phrases. Appuyez sur Entrée pour aller à la ligne.",
+      "default": "Gâteaux, cookies et chocolat chaud de 12 h 15 à 13 h 30. Chaque centime finance la sortie scientifique des 3e : venez entre amis, avec un peu de monnaie."
+    },
+    "footer": {
+      "label": "Pied de page",
+      "help": "De qui vient le message, une date, une salle ou un contact.",
+      "default": "Organisé par l'association des parents d'élèves"
+    },
+    "show_qr": {
+      "label": "Afficher un code QR",
+      "help": "Désactivez si vous n'avez pas de lien : le code et sa légende disparaissent."
+    },
+    "qr_url": {
+      "label": "Lien du code QR",
+      "help": "L'adresse qu'ouvre le code QR. Un lien plus court donne un code lisible de plus loin."
+    },
+    "qr_caption": {
+      "label": "Légende du QR",
+      "default": "Inscrivez-vous pour pâtisser"
+    },
+    "show_date": {
+      "label": "Afficher la date du jour",
+      "help": "La date en direct de l'écran, dans la langue et le fuseau horaire ci-dessous."
+    },
+    "date_format": {
+      "label": "Format de date",
+      "options": {
+        "weekday": "Jour de la semaine, jour et mois",
+        "long": "Date complète avec l'année",
+        "short": "Date courte",
+        "numeric": "Chiffres uniquement"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire de la date",
+      "help": "Laissez vide pour utiliser l'horloge de l'écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue de la date, par ex. en-GB, de-DE ou fr-CA. Laissez vide pour la langue de l'écran."
+    },
+    "accent": {
+      "label": "Couleur d'accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    }
+  }
+}

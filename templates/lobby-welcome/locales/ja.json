@@ -1,0 +1,50 @@
+{
+  "name": "ロビーのウェルカム画面",
+  "description": "受付やロビー向けの落ち着いたウェルカム画面。ロゴ、見出し、詳細の一文に加え、建物のタイムゾーンと言語でライブの時計と日付を表示します。",
+  "params": {
+    "logo": {
+      "label": "ロゴ",
+      "help": "背景が透明な PNG または SVG がおすすめです。左上に表示されます。"
+    },
+    "eyebrow": {
+      "label": "小見出し",
+      "default": "ようこそ"
+    },
+    "headline": {
+      "label": "見出し",
+      "default": "Northwind Studio でお待ちしていました"
+    },
+    "subline": {
+      "label": "詳細",
+      "default": "受付でチェックインしてください。担当者がまもなくお迎えにまいります。"
+    },
+    "footer": {
+      "label": "フッター",
+      "default": "ゲスト Wi-Fi：Northwind-Guest"
+    },
+    "accent": {
+      "label": "アクセントカラー"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字色"
+    },
+    "timezone": {
+      "label": "時計のタイムゾーン",
+      "help": "空欄にすると画面の時計を使います。"
+    },
+    "locale": {
+      "label": "言語",
+      "help": "日付（曜日と月）の言語。例：ja、en-US。空欄にすると画面の言語になります。"
+    },
+    "clock_format": {
+      "label": "時計の表示形式",
+      "options": {
+        "24": "24時間制",
+        "12": "12時間制"
+      }
+    }
+  }
+}

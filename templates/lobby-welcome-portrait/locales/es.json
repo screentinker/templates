@@ -1,0 +1,50 @@
+{
+  "name": "Bienvenida en recepción (vertical)",
+  "description": "Una pantalla de bienvenida serena para la recepción o el vestíbulo: su logotipo, un titular y una línea de detalle, con reloj y fecha en directo en la zona horaria y el idioma del edificio. Diseño vertical 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Funciona mejor un PNG o SVG con fondo transparente. Se muestra arriba."
+    },
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "default": "NOS ALEGRA VERLE"
+    },
+    "headline": {
+      "label": "Titular",
+      "default": "Bienvenidos a Northwind Studio"
+    },
+    "subline": {
+      "label": "Línea de detalle",
+      "default": "Regístrese en la recepción; su anfitrión le atenderá enseguida."
+    },
+    "footer": {
+      "label": "Pie",
+      "default": "Wi-Fi para invitados: Northwind-Guest"
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "timezone": {
+      "label": "Zona horaria del reloj",
+      "help": "Déjelo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma de la fecha (día de la semana y mes), p. ej. es o es-MX. Déjelo vacío para usar el idioma de la pantalla."
+    },
+    "clock_format": {
+      "label": "Formato del reloj",
+      "options": {
+        "24": "24 horas",
+        "12": "12 horas"
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Anuncio — minimalista",
+  "description": "Un aviso sereno y tipográfico: un titular con serifa, un párrafo breve y una firma sobre un fondo tranquilo, con mucho espacio. Para agradecimientos, cartas de la dirección y notas de normativa. Código QR pequeño opcional.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona mejor un PNG o SVG con fondo transparente. Aparece arriba a la izquierda."
+    },
+    "eyebrow": {
+      "label": "Antetítulo",
+      "help": "Una etiqueta corta sobre el titular, p. ej. RECORDATORIO o NUEVO. Mejor en mayúsculas.",
+      "default": "UNA NOTA DE LA DIRECCIÓN"
+    },
+    "headline": {
+      "label": "Titular",
+      "help": "El anuncio en pocas palabras. Hasta 40 caracteres; ocupa dos o tres líneas en pantalla.",
+      "default": "Gracias por un día de puertas abiertas"
+    },
+    "body": {
+      "label": "Detalles",
+      "help": "Una o dos frases. Pulsa Intro para empezar una línea nueva.",
+      "default": "Más de 400 familias nos visitaron el sábado. Gracias a cada estudiante y a todo el personal que guio una visita, atendió un puesto o respondió una pregunta."
+    },
+    "footer": {
+      "label": "Pie",
+      "help": "Quién lo envía, una fecha, una sala o un contacto.",
+      "default": "Dra. Helen Okafor, directora  ·  Northwind Academy"
+    },
+    "show_qr": {
+      "label": "Mostrar un código QR",
+      "help": "Desactívalo si no tienes enlace: el código y su texto desaparecen."
+    },
+    "qr_url": {
+      "label": "Enlace del código QR",
+      "help": "La dirección que abre el código QR. Con un enlace más corto, el código se escanea desde más lejos."
+    },
+    "qr_caption": {
+      "label": "Texto del QR",
+      "default": "Fotos de la jornada"
+    },
+    "show_date": {
+      "label": "Mostrar la fecha de hoy",
+      "help": "La fecha actual de la pantalla, en el idioma y la zona horaria de abajo."
+    },
+    "date_format": {
+      "label": "Formato de fecha",
+      "options": {
+        "weekday": "Día de la semana, día y mes",
+        "long": "Fecha completa con año",
+        "short": "Fecha corta",
+        "numeric": "Solo números"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria de la fecha",
+      "help": "Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "El idioma en que se escribe la fecha, p. ej. en-GB, de-DE o fr-CA. Déjalo vacío para usar el idioma de la pantalla."
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

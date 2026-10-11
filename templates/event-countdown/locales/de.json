@@ -1,0 +1,66 @@
+{
+  "name": "Event-Countdown",
+  "description": "Ein Countdown-Bildschirm für Konferenz, Eröffnung oder Produktstart: Eventname, Slogan, Datum und Ort, ein großer Live-Countdown, der zum Start auf Ihre eigene Nachricht umschaltet, und ein optionaler QR-Code für Tickets oder Anmeldung.",
+  "params": {
+    "event_name": {
+      "label": "Eventname"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "Zwei Tage Talks, Workshops und Demos bis spät in die Nacht – von denen, die die Zukunft bauen."
+    },
+    "when_where": {
+      "label": "Datums- und Ortszeile",
+      "default": "18.–19. MÄRZ 2027  ·  RIVERSIDE HALL, DUBLIN"
+    },
+    "target": {
+      "label": "Countdown bis",
+      "help": "ISO 8601 mit Zeitzonen-Offset, z. B. 2027-03-18T09:00:00+01:00 oder 2027-03-18T09:00:00-05:00. Ohne Offset gilt die Zeitzone des Servers."
+    },
+    "countdown_label": {
+      "label": "Beschriftung über dem Countdown",
+      "default": "EINLASS IN"
+    },
+    "done_text": {
+      "label": "Anzeige nach Ablauf",
+      "default": "Jetzt live"
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache der Countdown-Einheiten, z. B. de oder de-CH (leer = Sprache des Bildschirms). Ältere ScreenTinker-Server zeigen immer d h m s."
+    },
+    "show_qr": {
+      "label": "Ticket-QR-Code anzeigen",
+      "help": "Ausschalten, wenn Sie keinen Link haben – QR-Code, Karte und Beschriftung verschwinden."
+    },
+    "qr_url": {
+      "label": "Ticket- / Anmeldelink",
+      "help": "Die Adresse, die der QR-Code öffnet. Kurz halten: Kürzere Links ergeben einen Code, der sich aus größerer Entfernung scannen lässt."
+    },
+    "qr_caption": {
+      "label": "QR-Beschriftung",
+      "default": "Für Tickets scannen"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Ein annähernd quadratisches PNG oder SVG mit transparentem Hintergrund. Oben links."
+    },
+    "background_image": {
+      "label": "Hintergrundfoto",
+      "help": "Optional. Ein Event- oder Ortsfoto hinter allem; es wird mit der Einstellung darunter abgedunkelt."
+    },
+    "background_dim": {
+      "label": "Foto abdunkeln",
+      "help": "0 = Foto unverändert, 0,9 = fast schwarz. Nur mit Hintergrundfoto."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    }
+  }
+}

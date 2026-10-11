@@ -39,11 +39,23 @@ templates/<id>/
   LICENSE            required — the licence text for this template
   NOTICE             required when you bundle anything you did not write (fonts, images)
   README.md          required — what it is, what each setting does, anything the operator must set up
+  locales/<lang>.json optional — translations of the dashboard text (de es fr hi it ja nl pt zh)
 ```
 
 The folder name must equal `manifest.id`. Everything in the folder except `manifest.json` and
 dot-files is packed into the template, so do not leave drafts, `.psd` files or `node_modules` in it
 (the build refuses unknown file types anyway).
+
+**Translations.** `locales/<lang>.json` translates the template's name, description and param
+labels, help, option labels and text defaults for the dashboard; the words on the screen follow the
+template's `locale` param instead (`''` = the screen's own language), with dates and numbers through
+`Intl` and fixed words from a strings table in the template. The format and the rules (only names that
+exist in the manifest, the same length limits, never a new manifest key — older servers refuse unknown
+manifest keys but ignore the file) are in the server's
+[docs/templates.md, "Translating a template"](https://github.com/screentinker/screentinker/blob/main/docs/templates.md#translating-a-template).
+A server that knows the format refuses a malformed file at build and install. Translate for a sign,
+not word for word: keep it short, keep brand and sample names as they are, and check that the German
+default still fits the layout.
 
 **File limits** (enforced by the build and again by every server): at most 64 files, 1 MB each,
 2 MB in total. Paths are up to four folders deep, each segment `[A-Za-z0-9_-][A-Za-z0-9._-]*`
@@ -164,7 +176,9 @@ template reads only the resulting public values.
   (`content_id`, `fit: cover|contain`), `rule`, `box` (filled rectangles in `style.color`), `qr`
   (payload from `fields[slot]`, `qr_fg`/`qr_bg`/`qr_ec`), `clock` (`clock_format` `24|24s|12|12s`,
   `tz`, `locale`), `date` (`date_format` `long|short|numeric|weekday`, `tz`, `locale`), `countdown`
-  (`target` as an ISO date or epoch ms; `fields[slot]` is the text shown once it passes).
+  (`target` as an ISO date or epoch ms; `fields[slot]` is the text shown once it passes; `locale`
+  picks the language of its units — pass `"{{param:locale}}"`, `''` = the screen's language, and
+  no `locale` key at all = English `3d 4h 5m` as before; servers before this change always show English).
 - **Geometry** is in percent of the stage: `box.x/y/w/h`. **Type** is in `size_cqw` (percent of the
   stage width), so a slide looks the same from 720p to 4K. `style`: `color` (hex), `size_cqw`,
   `weight` 100–900, `align` `left|center|right`, `font`, `opacity` 0–1, `radius_cqw`.

@@ -1,0 +1,100 @@
+{
+  "name": "Promo ribasso (verticale)",
+  "description": "Verticale (9:16). Uno schermo promozionale per un ribasso: l’immagine del prodotto su un anello colorato, il vecchio prezzo, un grande prezzo nuovo e un bollino di risparmio, con una fascia per le condizioni e un conto alla rovescia facoltativo fino alla fine dell’offerta.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG più o meno quadrato. Il badge incluso è un segnaposto: sostituiscilo con il tuo."
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo (altrimenti un logo vuoto mostra un riquadro tratteggiato)."
+    },
+    "brand": {
+      "label": "Nome del negozio",
+      "help": "Accanto al logo. Lascia vuoto se il logo contiene già il nome."
+    },
+    "badge": {
+      "label": "Etichetta",
+      "help": "La pillola sopra il titolo. Se vuota resta una semplice linguetta colorata.",
+      "default": "RIBASSATO"
+    },
+    "headline": {
+      "label": "Prodotto / titolo",
+      "help": "Spazio per tre righe; 40 caratteri entrano sempre.",
+      "default": "Cuffie Studio Pro antirumore"
+    },
+    "was_price": {
+      "label": "Prezzo precedente",
+      "help": "Scrivilo come deve apparire, ad es. «Prima 249,00 €». Lascia vuoto per nasconderlo.",
+      "default": "Prima 249,00 €"
+    },
+    "price": {
+      "label": "Prezzo nuovo",
+      "help": "Il numero grande, come deve apparire: 179 €, 1.299,99 €.",
+      "default": "179 €"
+    },
+    "save_text": {
+      "label": "Bollino risparmio",
+      "help": "Sul bollino giallo sopra l’immagine. Breve: −70 €, −30%, METÀ PREZZO.",
+      "default": "−70 €"
+    },
+    "product_image": {
+      "label": "Immagine del prodotto",
+      "help": "Meglio un PNG o SVG scontornato con sfondo trasparente. Viene adattata, mai ritagliata."
+    },
+    "show_image": {
+      "label": "Mostra l’immagine del prodotto",
+      "help": "Disattiva per lasciare il pannello senza immagine (altrimenti un’immagine vuota mostra un riquadro tratteggiato)."
+    },
+    "show_countdown": {
+      "label": "Mostra il conto alla rovescia",
+      "help": "Disattiva per un’offerta senza scadenza: scompaiono sia l’etichetta sia il timer."
+    },
+    "countdown_label": {
+      "label": "Etichetta sopra il conto alla rovescia",
+      "help": "Resta anche dopo la fine: scegli parole adatte anche al messaggio finale.",
+      "default": "TEMPO LIMITATO"
+    },
+    "countdown_target": {
+      "label": "L’offerta termina il",
+      "help": "ISO 8601 con fuso orario, ad es. 2026-11-01T23:59:00+01:00 o 2026-11-01T23:59:00-05:00."
+    },
+    "countdown_done": {
+      "label": "Testo a conto alla rovescia finito",
+      "default": "Fino a esaurimento"
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua del conto alla rovescia, ad es. it o it-CH. Vuoto = la lingua dello schermo. I tuoi testi appaiono come li scrivi."
+    },
+    "small_print": {
+      "label": "Note legali",
+      "help": "Condizioni nella fascia in basso. Una o due frasi.",
+      "default": "Offerta valida fino al 31 dicembre 2026 o fino a esaurimento scorte. Uno per cliente. In negozio e online."
+    },
+    "accent": {
+      "label": "Colore d’accento",
+      "help": "L’etichetta, la fascia in basso e l’anello dietro l’immagine."
+    },
+    "highlight": {
+      "label": "Colore del prezzo",
+      "help": "Il prezzo nuovo e il bollino di risparmio."
+    },
+    "background": {
+      "label": "Colore di sfondo",
+      "help": "Anche il colore del testo sul bollino."
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "background_image": {
+      "label": "Foto di sfondo",
+      "help": "Facoltativa. Una foto dietro a tutto, scurita con l’impostazione qui sotto."
+    },
+    "background_dim": {
+      "label": "Scurisci la foto",
+      "help": "0 = la foto così com’è, 0,9 = quasi nera. Usato solo con una foto di sfondo."
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opening hours</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="landscape">
+<div class="bg" aria-hidden="true"></div>
+
+<div id="frame" class="frame">
+  <header class="head">
+    <img id="logo" class="logo" alt="" hidden>
+    <div class="titles">
+      <h1 id="title" class="title"></h1>
+      <div id="subtitle" class="subtitle"></div>
+    </div>
+    <div id="clockbox" class="clockbox">
+      <div id="clock" class="clock"></div>
+      <div id="date" class="date"></div>
+    </div>
+  </header>
+
+  <main class="body">
+    <section id="status" class="status">
+      <div class="state-row"><span class="dot" aria-hidden="true"></span><span id="state" class="state"></span></div>
+      <div id="detail" class="detail"></div>
+      <div id="detail2" class="detail2"></div>
+      <div id="today-note" class="today-note"></div>
+    </section>
+
+    <section class="week">
+      <div id="hours-heading" class="kicker"></div>
+      <ol id="days" class="days"></ol>
+    </section>
+
+    <section id="specials" class="specials">
+      <div id="specials-heading" class="kicker"></div>
+      <ul id="special-list" class="special-list"></ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div id="footer" class="footer-text"></div>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

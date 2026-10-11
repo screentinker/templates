@@ -1,0 +1,87 @@
+{
+  "name": "Classement",
+  "description": "Un classement pour équipes commerciales, collectes de fonds, défis de pas ou soirées jeux : un podium or, argent et bronze pour les trois premiers et des barres animées pour les autres. Saisissez les scores ou connectez une feuille Google, et le tableau se met à jour tout seul.",
+  "params": {
+    "title": {
+      "label": "Titre",
+      "default": "Classement des ventes"
+    },
+    "period": {
+      "label": "Période",
+      "help": "Une courte étiquette à côté du titre, comme « Ce mois-ci » ou « T3 ». Laissez vide pour la masquer.",
+      "default": "Ce mois-ci"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facultatif. Affiché à côté du titre."
+    },
+    "entries": {
+      "label": "Scores",
+      "help": "Un par ligne : Nom | Score | Sous-titre. L’ordre n’a pas d’importance, le tableau trie. Utilisé si aucune source de données n’est connectée.",
+      "default": "Maya Okafor | 48250 | Grands comptes\nLiam Chen | 41900 | ETI\nSofia Alvarez | 39475 | Grands comptes\nNoah Williams | 33120 | PME\nAva Patel | 31860 | ETI\nEthan Brooks | 27400 | PME\nZara Hussain | 24975 | Grands comptes\nLucas Meyer | 21300 | Partenaires\nChloe Dubois | 18640 | PME\nOwen Murphy | 15210 | Partenaires"
+    },
+    "scores": {
+      "label": "Source de données des scores (facultatif)",
+      "help": "Une feuille Google, un CSV, une liste REST ou un tableau manuel. S’il a les colonnes nom et score, il remplace les scores saisis ci-dessus."
+    },
+    "name_col": {
+      "label": "Colonne nom",
+      "help": "L’en-tête de la colonne des noms dans votre source de données, tel qu’il y figure.",
+      "default": "Nom"
+    },
+    "score_col": {
+      "label": "Colonne score",
+      "default": "Score"
+    },
+    "sub_col": {
+      "label": "Colonne sous-titre",
+      "help": "Facultatif. Une deuxième ligne sous chaque nom, comme une équipe ou une région.",
+      "default": "Équipe"
+    },
+    "order": {
+      "label": "Gagnant",
+      "options": {
+        "high": "Le score le plus haut gagne",
+        "low": "Le plus bas gagne (temps, golf)"
+      }
+    },
+    "score_prefix": {
+      "label": "Préfixe",
+      "help": "Affiché avant chaque score, par exemple € ou $. Laissez vide pour des nombres seuls.",
+      "default": "€"
+    },
+    "score_suffix": {
+      "label": "Suffixe",
+      "help": "Affiché après chaque score, par exemple pts, km ou %."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue des mots fixes du tableau et l’écriture des nombres (de-DE affiche 48.250). Laissez vide pour la langue de l’écran."
+    },
+    "max_rows": {
+      "label": "Afficher au plus",
+      "help": "Places affichées, podium compris. Sur un petit écran, le tableau en montre moins."
+    },
+    "show_bars": {
+      "label": "Afficher les barres",
+      "help": "Une barre sous chaque nom après le podium, d’autant plus longue que le score approche celui du premier."
+    },
+    "font": {
+      "label": "Police des titres",
+      "options": {
+        "archivo": "Archivo (affiche)",
+        "oswald": "Oswald (condensée)",
+        "inter": "Inter (sobre)"
+      }
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    }
+  }
+}

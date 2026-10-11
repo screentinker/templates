@@ -1,0 +1,31 @@
+Promo offer — third-party material bundled in this template
+
+fonts/archivo.woff2
+  Archivo (latin subset), Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)
+  SIL Open Font License 1.1 — full text in fonts/OFL-archivo.txt
+
+fonts/bitter.woff2
+  Bitter (latin subset), Copyright 2011 The Bitter Project Authors (https://github.com/solmatas/BitterPro)
+  SIL Open Font License 1.1 — full text in fonts/OFL-bitter.txt
+
+fonts/inter.woff2
+  Inter (latin subset), Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+  SIL Open Font License 1.1 — full text in fonts/OFL-inter.txt
+
+fonts/oswald.woff2
+  Oswald (latin subset), Copyright 2016 The Oswald Project Authors (https://github.com/googlefonts/OswaldFont)
+  SIL Open Font License 1.1 — full text in fonts/OFL-oswald.txt
+
+The font files are the same subsets ScreenTinker ships in server/fonts, unmodified.
+
+qr.js
+  QR Code encoder from this repository's guest-wifi template (ScreenTinker, original work, MIT),
+  copied unchanged with its licence header. It implements the public QR Code specification
+  (ISO/IEC 18004); no third-party code is included. "QR Code" is a registered trademark of
+  DENSO WAVE INCORPORATED.
+
+product.svg
+  Placeholder product picture (a pair of headphones for the fictional "Aura" range), drawn for this
+  template. Original work, MIT like the rest of this folder. Replace it with your own in the settings.
+
+Everything else in this folder is original work under the MIT licence in LICENSE.

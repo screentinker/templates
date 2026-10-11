@@ -1,0 +1,134 @@
+{
+ "name": "Teamfeestjes",
+ "description": "Verjaardagen, jubilea en welkom voor nieuwe collega’s, voor het kantoor of de pauzeruimte. Wisselende kaarten met kleurige initialen-avatars, medailles bij 1, 5, 10, 15 en 20+ jaar, en een lijst van iedereen die vandaag, deze week of deze maand iets te vieren heeft. Typ de mensen in of houd ze bij in een Google Sheet. Vrolijke confetti of een elegant donker thema.",
+ "params": {
+  "title": {
+   "label": "Titel",
+   "help": "De kop. Laat leeg om hem te verbergen.",
+   "default": "Feest bij Northwind"
+  },
+  "logo": {
+   "label": "Logo",
+   "help": "Optioneel. Naast de titel."
+  },
+  "window": {
+   "label": "Wie tonen",
+   "options": {
+    "today": "Alleen vandaag",
+    "week": "Deze week (kalenderweek)",
+    "next7": "De komende 7 dagen",
+    "month": "Deze maand",
+    "next30": "De komende 30 dagen"
+   }
+  },
+  "week_start": {
+   "label": "Weken beginnen op",
+   "help": "Alleen voor ‘Deze week’.",
+   "options": {
+    "monday": "Maandag",
+    "sunday": "Zondag",
+    "saturday": "Zaterdag"
+   }
+  },
+  "show_birthdays": {
+   "label": "Verjaardagen tonen"
+  },
+  "show_anniversaries": {
+   "label": "Jubilea tonen"
+  },
+  "show_new_hires": {
+   "label": "Nieuwe collega’s verwelkomen"
+  },
+  "milestones_only": {
+   "label": "Alleen ronde jubilea (1, 5, 10, 15, 20, 25 … jaar)"
+  },
+  "welcome_days": {
+   "label": "Nieuwe collega’s verwelkomen gedurende (dagen)",
+   "help": "Een nieuwe collega blijft zoveel dagen na de eerste werkdag in beeld, welke periode ook gekozen is."
+  },
+  "theme": {
+   "label": "Thema",
+   "options": {
+    "playful": "Vrolijk (licht, confetti)",
+    "elegant": "Elegant (donker, goud)"
+   }
+  },
+  "animate": {
+   "label": "Achtergrond animeren (confetti / gouden glinsters)",
+   "help": "Zet uit op heel trage players."
+  },
+  "seconds": {
+   "label": "Seconden per persoon"
+  },
+  "birthday_label": {
+   "label": "Kop bij verjaardag",
+   "help": "Boven de naam op een verjaardagskaart. Leeg: ‘Gefeliciteerd’ in de taal van het scherm."
+  },
+  "anniversary_label": {
+   "label": "Kop bij jubileum",
+   "help": "{n} wordt het aantal jaren, bijv. ‘{n} jaar bij ons’. Leeg: die regel in de taal van het scherm, met het juiste meervoud."
+  },
+  "anniversary_one_label": {
+   "label": "Kop bij één jaar",
+   "help": "Voor een eerste jubileum, bijv. ‘1 jaar bij ons’. Leeg gebruikt de kop hierboven of de ingebouwde tekst."
+  },
+  "new_hire_label": {
+   "label": "Kop bij nieuwe collega",
+   "help": "Leeg: ‘Welkom in het team’ in de taal van het scherm."
+  },
+  "list_title": {
+   "label": "Kop boven de lijst",
+   "help": "Boven de lijst van iedereen in de periode. Leeg: ‘Wie viert er’ in de taal van het scherm. Eén - verbergt hem."
+  },
+  "empty_title": {
+   "label": "Tekst als niemand iets viert",
+   "help": "Leeg: ‘Even niets te vieren’ in de taal van het scherm."
+  },
+  "empty_text": {
+   "label": "Kleine tekst als niemand iets viert",
+   "help": "Leeg: een vriendelijke regel in de taal van het scherm. Eén - verbergt hem."
+  },
+  "next_label": {
+   "label": "Kop boven het volgende feestje (als niemand iets viert)",
+   "help": "Als niemand iets viert, staat hieronder de volgende persoon binnen een jaar. Leeg: ‘Hierna’. Eén - verbergt hem."
+  },
+  "people": {
+   "label": "Gegevensbron met mensen (optioneel)",
+   "help": "Een Google Sheet, CSV of handmatige tabel met één rij per persoon. Heeft die de naamkolom, dan vervangt hij de voorbeeldmensen hieronder."
+  },
+  "name_col": {
+   "label": "Kolom naam"
+  },
+  "type_col": {
+   "label": "Kolom soort",
+   "help": "Optioneel: Verjaardag, Jubileum of Nieuwe collega (Engels mag ook). Zonder deze kolom geeft elke rij een verjaardag uit de datum en een jubileum of welkom uit de startdatum."
+  },
+  "date_col": {
+   "label": "Kolom verjaardag / datum",
+   "help": "MM-DD of JJJJ-MM-DD. Het geboortejaar wordt nooit getoond."
+  },
+  "start_col": {
+   "label": "Kolom startdatum",
+   "help": "JJJJ-MM-DD, de eerste werkdag. Geeft jubilea en welkomstgroeten."
+  },
+  "title_col": {
+   "label": "Kolom functie"
+  },
+  "team_col": {
+   "label": "Kolom team"
+  },
+  "sample": {
+   "label": "Mensen (zonder gekoppelde gegevensbron)",
+   "help": "Eén persoon per regel: Naam | Soort | Datum | Start | Functie | Team. Datums mogen ook today, today+3 of today+3-5y (5 jaar geleden) zijn.",
+   "default": "Priya Raman | Verjaardag | today | | Senior productontwerper | Design\nMarcus Okafor | Jubileum | | today+1-10y | Hoofd logistiek | Operations\nLena Fischer | Nieuwe collega | | today-2 | Data engineer | Platform\nGrace Mensah | Jubileum | | today+2-1y | Officemanager | Mensen & plekken\nAiko Tanaka | Jubileum | | today+3-5y | Lead customer success | Support"
+  },
+  "timezone": {
+   "label": "Tijdzone",
+   "help": "Bepaalt wanneer ‘vandaag’ begint. Leeg gebruikt de klok van het scherm."
+  },
+  "locale": {
+   "label": "Taal",
+   "help": "De taal van de ingebouwde koppen, Vandaag/Morgen en de datums, bijv. nl-NL of nl-BE. Leeg gebruikt de taal van het scherm."
+  }
+ }
+}

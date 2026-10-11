@@ -1,0 +1,46 @@
+{
+  "name": "San Valentín",
+  "description": "Una cálida felicitación de San Valentín sobre rojo vino: dos corazones de formas suaves, un titular, un mensaje para una tienda, cafetería u oficina y una línea para la fecha o el horario.",
+  "params": {
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "La línea corta sobre el titular. Déjala vacía para ocultarla.",
+      "default": "CON CARIÑO, DE NORTHWIND"
+    },
+    "headline": {
+      "label": "Titular",
+      "help": "Tiene dos líneas reservadas: caben unos 24 caracteres. Un titular más largo pasa a una tercera línea y se monta sobre el mensaje.",
+      "default": "Feliz San Valentín"
+    },
+    "message": {
+      "label": "Mensaje",
+      "help": "Una o dos frases bajo el titular; caben hasta 200 caracteres. Un salto de línea empieza una línea nueva.",
+      "default": "Hoy envolvemos gratis cada ramo y cada caja de bombones, y la cafetería sirve chocolate caliente para dos hasta el cierre."
+    },
+    "date_line": {
+      "label": "Línea de fecha",
+      "help": "Texto libre, escrito tal como quieres que se lea: una fecha, una hora y un lugar, o una despedida.",
+      "default": "14 · 02  ·  ABIERTO HASTA LAS 21:00"
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactívalo si no tienes logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG ancho con fondo transparente (unos 3,4 : 1 llenan el espacio; otras proporciones se ajustan dentro). Sustituye el logotipo provisional de Northwind."
+    },
+    "accent": {
+      "label": "Color del corazón"
+    },
+    "accent2": {
+      "label": "Color del corazón pequeño"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

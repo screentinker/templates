@@ -1,0 +1,66 @@
+{
+  "name": "Compte à rebours d'événement (portrait)",
+  "description": "Un écran de compte à rebours pour une conférence, une inauguration ou un lancement : le nom de l'événement, un slogan, la date et le lieu, un grand compte à rebours en direct qui laisse place à votre message le moment venu, et un QR code facultatif pour la billetterie ou les inscriptions. Mise en page portrait 9:16.",
+  "params": {
+    "event_name": {
+      "label": "Nom de l'événement"
+    },
+    "tagline": {
+      "label": "Slogan",
+      "default": "Deux jours de talks, d'ateliers et de démos tardives par celles et ceux qui inventent la suite."
+    },
+    "when_where": {
+      "label": "Ligne date et lieu",
+      "default": "18–19 MARS 2027  ·  RIVERSIDE HALL, DUBLIN"
+    },
+    "target": {
+      "label": "Compte à rebours jusqu'à",
+      "help": "ISO 8601 avec décalage horaire, par ex. 2027-03-18T09:00:00+01:00 ou 2027-03-18T09:00:00-05:00. Sans décalage, le fuseau du serveur est utilisé."
+    },
+    "countdown_label": {
+      "label": "Texte au-dessus du compte à rebours",
+      "default": "OUVERTURE DES PORTES DANS"
+    },
+    "done_text": {
+      "label": "Affiché à la fin",
+      "default": "C'est parti !"
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Langue des unités du compte à rebours, par ex. fr ou fr-CA (vide = langue de l'écran). Les anciens serveurs ScreenTinker affichent toujours d h m s."
+    },
+    "show_qr": {
+      "label": "Afficher le QR code billetterie",
+      "help": "Désactivez-le si vous n'avez pas de lien : le QR code, sa carte et sa légende disparaissent."
+    },
+    "qr_url": {
+      "label": "Lien billetterie / inscription",
+      "help": "L'adresse qu'ouvre le QR code. Gardez-la courte : un lien court donne un code lisible de plus loin."
+    },
+    "qr_caption": {
+      "label": "Légende du QR code",
+      "default": "Scannez pour vos billets"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG plutôt carré à fond transparent. En haut à gauche."
+    },
+    "background_image": {
+      "label": "Photo d'arrière-plan",
+      "help": "Facultatif. Une photo de l'événement ou du lieu derrière tout le reste, assombrie par le réglage ci-dessous."
+    },
+    "background_dim": {
+      "label": "Assombrir la photo",
+      "help": "0 = la photo telle quelle, 0,9 = presque noire. Utilisé seulement avec une photo d'arrière-plan."
+    },
+    "accent": {
+      "label": "Couleur d'accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    }
+  }
+}

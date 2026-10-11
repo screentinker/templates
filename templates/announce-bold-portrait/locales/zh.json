@@ -1,0 +1,72 @@
+{
+  "name": "公告 — 醒目（竖屏）",
+  "description": "醒目有力的通知：鲜明底色上的超大标题、一小段文字、页脚，以及用于查看详情的可选二维码。适合停业、截止日期等不容错过的信息。竖屏 9:16 布局。",
+  "params": {
+    "logo": {
+      "label": "标志",
+      "help": "建议使用透明背景的 PNG 或 SVG。显示在左上角。"
+    },
+    "eyebrow": {
+      "label": "小标题",
+      "help": "标题上方的简短标签，例如“提醒”或“新”。越短越醒目。",
+      "default": "重要通知"
+    },
+    "headline": {
+      "label": "标题",
+      "help": "用几个词说明通知内容。最多 40 个字符，在屏幕上占两到三行。",
+      "default": "10月23日（周五）办公室关闭"
+    },
+    "body": {
+      "label": "详情",
+      "help": "一两句话。按 Enter 换行。",
+      "default": "因计划进行电力检修，大楼全天关闭。请居家办公；IT 服务台照常服务，分机 4400。"
+    },
+    "footer": {
+      "label": "页脚",
+      "help": "发布者、日期、地点或联系方式。",
+      "default": "行政后勤部  ·  如有疑问：facilities@northwind.example"
+    },
+    "show_qr": {
+      "label": "显示二维码",
+      "help": "没有链接时请关闭：二维码及其说明会一起隐藏。"
+    },
+    "qr_url": {
+      "label": "二维码链接",
+      "help": "扫描二维码后打开的网址。链接越短，二维码越容易在远处扫描。"
+    },
+    "qr_caption": {
+      "label": "二维码说明",
+      "default": "详情与常见问题"
+    },
+    "show_date": {
+      "label": "显示今天的日期",
+      "help": "屏幕的实时日期，使用下方的语言和时区。"
+    },
+    "date_format": {
+      "label": "日期样式",
+      "options": {
+        "weekday": "星期、月和日",
+        "long": "含年份的完整日期",
+        "short": "短日期",
+        "numeric": "仅数字"
+      }
+    },
+    "timezone": {
+      "label": "日期时区",
+      "help": "留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "日期使用的语言，例如 zh-CN、en-GB 或 de-DE。留空则使用屏幕的语言。"
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    }
+  }
+}

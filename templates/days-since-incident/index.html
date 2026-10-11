@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Days since last incident</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="landscape">
+
+<!-- PPE pictograms: drawn for this template (MIT), white on a blue mandatory-sign disc. -->
+<svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <symbol id="ppe-hard_hat" viewBox="0 0 64 64">
+      <path d="M14 41 C14 27 22 18 32 18 C42 18 50 27 50 41 Z" fill="#fff"/>
+      <rect x="28.5" y="15" width="7" height="14" rx="3.5" fill="#fff"/>
+      <path d="M32 21 V40 M23.5 25 Q21 31 21 40 M40.5 25 Q43 31 43 40" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <rect x="8" y="41" width="48" height="6.5" rx="3.25" fill="#fff"/>
+    </symbol>
+    <symbol id="ppe-goggles" viewBox="0 0 64 64">
+      <path d="M6 31 H58" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/>
+      <rect x="12" y="21" width="40" height="21" rx="10" fill="#fff"/>
+      <ellipse cx="23.5" cy="31" rx="7.5" ry="6" fill="currentColor"/>
+      <ellipse cx="40.5" cy="31" rx="7.5" ry="6" fill="currentColor"/>
+      <path d="M27.5 42 Q32 35 36.5 42 Z" fill="currentColor"/>
+      <path d="M19 28 Q21 26 24 26" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+    <symbol id="ppe-hivis" viewBox="0 0 64 64">
+      <path d="M22 10 H27 Q32 21 37 10 H42 L51 19 L48 30 L50 55 H14 L16 30 L13 19 Z" fill="#fff"/>
+      <path d="M32 23 V55" stroke="currentColor" stroke-width="2.2"/>
+      <path d="M15.5 36 H48.5 M15 46 H49" stroke="currentColor" stroke-width="3.2"/>
+    </symbol>
+    <symbol id="ppe-gloves" viewBox="0 0 64 64">
+      <rect x="19" y="13" width="6" height="22" rx="3" fill="#fff"/>
+      <rect x="26" y="9" width="6" height="25" rx="3" fill="#fff"/>
+      <rect x="33" y="10" width="6" height="24" rx="3" fill="#fff"/>
+      <rect x="40" y="14" width="5.5" height="21" rx="2.75" fill="#fff"/>
+      <rect x="9" y="28" width="6" height="17" rx="3" fill="#fff" transform="rotate(-38 12 36)"/>
+      <path d="M18 29 H46 V42 Q46 48 40 48 H24 Q18 48 18 42 Z" fill="#fff"/>
+      <rect x="20" y="48" width="24" height="9" rx="2" fill="#fff"/>
+      <path d="M20 48.5 H44" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="ppe-boots" viewBox="0 0 64 64">
+      <path d="M17 10 H33 V35 L47 39 Q55 41.5 55 48 V49 H13 V14 Q13 10 17 10 Z" fill="#fff"/>
+      <rect x="11" y="49" width="46" height="7" rx="2.5" fill="#fff"/>
+      <path d="M11 49.5 H57" stroke="currentColor" stroke-width="2"/>
+      <path d="M41 37.5 Q45 42 44 49" stroke="currentColor" stroke-width="2.2" fill="none"/>
+      <path d="M13 17 H33 M24 22 H31 M24 27 H31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ppe-ear" viewBox="0 0 64 64">
+      <path d="M17 35 C17 13 47 13 47 35" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <rect x="9" y="30" width="14" height="22" rx="6" fill="#fff"/>
+      <rect x="41" y="30" width="14" height="22" rx="6" fill="#fff"/>
+      <path d="M19 34 V48 M45 34 V48" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="warn" viewBox="0 0 64 64">
+      <path d="M32 6 L60 56 H4 Z" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M32 6 L60 56 H4 Z" fill="none" stroke="#111" stroke-width="3.5" stroke-linejoin="round" transform="translate(32 36) scale(.78) translate(-32 -36)"/>
+      <rect x="29" y="22" width="6" height="19" rx="3" fill="#111"/>
+      <circle cx="32" cy="48" r="3.4" fill="#111"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main class="app">
+  <header class="head">
+    <div id="site" class="site" dir="auto"></div>
+    <div id="clockbox" class="clockbox">
+      <div id="clock" class="clock"></div>
+      <div id="date" class="date"></div>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-top"><span id="status" class="chip"></span></div>
+    <div class="count-row">
+      <div id="count-wrap" class="count-wrap"><span id="count" class="count"></span></div>
+      <div class="count-text">
+        <div id="unit" class="unit"></div>
+        <div id="headline" class="headline" dir="auto"></div>
+        <div id="since" class="since"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="side">
+    <div id="best-card" class="card best">
+      <div id="best-label" class="kicker"></div>
+      <div class="big-row"><span id="best" class="big"></span><span id="record" class="pill" hidden></span></div>
+    </div>
+    <div id="target-card" class="card target">
+      <div id="target-label" class="kicker"></div>
+      <div class="big-row"><span id="target" class="big"></span></div>
+      <div class="gauge" aria-hidden="true">
+        <div class="zones"><span id="z-red" class="z red"></span><span id="z-amber" class="z amber"></span><span id="z-green" class="z green"></span></div>
+        <div id="fill" class="fill"></div>
+        <span id="t-amber" class="tick amber"></span><span id="t-green" class="tick green"></span>
+        <div id="pointer" class="pointer"></div>
+      </div>
+    </div>
+    <div id="ppe-card" class="card ppe">
+      <div id="ppe-label" class="kicker"></div>
+      <ul id="ppe" class="ppe-list"></ul>
+    </div>
+  </section>
+
+  <footer id="msgbar" class="msgbar">
+    <svg class="warn" viewBox="0 0 64 64" aria-hidden="true"><use href="#warn"/></svg>
+    <div class="msg-wrap"><div id="msg" class="msg" dir="auto"></div></div>
+    <div id="dots" class="dots" aria-hidden="true"></div>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{
+  "name": "Wachtscherm — rustig verloop met tijd en datum (staand)",
+  "description": "Een rustig wachtscherm: een grote, lichte klok en de datum op een zacht kleurverloop, met een optioneel klein logo en een regel tekst. Zes meegeleverde verlopen, je eigen tijdzone en taal. Prettig voor schermen die urenlang niets anders tonen. Staande opmaak 9:16.",
+  "params": {
+    "palette": {
+      "label": "Kleurverloop",
+      "help": "De achtergrond. Alle zes zijn donker genoeg voor lichte tekst.",
+      "options": {
+        "tpl:bg-dusk.svg": "Schemer (indigo naar roze)",
+        "tpl:bg-ocean.svg": "Oceaan (marine naar petrol)",
+        "tpl:bg-forest.svg": "Bos (den naar mos)",
+        "tpl:bg-ember.svg": "Gloed (pruim naar koper)",
+        "tpl:bg-aurora.svg": "Noorderlicht (nacht naar groen)",
+        "tpl:bg-slate.svg": "Leisteen (antraciet naar staal)"
+      }
+    },
+    "clock_format": {
+      "label": "Klokweergave",
+      "options": {
+        "12": "12-uurs",
+        "24": "24-uurs"
+      }
+    },
+    "date_format": {
+      "label": "Datumstijl",
+      "options": {
+        "weekday": "Weekdag, dag en maand",
+        "long": "Volledige datum met jaar",
+        "short": "Korte datum",
+        "numeric": "Alleen cijfers"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone",
+      "help": "Voor welke plek de klok en datum gelden. Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Hoe tijd en datum worden geschreven, bijv. en-GB, de-DE of fr-CA. Laat leeg voor de taal van het scherm."
+    },
+    "message": {
+      "label": "Regel tekst",
+      "help": "Een kleine regel onderaan. Laat leeg voor geen.",
+      "default": "Northwind Studio  ·  Bezoekers graag aanmelden bij de receptie"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Een klein logo onderaan."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een licht (wit) PNG of SVG met transparante achtergrond leest het best op het verloop."
+    },
+    "text_color": {
+      "label": "Tekstkleur",
+      "help": "Klok, datum en regel tekst. Houd hem licht: alle verlopen zijn donker."
+    }
+  }
+}

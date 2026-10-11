@@ -1,7 +1,7 @@
 {
   "id": "weather-html",
   "name": "Weather — animated",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "html",
   "description": "A full-screen animated weather scene: the sky, rain, snow or sun follow the current conditions, with a five-day forecast and temperature ranges. Reads one of your Weather data sources; your server fetches the weather, so this template needs no network access at all.",
   "author": "ScreenTinker",
@@ -15,7 +15,7 @@
   "network": [],
   "params": [
     { "name": "weather", "type": "data_source", "label": "Weather data source", "required": true,
-      "help": "A data source of type Weather (Data Sources → New → Weather). Its location, units and language are set there." },
+      "help": "A data source of type Weather (Data Sources → New → Weather). Its location and units are set there." },
     { "name": "location", "type": "text", "label": "Location name", "max": 60, "default": "",
       "help": "Leave empty to use the data source's own place name." },
     { "name": "theme", "type": "select", "label": "Background", "default": "sky",
@@ -27,6 +27,6 @@
       "help": "Turn off for very low-powered players." },
     { "name": "show_clock", "type": "checkbox", "label": "Show the clock", "default": true },
     { "name": "timezone", "type": "timezone", "label": "Clock timezone", "help": "Leave empty to use the screen's own clock.", "default": "" },
-    { "name": "locale", "type": "locale", "label": "Clock and date language", "help": "For example en-GB. Leave empty for the screen's language.", "default": "" }
+    { "name": "locale", "type": "locale", "label": "Language", "help": "The language of every word, date and number on screen, for example de or ja. Leave empty for the screen's language.", "default": "" }
   ]
 }

@@ -6,6 +6,37 @@
 
   var MAX_READ = 100;
 
+  /* Built-in words, picked by the primary subtag of the "locale" setting (empty = the screen's
+     language), falling back to English. Everything else on screen is the operator's text or Intl. */
+  var STRINGS = {
+    en: { empty: 'No scores yet.' },
+    de: { empty: 'Noch keine Ergebnisse.' },
+    es: { empty: 'Aún no hay puntuaciones.' },
+    fr: { empty: 'Pas encore de scores.' },
+    hi: { empty: 'अभी कोई स्कोर नहीं।' },
+    it: { empty: 'Ancora nessun punteggio.' },
+    ja: { empty: 'まだスコアがありません。' },
+    nl: { empty: 'Nog geen scores.' },
+    pt: { empty: 'Ainda não há pontuações.' },
+    zh: { empty: '暂无成绩。' }
+  };
+  /* A usable BCP-47 tag: the setting if Intl accepts it, else the screen's language. */
+  function pickLocale(tag) {
+    var t = String(tag || '').trim();
+    if (t) {
+      try { if (Intl.NumberFormat.supportedLocalesOf([t]).length) return t; } catch (e) { /* invalid tag */ }
+    }
+    return (typeof navigator !== 'undefined' && navigator.language) || 'en';
+  }
+  function wordsFor(tag) {
+    var lang = String(tag).toLowerCase().split(/[-_]/)[0];
+    return STRINGS[lang] || STRINGS.en;
+  }
+  // The locale's decimal mark ("." or ","), for the one case a typed score is ambiguous.
+  function decimalMark(locale) {
+    try { return (1.5).toLocaleString(locale).indexOf(',') !== -1 ? ',' : '.'; } catch (e) { return '.'; }
+  }
+
   function str(x) { return x == null ? '' : String(x).trim(); }
 
   // The same key the server gives a column (server/lib/data-sources/tabular.js slugKey).
@@ -18,7 +49,7 @@
   }
 
   // "48,250", "$1,200.50", "12.5 km", "1.234,5" → a number; anything else → null.
-  function toNumber(raw) {
+  function toNumber(raw, mark) {
     var s = str(raw);
     if (!/\d/.test(s)) return null;
     var neg = /^[^\d]*-/.test(s);
@@ -29,6 +60,8 @@
       n = comma > dot ? n.replace(/\./g, '').replace(',', '.') : n.replace(/,/g, '');
     } else if (comma > -1) {
       n = /^\d{1,3}(,\d{3})+$/.test(n) ? n.replace(/,/g, '') : n.replace(/,/g, '.');
+    } else if (mark === ',' && /^\d{1,3}(\.\d{3})+$/.test(n)) {
+      n = n.replace(/\./g, '');   // "48.250" on a screen that writes decimals with a comma
     }
     if ((n.match(/\./g) || []).length > 1) return null;
     var f = parseFloat(n);
@@ -38,7 +71,7 @@
   // Decimal places the score was given with, at most 2 ("12.5" → 1).
   function placesOf(raw) {
     var m = /[.,](\d{1,2})\D*$/.exec(str(raw));
-    return m && !/^\d{1,3}(,\d{3})+$/.test(str(raw).replace(/[^\d,]/g, '')) ? m[1].length : 0;
+    return m && !/^\d{1,3}([.,]\d{3})+$/.test(str(raw).replace(/[^\d.,]/g, '')) ? m[1].length : 0;
   }
 
   function initials(name) {
@@ -62,6 +95,11 @@
     if (v.text_color) root.style.setProperty('--text', v.text_color);
     body.setAttribute('data-font', str(v.font) || 'archivo');
 
+    var locale = pickLocale(v.locale);
+    var words = wordsFor(locale);
+    root.setAttribute('lang', locale);
+    var mark = decimalMark(locale);
+
     document.getElementById('title').textContent = str(v.title);
     document.getElementById('period').textContent = str(v.period);
     if (v.logo) {
@@ -80,7 +118,15 @@
     function fromSource() {
       var d = ST.data && ST.data.scores;
       if (!d || typeof d !== 'object') return null;
-      var kn = slug(v.name_col || 'Name'), ks = slug(v.score_col || 'Score'), kt = slug(v.sub_col || 'Team');
+      // A heading in another script (名前, नाम) has no Latin key: the server numbers it col1, col2, …
+      var heads = String(d.columns == null ? '' : d.columns).split(', ');
+      function keyOf(name) {
+        var k = slug(name);
+        if (k) return k;
+        var at = heads.indexOf(str(name));
+        return at > -1 ? 'col' + (at + 1) : '';
+      }
+      var kn = keyOf(v.name_col || 'Name'), ks = keyOf(v.score_col || 'Score'), kt = keyOf(v.sub_col || 'Team');
       if (!kn || !ks || d['row1_' + kn] === undefined || d['row1_' + ks] === undefined) return null;
       var out = [];
       for (var i = 1; i <= MAX_READ; i++) {
@@ -101,7 +147,7 @@
     var places = 0;
     people.forEach(function (p, i) {
       p.i = i;
-      p.score = toNumber(p.raw);
+      p.score = toNumber(p.raw, mark);
       if (p.score != null) places = Math.max(places, placesOf(p.raw));
     });
     // Best first; a row without a number goes to the bottom; ties keep their typed order.
@@ -117,11 +163,15 @@
     });
     people = people.slice(0, maxRows);
 
+    function rankText(n) {
+      try { return n.toLocaleString(locale); } catch (e) { return String(n); }
+    }
     function formatScore(p) {
       if (p.score == null) return p.raw || '—';
       var t;
       try {
-        t = p.score.toLocaleString('en-US', { minimumFractionDigits: places, maximumFractionDigits: places });
+        // The operator's number format, else the screen's own (never a hard-coded en-US).
+        t = p.score.toLocaleString(locale, { minimumFractionDigits: places, maximumFractionDigits: places });
       } catch (e) {
         t = p.score.toFixed(places);
       }
@@ -159,7 +209,7 @@
 
     if (!people.length) {
       board.classList.add('solo');
-      podium.appendChild(el('div', 'empty-note', 'No scores yet.'));
+      podium.appendChild(el('div', 'empty-note', words.empty));
       return;
     }
 
@@ -174,22 +224,22 @@
       var who = place.appendChild(el('div', 'who'));
       var av = who.appendChild(el('div', 'avatar', initials(p.name)));
       if (i === 0) av.appendChild(crown());
-      who.appendChild(el('div', 'pname', p.name));
-      who.appendChild(el('div', 'psub', p.sub));
+      who.appendChild(el('div', 'pname', p.name)).dir = 'auto';
+      who.appendChild(el('div', 'psub', p.sub)).dir = 'auto';
       who.appendChild(el('div', 'pscore', formatScore(p)));
       var plinth = place.appendChild(el('div', 'plinth'));
-      plinth.appendChild(el('span', '', String(p.rank)));
+      plinth.appendChild(el('span', '', rankText(p.rank)));
       podium.appendChild(place);
     });
 
     var rowEls = rest.map(function (p, i) {
       var row = el('div', 'row');
       row.style.setProperty('--d', (0.9 + i * 0.07) + 's');
-      row.appendChild(el('div', 'rank', String(p.rank)));
+      row.appendChild(el('div', 'rank', rankText(p.rank)));
       var info = row.appendChild(el('div', 'info'));
       var line = info.appendChild(el('div', 'line'));
-      line.appendChild(el('span', 'rname', p.name));
-      line.appendChild(el('span', 'rsub', p.sub));
+      line.appendChild(el('span', 'rname', p.name)).dir = 'auto';
+      line.appendChild(el('span', 'rsub', p.sub)).dir = 'auto';
       if (showBars) {
         var bar = info.appendChild(el('div', 'bar'));
         bar.appendChild(el('i')).style.setProperty('--w', ratio(p).toFixed(4));

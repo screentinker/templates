@@ -1,0 +1,49 @@
+{
+  "name": "Pantalla en espera — logo y reloj (vertical)",
+  "description": "Una pantalla de espera para cuando no hay nada programado: tu logo, un gran reloj en directo y la fecha de hoy sobre un fondo sereno con un halo suave, en tu zona horaria e idioma. Mantiene la pantalla cuidada entre campañas. Diseño vertical 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG con fondo transparente, claro sobre oscuro. Se muestra centrado arriba."
+    },
+    "footer": {
+      "label": "Línea inferior",
+      "help": "Una línea corta abajo: un lugar, una planta, un contacto. Déjalo vacío para no mostrar nada.",
+      "default": "Northwind Studio  ·  Recepción, planta 3"
+    },
+    "clock_format": {
+      "label": "Formato de hora",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas"
+      }
+    },
+    "date_format": {
+      "label": "Estilo de fecha",
+      "options": {
+        "weekday": "Día de la semana, día y mes",
+        "long": "Fecha completa con año",
+        "short": "Fecha corta",
+        "numeric": "Solo números"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria",
+      "help": "Para qué lugar se muestran la hora y la fecha. Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Cómo se escriben la hora y la fecha, p. ej. en-GB, de-DE o fr-CA. Déjalo vacío para usar el idioma de la pantalla."
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "El halo detrás del reloj y la pequeña línea."
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

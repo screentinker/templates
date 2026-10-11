@@ -1,0 +1,59 @@
+{
+  "name": "Consiglio di sicurezza",
+  "description": "Un consiglio di sicurezza ben visibile per fabbriche, magazzini, cucine e cantieri: un’icona di pericolo su un pannello giallo, la regola in grande, fino a quattro passaggi e chi chiamare.",
+  "params": {
+    "icon": {
+      "label": "Icona",
+      "help": "Un PNG o SVG quadrato con sfondo trasparente, scuro abbastanza da leggersi sul pannello d’accento."
+    },
+    "panel_title": {
+      "label": "Titolo del pannello",
+      "default": "SICUREZZA"
+    },
+    "tip_number": {
+      "label": "Numero del consiglio",
+      "help": "Sotto il titolo del pannello, ad es. «CONSIGLIO 14 DI 52». Lascia vuoto per nasconderlo.",
+      "default": "CONSIGLIO 14 DI 52"
+    },
+    "eyebrow": {
+      "label": "Titoletto",
+      "help": "Per chi o per quale area.",
+      "default": "QUESTA SETTIMANA · MAGAZZINO E CARICO"
+    },
+    "headline": {
+      "label": "Consiglio",
+      "help": "La regola in poche parole.",
+      "default": "Usa le gambe, non la schiena"
+    },
+    "steps": {
+      "label": "Come fare",
+      "help": "Fino a quattro righe brevi; Invio inizia una nuova riga. Ognuna sotto i 45 caratteri circa.",
+      "default": "1. Stai vicino, piedi larghi come le spalle\n2. Piega le ginocchia, schiena dritta\n3. Presa salda, solleva senza ruotare\n4. Oltre 23 kg? Usa un carrello o chiedi aiuto"
+    },
+    "footer": {
+      "label": "Riga a piè di pagina",
+      "help": "Chi chiamare o dove segnalare.",
+      "default": "Segnala ogni quasi incidente al tuo responsabile o chiama la sicurezza, int. 2240"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattivato nasconde il logo e il suo spazio resta vuoto."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG con sfondo trasparente, in un colore chiaro per lo sfondo scuro predefinito."
+    },
+    "accent": {
+      "label": "Colore d’accento",
+      "help": "Il pannello dietro l’icona, il titoletto e la linea."
+    },
+    "background": {
+      "label": "Colore di sfondo",
+      "help": "La pagina. Anche titolo e numero del pannello sono disegnati in questo colore."
+    },
+    "text_color": {
+      "label": "Colore del testo",
+      "help": "Il consiglio, i passaggi e il piè di pagina."
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "Aviso — cartão",
+  "description": "Um aviso simpático em um cartão branco: um ícone emoji, um título, um parágrafo curto, um rodapé e um QR code opcional. Bom para eventos, lembretes e boas notícias em escritórios, escolas e espaços comunitários.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona melhor um PNG ou SVG com fundo transparente. Fica no canto superior esquerdo."
+    },
+    "icon": {
+      "label": "Ícone (emoji)",
+      "help": "Um emoji no círculo colorido, por ex. 📣 🎉 ⚠️ 📅. Deixe vazio para um círculo liso."
+    },
+    "eyebrow": {
+      "label": "Chamada",
+      "help": "Um rótulo curto acima do título, por ex. LEMBRETE ou NOVO. Em maiúsculas fica melhor.",
+      "default": "NESTA QUINTA"
+    },
+    "headline": {
+      "label": "Título",
+      "help": "O aviso em poucas palavras. Até 40 caracteres; ocupa duas ou três linhas na tela.",
+      "default": "Venda beneficente de bolos no salão"
+    },
+    "body": {
+      "label": "Detalhes",
+      "help": "Uma ou duas frases. Pressione Enter para uma nova linha.",
+      "default": "Bolos, biscoitos e chocolate quente das 12h15 às 13h30. Toda a renda vai para a excursão de ciências do 9º ano: traga um amigo e um trocado."
+    },
+    "footer": {
+      "label": "Rodapé",
+      "help": "Quem envia, uma data, uma sala ou um contato.",
+      "default": "Organização: Associação de Pais e Mestres"
+    },
+    "show_qr": {
+      "label": "Mostrar um QR code",
+      "help": "Desative se não tiver link: o código e a legenda somem."
+    },
+    "qr_url": {
+      "label": "Link do QR code",
+      "help": "O endereço que o QR code abre. Links mais curtos geram um código que pode ser lido de mais longe."
+    },
+    "qr_caption": {
+      "label": "Legenda do QR",
+      "default": "Inscreva-se para assar"
+    },
+    "show_date": {
+      "label": "Mostrar a data de hoje",
+      "help": "A data atual da tela, no idioma e no fuso horário abaixo."
+    },
+    "date_format": {
+      "label": "Formato da data",
+      "options": {
+        "weekday": "Dia da semana, dia e mês",
+        "long": "Data completa com ano",
+        "short": "Data curta",
+        "numeric": "Só números"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário da data",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma da data, por ex. en-GB, de-DE ou fr-CA. Deixe vazio para usar o idioma da tela."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

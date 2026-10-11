@@ -1,0 +1,53 @@
+{
+  "name": "Tableau de bord KPI",
+  "description": "De grandes tuiles d’indicateurs lisibles d’un coup d’œil, avec la progression vers l’objectif et une évolution en couleur. Depuis une feuille Google, un CSV, une API REST ou un tableau manuel (colonnes Metric, Value, Target, Unit, Change), ou saisies à la main. De 1 à 12 tuiles, quel que soit l’écran.",
+  "params": {
+    "data": {
+      "label": "Source de données des indicateurs (facultatif)",
+      "help": "Une source en tableau (Google Sheets, CSV, API REST ou tableau manuel) avec les colonnes Metric, Value et, en option, Target, Unit, Change. Vide : les indicateurs saisis ci-dessous."
+    },
+    "metrics": {
+      "label": "Indicateurs (sans source de données)",
+      "help": "Un par ligne : Indicateur | Valeur | Objectif | Unité | Évolution. Seuls l’indicateur et la valeur sont obligatoires.",
+      "default": "Chiffre d’affaires du mois | 184250 | 200000 | € | +6.4%\nNouveaux clients | 312 | 300 | | +18\nNet Promoter Score | 64 | 60 | | +3\nTickets support ouverts | 27 | | | -9\nTemps de réponse moyen | 1.8 | 2 | h | -0.4\nDisponibilité | 99.97 | 99.9 | % | +0.02"
+    },
+    "title": {
+      "label": "Titre",
+      "default": "Résultats du mois"
+    },
+    "max_tiles": {
+      "label": "Afficher au maximum",
+      "help": "Les lignes au-delà de ce nombre ne sont pas affichées."
+    },
+    "show_targets": {
+      "label": "Afficher la progression vers l’objectif"
+    },
+    "up_is_good": {
+      "label": "Une hausse est positive",
+      "help": "Colore une hausse comme positive. Si le nom contient ouvert, réponse, attrition, coût, erreur ou attente (aussi en anglais), c’est l’inverse."
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "good_color": {
+      "label": "Couleur positive"
+    },
+    "bad_color": {
+      "label": "Couleur négative"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Nombres, heure et textes intégrés, par exemple fr ou en-US. Laissez vide pour la langue de l’écran."
+    },
+    "timezone": {
+      "label": "Fuseau horaire de « Mis à jour »",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    }
+  }
+}

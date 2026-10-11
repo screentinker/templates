@@ -1,0 +1,75 @@
+{
+  "name": "Mededeling — gesplitst",
+  "description": "Een tweekleurige mededeling: de kop op een vlak in je accentkleur, de details ernaast op een lichte achtergrond, met een voetregel en een optionele QR-code. Handig voor sessies, trainingen en aanmeldingen.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond werkt het best. Staat linksboven."
+    },
+    "eyebrow": {
+      "label": "Kopje",
+      "help": "Een kort label boven de kop, bijv. HERINNERING of NIEUW. Hoofdletters lezen het best.",
+      "default": "LUNCHLEZING"
+    },
+    "headline": {
+      "label": "Kop",
+      "help": "De mededeling in een paar woorden. Tot 40 tekens; op het scherm twee of drie regels.",
+      "default": "Dataprivacy in gewone taal"
+    },
+    "body": {
+      "label": "Details",
+      "help": "Een of twee zinnen. Druk op Enter voor een nieuwe regel.",
+      "default": "Priya Raman van Juridische Zaken legt uit wat we wel en niet mogen met klantgegevens, met echte voorbeelden uit onze eigen supporttickets. 45 minuten, lunch inbegrepen: meld je aan, dan bestellen we genoeg eten."
+    },
+    "footer": {
+      "label": "Voetregel",
+      "help": "Van wie het komt, een datum, een ruimte of een contactpersoon.",
+      "default": "Woensdag 4 november  ·  12.30 uur  ·  Orchard Room, 3e verdieping"
+    },
+    "show_qr": {
+      "label": "QR-code tonen",
+      "help": "Zet uit als je geen link hebt: de code en het bijschrift verdwijnen."
+    },
+    "qr_url": {
+      "label": "Link van de QR-code",
+      "help": "Het adres dat de QR-code opent. Een kortere link geeft een code die van verder weg scant."
+    },
+    "qr_caption": {
+      "label": "QR-bijschrift",
+      "default": "Scan om je aan te melden"
+    },
+    "show_date": {
+      "label": "Datum van vandaag tonen",
+      "help": "De actuele datum van het scherm, in de taal en tijdzone hieronder."
+    },
+    "date_format": {
+      "label": "Datumnotatie",
+      "options": {
+        "weekday": "Weekdag, dag en maand",
+        "long": "Volledige datum met jaar",
+        "short": "Korte datum",
+        "numeric": "Alleen cijfers"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone van de datum",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De taal van de datum, bijv. en-GB, de-DE of fr-CA. Laat leeg voor de taal van het scherm."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "panel_text": {
+      "label": "Tekstkleur op het accentvlak"
+    }
+  }
+}

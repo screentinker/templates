@@ -1,0 +1,138 @@
+{
+  "name": "Tablero de horarios",
+  "description": "Qué hay ahora, cuántos minutos quedan y qué viene después: un tablero con cuenta atrás para timbres escolares, clases de gimnasio, turnos y descansos de fábrica u horarios de culto, con el horario de hoy al lado y el bloque actual resaltado. Escriba el horario (varios horarios con nombre, elija el activo) o conecte una hoja de Google. Fuera del horario indica cuándo se reanuda.",
+  "params": {
+    "preset": {
+      "label": "Plantilla",
+      "help": "Define los textos y el horario de ejemplo que se muestra hasta que escriba o conecte el suyo, ambos en el idioma de la pantalla.",
+      "options": {
+        "school": "Timbres / horario escolar",
+        "gym": "Clases de gimnasio o estudio",
+        "factory": "Turnos y descansos",
+        "worship": "Horarios de culto"
+      }
+    },
+    "schedule": {
+      "label": "Horario",
+      "help": "Un bloque por línea: Días | Inicio-Fin | Título | Sala | Responsable, p. ej. Mon-Fri | 08:00-08:50 | 1.ª hora | Aula 12 | Sra. Patel. [Exámenes] inicia otro horario. Vacío = ejemplo."
+    },
+    "schedule_source": {
+      "label": "Fuente de datos del horario (opcional)",
+      "help": "Una hoja de Google, CSV o tabla manual con las columnas Days, Start, End, Title, Room, Host (y opcionalmente Schedule). Sustituye al horario escrito."
+    },
+    "active_schedule": {
+      "label": "Horario activo",
+      "help": "Qué horario con nombre se muestra, contando en el orden en que aparecen. Cámbielo para la semana de exámenes, jornada reducida o festivos.",
+      "options": {
+        "1": "Horario 1",
+        "2": "Horario 2",
+        "3": "Horario 3",
+        "4": "Horario 4",
+        "5": "Horario 5",
+        "6": "Horario 6",
+        "7": "Horario 7",
+        "8": "Horario 8"
+      }
+    },
+    "view": {
+      "label": "Vista",
+      "options": {
+        "split": "Ahora + horario de hoy",
+        "focus": "Solo ahora (cuenta atrás grande)",
+        "list": "Solo el horario de hoy"
+      }
+    },
+    "title": {
+      "label": "Título",
+      "help": "Vacío = el encabezado de la plantilla en el idioma de la pantalla (o el nombre del ejemplo mientras se muestra)."
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Una línea bajo el título. Se le añade el nombre del horario activo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Se muestra junto al título."
+    },
+    "show_badge": {
+      "label": "Mostrar iniciales si no hay logotipo"
+    },
+    "show_where": {
+      "label": "Mostrar sala y responsable"
+    },
+    "warn_minutes": {
+      "label": "Avisar en los últimos … minutos",
+      "help": "La cuenta atrás cambia al color de aviso estos minutos antes de que termine un bloque. 0 = nunca."
+    },
+    "now_label": {
+      "label": "Encabezado: bloque actual",
+      "help": "Vacío = el texto de la plantilla en el idioma de la pantalla («Ahora», «En curso»…)."
+    },
+    "next_label": {
+      "label": "Encabezado: siguiente bloque",
+      "help": "Vacío = el texto de la plantilla en el idioma de la pantalla («A continuación», «Próxima clase»…)."
+    },
+    "then_label": {
+      "label": "Encabezado: el bloque posterior",
+      "help": "Vacío = «Después» en el idioma de la pantalla."
+    },
+    "ends_label": {
+      "label": "Texto de la cuenta atrás durante un bloque",
+      "help": "Vacío = «Termina en» en el idioma de la pantalla."
+    },
+    "starts_label": {
+      "label": "Texto de la cuenta atrás antes de un bloque",
+      "help": "Vacío = «Empieza en» en el idioma de la pantalla."
+    },
+    "offhours_today": {
+      "label": "Mensaje antes del primer bloque de hoy",
+      "help": "Use {time} y {title}. Vacío = el de la plantilla en el idioma de la pantalla, p. ej. «Las clases empiezan a las {time}»."
+    },
+    "offhours_later": {
+      "label": "Mensaje cuando el siguiente bloque es otro día",
+      "help": "Use {day}, {time} y {title}. Vacío = el de la plantilla en el idioma de la pantalla, p. ej. «Próximas clases: {day}, {time}»."
+    },
+    "empty_text": {
+      "label": "Mensaje si no hay nada programado esta semana",
+      "help": "Vacío = el de la plantilla en el idioma de la pantalla."
+    },
+    "font": {
+      "label": "Fuente de los títulos",
+      "options": {
+        "archivo": "Archivo (llamativa)",
+        "oswald": "Oswald (estrecha)",
+        "inter": "Inter (limpia)",
+        "bitter": "Bitter (con serifa)"
+      }
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "warn_color": {
+      "label": "Color de aviso"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "clock_format": {
+      "label": "Formato de hora",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas",
+        "auto": "Según el idioma",
+        "off": "Ocultar el reloj (horas según el idioma)"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria",
+      "help": "Las horas del horario están en esta zona horaria. Vacío = el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Los textos, horas y fechas de la pantalla, p. ej. es o es-MX. Vacío = el idioma de la pantalla."
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "name": "Orologi del mondo",
+  "description": "Da due a otto orologi in tempo reale per le città con cui lavori — analogici, digitali o entrambi, con la data, un segnale giorno/notte e la differenza di ore rispetto a questo schermo. Si dispone a griglia, a elenco verticale o a striscia sottile. Nulla viene scaricato: l’ora viene dall’orologio dello schermo.",
+  "params": {
+    "title": {
+      "label": "Titolo",
+      "help": "Lascia vuoto per nascondere la barra del titolo.",
+      "default": "In giro per il mondo"
+    },
+    "clocks": {
+      "label": "Orologi",
+      "help": "Un orologio per riga, come Città | fuso orario IANA — per esempio Mumbai | Asia/Kolkata. Da 2 a 8 righe; le righe con un fuso sconosciuto vengono saltate ed elencate in basso.",
+      "default": "Londra | Europe/London\nNew York | America/New_York\nTokyo | Asia/Tokyo\nSydney | Australia/Sydney\nDubai | Asia/Dubai\nSan Francisco | America/Los_Angeles"
+    },
+    "face": {
+      "label": "Stile dell’orologio",
+      "options": {
+        "both": "Analogico e digitale",
+        "analog": "Solo analogico",
+        "digital": "Solo digitale"
+      }
+    },
+    "clock_format": {
+      "label": "Formato dell’ora",
+      "options": {
+        "24": "24 ore",
+        "12": "12 ore"
+      }
+    },
+    "show_seconds": {
+      "label": "Mostra i secondi"
+    },
+    "show_date": {
+      "label": "Mostra la data"
+    },
+    "show_daynight": {
+      "label": "Mostra giorno e notte",
+      "help": "Gli orologi dove è giorno hanno un quadrante chiaro e un sole; di notte un quadrante scuro e una luna."
+    },
+    "day_start": {
+      "label": "Il giorno inizia alle (ora)"
+    },
+    "day_end": {
+      "label": "La notte inizia alle (ora)"
+    },
+    "highlight_local": {
+      "label": "Evidenzia la città di questo schermo",
+      "help": "Contorna l’orologio il cui fuso coincide con quello dello schermo (o quello impostato sotto)."
+    },
+    "home_timezone": {
+      "label": "Fuso orario di questo schermo",
+      "help": "Per l’evidenziazione e le ore +/-. Lascia vuoto per usare l’impostazione dello schermo."
+    },
+    "here_label": {
+      "label": "Etichetta dell’orologio evidenziato",
+      "help": "Lascia vuoto per «Qui» nella lingua dello schermo."
+    },
+    "day_label": {
+      "label": "Etichetta giorno",
+      "help": "Sulle città dove è giorno. Lascia vuoto per «Giorno» nella lingua dello schermo."
+    },
+    "night_label": {
+      "label": "Etichetta notte",
+      "help": "Sulle città dove è notte. Lascia vuoto per «Notte» nella lingua dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua delle date, di AM/PM e delle parole sullo schermo, per esempio it-IT, en-GB o ja-JP. Lascia vuoto per la lingua dello schermo."
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

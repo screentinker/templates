@@ -1,0 +1,70 @@
+{
+  "name": "Klantreview",
+  "description": "Een klantreview op het scherm: sterren, de woorden van de klant in een warme schreefletter, naam en een avatar met initialen, plus je totaalscore. Voor etalages, showrooms, recepties en wachtruimtes.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "default": "DIT ZEGGEN ONZE KLANTEN"
+    },
+    "rating": {
+      "label": "Sterrenscore",
+      "options": {
+        "tpl:stars/5.svg": "5 sterren",
+        "tpl:stars/4.5.svg": "4½ ster",
+        "tpl:stars/4.svg": "4 sterren",
+        "tpl:stars/3.svg": "3 sterren",
+        "tpl:stars/none.svg": "Sterren verbergen"
+      }
+    },
+    "quote": {
+      "label": "Review",
+      "help": "De woorden van de klant, zonder aanhalingstekens. Tot ongeveer 220 tekens; korter leest beter.",
+      "default": "Ze plaatsten onze hele keuken in vier dagen, lieten het huis brandschoon achter en kwamen een week later nog checken of elke la goed sloot. Twee buren zijn er al heen."
+    },
+    "name": {
+      "label": "Naam van de klant",
+      "help": "Alleen met toestemming van de klant."
+    },
+    "detail": {
+      "label": "Detail over de klant",
+      "help": "Wat ze kochten, waar ze vandaan komen of ‘Geverifieerde klant’.",
+      "default": "Keukenrenovatie · Riverside"
+    },
+    "initials": {
+      "label": "Initialen in de avatar"
+    },
+    "show_score": {
+      "label": "Totaalscore tonen",
+      "help": "Uit verbergt de grote score en het bijschrift."
+    },
+    "score": {
+      "label": "Totaalscore",
+      "help": "Je gemiddelde score, bijv. 4,9. Gebruik een echt cijfer.",
+      "default": "4,9"
+    },
+    "score_caption": {
+      "label": "Bijschrift bij de score",
+      "default": "gemiddelde van 1.240 geverifieerde reviews"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Uit verbergt het logo; de ruimte blijft leeg."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond. Het voorbeeld is wit voor het gekleurde paneel (liggend) of donker voor de pagina (staand)."
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Het zijpaneel (liggend) of onderpaneel (staand), de avatar en de kleine kop."
+    },
+    "background": {
+      "label": "Achtergrondkleur",
+      "help": "De pagina. De initialen in de avatar krijgen ook deze kleur."
+    },
+    "text_color": {
+      "label": "Tekstkleur",
+      "help": "De review en de naam."
+    }
+  }
+}

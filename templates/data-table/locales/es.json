@@ -1,0 +1,115 @@
+{
+  "name": "Tabla de datos",
+  "description": "Cualquier tabla como un panel claro y legible: una clasificación deportiva, tipos de ahorro con su letra pequeña, niveles de stock, un horario. Conecta una hoja de Google, CSV, lista REST o tabla manual (o escribe las filas), elige las columnas, colorea celdas con reglas sencillas como «Stock < 5 rojo», y las tablas largas pasan de página solas.",
+  "params": {
+    "preset": {
+      "label": "Punto de partida",
+      "help": "Rellena filas de ejemplo, un título y reglas de resaltado para lo que dejes vacío. Elige «Ninguno» para usar solo tus ajustes.",
+      "options": {
+        "league": "Clasificación deportiva",
+        "rates": "Tipos bancarios / de ahorro",
+        "stock": "Niveles de stock",
+        "generic": "Genérico (sesiones de formación)",
+        "none": "Ninguno: solo mis ajustes"
+      }
+    },
+    "title": {
+      "label": "Título",
+      "help": "Vacío usa el título del punto de partida. Escribe solo - para ocultarlo."
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Una línea bajo el título. Vacío usa el del punto de partida. Escribe solo - para ocultarlo."
+    },
+    "footer": {
+      "label": "Pie",
+      "help": "Texto pequeño en la parte inferior. Vacío usa el del punto de partida. Escribe solo - para ocultarlo."
+    },
+    "disclosure": {
+      "label": "Aviso / letra pequeña",
+      "help": "Texto pequeño bajo la tabla en cada página, p. ej. el texto legal de los tipos. Vacío usa el del punto de partida. Escribe solo - para ocultarlo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Se muestra junto al título."
+    },
+    "table": {
+      "label": "Fuente de datos de la tabla (opcional)",
+      "help": "Una hoja de Google, CSV, lista REST o tabla manual. Su fila de encabezado da los títulos de columna. Sustituye a las filas escritas abajo."
+    },
+    "rows": {
+      "label": "Tabla escrita",
+      "help": "Se usa sin fuente de datos. Primera línea = encabezados, luego una fila por línea, celdas separadas por |. Vacío muestra el ejemplo del punto de partida."
+    },
+    "show_columns": {
+      "label": "Columnas que mostrar",
+      "help": "Opcional, encabezados separados por comas en el orden deseado, p. ej. Equipo, PJ, Pts. Vacío muestra todas las columnas."
+    },
+    "highlight_col": {
+      "label": "Columna resaltada",
+      "help": "El encabezado de la columna que comprueban las reglas. Vacío usa la del punto de partida. Escribe solo - para no resaltar."
+    },
+    "highlight_rules": {
+      "label": "Reglas de resaltado",
+      "help": "Separadas por ; y probadas en orden, p. ej. < 5 rojo; < 20 ámbar; = Agotado gris. Colores: rojo ámbar verde azul morado gris accent o #hex."
+    },
+    "highlight_style": {
+      "label": "Estilo de resaltado",
+      "options": {
+        "preset": "Como el punto de partida",
+        "cell": "Colorear la celda",
+        "row": "Colorear toda la fila"
+      }
+    },
+    "rows_per_page": {
+      "label": "Filas por página",
+      "help": "0 = automático: todo en una pantalla si se lee bien; si no, páginas de un tamaño cómodo."
+    },
+    "page_seconds": {
+      "label": "Segundos por página"
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "midnight": "Medianoche (azul oscuro)",
+        "graphite": "Grafito (gris oscuro)",
+        "paper": "Papel (claro)",
+        "contrast": "Alto contraste (blanco y negro)"
+      }
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "Línea del título, fila de encabezado, puntos de página y el color de regla «accent»."
+    },
+    "font": {
+      "label": "Fuente de títulos",
+      "options": {
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (condensada)",
+        "inter": "Inter (sobria)"
+      }
+    },
+    "zebra": {
+      "label": "Filas alternas"
+    },
+    "show_updated": {
+      "label": "Mostrar la última actualización de la fuente de datos",
+      "help": "Solo con una fuente de datos conectada."
+    },
+    "updated_label": {
+      "label": "Palabra «Actualizado»",
+      "help": "La palabra antes de la hora. Vacío usa «Actualizado» en el idioma de la pantalla; solo - muestra únicamente la hora."
+    },
+    "limit_label": {
+      "label": "Aviso cuando no caben todas las filas",
+      "help": "Aparece si la fuente tiene más filas de las que llegan a la pantalla; se rellenan {shown} y {total}. Vacío usa el texto por defecto."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "El idioma de los textos fijos y las tablas de ejemplo, de la hora de actualización y los números de página. Vacío usa el idioma de la pantalla."
+    },
+    "timezone": {
+      "label": "Zona horaria de la actualización"
+    }
+  }
+}

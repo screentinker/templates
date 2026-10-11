@@ -1,0 +1,100 @@
+{
+  "name": "Promoção baixou o preço (retrato)",
+  "description": "Retrato (9:16). Uma tela de oferta para redução de preço: a imagem do produto sobre um anel colorido, o preço antigo, um grande preço novo e um selo de economia, com uma faixa para as condições e uma contagem regressiva opcional até o fim da oferta.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG mais ou menos quadrado. O selo incluído é provisório; substitua pelo seu."
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se não tiver logotipo (senão um logotipo vazio mostra uma caixa tracejada)."
+    },
+    "brand": {
+      "label": "Nome da loja",
+      "help": "Aparece ao lado do logotipo. Deixe vazio se o logotipo já tiver o nome."
+    },
+    "badge": {
+      "label": "Selo",
+      "help": "A pílula acima do título. Se ficar vazia, vira uma aba colorida simples.",
+      "default": "BAIXOU!"
+    },
+    "headline": {
+      "label": "Produto / título",
+      "help": "Espaço para três linhas; 40 caracteres sempre cabem.",
+      "default": "Fone Studio Pro com redução de ruído"
+    },
+    "was_price": {
+      "label": "Preço antigo",
+      "help": "Digite como deve aparecer, ex.: \"De R$ 249,00\". Deixe vazio para ocultar.",
+      "default": "De R$ 249,00"
+    },
+    "price": {
+      "label": "Preço novo",
+      "help": "O número grande, como deve aparecer: R$ 179, R$ 1.299,99.",
+      "default": "R$ 179"
+    },
+    "save_text": {
+      "label": "Selo de economia",
+      "help": "No selo amarelo sobre a imagem. Curto: R$ 70 OFF, −30%, METADE.",
+      "default": "R$ 70 OFF"
+    },
+    "product_image": {
+      "label": "Imagem do produto",
+      "help": "O ideal é um PNG ou SVG recortado com fundo transparente. Ela é ajustada, nunca cortada."
+    },
+    "show_image": {
+      "label": "Mostrar a imagem do produto",
+      "help": "Desative para deixar o painel sem imagem (senão uma imagem vazia mostra uma caixa tracejada)."
+    },
+    "show_countdown": {
+      "label": "Mostrar a contagem regressiva",
+      "help": "Desative para uma oferta sem data de término: o rótulo e o cronômetro somem."
+    },
+    "countdown_label": {
+      "label": "Rótulo acima da contagem",
+      "help": "Continua depois do fim da oferta, então escolha palavras que combinem com a mensagem final.",
+      "default": "POR TEMPO LIMITADO"
+    },
+    "countdown_target": {
+      "label": "A oferta termina em",
+      "help": "ISO 8601 com fuso horário, ex.: 2026-11-01T23:59:00-03:00 ou 2026-11-01T23:59:00+00:00."
+    },
+    "countdown_done": {
+      "label": "Texto quando a contagem termina",
+      "default": "Últimas unidades"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma da contagem regressiva, ex.: pt-BR ou pt-PT. Vazio = o idioma da tela. Seus textos aparecem como você digitar."
+    },
+    "small_print": {
+      "label": "Letras miúdas",
+      "help": "Condições na faixa inferior. Uma ou duas frases.",
+      "default": "Oferta válida até 31 de dezembro de 2026 ou enquanto durarem os estoques. Uma por cliente. Na loja e online."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "O selo, a faixa inferior e o anel atrás da imagem."
+    },
+    "highlight": {
+      "label": "Cor do preço",
+      "help": "O preço novo e o selo de economia."
+    },
+    "background": {
+      "label": "Cor de fundo",
+      "help": "Também é a cor do texto no selo."
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "background_image": {
+      "label": "Foto de fundo",
+      "help": "Opcional. Uma foto atrás de tudo, escurecida pela configuração abaixo."
+    },
+    "background_dim": {
+      "label": "Escurecer a foto",
+      "help": "0 = a foto como está, 0,9 = quase preta. Só vale com foto de fundo."
+    }
+  }
+}

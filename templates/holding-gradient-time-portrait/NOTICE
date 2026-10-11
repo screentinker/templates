@@ -1,0 +1,11 @@
+Holding screen — calm gradient with time and date (portrait) — bundled media
+
+logo.svg
+  Placeholder mark for the fictional "Northwind", drawn for this template. Original work,
+  MIT like the rest of this folder (see LICENSE). Replace it with your own logo in the settings.
+
+bg-dusk.svg, bg-ocean.svg, bg-forest.svg, bg-ember.svg, bg-aurora.svg, bg-slate.svg
+  Gradient backgrounds drawn for this template (SVG gradients, no photographs). Original work,
+  MIT like the rest of this folder (see LICENSE).
+
+The slide uses ScreenTinker's own bundled fonts (Oswald, Inter); none are shipped here.

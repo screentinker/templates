@@ -1,0 +1,107 @@
+{
+  "name": "Promoção compre um, leve outro (retrato)",
+  "description": "Retrato (9:16). Uma tela chamativa de \"compre um, leve outro\" para cafeteria, padaria ou loja: a oferta em três linhas grandes, onde vale, um selo redondo sobre um painel colorido e uma contagem regressiva opcional até o último dia.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG mais ou menos quadrado. O selo incluído é provisório; substitua pelo seu."
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se não tiver logotipo (senão um logotipo vazio mostra uma caixa tracejada)."
+    },
+    "brand": {
+      "label": "Nome da loja",
+      "help": "Aparece ao lado do logotipo. Deixe vazio se o logotipo já tiver o nome."
+    },
+    "eyebrow": {
+      "label": "Chamada",
+      "default": "SÓ ESTA SEMANA"
+    },
+    "line1": {
+      "label": "Oferta, primeira linha",
+      "help": "A oferta vem em três linhas grandes, ex.: \"Compre um,\" / \"leve outro\" / \"GRÁTIS\".",
+      "default": "Compre um,"
+    },
+    "line2": {
+      "label": "Oferta, segunda linha",
+      "default": "leve outro"
+    },
+    "line3": {
+      "label": "Oferta, terceira linha (destaque)",
+      "help": "A maior linha, então no máximo 8 caracteres: GRÁTIS, −50%.",
+      "default": "GRÁTIS"
+    },
+    "product": {
+      "label": "Onde vale",
+      "default": "Latte, flat white ou mocha"
+    },
+    "detail": {
+      "label": "Linha de detalhe",
+      "default": "Traga alguém. Combine tamanhos; o grátis é o de preço igual ou menor."
+    },
+    "sticker": {
+      "label": "Selo redondo",
+      "help": "Curto: no máximo duas palavras. Deixe vazio para um círculo liso.",
+      "default": "2 POR 1"
+    },
+    "product_image": {
+      "label": "Imagem do produto",
+      "help": "O ideal é um PNG ou SVG recortado com fundo transparente. Ela é ajustada, nunca cortada."
+    },
+    "show_image": {
+      "label": "Mostrar a imagem do produto",
+      "help": "Desative para deixar o painel sem imagem (senão uma imagem vazia mostra uma caixa tracejada)."
+    },
+    "show_countdown": {
+      "label": "Mostrar a contagem regressiva",
+      "help": "Desative para uma oferta sem data de término: o rótulo e o cronômetro somem."
+    },
+    "countdown_label": {
+      "label": "Rótulo acima da contagem",
+      "help": "Continua depois do fim da oferta, então escolha palavras que combinem com a mensagem final.",
+      "default": "POR TEMPO LIMITADO"
+    },
+    "countdown_target": {
+      "label": "A oferta termina em",
+      "help": "ISO 8601 com fuso horário, ex.: 2026-11-01T23:59:00-03:00 ou 2026-11-01T23:59:00+00:00."
+    },
+    "countdown_done": {
+      "label": "Texto quando a contagem termina",
+      "default": "Termina em breve"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma da contagem regressiva, ex.: pt-BR ou pt-PT. Vazio = o idioma da tela. Seus textos aparecem como você digitar."
+    },
+    "small_print": {
+      "label": "Letras miúdas",
+      "default": "Somente nas lojas participantes. Não cumulativa com outras ofertas nem válida para delivery."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "O painel da imagem e a terceira linha da oferta."
+    },
+    "highlight": {
+      "label": "Cor do selo"
+    },
+    "panel_text": {
+      "label": "Texto no painel",
+      "help": "O nome da loja, que fica sobre o painel de destaque."
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "background_image": {
+      "label": "Foto de fundo",
+      "help": "Opcional. Uma foto atrás de tudo, escurecida pela configuração abaixo."
+    },
+    "background_dim": {
+      "label": "Escurecer a foto",
+      "help": "0 = a foto como está, 0,9 = quase preta. Só vale com foto de fundo."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Pantalla en espera — degradado sereno con hora y fecha (vertical)",
+  "description": "Una pantalla de espera tranquila: un reloj grande y ligero y la fecha sobre un degradado suave, con un logo pequeño y una línea de texto opcionales. Seis degradados incluidos, tu zona horaria e idioma. Descansa la vista en pantallas que pasan horas sin contenido. Diseño vertical 9:16.",
+  "params": {
+    "palette": {
+      "label": "Degradado",
+      "help": "El fondo. Los seis son lo bastante oscuros para texto claro.",
+      "options": {
+        "tpl:bg-dusk.svg": "Atardecer (índigo a rosa)",
+        "tpl:bg-ocean.svg": "Océano (marino a turquesa)",
+        "tpl:bg-forest.svg": "Bosque (pino a musgo)",
+        "tpl:bg-ember.svg": "Brasa (ciruela a cobre)",
+        "tpl:bg-aurora.svg": "Aurora (noche a verde)",
+        "tpl:bg-slate.svg": "Pizarra (carbón a acero)"
+      }
+    },
+    "clock_format": {
+      "label": "Formato de hora",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas"
+      }
+    },
+    "date_format": {
+      "label": "Estilo de fecha",
+      "options": {
+        "weekday": "Día de la semana, día y mes",
+        "long": "Fecha completa con año",
+        "short": "Fecha corta",
+        "numeric": "Solo números"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria",
+      "help": "Para qué lugar se muestran la hora y la fecha. Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Cómo se escriben la hora y la fecha, p. ej. en-GB, de-DE o fr-CA. Déjalo vacío para usar el idioma de la pantalla."
+    },
+    "message": {
+      "label": "Línea de texto",
+      "help": "Una línea pequeña abajo. Déjalo vacío para no mostrar nada.",
+      "default": "Northwind Studio  ·  Visitantes, regístrense en recepción"
+    },
+    "show_logo": {
+      "label": "Mostrar el logo",
+      "help": "Un logo pequeño abajo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG claro (blanco) con fondo transparente se ve mejor sobre el degradado."
+    },
+    "text_color": {
+      "label": "Color del texto",
+      "help": "Reloj, fecha y línea de texto. Mantenlo claro: todos los degradados son oscuros."
+    }
+  }
+}

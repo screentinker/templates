@@ -1,0 +1,53 @@
+{
+  "name": "Painel de KPIs",
+  "description": "Grandes blocos de indicadores para ler num relance, com progresso até a meta e um indicador de variação colorido. De uma planilha Google, CSV, API REST ou tabela manual (colunas Metric, Value, Target, Unit, Change), ou digitados. De 1 a 12 blocos em qualquer formato de tela.",
+  "params": {
+    "data": {
+      "label": "Fonte de dados dos indicadores (opcional)",
+      "help": "Uma fonte em tabela (Google Sheets, CSV, API REST ou tabela manual) com colunas Metric, Value e, se quiser, Target, Unit, Change. Deixe vazio para usar os indicadores abaixo."
+    },
+    "metrics": {
+      "label": "Indicadores (sem fonte de dados)",
+      "help": "Um por linha: Indicador | Valor | Meta | Unidade | Variação. Só Indicador e Valor são obrigatórios.",
+      "default": "Receita do mês | 184250 | 200000 | R$ | +6.4%\nNovos clientes | 312 | 300 | | +18\nNet Promoter Score | 64 | 60 | | +3\nChamados de suporte abertos | 27 | | | -9\nTempo médio de resposta | 1.8 | 2 | h | -0.4\nDisponibilidade | 99.97 | 99.9 | % | +0.02"
+    },
+    "title": {
+      "label": "Título",
+      "default": "Desempenho do mês"
+    },
+    "max_tiles": {
+      "label": "Mostrar no máximo",
+      "help": "Linhas além deste número não são mostradas."
+    },
+    "show_targets": {
+      "label": "Mostrar o progresso até a meta"
+    },
+    "up_is_good": {
+      "label": "Um aumento é bom",
+      "help": "Colore uma variação positiva como boa. Se o nome contiver aberto, resposta, cancelamento, custo, erro ou espera (também em inglês), é o contrário."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "good_color": {
+      "label": "Cor para bom"
+    },
+    "bad_color": {
+      "label": "Cor para ruim"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Números, hora e textos embutidos, por exemplo pt ou en-US. Deixe vazio para usar o idioma da tela."
+    },
+    "timezone": {
+      "label": "Fuso horário de “Atualizado”",
+      "help": "Deixe vazio para usar o relógio da própria tela."
+    }
+  }
+}

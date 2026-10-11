@@ -1,0 +1,70 @@
+{
+  "name": "Año Nuevo (vertical)",
+  "description": "Una felicitación de Año Nuevo en azul medianoche con fuegos artificiales dorados y rosas hechos de puntos, el nuevo año en cifras gigantes tras el titular y una cuenta atrás opcional hasta medianoche que cambia a tu propio mensaje cuando empieza el año.",
+  "params": {
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "La línea corta sobre el titular. Déjala vacía para ocultarla.",
+      "default": "DE PARTE DE TODO NORTHWIND"
+    },
+    "headline": {
+      "label": "Titular",
+      "help": "Tiene dos líneas reservadas: caben unos 24 caracteres. Un titular más largo pasa a una tercera línea y se monta sobre el mensaje.",
+      "default": "¡Feliz Año Nuevo a todos!"
+    },
+    "message": {
+      "label": "Mensaje",
+      "help": "Una o dos frases bajo el titular; caben hasta 200 caracteres. Un salto de línea empieza una línea nueva.",
+      "default": "Gracias por un año extraordinario. Por los nuevos comienzos, las ideas audaces y todo lo que construiremos juntos."
+    },
+    "date_line": {
+      "label": "Línea de fecha",
+      "help": "Texto libre, escrito tal como quieres que se lea: una fecha, una hora y un lugar, o una despedida."
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactívalo si no tienes logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG ancho con fondo transparente (unos 3,4 : 1 llenan el espacio; otras proporciones se ajustan dentro). Sustituye el logotipo provisional de Northwind."
+    },
+    "accent": {
+      "label": "Acento dorado"
+    },
+    "accent2": {
+      "label": "Acento de los fuegos"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "big_text": {
+      "label": "Texto grande de fondo",
+      "help": "Las cifras gigantes y tenues tras el titular, normalmente el nuevo año."
+    },
+    "show_countdown": {
+      "label": "Mostrar la cuenta atrás",
+      "help": "Desactívala para ocultar la cuenta atrás y su etiqueta."
+    },
+    "target": {
+      "label": "Cuenta atrás hasta",
+      "help": "Cambia el desfase final a TU zona horaria o la cuenta atrás terminará a destiempo. +00:00 es medianoche en Londres; 2027-01-01T00:00:00+01:00, en Madrid."
+    },
+    "countdown_label": {
+      "label": "Etiqueta sobre la cuenta atrás",
+      "help": "Se queda sobre la cuenta atrás y sobre el mensaje que la sustituye, así que debe encajar con ambos.",
+      "default": "NOCHEVIEJA  ·  MEDIANOCHE"
+    },
+    "done_text": {
+      "label": "Al terminar la cuenta atrás",
+      "default": "¡Feliz Año Nuevo!"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma de las unidades de la cuenta atrás (vacío = idioma de la pantalla). Los servidores ScreenTinker antiguos las muestran siempre como d h m s."
+    }
+  }
+}

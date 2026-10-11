@@ -1,0 +1,94 @@
+{
+  "name": "Insegnanti e volontari in primo piano (verticale)",
+  "description": "Dì grazie in pubblico: un layout caldo, in stile libro, con foto, nome, ruolo, una citazione e una riga sulla persona fuori dalla classe. Pensato per scuole, biblioteche, associazioni e gruppi di quartiere. Layout verticale 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Meglio un PNG o SVG con sfondo trasparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Una foto a mezzo busto, ritagliata per riempire la cornice. Le foto quadrate rendono meglio."
+    },
+    "show_photo": {
+      "label": "Mostra la foto",
+      "help": "Se disattivato mostra un cerchio con le iniziali, per chi preferisce non esporre la propria foto."
+    },
+    "initials": {
+      "label": "Iniziali",
+      "help": "Compaiono nel cerchio quando la foto è disattivata. Una o due lettere."
+    },
+    "eyebrow": {
+      "label": "Titoletto",
+      "help": "Sopra il nome. In maiuscolo si legge meglio.",
+      "default": "INSEGNANTE IN PRIMO PIANO"
+    },
+    "name": {
+      "label": "Nome",
+      "help": "Una riga, fino a 26 caratteri. Scrivilo normalmente; TUTTO MAIUSCOLO è più largo e potrebbe non starci.",
+      "default": "Sig.ra Elena Vasquez"
+    },
+    "role": {
+      "label": "Ruolo",
+      "help": "Mansione, team, classe o sede. Se è lungo va a capo su una seconda riga.",
+      "default": "Insegnante di quarta e responsabile del club di lettura"
+    },
+    "show_quote": {
+      "label": "Mostra la citazione",
+      "help": "Se disattivato nasconde la citazione e le virgolette."
+    },
+    "quote": {
+      "label": "Citazione",
+      "help": "Una o due frasi con parole sue. Senza virgolette.",
+      "default": "Ogni bambino è a un buon libro di distanza dall’amore per la lettura. Io lo aiuto a trovarlo."
+    },
+    "quote_mark": {
+      "label": "Virgolette",
+      "help": "Il grande segno decorativo accanto alla citazione. Usa quello della tua lingua, ad es. « o “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Mostra la curiosità",
+      "help": "Se disattivato nasconde etichetta e testo della curiosità."
+    },
+    "fact_label": {
+      "label": "Etichetta della curiosità",
+      "help": "Un’etichetta breve, ad es. CURIOSITÀ o CHIEDIMI DI.",
+      "default": "FUORI DALLA CLASSE"
+    },
+    "fun_fact": {
+      "label": "Curiosità",
+      "help": "Una o due frasi brevi.",
+      "default": "Elena alleva api nell’orto della scuola e la sua classe ha chiamato la regina \"Sua Maestà Ronzante\"."
+    },
+    "show_badge": {
+      "label": "Mostra il badge"
+    },
+    "badge": {
+      "label": "Testo del badge",
+      "help": "Un mese, una data di inizio, un team o un traguardo. In maiuscolo si legge meglio.",
+      "default": "14 ANNI A ELMWOOD"
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "Badge, titoletto, etichette e la fascia in basso."
+    },
+    "highlight": {
+      "label": "Colore di evidenziazione",
+      "help": "Le virgolette e il cerchio dietro le iniziali."
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "card_color": {
+      "label": "Colore del cerchio sfalsato",
+      "help": "Il cerchio tenue dietro la foto."
+    },
+    "initials_color": {
+      "label": "Colore delle iniziali"
+    }
+  }
+}

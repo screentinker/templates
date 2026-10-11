@@ -1,0 +1,126 @@
+{
+  "name": "Directorio del edificio",
+  "description": "Un directorio para el vestíbulo de oficinas, centros comerciales o campus: cada inquilino con su planta y local, agrupados por planta o de la A a la Z con índice, flechas de dirección, una línea «Usted está aquí» y un reloj. Se reparte en columnas para llenar la pantalla y pasa páginas en listas largas. Escriba los inquilinos o llévelos en una hoja de Google.",
+  "params": {
+    "building_name": {
+      "label": "Nombre del edificio"
+    },
+    "address": {
+      "label": "Dirección o subtítulo",
+      "help": "Una línea bajo el nombre del edificio. Déjelo vacío para ocultarla."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Sin logotipo se muestran las iniciales del edificio en el color de acento."
+    },
+    "here_text": {
+      "label": "Línea «Usted está aquí»",
+      "help": "Se muestra bajo la cabecera con un marcador. Déjelo vacío para ocultarla.",
+      "default": "Usted está aquí · Vestíbulo principal, planta baja"
+    },
+    "here_floor": {
+      "label": "Planta de esta pantalla",
+      "help": "Escrita igual que en la columna Planta. Esa planta se marca con un marcador en la lista y en el índice."
+    },
+    "group_by": {
+      "label": "Ordenar por",
+      "options": {
+        "floor": "Planta",
+        "alpha": "Nombre, de la A a la Z",
+        "category": "Categoría"
+      }
+    },
+    "floor_order": {
+      "label": "Orden de las plantas",
+      "help": "Se usa al ordenar por planta.",
+      "options": {
+        "asc": "Planta más baja primero",
+        "desc": "Planta más alta primero"
+      }
+    },
+    "show_index": {
+      "label": "Mostrar la barra de índice",
+      "help": "Letras de la A a la Z (o las plantas, o las categorías) abajo; se iluminan las de la página actual."
+    },
+    "show_category": {
+      "label": "Mostrar categorías bajo los nombres"
+    },
+    "entries": {
+      "label": "Inquilinos",
+      "help": "Uno por línea: Nombre | Planta | Local | Categoría | Flecha. Flecha: izquierda, derecha, recto, atrás, up-left…, ascensor o escaleras. Sin fuente de datos.",
+      "default": "Recepción y seguridad | G | Vestíbulo | Servicios del edificio | izquierda\nHarbour Street Café | G | G02 | Comida y bebida | derecha\nAparcamiento de visitas | B1 | P1 | Aparcamiento | escaleras\nNorthwind Legal LLP | 2 | 201 | Derecho |\nBrightwater Dental | 3 | 312 | Salud |\nLumen Analytics | 5 | 520 | Tecnología |\nWoodgrove Bank Offices | 8 | 800 | Finanzas |"
+    },
+    "directory": {
+      "label": "Fuente de datos del directorio (opcional)",
+      "help": "Una hoja de Google, un CSV o una tabla manual con fila de encabezado. Si tiene la columna Nombre, sustituye a los inquilinos escritos arriba."
+    },
+    "name_col": {
+      "label": "Columna Nombre",
+      "default": "Nombre"
+    },
+    "floor_col": {
+      "label": "Columna Planta",
+      "default": "Planta"
+    },
+    "suite_col": {
+      "label": "Columna Local",
+      "default": "Local"
+    },
+    "category_col": {
+      "label": "Columna Categoría",
+      "default": "Categoría"
+    },
+    "arrow_col": {
+      "label": "Columna Flecha",
+      "default": "Flecha"
+    },
+    "floor_names": {
+      "label": "Nombres de las plantas",
+      "help": "Opcional, uno por línea: Planta = Nombre. Las plantas que no figuren se muestran como la palabra «Planta» y el número.",
+      "default": "G = Planta baja\nB1 = Sótano\n12 = Ático"
+    },
+    "floor_word": {
+      "label": "Palabra para «planta»",
+      "help": "Para títulos como «Planta 7». Déjelo vacío para la palabra en el idioma de la pantalla. Ponga {n} donde va el número («Piso {n}»)."
+    },
+    "footer": {
+      "label": "Pie de página",
+      "help": "Letra pequeña en la parte inferior. Déjelo vacío para ocultarla.",
+      "default": "Ascensores a todas las plantas al frente · Visitantes: regístrense en recepción"
+    },
+    "empty_text": {
+      "label": "Texto con la lista vacía",
+      "help": "Déjelo vacío para «Aún no hay inquilinos» en el idioma de la pantalla."
+    },
+    "clock_format": {
+      "label": "Reloj",
+      "options": {
+        "auto": "Según el idioma",
+        "24": "24 horas",
+        "12": "12 horas",
+        "off": "Ocultar el reloj"
+      }
+    },
+    "timezone": {
+      "label": "Zona horaria del reloj",
+      "help": "Déjelo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Para los textos propios del directorio, la fecha, el reloj y el orden alfabético. Déjelo vacío para el idioma de la pantalla."
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "page_seconds": {
+      "label": "Segundos por página",
+      "help": "Solo cuando la lista no cabe en una pantalla con un tamaño legible."
+    }
+  }
+}

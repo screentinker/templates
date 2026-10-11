@@ -1,0 +1,166 @@
+{
+  "name": "Horario de apertura",
+  "description": "Horario de apertura con estado en directo: un gran «Abierto, cierra a las 17:00» o «Cerrado, abre mañana a las 09:00», el horario de esta semana con el día de hoy resaltado, horarios partidos y cierres por festivos que sustituyen a la semana. Para tiendas, farmacias, bibliotecas, clínicas y oficinas. Fechas especiales escritas aquí o en una hoja de Google.",
+  "params": {
+    "title": {
+      "label": "Nombre",
+      "default": "Farmacia Northwind"
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Una línea bajo el nombre, como la dirección. Déjalo vacío para ocultarla.",
+      "default": "12 Harbour Street · Recetas y consejo sin cita"
+    },
+    "footer": {
+      "label": "Pie de página",
+      "help": "Texto pequeño en la parte inferior. Déjalo vacío para ocultarlo.",
+      "default": "¿Fuera de horario? Llama al 0161 496 0000 o visita northwind.example/urgent"
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Aparece junto al nombre. El predeterminado es de muestra: cámbialo o quítalo."
+    },
+    "hours_mon": {
+      "label": "Lunes",
+      "help": "Horas como 09:00-17:00. Horario partido con una coma: 09:00-12:30, 13:30-17:00. Cerrado, o 24h. 18:00-02:00 pasa de medianoche."
+    },
+    "hours_tue": {
+      "label": "Martes"
+    },
+    "hours_wed": {
+      "label": "Miércoles"
+    },
+    "hours_thu": {
+      "label": "Jueves"
+    },
+    "hours_fri": {
+      "label": "Viernes"
+    },
+    "hours_sat": {
+      "label": "Sábado"
+    },
+    "hours_sun": {
+      "label": "Domingo",
+      "default": "Cerrado"
+    },
+    "week_start": {
+      "label": "La semana empieza el",
+      "options": {
+        "monday": "Lunes",
+        "sunday": "Domingo",
+        "saturday": "Sábado"
+      }
+    },
+    "specials": {
+      "label": "Fechas especiales",
+      "help": "Una por línea: Fecha | Horario | Nota. La fecha es 2026-12-24, un periodo 2026-12-24..2026-12-26, o 12-25 para todos los años. Sustituyen a la semana.",
+      "default": "12-24 | 08:30-13:00 | Nochebuena\n12-25..12-26 | Cerrado | Navidad\n12-31 | 08:30-15:00 | Nochevieja\n01-01 | Cerrado | Año Nuevo\n2026-10-09 | 08:30-13:00 | Formación del equipo por la tarde\n2026-11-02 | 10:00-13:00, 14:00-18:30 | Abrimos más tarde por inventario"
+    },
+    "specials_source": {
+      "label": "Origen de datos de fechas especiales (opcional)",
+      "help": "Una hoja de Google, un CSV o una tabla manual con columnas de fecha, horario y nota. Si se conecta, sustituye a las fechas escritas arriba."
+    },
+    "date_col": {
+      "label": "Columna de fecha",
+      "help": "El encabezado de esa columna en tu origen, en letras latinas."
+    },
+    "hours_col": {
+      "label": "Columna de horario"
+    },
+    "note_col": {
+      "label": "Columna de nota"
+    },
+    "specials_count": {
+      "label": "Próximas fechas especiales en la lista",
+      "help": "0 oculta la lista. La tabla de la semana siempre muestra el horario especial el día que se aplica."
+    },
+    "open_label": {
+      "label": "Estado: abierto",
+      "help": "Vacío = «Abierto» en el idioma de la pantalla."
+    },
+    "soon_label": {
+      "label": "Estado: cierra pronto",
+      "help": "Vacío = «Cierra pronto» en el idioma de la pantalla."
+    },
+    "closed_label": {
+      "label": "Estado y tabla: cerrado",
+      "help": "Vacío = «Cerrado» en el idioma de la pantalla."
+    },
+    "always_open_label": {
+      "label": "Abierto todo el día",
+      "help": "Vacío = «Abierto 24 horas» en el idioma de la pantalla."
+    },
+    "closes_text": {
+      "label": "Línea de cierre",
+      "help": "{time} es la hora de cierre. Vacío = «Cierra a las {time}» en el idioma de la pantalla; - la oculta."
+    },
+    "reopens_text": {
+      "label": "Línea de pausa",
+      "help": "Se muestra si vuelve a abrir más tarde ese mismo día. Vacío = texto en el idioma de la pantalla; - la oculta."
+    },
+    "opens_text": {
+      "label": "Línea de apertura",
+      "help": "{day} es hoy, mañana o un día de la semana; {time} la hora de apertura. Vacío = texto en el idioma de la pantalla; - la oculta."
+    },
+    "hours_heading": {
+      "label": "Título: esta semana",
+      "help": "Vacío = «Horario» en el idioma de la pantalla; - oculta el título."
+    },
+    "specials_heading": {
+      "label": "Título: fechas especiales",
+      "help": "Vacío = «Horarios especiales» en el idioma de la pantalla; - oculta el título."
+    },
+    "today_label": {
+      "label": "Marca de hoy",
+      "help": "Vacío = la palabra «hoy» en el idioma de la pantalla."
+    },
+    "timezone": {
+      "label": "Zona horaria del negocio",
+      "help": "Déjalo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palabras, días, fechas y horas en pantalla, por ejemplo en-GB, fr-FR o de-DE. Vacío = el idioma de la pantalla."
+    },
+    "clock_format": {
+      "label": "Horas y reloj",
+      "options": {
+        "auto": "Según el idioma, con reloj",
+        "24": "24 horas, con reloj",
+        "12": "12 horas, con reloj",
+        "off": "Según el idioma, sin reloj"
+      }
+    },
+    "font": {
+      "label": "Fuente de los títulos",
+      "options": {
+        "archivo": "Archivo (llamativa)",
+        "bitter": "Bitter (con serifa)",
+        "inter": "Inter (sencilla)"
+      }
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "La fila de hoy, los títulos y las fechas especiales."
+    },
+    "open_color": {
+      "label": "Color: abierto"
+    },
+    "soon_color": {
+      "label": "Color: cierra pronto"
+    },
+    "closed_color": {
+      "label": "Color: cerrado"
+    },
+    "soon_minutes": {
+      "label": "«Cierra pronto», minutos antes del cierre",
+      "help": "0 desactiva el estado «Cierra pronto»."
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Avis client",
+  "description": "Un avis client à l’écran : une note en étoiles, les mots du client dans une serif chaleureuse, son nom et un avatar à initiales, plus votre note globale. Pour vitrines, showrooms, accueils et salles d’attente.",
+  "params": {
+    "eyebrow": {
+      "label": "Petit titre",
+      "default": "CE QUE DISENT NOS CLIENTS"
+    },
+    "rating": {
+      "label": "Note en étoiles",
+      "options": {
+        "tpl:stars/5.svg": "5 étoiles",
+        "tpl:stars/4.5.svg": "4½ étoiles",
+        "tpl:stars/4.svg": "4 étoiles",
+        "tpl:stars/3.svg": "3 étoiles",
+        "tpl:stars/none.svg": "Masquer les étoiles"
+      }
+    },
+    "quote": {
+      "label": "Avis",
+      "help": "Les mots du client, sans guillemets. Jusqu’à environ 220 caractères ; plus court se lit mieux.",
+      "default": "Ils ont posé toute notre cuisine en quatre jours, laissé la maison impeccable et sont revenus une semaine après vérifier chaque tiroir. Nous leur avons déjà envoyé deux voisins."
+    },
+    "name": {
+      "label": "Nom du client",
+      "help": "Uniquement avec l’accord du client."
+    },
+    "detail": {
+      "label": "Précision sur le client",
+      "help": "Ce qu’il a acheté, d’où il vient, ou « Client vérifié ».",
+      "default": "Rénovation de cuisine · Riverside"
+    },
+    "initials": {
+      "label": "Initiales de l’avatar"
+    },
+    "show_score": {
+      "label": "Afficher la note globale",
+      "help": "Désactivé, la grande note et sa légende sont masquées."
+    },
+    "score": {
+      "label": "Note globale",
+      "help": "Votre note moyenne, par ex. 4,9. Utilisez un chiffre réel.",
+      "default": "4,9"
+    },
+    "score_caption": {
+      "label": "Légende de la note",
+      "default": "moyenne de 1 240 avis vérifiés"
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivé, le logo est masqué et son espace reste vide."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent. L’exemple est blanc pour le panneau coloré (paysage) ou foncé pour la page (portrait)."
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Le panneau latéral (paysage) ou du bas (portrait), l’avatar et le petit titre."
+    },
+    "background": {
+      "label": "Couleur de fond",
+      "help": "La page. Les initiales de l’avatar sont aussi dessinées dans cette couleur."
+    },
+    "text_color": {
+      "label": "Couleur du texte",
+      "help": "L’avis et le nom."
+    }
+  }
+}

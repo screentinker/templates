@@ -1,0 +1,50 @@
+{
+  "name": "Boas-vindas na recepção (retrato)",
+  "description": "Uma tela de boas-vindas tranquila para recepção ou saguão: seu logotipo, um título e uma linha de detalhe, com relógio e data ao vivo no fuso horário e no idioma do prédio. Layout em retrato 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Funciona melhor um PNG ou SVG com fundo transparente. Aparece no topo."
+    },
+    "eyebrow": {
+      "label": "Título pequeno",
+      "default": "QUE BOM VER VOCÊ"
+    },
+    "headline": {
+      "label": "Título",
+      "default": "Boas-vindas à Northwind Studio"
+    },
+    "subline": {
+      "label": "Linha de detalhe",
+      "default": "Faça o check-in na recepção — seu anfitrião já vem atender você."
+    },
+    "footer": {
+      "label": "Rodapé",
+      "default": "Wi-Fi para visitantes: Northwind-Guest"
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "timezone": {
+      "label": "Fuso horário do relógio",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma da data (dia da semana e mês), por ex. pt-BR ou pt-PT. Deixe vazio para usar o idioma da tela."
+    },
+    "clock_format": {
+      "label": "Formato do relógio",
+      "options": {
+        "24": "24 horas",
+        "12": "12 horas"
+      }
+    }
+  }
+}

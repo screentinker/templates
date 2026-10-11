@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <!-- Two takeaway coffee cups, drawn for this template. Original work, MIT. -->
+  <defs>
+    <linearGradient id="cup" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.7" stop-color="#FFF8EE"/>
+      <stop offset="1" stop-color="#EADBC6"/>
+    </linearGradient>
+    <linearGradient id="sleeve" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D79A63"/>
+      <stop offset="1" stop-color="#B07141"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="300" cy="565" rx="230" ry="16" fill="#000000" fill-opacity="0.2"/>
+  <!-- steam -->
+  <path d="M196 120 C176 90 216 70 196 40" fill="none" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="10" stroke-linecap="round"/>
+  <path d="M236 130 C216 100 256 80 236 50" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round"/>
+  <path d="M398 190 C378 160 418 140 398 110" fill="none" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="10" stroke-linecap="round"/>
+  <!-- back cup (tall) -->
+  <path d="M120 200 L330 200 L306 555 L144 555 Z" fill="url(#cup)"/>
+  <rect x="104" y="160" width="242" height="44" rx="14" fill="#3B2219"/>
+  <rect x="124" y="140" width="202" height="30" rx="12" fill="#55332A"/>
+  <rect x="150" y="146" width="60" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.25"/>
+  <path d="M131 300 L319 300 L311 420 L139 420 Z" fill="url(#sleeve)"/>
+  <circle cx="225" cy="360" r="30" fill="#FFF3E2"/>
+  <path d="M225 338 L240 372 L225 364 L210 372 Z" fill="#3B2219"/>
+  <!-- front cup (short) -->
+  <path d="M290 270 L480 270 L458 560 L312 560 Z" fill="url(#cup)"/>
+  <rect x="276" y="232" width="218" height="42" rx="14" fill="#3B2219"/>
+  <rect x="294" y="212" width="182" height="30" rx="12" fill="#55332A"/>
+  <rect x="318" y="218" width="54" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.25"/>
+  <path d="M302 290 L314 540" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-opacity="0.8"/>
+  <path d="M296.8 360 L473.2 360 L464.8 470 L305.2 470 Z" fill="url(#sleeve)"/>
+  <circle cx="385" cy="415" r="30" fill="#FFF3E2"/>
+  <path d="M385 393 L400 427 L385 419 L370 427 Z" fill="#3B2219"/>
+</svg>

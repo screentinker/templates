@@ -1,0 +1,236 @@
+{
+ "template": {
+  "aspect": "9:16",
+  "background": "{{param:background}}",
+  "elements": [
+   {
+    "slot": "side",
+    "kind": "box",
+    "box": {
+     "x": 0,
+     "y": 62,
+     "w": 100,
+     "h": 38
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "opacity": 0.08
+    }
+   },
+   {
+    "slot": "top_bar",
+    "kind": "rule",
+    "box": {
+     "x": 0,
+     "y": 0,
+     "w": 100,
+     "h": 0.45
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.1,
+     "duration": 1.1,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "logo",
+    "kind": "image",
+    "fit": "contain",
+    "content_id": "{{param:logo}}",
+    "box": {
+     "x": 10,
+     "y": 7,
+     "w": 51.3,
+     "h": 6.3
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "eyebrow",
+    "kind": "body",
+    "box": {
+     "x": 10,
+     "y": 22,
+     "w": 80
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 2.9,
+     "weight": 700,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.15,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "message",
+    "kind": "head",
+    "box": {
+     "x": 10,
+     "y": 25.5,
+     "w": 80
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 9.6,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.25,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "rule",
+    "kind": "rule",
+    "box": {
+     "x": 10,
+     "y": 41,
+     "w": 12,
+     "h": 0.3
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.7,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "detail",
+    "kind": "body",
+    "box": {
+     "x": 10,
+     "y": 43.5,
+     "w": 80
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 4.1,
+     "weight": 400,
+     "font": "inter",
+     "opacity": 0.78
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.8,
+     "duration": 1,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "qr_card",
+    "kind": "box",
+    "box": {
+     "x": 10,
+     "y": 68.5,
+     "w": 36,
+     "h": 20.25
+    },
+    "style": {
+     "color": "#FFFFFF",
+     "radius_cqw": 2.4,
+     "opacity": "{{param:show_qr}}"
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.7,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "qr",
+    "kind": "qr",
+    "qr_ec": "M",
+    "qr_fg": "#14171C",
+    "qr_bg": "#FFFFFF",
+    "box": {
+     "x": 12,
+     "y": 69.625,
+     "w": 32,
+     "h": 18
+    },
+    "style": {
+     "opacity": "{{param:show_qr}}"
+    },
+    "motion": {
+     "animation": "zoom",
+     "delay": 0.8,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "qr_caption",
+    "kind": "body",
+    "box": {
+     "x": 51,
+     "y": 72.5,
+     "w": 41
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 3.1,
+     "weight": 700,
+     "font": "archivo",
+     "opacity": "{{param:show_qr}}"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 1.1,
+     "duration": 0.7,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "website",
+    "kind": "body",
+    "box": {
+     "x": 51,
+     "y": 76.8,
+     "w": 41
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 4.1,
+     "weight": 700,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 1,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   }
+  ]
+ },
+ "fields": {
+  "eyebrow": "{{param:eyebrow}}",
+  "message": "{{param:message}}",
+  "detail": "{{param:detail}}",
+  "website": "{{param:website}}",
+  "qr": "{{param:qr_url}}",
+  "qr_caption": "{{param:qr_caption}}"
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Ano-Novo",
+  "description": "Uma mensagem de Ano-Novo em azul meia-noite, com fogos de artifício dourados e rosa feitos de pontos, o novo ano em números gigantes atrás da manchete e uma contagem regressiva opcional até a meia-noite que dá lugar à sua mensagem na virada.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "A linha curta acima da manchete. Deixe vazio para ocultar.",
+      "default": "DE TODOS NÓS DA NORTHWIND"
+    },
+    "headline": {
+      "label": "Manchete",
+      "help": "Duas linhas são reservadas para ela: cabem cerca de 24 caracteres. Uma manchete mais longa passa para a terceira linha e invade a mensagem.",
+      "default": "Feliz Ano-Novo a todos!"
+    },
+    "message": {
+      "label": "Mensagem",
+      "help": "Uma ou duas frases abaixo da manchete; cabem até 200 caracteres. Uma quebra de linha começa uma nova linha.",
+      "default": "Obrigado por um ano incrível. A novos começos, ideias ousadas e tudo o que vamos construir juntos daqui para a frente."
+    },
+    "date_line": {
+      "label": "Linha da data",
+      "help": "Texto livre, digitado como deve aparecer: uma data, um horário e local, ou uma assinatura."
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se você não tiver logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG largo com fundo transparente (cerca de 3,4 : 1 preenche a área; outros formatos são ajustados dentro dela). Substitua o logotipo provisório da Northwind."
+    },
+    "accent": {
+      "label": "Destaque dourado"
+    },
+    "accent2": {
+      "label": "Destaque dos fogos"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "big_text": {
+      "label": "Texto grande de fundo",
+      "help": "Os números gigantes e suaves atrás da manchete, normalmente o novo ano."
+    },
+    "show_countdown": {
+      "label": "Mostrar a contagem regressiva",
+      "help": "Desative para ocultar a contagem regressiva e o rótulo dela."
+    },
+    "target": {
+      "label": "Contagem até",
+      "help": "Mude o fuso no final para o SEU fuso horário, ou a contagem termina na hora errada. +00:00 é meia-noite em Londres; 2027-01-01T00:00:00-03:00, em São Paulo."
+    },
+    "countdown_label": {
+      "label": "Rótulo acima da contagem",
+      "help": "Ele fica acima da contagem e acima da mensagem que a substitui, então deve combinar com as duas.",
+      "default": "RÉVEILLON  ·  MEIA-NOITE"
+    },
+    "done_text": {
+      "label": "Mostrado ao fim da contagem",
+      "default": "Feliz Ano-Novo!"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma das unidades da contagem regressiva (vazio = idioma da tela). Servidores ScreenTinker mais antigos sempre as mostram como d h m s."
+    }
+  }
+}

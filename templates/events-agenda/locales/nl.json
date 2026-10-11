@@ -1,0 +1,143 @@
+{
+  "name": "Evenementenagenda",
+  "description": "Programmabord voor hotels, congrescentra, campussen en buurthuizen: de komende evenementen per dag, vandaag (of vanavond) groot, met tijden, zalen, sprekers en richtingspijlen. De lopende sessie wordt uitgelicht, afgelopen sessies verdwijnen vanzelf. Typ het programma in of koppel een agenda (iCal), Google Sheet of handmatige tabel.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "help": "De grote kop. Laat leeg om hem te verbergen.",
+      "default": "Programma"
+    },
+    "subtitle": {
+      "label": "Ondertitel",
+      "help": "Eén regel onder de titel, bijvoorbeeld de locatie of de naam van het evenement. Laat leeg om hem te verbergen.",
+      "default": "Harbourview Hotel & Congrescentrum"
+    },
+    "footer": {
+      "label": "Voettekst",
+      "help": "Kleine letters onderaan. Laat leeg om ze te verbergen.",
+      "default": "Gastenwifi: Harbourview-Guest  ·  Receptie en garderobe op verdieping 1"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Naast de titel getoond."
+    },
+    "agenda": {
+      "label": "Programma (als er geen gegevensbron gekoppeld is)",
+      "help": "Eén evenement per regel: Datum | Begin | Einde | Titel | Locatie | Spreker | Pijl. Datum als 2026-10-12, of +0 voor vandaag, +1 voor morgen. Tijden zoals 09:30 of 7pm. Zie de README.",
+      "default": "+0|09:30|10:30|Openingskeynote: Bouwen voor de volgende miljard|Grote Balzaal|Maya Okafor|↑\n+0|13:00|14:00|Netwerklunch|Terrasrestaurant||↓\n+0|19:00|23:00|Benefietdiner Harbour Rotary Club|Grote Balzaal|Rotary Club|↑\n+1|09:00|10:00|Keynote: Logistiek in realtime|Grote Balzaal|Dr Amara Nwosu|↑\n+1|18:30|22:00|Galadiner van de top|Grote Balzaal|Northwind Group|↑"
+    },
+    "events": {
+      "label": "Gegevensbron voor evenementen (optioneel)",
+      "help": "Een agenda (iCal), of een Google Sheet, CSV of handmatige tabel met de kolommen hieronder. Indien gekoppeld vervangt die het programma hierboven."
+    },
+    "date_col": {
+      "label": "Kolom in de sheet: datum",
+      "default": "Datum"
+    },
+    "start_col": {
+      "label": "Kolom in de sheet: begintijd",
+      "default": "Begin"
+    },
+    "end_col": {
+      "label": "Kolom in de sheet: eindtijd",
+      "default": "Einde"
+    },
+    "title_col": {
+      "label": "Kolom in de sheet: titel",
+      "default": "Titel"
+    },
+    "location_col": {
+      "label": "Kolom in de sheet: locatie",
+      "default": "Locatie"
+    },
+    "host_col": {
+      "label": "Kolom in de sheet: gastheer of spreker",
+      "default": "Spreker"
+    },
+    "arrow_col": {
+      "label": "Kolom in de sheet: richtingspijl",
+      "help": "Optioneel. Een pijl (← ↑ → ↓ ↖ ↗ ↘ ↙) of een Engels woord: left, right, ahead, up, down, up-left, up-right…",
+      "default": "Pijl"
+    },
+    "days_ahead": {
+      "label": "Aantal dagen",
+      "help": "Vandaag plus de volgende dagen. 1 toont alleen vandaag."
+    },
+    "rows_per_page": {
+      "label": "Maximaal aantal evenementen per pagina",
+      "help": "Per kolom. Er worden er minder getoond als ze niet leesbaar passen; de rest komt op volgende pagina’s."
+    },
+    "page_seconds": {
+      "label": "Seconden per pagina",
+      "help": "Alleen als het programma niet op één scherm past."
+    },
+    "show_tonight": {
+      "label": "’s Avonds „Vanavond” zeggen",
+      "help": "Uit: de hele dag „Vandaag”."
+    },
+    "tonight_hour": {
+      "label": "„Vanavond” vanaf (uur)",
+      "help": "Vanaf dit uur krijgt de eerste dag de Vanavond-tekst in plaats van Vandaag."
+    },
+    "today_label": {
+      "label": "Tekst: Vandaag",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "tonight_label": {
+      "label": "Tekst: Vanavond",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "tomorrow_label": {
+      "label": "Tekst: Morgen",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "now_label": {
+      "label": "Tekst: Nu (bij de lopende sessie)",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "show_next": {
+      "label": "Volgende sessie van vandaag markeren",
+      "help": "Een Hierna-label en „over 25 min” bij de volgende sessie die nog niet begonnen is."
+    },
+    "next_label": {
+      "label": "Tekst: Hierna (bij de volgende sessie vandaag)",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "all_day_label": {
+      "label": "Tekst: Hele dag",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "empty_label": {
+      "label": "Tekst als er niets gepland is",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "clock_format": {
+      "label": "Tijden",
+      "options": {
+        "auto": "Zoals gebruikelijk in de taal",
+        "24": "24-uurs",
+        "12": "12-uurs"
+      }
+    },
+    "show_clock": {
+      "label": "Klok en datum tonen"
+    },
+    "timezone": {
+      "label": "Tijdzone",
+      "help": "De tijdzone van de locatie. Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Woorden, dagen, datums en tijden op het bord, bv. nl-NL of nl-BE. Leeg = taal van het scherm. Geldt ook voor de agenda; geef die de tijdzone van de locatie."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

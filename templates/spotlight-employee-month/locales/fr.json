@@ -1,0 +1,94 @@
+{
+  "name": "Employé du mois",
+  "description": "Mettez un collègue à l’honneur : une grande photo ronde dans un anneau doré, son nom et son poste, une citation en ses propres mots, une anecdote et un badge du mois.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent donne le meilleur résultat."
+    },
+    "photo": {
+      "label": "Photo",
+      "help": "Une photo tête et épaules, recadrée pour remplir le cadre. Les photos carrées conviennent le mieux."
+    },
+    "show_photo": {
+      "label": "Afficher la photo",
+      "help": "Désactivé, un cercle avec les initiales s’affiche à la place, pour qui préfère ne pas montrer sa photo."
+    },
+    "initials": {
+      "label": "Initiales",
+      "help": "Affichées dans le cercle quand la photo est désactivée. Une ou deux lettres."
+    },
+    "eyebrow": {
+      "label": "Petit titre",
+      "help": "Au-dessus du nom. Les majuscules se lisent le mieux.",
+      "default": "EMPLOYÉE DU MOIS"
+    },
+    "name": {
+      "label": "Nom",
+      "help": "Une ligne, 26 caractères maximum. Saisissez-le normalement ; TOUT EN MAJUSCULES est plus large et risque de déborder."
+    },
+    "role": {
+      "label": "Poste",
+      "help": "Intitulé de poste, équipe, classe ou site. Un texte long passe sur une deuxième ligne.",
+      "default": "Ingénieure support senior, Service client"
+    },
+    "show_quote": {
+      "label": "Afficher la citation",
+      "help": "Désactivé, la citation et son guillemet sont masqués."
+    },
+    "quote": {
+      "label": "Citation",
+      "help": "Une ou deux phrases en ses propres mots. Inutile d’ajouter des guillemets.",
+      "default": "J’adore le moment où un client agacé dit « ah, c’était facile ». Ce prix revient à toute l’équipe niveau 2."
+    },
+    "quote_mark": {
+      "label": "Guillemet",
+      "help": "Le grand guillemet décoratif près de la citation. Utilisez celui de votre langue, par ex. « ou “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Afficher l’anecdote",
+      "help": "Désactivé, le libellé et le texte de l’anecdote sont masqués."
+    },
+    "fact_label": {
+      "label": "Libellé de l’anecdote",
+      "help": "Un libellé court, par ex. LE SAVIEZ-VOUS ? ou PARLEZ-MOI DE.",
+      "default": "LE SAVIEZ-VOUS ?"
+    },
+    "fun_fact": {
+      "label": "Anecdote",
+      "help": "Une ou deux phrases courtes.",
+      "default": "Priya a couru un semi-marathon sur quatre continents et fait des brioches à la cardamome redoutables."
+    },
+    "show_badge": {
+      "label": "Afficher le badge"
+    },
+    "badge": {
+      "label": "Texte du badge",
+      "help": "Un mois, une date d’arrivée, une équipe ou une étape. Les majuscules se lisent le mieux.",
+      "default": "OCTOBRE 2026"
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Anneau, badge, petit titre et décoration."
+    },
+    "highlight": {
+      "label": "Couleur du cercle des initiales",
+      "help": "Le cercle derrière les initiales et une partie des confettis."
+    },
+    "background": {
+      "label": "Couleur de fond",
+      "help": "C’est aussi la couleur du texte du badge."
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "card_color": {
+      "label": "Couleur de la carte anecdote",
+      "help": "Une teinte un peu plus claire que le fond donne le meilleur résultat."
+    },
+    "initials_color": {
+      "label": "Couleur des initiales"
+    }
+  }
+}

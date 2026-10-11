@@ -1,0 +1,236 @@
+{
+ "template": {
+  "aspect": "9:16",
+  "background": "{{param:background}}",
+  "elements": [
+   {
+    "slot": "panel",
+    "kind": "box",
+    "box": {
+     "x": 0,
+     "y": 64,
+     "w": 100,
+     "h": 36
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "opacity": 0.09
+    }
+   },
+   {
+    "slot": "panel_edge",
+    "kind": "rule",
+    "box": {
+     "x": 0,
+     "y": 64,
+     "w": 100,
+     "h": 0.12
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "opacity": 0.55
+    }
+   },
+   {
+    "slot": "logo",
+    "kind": "image",
+    "box": {
+     "x": 8,
+     "y": 6,
+     "w": 40,
+     "h": 9.5
+    },
+    "fit": "contain",
+    "content_id": "{{param:logo}}",
+    "motion": {
+     "animation": "fade",
+     "delay": 0,
+     "duration": 0.8,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "eyebrow",
+    "kind": "body",
+    "box": {
+     "x": 8,
+     "y": 22,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 3.3,
+     "weight": 700,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.15,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "headline",
+    "kind": "head",
+    "box": {
+     "x": 8,
+     "y": 25.5,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 10.2,
+     "weight": 800,
+     "font": "archivo"
+    },
+    "motion": {
+     "animation": "slideU",
+     "delay": 0.25,
+     "duration": 0.9,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "rule",
+    "kind": "rule",
+    "box": {
+     "x": 8,
+     "y": 48,
+     "w": 12,
+     "h": 0.32
+    },
+    "style": {
+     "color": "{{param:accent}}"
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.7,
+     "duration": 0.6,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "subline",
+    "kind": "body",
+    "box": {
+     "x": 8,
+     "y": 50.5,
+     "w": 82
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 4.1,
+     "weight": 400,
+     "font": "inter",
+     "opacity": 0.8
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.8,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "clock",
+    "kind": "clock",
+    "box": {
+     "x": 0,
+     "y": 69,
+     "w": 100
+    },
+    "clock_format": "{{param:clock_format}}",
+    "tz": "{{param:timezone}}",
+    "locale": "{{param:locale}}",
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 19,
+     "weight": 500,
+     "font": "oswald",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.4,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "clock_rule",
+    "kind": "rule",
+    "box": {
+     "x": 42,
+     "y": 82,
+     "w": 16,
+     "h": 0.18
+    },
+    "style": {
+     "color": "{{param:accent}}",
+     "opacity": 0.8
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 0.6,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "date",
+    "kind": "date",
+    "box": {
+     "x": 0,
+     "y": 83.8,
+     "w": 100
+    },
+    "date_format": "weekday",
+    "tz": "{{param:timezone}}",
+    "locale": "{{param:locale}}",
+    "style": {
+     "color": "{{param:accent}}",
+     "size_cqw": 4.2,
+     "weight": 600,
+     "font": "archivo",
+     "align": "center"
+    },
+    "motion": {
+     "animation": "fade",
+     "delay": 0.6,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   },
+   {
+    "slot": "footer",
+    "kind": "body",
+    "box": {
+     "x": 8,
+     "y": 93.2,
+     "w": 84
+    },
+    "style": {
+     "color": "{{param:text_color}}",
+     "size_cqw": 2.7,
+     "weight": 500,
+     "font": "inter",
+     "align": "center",
+     "opacity": 0.55
+    },
+    "motion": {
+     "animation": "wipe",
+     "delay": 1.1,
+     "duration": 1.0,
+     "easing": "soft"
+    }
+   }
+  ]
+ },
+ "fields": {
+  "eyebrow": "{{param:eyebrow}}",
+  "headline": "{{param:headline}}",
+  "subline": "{{param:subline}}",
+  "footer": "{{param:footer}}"
+ }
+}

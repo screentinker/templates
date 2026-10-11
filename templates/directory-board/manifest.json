@@ -1,0 +1,267 @@
+{
+  "id": "directory-board",
+  "name": "Building directory",
+  "version": "1.0.0",
+  "kind": "html",
+  "description": "A lobby directory for an office building, mall or campus: every tenant with its floor and suite, grouped by floor or listed A to Z with an index, direction arrows, a \"You are here\" line and a clock. Lays itself out in columns to fill the screen and pages through long lists. Type the tenants in, or keep them in a Google Sheet or Manual table.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/directory-board",
+  "license": "MIT",
+  "tags": [
+    "directory",
+    "wayfinding",
+    "lobby",
+    "reception",
+    "office",
+    "building",
+    "tenants",
+    "data-source",
+    "google-sheets"
+  ],
+  "orientation": [
+    "landscape",
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.png",
+  "network": [],
+  "params": [
+    {
+      "name": "building_name",
+      "type": "text",
+      "label": "Building name",
+      "max": 48,
+      "default": "Harbour Point"
+    },
+    {
+      "name": "address",
+      "type": "text",
+      "label": "Address or subtitle",
+      "max": 80,
+      "default": "120 Harbour Street",
+      "help": "One line under the building name. Leave empty to hide it."
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "default": "",
+      "help": "Optional. Without one, the building’s initials are shown in the accent colour."
+    },
+    {
+      "name": "here_text",
+      "type": "text",
+      "label": "“You are here” line",
+      "max": 80,
+      "default": "You are here · Main lobby, ground floor",
+      "help": "Shown under the header with a map pin. Leave empty to hide it."
+    },
+    {
+      "name": "here_floor",
+      "type": "text",
+      "label": "Floor of this screen",
+      "max": 12,
+      "default": "G",
+      "help": "Written the same way as in the Floor column. That floor is marked with a pin in the list and the floor index."
+    },
+    {
+      "name": "group_by",
+      "type": "select",
+      "label": "Arrange by",
+      "default": "floor",
+      "options": [
+        {
+          "value": "floor",
+          "label": "Floor"
+        },
+        {
+          "value": "alpha",
+          "label": "Name, A to Z"
+        },
+        {
+          "value": "category",
+          "label": "Category"
+        }
+      ]
+    },
+    {
+      "name": "floor_order",
+      "type": "select",
+      "label": "Floor order",
+      "default": "asc",
+      "options": [
+        {
+          "value": "asc",
+          "label": "Lowest floor first"
+        },
+        {
+          "value": "desc",
+          "label": "Top floor first"
+        }
+      ],
+      "help": "Used when arranged by floor."
+    },
+    {
+      "name": "show_index",
+      "type": "checkbox",
+      "label": "Show the index bar",
+      "default": true,
+      "help": "A to Z letters (or the floors, or the categories) along the bottom; the ones on the current page light up."
+    },
+    {
+      "name": "show_category",
+      "type": "checkbox",
+      "label": "Show categories under names",
+      "default": true
+    },
+    {
+      "name": "entries",
+      "type": "textarea",
+      "label": "Tenants",
+      "max": 2000,
+      "default": "Reception & Security | G | Lobby | Building services | left\nHarbour Street Café | G | G02 | Food & drink | right\nBayview Pharmacy | G | G04 | Health | right\nGreenleaf Florist | G | G08 | Retail | right\nParcel Room | G | G10 | Building services | left\nBike Store & Showers | B1 | B05 | Building services | stairs\nVisitor Parking | B1 | P1 | Parking | stairs\nNorthwind Legal LLP | 2 | 201 | Law |\nMarlow Opticians | 2 | 205 | Health |\nOrtega Physiotherapy | 2 | 210 | Health |\nFabrikam Architects | 3 | 300 | Design |\nBrightwater Dental | 3 | 312 | Health |\nKestrel Insurance | 4 | 400 | Finance |\nJuniper Health Clinic | 4 | 418 | Health |\nContoso Recruitment | 5 | 502 | Business services |\nLumen Analytics | 5 | 520 | Technology |\nHarbour Coworking | 6 | 600 | Workspace |\nTailspin Travel | 6 | 614 | Travel |\nOkafor & Lind Accountants | 7 | 701 | Finance |\nMeridian Wealth | 7 | 720 | Finance |\nWoodgrove Bank Offices | 8 | 800 | Finance |\nAdebayo Law Chambers | 8 | 815 | Law |\nProseware Labs | 9 | 900 | Technology |\nQuill & Ink Publishing | 9 | 912 | Media |\nCalder Engineering | 9 | 930 | Engineering |\nLitware Studios | 10 | 1001 | Media |\nHalvorsen Consulting | 10 | 1012 | Business services |\nVantage Cyber Security | 10 | 1020 | Technology |\nRiverside Counselling | 11 | 1104 | Health |\nAtlas Property Group | 11 | 1110 | Property |\nSato Translation | 11 | 1121 | Business services |\nBuilding Management | 12 | 1200 | Building services |\nSkyline Conference Centre | 12 | 1210 | Events |",
+      "help": "One per line: Name | Floor | Suite | Category | Arrow. Arrow: left, right, up, down, up-left, down-right…, lift or stairs. Used when no data source is connected."
+    },
+    {
+      "name": "directory",
+      "type": "data_source",
+      "label": "Directory data source (optional)",
+      "default": "",
+      "help": "A Google Sheet, CSV or Manual table with a header row. When it has the Name column it replaces the tenants typed above."
+    },
+    {
+      "name": "name_col",
+      "type": "text",
+      "label": "Name column",
+      "max": 40,
+      "default": "Name"
+    },
+    {
+      "name": "floor_col",
+      "type": "text",
+      "label": "Floor column",
+      "max": 40,
+      "default": "Floor"
+    },
+    {
+      "name": "suite_col",
+      "type": "text",
+      "label": "Suite column",
+      "max": 40,
+      "default": "Suite"
+    },
+    {
+      "name": "category_col",
+      "type": "text",
+      "label": "Category column",
+      "max": 40,
+      "default": "Category"
+    },
+    {
+      "name": "arrow_col",
+      "type": "text",
+      "label": "Arrow column",
+      "max": 40,
+      "default": "Arrow"
+    },
+    {
+      "name": "floor_names",
+      "type": "textarea",
+      "label": "Floor names",
+      "max": 1000,
+      "default": "G = Ground floor\nB1 = Lower level\n12 = Penthouse",
+      "help": "Optional, one per line: Floor = Name. Floors not listed are shown as the floor word plus the number."
+    },
+    {
+      "name": "floor_word",
+      "type": "text",
+      "label": "Word for “floor”",
+      "max": 20,
+      "default": "",
+      "help": "Used in headings like “Floor 7”. Leave empty for the word in the screen’s language. A word you type goes in front of the number; put {n} where the number goes (“{n}F”, “Level {n}”)."
+    },
+    {
+      "name": "footer",
+      "type": "text",
+      "label": "Footer line",
+      "max": 120,
+      "default": "Lifts to all floors are straight ahead · Visitors please sign in at reception",
+      "help": "Small print along the bottom. Leave empty to hide it."
+    },
+    {
+      "name": "empty_text",
+      "type": "text",
+      "label": "Text when the list is empty",
+      "max": 60,
+      "default": "",
+      "help": "Leave empty for “No tenants listed yet” in the screen’s language."
+    },
+    {
+      "name": "clock_format",
+      "type": "select",
+      "label": "Clock",
+      "default": "auto",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Language default"
+        },
+        {
+          "value": "24",
+          "label": "24-hour"
+        },
+        {
+          "value": "12",
+          "label": "12-hour"
+        },
+        {
+          "value": "off",
+          "label": "Hide the clock"
+        }
+      ]
+    },
+    {
+      "name": "timezone",
+      "type": "timezone",
+      "label": "Clock timezone",
+      "default": "",
+      "help": "Leave empty to use the screen’s own clock."
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "default": "",
+      "help": "For the board’s own words, the date, the clock and A to Z sorting. Leave empty for the screen’s language."
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "default": "#2BB3A3"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#0E1A22"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#EEF3F6"
+    },
+    {
+      "name": "page_seconds",
+      "type": "number",
+      "label": "Seconds per page",
+      "min": 5,
+      "max": 120,
+      "step": 1,
+      "default": 12,
+      "help": "Only used when the list is too long to fit on one screen at a readable size."
+    }
+  ]
+}

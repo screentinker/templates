@@ -1,0 +1,126 @@
+{
+  "name": "Promo happy hour",
+  "description": "Une happy hour ou une offre à heure fixe pour un bar ou un restaurant : un grand titre, les jours et horaires, trois offres avec leur prix, une boisson sur une lueur chaude et une horloge en direct pour voir le temps qu’il reste.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à peu près carré. Le badge fourni est provisoire ; remplacez-le par le vôtre."
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivez si vous n’avez pas de logo (sinon, un logo vide affiche un cadre en pointillés)."
+    },
+    "brand": {
+      "label": "Nom du magasin",
+      "help": "Affiché à côté du logo. Laissez vide si votre logo le contient déjà."
+    },
+    "headline": {
+      "label": "Titre, première ligne",
+      "help": "Le titre tient en deux grandes lignes, un ou deux mots chacune : Happy / Hour, Brunch / du week-end.",
+      "default": "Happy"
+    },
+    "headline_2": {
+      "label": "Titre, deuxième ligne (accent)",
+      "default": "Hour"
+    },
+    "hours": {
+      "label": "Horaires",
+      "help": "Tapez-les tels qu’ils doivent apparaître ; contrairement à l’horloge, ils ne sont pas traduits. Programmez la diapositive pour ces heures seulement.",
+      "default": "DU LUNDI AU VENDREDI · 16 H – 19 H"
+    },
+    "deal1_price": {
+      "label": "Offre 1 : prix",
+      "default": "5 €"
+    },
+    "deal1_name": {
+      "label": "Offre 1 : nom",
+      "default": "Vins maison"
+    },
+    "deal1_note": {
+      "label": "Offre 1 : précision",
+      "default": "Rouge, blanc ou rosé, au verre"
+    },
+    "deal2_price": {
+      "label": "Offre 2 : prix",
+      "default": "4 €"
+    },
+    "deal2_name": {
+      "label": "Offre 2 : nom",
+      "default": "Pintes pression"
+    },
+    "deal2_note": {
+      "label": "Offre 2 : précision",
+      "default": "Toutes les pressions, même de saison"
+    },
+    "deal3_price": {
+      "label": "Offre 3 : prix",
+      "default": "8 €"
+    },
+    "deal3_name": {
+      "label": "Offre 3 : nom",
+      "default": "Cocktails classiques"
+    },
+    "deal3_note": {
+      "label": "Offre 3 : précision",
+      "default": "Margarita, Negroni, Old Fashioned"
+    },
+    "product_image": {
+      "label": "Image du produit",
+      "help": "Idéalement un PNG ou SVG détouré sur fond transparent. Elle est ajustée, jamais rognée."
+    },
+    "show_image": {
+      "label": "Afficher l’image du produit",
+      "help": "Désactivez pour laisser le panneau sans image (sinon, une image vide affiche un cadre en pointillés)."
+    },
+    "show_clock": {
+      "label": "Afficher l’horloge",
+      "help": "Une horloge en direct dans le coin supérieur, pour voir le temps qu’il reste."
+    },
+    "clock_label": {
+      "label": "Intitulé de l’horloge",
+      "default": "HEURE"
+    },
+    "timezone": {
+      "label": "Fuseau horaire de l’horloge",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Langue de l’horloge, p. ex. fr-FR ou fr-CA. Vide = la langue de l’écran."
+    },
+    "clock_format": {
+      "label": "Format de l’horloge",
+      "help": "24 heures convient à la plupart des pays. Choisissez 12 heures (AM/PM) pour les États-Unis, par exemple.",
+      "options": {
+        "12": "12 heures",
+        "24": "24 heures"
+      }
+    },
+    "small_print": {
+      "label": "Mentions légales",
+      "default": "Au bar et en terrasse uniquement. À consommer avec modération ; pièce d’identité exigée."
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "La deuxième ligne du titre, la lueur derrière l’image et la pilule de l’horloge."
+    },
+    "highlight": {
+      "label": "Couleur des prix",
+      "help": "Les prix des offres et la ligne des horaires."
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "background_image": {
+      "label": "Photo de fond",
+      "help": "Facultatif. Une photo derrière tout, assombrie par le réglage ci-dessous."
+    },
+    "background_dim": {
+      "label": "Assombrir la photo",
+      "help": "0 = la photo telle quelle, 0,9 = presque noire. Utilisé seulement avec une photo de fond."
+    }
+  }
+}

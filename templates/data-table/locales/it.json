@@ -1,0 +1,115 @@
+{
+  "name": "Tabella dati",
+  "description": "Qualsiasi tabella come un pannello chiaro e leggibile: una classifica sportiva, tassi di risparmio con le note legali, livelli di magazzino, un orario. Collega un foglio Google, CSV, elenco REST o tabella manuale (o scrivi le righe), scegli le colonne, colora le celle con regole semplici come “Giacenza < 5 rosso” e le tabelle lunghe vanno a pagine da sole.",
+  "params": {
+    "preset": {
+      "label": "Punto di partenza",
+      "help": "Fornisce righe di esempio, titolo e regole di evidenziazione per ciò che lasci vuoto. Scegli “Nessuno” per usare solo le tue impostazioni.",
+      "options": {
+        "league": "Classifica sportiva",
+        "rates": "Tassi bancari / di risparmio",
+        "stock": "Livelli di magazzino",
+        "generic": "Generico (corsi di formazione)",
+        "none": "Nessuno: solo le mie impostazioni"
+      }
+    },
+    "title": {
+      "label": "Titolo",
+      "help": "Vuoto usa il titolo del punto di partenza. Un solo - lo nasconde."
+    },
+    "subtitle": {
+      "label": "Sottotitolo",
+      "help": "Una riga sotto il titolo. Vuoto usa quello del punto di partenza. Un solo - lo nasconde."
+    },
+    "footer": {
+      "label": "Riga in basso",
+      "help": "Testo piccolo in fondo. Vuoto usa quello del punto di partenza. Un solo - lo nasconde."
+    },
+    "disclosure": {
+      "label": "Note legali",
+      "help": "Testo piccolo sotto la tabella in ogni pagina, ad es. le note obbligatorie sui tassi. Vuoto usa quelle del punto di partenza. Un solo - le nasconde."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Mostrato accanto al titolo."
+    },
+    "table": {
+      "label": "Fonte dati della tabella (facoltativa)",
+      "help": "Un foglio Google, CSV, elenco REST o tabella manuale. La riga di intestazione diventa i titoli delle colonne. Sostituisce le righe scritte sotto."
+    },
+    "rows": {
+      "label": "Tabella scritta",
+      "help": "Usata senza fonte dati. Prima riga = intestazioni, poi una riga per voce, celle separate da |. Vuoto mostra l’esempio del punto di partenza."
+    },
+    "show_columns": {
+      "label": "Colonne da mostrare",
+      "help": "Facoltativo, intestazioni separate da virgole nell’ordine voluto, ad es. Squadra, G, Pt. Vuoto mostra tutte le colonne."
+    },
+    "highlight_col": {
+      "label": "Colonna evidenziata",
+      "help": "L’intestazione della colonna verificata dalle regole. Vuoto usa quella del punto di partenza. Un solo - disattiva l’evidenziazione."
+    },
+    "highlight_rules": {
+      "label": "Regole di evidenziazione",
+      "help": "Separate da ; e provate in ordine, ad es. < 5 rosso; < 20 arancione; = Esaurito grigio. Colori: rosso arancione verde blu viola grigio accent o #hex."
+    },
+    "highlight_style": {
+      "label": "Stile di evidenziazione",
+      "options": {
+        "preset": "Come il punto di partenza",
+        "cell": "Colora la cella",
+        "row": "Colora tutta la riga"
+      }
+    },
+    "rows_per_page": {
+      "label": "Righe per pagina",
+      "help": "0 = automatico: tutto in una schermata se resta leggibile, altrimenti pagine di dimensione comoda."
+    },
+    "page_seconds": {
+      "label": "Secondi per pagina"
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "midnight": "Mezzanotte (blu scuro)",
+        "graphite": "Grafite (grigio scuro)",
+        "paper": "Carta (chiaro)",
+        "contrast": "Alto contrasto (bianco e nero)"
+      }
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "Linea del titolo, riga di intestazione, punti di pagina e il colore di regola “accent”."
+    },
+    "font": {
+      "label": "Carattere dei titoli",
+      "options": {
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (condensato)",
+        "inter": "Inter (pulito)"
+      }
+    },
+    "zebra": {
+      "label": "Righe alternate"
+    },
+    "show_updated": {
+      "label": "Mostra l’ultimo aggiornamento della fonte dati",
+      "help": "Solo con una fonte dati collegata."
+    },
+    "updated_label": {
+      "label": "Parola “Aggiornato”",
+      "help": "La parola prima dell’ora. Vuoto usa “Aggiornato” nella lingua dello schermo; un solo - mostra solo l’ora."
+    },
+    "limit_label": {
+      "label": "Nota quando non tutte le righe entrano",
+      "help": "Mostrata se la fonte ha più righe di quelle che arrivano allo schermo; {shown} e {total} vengono compilati. Vuoto usa il testo predefinito."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua delle parole fisse e delle tabelle di esempio, dell’ora di aggiornamento e dei numeri di pagina. Vuoto usa la lingua dello schermo."
+    },
+    "timezone": {
+      "label": "Fuso orario dell’aggiornamento"
+    }
+  }
+}

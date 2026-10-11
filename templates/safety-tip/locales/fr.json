@@ -1,0 +1,59 @@
+{
+  "name": "Conseil sécurité",
+  "description": "Un conseil sécurité très visible pour usines, entrepôts, cuisines et chantiers : un pictogramme d’alerte sur un panneau jaune, la règle en gros, jusqu’à quatre étapes et qui appeler.",
+  "params": {
+    "icon": {
+      "label": "Pictogramme",
+      "help": "Un PNG ou SVG carré à fond transparent, assez foncé pour se lire sur le panneau d’accent."
+    },
+    "panel_title": {
+      "label": "Titre du panneau",
+      "default": "SÉCURITÉ"
+    },
+    "tip_number": {
+      "label": "Numéro du conseil",
+      "help": "Sous le titre du panneau, par ex. « CONSEIL 14 SUR 52 ». Laissez vide pour masquer.",
+      "default": "CONSEIL 14 SUR 52"
+    },
+    "eyebrow": {
+      "label": "Petit titre",
+      "help": "Pour qui ou pour quel lieu.",
+      "default": "CETTE SEMAINE · ENTREPÔT ET QUAI"
+    },
+    "headline": {
+      "label": "Conseil",
+      "help": "La règle en quelques mots.",
+      "default": "Soulevez avec les jambes, pas le dos"
+    },
+    "steps": {
+      "label": "Comment faire",
+      "help": "Jusqu’à quatre lignes courtes ; Entrée commence une nouvelle ligne. Chacune sous environ 45 caractères.",
+      "default": "1. Placez-vous près, pieds bien écartés\n2. Pliez les genoux, gardez le dos droit\n3. Saisissez bien, levez sans pivoter\n4. Plus de 23 kg ? Chariot ou collègue"
+    },
+    "footer": {
+      "label": "Ligne de pied",
+      "help": "Qui appeler ou où signaler.",
+      "default": "Signalez chaque presque-accident à votre responsable ou appelez le poste 2240"
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivé, le logo est masqué et son espace reste vide."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent, de couleur claire pour le fond sombre par défaut."
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Le panneau derrière le pictogramme, le petit titre et le filet."
+    },
+    "background": {
+      "label": "Couleur de fond",
+      "help": "La page. Le titre et le numéro du panneau sont aussi dessinés dans cette couleur."
+    },
+    "text_color": {
+      "label": "Couleur du texte",
+      "help": "Le conseil, les étapes et la ligne de pied."
+    }
+  }
+}

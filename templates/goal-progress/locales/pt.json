@@ -1,0 +1,152 @@
+{
+  "name": "Progresso da meta",
+  "description": "Mostra quanto falta para uma arrecadação, campanha ou meta de vendas: termômetro, barra ou anel com o valor arrecadado, porcentagem, etapas, número de apoiadores e contagem regressiva. Confete quando a meta é atingida. Digite o total ou conecte uma planilha Google, respostas de formulário ou uma API REST.",
+  "params": {
+    "headline": {
+      "label": "Título",
+      "help": "A linha grande. Até três linhas na tela.",
+      "default": "Encha as prateleiras do Banco de Alimentos Riverside"
+    },
+    "kicker": {
+      "label": "Nome da campanha",
+      "help": "Linha pequena acima do título. Deixe vazio para ocultar.",
+      "default": "Northwind Community Fund · Campanha de inverno"
+    },
+    "thanks": {
+      "label": "Linha de agradecimento",
+      "help": "Na parte de baixo. Deixe vazio para ocultar.",
+      "default": "Cada doação fica em Riverside. Obrigado por apoiar seus vizinhos."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Opcional. Acima do título."
+    },
+    "style": {
+      "label": "Indicador",
+      "help": "Uma faixa larga sempre usa a barra.",
+      "options": {
+        "thermometer": "Termômetro",
+        "bar": "Barra de progresso",
+        "ring": "Anel"
+      }
+    },
+    "raised": {
+      "label": "Arrecadado até agora",
+      "help": "Usado sem fonte de dados conectada, ou se ela não tiver coluna de valor."
+    },
+    "target": {
+      "label": "Meta"
+    },
+    "supporters": {
+      "label": "Número de apoiadores",
+      "help": "0 oculta. Com um registro de doações como fonte, as linhas são contadas."
+    },
+    "currency": {
+      "label": "Código da moeda",
+      "help": "Três letras: BRL, EUR, USD, GBP, JPY… Deixe vazio para números simples (horas, livros, inscrições).",
+      "default": "BRL"
+    },
+    "unit": {
+      "label": "Unidade (sem moeda)",
+      "help": "Exibida após números simples, ex.: \"livros\" ou \"km\". Ignorada se houver moeda."
+    },
+    "show_cents": {
+      "label": "Mostrar centavos / decimais"
+    },
+    "milestones": {
+      "label": "Etapas",
+      "help": "Uma por linha: Valor | Nome. Até 10, entre 0 e a meta. Deixe vazio para nenhuma.",
+      "default": "10000 | Prateleiras novas\n25000 | Câmara fria\n40000 | Van de entregas"
+    },
+    "deadline": {
+      "label": "Prazo",
+      "help": "Uma data (2026-12-24), data e hora (2026-12-24T17:00) ou month-end, quarter-end, year-end. Deixe vazio para ocultar a contagem."
+    },
+    "timezone": {
+      "label": "Fuso horário do prazo",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palavras, números e datas na tela, por exemplo pt-BR ou pt-PT. Deixe vazio para o idioma da tela."
+    },
+    "goal_text": {
+      "label": "Texto abaixo do valor",
+      "help": "{target} é trocado pela meta. Vazio: texto padrão no idioma da tela. Digite - para ocultar."
+    },
+    "percent_label": {
+      "label": "Legenda: porcentagem",
+      "help": "Vazio: texto padrão no idioma da tela. Digite - para ocultar."
+    },
+    "supporters_label": {
+      "label": "Legenda: apoiadores",
+      "help": "Vazio: texto padrão no idioma da tela. Digite - para ocultar."
+    },
+    "countdown_label": {
+      "label": "Legenda: contagem",
+      "help": "Vazio: texto padrão no idioma da tela. Digite - para ocultar."
+    },
+    "ended_label": {
+      "label": "Texto após o prazo",
+      "help": "Vazio: texto padrão no idioma da tela. Digite - para ocultar."
+    },
+    "next_text": {
+      "label": "Linha da próxima etapa",
+      "help": "{milestone}, {amount} e {remaining} são preenchidos. Vazio: texto padrão no idioma da tela. Digite - para ocultar."
+    },
+    "celebrate_text": {
+      "label": "Texto ao atingir a meta",
+      "help": "Vazio: texto padrão no idioma da tela. Digite - para ocultar."
+    },
+    "source": {
+      "label": "Fonte de dados do total (opcional)",
+      "help": "Uma planilha Google, respostas de formulário, CSV, API REST ou tabela manual. O README explica os formatos aceitos."
+    },
+    "amount_col": {
+      "label": "Coluna ou campo do valor",
+      "help": "Maiúsculas e pontuação não importam. Um registro de doações pode usar sua coluna de valor."
+    },
+    "amount_mode": {
+      "label": "Como ler o valor",
+      "options": {
+        "auto": "Automático (uma linha = total; várias = somar)",
+        "sum": "Somar todas as linhas (registro de doações)",
+        "last": "Última linha (total acumulado)",
+        "first": "Primeira linha"
+      }
+    },
+    "target_col": {
+      "label": "Coluna ou campo da meta (opcional)"
+    },
+    "supporters_col": {
+      "label": "Coluna ou campo de apoiadores (opcional)"
+    },
+    "font": {
+      "label": "Fonte do título",
+      "options": {
+        "archivo": "Archivo (display)",
+        "bitter": "Bitter (serifada)",
+        "oswald": "Oswald (condensada)",
+        "inter": "Inter (limpa)"
+      }
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "O topo do preenchimento, o valor e as etapas atingidas."
+    },
+    "accent2": {
+      "label": "Segunda cor do preenchimento",
+      "help": "O preenchimento passa desta cor para a de destaque."
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "animate": {
+      "label": "Animar (preencher ao carregar, confete na meta)",
+      "help": "Desligue em players muito lentos."
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "name": "Bord voor vergaderruimte",
+  "description": "Een deurbord voor een vergaderruimte: een grote groene VRIJ- of rode BEZET-balk, de lopende en de volgende vergadering en de agenda van vandaag, uit elke Agenda-gegevensbron (iCal). De privacymodus toont \"Gereserveerd\" in plaats van titels. Gemaakt voor een staand scherm naast de deur; werkt ook liggend of als strook.",
+  "params": {
+    "calendar": {
+      "label": "Ruimteagenda (Agenda-/iCal-gegevensbron)",
+      "help": "Een Agenda-gegevensbron met de iCal-feed van de ruimte (Google, Outlook/Exchange, elke .ics-URL). Zonder bron wordt een voorbeeldrooster getoond."
+    },
+    "room_name": {
+      "label": "Naam van de ruimte",
+      "default": "Vergaderzaal"
+    },
+    "available_label": {
+      "label": "Tekst voor \"vrij\"",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "busy_label": {
+      "label": "Tekst voor \"bezet\"",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "hide_titles": {
+      "label": "Privacy: titels en organisatoren verbergen"
+    },
+    "reserved_label": {
+      "label": "Tekst in plaats van een verborgen titel",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "show_organizer": {
+      "label": "Organisatoren tonen"
+    },
+    "now_label": {
+      "label": "Kop: lopende vergadering",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "next_label": {
+      "label": "Kop: volgende vergadering",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "agenda_label": {
+      "label": "Kop: agenda van vandaag",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "upcoming_label": {
+      "label": "Kop: latere boekingen (als er vandaag niets meer is)",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "empty_label": {
+      "label": "Tekst als er niets geboekt is",
+      "help": "Laat leeg voor het ingebouwde woord in de taal van het bord."
+    },
+    "available_color": {
+      "label": "Kleur voor \"vrij\""
+    },
+    "busy_color": {
+      "label": "Kleur voor \"bezet\""
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "clock_format": {
+      "label": "Klok",
+      "options": {
+        "auto": "Zoals gebruikelijk in de taal",
+        "24": "24-uurs",
+        "12": "12-uurs",
+        "off": "Klok verbergen"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone van de klok",
+      "help": "Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Woorden, datums en tijden op het bord, bv. nl-NL of nl-BE. Leeg = taal van het scherm. Geldt ook voor de agenda; geef die dezelfde tijdzone als de klok."
+    }
+  }
+}

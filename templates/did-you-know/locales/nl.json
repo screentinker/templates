@@ -1,0 +1,54 @@
+{
+  "name": "Wist je dat?",
+  "description": "Een opvallend weetje-van-de-dag-scherm: een groot teken in een felle schijf, één verrassende zin, een korte uitleg en een bronregel. Voor scholen, bibliotheken, musea, wachtkamers en kantoorkeukens.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "default": "WIST JE DAT?"
+    },
+    "badge": {
+      "label": "Teken in de schijf",
+      "help": "Eén tot drie tekens, groot in de gekleurde schijf: ?, !, een getal."
+    },
+    "number": {
+      "label": "Nummer van het weetje",
+      "help": "Rechtsboven, bijv. ‘Nr. 27’. Laat leeg om te verbergen.",
+      "default": "Nr. 27"
+    },
+    "fact": {
+      "label": "Het weetje",
+      "help": "De kop: één korte, verrassende zin.",
+      "default": "Een octopus heeft drie harten en blauw bloed."
+    },
+    "detail": {
+      "label": "Uitleg",
+      "help": "Een of twee zinnen uitleg. Enter begint een nieuwe regel.",
+      "default": "Twee harten pompen bloed door de kieuwen, het derde door het lichaam. Het bloed is blauw omdat koper in plaats van ijzer de zuurstof vervoert."
+    },
+    "footer": {
+      "label": "Voetregel",
+      "help": "Een bron, de naam van de reeks of waar je meer leest.",
+      "default": "Wetenschapsweek in Bibliotheek Northwind · Vraag de leeslijst bij de balie"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Uit verbergt het logo; de ruimte blijft leeg."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond, in een lichte kleur voor de standaard donkere achtergrond."
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "De schijf, de kleine kop, het nummer en de lijn."
+    },
+    "background": {
+      "label": "Achtergrondkleur",
+      "help": "Achter alles. Het teken in de schijf krijgt ook deze kleur."
+    },
+    "text_color": {
+      "label": "Tekstkleur",
+      "help": "Het weetje, de uitleg en de voetregel."
+    }
+  }
+}

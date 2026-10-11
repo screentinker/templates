@@ -1,0 +1,203 @@
+/* What's on — ScreenTinker community template. MIT. Fonts: Archivo and Inter, SIL OFL 1.1 (see NOTICE). */
+@font-face { font-family: 'Archivo'; font-weight: 100 900; font-style: normal; src: url(fonts/archivo.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 100 900; font-style: normal; src: url(fonts/inter.woff2) format('woff2'); }
+
+:root {
+  --bg: #0C1522;
+  --accent: #E9B44C;
+  --text: #F3F5F8;
+  --on-accent: #0C1522;   /* set by app.js: dark or light, whichever reads on the accent */
+  --tint: rgba(233, 180, 76, .13);   /* set by app.js: the accent, faint, for the session in progress */
+  --line: rgba(255, 255, 255, .09);
+  /* One unit for every shape: 1% of the height, but no more than 0.9% of the width (portrait). */
+  --u: min(1vh, .9vw);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased; cursor: none;
+}
+
+.bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(100vmax 60vmax at 0% 0%, rgba(255, 255, 255, .055), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(0, 0, 0, .3));
+}
+@supports (background: color-mix(in srgb, red 50%, transparent)) {
+  .bg {
+    background:
+      radial-gradient(110vmax 70vmax at 0% 0%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 60%),
+      radial-gradient(80vmax 60vmax at 100% 100%, color-mix(in srgb, var(--accent) 6%, transparent), transparent 60%),
+      linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(0, 0, 0, .3));
+  }
+}
+
+.frame {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  padding: calc(var(--u) * 5) calc(var(--u) * 6) calc(var(--u) * 3.4);
+}
+
+/* ---------- header ---------- */
+.head { flex: none; display: flex; align-items: center; gap: calc(var(--u) * 3); }
+.logo { height: calc(var(--u) * 9); max-width: calc(var(--u) * 22); object-fit: contain; flex: none; }
+.titles { flex: 1; min-width: 0; }
+.title {
+  margin: 0; font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 800;
+  font-size: calc(var(--u) * 7); line-height: 1; letter-spacing: -.015em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.title:empty { display: none; }
+.subtitle {
+  margin-top: calc(var(--u) * 1.1); font-size: calc(var(--u) * 2.4); font-weight: 500;
+  letter-spacing: .02em; opacity: .66; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.subtitle:empty { display: none; }
+.clockbox { flex: none; text-align: right; }
+.clock {
+  font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 700; font-size: calc(var(--u) * 6);
+  line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -.01em;
+}
+.date { margin-top: calc(var(--u) * 1); font-size: calc(var(--u) * 2.2); opacity: .66; white-space: nowrap; }
+
+/* ---------- the board ---------- */
+.board {
+  position: relative; flex: 1; min-height: 0;
+  margin-top: calc(var(--u) * 3.6);
+  padding-top: calc(var(--u) * 3);
+  border-top: 1px solid var(--line);
+  display: flex; gap: calc(var(--u) * 5);
+}
+.col { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
+.lead { flex: 1.45 1 0; }
+.later { flex: 1 1 0; padding-left: calc(var(--u) * 5); border-left: 1px solid var(--line); }
+body.single .later { display: none; }
+.list { position: absolute; inset: 0; overflow: hidden; transition: opacity .6s ease; }
+.list.hide { opacity: 0; }
+
+body.portrait .board { flex-direction: column; gap: calc(var(--u) * 3.5); }
+body.portrait .lead { flex: none; }
+body.portrait.single .lead { flex: 1 1 0; }
+body.portrait .later { flex: 1 1 0; padding-left: 0; padding-top: calc(var(--u) * 3.5); border-left: 0; border-top: 1px solid var(--line); }
+
+/* day headings */
+.dh { display: flex; align-items: baseline; gap: .55em; white-space: nowrap; overflow: hidden; }
+.dh .dl { flex: none; color: var(--accent); }
+.dh .dd { min-width: 0; overflow: hidden; text-overflow: ellipsis; opacity: .7; }
+.lead .dh { margin: 0 0 .35em; flex-wrap: wrap; row-gap: 0; }
+.lead .dh .dl { font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 800; font-size: 1.7em; letter-spacing: -.01em; line-height: 1.05; }
+.lead .dh .dd { font-size: .8em; font-weight: 500; }
+.later .dh { align-items: center; margin: 1.15em 0 .3em; font-size: .78em; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
+.later .dh:first-child { margin-top: 0; }
+.later .dh .dd { letter-spacing: .06em; font-weight: 500; text-transform: none; font-size: 1.05em; }
+.later .dh::after { content: ''; flex: 1; height: 1px; background: currentColor; opacity: .18; min-width: 1em; }
+
+/* an event */
+.ev {
+  position: relative; display: flex; align-items: center; gap: .9em;
+  padding: .5em .55em .55em; border-radius: .28em;
+}
+.ev + .ev::before { content: ''; position: absolute; left: .55em; right: .55em; top: 0; height: 1px; background: var(--line); }
+.ev.now + .ev::before, .ev.now::before { display: none; }
+.t { flex: none; min-width: var(--tw, 3.2em); font-variant-numeric: tabular-nums; }
+.st { font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 700; font-size: 1.04em; line-height: 1.1; white-space: nowrap; }
+.en { margin-top: .2em; font-size: .62em; opacity: .58; white-space: nowrap; }
+.main { flex: 1; min-width: 0; }
+.ti {
+  font-weight: 650; line-height: 1.16; overflow-wrap: anywhere; hyphens: auto;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+}
+.meta {
+  display: flex; flex-wrap: wrap; align-items: center; column-gap: .75em; row-gap: .2em; margin-top: .3em;
+  font-size: .64em; white-space: nowrap; overflow: hidden;
+}
+.meta:empty { display: none; }
+.meta > span { min-width: 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.loc { color: var(--accent); font-weight: 600; flex: 0 1 auto; }
+.host { opacity: .74; flex: 0 1 auto; }
+.tag {
+  flex: none !important; padding: .14em .55em .12em; border-radius: 1em;
+  font-size: .82em; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  background: var(--accent); color: var(--on-accent);
+}
+.tag.soft { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 .1em var(--accent); }
+.ar {
+  flex: none; width: 1.75em; height: 1.75em; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: .07em solid rgba(255, 255, 255, .22); color: var(--accent);
+}
+.ar svg { width: 62%; height: 62%; display: block; }
+.ar.none { visibility: hidden; }
+body.no-arrows .ar { display: none; }
+
+.ev.now { background: var(--tint); box-shadow: inset .2em 0 0 var(--accent); }
+.ev.now .ar { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.prog { position: absolute; left: .55em; right: .55em; bottom: .16em; height: .09em; border-radius: .1em; background: rgba(255, 255, 255, .12); overflow: hidden; }
+.prog i { display: block; height: 100%; background: var(--accent); }
+
+.later .ev { padding-top: .42em; padding-bottom: .46em; }
+.later .ar { width: 1.55em; height: 1.55em; }
+
+/* ---------- empty ---------- */
+.empty { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 6%; }
+.empty-day { font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 800; color: var(--accent); font-size: calc(var(--u) * 6); }
+.empty-text { margin-top: calc(var(--u) * 1.6); font-size: calc(var(--u) * 3.4); opacity: .7; overflow-wrap: break-word; hyphens: auto; }
+
+/* ---------- footer ---------- */
+.foot {
+  flex: none; display: flex; align-items: center; justify-content: space-between; gap: 2em;
+  margin-top: calc(var(--u) * 2); min-height: calc(var(--u) * 2.6);
+}
+.footer-text { min-width: 0; font-size: calc(var(--u) * 2); letter-spacing: .02em; opacity: .55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pager { display: flex; gap: calc(var(--u) * 1); flex: none; }
+.pager span { width: calc(var(--u) * 1.1); height: calc(var(--u) * 1.1); border-radius: 50%; background: var(--text); opacity: .22; transition: opacity .5s, transform .5s; }
+.pager span.on { opacity: .9; background: var(--accent); transform: scale(1.25); }
+
+/* ---------- a wide strip: header on the left, the next events as cards in one row ---------- */
+body.strip .frame { flex-direction: row; align-items: stretch; padding: calc(var(--u) * 7) calc(var(--u) * 4); }
+body.strip .head { flex-direction: column; align-items: flex-start; justify-content: center; gap: calc(var(--u) * 3); width: 19%; flex: none; padding-right: 2%; }
+body.strip .logo { display: none; }
+body.strip .titles { flex: none; max-width: 100%; }
+body.strip .title { font-size: calc(var(--u) * 17); }
+body.strip .subtitle { display: none; }
+body.strip .clockbox { text-align: left; display: flex; align-items: baseline; gap: calc(var(--u) * 4); }
+body.strip .clock { font-size: calc(var(--u) * 14); }
+body.strip .date { margin: 0; font-size: calc(var(--u) * 9); }
+body.strip .board { margin: 0; padding: 0 0 0 2.2%; border-top: 0; border-left: 1px solid var(--line); }
+body.strip .later { display: none; }
+body.strip .foot { display: none; }
+body.strip .list { display: flex; gap: .6em; align-items: stretch; }
+body.strip .lead .dh { display: none; }
+body.strip .ev {
+  flex: 1 0 19em; max-width: 34em; padding: .4em .7em .5em; align-content: center; background: rgba(255, 255, 255, .04);
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: .7em; align-items: center;
+}
+body.strip .t { grid-column: 1; grid-row: 1; display: flex; align-items: baseline; gap: .45em; min-width: 0; white-space: nowrap; overflow: hidden; }
+body.strip .day-mini { margin: 0; font-size: .6em; }
+body.strip .st { font-size: .8em; }
+body.strip .en { margin: 0; font-size: .7em; }
+body.strip .main { grid-column: 1; grid-row: 2; }
+body.strip .ti { -webkit-line-clamp: 1; margin-top: .08em; }
+body.strip .meta { flex-wrap: nowrap; }
+body.strip .soon { display: none; }
+body.strip .ar { grid-column: 2; grid-row: 1 / span 2; }
+body.strip .ev.now { background: var(--tint); }
+body.strip .ev + .ev::before { display: none; }
+body.strip .day-mini { display: block; }
+.day-mini { display: none; font-size: .56em; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: .2em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.strip .empty-day { font-size: calc(var(--u) * 14); }
+body.strip .empty-text { font-size: calc(var(--u) * 10); margin-top: calc(var(--u) * 2); }
+
+/* ---------- languages ---------- */
+/* Chinese: Simplified glyphs first (the Japanese CJK face otherwise wins for shared characters). */
+:lang(zh) body { font-family: 'Inter', "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK JP", "Noto Sans Devanagari", system-ui, sans-serif; }
+:lang(zh) .title, :lang(zh) .clock, :lang(zh) .lead .dh .dl, :lang(zh) .st, :lang(zh) .empty-day { font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK JP", "Noto Sans Devanagari", system-ui, sans-serif; }
+/* Wide letter-spacing is a Latin capitals habit: CJK and Devanagari read better without it. */
+:lang(ja) .tag, :lang(zh) .tag, :lang(hi) .tag,
+:lang(ja) .later .dh, :lang(zh) .later .dh, :lang(hi) .later .dh,
+:lang(ja) .day-mini, :lang(zh) .day-mini, :lang(hi) .day-mini { letter-spacing: .02em; }
+:lang(ja) .later .dh .dd, :lang(zh) .later .dh .dd, :lang(hi) .later .dh .dd { letter-spacing: 0; }

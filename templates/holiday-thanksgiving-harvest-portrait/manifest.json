@@ -1,0 +1,98 @@
+{
+  "id": "holiday-thanksgiving-harvest-portrait",
+  "name": "Thanksgiving & harvest (portrait)",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A golden-hour harvest screen for Thanksgiving or any harvest festival: a low sun over rolling fields, wheat in the foreground, and room for a headline, a message about a community lunch or food drive, and a date line.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-thanksgiving-harvest-portrait",
+  "license": "MIT",
+  "tags": [
+    "holiday",
+    "seasonal",
+    "thanksgiving",
+    "harvest",
+    "autumn",
+    "fall",
+    "community",
+    "portrait"
+  ],
+  "orientation": [
+    "portrait"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "The short line above the headline. Leave empty to hide it.",
+      "default": "HAPPY THANKSGIVING"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline",
+      "max": 28,
+      "help": "Two lines are kept for it: about 24 characters fit. Longer headlines wrap to a third line and run into the message.",
+      "default": "Giving thanks, together"
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "label": "Message",
+      "max": 200,
+      "help": "A sentence or two under the headline; up to 200 characters fit. A line break starts a new line.",
+      "default": "Join us for the community harvest lunch: 340 meals cooked by our kitchen team, with every donation going to the Riverside Food Bank."
+    },
+    {
+      "name": "date_line",
+      "type": "text",
+      "label": "Date line",
+      "max": 70,
+      "help": "Plain text, typed the way you want it to read: a date, a time and place, or a sign-off.",
+      "default": "26 · 11  ·  12:00–14:00  ·  MAIN HALL"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A wide PNG or SVG with a transparent background (about 3.4 : 1 fills the box; other shapes are fitted inside it). Replace the Northwind placeholder.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Sun colour",
+      "default": "#E9A23B"
+    },
+    {
+      "name": "accent2",
+      "type": "color",
+      "label": "Field colour",
+      "default": "#C0532F"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#2A1A0E"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#FFF3DF"
+    }
+  ]
+}

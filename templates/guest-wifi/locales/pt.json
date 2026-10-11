@@ -1,0 +1,80 @@
+{
+  "name": "Wi-Fi para visitantes",
+  "description": "O nome e a senha da sua rede de visitantes, grandes e legíveis, ao lado de um QR code que conecta com um só escaneamento, com os caracteres especiais escapados corretamente para funcionar de verdade. Para hotéis, cafés, clínicas e escritórios; em tela cheia, pôster vertical ou faixa fina. Nada é baixado: o código é desenhado na tela.",
+  "params": {
+    "ssid": {
+      "label": "Nome da rede (SSID)",
+      "help": "Exatamente como seus aparelhos mostram, com maiúsculas e espaços."
+    },
+    "password": {
+      "label": "Senha",
+      "help": "Aparece na tela de propósito: é uma rede de visitantes. Digite como ela é; caracteres como ; : , \" e \\ são escapados no QR code para você."
+    },
+    "security": {
+      "label": "Segurança",
+      "options": {
+        "WPA": "WPA / WPA2 / WPA3 (a maioria das redes)",
+        "WEP": "WEP (roteadores antigos)",
+        "nopass": "Aberta, sem senha"
+      }
+    },
+    "hidden": {
+      "label": "A rede é oculta",
+      "help": "Ative só se a rede não divulga o próprio nome."
+    },
+    "show_password": {
+      "label": "Mostrar a senha como texto",
+      "help": "Desativado, aparece só o QR code; o código continua contendo a senha."
+    },
+    "eyebrow": {
+      "label": "Título pequeno",
+      "default": "Wi-Fi grátis"
+    },
+    "headline": {
+      "label": "Título",
+      "default": "Fique conectado enquanto estiver com a gente"
+    },
+    "hint": {
+      "label": "Dica abaixo do código",
+      "help": "Deixe vazio para ocultar.",
+      "default": "Aponte a câmera aqui para entrar"
+    },
+    "ssid_label": {
+      "label": "Rótulo do nome da rede",
+      "help": "Deixe vazio para a palavra “Rede” no idioma da tela."
+    },
+    "password_label": {
+      "label": "Rótulo da senha",
+      "help": "Deixe vazio para a palavra “Senha” no idioma da tela."
+    },
+    "open_text": {
+      "label": "Texto para uma rede aberta",
+      "help": "Deixe vazio para “Não precisa de senha” no idioma da tela."
+    },
+    "hidden_text": {
+      "label": "Texto quando a senha não aparece",
+      "help": "Deixe vazio para “Escaneie o código para entrar” no idioma da tela."
+    },
+    "footer": {
+      "label": "Rodapé",
+      "default": "Precisa de ajuda? Fale com a recepção, teremos prazer em ajudar."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Um PNG ou SVG com fundo transparente. Deixe vazio para não mostrar logo."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma das palavras que a própria tela escreve (rótulos, mensagens). Deixe vazio para usar o idioma da tela."
+    }
+  }
+}

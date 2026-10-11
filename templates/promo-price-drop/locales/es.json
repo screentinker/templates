@@ -1,0 +1,100 @@
+{
+  "name": "Promoción de rebaja",
+  "description": "Una pantalla de oferta para una bajada de precio: la imagen del producto sobre un aro de color, el precio anterior, un gran precio nuevo y una pegatina de ahorro, con una franja inferior para las condiciones y una cuenta atrás opcional hasta el fin de la oferta.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG más o menos cuadrado. La insignia incluida es provisional; sustitúyela por la tuya."
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactívalo si no tienes logotipo (si no, un logotipo vacío muestra un recuadro discontinuo)."
+    },
+    "brand": {
+      "label": "Nombre de la tienda",
+      "help": "Aparece junto al logotipo. Déjalo vacío si tu logotipo ya lo incluye."
+    },
+    "badge": {
+      "label": "Distintivo",
+      "help": "La píldora sobre el título. Si la dejas vacía, queda como una pestaña de color.",
+      "default": "REBAJADO"
+    },
+    "headline": {
+      "label": "Producto / título",
+      "help": "Caben tres líneas; 40 caracteres siempre caben.",
+      "default": "Auriculares Studio Pro antirruido"
+    },
+    "was_price": {
+      "label": "Precio anterior",
+      "help": "Escríbelo tal como debe leerse, p. ej. «Antes 249,00 €». Déjalo vacío para ocultarlo.",
+      "default": "Antes 249,00 €"
+    },
+    "price": {
+      "label": "Precio nuevo",
+      "help": "La cifra grande, tal como debe leerse: 179 €, 1.299,99 €.",
+      "default": "179 €"
+    },
+    "save_text": {
+      "label": "Pegatina de ahorro",
+      "help": "En la pegatina amarilla sobre la imagen. Corto: −70 €, −30 %, MITAD.",
+      "default": "−70 €"
+    },
+    "product_image": {
+      "label": "Imagen del producto",
+      "help": "Lo ideal es un PNG o SVG recortado con fondo transparente. Se ajusta, nunca se recorta."
+    },
+    "show_image": {
+      "label": "Mostrar la imagen del producto",
+      "help": "Desactívalo para dejar el panel sin imagen (si no, una imagen vacía muestra un recuadro discontinuo)."
+    },
+    "show_countdown": {
+      "label": "Mostrar la cuenta atrás",
+      "help": "Desactívalo para ofertas sin fecha de fin: desaparecen la etiqueta y el contador."
+    },
+    "countdown_label": {
+      "label": "Etiqueta sobre la cuenta atrás",
+      "help": "Se queda al terminar la oferta, así que elige palabras que también encajen con el mensaje final.",
+      "default": "TIEMPO LIMITADO"
+    },
+    "countdown_target": {
+      "label": "La oferta termina el",
+      "help": "ISO 8601 con desfase horario, p. ej. 2026-11-01T23:59:00+01:00 o 2026-11-01T23:59:00-05:00."
+    },
+    "countdown_done": {
+      "label": "Texto al terminar la cuenta atrás",
+      "default": "Hasta agotar stock"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Idioma de la cuenta atrás en directo, p. ej. es o es-MX. Vacío = el idioma de la pantalla. Tus textos se muestran tal como los escribes."
+    },
+    "small_print": {
+      "label": "Letra pequeña",
+      "help": "Condiciones en la franja inferior. Una o dos frases.",
+      "default": "Oferta válida hasta el 31 de diciembre de 2026 o hasta agotar existencias. Una unidad por cliente. En tienda y online."
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "El distintivo, la franja inferior y el aro detrás de la imagen."
+    },
+    "highlight": {
+      "label": "Color del precio",
+      "help": "El precio nuevo y la pegatina de ahorro."
+    },
+    "background": {
+      "label": "Color de fondo",
+      "help": "También es el color del texto de la pegatina."
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "background_image": {
+      "label": "Foto de fondo",
+      "help": "Opcional. Una foto detrás de todo, oscurecida con el ajuste de abajo."
+    },
+    "background_dim": {
+      "label": "Oscurecer la foto",
+      "help": "0 = la foto tal cual, 0,9 = casi negra. Solo se usa con foto de fondo."
+    }
+  }
+}

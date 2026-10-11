@@ -1,0 +1,131 @@
+{
+  "name": "Mural de avisos",
+  "description": "Um mural para a sala de descanso, a escola ou o chão de fábrica: cartões com categorias por cor (Urgente, Segurança, Evento, RH, Info), avisos fixados no topo e datas de início e fim para que os avisos apareçam e expirem sozinhos. Um aviso em destaque com os demais ao lado, ou um de cada vez. Digite os avisos ou use uma planilha Google ou tabela manual.",
+  "params": {
+    "title": {
+      "label": "Título do mural",
+      "default": "Mural de avisos"
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Uma linha abaixo do título, como a unidade ou o departamento. Deixe vazio para ocultar.",
+      "default": "Northwind Works · Prédio 2"
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Ao lado do título. Sem logotipo, aparece um pequeno ícone de mural na cor de destaque."
+    },
+    "layout": {
+      "label": "Layout",
+      "options": {
+        "featured": "Aviso em destaque + os demais ao lado",
+        "rotate": "Um aviso de cada vez, em tela cheia"
+      }
+    },
+    "notices": {
+      "label": "Avisos",
+      "help": "Um por linha: Título | Texto | Categoria | Início | Fim | Fixado | De. Datas: 2026-10-14, 2026-10-14 17:00 ou +N dias a partir de hoje. Sem fonte de dados.",
+      "default": "Estacionamento norte fechado até sexta | O recapeamento começa às 06:00. | Urgente | | +3 | sim | Manutenção predial\nColete refletivo na doca de carga | Mais empilhadeiras circulando esta semana. | Segurança | | | | Marcus Lee\nNovidade na copa: leite de aveia | Na cafeteira do 2º andar. | Info | | | | Equipe do escritório"
+    },
+    "source": {
+      "label": "Fonte de dados dos avisos (opcional)",
+      "help": "Uma planilha Google, CSV ou tabela manual com uma linha por aviso. Se tiver a coluna Título, substitui os avisos digitados acima."
+    },
+    "title_col": {
+      "label": "Coluna Título",
+      "default": "Título"
+    },
+    "body_col": {
+      "label": "Coluna Texto",
+      "default": "Texto"
+    },
+    "category_col": {
+      "label": "Coluna Categoria",
+      "default": "Categoria"
+    },
+    "start_col": {
+      "label": "Coluna Início",
+      "help": "Opcional. Um aviso com data de início fica oculto até lá.",
+      "default": "Início"
+    },
+    "end_col": {
+      "label": "Coluna Fim",
+      "help": "Opcional. Um aviso some depois da data de fim (uma data sozinha vale até o fim daquele dia).",
+      "default": "Fim"
+    },
+    "pinned_col": {
+      "label": "Coluna Fixado",
+      "help": "Sim, yes, true, 1, x ou pinned mantém o aviso no topo (e em destaque).",
+      "default": "Fixado"
+    },
+    "from_col": {
+      "label": "Coluna De",
+      "help": "Opcional. Quem publicou o aviso, em letra pequena no pé do cartão.",
+      "default": "De"
+    },
+    "date_order": {
+      "label": "Datas com barras são",
+      "help": "Só importa em datas como 03/04/2026. 2026-10-14 é sempre entendida.",
+      "options": {
+        "auto": "Pelo idioma (EUA: mês primeiro)",
+        "dmy": "Dia primeiro (14/10/2026)",
+        "mdy": "Mês primeiro (10/14/2026)"
+      }
+    },
+    "category_colors": {
+      "label": "Cores das categorias",
+      "help": "Opcional, uma por linha: Categoria = #RRGGBB. Urgente, Segurança, Evento, RH, TI, Info e outras já têm cor."
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "dark": "Escuro",
+        "light": "Claro"
+      }
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "Linha do título, pontos de página e ícone do mural."
+    },
+    "seconds": {
+      "label": "Segundos por página ou aviso",
+      "help": "Quanto tempo cada página de avisos (ou cada aviso, um de cada vez) fica na tela."
+    },
+    "show_dates": {
+      "label": "Mostrar datas “até” nos cartões"
+    },
+    "until_label": {
+      "label": "Texto antes de uma data de fim",
+      "help": "Deixe vazio para “Até …” no idioma da tela."
+    },
+    "today_label": {
+      "label": "Texto para um aviso que termina hoje",
+      "help": "Deixe vazio para “Termina hoje” no idioma da tela."
+    },
+    "pinned_label": {
+      "label": "Texto do selo Fixado",
+      "help": "Deixe vazio para “Fixado” no idioma da tela."
+    },
+    "empty_label": {
+      "label": "Texto quando não há avisos",
+      "help": "Deixe vazio para “Nenhum aviso no momento” no idioma da tela."
+    },
+    "clock_format": {
+      "label": "Relógio",
+      "options": {
+        "auto": "Padrão do idioma",
+        "24": "24 horas",
+        "12": "12 horas",
+        "off": "Ocultar relógio e data"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário",
+      "help": "Para o relógio e para o início e o fim dos avisos. Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Para as palavras do mural e as datas, por exemplo pt-BR ou pt-PT. Deixe vazio para o idioma da tela."
+    }
+  }
+}

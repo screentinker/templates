@@ -1,0 +1,66 @@
+{
+  "name": "每日一句",
+  "description": "以文字排版为主的名言屏幕：大号衬线字体的引语、作者与出处，并以您的语言显示今天的日期。适合大堂、员工休息室、学校走廊或咖啡机旁的屏幕。",
+  "params": {
+    "eyebrow": {
+      "label": "小标题",
+      "help": "引语上方的简短标签。",
+      "default": "每日一句"
+    },
+    "quote": {
+      "label": "引语",
+      "help": "不要加引号：大引号会自动绘制。约 130 个字符以内。",
+      "default": "我们的生命并不短暂，只是我们浪费了太多。"
+    },
+    "attribution": {
+      "label": "作者",
+      "default": "塞涅卡"
+    },
+    "attribution_detail": {
+      "label": "出处或身份",
+      "help": "书名、身份或年份。留空则隐藏。",
+      "default": "《论生命之短暂》，约公元49年"
+    },
+    "show_date": {
+      "label": "显示今天的日期",
+      "help": "屏幕的实时日期，使用下方的语言和时区。"
+    },
+    "date_format": {
+      "label": "日期样式",
+      "options": {
+        "weekday": "星期、日和月",
+        "long": "含年份的完整日期",
+        "short": "短日期",
+        "numeric": "仅数字"
+      }
+    },
+    "timezone": {
+      "label": "日期时区",
+      "help": "“今天”按哪个时区计算。留空则使用屏幕自己的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "日期的语言，例如 zh-CN、en-US 或 de-DE。留空则使用屏幕的语言。"
+    },
+    "show_logo": {
+      "label": "显示标志",
+      "help": "关闭后隐藏标志，其位置留空。"
+    },
+    "logo": {
+      "label": "标志",
+      "help": "背景透明的 PNG 或 SVG，浅色，适合默认的深色背景。"
+    },
+    "accent": {
+      "label": "强调色",
+      "help": "大引号、小标题、分隔线和装饰。"
+    },
+    "background": {
+      "label": "背景色",
+      "help": "位于一切之后。"
+    },
+    "text_color": {
+      "label": "文字颜色",
+      "help": "引语和作者名。"
+    }
+  }
+}

@@ -25,6 +25,7 @@ itself whenever the sheet changes.
 | Winner | select | highest score | *Lowest score wins* for lap times, golf and the like. |
 | Score prefix | text (4) | `$` | Shown before every score. Empty for plain numbers. |
 | Score suffix | text (12) | none | Shown after every score, e.g. `pts`, `km`, `%`. |
+| Language | locale | the screen's language | The language of the board's own words and how numbers are written: `en-US` shows `48,250.50`, `de-DE` `48.250,50`, `fr-FR` `48 250,50`. |
 | Show at most | number 3–20 | 10 | Places shown, podium included. A small screen shows fewer rows rather than cramming them. |
 | Show bars | checkbox | on | The progress bar under each name below the podium. |
 | Heading font | select | Archivo | Archivo (display), Oswald (condensed) or Inter (clean). |
@@ -38,6 +39,8 @@ two) as the most precise score. When both a comma and a dot appear, the last one
 point (`1.234,5` is 1234.5). A score that isn't a number is listed at the bottom, as typed.
 
 Equal scores share a place (1, 2, 2, 4), and keep the order they were typed or listed in.
+On a screen whose language writes decimals with a comma (German, French …), `48.250` is read as
+forty-eight thousand; elsewhere it stays 48.25. Plain digits (`48250`) are never ambiguous.
 
 ## Using a Google Sheet
 
@@ -45,6 +48,17 @@ Equal scores share a place (1, 2, 2, 4), and keep the order they were typed or l
 2. In ScreenTinker, *Data sources → New → Google Sheets* and point it at the sheet.
 3. Choose that source for *Scores data source*. If your headings differ, type them into the column
    settings.
+
+## Languages
+
+The settings are translated in the dashboard into German, Spanish, French, Hindi, Italian,
+Japanese, Dutch, Portuguese and Chinese (`locales/<lang>.json`); in those languages the example
+title, period, subtitles, column names and currency prefix are translated too (names stay as they
+are). The board's one built-in sentence (*No scores yet.*) follows the *Language* setting, or the
+screen's language when it is empty, in the same ten languages (English otherwise). Scores and
+places are written with that language's number format. Headings in another script (`名前`, `नाम`)
+work as column names. The bundled fonts are Latin only; Japanese, Chinese and Hindi use the
+player's Noto fonts.
 
 ## Layouts
 
@@ -55,5 +69,15 @@ than about 3:1) the plinths are dropped and the title, the top three and the lis
 
 `index.html`, `style.css`, `app.js` — all inlined by the server at render time. `fonts/` holds the
 Archivo, Inter and Oswald latin subsets (SIL OFL 1.1, see `NOTICE`).
+
+## Changes
+
+- **1.1.0** — translations of the settings (nine languages), the *Number format* setting is now
+  *Language* and also picks the language of the built-in words, fallback fonts for Japanese,
+  Chinese and Hindi, `48.250` read as thousands on comma-decimal screens, column names in any
+  script.
+- **1.0.1** — scores were always formatted as US English (`48,250`); they now follow the new
+  *Number format* setting, or the screen's language when it is empty.
+- **1.0.0** — first release.
 
 Licence: MIT (see `LICENSE`); bundled fonts OFL-1.1.

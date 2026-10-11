@@ -1,0 +1,146 @@
+{
+  "name": "Wachttijdenbord",
+  "description": "Geschatte wachttijden voor een praktijk, spoedpost, apotheek of balie: elke dienst met de wachttijd in minuten en de status Open, Druk of Gesloten in duidelijke kleuren, een bijgewerkt-tijdstip, een geruststellende mededeling en een herinnering om u te melden. Medewerkers werken een Google Sheet of handmatige tabel bij vanaf de telefoon, of typen de lijst in.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "default": "Gezondheidscentrum Northwind"
+    },
+    "subtitle": {
+      "label": "Ondertitel",
+      "default": "Geschatte wachttijden",
+      "help": "Eén regel onder de titel. Leeg laten om te verbergen."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Naast de titel. Een wit of transparant logo past bij de gekleurde kop."
+    },
+    "services": {
+      "label": "Diensten",
+      "help": "Eén per regel: Dienst | Wachttijd in minuten | Status | Opmerking. Status is Open, Druk of Gesloten (leeg = op basis van de wachttijd). Gebruikt zonder gegevensbron.",
+      "default": "Spoedzorg | 45 | Druk | Begane grond · Rode lijn\nHuisarts | 20 | | Begane grond · Kamers 1–6\nApotheek | 10 | | Recepten · Balie 3\nBloedprikken | 15 | | 1e etage · Zonder afspraak\nRöntgen | 55 | Druk | 1e etage · Oostvleugel\nKleine letsels | 25 | | Begane grond · Kamer 8\nVaccinaties | 0 | | 2e etage · Griep, reizen\nFysiotherapie | | Gesloten | Vandaag op afspraak"
+    },
+    "waits": {
+      "label": "Gegevensbron voor wachttijden (optioneel)",
+      "help": "Een Google Sheet, CSV of handmatige tabel met één rij per dienst. Gekozen vervangt die de diensten die hierboven getypt zijn."
+    },
+    "service_col": {
+      "label": "Kolom dienst",
+      "default": "Dienst",
+      "help": "De kop in uw sheet. Ontbreekt die, dan wordt „Service” en daarna de eerste kolom gelezen."
+    },
+    "wait_col": {
+      "label": "Kolom wachttijd",
+      "default": "Wachttijd",
+      "help": "Minuten als getal (25), bereik (15-20) of u:mm (1:30). Andere tekst verschijnt zoals getypt. Ontbreekt die, dan wordt „Wait” gelezen."
+    },
+    "status_col": {
+      "label": "Kolom status",
+      "default": "Status",
+      "help": "Open, Druk of Gesloten. Een lege cel volgt uit de wachttijd. Ontbreekt die, dan wordt „Status” gelezen."
+    },
+    "note_col": {
+      "label": "Kolom opmerking",
+      "default": "Opmerking",
+      "help": "Optionele kleine regel onder de dienst: waarheen, of wanneer weer open. Ontbreekt die, dan wordt „Note” gelezen."
+    },
+    "notice": {
+      "label": "Mededeling",
+      "default": "Tijden zijn een schatting. We helpen u op urgentie, niet op volgorde van aankomst. Voelt u zich slechter tijdens het wachten? Meld het direct bij een medewerker.",
+      "help": "Een geruststellende mededeling onderaan. Leeg laten om te verbergen."
+    },
+    "checkin": {
+      "label": "Aanmeldherinnering",
+      "default": "Meld u bij de receptie",
+      "help": "Uitgelichte herinnering in de voettekst. Leeg laten om te verbergen."
+    },
+    "order": {
+      "label": "Volgorde",
+      "help": "Bij sorteren staan gesloten diensten altijd onderaan.",
+      "options": {
+        "listed": "Zoals in de lijst",
+        "shortest": "Kortste wachttijd eerst",
+        "longest": "Langste wachttijd eerst"
+      }
+    },
+    "busy_minutes": {
+      "label": "Druk vanaf (minuten)",
+      "help": "Een dienst zonder status wordt als Druk getoond als de wachttijd deze waarde bereikt."
+    },
+    "open_label": {
+      "label": "Tekst: open",
+      "help": "Leeg = het ingebouwde woord in de taal van het scherm („Open”)."
+    },
+    "busy_label": {
+      "label": "Tekst: druk",
+      "help": "Leeg = het ingebouwde woord in de taal van het scherm („Druk”)."
+    },
+    "closed_label": {
+      "label": "Tekst: gesloten",
+      "help": "Leeg = het ingebouwde woord in de taal van het scherm („Gesloten”)."
+    },
+    "nowait_label": {
+      "label": "Tekst: geen wachttijd",
+      "help": "Getoond in plaats van de tijd als de wachttijd 0 is. Leeg = het ingebouwde woord in de taal van het scherm („Direct”)."
+    },
+    "updated_label": {
+      "label": "Tekst: bijgewerkt",
+      "help": "Voor de tijd; zet {time} waar de tijd moet komen. Leeg = de ingebouwde tekst in de taal van het scherm („Bijgewerkt {time}”)."
+    },
+    "empty_label": {
+      "label": "Tekst als er geen gegevens zijn",
+      "help": "Getoond zolang de gegevensbron nog geen rijen heeft. Leeg = de ingebouwde zin in de taal van het scherm."
+    },
+    "show_updated": {
+      "label": "Tijd van laatste bijwerking tonen"
+    },
+    "stale_minutes": {
+      "label": "Herinneren als cijfers ongewijzigd zijn sinds (minuten)",
+      "help": "Met een gegevensbron wordt de bijgewerkt-tijd oranje als zo lang geen cijfer is veranderd (ook bij een sync zonder wijziging), als herinnering voor medewerkers. 0 = uit."
+    },
+    "show_meter": {
+      "label": "Wachtbalk bij elke dienst tonen"
+    },
+    "theme": {
+      "label": "Thema",
+      "options": {
+        "light": "Licht",
+        "dark": "Donker"
+      }
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "De kopbalk en de aanmeldherinnering."
+    },
+    "open_color": {
+      "label": "Kleur open"
+    },
+    "busy_color": {
+      "label": "Kleur druk"
+    },
+    "closed_color": {
+      "label": "Kleur gesloten"
+    },
+    "clock_format": {
+      "label": "Klok",
+      "options": {
+        "12": "12-uurs",
+        "24": "24-uurs",
+        "auto": "Volgens de taal",
+        "off": "Klok verbergen"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone",
+      "help": "Leeg = de klok van het scherm."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De woorden, tijden en getallen op het scherm, bijvoorbeeld nl of nl-BE. Leeg = de taal van het scherm."
+    },
+    "page_seconds": {
+      "label": "Seconden per pagina",
+      "help": "Alleen gebruikt als er te veel diensten zijn voor één goed leesbaar scherm."
+    }
+  }
+}

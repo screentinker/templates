@@ -1,0 +1,49 @@
+{
+  "name": "Écran d'attente — logo et horloge",
+  "description": "Un écran d'attente pour les moments sans programmation : votre logo, une grande horloge en direct et la date du jour sur un fond calme avec un halo doux, dans votre fuseau horaire et votre langue. Un écran qui reste soigné entre deux campagnes.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG à fond transparent, clair sur foncé. Affiché centré en haut."
+    },
+    "footer": {
+      "label": "Ligne du bas",
+      "help": "Une ligne courte en bas : un lieu, un étage, un contact. Laissez vide pour ne rien afficher.",
+      "default": "Northwind Studio  ·  Accueil, 3e étage"
+    },
+    "clock_format": {
+      "label": "Format de l'heure",
+      "options": {
+        "12": "12 heures",
+        "24": "24 heures"
+      }
+    },
+    "date_format": {
+      "label": "Style de date",
+      "options": {
+        "weekday": "Jour de la semaine, jour et mois",
+        "long": "Date complète avec l'année",
+        "short": "Date courte",
+        "numeric": "Chiffres seulement"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire",
+      "help": "Le lieu pour lequel l'heure et la date s'affichent. Laissez vide pour utiliser l'horloge de l'écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La façon d'écrire l'heure et la date, par ex. en-GB, de-DE ou fr-CA. Laissez vide pour la langue de l'écran."
+    },
+    "accent": {
+      "label": "Couleur d'accent",
+      "help": "Le halo derrière l'horloge et le petit filet."
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    }
+  }
+}

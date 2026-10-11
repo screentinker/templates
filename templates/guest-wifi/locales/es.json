@@ -1,0 +1,80 @@
+{
+  "name": "Wi-Fi para invitados",
+  "description": "El nombre y la contraseña de tu red de invitados, grandes y legibles, junto a un código QR que conecta con un solo escaneo, con los caracteres especiales bien escapados para que funcione. Para hoteles, cafeterías, clínicas y oficinas; en pantalla completa, póster vertical o franja fina. No descarga nada: el código se dibuja en pantalla.",
+  "params": {
+    "ssid": {
+      "label": "Nombre de la red (SSID)",
+      "help": "Tal como lo muestran tus dispositivos, con mayúsculas y espacios."
+    },
+    "password": {
+      "label": "Contraseña",
+      "help": "Se muestra a propósito: es una red de invitados. Escríbela tal cual; los caracteres como ; : , \" y \\ se escapan en el código QR automáticamente."
+    },
+    "security": {
+      "label": "Seguridad",
+      "options": {
+        "WPA": "WPA / WPA2 / WPA3 (la mayoría de las redes)",
+        "WEP": "WEP (routers antiguos)",
+        "nopass": "Abierta, sin contraseña"
+      }
+    },
+    "hidden": {
+      "label": "La red está oculta",
+      "help": "Actívalo solo si la red no emite su nombre."
+    },
+    "show_password": {
+      "label": "Mostrar la contraseña como texto",
+      "help": "Desactivado, solo se ve el código QR; el código sigue conteniendo la contraseña."
+    },
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "default": "Wi-Fi gratuito"
+    },
+    "headline": {
+      "label": "Titular",
+      "default": "Sigue conectado mientras estás con nosotros"
+    },
+    "hint": {
+      "label": "Indicación bajo el código",
+      "help": "Déjalo vacío para ocultarla.",
+      "default": "Apunta aquí con la cámara"
+    },
+    "ssid_label": {
+      "label": "Etiqueta del nombre de la red",
+      "help": "Déjalo vacío para usar la palabra «Red» en el idioma de la pantalla."
+    },
+    "password_label": {
+      "label": "Etiqueta de la contraseña",
+      "help": "Déjalo vacío para usar la palabra «Contraseña» en el idioma de la pantalla."
+    },
+    "open_text": {
+      "label": "Texto para una red abierta",
+      "help": "Déjalo vacío para usar «Sin contraseña» en el idioma de la pantalla."
+    },
+    "hidden_text": {
+      "label": "Texto cuando no se muestra la contraseña",
+      "help": "Déjalo vacío para usar «Escanea el código para conectarte» en el idioma de la pantalla."
+    },
+    "footer": {
+      "label": "Pie de página",
+      "default": "¿Necesitas ayuda? Pregunta en recepción; estaremos encantados de ayudarte."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG con fondo transparente. Déjalo vacío para no mostrar logotipo."
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "El idioma de las palabras que escribe la propia pantalla (etiquetas, mensajes). Déjalo vacío para usar el idioma de la pantalla."
+    }
+  }
+}

@@ -8,19 +8,21 @@
   --bg: #17120F;
   --accent: #D9A441;
   --text: #F4EDE4;
-  --display: 'Bitter', Georgia, serif;
+  /* The bundled fonts are Latin only: Japanese, Chinese and Hindi fall through to the Noto families. */
+  --sans: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
+  --display: 'Bitter', Georgia, "Noto Serif", "Noto Serif CJK JP", "Noto Serif CJK SC", "Noto Serif Devanagari", serif;
   /* One unit that works in every shape: 1% of the height, but no more than 0.9% of the width (portrait). */
   --u: min(1vh, 0.9vw);
 }
-body[data-font="archivo"] { --display: 'Archivo', 'Inter', sans-serif; }
-body[data-font="oswald"]  { --display: 'Oswald', 'Inter', sans-serif; }
-body[data-font="inter"]   { --display: 'Inter', system-ui, sans-serif; }
+body[data-font="archivo"] { --display: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; }
+body[data-font="oswald"]  { --display: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; }
+body[data-font="inter"]   { --display: var(--sans); }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; overflow: hidden; }
 body {
   background: var(--bg); color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
   cursor: none;
 }
@@ -92,7 +94,7 @@ body {
 
 .it { break-inside: avoid; -webkit-column-break-inside: avoid; padding: .42em 0 .5em; }
 .row { display: flex; align-items: baseline; }
-.name { flex: 0 1 auto; font-weight: 650; font-size: 1em; line-height: 1.2; min-width: 0; overflow-wrap: anywhere; }
+.name { flex: 0 1 auto; font-weight: 650; font-size: 1em; line-height: 1.2; min-width: 0; overflow-wrap: anywhere; -webkit-hyphens: auto; hyphens: auto; }
 .pill {
   display: inline-block; white-space: nowrap; margin-left: .15em; padding: .12em .5em .1em;
   font-size: .52em; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
@@ -104,7 +106,7 @@ body {
   flex: none; font-family: var(--display); font-weight: 700; font-size: 1.02em;
   color: var(--accent); font-variant-numeric: tabular-nums; letter-spacing: .01em;
 }
-.desc { margin-top: .22em; font-size: .64em; line-height: 1.35; opacity: .62; }
+.desc { margin-top: .22em; font-size: .64em; line-height: 1.35; opacity: .62; overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
 .desc:empty { display: none; }
 
 .it.soldout .name, .it.soldout .desc { opacity: .42; }
@@ -137,3 +139,11 @@ body.strip .foot { display: none; }
 
 /* ---------- empty ---------- */
 .empty-note { font-size: calc(var(--u) * 3); opacity: .6; }
+
+/* ---------- scripts that need different typography ---------- */
+/* Letter-spacing pulls Devanagari letters off their headline stroke: none for Hindi. */
+:lang(hi) .cat, :lang(hi) .cat .cont, :lang(hi) .pill, :lang(hi) .subtitle, :lang(hi) .footer-text { letter-spacing: 0; }
+/* Wide tracking spaces kana and hanzi apart one by one: keep it small in Japanese and Chinese. */
+:lang(ja) .cat, :lang(zh) .cat, :lang(ja) .pill, :lang(zh) .pill { letter-spacing: .04em; }
+/* Japanese has no spaces: break between phrases, not inside a word, where the player supports it. */
+:lang(ja) .name, :lang(ja) .desc, :lang(ja) .subtitle { word-break: auto-phrase; }

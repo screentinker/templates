@@ -1,0 +1,97 @@
+{
+  "name": "Das Team stellt sich vor (Hochformat)",
+  "description": "Stellen Sie jemanden dem ganzen Haus vor: ein Farbfeld mit Foto, Name und Funktion, eine kurze Antwort in eigenen Worten und ein Fun Fact auf zwei klaren Karten. Hochformat 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Am besten eine PNG- oder SVG-Datei mit transparentem Hintergrund."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Ein Foto von Kopf und Schultern, passend zum Rahmen zugeschnitten. Quadratische Fotos eignen sich am besten."
+    },
+    "show_photo": {
+      "label": "Foto anzeigen",
+      "help": "Aus zeigt stattdessen einen Kreis mit den Initialen, für alle, die lieber kein Foto zeigen möchten."
+    },
+    "initials": {
+      "label": "Initialen",
+      "help": "Erscheinen im Kreis, wenn das Foto aus ist. Ein oder zwei Buchstaben."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Über dem Namen. In Großbuchstaben am besten lesbar.",
+      "default": "DAS TEAM STELLT SICH VOR"
+    },
+    "name": {
+      "label": "Name",
+      "help": "Eine Zeile, bis zu 26 Zeichen. In normaler Groß- und Kleinschreibung eingeben; GROSSBUCHSTABEN sind breiter und passen evtl. nicht."
+    },
+    "role": {
+      "label": "Funktion",
+      "help": "Berufsbezeichnung, Team, Klasse oder Standort. Längere Angaben brechen in eine zweite Zeile um.",
+      "default": "Leiter Lagerbetrieb, Standort Leeds"
+    },
+    "show_quote": {
+      "label": "Zitat anzeigen",
+      "help": "Aus blendet das Zitat und das Anführungszeichen aus."
+    },
+    "quote": {
+      "label": "Zitat",
+      "help": "Ein, zwei Sätze in eigenen Worten. Ohne Anführungszeichen.",
+      "default": "Fragt mich nach der Nacht, in der wir bei Stromausfall 14.000 Pakete bewegt haben. Spoiler: Stirnlampen und viel Tee."
+    },
+    "quote_mark": {
+      "label": "Anführungszeichen",
+      "help": "Das große Zierzeichen am Zitat. Nehmen Sie das in Ihrer Sprache übliche, z. B. „ » oder “.",
+      "default": "“"
+    },
+    "show_fact": {
+      "label": "Fun Fact anzeigen",
+      "help": "Aus blendet Bezeichnung und Text des Fun Facts aus."
+    },
+    "fact_label": {
+      "label": "Fun-Fact-Bezeichnung",
+      "help": "Eine kurze Bezeichnung, z. B. GUT ZU WISSEN oder FRAG MICH NACH.",
+      "default": "NACH FEIERABEND"
+    },
+    "fun_fact": {
+      "label": "Fun Fact",
+      "help": "Ein oder zwei kurze Sätze.",
+      "default": "Trainiert eine U11-Fußballmannschaft und sucht den besten Jollof-Reis in Yorkshire."
+    },
+    "show_badge": {
+      "label": "Abzeichen anzeigen"
+    },
+    "badge": {
+      "label": "Text des Abzeichens",
+      "help": "Ein Monat, ein Startdatum, ein Team oder ein Jubiläum. In Großbuchstaben am besten lesbar.",
+      "default": "LOGISTIK  ·  6 JAHRE"
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Abzeichen, kleine Überschrift, Anführungszeichen und Kartenbeschriftungen."
+    },
+    "panel_color": {
+      "label": "Farbe des Farbfelds",
+      "help": "Das große Farbfeld hinter dem Foto. Heller Text und Logo stehen darauf."
+    },
+    "highlight": {
+      "label": "Farbe des Initialenkreises",
+      "help": "Der Kreis hinter den Initialen."
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "card_color": {
+      "label": "Kartenfarbe",
+      "help": "Die beiden Karten und der Ring um das Foto."
+    },
+    "initials_color": {
+      "label": "Farbe der Initialen"
+    }
+  }
+}

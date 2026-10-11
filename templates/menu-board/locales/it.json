@@ -1,0 +1,104 @@
+{
+  "name": "Menù",
+  "description": "Un menù per bar, ristorante o locale che si impagina da solo: piatti raggruppati per categoria, prezzi allineati, etichette come V o Novità, articoli esauriti in grigio. Scrivi il menù, oppure collega un foglio Google o una tabella manuale e cambia i prezzi senza toccare lo schermo.",
+  "params": {
+    "title": {
+      "label": "Titolo"
+    },
+    "subtitle": {
+      "label": "Sottotitolo",
+      "help": "Una riga sotto il titolo. Lascia vuoto per nasconderla.",
+      "default": "Tostato da noi · Latte d’avena senza sovrapprezzo"
+    },
+    "footer": {
+      "label": "Riga a piè di pagina",
+      "help": "Testo piccolo in basso. Lascia vuoto per nasconderlo.",
+      "default": "Chiedeteci degli allergeni · Prezzi IVA inclusa"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Mostrato accanto al titolo."
+    },
+    "items": {
+      "label": "Voci del menù",
+      "help": "Una voce per riga: Articolo | Prezzo | Descrizione | Categoria | Etichetta. Usato quando non è collegata una fonte dati.",
+      "default": "Espresso | 2.80 | Doppio, note di cacao e ciliegia | Caffè |\nFlat White | 3.60 | Latte vellutato, doppio ristretto | Caffè | Popolare\nCold Brew | 4.20 | Infuso a freddo 18 ore | Caffè | Novità\nEarl Grey | 3.00 | Bergamotto, foglia sfusa | Tè | V\nNodo alla cannella | 3.40 | Zucchero al cardamomo | Dolci | Popolare\nFinancier | 3.10 | Mandorle, senza glutine | Dolci | Esaurito"
+    },
+    "menu": {
+      "label": "Fonte dati del menù (facoltativa)",
+      "help": "Un foglio Google, CSV, elenco REST o tabella manuale. Se ha una colonna Articolo, sostituisce le voci scritte sopra."
+    },
+    "item_col": {
+      "label": "Colonna articolo",
+      "help": "Le intestazioni di colonna della tua fonte. Se una non si trova, si prova quella inglese (Item, Price, Description, Category, Tag).",
+      "default": "Articolo"
+    },
+    "price_col": {
+      "label": "Colonna prezzo",
+      "default": "Prezzo"
+    },
+    "desc_col": {
+      "label": "Colonna descrizione",
+      "default": "Descrizione"
+    },
+    "category_col": {
+      "label": "Colonna categoria",
+      "default": "Categoria"
+    },
+    "tag_col": {
+      "label": "Colonna etichetta",
+      "help": "Una breve etichetta a pillola. «Esaurito» rende grigia la voce e barra il prezzo.",
+      "default": "Etichetta"
+    },
+    "currency": {
+      "label": "Simbolo di valuta",
+      "default": "€"
+    },
+    "currency_position": {
+      "label": "Posizione della valuta",
+      "options": {
+        "auto": "Come si usa nella lingua dello schermo",
+        "before": "Prima del prezzo ($3.50)",
+        "after": "Dopo il prezzo (3,50 €)"
+      }
+    },
+    "decimals": {
+      "label": "Decimali",
+      "options": {
+        "2": "Sempre due (3,50)",
+        "auto": "Solo se servono (3,5, 4)",
+        "0": "Nessuno (4)"
+      }
+    },
+    "decimal_comma": {
+      "label": "Usa sempre la virgola decimale (3,50)",
+      "help": "Disattivato: il separatore decimale segue la lingua dello schermo (3.50 in inglese, 3,50 in italiano)."
+    },
+    "font": {
+      "label": "Carattere dei titoli",
+      "options": {
+        "bitter": "Bitter (con grazie)",
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (stretto)",
+        "inter": "Inter (pulito)"
+      }
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "page_seconds": {
+      "label": "Secondi per pagina",
+      "help": "Usato solo quando il menù è troppo lungo per stare in uno schermo a una dimensione leggibile."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua del formato dei prezzi e delle poche parole che il menù scrive da sé. Lascia vuoto per la lingua dello schermo."
+    }
+  }
+}

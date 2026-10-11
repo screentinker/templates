@@ -1,0 +1,59 @@
+{
+  "name": "Tela de espera — degradê calmo com hora e data",
+  "description": "Uma tela de espera tranquila: um relógio grande e leve e a data sobre um degradê suave, com um logo pequeno e uma linha de texto opcionais. Seis degradês incluídos, seu fuso horário e idioma. Descansa a vista em telas que ficam horas paradas.",
+  "params": {
+    "palette": {
+      "label": "Degradê",
+      "help": "O fundo. Os seis são escuros o bastante para texto claro.",
+      "options": {
+        "tpl:bg-dusk.svg": "Entardecer (índigo a rosa)",
+        "tpl:bg-ocean.svg": "Oceano (marinho a verde-azulado)",
+        "tpl:bg-forest.svg": "Floresta (pinho a musgo)",
+        "tpl:bg-ember.svg": "Brasa (ameixa a cobre)",
+        "tpl:bg-aurora.svg": "Aurora (noite a verde)",
+        "tpl:bg-slate.svg": "Ardósia (grafite a aço)"
+      }
+    },
+    "clock_format": {
+      "label": "Formato da hora",
+      "options": {
+        "12": "12 horas",
+        "24": "24 horas"
+      }
+    },
+    "date_format": {
+      "label": "Estilo da data",
+      "options": {
+        "weekday": "Dia da semana, dia e mês",
+        "long": "Data completa com ano",
+        "short": "Data curta",
+        "numeric": "Só números"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário",
+      "help": "O lugar a que a hora e a data se referem. Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Como a hora e a data são escritas, ex.: en-GB, de-DE ou fr-CA. Deixe vazio para usar o idioma da tela."
+    },
+    "message": {
+      "label": "Linha de texto",
+      "help": "Uma linha pequena embaixo. Deixe vazio para nenhuma.",
+      "default": "Northwind Studio  ·  Visitantes, registrem-se na recepção"
+    },
+    "show_logo": {
+      "label": "Mostrar o logo",
+      "help": "Um logo pequeno embaixo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Um PNG ou SVG claro (branco) com fundo transparente fica melhor sobre o degradê."
+    },
+    "text_color": {
+      "label": "Cor do texto",
+      "help": "Relógio, data e linha de texto. Mantenha uma cor clara: todos os degradês são escuros."
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Dia do obrigado",
+  "description": "Uma tela alegre de agradecimento para o dia da equipe, dos voluntários, dos clientes ou dos professores: formas geométricas sobre creme, uma grande manchete de agradecimento, uma mensagem com os números que merecem festa e um obrigado em vários idiomas.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "A linha curta acima da manchete. Deixe vazio para ocultar.",
+      "default": "DIA DE AGRADECER A EQUIPE"
+    },
+    "headline": {
+      "label": "Manchete",
+      "help": "Duas linhas são reservadas para ela: cabem cerca de 24 caracteres. Uma manchete mais longa passa para a terceira linha e invade a mensagem.",
+      "default": "Obrigado por tudo"
+    },
+    "message": {
+      "label": "Mensagem",
+      "help": "Uma ou duas frases abaixo da manchete; cabem até 200 caracteres. Uma quebra de linha começa uma nova linha.",
+      "default": "Do turno da noite à recepção: 1.284 pedidos enviados, 96% de avaliações cinco estrelas e nosso melhor trimestre. Hoje o almoço é por nossa conta."
+    },
+    "date_line": {
+      "label": "Linha da data",
+      "help": "Texto livre, digitado como deve aparecer: uma data, um horário e local, ou uma assinatura.",
+      "default": "12:30  ·  ÁTRIO  ·  TODOS SÃO BEM-VINDOS"
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se você não tiver logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG largo com fundo transparente (cerca de 3,4 : 1 preenche a área; outros formatos são ajustados dentro dela). Substitua o logotipo provisório da Northwind."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "accent2": {
+      "label": "Segunda cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "thanks_line": {
+      "label": "Linha de baixo",
+      "help": "Letras pequenas abaixo da linha da data; por padrão, obrigado em vários idiomas.",
+      "default": "Thank you  ·  Merci  ·  Danke  ·  Gracias  ·  Grazie  ·  Tack  ·  Asante"
+    }
+  }
+}

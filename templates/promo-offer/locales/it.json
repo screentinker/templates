@@ -1,0 +1,145 @@
+{
+ "name": "Offerta promozionale",
+ "description": "Una schermata per vendite lampo e promozioni: titolo grande, l’offerta, il prezzo con il vecchio prezzo barrato e il risparmio calcolato per te, e un conto alla rovescia dal vivo che passa da solo a «offerta terminata». Aggiungi una foto del prodotto e un codice QR per il tuo negozio. Tre stili: retail deciso, pulito e minimal, caffè accogliente. Non scarica nulla.",
+ "params": {
+  "style": {
+   "label": "Stile",
+   "options": {
+    "bold": "Retail deciso",
+    "minimal": "Pulito e minimal",
+    "cafe": "Caffè accogliente"
+   }
+  },
+  "eyebrow": {
+   "label": "Occhiello",
+   "help": "Una breve etichetta sopra il titolo. Lascia vuoto per nasconderla.",
+   "default": "Offerta lampo del weekend"
+  },
+  "headline": {
+   "label": "Titolo",
+   "default": "Cuffie wireless Aura"
+  },
+  "offer": {
+   "label": "Testo dell’offerta",
+   "help": "Una o due righe sotto il titolo. Lascia vuoto per nasconderlo.",
+   "default": "Cancellazione attiva del rumore e 40 ore di autonomia, al prezzo più basso dell’anno."
+  },
+  "price": {
+   "label": "Prezzo",
+   "help": "Un numero come 89 o 89,99 viene formattato nella tua valuta. Tutto il resto («2x1») appare così com’è. Lascia vuoto per nascondere il prezzo."
+  },
+  "was_price": {
+   "label": "Prezzo precedente",
+   "help": "Facoltativo. Appare barrato accanto al prezzo."
+  },
+  "currency": {
+   "label": "Codice valuta",
+   "help": "Un codice ISO di tre lettere: EUR, CHF, USD, GBP, JPY… Simbolo e posizione seguono la lingua. Vuoto per numeri semplici."
+  },
+  "decimals": {
+   "label": "Decimali",
+   "options": {
+    "auto": "Solo se il prezzo ha centesimi (89, 89,50)",
+    "always": "Sempre (89,00)"
+   }
+  },
+  "saving": {
+   "label": "Bollino del risparmio",
+   "help": "Calcolato da prezzo e prezzo precedente; nascosto se uno dei due non è un numero.",
+   "options": {
+    "percent": "Percentuale (Risparmi 40%)",
+    "amount": "Importo (Risparmi 60 €)",
+    "off": "Nessun bollino"
+   }
+  },
+  "saving_text": {
+   "label": "Testo del bollino",
+   "help": "{saving} viene sostituito dalla percentuale o dall’importo, es. «{saving} di sconto». Vuoto: «Risparmi {saving}» nella lingua dello schermo. Un solo - mostra solo il risparmio."
+  },
+  "ends_at": {
+   "label": "Fine dell’offerta",
+   "help": "Data e ora come 2026-11-29T23:59, o solo una data per la fine di quel giorno. Letta nel fuso orario qui sotto. Vuoto: l’offerta finisce ogni giorno a mezzanotte."
+  },
+  "timezone": {
+   "label": "Fuso orario",
+   "help": "Il fuso orario dell’ora di fine. Vuoto usa l’orologio dello schermo."
+  },
+  "locale": {
+   "label": "Lingua",
+   "help": "La lingua dei testi integrati, delle date, dei prezzi e delle unità del conto alla rovescia. Vuoto usa la lingua dello schermo."
+  },
+  "clock_format": {
+   "label": "Formato dell’ora",
+   "options": {
+    "auto": "Come preferisce la lingua",
+    "24": "24 ore",
+    "12": "12 ore"
+   }
+  },
+  "show_countdown": {
+   "label": "Mostra il conto alla rovescia"
+  },
+  "countdown_label": {
+   "label": "Testo del conto alla rovescia",
+   "help": "Vuoto: «Termina tra» nella lingua dello schermo. Un solo - lo nasconde."
+  },
+  "show_end_date": {
+   "label": "Mostra quando finisce l’offerta",
+   "help": "Una riga come «Valida fino a dom 29 nov, 23:59» sotto il conto alla rovescia."
+  },
+  "end_date_label": {
+   "label": "Testo prima della data di fine",
+   "help": "Va prima della data. Vuoto: «Valida fino a …» nella lingua dello schermo. Un solo - mostra solo la data."
+  },
+  "after_end": {
+   "label": "Quando l’offerta è finita",
+   "options": {
+    "message": "Tieni la promo e mostra il messaggio di fine",
+    "fallback": "Sostituisci tutta la promo con la riga alternativa"
+   }
+  },
+  "ended_text": {
+   "label": "Messaggio di fine",
+   "help": "Vuoto: «Questa offerta è terminata» nella lingua dello schermo."
+  },
+  "fallback_heading": {
+   "label": "Occhiello alternativo",
+   "help": "Una piccola riga sopra la riga alternativa. Vuoto mostra la riga alternativa da sola."
+  },
+  "fallback_text": {
+   "label": "Riga alternativa",
+   "help": "Appare a schermo intero dopo la fine se l’impostazione sopra lo prevede. Vuoto usa il messaggio di fine.",
+   "default": "Nuove offerte ogni venerdì. A presto!"
+  },
+  "image": {
+   "label": "Immagine del prodotto",
+   "help": "Meglio un PNG con sfondo trasparente. Lascia vuoto per una promo solo testo."
+  },
+  "qr_url": {
+   "label": "Link del codice QR",
+   "help": "Disegnato come codice QR sullo schermo. Lascia vuoto per nasconderlo."
+  },
+  "qr_label": {
+   "label": "Didascalia del codice QR",
+   "help": "Vuoto: «Scansiona e acquista» nella lingua dello schermo. Un solo - la nasconde."
+  },
+  "fine_print": {
+   "label": "Note legali",
+   "default": "Fino a esaurimento scorte. Massimo due per cliente. Non cumulabile con altre offerte. Prezzi IVA inclusa."
+  },
+  "custom_colors": {
+   "label": "Usa i miei colori",
+   "help": "No: la tavolozza dello stile. Sì: i tre colori qui sotto."
+  },
+  "background": {
+   "label": "Colore di sfondo"
+  },
+  "text_color": {
+   "label": "Colore del testo"
+  },
+  "accent": {
+   "label": "Colore d’accento",
+   "help": "Il prezzo, il bollino e il conto alla rovescia."
+  }
+ }
+}

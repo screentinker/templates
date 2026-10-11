@@ -1,0 +1,164 @@
+{
+  "name": "Tage seit dem letzten Vorfall",
+  "description": "Sicherheitstafel für Werk, Lager oder Baustelle: große Zahl der Tage (oder Stunden) seit dem letzten Vorfall, bisheriger Rekord, Ziel-Anzeige in Grün/Gelb/Rot, PSA-Schilder und wechselnde Sicherheitshinweise. Am Tag eines Vorfalls wird sie rot. Zurücksetzen per Google-Tabelle möglich.",
+  "params": {
+    "site_name": {
+      "label": "Standortname",
+      "default": "Northwind Logistics · Lager Riverside"
+    },
+    "last_incident": {
+      "label": "Datum des letzten Vorfalls",
+      "help": "JJJJ-MM-TT oder JJJJ-MM-TT HH:MM für eine genaue Uhrzeit (in der Zeitzone unten). Eine verbundene Datenquelle hat Vorrang."
+    },
+    "incidents": {
+      "label": "Datenquelle für Vorfälle (optional)",
+      "help": "Eine Google-Tabelle oder manuelle Tabelle mit einer Spalte für das Datum des letzten Vorfalls. Das jüngste Datum der Spalte zählt."
+    },
+    "date_col": {
+      "label": "Datumsspalte"
+    },
+    "best_col": {
+      "label": "Spalte für den Rekord (optional)",
+      "help": "Eine Spalte mit der bisher längsten Serie in Tagen. Wird ignoriert, wenn die Quelle sie nicht hat."
+    },
+    "date_order": {
+      "label": "Datumsangaben wie 03/04/2026 sind",
+      "options": {
+        "dmy": "Tag zuerst (3. April 2026)",
+        "mdy": "Monat zuerst (4. März 2026)"
+      }
+    },
+    "count_unit": {
+      "label": "Zählen in",
+      "options": {
+        "days": "Tagen",
+        "days_hours": "Tagen und Stunden",
+        "hours": "Stunden",
+        "minutes": "Minuten"
+      }
+    },
+    "unit_label": {
+      "label": "Einheit",
+      "help": "Leer lassen für das Wort in der gewählten Sprache (Tage, days, jours ...)."
+    },
+    "headline": {
+      "label": "Zeile unter der Zahl",
+      "default": "ohne Arbeitsunfall mit Ausfallzeit"
+    },
+    "since_label": {
+      "label": "Bezeichnung vor dem Vorfallsdatum",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "incident_today_label": {
+      "label": "Anzeige am Tag eines Vorfalls",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "incident_today_note": {
+      "label": "Zeile darunter an diesem Tag",
+      "default": "Bereich sichern, Vorfall melden, aufeinander achten."
+    },
+    "best_record": {
+      "label": "Bisheriger Rekord (Tage)"
+    },
+    "best_label": {
+      "label": "Überschrift: Rekord",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "new_record_label": {
+      "label": "Anzeige bei neuem Rekord",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "target_days": {
+      "label": "Ziel (Tage)"
+    },
+    "target_label": {
+      "label": "Überschrift: Ziel",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "amber_days": {
+      "label": "Gelb ab (Tage)",
+      "help": "Darunter ist die Tafel rot."
+    },
+    "green_days": {
+      "label": "Grün ab (Tage)"
+    },
+    "status_green": {
+      "label": "Statustext: Grün",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "status_amber": {
+      "label": "Statustext: Gelb",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "status_red": {
+      "label": "Statustext: Rot",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "messages": {
+      "label": "Sicherheitshinweise",
+      "help": "Einer pro Zeile. Sie wechseln am unteren Rand. Leer lassen, um die Leiste auszublenden.",
+      "default": "Jeden Beinahe-Unfall melden. So bleiben wir bei null.\nStaplerzone: Fußgänger nur auf den markierten Wegen.\nDrei-Punkt-Kontakt auf jeder Leiter und Stufe.\nEtwas ausgelaufen? Stoppen, absperren, melden.\nAus den Beinen heben und ab 25 kg Hilfe holen.\nMüde oder unwohl? Sag es deiner Schichtleitung."
+    },
+    "message_seconds": {
+      "label": "Sekunden pro Hinweis"
+    },
+    "ppe_heading": {
+      "label": "Überschrift: PSA-Schilder",
+      "help": "Leer lassen für den eingebauten Text in der Sprache des Bildschirms."
+    },
+    "ppe_labels": {
+      "label": "PSA-Bezeichnungen",
+      "help": "Sechs Namen, getrennt durch |, in dieser Reihenfolge: Helm, Schutzbrille, Warnweste, Handschuhe, Schuhe, Gehörschutz. Leere Namen nutzen die eingebauten."
+    },
+    "ppe_hard_hat": {
+      "label": "PSA zeigen: Helm"
+    },
+    "ppe_goggles": {
+      "label": "PSA zeigen: Schutzbrille"
+    },
+    "ppe_hivis": {
+      "label": "PSA zeigen: Warnweste"
+    },
+    "ppe_gloves": {
+      "label": "PSA zeigen: Handschuhe"
+    },
+    "ppe_boots": {
+      "label": "PSA zeigen: Sicherheitsschuhe"
+    },
+    "ppe_ear": {
+      "label": "PSA zeigen: Gehörschutz"
+    },
+    "green_color": {
+      "label": "Farbe Grün"
+    },
+    "amber_color": {
+      "label": "Farbe Gelb"
+    },
+    "red_color": {
+      "label": "Farbe Rot"
+    },
+    "accent": {
+      "label": "Farbe der Warnstreifen"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "clock_format": {
+      "label": "Uhr",
+      "options": {
+        "auto": "Wie die Sprache",
+        "24": "24 Stunden",
+        "12": "12 Stunden",
+        "off": "Uhr ausblenden"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone des Standorts",
+      "help": "Hier beginnt um Mitternacht ein neuer Tag. Leer lassen für die Uhr des Bildschirms."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wörter, Daten und Zahlen auf dem Bildschirm, zum Beispiel de-DE oder de-CH. Leer lassen für die Sprache des Bildschirms."
+    }
+  }
+}

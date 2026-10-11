@@ -1,0 +1,107 @@
+{
+  "name": "1+1 gratis-promo (staand)",
+  "description": "Staand (9:16). Een opvallend 1+1-scherm voor een café, bakker of winkel: de actie in drie grote regels, waarvoor hij geldt, een ronde sticker op een gekleurd vlak en een optionele aftelklok tot de laatste dag.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Een min of meer vierkante PNG of SVG. Het meegeleverde embleem is een voorbeeld; vervang het door je eigen logo."
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt (een leeg logo toont anders een gestippeld kader)."
+    },
+    "brand": {
+      "label": "Winkelnaam",
+      "help": "Naast het logo. Laat leeg als je logo de naam al bevat."
+    },
+    "eyebrow": {
+      "label": "Kopje",
+      "default": "ALLEEN DEZE WEEK"
+    },
+    "line1": {
+      "label": "Actie, eerste regel",
+      "help": "De actie staat in drie grote regels, bijv. \"Eén kopen,\" / \"één erbij\" / \"GRATIS\".",
+      "default": "Eén kopen,"
+    },
+    "line2": {
+      "label": "Actie, tweede regel",
+      "default": "één erbij"
+    },
+    "line3": {
+      "label": "Actie, derde regel (accent)",
+      "help": "De grootste regel, dus hooguit 8 tekens: GRATIS, −50%.",
+      "default": "GRATIS"
+    },
+    "product": {
+      "label": "Waarvoor het geldt",
+      "default": "Latte, flat white of mocha"
+    },
+    "detail": {
+      "label": "Detailregel",
+      "default": "Neem iemand mee. Alle maten te combineren; gratis is het drankje met gelijke of lagere prijs."
+    },
+    "sticker": {
+      "label": "Ronde sticker",
+      "help": "Kort, hooguit twee woorden. Laat leeg voor een effen stip.",
+      "default": "1+1"
+    },
+    "product_image": {
+      "label": "Productafbeelding",
+      "help": "Het mooist is een uitgeknipte PNG of SVG met transparante achtergrond. Hij wordt passend gemaakt, nooit bijgesneden."
+    },
+    "show_image": {
+      "label": "Productafbeelding tonen",
+      "help": "Zet uit om het vlak zonder afbeelding te laten (een lege afbeelding toont anders een gestippeld kader)."
+    },
+    "show_countdown": {
+      "label": "Aftelklok tonen",
+      "help": "Zet uit bij een aanbieding zonder einddatum: label en klok verdwijnen allebei."
+    },
+    "countdown_label": {
+      "label": "Label boven de aftelklok",
+      "help": "Blijft staan na afloop, dus kies woorden die ook bij de eindtekst passen.",
+      "default": "TIJDELIJK"
+    },
+    "countdown_target": {
+      "label": "Aanbieding eindigt op",
+      "help": "ISO 8601 met tijdzoneverschil, bijv. 2026-11-01T23:59:00+01:00 of 2026-11-01T23:59:00-05:00."
+    },
+    "countdown_done": {
+      "label": "Tekst als de aftelklok afloopt",
+      "default": "Bijna voorbij"
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Taal van de live aftelklok, bijv. nl of nl-BE. Leeg = de taal van het scherm. Je eigen teksten verschijnen zoals je ze typt."
+    },
+    "small_print": {
+      "label": "Kleine lettertjes",
+      "default": "Alleen in deelnemende winkels. Niet geldig met andere acties of bij bezorging."
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Het afbeeldingsvlak en de derde actieregel."
+    },
+    "highlight": {
+      "label": "Stickerkleur"
+    },
+    "panel_text": {
+      "label": "Tekst op het vlak",
+      "help": "De winkelnaam, die op het accentvlak staat."
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "background_image": {
+      "label": "Achtergrondfoto",
+      "help": "Optioneel. Een foto achter alles, donkerder gemaakt met de instelling hieronder."
+    },
+    "background_dim": {
+      "label": "Foto donkerder maken",
+      "help": "0 = de foto zoals hij is, 0,9 = bijna zwart. Alleen met een achtergrondfoto."
+    }
+  }
+}

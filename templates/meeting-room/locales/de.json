@@ -1,0 +1,81 @@
+{
+  "name": "Türschild für Besprechungsräume",
+  "description": "Ein Türschild für Besprechungsräume: ein großes grünes FREI- oder rotes BELEGT-Band, das laufende und das nächste Meeting und die Termine des Tages, aus jeder Kalender-Datenquelle (iCal). Im Privatmodus steht „Reserviert“ statt der Titel. Gemacht für ein Hochformat-Display neben der Tür, funktioniert auch im Querformat oder als Streifen.",
+  "params": {
+    "calendar": {
+      "label": "Raumkalender (Kalender-/iCal-Datenquelle)",
+      "help": "Eine Kalender-Datenquelle mit dem iCal-Feed des Raums (Google, Outlook/Exchange, jede .ics-URL). Ohne sie wird ein Beispielplan gezeigt."
+    },
+    "room_name": {
+      "label": "Raumname",
+      "default": "Sitzungssaal"
+    },
+    "available_label": {
+      "label": "Text für „frei“",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache des Schilds."
+    },
+    "busy_label": {
+      "label": "Text für „belegt“",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache des Schilds."
+    },
+    "hide_titles": {
+      "label": "Privatsphäre: Meeting-Titel und Organisatoren ausblenden"
+    },
+    "reserved_label": {
+      "label": "Text statt eines ausgeblendeten Titels",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache des Schilds."
+    },
+    "show_organizer": {
+      "label": "Organisatoren anzeigen"
+    },
+    "now_label": {
+      "label": "Überschrift: laufendes Meeting",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache des Schilds."
+    },
+    "next_label": {
+      "label": "Überschrift: nächstes Meeting",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache des Schilds."
+    },
+    "agenda_label": {
+      "label": "Überschrift: heutige Termine",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache des Schilds."
+    },
+    "upcoming_label": {
+      "label": "Überschrift: spätere Buchungen (wenn heute nichts mehr ansteht)",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache des Schilds."
+    },
+    "empty_label": {
+      "label": "Text, wenn nichts gebucht ist",
+      "help": "Leer lassen für das eingebaute Wort in der Sprache des Schilds."
+    },
+    "available_color": {
+      "label": "Farbe für „frei“"
+    },
+    "busy_color": {
+      "label": "Farbe für „belegt“"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "clock_format": {
+      "label": "Uhr",
+      "options": {
+        "auto": "Wie in der Sprache üblich",
+        "24": "24 Stunden",
+        "12": "12 Stunden",
+        "off": "Uhr ausblenden"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone der Uhr",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wörter, Datum und Uhrzeit des Schilds, z. B. en-GB oder de-DE. Leer = Sprache des Bildschirms. Gilt auch für Kalenderzeiten; Kalender und Uhr brauchen dieselbe Zeitzone."
+    }
+  }
+}

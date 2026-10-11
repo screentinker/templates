@@ -19,6 +19,7 @@ tinted panel on the right. When the moment arrives the countdown is replaced by 
 | Count down to | text (40) | `2027-03-18T09:00:00+00:00` | The moment the countdown reaches zero. **Format below.** |
 | Label above the countdown | text (40) | `DOORS OPEN IN` | Small caption over the numbers. It stays after the countdown ends, so pick words that still read well then (or clear it on the day). |
 | Shown when the countdown ends | text (24) | `Happening now` | Replaces the numbers once the target has passed. |
+| Language | locale | empty = the screen's language | Language of the countdown units on servers that localise them; older servers show `d h m s`. |
 | Show the ticket QR code | checkbox | on | Turn off when you have no link: the code, its white card, caption and rule all disappear (the tinted panel stays). |
 | Ticket / RSVP link | text (300) | `https://example.com/aurora/tickets` | What the QR opens. Shorter links give a coarser code that scans from further away. |
 | QR caption | text (32) | `Scan for tickets` | Under the code. |
@@ -41,7 +42,8 @@ and rarely what you meant. A date on its own (`2027-03-18`) means midnight UTC. 
 also accepted and read as milliseconds since 1970 (UTC).
 
 An empty or unreadable value leaves the countdown blank (nothing breaks). The numbers read `162d 23h
-50m` while days remain, then `5h 12m 30s`, then `4m 05s` — that format is fixed by the player. The
+50m` while days remain, then `5h 12m 30s`, then `4m 05s` — that format is fixed by the player
+(newer servers write the units in the **Language** setting's language). The
 countdown runs on each screen's own clock, so keep your players' time in sync (NTP).
 
 ## Tips
@@ -51,6 +53,17 @@ countdown runs on each screen's own clock, so keep your players' time in sync (N
 - Event names over about 24 characters wrap to a third line and start to crowd the tagline — keep
   the name short and put the rest in the tagline.
 - Test the QR with a phone before the event: point it at the screen from where people will stand.
+
+## Languages
+
+The dashboard shows this template's name, description and every setting's label and help in English, German,
+Spanish, French, Hindi, Italian, Japanese, Dutch, Portuguese and Chinese (`locales/<lang>.json`; a
+server without translation support simply shows English). The sample texts (tagline, date and venue line, countdown
+label, end message, QR caption) are translated too and sized for the same layout; the event name and
+venue are names and stay as typed. The **Language** setting (empty = the screen's language) is passed
+to the countdown so a ScreenTinker server with localised countdowns shows the units in that language;
+older servers always show `d h m s`. The slide renderer's bundled fonts cover Latin; Japanese, Chinese and Hindi fall back to the screen's own
+fonts (Noto on ScreenTinker players).
 
 ## Files
 

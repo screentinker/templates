@@ -1,0 +1,51 @@
+{
+  "name": "Giornata del grazie (verticale)",
+  "description": "Uno schermo luminoso di ringraziamento per la giornata del personale, dei volontari, dei clienti o degli insegnanti: forme geometriche su crema, un grande titolo di ringraziamento, un messaggio con i numeri da festeggiare e un grazie in più lingue.",
+  "params": {
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "La riga breve sopra il titolo. Lasciala vuota per nasconderla.",
+      "default": "GIORNATA DEL PERSONALE"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "Ha due righe riservate: ci stanno circa 24 caratteri. Un titolo più lungo va a capo su una terza riga e copre il messaggio.",
+      "default": "Grazie di tutto"
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Una o due frasi sotto il titolo; ci stanno fino a 200 caratteri. Un a capo inizia una nuova riga.",
+      "default": "Dal turno di notte alla reception: 1.284 ordini spediti, 96% di recensioni a cinque stelle e il nostro miglior trimestre. Oggi il pranzo lo offriamo noi."
+    },
+    "date_line": {
+      "label": "Riga della data",
+      "help": "Testo libero, scritto come deve apparire: una data, un orario e un luogo, o una firma.",
+      "default": "12:30  ·  ATRIO  ·  TUTTI BENVENUTI"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG largo con sfondo trasparente (circa 3,4 : 1 riempie il riquadro; altre forme vi vengono adattate). Sostituisci il segnaposto Northwind."
+    },
+    "accent": {
+      "label": "Colore d’accento"
+    },
+    "accent2": {
+      "label": "Secondo colore d’accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "thanks_line": {
+      "label": "Riga in fondo",
+      "help": "Testo piccolo sotto la riga della data; di default, grazie in più lingue.",
+      "default": "Thank you  ·  Merci  ·  Danke  ·  Gracias  ·  Obrigado  ·  Tack  ·  Asante"
+    }
+  }
+}

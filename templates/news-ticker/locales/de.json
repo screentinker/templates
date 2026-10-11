@@ -1,0 +1,55 @@
+{
+  "name": "Nachrichtenticker",
+  "description": "Schlagzeilen als wechselnde Top-Meldung plus flüssig laufender Ticker. Selbst eintippen oder einen RSS-Feed, ein Google Sheet, eine CSV oder Tabelle verbinden. Im Vollbild beides, im schmalen Streifen ein Tickerband, in einer hohen Zone ein senkrechter Ticker. Der Bildschirm lädt nichts nach und läuft offline.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "default": "Aktuelles"
+    },
+    "feed": {
+      "label": "Datenquelle für Schlagzeilen (optional)",
+      "help": "Ein RSS-/Atom-Feed, Google Sheet, CSV oder eine Tabelle. Hat sie Schlagzeilen, ersetzen diese die eingetippte Liste; bis dahin wird die Liste gezeigt."
+    },
+    "column": {
+      "label": "Spalte mit Schlagzeilen (Sheet, CSV oder Tabelle)",
+      "help": "Die Überschrift der Spalte mit den Schlagzeilen. Gibt es keine Spalte mit diesem Namen, wird die erste Spalte verwendet. Bei RSS-Feeds ohne Bedeutung.",
+      "default": "Schlagzeile"
+    },
+    "headlines": {
+      "label": "Schlagzeilen (ohne Datenquelle)",
+      "help": "Eine Schlagzeile pro Zeile. Leere Zeilen werden ignoriert. Wird auch gezeigt, solange eine verbundene Datenquelle leer ist.",
+      "default": "Northwind eröffnet am 6. Oktober sein neues Studio am Fluss\nQuartalsversammlung jetzt im Atrium – Einlass ab 16:30\nGlückwunsch, Support-Team: 98 % Zufriedenheit im Quartal\nOstparkplatz bis Freitag wegen Belagsarbeiten gesperrt\nNeuer Fahrradunterstand hinter Haus B, mit E-Bike-Laden\nLunch & Learn am Donnerstag: Barrierefreies Design"
+    },
+    "max_items": {
+      "label": "Höchstens anzeigen",
+      "help": "Schlagzeilen über dieser Anzahl werden nicht gezeigt."
+    },
+    "speed": {
+      "label": "Tickergeschwindigkeit",
+      "help": "Pixel pro Sekunde auf einem 1080 Pixel hohen Bildschirm. Passt sich an die Bildschirmgröße an."
+    },
+    "rotate_seconds": {
+      "label": "Sekunden pro Top-Meldung"
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "show_clock": {
+      "label": "Uhr anzeigen"
+    },
+    "timezone": {
+      "label": "Zeitzone der Uhr",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache des Datums und der eingebauten Wörter, z. B. de oder en-GB. Leer lassen für die Sprache des Bildschirms."
+    }
+  }
+}

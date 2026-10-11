@@ -1,0 +1,68 @@
+{
+  "name": "Wettervorhersage",
+  "description": "Aktuelles Wetter und eine Fünf-Tage-Vorhersage aus einer Ihrer Wetter-Datenquellen. Ihr Server ruft das Wetter selbst ab; die Vorlage ordnet es nur an.",
+  "params": {
+    "weather": {
+      "label": "Wetter-Datenquelle",
+      "help": "Eine Datenquelle vom Typ Wetter (Datenquellen → Neu → Wetter). Ort, Einheiten und Sprache werden dort eingestellt."
+    },
+    "location": {
+      "label": "Ortsname",
+      "default": "Wetter vor Ort",
+      "help": "Die Überschrift, meist die Stadt oder der Name des Standorts."
+    },
+    "units_label": {
+      "label": "Temperatur-Zusatz",
+      "help": "Steht hinter jeder Temperatur: ° allein oder °C / °F passend zur Datenquelle."
+    },
+    "feels_like_label": {
+      "label": "Beschriftung „Gefühlt“",
+      "help": "Steht vor der gefühlten Temperatur.",
+      "default": "Gefühlt"
+    },
+    "humidity_label": {
+      "label": "Beschriftung „Luftfeuchte“",
+      "help": "Steht vor der Luftfeuchtigkeit.",
+      "default": "Luftfeuchte"
+    },
+    "today_label": {
+      "label": "Beschriftung „Heute“",
+      "help": "Steht vor der heutigen Höchst- und Tiefsttemperatur.",
+      "default": "Heute"
+    },
+    "precip_label": {
+      "label": "Beschriftung „Niederschlag“",
+      "help": "Steht vor der heutigen Niederschlagswahrscheinlichkeit.",
+      "default": "Niederschlagsrisiko"
+    },
+    "updated_label": {
+      "label": "Beschriftung „Aktualisiert“",
+      "help": "Steht vor der Uhrzeit der letzten Messung.",
+      "default": "Aktualisiert"
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "timezone": {
+      "label": "Zeitzone der Uhr",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Sprache des Datums, z. B. de oder de-CH. Leer lassen für die Sprache des Bildschirms. Wochentage der Vorhersage und die Wetterbeschreibung kommen aus der Datenquelle."
+    },
+    "clock_format": {
+      "label": "Uhrformat",
+      "options": {
+        "24": "24 Stunden",
+        "12": "12 Stunden"
+      }
+    }
+  }
+}

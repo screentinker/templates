@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notice board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<div class="frame">
+  <header class="head">
+    <div class="brand">
+      <img id="logo" class="logo" alt="" hidden>
+      <div id="badge" class="badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="100%" height="100%">
+          <rect x="5" y="9" width="38" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="3.2"/>
+          <rect x="11" y="15" width="12" height="9" rx="1.5" fill="currentColor" opacity=".9"/>
+          <rect x="26" y="15" width="11" height="3" rx="1.5" fill="currentColor" opacity=".6"/>
+          <rect x="26" y="21" width="8" height="3" rx="1.5" fill="currentColor" opacity=".6"/>
+          <rect x="11" y="28" width="26" height="3" rx="1.5" fill="currentColor" opacity=".6"/>
+        </svg>
+      </div>
+      <div class="titles">
+        <h1 id="title" class="title" dir="auto"></h1>
+        <div id="subtitle" class="subtitle" dir="auto"></div>
+      </div>
+    </div>
+    <div id="clockbox" class="clockbox">
+      <div id="clock" class="clock"></div>
+      <div id="date" class="date"></div>
+    </div>
+  </header>
+
+  <main id="stage" class="stage"></main>
+
+  <footer class="foot">
+    <div id="pager" class="pager" aria-hidden="true"></div>
+  </footer>
+</div>
+
+<svg hidden aria-hidden="true">
+  <svg id="pin-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M8.5 2h7l-1.2 6.2 3.2 3.3V14H13v6.5L12 22l-1-1.5V14H6.5v-2.5l3.2-3.3z"/></svg>
+</svg>
+
+<script src="app.js"></script>
+</body>
+</html>

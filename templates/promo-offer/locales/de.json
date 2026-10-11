@@ -1,0 +1,145 @@
+{
+ "name": "Aktionsangebot",
+ "description": "Ein Bildschirm für Flash-Sales und Aktionen: große Überschrift, das Angebot, der Preis mit durchgestrichenem Altpreis und automatisch berechneter Ersparnis sowie ein Live-Countdown, der am Ende von selbst auf „Angebot beendet“ wechselt. Mit Produktbild und QR-Code zum Shop. Drei Looks: kräftiger Handel, klar und minimal, warmes Café. Es wird nichts geladen.",
+ "params": {
+  "style": {
+   "label": "Stil",
+   "options": {
+    "bold": "Kräftiger Handel",
+    "minimal": "Klar und minimal",
+    "cafe": "Warmes Café"
+   }
+  },
+  "eyebrow": {
+   "label": "Kleine Überschrift",
+   "help": "Ein kurzer Hinweis über der Überschrift. Leer lassen, um ihn auszublenden.",
+   "default": "Wochenend-Flash-Sale"
+  },
+  "headline": {
+   "label": "Überschrift",
+   "default": "Aura Funkkopfhörer"
+  },
+  "offer": {
+   "label": "Angebotszeile",
+   "help": "Ein bis zwei Zeilen unter der Überschrift. Leer lassen, um sie auszublenden.",
+   "default": "Aktive Geräuschunterdrückung und 40 Stunden Akku – zum besten Preis des Jahres."
+  },
+  "price": {
+   "label": "Preis",
+   "help": "Eine Zahl wie 89 oder 89,99 wird in Ihrer Währung formatiert. Alles andere („2 für 1“) erscheint wie eingegeben. Leer lassen, um den Preis auszublenden."
+  },
+  "was_price": {
+   "label": "Alter Preis",
+   "help": "Optional. Erscheint durchgestrichen neben dem Preis."
+  },
+  "currency": {
+   "label": "Währungscode",
+   "help": "Ein dreistelliger ISO-Code: EUR, CHF, USD, GBP, JPY … Symbol und Stellung richten sich nach der Sprache. Leer für reine Zahlen."
+  },
+  "decimals": {
+   "label": "Nachkommastellen",
+   "options": {
+    "auto": "Nur wenn der Preis Cent hat (89, 89,50)",
+    "always": "Immer (89,00)"
+   }
+  },
+  "saving": {
+   "label": "Ersparnis-Badge",
+   "help": "Aus Preis und altem Preis berechnet; ausgeblendet, wenn einer davon keine Zahl ist.",
+   "options": {
+    "percent": "Prozent (Spare 40 %)",
+    "amount": "Betrag (Spare 60 €)",
+    "off": "Kein Badge"
+   }
+  },
+  "saving_text": {
+   "label": "Text im Ersparnis-Badge",
+   "help": "{saving} wird durch Prozent oder Betrag ersetzt, z. B. „{saving} günstiger“. Leer: „Spare {saving}“ in der Sprache des Bildschirms. Ein einzelnes - zeigt nur die Ersparnis."
+  },
+  "ends_at": {
+   "label": "Angebot endet",
+   "help": "Datum und Uhrzeit wie 2026-11-29T23:59 oder nur ein Datum für das Ende dieses Tages. Gilt in der Zeitzone unten. Leer: Das Angebot endet jeden Tag um Mitternacht."
+  },
+  "timezone": {
+   "label": "Zeitzone",
+   "help": "Die Zeitzone der Endzeit. Leer nutzt die Uhr des Bildschirms."
+  },
+  "locale": {
+   "label": "Sprache",
+   "help": "Die Sprache der eingebauten Texte, Daten, Preise und Countdown-Einheiten. Leer nutzt die Sprache des Bildschirms."
+  },
+  "clock_format": {
+   "label": "Zeitformat",
+   "options": {
+    "auto": "Wie in der Sprache üblich",
+    "24": "24 Stunden",
+    "12": "12 Stunden"
+   }
+  },
+  "show_countdown": {
+   "label": "Countdown anzeigen"
+  },
+  "countdown_label": {
+   "label": "Countdown-Beschriftung",
+   "help": "Leer: „Endet in“ in der Sprache des Bildschirms. Ein einzelnes - blendet sie aus."
+  },
+  "show_end_date": {
+   "label": "Ende des Angebots anzeigen",
+   "help": "Eine Zeile wie „Gültig bis So., 29. Nov., 23:59“ unter dem Countdown."
+  },
+  "end_date_label": {
+   "label": "Text vor dem Enddatum",
+   "help": "Steht vor dem Datum. Leer: „Gültig bis …“ in der Sprache des Bildschirms. Ein einzelnes - zeigt nur das Datum."
+  },
+  "after_end": {
+   "label": "Wenn das Angebot vorbei ist",
+   "options": {
+    "message": "Aktion stehen lassen und die Ende-Meldung zeigen",
+    "fallback": "Die ganze Aktion durch die Ersatzzeile ersetzen"
+   }
+  },
+  "ended_text": {
+   "label": "Ende-Meldung",
+   "help": "Leer: „Dieses Angebot ist beendet“ in der Sprache des Bildschirms."
+  },
+  "fallback_heading": {
+   "label": "Ersatz-Überschrift",
+   "help": "Eine kleine Zeile über der Ersatzzeile. Leer zeigt die Ersatzzeile allein."
+  },
+  "fallback_text": {
+   "label": "Ersatzzeile",
+   "help": "Nach dem Ende bildschirmfüllend, wenn die Einstellung oben das vorsieht. Leer nutzt die Ende-Meldung.",
+   "default": "Jeden Freitag neue Angebote. Bis dann!"
+  },
+  "image": {
+   "label": "Produktbild",
+   "help": "Am besten ein PNG mit transparentem Hintergrund. Leer lassen für eine reine Text-Aktion."
+  },
+  "qr_url": {
+   "label": "Link für den QR-Code",
+   "help": "Wird als QR-Code auf dem Bildschirm gezeichnet. Leer lassen, um ihn auszublenden."
+  },
+  "qr_label": {
+   "label": "Text unter dem QR-Code",
+   "help": "Leer: „Scannen & shoppen“ in der Sprache des Bildschirms. Ein einzelnes - blendet ihn aus."
+  },
+  "fine_print": {
+   "label": "Kleingedrucktes",
+   "default": "Nur solange der Vorrat reicht. Maximal zwei pro Kunde. Nicht mit anderen Angeboten kombinierbar. Preise inkl. MwSt."
+  },
+  "custom_colors": {
+   "label": "Eigene Farben verwenden",
+   "help": "Aus: die Farben des Stils. An: die drei Farben unten."
+  },
+  "background": {
+   "label": "Hintergrundfarbe"
+  },
+  "text_color": {
+   "label": "Textfarbe"
+  },
+  "accent": {
+   "label": "Akzentfarbe",
+   "help": "Preis, Badge und Countdown."
+  }
+ }
+}

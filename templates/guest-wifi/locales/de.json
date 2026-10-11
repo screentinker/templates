@@ -1,0 +1,80 @@
+{
+  "name": "Gäste-WLAN",
+  "description": "Name und Passwort Ihres Gästenetzes, groß und gut lesbar, neben einem QR-Code, der mit einem Scan verbindet – Sonderzeichen werden korrekt maskiert, damit die Verbindung klappt. Für Hotels, Cafés, Praxen und Büros; als Vollbild, Hochformat-Poster oder schmaler Streifen. Nichts wird geladen: Der Code entsteht auf dem Bildschirm.",
+  "params": {
+    "ssid": {
+      "label": "Netzwerkname (SSID)",
+      "help": "Genau so, wie Ihre Geräte ihn anzeigen, mit Groß- und Kleinschreibung und Leerzeichen."
+    },
+    "password": {
+      "label": "Passwort",
+      "help": "Wird absichtlich angezeigt – es ist ein Gästenetz. Genau so eingeben: Zeichen wie ; : , \" und \\ werden im QR-Code automatisch maskiert."
+    },
+    "security": {
+      "label": "Sicherheit",
+      "options": {
+        "WPA": "WPA / WPA2 / WPA3 (die meisten Netze)",
+        "WEP": "WEP (alte Router)",
+        "nopass": "Offen – ohne Passwort"
+      }
+    },
+    "hidden": {
+      "label": "Das Netzwerk ist versteckt",
+      "help": "Nur einschalten, wenn das Netzwerk seinen Namen nicht sendet."
+    },
+    "show_password": {
+      "label": "Passwort als Text anzeigen",
+      "help": "Aus: nur der QR-Code wird gezeigt; der Code enthält das Passwort trotzdem."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "default": "Kostenloses WLAN"
+    },
+    "headline": {
+      "label": "Überschrift",
+      "default": "Bleiben Sie verbunden, solange Sie bei uns sind"
+    },
+    "hint": {
+      "label": "Hinweis unter dem Code",
+      "help": "Leer lassen, um ihn auszublenden.",
+      "default": "Kamera auf den Code richten"
+    },
+    "ssid_label": {
+      "label": "Bezeichnung für den Netzwerknamen",
+      "help": "Leer lassen für das Wort „Netzwerk“ in der Sprache des Bildschirms."
+    },
+    "password_label": {
+      "label": "Bezeichnung für das Passwort",
+      "help": "Leer lassen für das Wort „Passwort“ in der Sprache des Bildschirms."
+    },
+    "open_text": {
+      "label": "Text für ein offenes Netzwerk",
+      "help": "Leer lassen für „Kein Passwort nötig“ in der Sprache des Bildschirms."
+    },
+    "hidden_text": {
+      "label": "Text, wenn das Passwort nicht angezeigt wird",
+      "help": "Leer lassen für „Code scannen und verbinden“ in der Sprache des Bildschirms."
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "default": "Brauchen Sie Hilfe? Fragen Sie einfach an der Rezeption – wir helfen gern."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Ein PNG oder SVG mit transparentem Hintergrund. Leer lassen für kein Logo."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Die Sprache der Wörter, die der Bildschirm selbst schreibt (Bezeichnungen, Meldungen). Leer lassen für die Sprache des Bildschirms."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Schermata di attesa — sfumatura calma con ora e data",
+  "description": "Una schermata di attesa tranquilla: un grande orologio leggero e la data su una sfumatura morbida, con un piccolo logo e una riga di testo facoltativi. Sei sfumature incluse, il tuo fuso orario e la tua lingua. Riposante per schermi che restano inattivi per ore.",
+  "params": {
+    "palette": {
+      "label": "Sfumatura",
+      "help": "Lo sfondo. Tutte e sei sono abbastanza scure per un testo chiaro.",
+      "options": {
+        "tpl:bg-dusk.svg": "Crepuscolo (indaco a rosa)",
+        "tpl:bg-ocean.svg": "Oceano (blu notte a verde acqua)",
+        "tpl:bg-forest.svg": "Foresta (pino a muschio)",
+        "tpl:bg-ember.svg": "Brace (prugna a rame)",
+        "tpl:bg-aurora.svg": "Aurora (notte a verde)",
+        "tpl:bg-slate.svg": "Ardesia (antracite ad acciaio)"
+      }
+    },
+    "clock_format": {
+      "label": "Formato orario",
+      "options": {
+        "12": "12 ore",
+        "24": "24 ore"
+      }
+    },
+    "date_format": {
+      "label": "Stile della data",
+      "options": {
+        "weekday": "Giorno della settimana, giorno e mese",
+        "long": "Data completa con anno",
+        "short": "Data breve",
+        "numeric": "Solo numeri"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario",
+      "help": "Il luogo a cui si riferiscono ora e data. Lascia vuoto per usare l'orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Come si scrivono ora e data, ad es. en-GB, de-DE o fr-CA. Lascia vuoto per la lingua dello schermo."
+    },
+    "message": {
+      "label": "Riga di testo",
+      "help": "Una piccola riga in basso. Lascia vuoto per non mostrare nulla.",
+      "default": "Northwind Studio  ·  Visitatori: registratevi alla reception"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Un piccolo logo in basso."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG chiaro (bianco) con sfondo trasparente si legge meglio sulla sfumatura."
+    },
+    "text_color": {
+      "label": "Colore del testo",
+      "help": "Orologio, data e riga di testo. Tienilo chiaro: tutte le sfumature sono scure."
+    }
+  }
+}

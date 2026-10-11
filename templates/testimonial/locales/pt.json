@@ -1,0 +1,70 @@
+{
+  "name": "Depoimento de cliente",
+  "description": "A avaliação de um cliente na tela: estrelas, as palavras do cliente numa fonte serifada acolhedora, nome e avatar com iniciais, além da sua nota geral. Para vitrines, showrooms, recepções e áreas de espera.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "default": "O QUE NOSSOS CLIENTES DIZEM"
+    },
+    "rating": {
+      "label": "Avaliação em estrelas",
+      "options": {
+        "tpl:stars/5.svg": "5 estrelas",
+        "tpl:stars/4.5.svg": "4½ estrelas",
+        "tpl:stars/4.svg": "4 estrelas",
+        "tpl:stars/3.svg": "3 estrelas",
+        "tpl:stars/none.svg": "Ocultar as estrelas"
+      }
+    },
+    "quote": {
+      "label": "Depoimento",
+      "help": "As palavras do cliente, sem aspas. Até cerca de 220 caracteres; mais curto lê melhor.",
+      "default": "Instalaram nossa cozinha inteira em quatro dias, deixaram a casa impecável e voltaram uma semana depois só para conferir cada gaveta. Já indicamos para dois vizinhos."
+    },
+    "name": {
+      "label": "Nome do cliente",
+      "help": "Só com a permissão do cliente."
+    },
+    "detail": {
+      "label": "Detalhe do cliente",
+      "help": "O que comprou, de onde é ou “Cliente verificado”.",
+      "default": "Reforma de cozinha · Riverside"
+    },
+    "initials": {
+      "label": "Iniciais no avatar"
+    },
+    "show_score": {
+      "label": "Mostrar a nota geral",
+      "help": "Desligado oculta a nota grande e a legenda."
+    },
+    "score": {
+      "label": "Nota geral",
+      "help": "Sua nota média, por exemplo 4,9. Use um número real.",
+      "default": "4,9"
+    },
+    "score_caption": {
+      "label": "Legenda da nota",
+      "default": "média de 1.240 avaliações verificadas"
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desligado oculta o logotipo e o espaço dele fica vazio."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG com fundo transparente. O de exemplo é branco para o painel colorido (paisagem) ou escuro para a página (retrato)."
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "O painel lateral (paisagem) ou inferior (retrato), o avatar e o título pequeno."
+    },
+    "background": {
+      "label": "Cor de fundo",
+      "help": "A página. As iniciais do avatar também são desenhadas nesta cor."
+    },
+    "text_color": {
+      "label": "Cor do texto",
+      "help": "O depoimento e o nome."
+    }
+  }
+}

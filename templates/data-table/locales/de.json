@@ -1,0 +1,115 @@
+{
+  "name": "Datentabelle",
+  "description": "Jede Tabelle als klare, gut lesbare Tafel: eine Ligatabelle, Sparzinsen mit Kleingedrucktem, Lagerbestände, ein Zeitplan. Ein Google Sheet, CSV, eine REST-Liste oder manuelle Tabelle verbinden (oder die Zeilen eintippen), Spalten wählen, Zellen mit einfachen Regeln wie „Bestand < 5 rot“ einfärben – lange Tabellen blättern von selbst.",
+  "params": {
+    "preset": {
+      "label": "Ausgangspunkt",
+      "help": "Liefert Beispielzeilen, Titel und Hervorhebungsregeln für alles, was du leer lässt. Wähle „Keiner“, um nur deine eigenen Einstellungen zu verwenden.",
+      "options": {
+        "league": "Sport-Ligatabelle",
+        "rates": "Bank- / Sparzinsen",
+        "stock": "Lagerbestand",
+        "generic": "Allgemein (Schulungen)",
+        "none": "Keiner: nur meine Einstellungen"
+      }
+    },
+    "title": {
+      "label": "Titel",
+      "help": "Leer nimmt den Titel des Ausgangspunkts. Ein einzelnes - blendet ihn aus."
+    },
+    "subtitle": {
+      "label": "Untertitel",
+      "help": "Eine Zeile unter dem Titel. Leer nimmt den des Ausgangspunkts. Ein einzelnes - blendet ihn aus."
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Kleiner Text am unteren Rand. Leer nimmt den des Ausgangspunkts. Ein einzelnes - blendet ihn aus."
+    },
+    "disclosure": {
+      "label": "Hinweis / Kleingedrucktes",
+      "help": "Klein unter der Tabelle auf jeder Seite, z. B. Pflichtangaben zu Zinsen. Leer nimmt den des Ausgangspunkts. Ein einzelnes - blendet ihn aus."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optional. Wird neben dem Titel angezeigt."
+    },
+    "table": {
+      "label": "Datenquelle für die Tabelle (optional)",
+      "help": "Ein Google Sheet, CSV, eine REST-Liste oder manuelle Tabelle. Die Kopfzeile wird zu den Spaltenüberschriften. Ersetzt die unten eingetippten Zeilen."
+    },
+    "rows": {
+      "label": "Eingetippte Tabelle",
+      "help": "Gilt ohne verbundene Datenquelle. Erste Zeile = Überschriften, dann eine Zeile pro Reihe, Zellen durch | getrennt. Leer zeigt das Beispiel des Ausgangspunkts."
+    },
+    "show_columns": {
+      "label": "Angezeigte Spalten",
+      "help": "Optional, Überschriften durch Kommas getrennt in der gewünschten Reihenfolge, z. B. Verein, Sp., Pkt. Leer zeigt alle Spalten."
+    },
+    "highlight_col": {
+      "label": "Spalte für Hervorhebung",
+      "help": "Die Überschrift der Spalte, die die Regeln prüfen. Leer nimmt die des Ausgangspunkts. Ein einzelnes - schaltet die Hervorhebung ab."
+    },
+    "highlight_rules": {
+      "label": "Hervorhebungsregeln",
+      "help": "Durch ; getrennt und der Reihe nach geprüft, z. B. < 5 rot; < 20 gelb; = Ausverkauft grau. Farben: rot gelb grün blau lila grau accent oder #hex."
+    },
+    "highlight_style": {
+      "label": "Art der Hervorhebung",
+      "options": {
+        "preset": "Wie der Ausgangspunkt",
+        "cell": "Zelle einfärben",
+        "row": "Ganze Zeile einfärben"
+      }
+    },
+    "rows_per_page": {
+      "label": "Zeilen pro Seite",
+      "help": "0 = automatisch: alles auf einem Bildschirm, wenn es lesbar bleibt, sonst Seiten in angenehmer Größe."
+    },
+    "page_seconds": {
+      "label": "Sekunden pro Seite"
+    },
+    "theme": {
+      "label": "Design",
+      "options": {
+        "midnight": "Mitternacht (dunkelblau)",
+        "graphite": "Graphit (dunkelgrau)",
+        "paper": "Papier (hell)",
+        "contrast": "Hoher Kontrast (schwarz-weiß)"
+      }
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Titellinie, Kopfzeile, Seitenpunkte und die Regel-Farbe „accent“."
+    },
+    "font": {
+      "label": "Schrift für Überschriften",
+      "options": {
+        "archivo": "Archivo (Display)",
+        "oswald": "Oswald (schmal)",
+        "inter": "Inter (schlicht)"
+      }
+    },
+    "zebra": {
+      "label": "Zebrastreifen"
+    },
+    "show_updated": {
+      "label": "Letzte Aktualisierung der Datenquelle zeigen",
+      "help": "Nur mit verbundener Datenquelle."
+    },
+    "updated_label": {
+      "label": "Wort „Aktualisiert“",
+      "help": "Das Wort vor der Uhrzeit. Leer nimmt „Aktualisiert“ in der Sprache des Bildschirms; ein einzelnes - zeigt nur die Uhrzeit."
+    },
+    "limit_label": {
+      "label": "Hinweis, wenn nicht alle Zeilen passen",
+      "help": "Erscheint, wenn die Datenquelle mehr Zeilen hat, als den Bildschirm erreichen; {shown} und {total} werden ausgefüllt. Leer nimmt den Standardtext."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Die Sprache der festen Wörter und Beispieltabellen, der Uhrzeit und der Seitenzahlen. Leer nimmt die Sprache des Bildschirms."
+    },
+    "timezone": {
+      "label": "Zeitzone der Aktualisierungszeit"
+    }
+  }
+}

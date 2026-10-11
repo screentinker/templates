@@ -1,0 +1,143 @@
+{
+  "name": "Agenda de eventos",
+  "description": "Tablón de eventos para hoteles, centros de congresos, campus y centros comunitarios: los próximos eventos por día, hoy (o esta noche) en grande, con horas, salas, ponentes y flechas. La sesión en curso se resalta y las terminadas desaparecen solas. Escriba el programa o conecte un calendario (iCal), una hoja de Google o una tabla manual.",
+  "params": {
+    "title": {
+      "label": "Título",
+      "help": "El encabezado grande. Déjelo vacío para ocultarlo.",
+      "default": "Programa"
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Una línea bajo el título, por ejemplo el lugar o el nombre del evento. Déjelo vacío para ocultarlo.",
+      "default": "Harbourview Hotel & Centro de Congresos"
+    },
+    "footer": {
+      "label": "Pie de página",
+      "help": "Letra pequeña en la parte inferior. Déjelo vacío para ocultarlo.",
+      "default": "Wi-Fi para huéspedes: Harbourview-Guest  ·  Recepción y guardarropa en la planta 1"
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Opcional. Se muestra junto al título."
+    },
+    "agenda": {
+      "label": "Programa (cuando no hay fuente de datos)",
+      "help": "Un evento por línea: Fecha | Inicio | Fin | Título | Lugar | Anfitrión | Flecha. Fecha como 2026-10-12, o +0 para hoy, +1 para mañana. Horas como 09:30 o 7pm. Vea el README.",
+      "default": "+0|09:30|10:30|Conferencia inaugural: Construir para los próximos mil millones|Gran Salón|Maya Okafor|↑\n+0|13:00|14:00|Almuerzo de networking|Restaurante Terraza||↓\n+0|19:00|23:00|Cena benéfica del Harbour Rotary Club|Gran Salón|Rotary Club|↑\n+1|09:00|10:00|Conferencia: Logística en tiempo real|Gran Salón|Dr Amara Nwosu|↑"
+    },
+    "events": {
+      "label": "Fuente de datos de eventos (opcional)",
+      "help": "Un calendario (iCal), o una hoja de Google, CSV o tabla manual con las columnas de abajo. Si está conectada, sustituye al programa escrito arriba."
+    },
+    "date_col": {
+      "label": "Columna de la hoja: fecha",
+      "default": "Fecha"
+    },
+    "start_col": {
+      "label": "Columna de la hoja: hora de inicio",
+      "default": "Inicio"
+    },
+    "end_col": {
+      "label": "Columna de la hoja: hora de fin",
+      "default": "Fin"
+    },
+    "title_col": {
+      "label": "Columna de la hoja: título",
+      "default": "Título"
+    },
+    "location_col": {
+      "label": "Columna de la hoja: lugar",
+      "default": "Lugar"
+    },
+    "host_col": {
+      "label": "Columna de la hoja: anfitrión o ponente",
+      "default": "Anfitrión"
+    },
+    "arrow_col": {
+      "label": "Columna de la hoja: flecha de dirección",
+      "help": "Opcional. Una flecha (← ↑ → ↓ ↖ ↗ ↘ ↙) o una palabra en inglés: left, right, ahead, up, down, up-left, up-right…",
+      "default": "Flecha"
+    },
+    "days_ahead": {
+      "label": "Días que se muestran",
+      "help": "Hoy y los días siguientes. 1 muestra solo hoy."
+    },
+    "rows_per_page": {
+      "label": "Máximo de eventos por página",
+      "help": "Por columna. Se muestran menos si no caben a un tamaño legible; el resto pasa de página."
+    },
+    "page_seconds": {
+      "label": "Segundos por página",
+      "help": "Solo cuando el programa no cabe en una pantalla."
+    },
+    "show_tonight": {
+      "label": "Decir «Esta noche» por la tarde",
+      "help": "Desactivado: dice «Hoy» todo el día."
+    },
+    "tonight_hour": {
+      "label": "«Esta noche» desde (hora)",
+      "help": "Desde esta hora, el primer día lleva el texto de «Esta noche» en lugar de «Hoy»."
+    },
+    "today_label": {
+      "label": "Texto: Hoy",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del tablón."
+    },
+    "tonight_label": {
+      "label": "Texto: Esta noche",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del tablón."
+    },
+    "tomorrow_label": {
+      "label": "Texto: Mañana",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del tablón."
+    },
+    "now_label": {
+      "label": "Texto: Ahora (en la sesión en curso)",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del tablón."
+    },
+    "show_next": {
+      "label": "Marcar la próxima sesión de hoy",
+      "help": "Una etiqueta «Siguiente» y «en 25 min» en la próxima sesión que aún no ha empezado."
+    },
+    "next_label": {
+      "label": "Texto: Siguiente (en la próxima sesión de hoy)",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del tablón."
+    },
+    "all_day_label": {
+      "label": "Texto: Todo el día",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del tablón."
+    },
+    "empty_label": {
+      "label": "Texto cuando no hay nada programado",
+      "help": "Déjelo vacío para usar la palabra integrada en el idioma del tablón."
+    },
+    "clock_format": {
+      "label": "Horas",
+      "options": {
+        "auto": "Según el idioma",
+        "24": "24 horas",
+        "12": "12 horas"
+      }
+    },
+    "show_clock": {
+      "label": "Mostrar el reloj y la fecha"
+    },
+    "timezone": {
+      "label": "Zona horaria",
+      "help": "La zona horaria del lugar. Déjelo vacío para usar el reloj de la pantalla."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palabras, días, fechas y horas del tablón, p. ej. es-ES o es-MX. Vacío = idioma de la pantalla. Se aplica también al calendario; use en él la zona horaria del lugar."
+    },
+    "accent": {
+      "label": "Color de acento"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

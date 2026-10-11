@@ -1,0 +1,94 @@
+{
+  "name": "Docenten en vrijwilligers in de schijnwerpers",
+  "description": "Zeg publiekelijk dankjewel: een warme, boekachtige opmaak met foto, naam, rol, een quote en een regel over de persoon buiten de klas. Voor scholen, bibliotheken, goede doelen en buurtgroepen.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Een PNG of SVG met transparante achtergrond werkt het best."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Een foto van hoofd en schouders, bijgesneden tot het kader. Vierkante foto’s werken het best."
+    },
+    "show_photo": {
+      "label": "Foto tonen",
+      "help": "Uit toont in plaats daarvan een cirkel met de initialen, voor wie liever geen foto laat zien."
+    },
+    "initials": {
+      "label": "Initialen",
+      "help": "Staan in de cirkel als de foto uit staat. Eén of twee letters."
+    },
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "Boven de naam. Hoofdletters lezen het best.",
+      "default": "DOCENT IN DE SCHIJNWERPERS"
+    },
+    "name": {
+      "label": "Naam",
+      "help": "Eén regel, tot 26 tekens. Typ in gewone hoofd- en kleine letters; ALLES IN HOOFDLETTERS is breder en past misschien niet.",
+      "default": "Mevr. Elena Vasquez"
+    },
+    "role": {
+      "label": "Functie",
+      "help": "Functietitel, team, klas of locatie. Langere tekst loopt door op een tweede regel.",
+      "default": "Leerkracht groep 6 en leider van de leesclub"
+    },
+    "show_quote": {
+      "label": "Quote tonen",
+      "help": "Uit verbergt de quote en het aanhalingsteken."
+    },
+    "quote": {
+      "label": "Quote",
+      "help": "Een of twee zinnen in eigen woorden. Aanhalingstekens zijn niet nodig.",
+      "default": "Elk kind is één goed boek verwijderd van leesplezier. Ik help ze dat boek te vinden."
+    },
+    "quote_mark": {
+      "label": "Aanhalingsteken",
+      "help": "Het grote sierteken bij de quote. Gebruik het teken van je taal, bijv. “ of „.",
+      "default": "“"
+    },
+    "show_fact": {
+      "label": "Leuk weetje tonen",
+      "help": "Uit verbergt het label en de tekst van het weetje."
+    },
+    "fact_label": {
+      "label": "Label van het weetje",
+      "help": "Een kort label, bijv. LEUK WEETJE of VRAAG ME NAAR.",
+      "default": "BUITEN DE KLAS"
+    },
+    "fun_fact": {
+      "label": "Leuk weetje",
+      "help": "Een of twee korte zinnen.",
+      "default": "Elena houdt bijen in de schooltuin, en haar klas noemde de koningin \"Hare Majesteit Zoemzoem\"."
+    },
+    "show_badge": {
+      "label": "Badge tonen"
+    },
+    "badge": {
+      "label": "Tekst op de badge",
+      "help": "Een maand, startdatum, team of mijlpaal. Hoofdletters lezen het best.",
+      "default": "14 JAAR OP ELMWOOD"
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Badge, kleine kop, labels en de band onderaan."
+    },
+    "highlight": {
+      "label": "Markeerkleur",
+      "help": "Het aanhalingsteken en de cirkel achter de initialen."
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "card_color": {
+      "label": "Kleur van de verschoven cirkel",
+      "help": "De zachte cirkel achter de foto."
+    },
+    "initials_color": {
+      "label": "Kleur van de initialen"
+    }
+  }
+}

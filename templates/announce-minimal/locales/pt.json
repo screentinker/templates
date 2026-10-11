@@ -1,0 +1,72 @@
+{
+  "name": "Aviso — minimalista",
+  "description": "Um aviso discreto e tipográfico: um título com serifa, um parágrafo curto e uma assinatura sobre um fundo calmo, com bastante espaço. Para agradecimentos, cartas da direção e comunicados de normas. QR code pequeno opcional.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona melhor um PNG ou SVG com fundo transparente. Fica no canto superior esquerdo."
+    },
+    "eyebrow": {
+      "label": "Chamada",
+      "help": "Um rótulo curto acima do título, por ex. LEMBRETE ou NOVO. Em maiúsculas fica melhor.",
+      "default": "UMA MENSAGEM DA DIRETORA"
+    },
+    "headline": {
+      "label": "Título",
+      "help": "O aviso em poucas palavras. Até 40 caracteres; ocupa duas ou três linhas na tela.",
+      "default": "Obrigado por um ótimo dia de visitação"
+    },
+    "body": {
+      "label": "Detalhes",
+      "help": "Uma ou duas frases. Pressione Enter para uma nova linha.",
+      "default": "Mais de 400 famílias nos visitaram no sábado. Obrigado a cada aluno e a toda a equipe que guiou uma visita, cuidou de um estande ou respondeu a uma pergunta."
+    },
+    "footer": {
+      "label": "Rodapé",
+      "help": "Quem envia, uma data, uma sala ou um contato.",
+      "default": "Dra. Helen Okafor, diretora  ·  Northwind Academy"
+    },
+    "show_qr": {
+      "label": "Mostrar um QR code",
+      "help": "Desative se não tiver link: o código e a legenda somem."
+    },
+    "qr_url": {
+      "label": "Link do QR code",
+      "help": "O endereço que o QR code abre. Links mais curtos geram um código que pode ser lido de mais longe."
+    },
+    "qr_caption": {
+      "label": "Legenda do QR",
+      "default": "Fotos do dia"
+    },
+    "show_date": {
+      "label": "Mostrar a data de hoje",
+      "help": "A data atual da tela, no idioma e no fuso horário abaixo."
+    },
+    "date_format": {
+      "label": "Formato da data",
+      "options": {
+        "weekday": "Dia da semana, dia e mês",
+        "long": "Data completa com ano",
+        "short": "Data curta",
+        "numeric": "Só números"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário da data",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma da data, por ex. en-GB, de-DE ou fr-CA. Deixe vazio para usar o idioma da tela."
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

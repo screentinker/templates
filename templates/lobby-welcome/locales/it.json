@@ -1,0 +1,50 @@
+{
+  "name": "Benvenuto in reception",
+  "description": "Una schermata di benvenuto sobria per reception o hall: il tuo logo, un titolo e una riga di dettaglio, con orologio e data in tempo reale nel fuso orario e nella lingua dell'edificio.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Meglio un PNG o SVG con sfondo trasparente. In alto a sinistra."
+    },
+    "eyebrow": {
+      "label": "Titoletto",
+      "default": "LIETI DI VEDERVI"
+    },
+    "headline": {
+      "label": "Titolo",
+      "default": "Benvenuti da Northwind Studio"
+    },
+    "subline": {
+      "label": "Riga di dettaglio",
+      "default": "Registratevi alla reception: chi vi ospita arriverà a breve."
+    },
+    "footer": {
+      "label": "Piè di pagina",
+      "default": "Wi-Fi ospiti: Northwind-Guest"
+    },
+    "accent": {
+      "label": "Colore d'accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "timezone": {
+      "label": "Fuso orario dell'orologio",
+      "help": "Lascia vuoto per usare l'orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua della data (giorno e mese), ad es. it o it-CH. Lascia vuoto per la lingua dello schermo."
+    },
+    "clock_format": {
+      "label": "Formato dell'ora",
+      "options": {
+        "24": "24 ore",
+        "12": "12 ore"
+      }
+    }
+  }
+}

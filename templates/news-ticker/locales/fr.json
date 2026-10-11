@@ -1,0 +1,55 @@
+{
+  "name": "Bandeau d’actualités",
+  "description": "Des titres en vedette qui défilent à tour de rôle et un bandeau fluide. Saisissez-les ou connectez un flux RSS, une feuille Google, un CSV ou un tableau. En plein écran, les deux ; dans une bande fine, un bandeau ; dans une zone haute, un défilement vertical. L’écran ne télécharge rien : il marche hors ligne.",
+  "params": {
+    "title": {
+      "label": "Titre",
+      "default": "Actualités"
+    },
+    "feed": {
+      "label": "Source de données des titres (facultatif)",
+      "help": "Un flux RSS/Atom, une feuille Google, un CSV ou un tableau. Dès qu’il contient des titres, ils remplacent la liste saisie ; d’ici là, la liste s’affiche."
+    },
+    "column": {
+      "label": "Colonne des titres (feuille, CSV ou tableau)",
+      "help": "L’en-tête de la colonne qui contient les titres. Si aucune colonne ne porte ce nom, la première est utilisée. Sans effet pour les flux RSS.",
+      "default": "Titre"
+    },
+    "headlines": {
+      "label": "Titres (sans source de données)",
+      "help": "Un titre par ligne. Les lignes vides sont ignorées. Affichés aussi tant que la source de données connectée est vide.",
+      "default": "Northwind ouvre son nouveau studio au bord de l’eau le 6 octobre\nLa réunion trimestrielle passe dans l’atrium – portes à 16 h 30\nBravo à l’équipe support : 98 % de satisfaction ce trimestre\nLe parking est est fermé pour travaux jusqu’à vendredi\nNouvel abri vélos derrière le bâtiment B, avec recharge\nLunch & learn jeudi : l’accessibilité au quotidien"
+    },
+    "max_items": {
+      "label": "Afficher au maximum",
+      "help": "Les titres au-delà de ce nombre ne sont pas affichés."
+    },
+    "speed": {
+      "label": "Vitesse du bandeau",
+      "help": "Pixels par seconde sur un écran de 1080 pixels de haut. S’adapte à la taille de l’écran."
+    },
+    "rotate_seconds": {
+      "label": "Secondes par titre en vedette"
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "show_clock": {
+      "label": "Afficher l’horloge"
+    },
+    "timezone": {
+      "label": "Fuseau horaire de l’horloge",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Langue de la date et des textes intégrés, par exemple fr ou en-GB. Laissez vide pour la langue de l’écran."
+    }
+  }
+}

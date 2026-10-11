@@ -1,0 +1,131 @@
+{
+  "name": "Bacheca",
+  "description": "Una bacheca per sala pausa, scuola o reparto: schede con categorie a colori (Urgente, Sicurezza, Evento, Personale, Info), avvisi fissati in alto e date di inizio e fine, così gli avvisi compaiono e scadono da soli. Un avviso in evidenza con gli altri accanto, oppure uno alla volta. Scrivete gli avvisi o gestiteli da un foglio Google o da una tabella manuale.",
+  "params": {
+    "title": {
+      "label": "Titolo della bacheca",
+      "default": "Bacheca"
+    },
+    "subtitle": {
+      "label": "Sottotitolo",
+      "help": "Una riga sotto il titolo, come la sede o il reparto. Lasciate vuoto per nasconderla.",
+      "default": "Northwind Works · Edificio 2"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Accanto al titolo. Senza logo appare una piccola icona della bacheca nel colore di risalto."
+    },
+    "layout": {
+      "label": "Layout",
+      "options": {
+        "featured": "Avviso in evidenza + gli altri accanto",
+        "rotate": "Un avviso alla volta, a schermo intero"
+      }
+    },
+    "notices": {
+      "label": "Avvisi",
+      "help": "Uno per riga: Titolo | Testo | Categoria | Inizio | Fine | Fissato | Da. Date: 2026-10-14, 2026-10-14 17:00 o +N giorni da oggi. Senza fonte dati.",
+      "default": "Parcheggio nord chiuso fino a venerdì | I lavori di asfaltatura iniziano alle 06:00. | Urgente | | +3 | sì | Servizi generali\nGilet ad alta visibilità alla baia di carico | Questa settimana c’è più traffico di carrelli elevatori. | Sicurezza | | | | Marcus Lee\nNovità in cucina: latte d’avena | Alla macchina del caffè del piano 2. | Info | | | | Team uffici"
+    },
+    "source": {
+      "label": "Fonte dati degli avvisi (facoltativa)",
+      "help": "Un foglio Google, un CSV o una tabella manuale con una riga per avviso. Se ha la colonna Titolo, sostituisce gli avvisi scritti sopra."
+    },
+    "title_col": {
+      "label": "Colonna Titolo",
+      "default": "Titolo"
+    },
+    "body_col": {
+      "label": "Colonna Testo",
+      "default": "Testo"
+    },
+    "category_col": {
+      "label": "Colonna Categoria",
+      "default": "Categoria"
+    },
+    "start_col": {
+      "label": "Colonna Inizio",
+      "help": "Facoltativa. Un avviso con data di inizio resta nascosto fino ad allora.",
+      "default": "Inizio"
+    },
+    "end_col": {
+      "label": "Colonna Fine",
+      "help": "Facoltativa. Un avviso sparisce dopo la data di fine (una data da sola vale fino a fine giornata).",
+      "default": "Fine"
+    },
+    "pinned_col": {
+      "label": "Colonna Fissato",
+      "help": "Sì, yes, true, 1, x o pinned tiene l’avviso in alto (e in evidenza).",
+      "default": "Fissato"
+    },
+    "from_col": {
+      "label": "Colonna Da",
+      "help": "Facoltativa. Chi ha pubblicato l’avviso, in piccolo in fondo alla scheda.",
+      "default": "Da"
+    },
+    "date_order": {
+      "label": "Le date con le barre sono",
+      "help": "Conta solo per date come 03/04/2026. 2026-10-14 viene sempre capito.",
+      "options": {
+        "auto": "In base alla lingua (USA: prima il mese)",
+        "dmy": "Prima il giorno (14/10/2026)",
+        "mdy": "Prima il mese (10/14/2026)"
+      }
+    },
+    "category_colors": {
+      "label": "Colori delle categorie",
+      "help": "Facoltativo, uno per riga: Categoria = #RRGGBB. Urgente, Sicurezza, Evento, Personale, IT, Info e altre hanno già un colore."
+    },
+    "theme": {
+      "label": "Tema",
+      "options": {
+        "dark": "Scuro",
+        "light": "Chiaro"
+      }
+    },
+    "accent": {
+      "label": "Colore di risalto",
+      "help": "Linea del titolo, punti delle pagine e icona della bacheca."
+    },
+    "seconds": {
+      "label": "Secondi per pagina o avviso",
+      "help": "Quanto resta a schermo ogni pagina di avvisi (o ogni avviso, uno alla volta)."
+    },
+    "show_dates": {
+      "label": "Mostra le date «fino al» sulle schede"
+    },
+    "until_label": {
+      "label": "Testo prima di una data di fine",
+      "help": "Lasciate vuoto per «Fino al …» nella lingua dello schermo."
+    },
+    "today_label": {
+      "label": "Testo per un avviso che scade oggi",
+      "help": "Lasciate vuoto per «Termina oggi» nella lingua dello schermo."
+    },
+    "pinned_label": {
+      "label": "Testo dell’etichetta Fissato",
+      "help": "Lasciate vuoto per «In evidenza» nella lingua dello schermo."
+    },
+    "empty_label": {
+      "label": "Testo quando non ci sono avvisi",
+      "help": "Lasciate vuoto per «Nessun avviso al momento» nella lingua dello schermo."
+    },
+    "clock_format": {
+      "label": "Orologio",
+      "options": {
+        "auto": "Come nella lingua",
+        "24": "24 ore",
+        "12": "12 ore",
+        "off": "Nascondi orologio e data"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario",
+      "help": "Per l’orologio e per inizio e fine degli avvisi. Lasciate vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Per le parole della bacheca e le date, per esempio it-IT o it-CH. Lasciate vuoto per la lingua dello schermo."
+    }
+  }
+}

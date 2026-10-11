@@ -1,0 +1,103 @@
+{
+  "name": "Promo prendi 2 paghi 1",
+  "description": "Uno schermo «prendi 2 paghi 1» deciso per bar, panetteria o negozio: l’offerta in tre grandi righe, a cosa si applica, un bollino rotondo su un pannello colorato e un conto alla rovescia facoltativo fino all’ultimo giorno.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG più o meno quadrato. Il badge incluso è un segnaposto: sostituiscilo con il tuo."
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo (altrimenti un logo vuoto mostra un riquadro tratteggiato)."
+    },
+    "brand": {
+      "label": "Nome del negozio",
+      "help": "Accanto al logo. Lascia vuoto se il logo contiene già il nome."
+    },
+    "eyebrow": {
+      "label": "Occhiello",
+      "default": "SOLO QUESTA SETTIMANA"
+    },
+    "line1": {
+      "label": "Offerta, prima riga",
+      "help": "L’offerta è in tre grandi righe, ad es. «Il secondo» / «è in» / «OMAGGIO».",
+      "default": "Il secondo"
+    },
+    "line2": {
+      "label": "Offerta, seconda riga",
+      "default": "è in"
+    },
+    "line3": {
+      "label": "Offerta, terza riga (accento)",
+      "help": "La riga più grande, quindi al massimo 8 caratteri: OMAGGIO, −50%.",
+      "default": "OMAGGIO"
+    },
+    "product": {
+      "label": "A cosa si applica",
+      "default": "Latte, flat white o moka"
+    },
+    "detail": {
+      "label": "Riga di dettaglio",
+      "default": "Porta un amico. Combina le misure; in omaggio la bevanda di prezzo uguale o inferiore."
+    },
+    "sticker": {
+      "label": "Bollino rotondo",
+      "help": "Breve: al massimo due parole. Lascia vuoto per un semplice pallino.",
+      "default": "2x1"
+    },
+    "product_image": {
+      "label": "Immagine del prodotto",
+      "help": "Meglio un PNG o SVG scontornato con sfondo trasparente. Viene adattata, mai ritagliata."
+    },
+    "show_image": {
+      "label": "Mostra l’immagine del prodotto",
+      "help": "Disattiva per lasciare il pannello senza immagine (altrimenti un’immagine vuota mostra un riquadro tratteggiato)."
+    },
+    "show_countdown": {
+      "label": "Mostra il conto alla rovescia",
+      "help": "Disattiva per un’offerta senza scadenza: scompaiono sia l’etichetta sia il timer."
+    },
+    "countdown_label": {
+      "label": "Etichetta sopra il conto alla rovescia",
+      "help": "Resta anche dopo la fine: scegli parole adatte anche al messaggio finale.",
+      "default": "TEMPO LIMITATO"
+    },
+    "countdown_target": {
+      "label": "L’offerta termina il",
+      "help": "ISO 8601 con fuso orario, ad es. 2026-11-01T23:59:00+01:00 o 2026-11-01T23:59:00-05:00."
+    },
+    "countdown_done": {
+      "label": "Testo a conto alla rovescia finito",
+      "default": "Sta per finire"
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Lingua del conto alla rovescia, ad es. it o it-CH. Vuoto = la lingua dello schermo. I tuoi testi appaiono come li scrivi."
+    },
+    "small_print": {
+      "label": "Note legali",
+      "default": "Solo nei negozi aderenti. Non cumulabile con altre offerte né valido per le consegne."
+    },
+    "accent": {
+      "label": "Colore d’accento",
+      "help": "Il pannello dell’immagine e la terza riga dell’offerta."
+    },
+    "highlight": {
+      "label": "Colore del bollino"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "background_image": {
+      "label": "Foto di sfondo",
+      "help": "Facoltativa. Una foto dietro a tutto, scurita con l’impostazione qui sotto."
+    },
+    "background_dim": {
+      "label": "Scurisci la foto",
+      "help": "0 = la foto così com’è, 0,9 = quasi nera. Usato solo con una foto di sfondo."
+    }
+  }
+}

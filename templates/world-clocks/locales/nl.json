@@ -1,0 +1,80 @@
+{
+  "name": "Wereldklokken",
+  "description": "Twee tot acht live klokken voor de steden waarmee je werkt — analoog, digitaal of allebei, met de datum, een dag/nacht-teken en het tijdsverschil met dit scherm. Deelt zichzelf in als raster, staande lijst of smalle strook. Er wordt niets opgehaald: de tijden komen van de eigen klok van het scherm.",
+  "params": {
+    "title": {
+      "label": "Titel",
+      "help": "Laat leeg om de titelbalk te verbergen.",
+      "default": "De wereld rond"
+    },
+    "clocks": {
+      "label": "Klokken",
+      "help": "Eén klok per regel, als Stad | IANA-tijdzone — bijvoorbeeld Mumbai | Asia/Kolkata. 2 tot 8 regels; regels met een onbekende tijdzone worden overgeslagen en onderaan vermeld.",
+      "default": "Londen | Europe/London\nNew York | America/New_York\nTokio | Asia/Tokyo\nSydney | Australia/Sydney\nDubai | Asia/Dubai\nSan Francisco | America/Los_Angeles"
+    },
+    "face": {
+      "label": "Klokstijl",
+      "options": {
+        "both": "Analoog en digitaal",
+        "analog": "Alleen analoog",
+        "digital": "Alleen digitaal"
+      }
+    },
+    "clock_format": {
+      "label": "Tijdnotatie",
+      "options": {
+        "24": "24-uurs",
+        "12": "12-uurs"
+      }
+    },
+    "show_seconds": {
+      "label": "Seconden tonen"
+    },
+    "show_date": {
+      "label": "Datum tonen"
+    },
+    "show_daynight": {
+      "label": "Dag en nacht tonen",
+      "help": "Klokken waar het dag is krijgen een lichte wijzerplaat en een zon; ’s nachts een donkere wijzerplaat en een maan."
+    },
+    "day_start": {
+      "label": "Dag begint om (uur)"
+    },
+    "day_end": {
+      "label": "Nacht begint om (uur)"
+    },
+    "highlight_local": {
+      "label": "Stad van dit scherm markeren",
+      "help": "Omlijnt de klok waarvan de tijdzone gelijk is aan die van het scherm (of die hieronder)."
+    },
+    "home_timezone": {
+      "label": "Tijdzone van dit scherm",
+      "help": "Voor de markering en de +/- uren. Laat leeg om de instelling van het scherm te gebruiken."
+    },
+    "here_label": {
+      "label": "Label op de gemarkeerde klok",
+      "help": "Laat leeg voor „Hier” in de taal van het scherm."
+    },
+    "day_label": {
+      "label": "Label dag",
+      "help": "Op steden waar het dag is. Laat leeg voor „Dag” in de taal van het scherm."
+    },
+    "night_label": {
+      "label": "Label nacht",
+      "help": "Op steden waar het nacht is. Laat leeg voor „Nacht” in de taal van het scherm."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "De taal van de datums, AM/PM en de woorden op het scherm, bijvoorbeeld nl-NL, en-GB of ja-JP. Laat leeg voor de taal van het scherm."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    }
+  }
+}

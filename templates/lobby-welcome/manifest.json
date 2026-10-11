@@ -1,7 +1,7 @@
 {
   "id": "lobby-welcome",
   "name": "Lobby welcome",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "slide",
   "description": "A calm welcome screen for a reception or lobby: your logo, a headline and a line of detail, with a live clock and date in the building's own timezone and language.",
   "author": "ScreenTinker",
@@ -22,7 +22,7 @@
     { "name": "background", "type": "color", "label": "Background colour", "default": "#0F1720" },
     { "name": "text_color", "type": "color", "label": "Text colour", "default": "#F4F1EA" },
     { "name": "timezone", "type": "timezone", "label": "Clock timezone", "help": "Leave empty to use the screen's own clock.", "default": "" },
-    { "name": "locale", "type": "locale", "label": "Date language", "help": "For example en-GB, de-DE or fr-CA. Leave empty for the screen's language.", "default": "" },
+    { "name": "locale", "type": "locale", "label": "Language", "help": "The language of the date (weekday and month names), e.g. de or fr-CA. Leave empty for the screen's language.", "default": "" },
     { "name": "clock_format", "type": "select", "label": "Clock format", "default": "24",
       "options": [ { "value": "24", "label": "24-hour" }, { "value": "12", "label": "12-hour" } ] }
   ]

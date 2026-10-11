@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Info strip</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="m-row">
+<div class="bar" id="bar">
+  <div class="edge" aria-hidden="true"></div>
+
+  <div class="brand" id="brand">
+    <img id="logo" class="logo" alt="" hidden>
+    <span id="name" class="name"></span>
+  </div>
+
+  <div class="msg" id="msg">
+    <div class="stage" id="stage" aria-live="polite"></div>
+    <div class="progress" aria-hidden="true"><i id="prog"></i></div>
+  </div>
+
+  <div class="wx" id="wx" hidden>
+    <div class="wx-now">
+      <span id="wxicon" class="wxicon" aria-hidden="true"></span>
+      <span class="wx-text">
+        <span id="temp" class="temp"></span>
+        <span id="cond" class="cond"></span>
+        <span id="place" class="place"></span>
+      </span>
+    </div>
+    <div id="days" class="days"></div>
+  </div>
+
+  <div class="clock" id="clock">
+    <div class="time"><span id="time"></span><span id="ampm" class="ampm"></span></div>
+    <div id="date" class="date"><span id="wd" class="wd"></span><span id="dm" class="dm"></span></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

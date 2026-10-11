@@ -1,0 +1,126 @@
+{
+  "name": "Annuaire de l’immeuble",
+  "description": "Un annuaire de hall pour immeuble de bureaux, centre commercial ou campus : chaque occupant avec son étage et son bureau, groupés par étage ou de A à Z avec un index, des flèches de direction, une ligne « Vous êtes ici » et une horloge. Se répartit en colonnes pour remplir l’écran et fait défiler les longues listes. Saisissez les occupants ou gérez-les dans une Google Sheet.",
+  "params": {
+    "building_name": {
+      "label": "Nom de l’immeuble"
+    },
+    "address": {
+      "label": "Adresse ou sous-titre",
+      "help": "Une ligne sous le nom de l’immeuble. Laissez vide pour la masquer."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facultatif. Sans logo, les initiales de l’immeuble s’affichent dans la couleur d’accent."
+    },
+    "here_text": {
+      "label": "Ligne « Vous êtes ici »",
+      "help": "Affichée sous l’en-tête avec un repère. Laissez vide pour la masquer.",
+      "default": "Vous êtes ici · Hall principal, rez-de-chaussée"
+    },
+    "here_floor": {
+      "label": "Étage de cet écran",
+      "help": "Écrit comme dans la colonne Étage. Cet étage est marqué d’un repère dans la liste et dans l’index."
+    },
+    "group_by": {
+      "label": "Classer par",
+      "options": {
+        "floor": "Étage",
+        "alpha": "Nom, de A à Z",
+        "category": "Catégorie"
+      }
+    },
+    "floor_order": {
+      "label": "Ordre des étages",
+      "help": "Utilisé pour le classement par étage.",
+      "options": {
+        "asc": "Étage le plus bas d’abord",
+        "desc": "Dernier étage d’abord"
+      }
+    },
+    "show_index": {
+      "label": "Afficher la barre d’index",
+      "help": "Les lettres de A à Z (ou les étages, ou les catégories) en bas ; celles de la page affichée s’allument."
+    },
+    "show_category": {
+      "label": "Afficher la catégorie sous le nom"
+    },
+    "entries": {
+      "label": "Occupants",
+      "help": "Un par ligne : Nom | Étage | Bureau | Catégorie | Flèche. Flèche : gauche, droite, tout-droit, arrière, up-left…, ascenseur ou escalier. Sans source de données.",
+      "default": "Accueil et sécurité | G | Hall | Services de l’immeuble | gauche\nHarbour Street Café | G | G02 | Restauration | droite\nParking visiteurs | B1 | P1 | Parking | escalier\nNorthwind Legal LLP | 2 | 201 | Droit |\nBrightwater Dental | 3 | 312 | Santé |\nLumen Analytics | 5 | 520 | Technologie |\nTailspin Travel | 6 | 614 | Voyages |\nWoodgrove Bank Offices | 8 | 800 | Finance |"
+    },
+    "directory": {
+      "label": "Source de données de l’annuaire (facultatif)",
+      "help": "Une Google Sheet, un CSV ou un tableau manuel avec une ligne d’en-tête. S’il a la colonne Nom, il remplace les occupants saisis ci-dessus."
+    },
+    "name_col": {
+      "label": "Colonne Nom",
+      "default": "Nom"
+    },
+    "floor_col": {
+      "label": "Colonne Étage",
+      "default": "Étage"
+    },
+    "suite_col": {
+      "label": "Colonne Bureau",
+      "default": "Bureau"
+    },
+    "category_col": {
+      "label": "Colonne Catégorie",
+      "default": "Catégorie"
+    },
+    "arrow_col": {
+      "label": "Colonne Flèche",
+      "default": "Flèche"
+    },
+    "floor_names": {
+      "label": "Noms des étages",
+      "help": "Facultatif, un par ligne : Étage = Nom. Les étages non listés s’affichent avec le mot « Étage » et le numéro.",
+      "default": "G = Rez-de-chaussée\nB1 = Sous-sol\n12 = Attique"
+    },
+    "floor_word": {
+      "label": "Mot pour « étage »",
+      "help": "Pour les titres comme « Étage 7 ». Laissez vide pour le mot dans la langue de l’écran. Mettez {n} à la place du numéro (« Niveau {n} »)."
+    },
+    "footer": {
+      "label": "Ligne de pied de page",
+      "help": "Petits caractères en bas. Laissez vide pour la masquer.",
+      "default": "Ascenseurs vers tous les étages droit devant · Visiteurs, merci de vous présenter à l’accueil"
+    },
+    "empty_text": {
+      "label": "Texte si la liste est vide",
+      "help": "Laissez vide pour « Aucun occupant pour l’instant » dans la langue de l’écran."
+    },
+    "clock_format": {
+      "label": "Horloge",
+      "options": {
+        "auto": "Selon la langue",
+        "24": "24 heures",
+        "12": "12 heures",
+        "off": "Masquer l’horloge"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire de l’horloge",
+      "help": "Laissez vide pour utiliser l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Pour les mots de l’annuaire, la date, l’horloge et le tri de A à Z. Laissez vide pour la langue de l’écran."
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "page_seconds": {
+      "label": "Secondes par page",
+      "help": "Seulement si la liste ne tient pas sur un écran à une taille lisible."
+    }
+  }
+}

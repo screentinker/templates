@@ -1,0 +1,72 @@
+{
+  "name": "Annuncio — deciso",
+  "description": "Un avviso forte e deciso: un titolo enorme su un colore pieno, un breve paragrafo, un piè di pagina e un codice QR facoltativo per i dettagli. Per chiusure, scadenze e tutto ciò che nessuno deve perdere.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ideale un PNG o SVG con sfondo trasparente. Compare in alto a sinistra."
+    },
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "Una breve etichetta sopra il titolo, ad es. PROMEMORIA o NOVITÀ. In maiuscolo si legge meglio.",
+      "default": "AVVISO IMPORTANTE"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "L'annuncio in poche parole. Fino a 40 caratteri; occupa due o tre righe sullo schermo.",
+      "default": "Ufficio chiuso venerdì 23 ottobre"
+    },
+    "body": {
+      "label": "Dettagli",
+      "help": "Una o due frasi. Premi Invio per andare a capo.",
+      "default": "L'edificio resta chiuso tutto il giorno per una manutenzione elettrica programmata. Lavorate da casa; l'help desk IT resta attivo all'interno 4400."
+    },
+    "footer": {
+      "label": "Piè di pagina",
+      "help": "Chi lo invia, una data, una sala o un contatto.",
+      "default": "Servizi generali  ·  Domande? facilities@northwind.example"
+    },
+    "show_qr": {
+      "label": "Mostra un codice QR",
+      "help": "Disattiva se non hai un link: il codice e la sua didascalia spariscono."
+    },
+    "qr_url": {
+      "label": "Link del codice QR",
+      "help": "L'indirizzo aperto dal codice QR. Un link più corto crea un codice leggibile da più lontano."
+    },
+    "qr_caption": {
+      "label": "Didascalia del QR",
+      "default": "Dettagli e FAQ"
+    },
+    "show_date": {
+      "label": "Mostra la data di oggi",
+      "help": "La data attuale dello schermo, nella lingua e nel fuso orario qui sotto."
+    },
+    "date_format": {
+      "label": "Formato data",
+      "options": {
+        "weekday": "Giorno della settimana, giorno e mese",
+        "long": "Data completa con anno",
+        "short": "Data breve",
+        "numeric": "Solo numeri"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario della data",
+      "help": "Lascia vuoto per usare l'orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "La lingua della data, ad es. en-GB, de-DE o fr-CA. Lascia vuoto per la lingua dello schermo."
+    },
+    "accent": {
+      "label": "Colore di accento"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

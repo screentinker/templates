@@ -1,0 +1,152 @@
+{
+  "name": "Avanzamento obiettivo",
+  "description": "Mostra quanto manca a una raccolta fondi, un appello o un obiettivo di vendita: termometro, barra o anello con l’importo, la percentuale, le tappe, i sostenitori e il conto alla rovescia. Coriandoli all’obiettivo raggiunto. Inserisci il totale o collega un foglio Google, le risposte di un modulo o una API REST.",
+  "params": {
+    "headline": {
+      "label": "Titolo",
+      "help": "La riga grande. Fino a tre righe sullo schermo.",
+      "default": "Riempiamo gli scaffali del banco alimentare Riverside"
+    },
+    "kicker": {
+      "label": "Nome della campagna",
+      "help": "Riga piccola sopra il titolo. Lascia vuoto per nasconderla.",
+      "default": "Northwind Community Fund · Raccolta d’inverno"
+    },
+    "thanks": {
+      "label": "Riga di ringraziamento",
+      "help": "In basso. Lascia vuoto per nasconderla.",
+      "default": "Ogni donazione resta a Riverside. Grazie di sostenere chi vive accanto a te."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facoltativo. Sopra il titolo."
+    },
+    "style": {
+      "label": "Indicatore",
+      "help": "Una striscia larga usa sempre la barra.",
+      "options": {
+        "thermometer": "Termometro",
+        "bar": "Barra di avanzamento",
+        "ring": "Anello"
+      }
+    },
+    "raised": {
+      "label": "Raccolto finora",
+      "help": "Usato senza fonte dati collegata, o se non ha una colonna importo."
+    },
+    "target": {
+      "label": "Obiettivo"
+    },
+    "supporters": {
+      "label": "Numero di sostenitori",
+      "help": "0 lo nasconde. Con un registro donazioni come fonte vengono contate le righe."
+    },
+    "currency": {
+      "label": "Codice valuta",
+      "help": "Tre lettere: EUR, CHF, USD, GBP, JPY… Lascia vuoto per numeri semplici (ore, libri, iscrizioni).",
+      "default": "EUR"
+    },
+    "unit": {
+      "label": "Unità (senza valuta)",
+      "help": "Dopo i numeri semplici, es. «libri» o «km». Ignorata se è impostata una valuta."
+    },
+    "show_cents": {
+      "label": "Mostra centesimi / decimali"
+    },
+    "milestones": {
+      "label": "Tappe",
+      "help": "Una per riga: Importo | Nome. Fino a 10, tra 0 e l’obiettivo. Lascia vuoto per nessuna.",
+      "default": "10000 | Nuove scaffalature\n25000 | Cella frigorifera\n40000 | Furgone per consegne"
+    },
+    "deadline": {
+      "label": "Scadenza",
+      "help": "Una data (2026-12-24), data e ora (2026-12-24T17:00) o month-end, quarter-end, year-end. Lascia vuoto per nascondere il conto alla rovescia."
+    },
+    "timezone": {
+      "label": "Fuso orario della scadenza",
+      "help": "Lascia vuoto per l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Parole, numeri e date sullo schermo, ad esempio it-IT o it-CH. Lascia vuoto per la lingua dello schermo."
+    },
+    "goal_text": {
+      "label": "Testo sotto l’importo",
+      "help": "{target} è sostituito dall’obiettivo. Vuoto: testo predefinito nella lingua dello schermo. Scrivi - per nasconderlo."
+    },
+    "percent_label": {
+      "label": "Didascalia: percentuale",
+      "help": "Vuoto: testo predefinito nella lingua dello schermo. Scrivi - per nasconderlo."
+    },
+    "supporters_label": {
+      "label": "Didascalia: sostenitori",
+      "help": "Vuoto: testo predefinito nella lingua dello schermo. Scrivi - per nasconderlo."
+    },
+    "countdown_label": {
+      "label": "Didascalia: conto alla rovescia",
+      "help": "Vuoto: testo predefinito nella lingua dello schermo. Scrivi - per nasconderlo."
+    },
+    "ended_label": {
+      "label": "Testo dopo la scadenza",
+      "help": "Vuoto: testo predefinito nella lingua dello schermo. Scrivi - per nasconderlo."
+    },
+    "next_text": {
+      "label": "Riga della prossima tappa",
+      "help": "{milestone}, {amount} e {remaining} vengono compilati. Vuoto: testo predefinito nella lingua dello schermo. Scrivi - per nasconderlo."
+    },
+    "celebrate_text": {
+      "label": "Testo a obiettivo raggiunto",
+      "help": "Vuoto: testo predefinito nella lingua dello schermo. Scrivi - per nasconderlo."
+    },
+    "source": {
+      "label": "Fonte dati del totale (facoltativa)",
+      "help": "Un foglio Google, risposte di un modulo, CSV, API REST o tabella manuale. Il README descrive i formati che legge."
+    },
+    "amount_col": {
+      "label": "Colonna o campo dell’importo",
+      "help": "Maiuscole e punteggiatura non contano. Un registro donazioni può usare la sua colonna Importo."
+    },
+    "amount_mode": {
+      "label": "Come leggere l’importo",
+      "options": {
+        "auto": "Automatico (una riga = totale; più righe = somma)",
+        "sum": "Somma tutte le righe (registro donazioni)",
+        "last": "Ultima riga (totale progressivo)",
+        "first": "Prima riga"
+      }
+    },
+    "target_col": {
+      "label": "Colonna o campo dell’obiettivo (facoltativo)"
+    },
+    "supporters_col": {
+      "label": "Colonna o campo dei sostenitori (facoltativo)"
+    },
+    "font": {
+      "label": "Carattere del titolo",
+      "options": {
+        "archivo": "Archivo (display)",
+        "bitter": "Bitter (serif)",
+        "oswald": "Oswald (stretto)",
+        "inter": "Inter (pulito)"
+      }
+    },
+    "accent": {
+      "label": "Colore d’accento",
+      "help": "La parte alta del riempimento, l’importo e le tappe raggiunte."
+    },
+    "accent2": {
+      "label": "Secondo colore di riempimento",
+      "help": "Il riempimento sfuma da questo colore a quello d’accento."
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "animate": {
+      "label": "Anima (riempimento al caricamento, coriandoli all’obiettivo)",
+      "help": "Disattiva sui player molto lenti."
+    }
+  }
+}

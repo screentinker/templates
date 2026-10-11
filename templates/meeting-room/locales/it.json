@@ -1,0 +1,81 @@
+{
+  "name": "Cartello sala riunioni",
+  "description": "Un cartello da porta per una sala riunioni: una grande fascia verde LIBERA o rossa OCCUPATA, la riunione in corso e la successiva, e l’agenda del giorno, da qualsiasi fonte dati Calendario (iCal). La modalità privacy mostra «Riservata» al posto dei titoli. Pensato per uno schermo verticale accanto alla porta; funziona anche in orizzontale o come striscia.",
+  "params": {
+    "calendar": {
+      "label": "Calendario della sala (fonte dati Calendario / iCal)",
+      "help": "Una fonte dati Calendario collegata al feed iCal della sala (Google, Outlook/Exchange, qualsiasi URL .ics). Senza, viene mostrato un programma di esempio."
+    },
+    "room_name": {
+      "label": "Nome della sala",
+      "default": "Sala riunioni"
+    },
+    "available_label": {
+      "label": "Testo «libera»",
+      "help": "Lascia vuoto per la parola integrata nella lingua del cartello."
+    },
+    "busy_label": {
+      "label": "Testo «occupata»",
+      "help": "Lascia vuoto per la parola integrata nella lingua del cartello."
+    },
+    "hide_titles": {
+      "label": "Privacy: nascondi titoli e organizzatori"
+    },
+    "reserved_label": {
+      "label": "Testo al posto di un titolo nascosto",
+      "help": "Lascia vuoto per la parola integrata nella lingua del cartello."
+    },
+    "show_organizer": {
+      "label": "Mostra gli organizzatori"
+    },
+    "now_label": {
+      "label": "Titolo: riunione in corso",
+      "help": "Lascia vuoto per la parola integrata nella lingua del cartello."
+    },
+    "next_label": {
+      "label": "Titolo: riunione successiva",
+      "help": "Lascia vuoto per la parola integrata nella lingua del cartello."
+    },
+    "agenda_label": {
+      "label": "Titolo: agenda di oggi",
+      "help": "Lascia vuoto per la parola integrata nella lingua del cartello."
+    },
+    "upcoming_label": {
+      "label": "Titolo: prenotazioni successive (quando oggi non resta nulla)",
+      "help": "Lascia vuoto per la parola integrata nella lingua del cartello."
+    },
+    "empty_label": {
+      "label": "Testo quando non ci sono prenotazioni",
+      "help": "Lascia vuoto per la parola integrata nella lingua del cartello."
+    },
+    "available_color": {
+      "label": "Colore «libera»"
+    },
+    "busy_color": {
+      "label": "Colore «occupata»"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    },
+    "clock_format": {
+      "label": "Orologio",
+      "options": {
+        "auto": "Come da lingua",
+        "24": "24 ore",
+        "12": "12 ore",
+        "off": "Nascondi l’orologio"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario dell’orologio",
+      "help": "Lascia vuoto per usare l’orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Parole, date e orari del cartello, ad es. it-IT o it-CH. Vuoto = lingua dello schermo. Vale anche per il calendario; usa lo stesso fuso orario dell’orologio."
+    }
+  }
+}

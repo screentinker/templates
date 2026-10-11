@@ -1,0 +1,70 @@
+{
+  "name": "Opinión de cliente (vertical)",
+  "description": "Una reseña de cliente en pantalla: estrellas, las palabras del cliente en una serif cálida, su nombre y un avatar con iniciales, más tu puntuación global. Para escaparates, salas de exposición, recepciones y zonas de espera. Diseño vertical 9:16.",
+  "params": {
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "default": "LO QUE DICEN NUESTROS CLIENTES"
+    },
+    "rating": {
+      "label": "Valoración en estrellas",
+      "options": {
+        "tpl:stars/5.svg": "5 estrellas",
+        "tpl:stars/4.5.svg": "4½ estrellas",
+        "tpl:stars/4.svg": "4 estrellas",
+        "tpl:stars/3.svg": "3 estrellas",
+        "tpl:stars/none.svg": "Ocultar las estrellas"
+      }
+    },
+    "quote": {
+      "label": "Opinión",
+      "help": "Las palabras del cliente, sin comillas. Hasta unos 220 caracteres; cuanto más corta, mejor se lee.",
+      "default": "Montaron toda nuestra cocina en cuatro días, dejaron la casa impecable y volvieron una semana después solo para revisar cada cajón. Ya les hemos recomendado a dos vecinos."
+    },
+    "name": {
+      "label": "Nombre del cliente",
+      "help": "Solo con el permiso del cliente."
+    },
+    "detail": {
+      "label": "Detalle del cliente",
+      "help": "Qué compró, de dónde es o «Cliente verificado».",
+      "default": "Reforma de cocina · Riverside"
+    },
+    "initials": {
+      "label": "Iniciales del avatar"
+    },
+    "show_score": {
+      "label": "Mostrar la puntuación global",
+      "help": "Desactivado oculta la puntuación grande y su texto."
+    },
+    "score": {
+      "label": "Puntuación global",
+      "help": "Tu valoración media, p. ej. 4,9. Usa una cifra real.",
+      "default": "4,9"
+    },
+    "score_caption": {
+      "label": "Texto de la puntuación",
+      "default": "media de 1.240 opiniones verificadas"
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactivado oculta el logotipo y su espacio queda vacío."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG con fondo transparente. El de muestra es blanco para el panel de color (horizontal) u oscuro para la página (vertical)."
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "El panel lateral (horizontal) o inferior (vertical), el avatar y el encabezado pequeño."
+    },
+    "background": {
+      "label": "Color de fondo",
+      "help": "La página. Las iniciales del avatar también se dibujan en este color."
+    },
+    "text_color": {
+      "label": "Color del texto",
+      "help": "La opinión y el nombre."
+    }
+  }
+}

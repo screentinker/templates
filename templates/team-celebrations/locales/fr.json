@@ -1,0 +1,134 @@
+{
+ "name": "Fêtes de l’équipe",
+ "description": "Anniversaires, ancienneté et bienvenue aux nouveaux pour le bureau ou la salle de pause. Des cartes qui défilent avec des avatars à initiales colorés, des médailles à 1, 5, 10, 15 et 20+ ans, et la liste des fêtes du jour, de la semaine ou du mois. Saisissez les personnes ou utilisez un Google Sheet. Confettis joyeux ou thème sombre élégant.",
+ "params": {
+  "title": {
+   "label": "Titre",
+   "help": "Le titre. Laissez vide pour le masquer.",
+   "default": "À l’honneur chez Northwind"
+  },
+  "logo": {
+   "label": "Logo",
+   "help": "Facultatif. Affiché à côté du titre."
+  },
+  "window": {
+   "label": "Qui afficher",
+   "options": {
+    "today": "Aujourd’hui seulement",
+    "week": "Cette semaine (semaine civile)",
+    "next7": "Les 7 prochains jours",
+    "month": "Ce mois-ci",
+    "next30": "Les 30 prochains jours"
+   }
+  },
+  "week_start": {
+   "label": "La semaine commence le",
+   "help": "Utilisé seulement par « Cette semaine ».",
+   "options": {
+    "monday": "Lundi",
+    "sunday": "Dimanche",
+    "saturday": "Samedi"
+   }
+  },
+  "show_birthdays": {
+   "label": "Afficher les anniversaires"
+  },
+  "show_anniversaries": {
+   "label": "Afficher l’ancienneté"
+  },
+  "show_new_hires": {
+   "label": "Souhaiter la bienvenue aux nouveaux"
+  },
+  "milestones_only": {
+   "label": "Seulement les dates rondes (1, 5, 10, 15, 20, 25… ans)"
+  },
+  "welcome_days": {
+   "label": "Accueillir les nouveaux pendant (jours)",
+   "help": "Un nouvel arrivant reste à l’écran ce nombre de jours après son premier jour, quelle que soit la période."
+  },
+  "theme": {
+   "label": "Thème",
+   "options": {
+    "playful": "Joyeux (clair, confettis)",
+    "elegant": "Élégant (sombre, or)"
+   }
+  },
+  "animate": {
+   "label": "Animer le fond (confettis / reflets dorés)",
+   "help": "À désactiver sur les lecteurs très lents."
+  },
+  "seconds": {
+   "label": "Secondes par personne"
+  },
+  "birthday_label": {
+   "label": "Titre anniversaire",
+   "help": "Au-dessus du nom sur une carte d’anniversaire. Vide : « Joyeux anniversaire » dans la langue de l’écran."
+  },
+  "anniversary_label": {
+   "label": "Titre ancienneté",
+   "help": "{n} est remplacé par le nombre d’années, p. ex. « {n} ans parmi nous ». Vide : cette phrase dans la langue de l’écran, au bon pluriel."
+  },
+  "anniversary_one_label": {
+   "label": "Titre pour un an",
+   "help": "Pour un premier anniversaire, p. ex. « 1 an parmi nous ». Vide utilise le titre ci-dessus ou le texte intégré."
+  },
+  "new_hire_label": {
+   "label": "Titre de bienvenue",
+   "help": "Vide : « Bienvenue dans l’équipe » dans la langue de l’écran."
+  },
+  "list_title": {
+   "label": "Titre de la liste",
+   "help": "Au-dessus de la liste de la période. Vide : « À l’honneur » dans la langue de l’écran. Un seul - le masque."
+  },
+  "empty_title": {
+   "label": "Texte quand personne n’est concerné",
+   "help": "Vide : « Rien à fêter pour le moment » dans la langue de l’écran."
+  },
+  "empty_text": {
+   "label": "Petit texte quand personne n’est concerné",
+   "help": "Vide : une phrase sympathique dans la langue de l’écran. Un seul - le masque."
+  },
+  "next_label": {
+   "label": "Titre de la prochaine fête (quand personne n’est concerné)",
+   "help": "S’il n’y a personne, la prochaine personne dans l’année s’affiche dessous. Vide : « Prochainement ». Un seul - le masque."
+  },
+  "people": {
+   "label": "Source de données des personnes (facultatif)",
+   "help": "Un Google Sheet, un CSV ou un tableau manuel avec une ligne par personne. S’il a la colonne du nom, il remplace les personnes d’exemple."
+  },
+  "name_col": {
+   "label": "Colonne du nom"
+  },
+  "type_col": {
+   "label": "Colonne du type",
+   "help": "Facultatif : Anniversaire, Ancienneté ou Nouvel arrivant (l’anglais marche aussi). Sans elle, chaque ligne donne un anniversaire par la date et une ancienneté ou bienvenue par la date d’arrivée."
+  },
+  "date_col": {
+   "label": "Colonne anniversaire / date",
+   "help": "MM-JJ ou AAAA-MM-JJ. L’année de naissance n’est jamais affichée."
+  },
+  "start_col": {
+   "label": "Colonne date d’arrivée",
+   "help": "AAAA-MM-JJ, le premier jour. Donne l’ancienneté et les bienvenues."
+  },
+  "title_col": {
+   "label": "Colonne du poste"
+  },
+  "team_col": {
+   "label": "Colonne de l’équipe"
+  },
+  "sample": {
+   "label": "Personnes (sans source de données)",
+   "help": "Une personne par ligne : Nom | Type | Date | Arrivée | Poste | Équipe. Les dates peuvent aussi être today, today+3 ou today+3-5y (il y a 5 ans).",
+   "default": "Priya Raman | Anniversaire | today | | Designer produit senior | Design\nMarcus Okafor | Ancienneté | | today+1-10y | Responsable logistique | Opérations\nLena Fischer | Nouvel arrivant | | today-2 | Ingénieure data | Plateforme\nGrace Mensah | Ancienneté | | today+2-1y | Office manager | RH & services généraux"
+  },
+  "timezone": {
+   "label": "Fuseau horaire",
+   "help": "Détermine quand « aujourd’hui » commence. Vide utilise l’horloge de l’écran."
+  },
+  "locale": {
+   "label": "Langue",
+   "help": "La langue des titres intégrés, d’Aujourd’hui/Demain et des dates, p. ex. fr-FR ou fr-CA. Vide utilise la langue de l’écran."
+  }
+ }
+}

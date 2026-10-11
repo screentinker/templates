@@ -1,0 +1,50 @@
+{
+  "name": "大堂欢迎屏",
+  "description": "适用于前台或大堂的简洁欢迎屏：您的标志、一行标题和一行说明，并按所在楼宇的时区和语言显示实时时钟和日期。",
+  "params": {
+    "logo": {
+      "label": "标志",
+      "help": "建议使用透明背景的 PNG 或 SVG。显示在左上角。"
+    },
+    "eyebrow": {
+      "label": "小标题",
+      "default": "欢迎光临"
+    },
+    "headline": {
+      "label": "标题",
+      "default": "很高兴在 Northwind Studio 见到您"
+    },
+    "subline": {
+      "label": "说明文字",
+      "default": "请到前台登记，接待人员很快就会来接您。"
+    },
+    "footer": {
+      "label": "页脚",
+      "default": "访客 Wi-Fi：Northwind-Guest"
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    },
+    "timezone": {
+      "label": "时钟时区",
+      "help": "留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "日期（星期和月份）的语言，例如 zh-CN 或 en-US。留空则使用屏幕的语言。"
+    },
+    "clock_format": {
+      "label": "时钟格式",
+      "options": {
+        "24": "24 小时制",
+        "12": "12 小时制"
+      }
+    }
+  }
+}

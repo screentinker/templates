@@ -1,0 +1,146 @@
+{
+  "name": "Tableau des temps d’attente",
+  "description": "Temps d’attente estimés pour un cabinet, des urgences, une pharmacie ou un guichet : chaque service avec son attente en minutes et un statut Ouvert, Chargé ou Fermé en couleurs nettes, l’heure de mise à jour, un message rassurant et un rappel d’enregistrement. L’équipe met à jour une feuille Google ou un tableau manuel depuis un téléphone, ou saisit la liste.",
+  "params": {
+    "title": {
+      "label": "Titre",
+      "default": "Centre de santé Northwind"
+    },
+    "subtitle": {
+      "label": "Sous-titre",
+      "default": "Temps d’attente estimés",
+      "help": "Une ligne sous le titre. Laisser vide pour la masquer."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facultatif. À côté du titre. Un logo blanc ou transparent convient au bandeau coloré."
+    },
+    "services": {
+      "label": "Services",
+      "help": "Un par ligne : Service | Attente en minutes | Statut | Note. Le statut est Ouvert, Chargé ou Fermé (vide = déduit de l’attente). Utilisé sans source de données.",
+      "default": "Urgences | 45 | Chargé | RDC · Suivez la ligne rouge\nMédecine générale | 20 | | RDC · Salles 1–6\nPharmacie | 10 | | Ordonnances · Guichet 3\nPrise de sang | 15 | | 1er étage · Sans RDV\nRadiologie | 55 | Chargé | 1er étage · Aile est\nPetits soins | 25 | | RDC · Salle 8\nVaccins | 0 | | 2e étage · Grippe, voyage\nKinésithérapie | | Fermé | Sur RDV aujourd’hui"
+    },
+    "waits": {
+      "label": "Source de données des attentes (facultatif)",
+      "help": "Une feuille Google, un CSV ou un tableau manuel avec une ligne par service. Une fois choisie, elle remplace les services saisis ci-dessus."
+    },
+    "service_col": {
+      "label": "Colonne service",
+      "default": "Service",
+      "help": "L’en-tête dans votre feuille. S’il manque, « Service » puis la première colonne sont lus."
+    },
+    "wait_col": {
+      "label": "Colonne attente",
+      "default": "Attente",
+      "help": "Minutes en nombre (25), plage (15-20) ou h:mm (1:30). Un autre texte s’affiche tel quel. S’il manque, « Wait » est lu."
+    },
+    "status_col": {
+      "label": "Colonne statut",
+      "default": "Statut",
+      "help": "Ouvert, Chargé ou Fermé. Une cellule vide est déduite de l’attente. S’il manque, « Status » est lu."
+    },
+    "note_col": {
+      "label": "Colonne note",
+      "default": "Note",
+      "help": "Petite ligne facultative sous le service : où aller, ou quand il rouvre. S’il manque, « Note » est lu."
+    },
+    "notice": {
+      "label": "Ligne d’information",
+      "default": "Temps indicatifs. La prise en charge se fait selon l’urgence, pas l’ordre d’arrivée : si vous vous sentez plus mal, prévenez tout de suite le personnel.",
+      "help": "Un message rassurant en bas de l’écran. Laisser vide pour le masquer."
+    },
+    "checkin": {
+      "label": "Rappel d’enregistrement",
+      "default": "Enregistrez-vous à l’accueil",
+      "help": "Rappel mis en avant dans le pied de page. Laisser vide pour le masquer."
+    },
+    "order": {
+      "label": "Ordre",
+      "help": "En cas de tri, les services fermés passent toujours en dernier.",
+      "options": {
+        "listed": "Comme dans la liste",
+        "shortest": "Attente la plus courte d’abord",
+        "longest": "Attente la plus longue d’abord"
+      }
+    },
+    "busy_minutes": {
+      "label": "Chargé à partir de (minutes)",
+      "help": "Un service sans statut est affiché comme Chargé quand son attente atteint cette valeur."
+    },
+    "open_label": {
+      "label": "Texte : ouvert",
+      "help": "Vide = le mot intégré dans la langue de l’écran (« Ouvert »)."
+    },
+    "busy_label": {
+      "label": "Texte : chargé",
+      "help": "Vide = le mot intégré dans la langue de l’écran (« Chargé »)."
+    },
+    "closed_label": {
+      "label": "Texte : fermé",
+      "help": "Vide = le mot intégré dans la langue de l’écran (« Fermé »)."
+    },
+    "nowait_label": {
+      "label": "Texte : sans attente",
+      "help": "Affiché à la place du temps quand l’attente est 0. Vide = les mots intégrés dans la langue de l’écran (« Sans attente »)."
+    },
+    "updated_label": {
+      "label": "Texte : mis à jour",
+      "help": "Avant l’heure ; mettez {time} là où l’heure doit aller. Vide = le texte intégré dans la langue de l’écran (« Mise à jour : {time} »)."
+    },
+    "empty_label": {
+      "label": "Texte sans données",
+      "help": "Affiché tant que la source de données n’a pas encore de lignes. Vide = la phrase intégrée dans la langue de l’écran."
+    },
+    "show_updated": {
+      "label": "Afficher l’heure de mise à jour"
+    },
+    "stale_minutes": {
+      "label": "Rappel si les chiffres n’ont pas changé depuis (minutes)",
+      "help": "Avec une source de données, l’heure de mise à jour passe à l’orange si aucun chiffre n’a changé pendant ce temps (même après une synchro), pour rappeler l’équipe. 0 = désactivé."
+    },
+    "show_meter": {
+      "label": "Afficher une barre d’attente par service"
+    },
+    "theme": {
+      "label": "Thème",
+      "options": {
+        "light": "Clair",
+        "dark": "Sombre"
+      }
+    },
+    "accent": {
+      "label": "Couleur d’accent",
+      "help": "Le bandeau du haut et le rappel d’enregistrement."
+    },
+    "open_color": {
+      "label": "Couleur : ouvert"
+    },
+    "busy_color": {
+      "label": "Couleur : chargé"
+    },
+    "closed_color": {
+      "label": "Couleur : fermé"
+    },
+    "clock_format": {
+      "label": "Horloge",
+      "options": {
+        "12": "12 heures",
+        "24": "24 heures",
+        "auto": "Selon la langue",
+        "off": "Masquer l’horloge"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire",
+      "help": "Vide = l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Les mots, heures et nombres à l’écran, par exemple fr ou fr-CA. Vide = la langue de l’écran."
+    },
+    "page_seconds": {
+      "label": "Secondes par page",
+      "help": "Utilisé seulement s’il y a trop de services pour un seul écran lisible."
+    }
+  }
+}

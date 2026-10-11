@@ -1,0 +1,59 @@
+{
+  "name": "Standby-Bildschirm — ruhiger Verlauf mit Uhrzeit und Datum (Hochformat)",
+  "description": "Ein ruhiger Standby-Bildschirm: eine große, leichte Uhr und das Datum auf sanftem Farbverlauf, dazu optional ein kleines Logo und eine Textzeile. Sechs mitgelieferte Verläufe, Ihre Zeitzone und Sprache. Angenehm für Bildschirme, die stundenlang ohne Programm laufen. Hochformat 9:16.",
+  "params": {
+    "palette": {
+      "label": "Farbverlauf",
+      "help": "Der Hintergrund. Alle sechs sind dunkel genug für hellen Text.",
+      "options": {
+        "tpl:bg-dusk.svg": "Abenddämmerung (Indigo bis Rosé)",
+        "tpl:bg-ocean.svg": "Ozean (Marine bis Petrol)",
+        "tpl:bg-forest.svg": "Wald (Kiefer bis Moos)",
+        "tpl:bg-ember.svg": "Glut (Pflaume bis Kupfer)",
+        "tpl:bg-aurora.svg": "Polarlicht (Nacht bis Grün)",
+        "tpl:bg-slate.svg": "Schiefer (Anthrazit bis Stahl)"
+      }
+    },
+    "clock_format": {
+      "label": "Uhrzeitformat",
+      "options": {
+        "12": "12 Stunden",
+        "24": "24 Stunden"
+      }
+    },
+    "date_format": {
+      "label": "Datumsformat",
+      "options": {
+        "weekday": "Wochentag, Tag und Monat",
+        "long": "Vollständiges Datum mit Jahr",
+        "short": "Kurzes Datum",
+        "numeric": "Nur Ziffern"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone",
+      "help": "Für welchen Ort Uhr und Datum gelten. Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Wie Uhrzeit und Datum geschrieben werden, z. B. en-GB, de-DE oder fr-CA. Leer lassen für die Sprache des Bildschirms."
+    },
+    "message": {
+      "label": "Textzeile",
+      "help": "Eine kleine Zeile am unteren Rand. Leer lassen für keine.",
+      "default": "Northwind Studio  ·  Besucher bitte am Empfang anmelden"
+    },
+    "show_logo": {
+      "label": "Logo anzeigen",
+      "help": "Ein kleines Logo am unteren Rand."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Ein helles (weißes) PNG oder SVG mit transparentem Hintergrund wirkt auf dem Verlauf am besten."
+    },
+    "text_color": {
+      "label": "Textfarbe",
+      "help": "Uhr, Datum und Textzeile. Hell halten: alle Verläufe sind dunkel."
+    }
+  }
+}

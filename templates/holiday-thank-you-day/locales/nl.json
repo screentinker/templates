@@ -1,0 +1,51 @@
+{
+  "name": "Bedankdag",
+  "description": "Een vrolijk bedankscherm voor een dag voor medewerkers, vrijwilligers, klanten of leraren: krachtige geometrische vormen op crème, een grote bedank-kop, een bericht met de cijfers om te vieren en een bedankje in meerdere talen.",
+  "params": {
+    "eyebrow": {
+      "label": "Kleine kop",
+      "help": "De korte regel boven de kop. Laat leeg om hem te verbergen.",
+      "default": "DAG VAN DE MEDEWERKER"
+    },
+    "headline": {
+      "label": "Kop",
+      "help": "Er zijn twee regels voor gereserveerd: ongeveer 24 tekens passen. Een langere kop loopt door naar een derde regel en over het bericht.",
+      "default": "Bedankt voor alles"
+    },
+    "message": {
+      "label": "Bericht",
+      "help": "Een zin of twee onder de kop; tot 200 tekens passen. Een regeleinde begint een nieuwe regel.",
+      "default": "Van de nachtdienst tot de receptie: 1.284 bestellingen verzonden, 96% vijfsterrenreviews en ons beste kwartaal ooit. De lunch is vandaag van ons."
+    },
+    "date_line": {
+      "label": "Datumregel",
+      "help": "Vrije tekst, getypt zoals hij moet verschijnen: een datum, een tijd en plaats, of een afsluiter.",
+      "default": "12:30  ·  ATRIUM  ·  IEDEREEN WELKOM"
+    },
+    "show_logo": {
+      "label": "Logo tonen",
+      "help": "Zet uit als je geen logo hebt."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Een brede PNG of SVG met transparante achtergrond (ongeveer 3,4 : 1 vult het vak; andere vormen worden erin gepast). Vervang de Northwind-placeholder."
+    },
+    "accent": {
+      "label": "Accentkleur"
+    },
+    "accent2": {
+      "label": "Tweede accentkleur"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "text_color": {
+      "label": "Tekstkleur"
+    },
+    "thanks_line": {
+      "label": "Onderste regel",
+      "help": "Kleine letters onder de datumregel; standaard bedankt in meerdere talen.",
+      "default": "Thank you  ·  Merci  ·  Danke  ·  Gracias  ·  Grazie  ·  Obrigado  ·  Tack"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "name": "Cardápio",
+  "description": "Um cardápio de café, restaurante ou bar que se diagrama sozinho: itens agrupados por categoria, preços alinhados, etiquetas como V ou Novo, itens esgotados em cinza. Digite o cardápio, ou conecte uma planilha Google ou tabela manual e mude os preços sem tocar na tela.",
+  "params": {
+    "title": {
+      "label": "Título"
+    },
+    "subtitle": {
+      "label": "Subtítulo",
+      "help": "Uma linha abaixo do título. Deixe vazio para ocultar.",
+      "default": "Torrado na casa · Leite de aveia sem custo extra"
+    },
+    "footer": {
+      "label": "Linha de rodapé",
+      "help": "Letras miúdas na parte de baixo. Deixe vazio para ocultar.",
+      "default": "Pergunte sobre alergênicos · Preços com impostos inclusos"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Opcional. Aparece ao lado do título."
+    },
+    "items": {
+      "label": "Itens do cardápio",
+      "help": "Um item por linha: Item | Preço | Descrição | Categoria | Etiqueta. Usado quando nenhuma fonte de dados está conectada.",
+      "default": "Espresso | 7.50 | Duplo, notas de chocolate e cereja | Café |\nFlat White | 11.90 | Leite aveludado, ristretto duplo | Café | Popular\nCold Brew | 13.50 | Extraído a frio por 18 horas | Café | Novo\nEarl Grey | 8.90 | Bergamota, folhas soltas | Chá | V\nNó de canela | 9.50 | Açúcar de cardamomo | Padaria | Popular\nFinancier de amêndoa | 8.50 | Sem glúten | Padaria | Esgotado"
+    },
+    "menu": {
+      "label": "Fonte de dados do cardápio (opcional)",
+      "help": "Uma planilha Google, CSV, lista REST ou tabela manual. Se tiver uma coluna Item, ela substitui os itens digitados acima."
+    },
+    "item_col": {
+      "label": "Coluna do item",
+      "help": "Os cabeçalhos das colunas da sua fonte. Se um não for encontrado, o inglês é testado (Item, Price, Description, Category, Tag).",
+      "default": "Item"
+    },
+    "price_col": {
+      "label": "Coluna do preço",
+      "default": "Preço"
+    },
+    "desc_col": {
+      "label": "Coluna da descrição",
+      "default": "Descrição"
+    },
+    "category_col": {
+      "label": "Coluna da categoria",
+      "default": "Categoria"
+    },
+    "tag_col": {
+      "label": "Coluna da etiqueta",
+      "help": "Uma etiqueta curta em forma de pílula. “Esgotado” deixa o item em cinza e risca o preço.",
+      "default": "Etiqueta"
+    },
+    "currency": {
+      "label": "Símbolo da moeda",
+      "default": "R$"
+    },
+    "currency_position": {
+      "label": "Posição da moeda",
+      "options": {
+        "auto": "Como é usual no idioma da tela",
+        "before": "Antes do preço ($3.50)",
+        "after": "Depois do preço (3,50 €)"
+      }
+    },
+    "decimals": {
+      "label": "Casas decimais",
+      "options": {
+        "2": "Sempre duas (3,50)",
+        "auto": "Só quando preciso (3,5, 4)",
+        "0": "Nenhuma (4)"
+      }
+    },
+    "decimal_comma": {
+      "label": "Sempre usar vírgula decimal (3,50)",
+      "help": "Desativado: o separador decimal segue o idioma da tela (3.50 em inglês, 3,50 em português)."
+    },
+    "font": {
+      "label": "Fonte dos títulos",
+      "options": {
+        "bitter": "Bitter (serifada)",
+        "archivo": "Archivo (display)",
+        "oswald": "Oswald (condensada)",
+        "inter": "Inter (limpa)"
+      }
+    },
+    "accent": {
+      "label": "Cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "page_seconds": {
+      "label": "Segundos por página",
+      "help": "Só é usado quando o cardápio é longo demais para caber em uma tela num tamanho legível."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "O idioma da formatação dos preços e das poucas palavras que o próprio cardápio escreve. Deixe vazio para usar o idioma da tela."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Ankündigung — kräftig",
+  "description": "Eine laute, selbstbewusste Mitteilung: eine riesige Schlagzeile auf kräftiger Farbe, ein kurzer Absatz, eine Fußzeile und ein optionaler QR-Code für die Details. Für Schließungen, Fristen und alles, was niemand verpassen darf.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Am besten ein PNG oder SVG mit transparentem Hintergrund. Erscheint oben links."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Ein kurzes Etikett über der Schlagzeile, z. B. ERINNERUNG oder NEU. Großbuchstaben wirken am besten.",
+      "default": "WICHTIGER HINWEIS"
+    },
+    "headline": {
+      "label": "Schlagzeile",
+      "help": "Die Ankündigung in wenigen Worten. Bis zu 40 Zeichen; auf dem Bildschirm zwei bis drei Zeilen.",
+      "default": "Freitag, 23.10.: Büro geschlossen"
+    },
+    "body": {
+      "label": "Details",
+      "help": "Ein oder zwei Sätze. Mit Enter beginnt eine neue Zeile.",
+      "default": "Das Gebäude bleibt wegen geplanter Elektroarbeiten den ganzen Tag geschlossen. Bitte arbeiten Sie von zu Hause; der IT-Helpdesk ist weiter unter Durchwahl 4400 erreichbar."
+    },
+    "footer": {
+      "label": "Fußzeile",
+      "help": "Von wem es kommt, ein Datum, ein Raum oder ein Kontakt.",
+      "default": "Facility-Team  ·  Fragen? facilities@northwind.example"
+    },
+    "show_qr": {
+      "label": "QR-Code anzeigen",
+      "help": "Ausschalten, wenn es keinen Link gibt: Code und Beschriftung verschwinden."
+    },
+    "qr_url": {
+      "label": "Link des QR-Codes",
+      "help": "Die Adresse, die der QR-Code öffnet. Kürzere Links ergeben einen Code, der sich aus größerer Entfernung scannen lässt."
+    },
+    "qr_caption": {
+      "label": "QR-Beschriftung",
+      "default": "Infos & FAQ"
+    },
+    "show_date": {
+      "label": "Heutiges Datum anzeigen",
+      "help": "Das aktuelle Datum des Bildschirms, in der Sprache und Zeitzone unten."
+    },
+    "date_format": {
+      "label": "Datumsformat",
+      "options": {
+        "weekday": "Wochentag, Tag und Monat",
+        "long": "Vollständiges Datum mit Jahr",
+        "short": "Kurzes Datum",
+        "numeric": "Nur Ziffern"
+      }
+    },
+    "timezone": {
+      "label": "Zeitzone des Datums",
+      "help": "Leer lassen, um die Uhr des Bildschirms zu verwenden."
+    },
+    "locale": {
+      "label": "Sprache",
+      "help": "Die Sprache, in der das Datum erscheint, z. B. en-GB, de-DE oder fr-CA. Leer lassen für die Sprache des Bildschirms."
+    },
+    "accent": {
+      "label": "Akzentfarbe"
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    }
+  }
+}

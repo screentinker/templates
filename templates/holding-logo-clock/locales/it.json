@@ -1,0 +1,49 @@
+{
+  "name": "Schermata di attesa — logo e orologio",
+  "description": "Una schermata di attesa per quando non c'è nulla in programma: il tuo logo, un grande orologio in tempo reale e la data di oggi su uno sfondo calmo con un alone morbido, nel tuo fuso orario e nella tua lingua. Lo schermo resta curato tra una campagna e l'altra.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG con sfondo trasparente, chiaro su scuro. Mostrato centrato in alto."
+    },
+    "footer": {
+      "label": "Riga in basso",
+      "help": "Una riga breve in fondo: un luogo, un piano, un contatto. Lascia vuoto per non mostrare nulla.",
+      "default": "Northwind Studio  ·  Reception, 3° piano"
+    },
+    "clock_format": {
+      "label": "Formato orario",
+      "options": {
+        "12": "12 ore",
+        "24": "24 ore"
+      }
+    },
+    "date_format": {
+      "label": "Stile della data",
+      "options": {
+        "weekday": "Giorno della settimana, giorno e mese",
+        "long": "Data completa con anno",
+        "short": "Data breve",
+        "numeric": "Solo numeri"
+      }
+    },
+    "timezone": {
+      "label": "Fuso orario",
+      "help": "Il luogo a cui si riferiscono ora e data. Lascia vuoto per usare l'orologio dello schermo."
+    },
+    "locale": {
+      "label": "Lingua",
+      "help": "Come si scrivono ora e data, ad es. en-GB, de-DE o fr-CA. Lascia vuoto per la lingua dello schermo."
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "L'alone dietro l'orologio e la piccola linea."
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

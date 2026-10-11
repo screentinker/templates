@@ -18,7 +18,7 @@
 html, body { margin: 0; height: 100%; overflow: hidden; }
 body {
   background: var(--bg); color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   cursor: none;
 }
@@ -48,7 +48,7 @@ body {
   background: linear-gradient(180deg, var(--accent), var(--good));
 }
 .title {
-  margin: 0; font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800;
+  margin: 0; font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 800;
   font-size: 4.6vmin; letter-spacing: -.01em; line-height: 1;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
@@ -87,11 +87,12 @@ body.strip .grid { top: var(--pad); }
   min-width: 0; font-size: min(calc(var(--tile-h) * .075), calc(var(--tile-w) * .05));
   font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .72; line-height: 1.25;
   padding-top: .35em; min-height: 2.85em;
+  overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto;
   overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
 }
 .value-row { display: flex; align-items: baseline; min-width: 0; overflow: hidden; }
 .value {
-  font-family: 'Archivo', 'Inter', sans-serif; font-weight: 800; letter-spacing: -.02em; line-height: 1;
+  font-family: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; font-weight: 800; letter-spacing: -.02em; line-height: 1;
   font-size: min(calc(var(--tile-h) * .36), calc(var(--tile-w) * .23));
   font-variant-numeric: tabular-nums; white-space: nowrap;
 }
@@ -136,3 +137,8 @@ body.strip .grid { top: var(--pad); }
   padding: 10vmin; text-align: center; font-size: 3.2vmin; line-height: 1.4; opacity: .7;
 }
 .empty[hidden] { display: none; }
+
+/* Devanagari joins its letters along a head line: extra letter spacing would break it apart. */
+html:lang(hi) body * { letter-spacing: normal !important; }
+/* Japanese: break between phrases rather than after any character, where the engine can. */
+html:lang(ja) .label { word-break: auto-phrase; }

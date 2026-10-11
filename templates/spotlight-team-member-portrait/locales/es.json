@@ -1,0 +1,97 @@
+{
+  "name": "Conoce al equipo (vertical)",
+  "description": "Presenta a alguien al resto del edificio: un panel de color con su foto, nombre y puesto, una respuesta breve con sus propias palabras y un dato curioso, en dos tarjetas limpias. Formato vertical 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona mejor un PNG o SVG con fondo transparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Una foto de cabeza y hombros, recortada para encajar en el marco. Las fotos cuadradas funcionan mejor."
+    },
+    "show_photo": {
+      "label": "Mostrar la foto",
+      "help": "Desactivado muestra en su lugar un círculo con las iniciales, para quien prefiera no mostrar su foto."
+    },
+    "initials": {
+      "label": "Iniciales",
+      "help": "Se muestran en el círculo cuando la foto está desactivada. Una o dos letras."
+    },
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "Encima del nombre. Se lee mejor en mayúsculas.",
+      "default": "CONOCE AL EQUIPO"
+    },
+    "name": {
+      "label": "Nombre",
+      "help": "Una línea, hasta 26 caracteres. Escríbelo con mayúsculas y minúsculas normales; TODO EN MAYÚSCULAS ocupa más y puede no caber."
+    },
+    "role": {
+      "label": "Puesto",
+      "help": "Cargo, equipo, clase o sede. Si es largo, pasa a una segunda línea.",
+      "default": "Jefe de operaciones de almacén, depósito de Leeds"
+    },
+    "show_quote": {
+      "label": "Mostrar la cita",
+      "help": "Desactivado oculta la cita y sus comillas."
+    },
+    "quote": {
+      "label": "Cita",
+      "help": "Una o dos frases con sus propias palabras. Sin comillas.",
+      "default": "Pregúntame por la noche en que movimos 14.000 paquetes durante un apagón. Spoiler: linternas frontales y mucho té."
+    },
+    "quote_mark": {
+      "label": "Comillas",
+      "help": "El signo decorativo grande junto a la cita. Usa el habitual en tu idioma, p. ej. « o “.",
+      "default": "«"
+    },
+    "show_fact": {
+      "label": "Mostrar el dato curioso",
+      "help": "Desactivado oculta la etiqueta y el texto del dato curioso."
+    },
+    "fact_label": {
+      "label": "Etiqueta del dato curioso",
+      "help": "Una etiqueta corta, p. ej. DATO CURIOSO o PREGÚNTAME POR.",
+      "default": "FUERA DEL TRABAJO"
+    },
+    "fun_fact": {
+      "label": "Dato curioso",
+      "help": "Una o dos frases cortas.",
+      "default": "Entrena a un equipo de fútbol sub-11 y busca el mejor arroz jollof de Yorkshire."
+    },
+    "show_badge": {
+      "label": "Mostrar la insignia"
+    },
+    "badge": {
+      "label": "Texto de la insignia",
+      "help": "Un mes, una fecha de inicio, un equipo o un hito. Se lee mejor en mayúsculas.",
+      "default": "LOGÍSTICA  ·  6 AÑOS"
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "Insignia, encabezado pequeño, comillas y etiquetas de las tarjetas."
+    },
+    "panel_color": {
+      "label": "Color del panel",
+      "help": "El panel grande detrás de la foto. Lleva encima el texto claro y el logotipo."
+    },
+    "highlight": {
+      "label": "Color del círculo de iniciales",
+      "help": "El círculo detrás de las iniciales."
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "card_color": {
+      "label": "Color de las tarjetas",
+      "help": "Las dos tarjetas y el aro alrededor de la foto."
+    },
+    "initials_color": {
+      "label": "Color de las iniciales"
+    }
+  }
+}

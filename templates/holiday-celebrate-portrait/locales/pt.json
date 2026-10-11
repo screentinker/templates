@@ -1,0 +1,54 @@
+{
+  "name": "Celebração (retrato)",
+  "description": "Uma festa de confete para qualquer ocasião (aniversário da empresa, aniversário, mês recorde, inauguração ou vitória da equipe): um número gigante, uma manchete, uma mensagem e uma linha da data, nas cores que você escolher.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "A linha curta acima da manchete. Deixe vazio para ocultar.",
+      "default": "CELEBRANDO UMA DÉCADA"
+    },
+    "headline": {
+      "label": "Manchete",
+      "help": "Duas linhas são reservadas para ela: cabem cerca de 24 caracteres. Uma manchete mais longa passa para a terceira linha e invade a mensagem.",
+      "default": "Dez anos de Northwind"
+    },
+    "message": {
+      "label": "Mensagem",
+      "help": "Uma ou duas frases abaixo da manchete; cabem até 200 caracteres. Uma quebra de linha começa uma nova linha.",
+      "default": "De duas pessoas numa garagem a 140 colegas em quatro cidades. Obrigado a cada cliente e colega que nos trouxe até aqui. Bolo na copa às 15:00!"
+    },
+    "date_line": {
+      "label": "Linha da data",
+      "help": "Texto livre, digitado como deve aparecer: uma data, um horário e local, ou uma assinatura."
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se você não tiver logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG largo com fundo transparente (cerca de 3,4 : 1 preenche a área; outros formatos são ajustados dentro dela). Substitua o logotipo provisório da Northwind."
+    },
+    "accent": {
+      "label": "Cor do número"
+    },
+    "accent2": {
+      "label": "Segunda cor de destaque"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "big_text": {
+      "label": "Número grande",
+      "help": "O número gigante: anos, um aniversário, uma porcentagem, uma posição. Até quatro caracteres; deixe vazio para não mostrar nenhum."
+    },
+    "big_label": {
+      "label": "Abaixo do número",
+      "help": "Uma palavra abaixo do número grande, como ANOS ou DIAS.",
+      "default": "ANOS"
+    }
+  }
+}

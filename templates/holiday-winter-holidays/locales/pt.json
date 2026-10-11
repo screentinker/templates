@@ -1,0 +1,46 @@
+{
+  "name": "Festas de fim de ano",
+  "description": "Uma mensagem inclusiva para qualquer festa de inverno: um cordão de luzes coloridas, neve caindo e colinas nevadas sob um céu azul-noite, com uma saudação centralizada, sua mensagem e uma linha da data; ideal para horários de fim de ano.",
+  "params": {
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "A linha curta acima da manchete. Deixe vazio para ocultar.",
+      "default": "BOAS FESTAS"
+    },
+    "headline": {
+      "label": "Manchete",
+      "help": "Duas linhas são reservadas para ela: cabem cerca de 24 caracteres. Uma manchete mais longa passa para a terceira linha e invade a mensagem.",
+      "default": "Votos de paz e alegria"
+    },
+    "message": {
+      "label": "Mensagem",
+      "help": "Uma ou duas frases abaixo da manchete; cabem até 200 caracteres. Uma quebra de linha começa uma nova linha.",
+      "default": "Desejamos a todos aconchego, descanso e boa companhia. Os escritórios fecham em 24/12 e reabrem em 04/01; o suporte atende das 08:00 às 20:00 durante todo o período."
+    },
+    "date_line": {
+      "label": "Linha da data",
+      "help": "Texto livre, digitado como deve aparecer: uma data, um horário e local, ou uma assinatura.",
+      "default": "DE TODOS NÓS DA NORTHWIND"
+    },
+    "show_logo": {
+      "label": "Mostrar o logotipo",
+      "help": "Desative se você não tiver logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Um PNG ou SVG largo com fundo transparente (cerca de 3,4 : 1 preenche a área; outros formatos são ajustados dentro dela). Substitua o logotipo provisório da Northwind."
+    },
+    "accent": {
+      "label": "Cor da luz quente"
+    },
+    "accent2": {
+      "label": "Cor da luz fria"
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}

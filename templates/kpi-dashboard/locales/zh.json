@@ -1,0 +1,53 @@
+{
+  "name": "KPI 仪表板",
+  "description": "一眼可读的大号指标卡片，显示目标进度和带颜色的变化标识。数据可来自 Google 表格、CSV、REST API 或手动表格（列 Metric、Value、Target、Unit、Change），也可手动输入。1 到 12 张卡片，适配任何屏幕形状。",
+  "params": {
+    "data": {
+      "label": "指标数据源（可选）",
+      "help": "表格类数据源（Google 表格、CSV、REST API 或手动表格），包含 Metric、Value 列，可选 Target、Unit、Change 列。留空则使用下方输入的指标。"
+    },
+    "metrics": {
+      "label": "指标（未连接数据源时使用）",
+      "help": "每行一项：指标 | 数值 | 目标 | 单位 | 变化。只有指标和数值是必填的。",
+      "default": "本月营收 | 184250 | 200000 | ¥ | +6.4%\n新客户 | 312 | 300 | | +18\n净推荐值 | 64 | 60 | | +3\n待处理工单 | 27 | | | -9\n平均响应时间 | 1.8 | 2 | 小时 | -0.4\n可用性 | 99.97 | 99.9 | % | +0.02"
+    },
+    "title": {
+      "label": "标题",
+      "default": "本月业绩"
+    },
+    "max_tiles": {
+      "label": "最多显示",
+      "help": "超过此数量的行不会显示。"
+    },
+    "show_targets": {
+      "label": "显示目标进度"
+    },
+    "up_is_good": {
+      "label": "增长为好",
+      "help": "正向变化用“良好”颜色显示。名称含“待处理”“响应时间”“流失”“成本”“错误”或“等待”（英文亦可）的指标则相反。"
+    },
+    "accent": {
+      "label": "强调色"
+    },
+    "good_color": {
+      "label": "良好颜色"
+    },
+    "bad_color": {
+      "label": "不佳颜色"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "数字、时间和内置文字的语言，例如 zh 或 en-US。留空则使用屏幕的语言。"
+    },
+    "timezone": {
+      "label": "“更新”时间的时区",
+      "help": "留空则使用屏幕自身的时钟。"
+    }
+  }
+}

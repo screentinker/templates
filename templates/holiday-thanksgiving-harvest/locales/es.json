@@ -1,0 +1,46 @@
+{
+  "name": "Acción de Gracias y cosecha",
+  "description": "Una pantalla de cosecha con luz dorada para Acción de Gracias o cualquier fiesta de la cosecha: un sol bajo sobre campos ondulados, trigo en primer plano y espacio para un titular, un mensaje sobre una comida solidaria o una recogida de alimentos y una línea de fecha.",
+  "params": {
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "La línea corta sobre el titular. Déjala vacía para ocultarla.",
+      "default": "FELIZ ACCIÓN DE GRACIAS"
+    },
+    "headline": {
+      "label": "Titular",
+      "help": "Tiene dos líneas reservadas: caben unos 24 caracteres. Un titular más largo pasa a una tercera línea y se monta sobre el mensaje.",
+      "default": "Dar gracias, juntos"
+    },
+    "message": {
+      "label": "Mensaje",
+      "help": "Una o dos frases bajo el titular; caben hasta 200 caracteres. Un salto de línea empieza una línea nueva.",
+      "default": "Ven a la comida comunitaria de la cosecha: 340 platos de nuestro equipo de cocina, y cada donativo va al Banco de Alimentos Riverside."
+    },
+    "date_line": {
+      "label": "Línea de fecha",
+      "help": "Texto libre, escrito tal como quieres que se lea: una fecha, una hora y un lugar, o una despedida.",
+      "default": "26 · 11  ·  12:00–14:00  ·  SALÓN PRINCIPAL"
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactívalo si no tienes logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG ancho con fondo transparente (unos 3,4 : 1 llenan el espacio; otras proporciones se ajustan dentro). Sustituye el logotipo provisional de Northwind."
+    },
+    "accent": {
+      "label": "Color del sol"
+    },
+    "accent2": {
+      "label": "Color del campo"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

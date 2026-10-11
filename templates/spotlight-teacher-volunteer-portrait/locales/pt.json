@@ -1,0 +1,94 @@
+{
+  "name": "Professores e voluntários em destaque (retrato)",
+  "description": "Agradeça em público: um layout acolhedor, com ar de livro, com foto, nome, função, uma frase e uma linha sobre a pessoa fora da sala de aula. Para escolas, bibliotecas, ONGs e grupos comunitários. Layout retrato 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Funciona melhor um PNG ou SVG com fundo transparente."
+    },
+    "photo": {
+      "label": "Foto",
+      "help": "Uma foto de rosto e ombros, recortada para caber no quadro. Fotos quadradas funcionam melhor."
+    },
+    "show_photo": {
+      "label": "Mostrar a foto",
+      "help": "Desativado mostra um círculo com as iniciais, para quem prefere não exibir a foto."
+    },
+    "initials": {
+      "label": "Iniciais",
+      "help": "Aparecem no círculo quando a foto está desativada. Uma ou duas letras."
+    },
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "Acima do nome. Fica melhor em maiúsculas.",
+      "default": "PROFESSORA EM DESTAQUE"
+    },
+    "name": {
+      "label": "Nome",
+      "help": "Uma linha, até 26 caracteres. Digite normalmente; TUDO EM MAIÚSCULAS é mais largo e pode não caber.",
+      "default": "Prof.ª Elena Vasquez"
+    },
+    "role": {
+      "label": "Cargo",
+      "help": "Cargo, equipe, turma ou unidade. Textos longos quebram para uma segunda linha.",
+      "default": "Professora do 4º ano e coordenadora do clube de leitura"
+    },
+    "show_quote": {
+      "label": "Mostrar a frase",
+      "help": "Desativado oculta a frase e as aspas."
+    },
+    "quote": {
+      "label": "Frase",
+      "help": "Uma ou duas frases nas próprias palavras. Sem aspas.",
+      "default": "Toda criança está a um bom livro de amar a leitura. Eu ajudo a encontrar esse livro."
+    },
+    "quote_mark": {
+      "label": "Aspas",
+      "help": "O grande sinal decorativo ao lado da frase. Use o do seu idioma, por ex. “ ou «.",
+      "default": "“"
+    },
+    "show_fact": {
+      "label": "Mostrar a curiosidade",
+      "help": "Desativado oculta o rótulo e o texto da curiosidade."
+    },
+    "fact_label": {
+      "label": "Rótulo da curiosidade",
+      "help": "Um rótulo curto, por ex. CURIOSIDADE ou ME PERGUNTE SOBRE.",
+      "default": "FORA DA SALA DE AULA"
+    },
+    "fun_fact": {
+      "label": "Curiosidade",
+      "help": "Uma ou duas frases curtas.",
+      "default": "Elena cria abelhas na horta da escola, e a turma batizou a rainha de \"Sua Majestade Zumbizinha\"."
+    },
+    "show_badge": {
+      "label": "Mostrar o selo"
+    },
+    "badge": {
+      "label": "Texto do selo",
+      "help": "Um mês, uma data de início, uma equipe ou um marco. Fica melhor em maiúsculas.",
+      "default": "14 ANOS NA ELMWOOD"
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "Selo, título pequeno, rótulos e a faixa inferior."
+    },
+    "highlight": {
+      "label": "Cor de realce",
+      "help": "As aspas e o círculo atrás das iniciais."
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "card_color": {
+      "label": "Cor do círculo deslocado",
+      "help": "O círculo suave atrás da foto."
+    },
+    "initials_color": {
+      "label": "Cor das iniciais"
+    }
+  }
+}

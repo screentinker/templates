@@ -1,0 +1,46 @@
+{
+  "name": "Halloween (verticale)",
+  "description": "Uno schermo di Halloween giocoso: una zucca intagliata e la luna piena fatte di forme semplici sopra colline viola, con un titolo, un messaggio per la sfilata in maschera o gli orari e una riga della data.",
+  "params": {
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "La riga breve sopra il titolo. Lasciala vuota per nasconderla.",
+      "default": "DOLCETTO O SCHERZETTO"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "Ha due righe riservate: ci stanno circa 24 caratteri. Un titolo più lungo va a capo su una terza riga e copre il messaggio.",
+      "default": "Buon Halloween da paura"
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Una o due frasi sotto il titolo; ci stanno fino a 200 caratteri. Un a capo inizia una nuova riga.",
+      "default": "Sfilata in maschera nella hall alle 15:00: il costume migliore vince una carta regalo. Dolcetti alla reception per tutto il pomeriggio, anche senza frutta a guscio."
+    },
+    "date_line": {
+      "label": "Riga della data",
+      "help": "Testo libero, scritto come deve apparire: una data, un orario e un luogo, o una firma.",
+      "default": "31 · 10  ·  SFILATA 15:00  ·  HALL"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG largo con sfondo trasparente (circa 3,4 : 1 riempie il riquadro; altre forme vi vengono adattate). Sostituisci il segnaposto Northwind."
+    },
+    "accent": {
+      "label": "Colore della zucca"
+    },
+    "accent2": {
+      "label": "Colore delle colline"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+ "name": "Oferta promocional",
+ "description": "Uma tela de oferta relâmpago ou promoção: título grande, a oferta, o preço com o preço antigo riscado e a economia calculada para você, e uma contagem regressiva ao vivo que muda sozinha para “oferta encerrada”. Adicione uma foto do produto e um QR code para a sua loja. Três visuais: varejo marcante, limpo e minimalista, café aconchegante. Nada é baixado.",
+ "params": {
+  "style": {
+   "label": "Estilo",
+   "options": {
+    "bold": "Varejo marcante",
+    "minimal": "Limpo e minimalista",
+    "cafe": "Café aconchegante"
+   }
+  },
+  "eyebrow": {
+   "label": "Chamada",
+   "help": "Um rótulo curto acima do título. Deixe vazio para ocultar.",
+   "default": "Oferta relâmpago de fim de semana"
+  },
+  "headline": {
+   "label": "Título",
+   "default": "Fones sem fio Aura"
+  },
+  "offer": {
+   "label": "Texto da oferta",
+   "help": "Uma ou duas linhas abaixo do título. Deixe vazio para ocultar.",
+   "default": "Cancelamento ativo de ruído e 40 horas de bateria, pelo menor preço do ano."
+  },
+  "price": {
+   "label": "Preço",
+   "help": "Um número como 89 ou 89,99 é formatado na sua moeda. Qualquer outra coisa (“Leve 2, pague 1”) aparece como digitado. Deixe vazio para ocultar o preço."
+  },
+  "was_price": {
+   "label": "Preço antigo",
+   "help": "Opcional. Aparece riscado ao lado do preço."
+  },
+  "currency": {
+   "label": "Código da moeda",
+   "help": "Um código ISO de três letras: BRL, EUR, USD, GBP, JPY… O símbolo e a posição seguem o idioma. Vazio para números simples."
+  },
+  "decimals": {
+   "label": "Casas decimais",
+   "options": {
+    "auto": "Só quando o preço tem centavos (89, 89,50)",
+    "always": "Sempre (89,00)"
+   }
+  },
+  "saving": {
+   "label": "Selo de economia",
+   "help": "Calculado a partir do preço e do preço antigo; oculto se algum deles não for um número.",
+   "options": {
+    "percent": "Porcentagem (Economize 40%)",
+    "amount": "Valor (Economize R$ 60)",
+    "off": "Sem selo"
+   }
+  },
+  "saving_text": {
+   "label": "Texto do selo",
+   "help": "{saving} é trocado pela porcentagem ou pelo valor, p. ex. “{saving} de desconto”. Vazio: “Economize {saving}” no idioma da tela. Um único - mostra só a economia."
+  },
+  "ends_at": {
+   "label": "Fim da oferta",
+   "help": "Data e hora como 2026-11-29T23:59, ou só a data para o fim desse dia. Lida no fuso horário abaixo. Vazio: a oferta termina todo dia à meia-noite."
+  },
+  "timezone": {
+   "label": "Fuso horário",
+   "help": "O fuso horário do horário de término. Vazio usa o relógio da tela."
+  },
+  "locale": {
+   "label": "Idioma",
+   "help": "O idioma dos textos embutidos, datas, preços e unidades da contagem regressiva. Vazio usa o idioma da tela."
+  },
+  "clock_format": {
+   "label": "Formato de hora",
+   "options": {
+    "auto": "Como o idioma prefere",
+    "24": "24 horas",
+    "12": "12 horas"
+   }
+  },
+  "show_countdown": {
+   "label": "Mostrar a contagem regressiva"
+  },
+  "countdown_label": {
+   "label": "Rótulo da contagem",
+   "help": "Vazio: “Termina em” no idioma da tela. Um único - oculta o rótulo."
+  },
+  "show_end_date": {
+   "label": "Mostrar quando a oferta termina",
+   "help": "Uma linha como “Válido até dom., 29 de nov., 23:59” abaixo da contagem."
+  },
+  "end_date_label": {
+   "label": "Texto antes da data de fim",
+   "help": "Vai antes da data. Vazio: “Válido até …” no idioma da tela. Um único - mostra só a data."
+  },
+  "after_end": {
+   "label": "Quando a oferta terminar",
+   "options": {
+    "message": "Manter a promoção e mostrar a mensagem de fim",
+    "fallback": "Trocar toda a promoção pela linha alternativa"
+   }
+  },
+  "ended_text": {
+   "label": "Mensagem de fim",
+   "help": "Vazio: “Esta oferta terminou” no idioma da tela."
+  },
+  "fallback_heading": {
+   "label": "Chamada alternativa",
+   "help": "Uma linha pequena acima da linha alternativa. Vazio mostra a linha alternativa sozinha."
+  },
+  "fallback_text": {
+   "label": "Linha alternativa",
+   "help": "Aparece em tela cheia depois do fim, se a opção acima pedir. Vazio usa a mensagem de fim.",
+   "default": "Novas ofertas toda sexta-feira. Até lá!"
+  },
+  "image": {
+   "label": "Imagem do produto",
+   "help": "Um PNG com fundo transparente funciona melhor. Deixe vazio para uma promoção só com texto."
+  },
+  "qr_url": {
+   "label": "Link do QR code",
+   "help": "Desenhado como QR code na tela. Deixe vazio para ocultar."
+  },
+  "qr_label": {
+   "label": "Legenda do QR code",
+   "help": "Vazio: “Escaneie e compre” no idioma da tela. Um único - oculta a legenda."
+  },
+  "fine_print": {
+   "label": "Letras miúdas",
+   "default": "Enquanto durarem os estoques. Limite de duas unidades por cliente. Não cumulativo com outras ofertas. Impostos inclusos."
+  },
+  "custom_colors": {
+   "label": "Usar minhas cores",
+   "help": "Desligado: a paleta do estilo. Ligado: as três cores abaixo."
+  },
+  "background": {
+   "label": "Cor de fundo"
+  },
+  "text_color": {
+   "label": "Cor do texto"
+  },
+  "accent": {
+   "label": "Cor de destaque",
+   "help": "O preço, o selo e a contagem regressiva."
+  }
+ }
+}

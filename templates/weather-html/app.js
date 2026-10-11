@@ -5,6 +5,10 @@
  * keys of the chosen Weather data source: temperature, condition, code, units, day1_high, ...).
  * Nothing is fetched, so the manifest declares no network hosts. All text is written with
  * textContent and every icon is built with createElementNS — no innerHTML, no eval.
+ *
+ * Language: every word, date and number follows the Language setting (empty = the screen's
+ * language). Fixed words come from strings.js; the condition is translated from its WMO code and
+ * the day names are formatted from each day's date, so neither depends on the data source's language.
  */
 (function () {
   'use strict';
@@ -164,10 +168,64 @@
     if (!animated) document.body.classList.add('still');
   }
 
+  /* The language: the Language setting, else the screen's, else English — whatever Intl accepts. */
+  function pickLocale(want) {
+    var tries = [want, navigator.language, 'en'];
+    for (var i = 0; i < tries.length; i++) {
+      if (!tries[i]) continue;
+      try { return new Intl.DateTimeFormat(tries[i]).resolvedOptions().locale || tries[i]; } catch (e) { /* next */ }
+    }
+    return 'en';
+  }
+
   ST.ready(function () {
     var v = ST.values || {};
     var w = (ST.data && ST.data.weather) || {};
     var root = document.documentElement;
+
+    var LOC = pickLocale(v.locale);
+    var LANG = LOC.split('-')[0].toLowerCase();
+    root.lang = LOC;
+    var STR = WEATHER_STRINGS[LANG] || WEATHER_STRINGS.en;
+    var CND = WEATHER_COND[LANG] || WEATHER_COND.en;
+    function s(key, nval) {
+      var txt = STR[key] !== undefined ? STR[key] : WEATHER_STRINGS.en[key];
+      return nval === undefined ? txt : txt.replace('{n}', nval);
+    }
+    function nf(opts) {
+      try { return new Intl.NumberFormat(LOC, opts); } catch (e) { return null; }
+    }
+    var numF = nf({ maximumFractionDigits: 1 });
+    var pctF = nf({ style: 'percent', maximumFractionDigits: 0 });
+    function num(x) { var k = n(x); return k === null ? t(x) : (numF ? numF.format(k) : String(k)); }
+    function pct(x) { var k = n(x); return k === null ? t(x) : (pctF ? pctF.format(k / 100) : k + '%'); }
+    function deg(x) { return has(x) ? num(x) + '°' : ''; }
+    function speed(x, imperial) {
+      var k = n(x);
+      if (k === null) return t(x);
+      var f = nf({ style: 'unit', unit: imperial ? 'mile-per-hour' : 'kilometer-per-hour', maximumFractionDigits: 1 });
+      return f ? f.format(k) : num(k) + (imperial ? ' mph' : ' km/h');
+    }
+    function condition(code, fallback) {
+      var c = n(code);
+      if (c !== null && CND[c] !== undefined) return CND[c];
+      if (c !== null && WEATHER_COND.en[c] !== undefined) return WEATHER_COND.en[c];
+      if (c !== null) return CND.unknown || WEATHER_COND.en.unknown;
+      return t(fallback);
+    }
+    /* A day's name from its date (YYYY-MM-DD), noon UTC so the weekday never shifts with the zone. */
+    var dayF = null;
+    try { dayF = new Intl.DateTimeFormat(LOC, { weekday: 'short', timeZone: 'UTC' }); } catch (e) { dayF = null; }
+    function dayName(date, fallback) {
+      var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(date || ''));
+      if (m && dayF) {
+        var d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], 12));
+        if (!isNaN(d.getTime())) return dayF.format(d);
+      }
+      return t(fallback);
+    }
+    document.querySelector('#waiting .w-title').textContent = s('waiting_title');
+    document.querySelector('#waiting .w-sub').textContent = s('waiting_sub');
     var accent = v.accent || '#FFD166';
     root.style.setProperty('--accent', accent);
     if (v.background) root.style.setProperty('--solid', v.background);
@@ -177,14 +235,15 @@
     function fmt(opts) {
       var o = {}; for (var k in opts) o[k] = opts[k];
       if (v.timezone) o.timeZone = v.timezone;
-      try { return new Intl.DateTimeFormat(v.locale || undefined, o); } catch (e) {
+      try { return new Intl.DateTimeFormat(LOC, o); } catch (e) {
         delete o.timeZone;
         try { return new Intl.DateTimeFormat(undefined, o); } catch (e2) { return null; }
       }
     }
     var tf = fmt({ hour: '2-digit', minute: '2-digit' });
     var df = fmt({ weekday: 'long', day: 'numeric', month: 'long' });
-    var hf = fmt({ hour: 'numeric', hourCycle: 'h23' });
+    var hf = null;   // the hour as plain Latin digits, for day/night — never shown
+    try { hf = new Intl.DateTimeFormat('en-US', v.timezone ? { hour: 'numeric', hourCycle: 'h23', timeZone: v.timezone } : { hour: 'numeric', hourCycle: 'h23' }); } catch (e) { hf = null; }
     var clock = document.getElementById('clock');
     var date = document.getElementById('date');
     function tick() {
@@ -199,7 +258,7 @@
     if (!has(w.temperature)) {
       document.body.classList.add('nodata');
       document.getElementById('waiting').hidden = false;
-      if (!String(v.location || '').trim()) document.getElementById('place').textContent = 'Weather';
+      if (!String(v.location || '').trim()) document.getElementById('place').textContent = s('weather');
       scene('cloudy', false, animated);
       return;
     }
@@ -219,9 +278,9 @@
 
     /* now */
     document.getElementById('bigicon').appendChild(icon(kind, accent, night, animated));
-    document.getElementById('temp').textContent = t(w.temperature);
+    document.getElementById('temp').textContent = num(w.temperature);
     document.getElementById('unit').textContent = has(w.units) ? String(w.units) : '';
-    document.getElementById('cond').textContent = t(w.condition);
+    document.getElementById('cond').textContent = condition(w.code, w.condition);
     var chips = document.getElementById('chips');
     function chip(label, value) {
       if (!has(value)) return;
@@ -229,11 +288,10 @@
       c.appendChild(document.createTextNode(label + ' '));
       var b = document.createElement('b'); b.textContent = value; c.appendChild(b);
     }
-    var wind = w.units === 'F' ? ' mph' : ' km/h';
-    chip('Feels like', has(w.apparent_temperature) ? w.apparent_temperature + '°' : '');
-    chip('Humidity', has(w.humidity) ? w.humidity + '%' : '');
-    chip('Wind', has(w.wind_speed) ? w.wind_speed + wind : '');
-    chip(kind === 'snow' ? 'Snow' : 'Rain', has(w.day0_precip_prob) ? w.day0_precip_prob + '%' : '');
+    chip(s('feels'), deg(w.apparent_temperature));
+    chip(s('humidity'), has(w.humidity) ? pct(w.humidity) : '');
+    chip(s('wind'), has(w.wind_speed) ? speed(w.wind_speed, w.units === 'F') : '');
+    chip(s(kind === 'snow' ? 'snow' : 'rain'), has(w.day0_precip_prob) ? pct(w.day0_precip_prob) : '');
 
     /* five days: day1..day5, each with a bar placed on the week's own temperature scale */
     var days = document.getElementById('days');
@@ -248,13 +306,13 @@
       if (!has(w['day' + i + '_name'])) continue;
       var card = div('day', days);
       card.style.animationDelay = (0.15 + i * 0.09) + 's';
-      div('dname', card, t(w['day' + i + '_name']));
+      div('dname', card, dayName(w['day' + i + '_date'], w['day' + i + '_name']));
       var ic = div('dicon', card);
       ic.appendChild(icon(group(w['day' + i + '_code']), accent, false, animated));
       var row = div('hl', card);
-      var l = document.createElement('span'); l.className = 'lo'; l.textContent = t(w['day' + i + '_low']) + '°'; row.appendChild(l);
+      var l = document.createElement('span'); l.className = 'lo'; l.textContent = num(w['day' + i + '_low']) + '°'; row.appendChild(l);
       var rg = document.createElement('span'); rg.className = 'range'; row.appendChild(rg);
-      var h = document.createElement('span'); h.className = 'hi'; h.textContent = t(w['day' + i + '_high']) + '°'; row.appendChild(h);
+      var h = document.createElement('span'); h.className = 'hi'; h.textContent = num(w['day' + i + '_high']) + '°'; row.appendChild(h);
       var dl = n(w['day' + i + '_low']), dh = n(w['day' + i + '_high']);
       if (dl !== null && dh !== null) {
         var fill = document.createElement('i');
@@ -262,7 +320,9 @@
         fill.style.right = ((hi - dh) / span * 100).toFixed(1) + '%';
         rg.appendChild(fill);
       }
-      if (has(w['day' + i + '_precip_prob'])) div('rain', card, w['day' + i + '_precip_prob'] + (group(w['day' + i + '_code']) === 'snow' ? '% snow' : '% rain'));
+      if (has(w['day' + i + '_precip_prob'])) {
+        div('rain', card, s(group(w['day' + i + '_code']) === 'snow' ? 'day_snow' : 'day_rain', pct(w['day' + i + '_precip_prob'])));
+      }
     }
   });
 

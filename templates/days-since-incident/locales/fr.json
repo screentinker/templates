@@ -1,0 +1,164 @@
+{
+  "name": "Jours sans incident",
+  "description": "Tableau sécurité pour usine, entrepôt ou chantier : le nombre de jours (ou d’heures) depuis le dernier incident, le record, une jauge vert/orange/rouge vers l’objectif, les pictogrammes EPI et des messages de sécurité. Le jour d’un incident, il passe au rouge. Remise à zéro possible depuis une feuille Google.",
+  "params": {
+    "site_name": {
+      "label": "Nom du site",
+      "default": "Northwind Logistics · Entrepôt Riverside"
+    },
+    "last_incident": {
+      "label": "Date du dernier incident",
+      "help": "AAAA-MM-JJ, ou AAAA-MM-JJ HH:MM pour une heure précise (dans le fuseau ci-dessous). Une source de données connectée a la priorité."
+    },
+    "incidents": {
+      "label": "Source de données des incidents (facultatif)",
+      "help": "Une feuille Google ou un tableau manuel avec une colonne contenant la date du dernier incident. La date la plus récente l’emporte."
+    },
+    "date_col": {
+      "label": "Colonne de date"
+    },
+    "best_col": {
+      "label": "Colonne du record (facultatif)",
+      "help": "Une colonne avec la plus longue série en jours. Ignorée si la source ne l’a pas."
+    },
+    "date_order": {
+      "label": "Les dates comme 03/04/2026 sont",
+      "options": {
+        "dmy": "Jour d’abord (3 avril 2026)",
+        "mdy": "Mois d’abord (4 mars 2026)"
+      }
+    },
+    "count_unit": {
+      "label": "Compter en",
+      "options": {
+        "days": "Jours",
+        "days_hours": "Jours et heures",
+        "hours": "Heures",
+        "minutes": "Minutes"
+      }
+    },
+    "unit_label": {
+      "label": "Unité",
+      "help": "Laissez vide pour le mot dans la langue choisie (jours, days, Tage...)."
+    },
+    "headline": {
+      "label": "Ligne sous le nombre",
+      "default": "sans accident avec arrêt"
+    },
+    "since_label": {
+      "label": "Texte avant la date de l’incident",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "incident_today_label": {
+      "label": "Affiché le jour d’un incident",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "incident_today_note": {
+      "label": "Ligne dessous ce jour-là",
+      "default": "Sécurisez la zone, signalez, veillez les uns sur les autres."
+    },
+    "best_record": {
+      "label": "Record (jours)"
+    },
+    "best_label": {
+      "label": "Titre : record",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "new_record_label": {
+      "label": "Affiché quand le record tombe",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "target_days": {
+      "label": "Objectif (jours)"
+    },
+    "target_label": {
+      "label": "Titre : objectif",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "amber_days": {
+      "label": "Orange à partir de (jours)",
+      "help": "En dessous, le tableau est rouge."
+    },
+    "green_days": {
+      "label": "Vert à partir de (jours)"
+    },
+    "status_green": {
+      "label": "Statut : vert",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "status_amber": {
+      "label": "Statut : orange",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "status_red": {
+      "label": "Statut : rouge",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "messages": {
+      "label": "Messages de sécurité",
+      "help": "Un par ligne. Ils défilent en bas. Laissez vide pour masquer la barre.",
+      "default": "Signalez chaque presque-accident. C’est ainsi qu’on reste à zéro.\nZone chariots : piétons, restez sur les allées marquées.\nTrois points d’appui sur chaque échelle et marchepied.\nUne fuite au sol ? Arrêtez, balisez, signalez.\nLevez avec les jambes, demandez de l’aide au-delà de 25 kg.\nFatigué ou pas bien ? Prévenez votre chef d’équipe."
+    },
+    "message_seconds": {
+      "label": "Secondes par message"
+    },
+    "ppe_heading": {
+      "label": "Titre : pictogrammes EPI",
+      "help": "Laissez vide pour le texte intégré dans la langue de l’écran."
+    },
+    "ppe_labels": {
+      "label": "Noms des EPI",
+      "help": "Six noms séparés par |, dans cet ordre : casque, lunettes, gilet, gants, chaussures, protection auditive. Les noms vides utilisent ceux intégrés."
+    },
+    "ppe_hard_hat": {
+      "label": "Afficher EPI : casque"
+    },
+    "ppe_goggles": {
+      "label": "Afficher EPI : lunettes de protection"
+    },
+    "ppe_hivis": {
+      "label": "Afficher EPI : gilet haute visibilité"
+    },
+    "ppe_gloves": {
+      "label": "Afficher EPI : gants"
+    },
+    "ppe_boots": {
+      "label": "Afficher EPI : chaussures de sécurité"
+    },
+    "ppe_ear": {
+      "label": "Afficher EPI : protection auditive"
+    },
+    "green_color": {
+      "label": "Couleur verte"
+    },
+    "amber_color": {
+      "label": "Couleur orange"
+    },
+    "red_color": {
+      "label": "Couleur rouge"
+    },
+    "accent": {
+      "label": "Couleur des bandes de danger"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "clock_format": {
+      "label": "Horloge",
+      "options": {
+        "auto": "Selon la langue",
+        "24": "24 heures",
+        "12": "12 heures",
+        "off": "Masquer l’horloge"
+      }
+    },
+    "timezone": {
+      "label": "Fuseau horaire du site",
+      "help": "Les jours changent à minuit dans ce fuseau. Laissez vide pour l’horloge de l’écran."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Mots, dates et nombres à l’écran, par exemple fr-FR ou fr-CA. Laissez vide pour la langue de l’écran."
+    }
+  }
+}

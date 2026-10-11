@@ -1,0 +1,50 @@
+{
+  "name": "Standby-Bildschirm — Logo, Botschaft und Website",
+  "description": "Ein Standby-Bildschirm mit Ihrer Marke für die Zeit zwischen Kampagnen: Ihr Logo, eine kurze Botschaft mit einer Zeile Details, Ihre Website in großer Schrift und ein optionaler QR-Code, der sie öffnet. Es wird nichts geladen; den Code zeichnet der Server.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Ein PNG oder SVG mit transparentem Hintergrund. Erscheint oben links."
+    },
+    "eyebrow": {
+      "label": "Kleine Überschrift",
+      "help": "Ein kurzes Etikett über der Botschaft. Großbuchstaben wirken am besten."
+    },
+    "message": {
+      "label": "Botschaft",
+      "help": "Ein paar Worte. Bis etwa 40 Zeichen passen auf zwei Zeilen.",
+      "default": "Bald gibt es hier Neues"
+    },
+    "detail": {
+      "label": "Details",
+      "help": "Ein oder zwei kurze Sätze unter der Botschaft. Mit Enter beginnt eine neue Zeile.",
+      "default": "Unsere nächste Ausstellung öffnet am Montag. Bis dahin finden Sie die ganze Kollektion online und buchen dort einen Studiobesuch."
+    },
+    "website": {
+      "label": "Website-Zeile",
+      "help": "In großer Schrift. Ohne https:// und so schreiben, wie man es eintippen soll."
+    },
+    "show_qr": {
+      "label": "QR-Code anzeigen",
+      "help": "Aus blendet den Code, seine Karte und die Beschriftung aus."
+    },
+    "qr_url": {
+      "label": "Link des QR-Codes",
+      "help": "Die vollständige Adresse, die der Code öffnet. Kürzere Links ergeben einen Code, der sich aus größerer Entfernung scannen lässt."
+    },
+    "qr_caption": {
+      "label": "QR-Beschriftung",
+      "default": "Zum Besuchen scannen"
+    },
+    "accent": {
+      "label": "Akzentfarbe",
+      "help": "Kleine Überschrift, Linien und das getönte Feld."
+    },
+    "background": {
+      "label": "Hintergrundfarbe"
+    },
+    "text_color": {
+      "label": "Textfarbe"
+    }
+  }
+}

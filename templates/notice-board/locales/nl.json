@@ -1,0 +1,131 @@
+{
+  "name": "Prikbord",
+  "description": "Een prikbord voor kantine, school of werkvloer: kaarten met gekleurde categorieën (Dringend, Veiligheid, Evenement, HR, Info), vastgezette mededelingen bovenaan en begin- en einddata, zodat mededelingen vanzelf verschijnen en verlopen. Eén uitgelichte mededeling met de rest ernaast, of één tegelijk. Typ de mededelingen in of gebruik een Google Sheet.",
+  "params": {
+    "title": {
+      "label": "Titel van het bord",
+      "default": "Prikbord"
+    },
+    "subtitle": {
+      "label": "Ondertitel",
+      "help": "Eén regel onder de titel, zoals de locatie of afdeling. Laat leeg om te verbergen.",
+      "default": "Northwind Works · Gebouw 2"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Optioneel. Naast de titel. Zonder logo staat er een klein prikbordicoon in de accentkleur."
+    },
+    "layout": {
+      "label": "Indeling",
+      "options": {
+        "featured": "Uitgelichte mededeling + de rest ernaast",
+        "rotate": "Eén mededeling tegelijk, schermvullend"
+      }
+    },
+    "notices": {
+      "label": "Mededelingen",
+      "help": "Eén per regel: Titel | Tekst | Categorie | Start | Einde | Vastgezet | Van. Data: 2026-10-14, 2026-10-14 17:00 of +N dagen. Zonder gegevensbron.",
+      "default": "Parkeerterrein noord dicht tot vrijdag | Het asfalteren begint om 06:00. | Dringend | | +3 | ja | Facilitaire dienst\nVeiligheidshesje op het laadperron | Deze week meer heftruckverkeer. | Veiligheid | | | | Marcus Lee\nNieuw in de keuken: havermelk | Bij de koffieautomaat op verdieping 2. | Info | | | | Officeteam"
+    },
+    "source": {
+      "label": "Gegevensbron voor mededelingen (optioneel)",
+      "help": "Een Google Sheet, CSV of handmatige tabel met een rij per mededeling. Heeft die de kolom Titel, dan vervangt hij de mededelingen hierboven."
+    },
+    "title_col": {
+      "label": "Kolom Titel",
+      "default": "Titel"
+    },
+    "body_col": {
+      "label": "Kolom Tekst",
+      "default": "Tekst"
+    },
+    "category_col": {
+      "label": "Kolom Categorie",
+      "default": "Categorie"
+    },
+    "start_col": {
+      "label": "Kolom Start",
+      "help": "Optioneel. Een mededeling met een startdatum blijft tot dan verborgen.",
+      "default": "Start"
+    },
+    "end_col": {
+      "label": "Kolom Einde",
+      "help": "Optioneel. Een mededeling verdwijnt na de einddatum (alleen een datum betekent: einde van die dag).",
+      "default": "Einde"
+    },
+    "pinned_col": {
+      "label": "Kolom Vastgezet",
+      "help": "Ja, yes, true, 1, x of pinned houdt de mededeling bovenaan (en uitgelicht).",
+      "default": "Vastgezet"
+    },
+    "from_col": {
+      "label": "Kolom Van",
+      "help": "Optioneel. Wie de mededeling plaatste, klein onderaan de kaart.",
+      "default": "Van"
+    },
+    "date_order": {
+      "label": "Data met schuine strepen zijn",
+      "help": "Alleen van belang bij data als 03/04/2026. 2026-10-14 wordt altijd begrepen.",
+      "options": {
+        "auto": "Volgens de taal (VS: maand eerst)",
+        "dmy": "Dag eerst (14/10/2026)",
+        "mdy": "Maand eerst (10/14/2026)"
+      }
+    },
+    "category_colors": {
+      "label": "Kleuren van categorieën",
+      "help": "Optioneel, één per regel: Categorie = #RRGGBB. Dringend, Veiligheid, Evenement, HR, IT, Info en andere hebben al een kleur."
+    },
+    "theme": {
+      "label": "Thema",
+      "options": {
+        "dark": "Donker",
+        "light": "Licht"
+      }
+    },
+    "accent": {
+      "label": "Accentkleur",
+      "help": "Titellijn, paginapunten en het prikbordicoon."
+    },
+    "seconds": {
+      "label": "Seconden per pagina of mededeling",
+      "help": "Hoe lang elke pagina (of elke mededeling, één tegelijk) in beeld blijft."
+    },
+    "show_dates": {
+      "label": "‘Tot’-data op de kaarten tonen"
+    },
+    "until_label": {
+      "label": "Tekst vóór een einddatum",
+      "help": "Laat leeg voor ‘Tot …’ in de taal van het scherm."
+    },
+    "today_label": {
+      "label": "Tekst voor een mededeling die vandaag eindigt",
+      "help": "Laat leeg voor ‘Eindigt vandaag’ in de taal van het scherm."
+    },
+    "pinned_label": {
+      "label": "Tekst van het label Vastgezet",
+      "help": "Laat leeg voor ‘Vastgezet’ in de taal van het scherm."
+    },
+    "empty_label": {
+      "label": "Tekst als er geen mededelingen zijn",
+      "help": "Laat leeg voor ‘Op dit moment geen mededelingen’ in de taal van het scherm."
+    },
+    "clock_format": {
+      "label": "Klok",
+      "options": {
+        "auto": "Zoals gebruikelijk in de taal",
+        "24": "24 uur",
+        "12": "12 uur",
+        "off": "Klok en datum verbergen"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone",
+      "help": "Voor de klok en voor begin en einde van mededelingen. Laat leeg om de klok van het scherm te gebruiken."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Voor de eigen woorden van het bord en de data, bijvoorbeeld nl-NL of nl-BE. Laat leeg voor de taal van het scherm."
+    }
+  }
+}

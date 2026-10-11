@@ -1,0 +1,104 @@
+{
+  "name": "Menu",
+  "description": "Un menu de café, restaurant ou bar qui se met en page tout seul : plats groupés par catégorie, prix alignés, étiquettes comme V ou Nouveau, articles épuisés grisés. Saisissez le menu, ou reliez une feuille Google ou un tableau manuel pour changer les prix sans toucher à l’écran.",
+  "params": {
+    "title": {
+      "label": "Titre"
+    },
+    "subtitle": {
+      "label": "Sous-titre",
+      "help": "Une ligne sous le titre. Laissez vide pour la masquer.",
+      "default": "Torréfié sur place · Lait d’avoine sans supplément"
+    },
+    "footer": {
+      "label": "Ligne de pied",
+      "help": "Petits caractères en bas de l’écran. Laissez vide pour les masquer.",
+      "default": "Demandez-nous la liste des allergènes · Prix TTC"
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Facultatif. Affiché à côté du titre."
+    },
+    "items": {
+      "label": "Articles du menu",
+      "help": "Un article par ligne : Article | Prix | Description | Catégorie | Étiquette. Utilisé quand aucune source de données n’est reliée.",
+      "default": "Espresso | 2.80 | Double, notes de cacao et cerise | Cafés |\nFlat White | 3.60 | Lait velouté, double ristretto | Cafés | Populaire\nCold Brew | 4.20 | Infusé 18 h à froid | Cafés | Nouveau\nEarl Grey | 3.00 | Bergamote, thé en vrac | Thés | V\nNœud à la cannelle | 3.40 | Sucre à la cardamome | Douceurs | Populaire\nFinancier | 3.10 | Amandes, sans gluten | Douceurs | Épuisé"
+    },
+    "menu": {
+      "label": "Source de données du menu (facultatif)",
+      "help": "Une feuille Google, un CSV, une liste REST ou un tableau manuel. Si elle a une colonne Article, elle remplace les articles saisis ci-dessus."
+    },
+    "item_col": {
+      "label": "Colonne article",
+      "help": "Les en-têtes de colonne de votre source. Si un en-tête est introuvable, l’anglais est essayé (Item, Price, Description, Category, Tag).",
+      "default": "Article"
+    },
+    "price_col": {
+      "label": "Colonne prix",
+      "default": "Prix"
+    },
+    "desc_col": {
+      "label": "Colonne description",
+      "default": "Description"
+    },
+    "category_col": {
+      "label": "Colonne catégorie",
+      "default": "Catégorie"
+    },
+    "tag_col": {
+      "label": "Colonne étiquette",
+      "help": "Une courte étiquette en pastille. « Épuisé » grise l’article et barre son prix.",
+      "default": "Étiquette"
+    },
+    "currency": {
+      "label": "Symbole monétaire",
+      "default": "€"
+    },
+    "currency_position": {
+      "label": "Position du symbole",
+      "options": {
+        "auto": "Comme d’usage dans la langue de l’écran",
+        "before": "Avant le prix ($3.50)",
+        "after": "Après le prix (3,50 €)"
+      }
+    },
+    "decimals": {
+      "label": "Décimales",
+      "options": {
+        "2": "Toujours deux (3,50)",
+        "auto": "Seulement si besoin (3,5, 4)",
+        "0": "Aucune (4)"
+      }
+    },
+    "decimal_comma": {
+      "label": "Toujours utiliser la virgule décimale (3,50)",
+      "help": "Désactivé : le séparateur décimal suit la langue de l’écran (3.50 en anglais, 3,50 en français)."
+    },
+    "font": {
+      "label": "Police des titres",
+      "options": {
+        "bitter": "Bitter (à empattements)",
+        "archivo": "Archivo (titrage)",
+        "oswald": "Oswald (étroite)",
+        "inter": "Inter (sobre)"
+      }
+    },
+    "accent": {
+      "label": "Couleur d’accent"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "page_seconds": {
+      "label": "Secondes par page",
+      "help": "Utilisé seulement quand le menu est trop long pour tenir sur un écran à une taille lisible."
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "La langue du format des prix et des quelques mots que le menu écrit lui-même. Laissez vide pour la langue de l’écran."
+    }
+  }
+}

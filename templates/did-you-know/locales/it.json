@@ -1,0 +1,54 @@
+{
+  "name": "Lo sapevi?",
+  "description": "Una schermata «fatto del giorno» d’impatto: un grande carattere in un disco vivace, una frase sorprendente, una breve spiegazione e una riga per la fonte. Per scuole, biblioteche, musei, sale d’attesa e cucine d’ufficio.",
+  "params": {
+    "eyebrow": {
+      "label": "Titoletto",
+      "default": "LO SAPEVI?"
+    },
+    "badge": {
+      "label": "Carattere nel disco",
+      "help": "Da uno a tre caratteri, grandi nel disco colorato: ?, !, un numero."
+    },
+    "number": {
+      "label": "Numero del fatto",
+      "help": "In alto a destra, ad es. «N. 27». Lascia vuoto per nasconderlo.",
+      "default": "N. 27"
+    },
+    "fact": {
+      "label": "Il fatto",
+      "help": "Il titolo: una frase breve e sorprendente.",
+      "default": "Il polpo ha tre cuori e il sangue blu."
+    },
+    "detail": {
+      "label": "Spiegazione",
+      "help": "Una o due frasi per spiegarlo. Invio inizia una nuova riga.",
+      "default": "Due cuori pompano il sangue nelle branchie, il terzo in tutto il corpo. È blu perché trasporta l’ossigeno con il rame invece che con il ferro."
+    },
+    "footer": {
+      "label": "Riga a piè di pagina",
+      "help": "Una fonte, il nome della serie o dove saperne di più.",
+      "default": "Settimana della scienza · Biblioteca Northwind · Letture consigliate all’ingresso"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattivato nasconde il logo e il suo spazio resta vuoto."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG con sfondo trasparente, in un colore chiaro per lo sfondo scuro predefinito."
+    },
+    "accent": {
+      "label": "Colore d’accento",
+      "help": "Il disco, il titoletto, il numero e la linea."
+    },
+    "background": {
+      "label": "Colore di sfondo",
+      "help": "Dietro a tutto. Anche il carattere nel disco è disegnato in questo colore."
+    },
+    "text_color": {
+      "label": "Colore del testo",
+      "help": "Il fatto, la spiegazione e il piè di pagina."
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "name": "Promoción de novedad (vertical)",
+  "description": "Vertical (9:16). Una pantalla tranquila y editorial para un producto nuevo: el nombre en letra serif, una breve descripción, el precio y dónde encontrarlo, el producto sobre un panel teñido con una pegatina de «Nuevo» y un código QR opcional a su página.",
+  "params": {
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG más o menos cuadrado. La insignia incluida es provisional; sustitúyela por la tuya."
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactívalo si no tienes logotipo (si no, un logotipo vacío muestra un recuadro discontinuo)."
+    },
+    "brand": {
+      "label": "Nombre de la tienda",
+      "help": "Aparece junto al logotipo. Déjalo vacío si tu logotipo ya lo incluye."
+    },
+    "eyebrow": {
+      "label": "Antetítulo",
+      "default": "NOVEDAD"
+    },
+    "sticker": {
+      "label": "Pegatina redonda",
+      "help": "Una palabra corta. Déjala vacía para un punto liso.",
+      "default": "NUEVO"
+    },
+    "headline": {
+      "label": "Nombre del producto",
+      "help": "Caben tres líneas; 34 caracteres siempre caben.",
+      "default": "Tote Harbour de lona encerada"
+    },
+    "description": {
+      "label": "Descripción",
+      "default": "Lona encerada, asas de cuero de curtido vegetal y bolsillo interior con cremallera. En tinta, oliva y arena."
+    },
+    "price": {
+      "label": "Precio",
+      "help": "Tal como debe leerse, p. ej. 148 € o 1.299,00 €. Déjalo vacío para ocultarlo.",
+      "default": "148 €"
+    },
+    "where": {
+      "label": "Dónde encontrarlo",
+      "default": "YA EN TIENDA · PLANTA 1"
+    },
+    "product_image": {
+      "label": "Imagen del producto",
+      "help": "Lo ideal es un PNG o SVG recortado con fondo transparente. Se ajusta, nunca se recorta."
+    },
+    "show_image": {
+      "label": "Mostrar la imagen del producto",
+      "help": "Desactívalo para dejar el panel sin imagen (si no, una imagen vacía muestra un recuadro discontinuo)."
+    },
+    "show_qr": {
+      "label": "Mostrar el código QR",
+      "help": "Desactívalo si no tienes enlace: desaparecen el código, su tarjeta y el pie."
+    },
+    "qr_url": {
+      "label": "Enlace del QR",
+      "help": "La página que abre el código. Los enlaces cortos se escanean desde más lejos."
+    },
+    "qr_caption": {
+      "label": "Pie del QR",
+      "default": "Ver todos los colores"
+    },
+    "small_print": {
+      "label": "Letra pequeña",
+      "default": "Hasta agotar existencias. Los colores pueden variar respecto a la imagen."
+    },
+    "accent": {
+      "label": "Color de acento",
+      "help": "El antetítulo, la pegatina y las líneas."
+    },
+    "panel": {
+      "label": "Color del panel de la imagen"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    },
+    "sticker_text": {
+      "label": "Color del texto de la pegatina"
+    },
+    "background_image": {
+      "label": "Foto de fondo",
+      "help": "Opcional. Una foto detrás de todo, oscurecida con el ajuste de abajo."
+    },
+    "background_dim": {
+      "label": "Oscurecer la foto",
+      "help": "0 = la foto tal cual, 0,9 = casi negra. Solo se usa con foto de fondo."
+    }
+  }
+}

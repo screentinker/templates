@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- Warning-triangle icon, drawn for this template. Original work, MIT. -->
+  <path d="M120 22 L226 206 H14 Z" fill="none" stroke="#15171A" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M120 86 V146" stroke="#15171A" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="120" cy="178" r="13" fill="#15171A"/>
+</svg>

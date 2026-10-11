@@ -1,0 +1,164 @@
+{
+  "name": "Dagen zonder incident",
+  "description": "Veiligheidsbord voor fabriek, magazijn of bouwplaats: het aantal dagen (of uren) sinds het laatste incident, het record, een groen/oranje/rode meter naar het doel, PBM-borden en wisselende veiligheidsboodschappen. Op de dag van een incident wordt het rood. Resetten kan via een Google Sheet.",
+  "params": {
+    "site_name": {
+      "label": "Naam van de locatie",
+      "default": "Northwind Logistics · DC Riverside"
+    },
+    "last_incident": {
+      "label": "Datum van het laatste incident",
+      "help": "JJJJ-MM-DD, of JJJJ-MM-DD UU:MM voor een exact tijdstip (in de tijdzone hieronder). Een gekoppelde gegevensbron gaat voor."
+    },
+    "incidents": {
+      "label": "Gegevensbron incidenten (optioneel)",
+      "help": "Een Google Sheet of handmatige tabel met een kolom met de datum van het laatste incident. De meest recente datum telt."
+    },
+    "date_col": {
+      "label": "Datumkolom"
+    },
+    "best_col": {
+      "label": "Kolom met het record (optioneel)",
+      "help": "Een kolom met de langste reeks in dagen. Genegeerd als de bron die niet heeft."
+    },
+    "date_order": {
+      "label": "Datums zoals 03/04/2026 zijn",
+      "options": {
+        "dmy": "Dag eerst (3 april 2026)",
+        "mdy": "Maand eerst (4 maart 2026)"
+      }
+    },
+    "count_unit": {
+      "label": "Tellen in",
+      "options": {
+        "days": "Dagen",
+        "days_hours": "Dagen en uren",
+        "hours": "Uren",
+        "minutes": "Minuten"
+      }
+    },
+    "unit_label": {
+      "label": "Eenheid",
+      "help": "Laat leeg voor het woord in de gekozen taal (dagen, days, Tage...)."
+    },
+    "headline": {
+      "label": "Regel onder het getal",
+      "default": "zonder verzuimongeval"
+    },
+    "since_label": {
+      "label": "Tekst voor de incidentdatum",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "incident_today_label": {
+      "label": "Getoond op de dag van een incident",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "incident_today_note": {
+      "label": "Regel eronder op die dag",
+      "default": "Maak het gebied veilig, meld het, let op elkaar."
+    },
+    "best_record": {
+      "label": "Record (dagen)"
+    },
+    "best_label": {
+      "label": "Kop: record",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "new_record_label": {
+      "label": "Getoond bij een nieuw record",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "target_days": {
+      "label": "Doel (dagen)"
+    },
+    "target_label": {
+      "label": "Kop: doel",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "amber_days": {
+      "label": "Oranje vanaf (dagen)",
+      "help": "Daaronder is het bord rood."
+    },
+    "green_days": {
+      "label": "Groen vanaf (dagen)"
+    },
+    "status_green": {
+      "label": "Statustekst: groen",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "status_amber": {
+      "label": "Statustekst: oranje",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "status_red": {
+      "label": "Statustekst: rood",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "messages": {
+      "label": "Veiligheidsboodschappen",
+      "help": "Eén per regel. Ze wisselen onderaan. Laat leeg om de balk te verbergen.",
+      "default": "Meld elk bijna-ongeval. Zo blijven we op nul.\nHeftruckzone: voetgangers op de gemarkeerde looppaden.\nDrie steunpunten op elke ladder en trap.\nIets gemorst? Stop, zet het af, meld het.\nTil vanuit je benen en vraag hulp boven de 25 kg.\nMoe of niet fit? Zeg het je ploegleider."
+    },
+    "message_seconds": {
+      "label": "Seconden per boodschap"
+    },
+    "ppe_heading": {
+      "label": "Kop: PBM-borden",
+      "help": "Laat leeg voor de ingebouwde tekst in de taal van het scherm."
+    },
+    "ppe_labels": {
+      "label": "Namen van de PBM",
+      "help": "Zes namen gescheiden door |, in deze volgorde: helm, bril, signaalvest, handschoenen, schoenen, gehoorbescherming. Lege namen gebruiken de ingebouwde."
+    },
+    "ppe_hard_hat": {
+      "label": "PBM tonen: helm"
+    },
+    "ppe_goggles": {
+      "label": "PBM tonen: veiligheidsbril"
+    },
+    "ppe_hivis": {
+      "label": "PBM tonen: signaalvest"
+    },
+    "ppe_gloves": {
+      "label": "PBM tonen: handschoenen"
+    },
+    "ppe_boots": {
+      "label": "PBM tonen: veiligheidsschoenen"
+    },
+    "ppe_ear": {
+      "label": "PBM tonen: gehoorbescherming"
+    },
+    "green_color": {
+      "label": "Kleur groen"
+    },
+    "amber_color": {
+      "label": "Kleur oranje"
+    },
+    "red_color": {
+      "label": "Kleur rood"
+    },
+    "accent": {
+      "label": "Kleur van de gevarenstrepen"
+    },
+    "background": {
+      "label": "Achtergrondkleur"
+    },
+    "clock_format": {
+      "label": "Klok",
+      "options": {
+        "auto": "Zoals de taal",
+        "24": "24 uur",
+        "12": "12 uur",
+        "off": "Klok verbergen"
+      }
+    },
+    "timezone": {
+      "label": "Tijdzone van de locatie",
+      "help": "Om middernacht in deze zone begint een nieuwe dag. Laat leeg voor de klok van het scherm."
+    },
+    "locale": {
+      "label": "Taal",
+      "help": "Woorden, datums en getallen op het scherm, bijvoorbeeld nl-NL of nl-BE. Laat leeg voor de taal van het scherm."
+    }
+  }
+}

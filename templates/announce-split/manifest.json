@@ -1,0 +1,158 @@
+{
+  "id": "announce-split",
+  "name": "Announcement — split",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A two-tone notice: the headline on a block of your accent colour, the details beside it on a light background, with a footer line and an optional QR code. Good for sessions, trainings and sign-ups.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-split",
+  "license": "MIT",
+  "tags": [
+    "announcement",
+    "notice",
+    "event",
+    "training",
+    "office",
+    "corporate",
+    "school",
+    "qr"
+  ],
+  "orientation": [
+    "landscape"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A PNG or SVG with a transparent background works best. Shown top left.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "A short label above the headline, e.g. REMINDER or NEW. Capitals read best.",
+      "default": "LUNCH & LEARN"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline",
+      "max": 40,
+      "help": "The announcement in a few words. Up to 40 characters; it takes two or three lines on screen.",
+      "default": "Data privacy in plain English"
+    },
+    {
+      "name": "body",
+      "type": "textarea",
+      "label": "Details",
+      "max": 240,
+      "help": "One or two sentences. Press Enter for a new line.",
+      "default": "Priya Raman from Legal walks through what we can and cannot do with customer data, with real examples from our own support tickets. 45 minutes, lunch provided: please register so we order enough food."
+    },
+    {
+      "name": "footer",
+      "type": "text",
+      "label": "Footer line",
+      "max": 80,
+      "help": "Who it is from, a date, a room or a contact.",
+      "default": "Wednesday 4 November  ·  12:30  ·  Orchard Room, level 3"
+    },
+    {
+      "name": "show_qr",
+      "type": "checkbox",
+      "label": "Show a QR code",
+      "help": "Turn off if you have no link: the code and its caption disappear.",
+      "default": true
+    },
+    {
+      "name": "qr_url",
+      "type": "text",
+      "label": "QR code link",
+      "max": 300,
+      "help": "The address the QR code opens. Shorter links make a code that scans from further away.",
+      "default": "https://example.com/northwind/register"
+    },
+    {
+      "name": "qr_caption",
+      "type": "text",
+      "label": "QR caption",
+      "max": 32,
+      "default": "Scan to register"
+    },
+    {
+      "name": "show_date",
+      "type": "checkbox",
+      "label": "Show today's date",
+      "help": "The screen's live date, in the language and timezone below.",
+      "default": false
+    },
+    {
+      "name": "date_format",
+      "type": "select",
+      "label": "Date style",
+      "default": "weekday",
+      "options": [
+        {
+          "value": "weekday",
+          "label": "Weekday, day and month"
+        },
+        {
+          "value": "long",
+          "label": "Full date with year"
+        },
+        {
+          "value": "short",
+          "label": "Short date"
+        },
+        {
+          "value": "numeric",
+          "label": "Numbers only"
+        }
+      ]
+    },
+    {
+      "name": "timezone",
+      "type": "timezone",
+      "label": "Date timezone",
+      "help": "Leave empty to use the screen's own clock.",
+      "default": ""
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "help": "The language the date is written in, e.g. en-GB, de-DE or fr-CA. Leave empty to use the screen's language.",
+      "default": ""
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "default": "#4B2C83"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#F6F4F0"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#1E1B24"
+    },
+    {
+      "name": "panel_text",
+      "type": "color",
+      "label": "Text colour on the accent panel",
+      "default": "#FFFFFF"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "待机屏幕 — 标志和时钟",
+  "description": "无排期时使用的待机屏幕：你的标志、一个大号实时时钟和今天的日期，衬在带柔和光晕的沉静背景上，采用你的时区和语言。让屏幕在两次活动之间也保持整洁得体。",
+  "params": {
+    "logo": {
+      "label": "标志",
+      "help": "透明背景的 PNG 或 SVG，深色背景上的浅色标志。显示在顶部中央。"
+    },
+    "footer": {
+      "label": "页脚",
+      "help": "底部的一行短文字：地点、楼层或联系方式。留空则不显示。",
+      "default": "Northwind Studio  ·  3 楼前台"
+    },
+    "clock_format": {
+      "label": "时钟格式",
+      "options": {
+        "12": "12 小时制",
+        "24": "24 小时制"
+      }
+    },
+    "date_format": {
+      "label": "日期样式",
+      "options": {
+        "weekday": "星期、日和月",
+        "long": "含年份的完整日期",
+        "short": "简短日期",
+        "numeric": "仅数字"
+      }
+    },
+    "timezone": {
+      "label": "时区",
+      "help": "时钟和日期按哪个地方的时间显示。留空则使用屏幕自身的时钟。"
+    },
+    "locale": {
+      "label": "语言",
+      "help": "时间和日期的书写方式，例如 en-GB、de-DE 或 fr-CA。留空则使用屏幕的语言。"
+    },
+    "accent": {
+      "label": "强调色",
+      "help": "时钟后面的光晕和小横线。"
+    },
+    "background": {
+      "label": "背景色"
+    },
+    "text_color": {
+      "label": "文字颜色"
+    }
+  }
+}

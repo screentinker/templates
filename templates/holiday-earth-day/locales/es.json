@@ -1,0 +1,46 @@
+{
+  "name": "Día de la Tierra",
+  "description": "Una pantalla para el Día de la Tierra en verde bosque y azul océano: un planeta hecho de formas simples con luna y estrellas, tu titular, un mensaje sobre lo que ha logrado tu equipo y una línea para la fecha o un evento.",
+  "params": {
+    "eyebrow": {
+      "label": "Encabezado pequeño",
+      "help": "La línea corta sobre el titular. Déjala vacía para ocultarla.",
+      "default": "FELIZ DÍA DE LA TIERRA"
+    },
+    "headline": {
+      "label": "Titular",
+      "help": "Tiene dos líneas reservadas: caben unos 24 caracteres. Un titular más largo pasa a una tercera línea y se monta sobre el mensaje.",
+      "default": "Pequeños pasos, gran cambio"
+    },
+    "message": {
+      "label": "Mensaje",
+      "help": "Una o dos frases bajo el titular; caben hasta 200 caracteres. Un salto de línea empieza una línea nueva.",
+      "default": "Este año nuestras oficinas pasaron a energía 100 % renovable y redujeron un 38 % los residuos. Gracias por cada botella rellenada y cada viaje en bici."
+    },
+    "date_line": {
+      "label": "Línea de fecha",
+      "help": "Texto libre, escrito tal como quieres que se lea: una fecha, una hora y un lugar, o una despedida.",
+      "default": "22 · 04  ·  ÁRBOLES GRATIS DE 10:00 A 14:00"
+    },
+    "show_logo": {
+      "label": "Mostrar el logotipo",
+      "help": "Desactívalo si no tienes logotipo."
+    },
+    "logo": {
+      "label": "Logotipo",
+      "help": "Un PNG o SVG ancho con fondo transparente (unos 3,4 : 1 llenan el espacio; otras proporciones se ajustan dentro). Sustituye el logotipo provisional de Northwind."
+    },
+    "accent": {
+      "label": "Color de la tierra"
+    },
+    "accent2": {
+      "label": "Color del océano"
+    },
+    "background": {
+      "label": "Color de fondo"
+    },
+    "text_color": {
+      "label": "Color del texto"
+    }
+  }
+}

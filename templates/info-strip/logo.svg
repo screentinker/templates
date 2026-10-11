@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- Placeholder mark for the fictional "Northwind". Original work, MIT. Replace it with your own logo. -->
+  <circle cx="120" cy="120" r="108" fill="none" stroke="#F4F6FA" stroke-width="10"/>
+  <path d="M120 34 L146 120 L120 108 L94 120 Z" fill="#F2B84B"/>
+  <path d="M120 206 L94 120 L120 132 L146 120 Z" fill="#F4F6FA" fill-opacity="0.55"/>
+  <path d="M60 158 Q90 140 120 158 T180 158" fill="none" stroke="#F4F6FA" stroke-width="9" stroke-linecap="round" stroke-opacity="0.85"/>
+</svg>

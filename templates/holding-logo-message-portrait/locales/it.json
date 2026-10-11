@@ -1,0 +1,50 @@
+{
+  "name": "Schermata di attesa — logo, messaggio e sito web (verticale)",
+  "description": "Una schermata di attesa con il tuo marchio tra una campagna e l'altra: il tuo logo, un breve messaggio con una riga di dettaglio, il tuo sito in caratteri grandi e un codice QR facoltativo che lo apre. Non si scarica nulla; il codice lo disegna il server. Layout verticale 9:16.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG con sfondo trasparente. Mostrato in alto a sinistra."
+    },
+    "eyebrow": {
+      "label": "Titoletto",
+      "help": "Una breve etichetta sopra il messaggio. In maiuscolo rende meglio."
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Poche parole. Circa 40 caratteri stanno su due righe.",
+      "default": "Qualcosa di nuovo sta arrivando"
+    },
+    "detail": {
+      "label": "Dettaglio",
+      "help": "Una o due frasi brevi sotto il messaggio. Invio va a capo.",
+      "default": "La prossima esposizione apre lunedì. Nel frattempo, sfoglia l'intera collezione e prenota online una visita allo studio."
+    },
+    "website": {
+      "label": "Riga del sito web",
+      "help": "Mostrata in caratteri grandi. Scrivila senza https:// e come va digitata."
+    },
+    "show_qr": {
+      "label": "Mostra un codice QR",
+      "help": "Disattivato nasconde il codice, la sua scheda e la didascalia."
+    },
+    "qr_url": {
+      "label": "Link del codice QR",
+      "help": "L'indirizzo completo che apre il codice. Un link più corto dà un codice leggibile da più lontano."
+    },
+    "qr_caption": {
+      "label": "Didascalia del QR",
+      "default": "Inquadra per visitarci"
+    },
+    "accent": {
+      "label": "Colore di accento",
+      "help": "Titoletto, linee e pannello colorato."
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

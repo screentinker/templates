@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Goal progress</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<div id="confetti" class="confetti" aria-hidden="true"></div>
+
+<div id="frame" class="frame">
+  <header class="head">
+    <img id="logo" class="logo" alt="" hidden>
+    <div id="badge" class="badge" hidden></div>
+    <div id="kicker" class="kicker" dir="auto"></div>
+    <h1 id="headline" class="headline" dir="auto"></h1>
+  </header>
+
+  <section class="amount">
+    <div class="amount-row">
+      <div id="raised" class="raised"></div>
+      <div id="bigpct" class="bigpct" hidden></div>
+    </div>
+    <div id="goal" class="goal-line"></div>
+  </section>
+
+  <section id="gauge" class="gauge" aria-hidden="true"></section>
+
+  <ol id="mlist" class="mlist" aria-hidden="true" hidden></ol>
+
+  <section id="stats" class="stats">
+    <div class="stat" id="stat-pct"><div class="sv"></div><div class="sl"></div></div>
+    <div class="stat" id="stat-sup"><div class="sv"></div><div class="sl"></div></div>
+    <div class="stat" id="stat-time"><div class="sv"></div><div class="sl"></div></div>
+  </section>
+
+  <div id="next" class="next"></div>
+  <footer id="thanks" class="thanks" dir="auto"></footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

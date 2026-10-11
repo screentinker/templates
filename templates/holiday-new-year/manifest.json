@@ -1,0 +1,140 @@
+{
+  "id": "holiday-new-year",
+  "name": "New Year",
+  "version": "1.0.0",
+  "kind": "slide",
+  "description": "A midnight-blue New Year greeting with gold and pink fireworks drawn from dots, the coming year in giant type behind the headline, and an optional live countdown to midnight that switches to your own message when the year turns.",
+  "author": "ScreenTinker",
+  "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-new-year",
+  "license": "MIT",
+  "tags": [
+    "holiday",
+    "seasonal",
+    "new-year",
+    "countdown",
+    "celebration"
+  ],
+  "orientation": [
+    "landscape"
+  ],
+  "min_server": "2.3.0",
+  "entry": "template.json",
+  "thumbnail": "thumbnail.png",
+  "params": [
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "label": "Small heading",
+      "max": 40,
+      "help": "The short line above the headline. Leave empty to hide it.",
+      "default": "FROM ALL OF US AT NORTHWIND"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline",
+      "max": 28,
+      "help": "Two lines are kept for it: about 24 characters fit. Longer headlines wrap to a third line and run into the message.",
+      "default": "Happy New Year, everyone"
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "label": "Message",
+      "max": 200,
+      "help": "A sentence or two under the headline; up to 200 characters fit. A line break starts a new line.",
+      "default": "Thank you for a remarkable year. Here’s to new beginnings, bold ideas and everything we will build together next."
+    },
+    {
+      "name": "date_line",
+      "type": "text",
+      "label": "Date line",
+      "max": 70,
+      "help": "Plain text, typed the way you want it to read: a date, a time and place, or a sign-off.",
+      "default": "01 · 01 · 2027"
+    },
+    {
+      "name": "show_logo",
+      "type": "checkbox",
+      "label": "Show the logo",
+      "help": "Turn off if you have no logo.",
+      "default": true
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "label": "Logo",
+      "help": "A wide PNG or SVG with a transparent background (about 3.4 : 1 fills the box; other shapes are fitted inside it). Replace the Northwind placeholder.",
+      "default": "tpl:logo.svg"
+    },
+    {
+      "name": "accent",
+      "type": "color",
+      "label": "Gold accent",
+      "default": "#F2C14E"
+    },
+    {
+      "name": "accent2",
+      "type": "color",
+      "label": "Firework accent",
+      "default": "#FF6F91"
+    },
+    {
+      "name": "background",
+      "type": "color",
+      "label": "Background colour",
+      "default": "#0B1026"
+    },
+    {
+      "name": "text_color",
+      "type": "color",
+      "label": "Text colour",
+      "default": "#FFF8EC"
+    },
+    {
+      "name": "big_text",
+      "type": "text",
+      "label": "Big background text",
+      "max": 6,
+      "help": "The giant faint numbers behind the headline — usually the new year.",
+      "default": "2027"
+    },
+    {
+      "name": "show_countdown",
+      "type": "checkbox",
+      "label": "Show the countdown",
+      "help": "Turn off to hide the countdown and its label.",
+      "default": true
+    },
+    {
+      "name": "target",
+      "type": "text",
+      "label": "Count down to",
+      "max": 40,
+      "help": "Change the offset at the end to YOUR timezone, or the countdown ends at the wrong moment. The default +00:00 is midnight in London; 2027-01-01T00:00:00-05:00 is midnight in New York. See the README.",
+      "default": "2027-01-01T00:00:00+00:00"
+    },
+    {
+      "name": "countdown_label",
+      "type": "text",
+      "label": "Label above the countdown",
+      "max": 40,
+      "help": "It stays above the countdown and above the message that replaces it, so it should read well in both.",
+      "default": "NEW YEAR’S EVE  ·  MIDNIGHT"
+    },
+    {
+      "name": "done_text",
+      "type": "text",
+      "label": "Shown when the countdown ends",
+      "max": 30,
+      "default": "Happy New Year!"
+    },
+    {
+      "name": "locale",
+      "type": "locale",
+      "label": "Language",
+      "help": "Language of the countdown units (empty = the screen's language). Older ScreenTinker servers always show them as d h m s.",
+      "default": ""
+    }
+  ]
+}

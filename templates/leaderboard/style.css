@@ -7,22 +7,24 @@
   --bg: #0B1020;
   --accent: #6C8CFF;
   --text: #F2F4FA;
-  --display: 'Archivo', 'Inter', sans-serif;
+  /* The bundled fonts are Latin only: the Noto families cover Japanese, Chinese and Hindi on players. */
+  --display: 'Archivo', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
   --gold: #F4C54B;
   --silver: #C3CCD8;
   --bronze: #D9895A;
   /* 1% of the height, but no more than 0.9% of the width (portrait). */
   --u: min(1vh, 0.9vw);
 }
-body[data-font="oswald"] { --display: 'Oswald', 'Inter', sans-serif; }
-body[data-font="inter"]  { --display: 'Inter', system-ui, sans-serif; }
+body[data-font="oswald"] { --display: 'Oswald', 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; }
+body[data-font="inter"]  { --display: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif; }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; overflow: hidden; }
 body {
   background: var(--bg); color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK SC", "Noto Sans Devanagari", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto;
   cursor: none;
 }
 

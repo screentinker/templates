@@ -1,0 +1,81 @@
+{
+  "name": "Placa de sala de reunião",
+  "description": "Uma placa de porta para sala de reunião: uma grande faixa verde LIVRE ou vermelha OCUPADA, a reunião atual e a próxima, e a agenda do dia, de qualquer fonte de dados de Calendário (iCal). O modo privado mostra \"Reservada\" no lugar dos títulos. Feita para uma tela vertical ao lado da porta; funciona também na horizontal ou como faixa.",
+  "params": {
+    "calendar": {
+      "label": "Calendário da sala (fonte de dados Calendário / iCal)",
+      "help": "Uma fonte de dados de Calendário apontando para o feed iCal da sala (Google, Outlook/Exchange, qualquer URL .ics). Sem ela, é mostrada uma agenda de exemplo."
+    },
+    "room_name": {
+      "label": "Nome da sala",
+      "default": "Sala de reuniões"
+    },
+    "available_label": {
+      "label": "Texto de \"livre\"",
+      "help": "Deixe vazio para a palavra embutida no idioma da placa."
+    },
+    "busy_label": {
+      "label": "Texto de \"ocupada\"",
+      "help": "Deixe vazio para a palavra embutida no idioma da placa."
+    },
+    "hide_titles": {
+      "label": "Privacidade: ocultar títulos e organizadores"
+    },
+    "reserved_label": {
+      "label": "Texto no lugar de um título oculto",
+      "help": "Deixe vazio para a palavra embutida no idioma da placa."
+    },
+    "show_organizer": {
+      "label": "Mostrar organizadores"
+    },
+    "now_label": {
+      "label": "Título: reunião atual",
+      "help": "Deixe vazio para a palavra embutida no idioma da placa."
+    },
+    "next_label": {
+      "label": "Título: próxima reunião",
+      "help": "Deixe vazio para a palavra embutida no idioma da placa."
+    },
+    "agenda_label": {
+      "label": "Título: agenda de hoje",
+      "help": "Deixe vazio para a palavra embutida no idioma da placa."
+    },
+    "upcoming_label": {
+      "label": "Título: reservas futuras (quando não resta nada hoje)",
+      "help": "Deixe vazio para a palavra embutida no idioma da placa."
+    },
+    "empty_label": {
+      "label": "Texto quando não há reservas",
+      "help": "Deixe vazio para a palavra embutida no idioma da placa."
+    },
+    "available_color": {
+      "label": "Cor de \"livre\""
+    },
+    "busy_color": {
+      "label": "Cor de \"ocupada\""
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    },
+    "clock_format": {
+      "label": "Relógio",
+      "options": {
+        "auto": "Padrão do idioma",
+        "24": "24 horas",
+        "12": "12 horas",
+        "off": "Ocultar o relógio"
+      }
+    },
+    "timezone": {
+      "label": "Fuso horário do relógio",
+      "help": "Deixe vazio para usar o relógio da tela."
+    },
+    "locale": {
+      "label": "Idioma",
+      "help": "Palavras, datas e horários da placa, ex. pt-BR ou pt-PT. Vazio = idioma da tela. Vale também para a agenda; use nela o mesmo fuso horário do relógio."
+    }
+  }
+}

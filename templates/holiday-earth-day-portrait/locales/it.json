@@ -1,0 +1,46 @@
+{
+  "name": "Giornata della Terra (verticale)",
+  "description": "Uno schermo per la Giornata della Terra in verde foresta e blu oceano: un pianeta fatto di forme semplici con luna e stelle, il tuo titolo, un messaggio su ciò che ha fatto il tuo team e una riga per la data o un evento.",
+  "params": {
+    "eyebrow": {
+      "label": "Occhiello",
+      "help": "La riga breve sopra il titolo. Lasciala vuota per nasconderla.",
+      "default": "BUONA GIORNATA DELLA TERRA"
+    },
+    "headline": {
+      "label": "Titolo",
+      "help": "Ha due righe riservate: ci stanno circa 24 caratteri. Un titolo più lungo va a capo su una terza riga e copre il messaggio.",
+      "default": "Ogni gesto conta"
+    },
+    "message": {
+      "label": "Messaggio",
+      "help": "Una o due frasi sotto il titolo; ci stanno fino a 200 caratteri. Un a capo inizia una nuova riga.",
+      "default": "Quest’anno i nostri uffici sono passati al 100% di energia rinnovabile e hanno ridotto i rifiuti del 38%. Grazie per ogni borraccia riempita e ogni viaggio in bici."
+    },
+    "date_line": {
+      "label": "Riga della data",
+      "help": "Testo libero, scritto come deve apparire: una data, un orario e un luogo, o una firma.",
+      "default": "22 · 04  ·  PIANTINE IN REGALO 10:00–14:00"
+    },
+    "show_logo": {
+      "label": "Mostra il logo",
+      "help": "Disattiva se non hai un logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG o SVG largo con sfondo trasparente (circa 3,4 : 1 riempie il riquadro; altre forme vi vengono adattate). Sostituisci il segnaposto Northwind."
+    },
+    "accent": {
+      "label": "Colore delle terre"
+    },
+    "accent2": {
+      "label": "Colore dell’oceano"
+    },
+    "background": {
+      "label": "Colore di sfondo"
+    },
+    "text_color": {
+      "label": "Colore del testo"
+    }
+  }
+}

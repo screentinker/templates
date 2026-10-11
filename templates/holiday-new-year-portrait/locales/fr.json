@@ -1,0 +1,70 @@
+{
+  "name": "Nouvel An (portrait)",
+  "description": "Des vœux de Nouvel An sur bleu nuit, avec des feux d’artifice dorés et roses faits de points, la nouvelle année en chiffres géants derrière le titre et un compte à rebours optionnel jusqu’à minuit, remplacé par votre message au passage à la nouvelle année.",
+  "params": {
+    "eyebrow": {
+      "label": "Surtitre",
+      "help": "La ligne courte au-dessus du titre. Laissez vide pour la masquer.",
+      "default": "DE TOUTE L’ÉQUIPE NORTHWIND"
+    },
+    "headline": {
+      "label": "Titre",
+      "help": "Deux lignes lui sont réservées : environ 24 caractères tiennent. Un titre plus long passe sur une troisième ligne et empiète sur le message.",
+      "default": "Bonne année à tous !"
+    },
+    "message": {
+      "label": "Message",
+      "help": "Une phrase ou deux sous le titre ; jusqu’à 200 caractères tiennent. Un retour à la ligne commence une nouvelle ligne.",
+      "default": "Merci pour cette année remarquable. Place aux nouveaux départs, aux idées audacieuses et à tout ce que nous allons bâtir ensemble."
+    },
+    "date_line": {
+      "label": "Ligne de date",
+      "help": "Texte libre, saisi tel qu’il doit s’afficher : une date, une heure et un lieu, ou une signature."
+    },
+    "show_logo": {
+      "label": "Afficher le logo",
+      "help": "Désactivez si vous n’avez pas de logo."
+    },
+    "logo": {
+      "label": "Logo",
+      "help": "Un PNG ou SVG large à fond transparent (environ 3,4 : 1 remplit le cadre ; les autres formats y sont ajustés). Remplacez le logo provisoire Northwind."
+    },
+    "accent": {
+      "label": "Accent doré"
+    },
+    "accent2": {
+      "label": "Accent feu d’artifice"
+    },
+    "background": {
+      "label": "Couleur de fond"
+    },
+    "text_color": {
+      "label": "Couleur du texte"
+    },
+    "big_text": {
+      "label": "Grand texte de fond",
+      "help": "Les chiffres géants et pâles derrière le titre, en général la nouvelle année."
+    },
+    "show_countdown": {
+      "label": "Afficher le compte à rebours",
+      "help": "Désactivez pour masquer le compte à rebours et son libellé."
+    },
+    "target": {
+      "label": "Compte à rebours jusqu’à",
+      "help": "Mettez le décalage final sur VOTRE fuseau, sinon le compte à rebours finit au mauvais moment. +00:00 = minuit à Londres ; 2027-01-01T00:00:00+01:00 = minuit à Paris."
+    },
+    "countdown_label": {
+      "label": "Libellé au-dessus du compte à rebours",
+      "help": "Il reste au-dessus du compte à rebours puis du message qui le remplace : il doit convenir aux deux.",
+      "default": "RÉVEILLON  ·  MINUIT"
+    },
+    "done_text": {
+      "label": "Affiché à la fin du compte à rebours",
+      "default": "Bonne année !"
+    },
+    "locale": {
+      "label": "Langue",
+      "help": "Langue des unités du compte à rebours (vide = langue de l’écran). Les anciens serveurs ScreenTinker les affichent toujours en d h m s."
+    }
+  }
+}

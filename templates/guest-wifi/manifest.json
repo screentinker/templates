@@ -1,7 +1,7 @@
 {
   "id": "guest-wifi",
   "name": "Guest Wi-Fi",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "html",
   "description": "Your guest network name and password, large and legible, next to a QR code that joins the network in one scan — with the special characters in names and passwords escaped correctly, so the code actually connects. Made for hotels, cafés, clinics and offices; works as a full screen, a portrait poster or a thin strip. Nothing is fetched: the code is drawn on the screen.",
   "author": "ScreenTinker",
@@ -25,14 +25,15 @@
     { "name": "eyebrow", "type": "text", "label": "Small heading", "max": 40, "default": "Complimentary Wi-Fi" },
     { "name": "headline", "type": "text", "label": "Headline", "max": 70, "default": "Stay connected while you're with us" },
     { "name": "hint", "type": "text", "label": "Hint under the code", "max": 40, "help": "Leave empty to hide it.", "default": "Point your camera here to join" },
-    { "name": "ssid_label", "type": "text", "label": "Label for the network name", "max": 24, "default": "Network" },
-    { "name": "password_label", "type": "text", "label": "Label for the password", "max": 24, "default": "Password" },
-    { "name": "open_text", "type": "text", "label": "Text for an open network", "max": 40, "default": "No password needed" },
-    { "name": "hidden_text", "type": "text", "label": "Text when the password is not shown", "max": 40, "default": "Scan the code to join" },
+    { "name": "ssid_label", "type": "text", "label": "Label for the network name", "max": 24, "help": "Leave empty for the word \"Network\" in the screen's language.", "default": "" },
+    { "name": "password_label", "type": "text", "label": "Label for the password", "max": 24, "help": "Leave empty for the word \"Password\" in the screen's language.", "default": "" },
+    { "name": "open_text", "type": "text", "label": "Text for an open network", "max": 40, "help": "Leave empty for \"No password needed\" in the screen's language.", "default": "" },
+    { "name": "hidden_text", "type": "text", "label": "Text when the password is not shown", "max": 40, "help": "Leave empty for \"Scan the code to join\" in the screen's language.", "default": "" },
     { "name": "footer", "type": "text", "label": "Footer", "max": 100, "default": "Need a hand? Ask anyone at the front desk — we're happy to help." },
     { "name": "logo", "type": "image", "label": "Logo", "help": "A PNG or SVG with a transparent background. Leave empty for no logo.", "default": "tpl:logo.svg" },
     { "name": "accent", "type": "color", "label": "Accent colour", "default": "#5CC8B5" },
     { "name": "background", "type": "color", "label": "Background colour", "default": "#10222A" },
-    { "name": "text_color", "type": "color", "label": "Text colour", "default": "#F3EDE3" }
+    { "name": "text_color", "type": "color", "label": "Text colour", "default": "#F3EDE3" },
+    { "name": "locale", "type": "locale", "label": "Language", "help": "The language of the words the screen writes itself (labels, messages). Leave empty to use the screen's language.", "default": "" }
   ]
 }

@@ -1,0 +1,50 @@
+{
+  "name": "Tela de espera — logo, mensagem e site",
+  "description": "Uma tela de espera com a sua marca para entre campanhas: seu logo, uma mensagem curta com uma linha de detalhe, seu site em letras grandes e um QR code opcional que o abre. Nada é baixado; o servidor desenha o código.",
+  "params": {
+    "logo": {
+      "label": "Logo",
+      "help": "Um PNG ou SVG com fundo transparente. Exibido no canto superior esquerdo."
+    },
+    "eyebrow": {
+      "label": "Título pequeno",
+      "help": "Um rótulo curto acima da mensagem. Fica melhor em maiúsculas."
+    },
+    "message": {
+      "label": "Mensagem",
+      "help": "Poucas palavras. Até uns 40 caracteres cabem em duas linhas.",
+      "default": "Novidades a caminho"
+    },
+    "detail": {
+      "label": "Detalhe",
+      "help": "Uma ou duas frases curtas abaixo da mensagem. Enter começa uma nova linha.",
+      "default": "Nossa próxima mostra abre na segunda-feira. Até lá, veja a coleção completa e agende online uma visita ao estúdio."
+    },
+    "website": {
+      "label": "Linha do site",
+      "help": "Exibida em letras grandes. Escreva sem https:// e do jeito que as pessoas devem digitar."
+    },
+    "show_qr": {
+      "label": "Mostrar um QR code",
+      "help": "Desligado esconde o código, o cartão e a legenda."
+    },
+    "qr_url": {
+      "label": "Link do QR code",
+      "help": "O endereço completo que o código abre. Links mais curtos geram um código que pode ser lido de mais longe."
+    },
+    "qr_caption": {
+      "label": "Legenda do QR",
+      "default": "Escaneie para visitar"
+    },
+    "accent": {
+      "label": "Cor de destaque",
+      "help": "Título pequeno, traços e o painel colorido."
+    },
+    "background": {
+      "label": "Cor de fundo"
+    },
+    "text_color": {
+      "label": "Cor do texto"
+    }
+  }
+}
