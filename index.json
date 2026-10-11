@@ -1,14 +1,481 @@
 {
   "schema": 1,
   "catalog": "official",
-  "serial": 1790791193,
-  "generated": "2026-09-30T17:59:53.915Z",
-  "expires": "2026-11-14T17:59:53.915Z",
+  "serial": 1791725440,
+  "generated": "2026-10-11T13:30:40.522Z",
+  "expires": "2026-11-25T13:30:40.522Z",
   "revoked": [],
   "templates": [
     {
+      "id": "announce-bold",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "fb4b5d67b0fcf1e2c2f70e1be921920120034aa15e90e83e4b6aed13ce2a6d43",
+          "size": 83721,
+          "url": "packages/announce-bold-1.0.0.sttemplate",
+          "network": [],
+          "params": 15,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Announcement — bold",
+      "description": "A loud, confident notice: a huge headline on a strong colour, a short paragraph, a footer line and an optional QR code for the details. For closures, deadlines and anything people must not miss.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "announcement",
+        "notice",
+        "alert",
+        "office",
+        "corporate",
+        "school",
+        "qr"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-bold",
+      "thumbnail": "thumbs/announce-bold-1.0.0.png"
+    },
+    {
+      "id": "announce-bold-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "17e978cce6d334372d0d8809fbe675cd6a4ba7497c854f6f864ebe2e1958b906",
+          "size": 74582,
+          "url": "packages/announce-bold-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 15,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Announcement — bold (portrait)",
+      "description": "A loud, confident notice: a huge headline on a strong colour, a short paragraph, a footer line and an optional QR code for the details. For closures, deadlines and anything people must not miss. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "announcement",
+        "notice",
+        "alert",
+        "office",
+        "corporate",
+        "school",
+        "qr",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-bold-portrait",
+      "thumbnail": "thumbs/announce-bold-portrait-1.0.0.png"
+    },
+    {
+      "id": "announce-card",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "2d8af1a5d94b3323dd2a575069098aea65a51919cc1b074b18ed801e4469d682",
+          "size": 83978,
+          "url": "packages/announce-card-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Announcement — card",
+      "description": "A friendly notice on a white card: an emoji icon, a headline, a short paragraph, a footer line and an optional QR code. Good for events, reminders and good news in offices, schools and community spaces.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "announcement",
+        "notice",
+        "event",
+        "school",
+        "office",
+        "corporate",
+        "qr"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-card",
+      "thumbnail": "thumbs/announce-card-1.0.0.png"
+    },
+    {
+      "id": "announce-card-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "6bbd0c21a7fb12e11500e3df34fa38b6a954db2fdba1be77943c2948dcd26ce3",
+          "size": 74235,
+          "url": "packages/announce-card-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Announcement — card (portrait)",
+      "description": "A friendly notice on a white card: an emoji icon, a headline, a short paragraph, a footer line and an optional QR code. Good for events, reminders and good news in offices, schools and community spaces. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "announcement",
+        "notice",
+        "event",
+        "school",
+        "office",
+        "corporate",
+        "qr",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-card-portrait",
+      "thumbnail": "thumbs/announce-card-portrait-1.0.0.png"
+    },
+    {
+      "id": "announce-minimal",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "aafbb10bd033dae956312a0077dc1d9a60d126ac1c6dac3b3cfe21407b4276e2",
+          "size": 75575,
+          "url": "packages/announce-minimal-1.0.0.sttemplate",
+          "network": [],
+          "params": 15,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Announcement — minimal",
+      "description": "A quiet, typographic notice: a serif headline, a short paragraph and a signature line on a calm background, with plenty of space. For thank-yous, letters from leadership and policy notes. Optional small QR code.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "announcement",
+        "notice",
+        "minimal",
+        "school",
+        "office",
+        "corporate",
+        "qr"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-minimal",
+      "thumbnail": "thumbs/announce-minimal-1.0.0.png"
+    },
+    {
+      "id": "announce-minimal-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "5cce5b6014db7ef14430fd5a6d97c2dc398e11cc56de23541c3b1b3c9989d19b",
+          "size": 66412,
+          "url": "packages/announce-minimal-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 15,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Announcement — minimal (portrait)",
+      "description": "A quiet, typographic notice: a serif headline, a short paragraph and a signature line on a calm background, with plenty of space. For thank-yous, letters from leadership and policy notes. Optional small QR code. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "announcement",
+        "notice",
+        "minimal",
+        "school",
+        "office",
+        "corporate",
+        "qr",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-minimal-portrait",
+      "thumbnail": "thumbs/announce-minimal-portrait-1.0.0.png"
+    },
+    {
+      "id": "announce-split",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "a5ce15e3f2efd7c0c3c146ff40d770c270a55f3b383d311acae7d2a4d6cf8a0e",
+          "size": 85161,
+          "url": "packages/announce-split-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Announcement — split",
+      "description": "A two-tone notice: the headline on a block of your accent colour, the details beside it on a light background, with a footer line and an optional QR code. Good for sessions, trainings and sign-ups.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "announcement",
+        "notice",
+        "event",
+        "training",
+        "office",
+        "corporate",
+        "school",
+        "qr"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-split",
+      "thumbnail": "thumbs/announce-split-1.0.0.png"
+    },
+    {
+      "id": "announce-split-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "353181be25b005b8c46e8f5a23276f29b778084440eeeba26b21b5bbc22ca67a",
+          "size": 72173,
+          "url": "packages/announce-split-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Announcement — split (portrait)",
+      "description": "A two-tone notice: the headline on a block of your accent colour, the details below it on a light background, with a footer line and an optional QR code. Good for sessions, trainings and sign-ups. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "announcement",
+        "notice",
+        "event",
+        "training",
+        "office",
+        "corporate",
+        "school",
+        "qr",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/announce-split-portrait",
+      "thumbnail": "thumbs/announce-split-portrait-1.0.0.png"
+    },
+    {
+      "id": "data-table",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "5dc971a576bcf57e8fd6b6c96848ef02d56103d104c450010218709fee9fc92b",
+          "size": 466234,
+          "url": "packages/data-table-1.0.0.sttemplate",
+          "network": [],
+          "params": 23,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Data table",
+      "description": "Any table as a clean, readable board: a league table, savings rates with their small print, stock levels, a timetable. Connect a Google Sheet, CSV, REST list or Manual table (or type the rows in), pick the columns, colour cells with simple rules like \"On hand < 5 red\", and long tables page themselves.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "table",
+        "data-source",
+        "google-sheets",
+        "dashboard",
+        "league-table",
+        "rates",
+        "inventory",
+        "schedule"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/data-table",
+      "thumbnail": "thumbs/data-table-1.0.0.png"
+    },
+    {
+      "id": "days-since-incident",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "8bf34f7709dac9d741554ef13bfdffbbc591ac2bbdfb26687d2d626e755c16ae",
+          "size": 348902,
+          "url": "packages/days-since-incident-1.0.0.sttemplate",
+          "network": [],
+          "params": 40,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Days since last incident",
+      "description": "A safety streak board for a factory floor, warehouse or site: a huge count of days (or hours) since the last incident, the best-ever record, a green/amber/red target gauge, required-PPE signs and rotating safety messages. On the day of an incident it turns red and says so. A supervisor can reset it from a Google Sheet.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "safety",
+        "health-and-safety",
+        "factory",
+        "warehouse",
+        "manufacturing",
+        "counter",
+        "kpi",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/days-since-incident",
+      "thumbnail": "thumbs/days-since-incident-1.0.0.png"
+    },
+    {
+      "id": "did-you-know",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "7b3a39c3eb681be22840e97255fea40a859c466313f50a86dd4ccf215c8d5fad",
+          "size": 74032,
+          "url": "packages/did-you-know-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Did you know?",
+      "description": "A bold fact-of-the-day screen: a big character in a bright disc, one surprising sentence, a short explanation and a source line. For schools, libraries, museums, waiting rooms and office kitchens.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "fact",
+        "trivia",
+        "education",
+        "school",
+        "library",
+        "lobby",
+        "office"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/did-you-know",
+      "thumbnail": "thumbs/did-you-know-1.0.0.png"
+    },
+    {
+      "id": "did-you-know-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "8f34e48e6ba63b65994d26b69370d92e44099b6877fdd036e4b40981f74c9665",
+          "size": 61289,
+          "url": "packages/did-you-know-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Did you know? (portrait)",
+      "description": "A bold fact-of-the-day screen: a big character in a bright disc, one surprising sentence, a short explanation and a source line. For schools, libraries, museums, waiting rooms and office kitchens. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "fact",
+        "trivia",
+        "education",
+        "school",
+        "library",
+        "lobby",
+        "office",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/did-you-know-portrait",
+      "thumbnail": "thumbs/did-you-know-portrait-1.0.0.png"
+    },
+    {
+      "id": "directory-board",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "3922a3065d191c0ce22aeb84dc7ffb7df0e4b77a35c36ae73f64d9871e7c3c25",
+          "size": 366948,
+          "url": "packages/directory-board-1.0.0.sttemplate",
+          "network": [],
+          "params": 27,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Building directory",
+      "description": "A lobby directory for an office building, mall or campus: every tenant with its floor and suite, grouped by floor or listed A to Z with an index, direction arrows, a \"You are here\" line and a clock. Lays itself out in columns to fill the screen and pages through long lists. Type the tenants in, or keep them in a Google Sheet or Manual table.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "directory",
+        "wayfinding",
+        "lobby",
+        "reception",
+        "office",
+        "building",
+        "tenants",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/directory-board",
+      "thumbnail": "thumbs/directory-board-1.0.0.png"
+    },
+    {
       "id": "event-countdown",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.2.0",
+          "sha256": "3d5d629468bbed667559f3a85a454bf3423ad80da5b029a55782e47f26623784",
+          "size": 76406,
+          "url": "packages/event-countdown-1.1.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.2.0",
@@ -37,11 +504,133 @@
         "landscape"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/event-countdown",
-      "thumbnail": "thumbs/event-countdown-1.0.0.png"
+      "thumbnail": "thumbs/event-countdown-1.1.0.png"
+    },
+    {
+      "id": "event-countdown-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "c16fecc3edefc44b796f3c18df7e1e1c3b74798bf90fcaa4cf3640f99197bfd5",
+          "size": 72551,
+          "url": "packages/event-countdown-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Event countdown (portrait)",
+      "description": "A launch-screen countdown for a conference, opening or product launch: the event name, a tagline and the date and venue, a big live countdown that switches to your own message when the moment arrives, and an optional ticket or RSVP QR code. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "countdown",
+        "event",
+        "launch",
+        "conference",
+        "qr",
+        "tickets",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/event-countdown-portrait",
+      "thumbnail": "thumbs/event-countdown-portrait-1.0.0.png"
+    },
+    {
+      "id": "events-agenda",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "fc87c1f58ef6275195f3da0bd6712d59aa27b0e02ee200d8e0094d2bd573499b",
+          "size": 426567,
+          "url": "packages/events-agenda-1.0.0.sttemplate",
+          "network": [],
+          "params": 33,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "What's on — events agenda",
+      "description": "A \"What's on\" board for hotels, conference venues, campuses and community centres: the next events grouped by day, today (or tonight) large and later days smaller, with times, rooms, speakers and direction arrows. The session in progress is highlighted, finished ones drop off by themselves, and long programmes page. Type the programme in, or connect a calendar (iCal), Google Sheet or Manual table.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "events",
+        "agenda",
+        "whats-on",
+        "hospitality",
+        "conference",
+        "lobby",
+        "reception",
+        "calendar",
+        "ical",
+        "google-sheets",
+        "data-source"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/events-agenda",
+      "thumbnail": "thumbs/events-agenda-1.0.0.png"
+    },
+    {
+      "id": "goal-progress",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "787731cbc1afda15ef9b030ba1784de91b1381401b38f54ffcf23ed0c5582833",
+          "size": 486943,
+          "url": "packages/goal-progress-1.0.0.sttemplate",
+          "network": [],
+          "params": 33,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Goal progress",
+      "description": "Show how close a fundraiser, appeal or sales target is: a thermometer, progress bar or ring with the amount raised, percentage, milestones, supporter count and a deadline countdown. Celebrates with confetti when the goal is reached. Type the total in, or connect a Google Sheet, form responses or REST API so it updates itself.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "fundraising",
+        "goal",
+        "thermometer",
+        "progress",
+        "nonprofit",
+        "church",
+        "school",
+        "sales",
+        "kpi",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/goal-progress",
+      "thumbnail": "thumbs/goal-progress-1.0.0.png"
     },
     {
       "id": "guest-wifi",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.2.0",
+          "sha256": "83815cc80e32b0ffa5b3837ce1cd9ae68ad58e1ec4fe44c6efb29e0fbcd446f5",
+          "size": 400545,
+          "url": "packages/guest-wifi-1.1.0.sttemplate",
+          "network": [],
+          "params": 18,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.2.0",
@@ -71,11 +660,802 @@
         "portrait"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/guest-wifi",
-      "thumbnail": "thumbs/guest-wifi-1.0.0.png"
+      "thumbnail": "thumbs/guest-wifi-1.1.0.png"
+    },
+    {
+      "id": "holding-gradient-time",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "7a53455ad4326d0b68580af4b3275e18603f8e6aa8954ad2dbc404b71ee127ec",
+          "size": 204024,
+          "url": "packages/holding-gradient-time-1.0.0.sttemplate",
+          "network": [],
+          "params": 9,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Holding screen — calm gradient with time and date",
+      "description": "A quiet standby screen: a large, light clock and the date over a soft gradient, with an optional small logo and one line of text. Six bundled gradients, your timezone and language. Easy on the eye for screens that sit idle for hours.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holding",
+        "standby",
+        "clock",
+        "ambient",
+        "lobby",
+        "office"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-gradient-time",
+      "thumbnail": "thumbs/holding-gradient-time-1.0.0.png"
+    },
+    {
+      "id": "holding-gradient-time-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "d0ac07db5657f5206af1e3850f843622873e60d19fc207ab93c22a70746c19ef",
+          "size": 118373,
+          "url": "packages/holding-gradient-time-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 9,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Holding screen — calm gradient with time and date (portrait)",
+      "description": "A quiet standby screen: a large, light clock and the date over a soft gradient, with an optional small logo and one line of text. Six bundled gradients, your timezone and language. Easy on the eye for screens that sit idle for hours. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holding",
+        "standby",
+        "clock",
+        "ambient",
+        "lobby",
+        "office",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-gradient-time-portrait",
+      "thumbnail": "thumbs/holding-gradient-time-portrait-1.0.0.png"
+    },
+    {
+      "id": "holding-logo-clock",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "f0e7284327c56eb40fcded7bf25ae17b873318a3d01ade68a4a434f57a77a157",
+          "size": 56733,
+          "url": "packages/holding-logo-clock-1.0.0.sttemplate",
+          "network": [],
+          "params": 9,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Holding screen — logo and clock",
+      "description": "A standby screen for when nothing is scheduled: your logo, a big live clock and today's date on a calm background with a soft halo, in your own timezone and language. Keeps a screen looking cared for between campaigns.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holding",
+        "standby",
+        "clock",
+        "lobby",
+        "reception",
+        "office",
+        "corporate"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-logo-clock",
+      "thumbnail": "thumbs/holding-logo-clock-1.0.0.png"
+    },
+    {
+      "id": "holding-logo-clock-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "8afcec65b336b290361ff60ed38381c6f2dfb6c9c633a08543da8d99a812b5ec",
+          "size": 49702,
+          "url": "packages/holding-logo-clock-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 9,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Holding screen — logo and clock (portrait)",
+      "description": "A standby screen for when nothing is scheduled: your logo, a big live clock and today's date on a calm background with a soft halo, in your own timezone and language. Keeps a screen looking cared for between campaigns. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holding",
+        "standby",
+        "clock",
+        "lobby",
+        "reception",
+        "office",
+        "corporate",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-logo-clock-portrait",
+      "thumbnail": "thumbs/holding-logo-clock-portrait-1.0.0.png"
+    },
+    {
+      "id": "holding-logo-message",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "1e00266afabc81bd553c1bbd365e6f718e514dc7bbccd0065315dec10f09d2cd",
+          "size": 69714,
+          "url": "packages/holding-logo-message-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Holding screen — logo, message and website",
+      "description": "A branded \"back soon\" screen for between campaigns: your logo, a short message and a line of detail, your website in large type and an optional QR code that opens it. Nothing is fetched; the code is drawn by the server.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holding",
+        "standby",
+        "branding",
+        "qr",
+        "retail",
+        "lobby",
+        "corporate"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-logo-message",
+      "thumbnail": "thumbs/holding-logo-message-1.0.0.png"
+    },
+    {
+      "id": "holding-logo-message-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "1611eed2b6e9c797a3fa5f3a7843bb2ecd0cafde13b8216acd46a5c56bfbedba",
+          "size": 59183,
+          "url": "packages/holding-logo-message-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Holding screen — logo, message and website (portrait)",
+      "description": "A branded \"back soon\" screen for between campaigns: your logo, a short message and a line of detail, your website in large type and an optional QR code that opens it. Nothing is fetched; the code is drawn by the server. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holding",
+        "standby",
+        "branding",
+        "qr",
+        "retail",
+        "lobby",
+        "corporate",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holding-logo-message-portrait",
+      "thumbnail": "thumbs/holding-logo-message-portrait-1.0.0.png"
+    },
+    {
+      "id": "holiday-celebrate",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "e98055cd1cce92659411fcf9376907eab96bc68fc1cc809001fac81a2564758f",
+          "size": 81270,
+          "url": "packages/holiday-celebrate-1.0.0.sttemplate",
+          "network": [],
+          "params": 12,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Celebrate",
+      "description": "A confetti celebration for any occasion — a company anniversary, a birthday, a record month, a grand opening or a team win: a giant number, a headline, a message and a date line, in colours you choose.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "celebration",
+        "anniversary",
+        "birthday",
+        "milestone",
+        "office"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-celebrate",
+      "thumbnail": "thumbs/holiday-celebrate-1.0.0.png"
+    },
+    {
+      "id": "holiday-celebrate-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "c06da8b1373b6186d32c8c4e2db6668d964a877a01dea577686240f1f1e7d3a5",
+          "size": 70721,
+          "url": "packages/holiday-celebrate-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 12,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Celebrate (portrait)",
+      "description": "A confetti celebration for any occasion — a company anniversary, a birthday, a record month, a grand opening or a team win: a giant number, a headline, a message and a date line, in colours you choose.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "celebration",
+        "anniversary",
+        "birthday",
+        "milestone",
+        "office",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-celebrate-portrait",
+      "thumbnail": "thumbs/holiday-celebrate-portrait-1.0.0.png"
+    },
+    {
+      "id": "holiday-earth-day",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "50059d320df41c6d5085f39c8ebf542d44d5a3b5ee34dcb5b9e5af9ea6168886",
+          "size": 82325,
+          "url": "packages/holiday-earth-day-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Earth Day",
+      "description": "An Earth Day screen in forest green and ocean blue: a planet drawn from simple shapes with a moon and stars, your headline, a message about what your team has done, and a line for the date or an event.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "earth-day",
+        "sustainability",
+        "awareness",
+        "environment"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-earth-day",
+      "thumbnail": "thumbs/holiday-earth-day-1.0.0.png"
+    },
+    {
+      "id": "holiday-earth-day-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "b47f7f3c89d699caabbadd3bf4f5b46aba558f9a70ea9caddd5713092cebd2f2",
+          "size": 71128,
+          "url": "packages/holiday-earth-day-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Earth Day (portrait)",
+      "description": "An Earth Day screen in forest green and ocean blue: a planet drawn from simple shapes with a moon and stars, your headline, a message about what your team has done, and a line for the date or an event.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "earth-day",
+        "sustainability",
+        "awareness",
+        "environment",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-earth-day-portrait",
+      "thumbnail": "thumbs/holiday-earth-day-portrait-1.0.0.png"
+    },
+    {
+      "id": "holiday-halloween",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "60a1b74ea9612764ba6313e6832f8d67c7cdce56ac6067582d1096648aa248c7",
+          "size": 79993,
+          "url": "packages/holiday-halloween-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Halloween",
+      "description": "A playful Halloween screen: a jack-o’-lantern and full moon drawn from simple shapes over purple hills, with a headline, a message for your costume parade or opening hours, and a date line.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "halloween",
+        "autumn",
+        "fall",
+        "retail"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-halloween",
+      "thumbnail": "thumbs/holiday-halloween-1.0.0.png"
+    },
+    {
+      "id": "holiday-halloween-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "98e05556736752b43d6491aa85272c88b7878ddc0d3243ba605f98c9466a54b8",
+          "size": 70352,
+          "url": "packages/holiday-halloween-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Halloween (portrait)",
+      "description": "A playful Halloween screen: a jack-o’-lantern and full moon drawn from simple shapes over purple hills, with a headline, a message for your costume parade or opening hours, and a date line.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "halloween",
+        "autumn",
+        "fall",
+        "retail",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-halloween-portrait",
+      "thumbnail": "thumbs/holiday-halloween-portrait-1.0.0.png"
+    },
+    {
+      "id": "holiday-new-year",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "f3e6a6ea6d8c401818c97b2cc6f892f173cded56c562bb8670c29c32defc3c8d",
+          "size": 103528,
+          "url": "packages/holiday-new-year-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "New Year",
+      "description": "A midnight-blue New Year greeting with gold and pink fireworks drawn from dots, the coming year in giant type behind the headline, and an optional live countdown to midnight that switches to your own message when the year turns.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "new-year",
+        "countdown",
+        "celebration"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-new-year",
+      "thumbnail": "thumbs/holiday-new-year-1.0.0.png"
+    },
+    {
+      "id": "holiday-new-year-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "f12762acf1f2c044e641cc2bfbf05aac66f3c56cc1d452787e4923195b464afd",
+          "size": 90671,
+          "url": "packages/holiday-new-year-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "New Year (portrait)",
+      "description": "A midnight-blue New Year greeting with gold and pink fireworks drawn from dots, the coming year in giant type behind the headline, and an optional live countdown to midnight that switches to your own message when the year turns.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "new-year",
+        "countdown",
+        "celebration",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-new-year-portrait",
+      "thumbnail": "thumbs/holiday-new-year-portrait-1.0.0.png"
+    },
+    {
+      "id": "holiday-thank-you-day",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "c1bfc1b547d38e90782a286f37848d27ad28d544498e4b6d24177f55fc303540",
+          "size": 76661,
+          "url": "packages/holiday-thank-you-day-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Thank-you day",
+      "description": "A bright appreciation screen for a staff, volunteer, customer or teacher thank-you day: bold geometric shapes on cream, a big thank-you headline, a message with the numbers worth celebrating, and a thank-you in several languages.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "appreciation",
+        "thank-you",
+        "staff",
+        "office",
+        "corporate"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-thank-you-day",
+      "thumbnail": "thumbs/holiday-thank-you-day-1.0.0.png"
+    },
+    {
+      "id": "holiday-thank-you-day-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "bb89eba14d726d0e315a504b0c60a0b1b39ecc8728b18c9f3ffff1d7438184d9",
+          "size": 67864,
+          "url": "packages/holiday-thank-you-day-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Thank-you day (portrait)",
+      "description": "A bright appreciation screen for a staff, volunteer, customer or teacher thank-you day: bold geometric shapes on cream, a big thank-you headline, a message with the numbers worth celebrating, and a thank-you in several languages.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "appreciation",
+        "thank-you",
+        "staff",
+        "office",
+        "corporate",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-thank-you-day-portrait",
+      "thumbnail": "thumbs/holiday-thank-you-day-portrait-1.0.0.png"
+    },
+    {
+      "id": "holiday-thanksgiving-harvest",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "ae6b1bbb209e14e2b591e2d4b84f7ff642e43202c8afd6e02290aa6aba8a1441",
+          "size": 78007,
+          "url": "packages/holiday-thanksgiving-harvest-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Thanksgiving & harvest",
+      "description": "A golden-hour harvest screen for Thanksgiving or any harvest festival: a low sun over rolling fields, wheat in the foreground, and room for a headline, a message about a community lunch or food drive, and a date line.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "thanksgiving",
+        "harvest",
+        "autumn",
+        "fall",
+        "community"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-thanksgiving-harvest",
+      "thumbnail": "thumbs/holiday-thanksgiving-harvest-1.0.0.png"
+    },
+    {
+      "id": "holiday-thanksgiving-harvest-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "cc3513e1b00941e3ed486249a3c24914e3e982e04d3b11a22c5f3e05c619d055",
+          "size": 71126,
+          "url": "packages/holiday-thanksgiving-harvest-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Thanksgiving & harvest (portrait)",
+      "description": "A golden-hour harvest screen for Thanksgiving or any harvest festival: a low sun over rolling fields, wheat in the foreground, and room for a headline, a message about a community lunch or food drive, and a date line.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "thanksgiving",
+        "harvest",
+        "autumn",
+        "fall",
+        "community",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-thanksgiving-harvest-portrait",
+      "thumbnail": "thumbs/holiday-thanksgiving-harvest-portrait-1.0.0.png"
+    },
+    {
+      "id": "holiday-valentines-day",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "74a7da7d3a1735be0c4d733fc077d41709fbc478e34eeff78c6838681917c83c",
+          "size": 79685,
+          "url": "packages/holiday-valentines-day-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Valentine's Day",
+      "description": "A warm Valentine’s greeting on deep wine red: two hearts built from soft shapes, a headline, a message for a shop, café or office, and a date or opening-hours line.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "valentines",
+        "love",
+        "retail"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-valentines-day",
+      "thumbnail": "thumbs/holiday-valentines-day-1.0.0.png"
+    },
+    {
+      "id": "holiday-valentines-day-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "ddfedbae86153019edf5904a8f98180549685ec61697c4eb1336e396555c4c9d",
+          "size": 70552,
+          "url": "packages/holiday-valentines-day-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Valentine's Day (portrait)",
+      "description": "A warm Valentine’s greeting on deep wine red: two hearts built from soft shapes, a headline, a message for a shop, café or office, and a date or opening-hours line.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "valentines",
+        "love",
+        "retail",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-valentines-day-portrait",
+      "thumbnail": "thumbs/holiday-valentines-day-portrait-1.0.0.png"
+    },
+    {
+      "id": "holiday-winter-holidays",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "de0018003b51e6ff12796405c9d2ddf268f1df3e825c91faa6c58864ffed87f1",
+          "size": 80475,
+          "url": "packages/holiday-winter-holidays-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Winter holidays",
+      "description": "An inclusive season’s-greetings screen for any winter celebration: a string of coloured lights, falling snow and snowy hills on a night-blue sky, with a centred greeting, your message and a date line — ideal for holiday opening hours.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "winter",
+        "holidays",
+        "seasons-greetings",
+        "closure"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-winter-holidays",
+      "thumbnail": "thumbs/holiday-winter-holidays-1.0.0.png"
+    },
+    {
+      "id": "holiday-winter-holidays-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "17922c64e700929f8cb86e94fc2c88bcf9ac47abd0f64ac69e4a22225eb7c057",
+          "size": 69290,
+          "url": "packages/holiday-winter-holidays-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Winter holidays (portrait)",
+      "description": "An inclusive season’s-greetings screen for any winter celebration: a string of coloured lights, falling snow and snowy hills on a night-blue sky, with a centred greeting, your message and a date line — ideal for holiday opening hours.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "holiday",
+        "seasonal",
+        "winter",
+        "holidays",
+        "seasons-greetings",
+        "closure",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/holiday-winter-holidays-portrait",
+      "thumbnail": "thumbs/holiday-winter-holidays-portrait-1.0.0.png"
+    },
+    {
+      "id": "info-strip",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "3467c792ef692029cfd702d257bd27800cc7fb3cce9bc1ec68876384ec456480",
+          "size": 419209,
+          "url": "packages/info-strip-1.0.0.sttemplate",
+          "network": [],
+          "params": 18,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Info strip",
+      "description": "A compact bar for the edge of a screen: your logo, the time and date, the current weather and a rotating line of short announcements. Made for L-bars, bottom strips and side bars; it rearranges itself for a thin strip, a tall side column or a full screen. Nothing is fetched: weather comes from your own Weather data source.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "clock",
+        "weather",
+        "ticker",
+        "announcements",
+        "l-bar",
+        "strip",
+        "lobby",
+        "office",
+        "retail",
+        "data-source"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/info-strip",
+      "thumbnail": "thumbs/info-strip-1.0.0.png"
     },
     {
       "id": "kpi-dashboard",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.3.0",
+          "sha256": "ec285601475073bace5060fd92032679812393a097fb20b8dcb492f654f2ec62",
+          "size": 291910,
+          "url": "packages/kpi-dashboard-1.1.0.sttemplate",
+          "network": [],
+          "params": 13,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.3.0",
@@ -105,11 +1485,21 @@
         "portrait"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/kpi-dashboard",
-      "thumbnail": "thumbs/kpi-dashboard-1.0.0.png"
+      "thumbnail": "thumbs/kpi-dashboard-1.1.0.png"
     },
     {
       "id": "leaderboard",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.3.0",
+          "sha256": "7b362c93ba2308d5339c7dc2543204dc91e332d5fc0dba091e6c51434ae06b6a",
+          "size": 388174,
+          "url": "packages/leaderboard-1.1.0.sttemplate",
+          "network": [],
+          "params": 18,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.3.0",
@@ -140,11 +1530,21 @@
         "portrait"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/leaderboard",
-      "thumbnail": "thumbs/leaderboard-1.0.0.png"
+      "thumbnail": "thumbs/leaderboard-1.1.0.png"
     },
     {
       "id": "lobby-welcome",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.2.0",
+          "sha256": "1133d533339e6a487b8b5cfec889ed3620a2e12dc440dc9c014febdea8c7d2f9",
+          "size": 73936,
+          "url": "packages/lobby-welcome-1.1.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.2.0",
@@ -172,11 +1572,54 @@
         "landscape"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/lobby-welcome",
-      "thumbnail": "thumbs/lobby-welcome-1.0.0.png"
+      "thumbnail": "thumbs/lobby-welcome-1.1.0.png"
+    },
+    {
+      "id": "lobby-welcome-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "5ab16dceffed226901201ab830dd2b33ec15f16a778a03cc97720136f22d2344",
+          "size": 69835,
+          "url": "packages/lobby-welcome-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 11,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Lobby welcome (portrait)",
+      "description": "A calm welcome screen for a reception or lobby: your logo, a headline and a line of detail, with a live clock and date in the building's own timezone and language. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "welcome",
+        "lobby",
+        "reception",
+        "clock",
+        "corporate",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/lobby-welcome-portrait",
+      "thumbnail": "thumbs/lobby-welcome-portrait-1.0.0.png"
     },
     {
       "id": "meeting-room",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.3.0",
+          "sha256": "c8f19f5361165c8e00bd47dcd434f5e14afa88935cf43d9d22c3e97ddd916607",
+          "size": 308045,
+          "url": "packages/meeting-room-1.1.0.sttemplate",
+          "network": [],
+          "params": 19,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.3.0",
@@ -207,11 +1650,21 @@
         "landscape"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/meeting-room",
-      "thumbnail": "thumbs/meeting-room-1.0.0.png"
+      "thumbnail": "thumbs/meeting-room-1.1.0.png"
     },
     {
       "id": "menu-board",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.3.0",
+          "sha256": "7d522e8125b79f6620f4135b0443d4ee6ba71a12b16a2e7bc7d1de0c421d177b",
+          "size": 428466,
+          "url": "packages/menu-board-1.1.0.sttemplate",
+          "network": [],
+          "params": 21,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.3.0",
@@ -242,11 +1695,21 @@
         "portrait"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/menu-board",
-      "thumbnail": "thumbs/menu-board-1.0.0.png"
+      "thumbnail": "thumbs/menu-board-1.1.0.png"
     },
     {
       "id": "news-ticker",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.3.0",
+          "sha256": "a4c20585462beb4c580053fba4256b7e755d4fd3090d99bb20e59c8fded378fa",
+          "size": 249738,
+          "url": "packages/news-ticker-1.1.0.sttemplate",
+          "network": [],
+          "params": 13,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.2.0",
@@ -259,7 +1722,7 @@
         }
       ],
       "name": "News ticker",
-      "description": "Your own headlines as a rotating feature plus a smooth scrolling ticker. Full screen it shows both; placed in a thin strip zone it becomes a ticker bar on its own. Works fully offline — the headlines are typed in, nothing is fetched.",
+      "description": "Headlines as a rotating feature plus a smooth scrolling ticker. Type them in, or connect an RSS feed, Google Sheet, CSV or table. Full screen it shows both; in a thin strip it becomes a ticker bar, and in a tall zone a vertical side ticker. Nothing is fetched by the screen, so it works offline.",
       "author": "ScreenTinker",
       "license": "MIT",
       "kind": "html",
@@ -267,17 +1730,31 @@
         "news",
         "ticker",
         "announcements",
-        "text"
+        "text",
+        "rss",
+        "google-sheets",
+        "data-source"
       ],
       "orientation": [
-        "landscape"
+        "landscape",
+        "portrait"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/news-ticker",
-      "thumbnail": "thumbs/news-ticker-1.0.0.png"
+      "thumbnail": "thumbs/news-ticker-1.1.0.png"
     },
     {
       "id": "news-wall",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.3.0",
+          "sha256": "77d41a4a2c83e4f389f006afff113f4c1beebf6784b57f510bd3892e6975e10c",
+          "size": 312626,
+          "url": "packages/news-wall-1.1.0.sttemplate",
+          "network": [],
+          "params": 16,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.3.0",
@@ -308,11 +1785,971 @@
         "portrait"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/news-wall",
-      "thumbnail": "thumbs/news-wall-1.0.0.png"
+      "thumbnail": "thumbs/news-wall-1.1.0.png"
+    },
+    {
+      "id": "notice-board",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "5f1670778df2355723db4f405dc6f01dda162ea1774bed1323d0145336226b65",
+          "size": 367410,
+          "url": "packages/notice-board-1.0.0.sttemplate",
+          "network": [],
+          "params": 26,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Notice board",
+      "description": "A staff room, school or shop-floor notice board: announcement cards with colour-coded categories (Urgent, Safety, Event, HR, Info), pinned notices held at the top, and start and end dates so notices appear and expire on their own. A featured notice with the rest beside it, or one notice at a time. Type notices in, or run it from a Google Sheet or Manual table.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "announcements",
+        "notices",
+        "office",
+        "lobby",
+        "school",
+        "factory",
+        "internal-comms",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/notice-board",
+      "thumbnail": "thumbs/notice-board-1.0.0.png"
+    },
+    {
+      "id": "opening-hours",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "78c7337c92479a1a18a392c51c1c1f22efec9e673a90edc1653fc3846d3993a0",
+          "size": 416743,
+          "url": "packages/opening-hours-1.0.0.sttemplate",
+          "network": [],
+          "params": 39,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Opening hours",
+      "description": "Opening hours with a live status: a big \"Open now, closes at 17:00\" or \"Closed, opens tomorrow at 09:00\", this week's hours with today highlighted, split hours and lunch breaks, and holiday closures that override the week. For shops, pharmacies, libraries, clinics and offices. Type special dates in, or keep them in a Google Sheet.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "opening-hours",
+        "retail",
+        "shop",
+        "reception",
+        "office",
+        "library",
+        "clinic",
+        "status",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/opening-hours",
+      "thumbnail": "thumbs/opening-hours-1.0.0.png"
+    },
+    {
+      "id": "promo-bogo",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "57b666aec55e97c43305777dd08461aae75944c8ce4990a03fc5cf5c06261ebd",
+          "size": 117809,
+          "url": "packages/promo-bogo-1.0.0.sttemplate",
+          "network": [],
+          "params": 24,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Buy one get one promo",
+      "description": "A bold buy-one-get-one screen for a café, bakery or shop: the offer in three big lines, what it applies to, a round \"2 for 1\" sticker on a coloured picture panel, and an optional live countdown to the last day.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "promo",
+        "cafe",
+        "restaurant",
+        "hospitality",
+        "retail",
+        "offer",
+        "countdown",
+        "landscape"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-bogo",
+      "thumbnail": "thumbs/promo-bogo-1.0.0.png"
+    },
+    {
+      "id": "promo-bogo-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "79fa78f8d58650e331d3954287d63488309d441a0b3e8e1b27ef47a25ac4a625",
+          "size": 103842,
+          "url": "packages/promo-bogo-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 25,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Buy one get one promo (portrait)",
+      "description": "A portrait (9:16) bold buy-one-get-one screen for a café, bakery or shop: the offer in three big lines, what it applies to, a round \"2 for 1\" sticker on a coloured picture panel, and an optional live countdown to the last day.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "promo",
+        "cafe",
+        "restaurant",
+        "hospitality",
+        "retail",
+        "offer",
+        "countdown",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-bogo-portrait",
+      "thumbnail": "thumbs/promo-bogo-portrait-1.0.0.png"
+    },
+    {
+      "id": "promo-happy-hour",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "41913b3cf64f614592040d725938d12c77c1e5e87fe89dd331fa895235d4ff07",
+          "size": 125717,
+          "url": "packages/promo-happy-hour-1.0.0.sttemplate",
+          "network": [],
+          "params": 29,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Happy hour promo",
+      "description": "A happy hour or daypart offer for a bar or restaurant: a big headline, the days and hours, three deals with prices, a drink picture with a warm glow, and a live clock so guests can see how long is left.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "promo",
+        "bar",
+        "restaurant",
+        "hospitality",
+        "happy-hour",
+        "daypart",
+        "clock",
+        "landscape"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-happy-hour",
+      "thumbnail": "thumbs/promo-happy-hour-1.0.0.png"
+    },
+    {
+      "id": "promo-happy-hour-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "b29db6b30ce000b39f1362db36c7840ee59added8138332a814eb9a232bc0f0b",
+          "size": 106696,
+          "url": "packages/promo-happy-hour-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 29,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Happy hour promo (portrait)",
+      "description": "A portrait (9:16) happy hour or daypart offer for a bar or restaurant: a big headline, the days and hours, three deals with prices, a drink picture with a warm glow, and a live clock so guests can see how long is left.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "promo",
+        "bar",
+        "restaurant",
+        "hospitality",
+        "happy-hour",
+        "daypart",
+        "clock",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-happy-hour-portrait",
+      "thumbnail": "thumbs/promo-happy-hour-portrait-1.0.0.png"
+    },
+    {
+      "id": "promo-new-arrival",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "b51308c3cd3c3aa23c2238bb28f67ee12c65d547362a725ea45b2bde71f832ae",
+          "size": 110087,
+          "url": "packages/promo-new-arrival-1.0.0.sttemplate",
+          "network": [],
+          "params": 22,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "New arrival promo",
+      "description": "A calm, editorial screen for a new product in a shop: a serif product name, a short description, the price and where to find it, the product on a tinted panel with a \"New\" sticker, and an optional QR code to the product page.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "promo",
+        "retail",
+        "new",
+        "product",
+        "qr",
+        "boutique",
+        "landscape"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-new-arrival",
+      "thumbnail": "thumbs/promo-new-arrival-1.0.0.png"
+    },
+    {
+      "id": "promo-new-arrival-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "f89869a3217a985144dbe8cf3cca50edc2bd18d65866115bef59e15d3d53aea8",
+          "size": 92498,
+          "url": "packages/promo-new-arrival-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 22,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "New arrival promo (portrait)",
+      "description": "A portrait (9:16) calm, editorial screen for a new product in a shop: a serif product name, a short description, the price and where to find it, the product on a tinted panel with a \"New\" sticker, and an optional QR code to the product page.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "promo",
+        "retail",
+        "new",
+        "product",
+        "qr",
+        "boutique",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-new-arrival-portrait",
+      "thumbnail": "thumbs/promo-new-arrival-portrait-1.0.0.png"
+    },
+    {
+      "id": "promo-offer",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "16935c161520c3463029e00599f42e0a036df34d06d0aea63aab25551687ae74",
+          "size": 534299,
+          "url": "packages/promo-offer-1.0.0.sttemplate",
+          "network": [],
+          "params": 30,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Promo offer",
+      "description": "A flash-sale or promotion screen: big headline, the offer, the price with the old price struck through and the saving worked out for you, and a live \"ends in\" countdown that switches to an \"offer ended\" message by itself. Add a product picture and a QR code to your shop page. Three looks: bold retail, clean minimal and warm café. Nothing is fetched.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "promo",
+        "sale",
+        "offer",
+        "retail",
+        "shop",
+        "countdown",
+        "qr",
+        "cafe",
+        "hospitality"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-offer",
+      "thumbnail": "thumbs/promo-offer-1.0.0.png"
+    },
+    {
+      "id": "promo-price-drop",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "7da7923b6c28501eaf7bb316861df84a0a230c8eff4a77b0eee4c0f66588b3f3",
+          "size": 121946,
+          "url": "packages/promo-price-drop-1.0.0.sttemplate",
+          "network": [],
+          "params": 22,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Price drop promo",
+      "description": "A sale screen for a price cut: the product picture on a coloured ring, the old price, a big new price and a savings sticker, with a bottom bar for your terms and an optional live countdown to the end of the offer.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "promo",
+        "retail",
+        "sale",
+        "price",
+        "countdown",
+        "offer",
+        "landscape"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-price-drop",
+      "thumbnail": "thumbs/promo-price-drop-1.0.0.png"
+    },
+    {
+      "id": "promo-price-drop-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "aaef85118f840c792fbb2ed564446cf6bec6ffcc8847d1b715ef95f35c2fff55",
+          "size": 102473,
+          "url": "packages/promo-price-drop-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 22,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Price drop promo (portrait)",
+      "description": "A portrait (9:16) sale screen for a price cut: the product picture on a coloured ring, the old price, a big new price and a savings sticker, with a bottom bar for your terms and an optional live countdown to the end of the offer.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "promo",
+        "retail",
+        "sale",
+        "price",
+        "countdown",
+        "offer",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/promo-price-drop-portrait",
+      "thumbnail": "thumbs/promo-price-drop-portrait-1.0.0.png"
+    },
+    {
+      "id": "quote-of-the-day",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "9cbf6528f6243e4829df9b4ea53f69b26ecf67c8232ba4356320c809381ad31a",
+          "size": 74796,
+          "url": "packages/quote-of-the-day-1.0.0.sttemplate",
+          "network": [],
+          "params": 13,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Quote of the day",
+      "description": "A typography-led quote screen: a big serif quotation, who said it and where, with a live date in your language. For a lobby, staff room, school corridor or the screen by the coffee machine.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "quote",
+        "inspiration",
+        "motivation",
+        "office",
+        "lobby",
+        "corporate",
+        "school"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/quote-of-the-day",
+      "thumbnail": "thumbs/quote-of-the-day-1.0.0.png"
+    },
+    {
+      "id": "quote-of-the-day-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "78bb91202eb71ee0777da19e75ea78e908ccdcdecfeaceb300b72907ff5bc905",
+          "size": 63397,
+          "url": "packages/quote-of-the-day-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 13,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Quote of the day (portrait)",
+      "description": "A typography-led quote screen: a big serif quotation, who said it and where, with a live date in your language. For a lobby, staff room, school corridor or the screen by the coffee machine. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "quote",
+        "inspiration",
+        "motivation",
+        "office",
+        "lobby",
+        "corporate",
+        "school",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/quote-of-the-day-portrait",
+      "thumbnail": "thumbs/quote-of-the-day-portrait-1.0.0.png"
+    },
+    {
+      "id": "safety-tip",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "fac2f5c976f8d0c156f5ac1f5a1131b59f616dc313699045271378d646adb0d8",
+          "size": 78607,
+          "url": "packages/safety-tip-1.0.0.sttemplate",
+          "network": [],
+          "params": 12,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Safety tip",
+      "description": "A high-visibility safety tip for factories, warehouses, kitchens and sites: a warning icon on a safety-yellow panel, the rule in big type, up to four how-to steps and who to call.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "safety",
+        "health-and-safety",
+        "workplace",
+        "factory",
+        "warehouse",
+        "office"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/safety-tip",
+      "thumbnail": "thumbs/safety-tip-1.0.0.png"
+    },
+    {
+      "id": "safety-tip-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "80873a3011e847b734b92d1ef802826cbf73ee8b32e3d15a98696e9274b71b29",
+          "size": 65660,
+          "url": "packages/safety-tip-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 12,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Safety tip (portrait)",
+      "description": "A high-visibility safety tip for factories, warehouses, kitchens and sites: a warning icon on a safety-yellow panel, the rule in big type, up to four how-to steps and who to call. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "safety",
+        "health-and-safety",
+        "workplace",
+        "factory",
+        "warehouse",
+        "office",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/safety-tip-portrait",
+      "thumbnail": "thumbs/safety-tip-portrait-1.0.0.png"
+    },
+    {
+      "id": "schedule-board",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "e0340fc2790d143d371b0e5d820274cfdc3307aea254eae7862b0b893e85cc1f",
+          "size": 547578,
+          "url": "packages/schedule-board-1.0.0.sttemplate",
+          "network": [],
+          "params": 27,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Schedule board",
+      "description": "What's on now, how many minutes are left, and what's next: a countdown board for school bells, gym classes, factory shifts and breaks, or service times, with today's timetable beside it and the current block highlighted. Type the schedule in (several named schedules, pick the active one) or connect a Google Sheet. Outside scheduled hours it says when things start again.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "schedule",
+        "timetable",
+        "countdown",
+        "school",
+        "gym",
+        "shifts",
+        "office",
+        "reception",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/schedule-board",
+      "thumbnail": "thumbs/schedule-board-1.0.0.png"
+    },
+    {
+      "id": "spotlight-employee-month",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "0f699515f186df139898119ff362ee8ae5798874b3ca09b01fde4cbc1952257e",
+          "size": 119482,
+          "url": "packages/spotlight-employee-month-1.0.0.sttemplate",
+          "network": [],
+          "params": 21,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Employee of the month",
+      "description": "Celebrate a colleague: a big circular photo in a gold ring, their name and role, a quote in their own words, a fun fact and a badge for the month.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "spotlight",
+        "people",
+        "recognition",
+        "employee",
+        "team",
+        "office",
+        "corporate",
+        "hr"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-employee-month",
+      "thumbnail": "thumbs/spotlight-employee-month-1.0.0.png"
+    },
+    {
+      "id": "spotlight-employee-month-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "88157fd606821189661c797e9c02114f4deeff0e80a2aeab53cbb6e5928eb7ef",
+          "size": 99099,
+          "url": "packages/spotlight-employee-month-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 21,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Employee of the month (portrait)",
+      "description": "Celebrate a colleague: a big circular photo in a gold ring, their name and role, a quote in their own words, a fun fact and a badge for the month. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "spotlight",
+        "people",
+        "recognition",
+        "employee",
+        "team",
+        "office",
+        "corporate",
+        "hr",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-employee-month-portrait",
+      "thumbnail": "thumbs/spotlight-employee-month-portrait-1.0.0.png"
+    },
+    {
+      "id": "spotlight-new-starter",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "8d37e657fcb87113a7630353880dacca402caaf4f76211e6a794ff44c42d90bc",
+          "size": 103294,
+          "url": "packages/spotlight-new-starter-1.0.0.sttemplate",
+          "network": [],
+          "params": 22,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "New starter welcome",
+      "description": "Welcome someone on their first day: their name and role, a line in their own words, what to say hello about, and a start-date badge. Shows an initials circle until you add a photo.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "spotlight",
+        "people",
+        "welcome",
+        "new-starter",
+        "onboarding",
+        "team",
+        "office",
+        "corporate"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-new-starter",
+      "thumbnail": "thumbs/spotlight-new-starter-1.0.0.png"
+    },
+    {
+      "id": "spotlight-new-starter-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "b61e98b87f09158f88e7c434a1ff133d08a17166e8f0c85474454a8bb0645ac0",
+          "size": 90383,
+          "url": "packages/spotlight-new-starter-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 22,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "New starter welcome (portrait)",
+      "description": "Welcome someone on their first day: their name and role, a line in their own words, what to say hello about, and a start-date badge. Shows an initials circle until you add a photo. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "spotlight",
+        "people",
+        "welcome",
+        "new-starter",
+        "onboarding",
+        "team",
+        "office",
+        "corporate",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-new-starter-portrait",
+      "thumbnail": "thumbs/spotlight-new-starter-portrait-1.0.0.png"
+    },
+    {
+      "id": "spotlight-teacher-volunteer",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "aa64174c7b79712edb0508985c1493156161d80bb479d123576c539ba8f80c78",
+          "size": 112570,
+          "url": "packages/spotlight-teacher-volunteer-1.0.0.sttemplate",
+          "network": [],
+          "params": 21,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Teacher & volunteer spotlight",
+      "description": "Say thank you in public: a warm, bookish layout with a photo, name, role, a quote and a line about the person outside the classroom. Made for schools, libraries, charities and community groups.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "spotlight",
+        "people",
+        "recognition",
+        "school",
+        "education",
+        "volunteer",
+        "community",
+        "thank-you"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-teacher-volunteer",
+      "thumbnail": "thumbs/spotlight-teacher-volunteer-1.0.0.png"
+    },
+    {
+      "id": "spotlight-teacher-volunteer-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "182c63d17bc5781a16b07085edfaa937045ae338f072efa98eaf93e832a7ddbc",
+          "size": 93291,
+          "url": "packages/spotlight-teacher-volunteer-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 21,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Teacher & volunteer spotlight (portrait)",
+      "description": "Say thank you in public: a warm, bookish layout with a photo, name, role, a quote and a line about the person outside the classroom. Made for schools, libraries, charities and community groups. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "spotlight",
+        "people",
+        "recognition",
+        "school",
+        "education",
+        "volunteer",
+        "community",
+        "thank-you",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-teacher-volunteer-portrait",
+      "thumbnail": "thumbs/spotlight-teacher-volunteer-portrait-1.0.0.png"
+    },
+    {
+      "id": "spotlight-team-member",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "56970f72c4a9e615428f5947fa2d1eacfa1f8336f48ce3960065e3d958662188",
+          "size": 111719,
+          "url": "packages/spotlight-team-member-1.0.0.sttemplate",
+          "network": [],
+          "params": 22,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Meet the team",
+      "description": "Introduce someone to the rest of the building: a colour panel with their photo, name and role, a short answer in their own words and a fun fact, on two clean cards.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "spotlight",
+        "people",
+        "team",
+        "meet-the-team",
+        "employee",
+        "office",
+        "corporate",
+        "internal-comms"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-team-member",
+      "thumbnail": "thumbs/spotlight-team-member-1.0.0.png"
+    },
+    {
+      "id": "spotlight-team-member-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "8bd58d42df7478babd9f61d628e33996985ba3865cd2a5d7da97e9b49ba21762",
+          "size": 94684,
+          "url": "packages/spotlight-team-member-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 22,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Meet the team (portrait)",
+      "description": "Introduce someone to the rest of the building: a colour panel with their photo, name and role, a short answer in their own words and a fun fact, on two clean cards. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "spotlight",
+        "people",
+        "team",
+        "meet-the-team",
+        "employee",
+        "office",
+        "corporate",
+        "internal-comms",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/spotlight-team-member-portrait",
+      "thumbnail": "thumbs/spotlight-team-member-portrait-1.0.0.png"
+    },
+    {
+      "id": "team-celebrations",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "8cdd2686e2b6040243286c073aac85599b14fef8576e6eed16d496f4bcaacedc",
+          "size": 411432,
+          "url": "packages/team-celebrations-1.0.0.sttemplate",
+          "network": [],
+          "params": 30,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Team celebrations",
+      "description": "Birthdays, work anniversaries and new-starter welcomes for the office or break room. Rotating cards with colourful initials avatars, milestone badges at 1, 5, 10, 15 and 20+ years, and a list of everyone celebrating today, this week or this month. Type the people in, or keep them in a Google Sheet. Playful confetti or an elegant dark theme.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "office",
+        "lobby",
+        "birthdays",
+        "anniversaries",
+        "employees",
+        "hr",
+        "internal-comms",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/team-celebrations",
+      "thumbnail": "thumbs/team-celebrations-1.0.0.png"
+    },
+    {
+      "id": "testimonial",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "fca1c1c119344052cbc7ad81718c64c338fa04a0273fc9a4ab5e390296abfba2",
+          "size": 95748,
+          "url": "packages/testimonial-1.0.0.sttemplate",
+          "network": [],
+          "params": 14,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Customer testimonial",
+      "description": "A customer review on screen: a star rating, the customer’s words in a warm serif, their name and an initials avatar, plus your overall score. For shop windows, showrooms, reception desks and waiting areas.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "testimonial",
+        "review",
+        "customer",
+        "retail",
+        "hospitality",
+        "social-proof"
+      ],
+      "orientation": [
+        "landscape"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/testimonial",
+      "thumbnail": "thumbs/testimonial-1.0.0.png"
+    },
+    {
+      "id": "testimonial-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "216a15826ea00514c803f079af4aee39ca2651181a122fa9060805322eb5bcc8",
+          "size": 82621,
+          "url": "packages/testimonial-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 14,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Customer testimonial (portrait)",
+      "description": "A customer review on screen: a star rating, the customer’s words in a warm serif, their name and an initials avatar, plus your overall score. For shop windows, showrooms, reception desks and waiting areas. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "testimonial",
+        "review",
+        "customer",
+        "retail",
+        "hospitality",
+        "social-proof",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/testimonial-portrait",
+      "thumbnail": "thumbs/testimonial-portrait-1.0.0.png"
     },
     {
       "id": "uptime-3036",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.2.0",
+          "sha256": "10a8784d7ca31f59f35b92164b387d25331133e4434a54174b3183a27b7abb31",
+          "size": 299081,
+          "url": "packages/uptime-3036-1.1.0.sttemplate",
+          "network": [],
+          "params": 10,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.1",
           "min_server": "2.2.0",
@@ -340,11 +2777,59 @@
         "landscape"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/uptime-3036",
-      "thumbnail": "thumbs/uptime-3036-1.0.1.png"
+      "thumbnail": "thumbs/uptime-3036-1.1.0.png"
+    },
+    {
+      "id": "wait-times",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "055c658807868ec70d951562c175e677f05352e6c60beb715b979791f8d50250",
+          "size": 322264,
+          "url": "packages/wait-times-1.0.0.sttemplate",
+          "network": [],
+          "params": 31,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Wait times board",
+      "description": "Estimated waiting times for a clinic, urgent care, pharmacy or service counter: each service with its wait in minutes and an Open, Busy or Closed status in clear colours, a last-updated time, a reassurance notice and a check-in reminder. Staff update a Google Sheet or a Manual table from a phone, or type the list in.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "html",
+      "tags": [
+        "wait-times",
+        "queue",
+        "clinic",
+        "healthcare",
+        "pharmacy",
+        "reception",
+        "lobby",
+        "government",
+        "data-source",
+        "google-sheets"
+      ],
+      "orientation": [
+        "landscape",
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/wait-times",
+      "thumbnail": "thumbs/wait-times-1.0.0.png"
     },
     {
       "id": "weather-forecast",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.2.0",
+          "sha256": "b46ab1aa4a2951c436f916e92dbd9058ce64e85f9897e714016535b55c883d54",
+          "size": 82796,
+          "url": "packages/weather-forecast-1.1.0.sttemplate",
+          "network": [],
+          "params": 14,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.2.0",
@@ -371,11 +2856,53 @@
         "landscape"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/weather-forecast",
-      "thumbnail": "thumbs/weather-forecast-1.0.0.png"
+      "thumbnail": "thumbs/weather-forecast-1.1.0.png"
+    },
+    {
+      "id": "weather-forecast-portrait",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "min_server": "2.3.0",
+          "sha256": "89f24f8673606abbf8ea805d6279d9ddf15f73afeb09f5e8623375ad5755d0ce",
+          "size": 76597,
+          "url": "packages/weather-forecast-portrait-1.0.0.sttemplate",
+          "network": [],
+          "params": 14,
+          "published": "2026-10-11"
+        }
+      ],
+      "name": "Weather forecast (portrait)",
+      "description": "Current conditions and a five-day forecast from one of your Weather data sources. Your server fetches the weather itself; the template only lays it out. Portrait 9:16 layout.",
+      "author": "ScreenTinker",
+      "license": "MIT",
+      "kind": "slide",
+      "tags": [
+        "weather",
+        "forecast",
+        "data-source",
+        "clock",
+        "portrait"
+      ],
+      "orientation": [
+        "portrait"
+      ],
+      "homepage": "https://github.com/screentinker/templates/tree/main/templates/weather-forecast-portrait",
+      "thumbnail": "thumbs/weather-forecast-portrait-1.0.0.png"
     },
     {
       "id": "weather-html",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.2.0",
+          "sha256": "042142e41f4e4d3a879ebaf23e1b46c90704abf20e34633223040da5d4e565b0",
+          "size": 299040,
+          "url": "packages/weather-html-1.1.0.sttemplate",
+          "network": [],
+          "params": 9,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.2.0",
@@ -402,11 +2929,21 @@
         "landscape"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/weather-html",
-      "thumbnail": "thumbs/weather-html-1.0.0.png"
+      "thumbnail": "thumbs/weather-html-1.1.0.png"
     },
     {
       "id": "world-clocks",
       "versions": [
+        {
+          "version": "1.1.0",
+          "min_server": "2.2.0",
+          "sha256": "4c3dc5204718e000af5f588dc4594824484592e3e52fc04b0f6f2aabaa641e24",
+          "size": 420498,
+          "url": "packages/world-clocks-1.1.0.sttemplate",
+          "network": [],
+          "params": 18,
+          "published": "2026-10-11"
+        },
         {
           "version": "1.0.0",
           "min_server": "2.2.0",
@@ -436,7 +2973,7 @@
         "portrait"
       ],
       "homepage": "https://github.com/screentinker/templates/tree/main/templates/world-clocks",
-      "thumbnail": "thumbs/world-clocks-1.0.0.png"
+      "thumbnail": "thumbs/world-clocks-1.1.0.png"
     }
   ]
 }
