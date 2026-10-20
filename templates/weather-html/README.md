@@ -36,7 +36,7 @@ Everything on screen follows the **Language** setting (empty = the player's own 
 date and clock, the day names (formatted from each forecast day's date), numbers, percentages and
 wind speed (`Intl`), the condition (translated from its WMO weather code), and the fixed words —
 Feels like, Humidity, Wind, Rain/Snow and the "Waiting for weather data" notice — in English,
-German, Spanish, French, Hindi, Italian, Japanese, Dutch, Portuguese and Simplified Chinese; any
+Danish, German, Spanish, French, Hindi, Italian, Japanese, Dutch, Portuguese and Simplified Chinese; any
 other language falls back to English words with that language's dates and numbers. The settings
 themselves are translated for the dashboard in `locales/<lang>.json` (servers that do not know
 that file ignore it). The bundled Inter is Latin-only; Japanese, Chinese and Devanagari use the
@@ -50,6 +50,8 @@ drawn in code — no image files, no emoji font needed.
 
 ## Changes
 
+- **1.2.0** — Danish (requested in screentinker/screentinker#667): the fixed words and every
+  weather condition.
 - **1.1.0** — translatable: a Language setting for every word, date and number on screen, the
   condition and day names in that language, and translated settings (`locales/`).
 - **1.0.0** — first release.
